@@ -1,3 +1,0 @@
-- maybe make google docs a pre-req and have students do tech doc in google docs
-- Do how to set up 3D printer for accessiblity use octoprint
- http://10.82.10.231/?#temp 

@@ -1,139 +1,113 @@
-# openSCAD_lessons
-OpenSCAD based intro to coding curriculum for visually impaired and blind students. By Texas School for the Blind and Visually Impaired.
+# 3D Design & Printing Curriculum — Enhanced Edition
 
-## Important Notes
-**Its helpful to have the following materials and tools, you will need to access to a 3D printer**
-- braille or bluetooth calipers 
-  - [Imperial tactile calipers](https://www.nbp.org/ic/nbp/CALIPER.html)
-  - [Metric tactile calipers](https://tactilevisiongraphics.com/product/metric-braille-caliper/)
-  - [Bluetooth calipers (work okay with VoiceOver)](https://www.amazon.com/iGaging-Electronic-Absolute-Bluetooth-Connectivity/dp/B0716B8Q99/ref=sr_1_1?keywords=bluetooth%2Bcaliper&qid=1638566825&sr=8-1&th=1) 
-- braille/large print ruler
-- 3D printer and raspberry pi installed with Octoprint for wireless printing
-- APH graph board or geoboard
-- Playdoh
-- On the fly tactile graphics tools
-  - APH tactile drawing board or draftsmen 
-  - Wicki stix
-  - Embossing wheel
+**Author:** Chris Correll (original) / Expanded curriculum  
+**Last Updated:** 2026  
+**Target Audience:** High school students, including students with visual impairments (BVI)
 
-**Class notes/sequence**
-*If you are a teacher clone this repo, if you are a student taking this class, congrats, you found the solutions, but remember you are only cheating yourself if you do not attempt problems independently, and there are not posted project solutions...*. This repo has all of the information (lessons, models, assignments) you need to teach the course. You can find code for students in the [lessons](./lessons) folder, here you will also find a teacher lesson (does not have "_student" suffix) that will have all the important information to lecture about during class and practice problem solutions. This should go without saying... but... *Do the lesson and practice problems yourself before teaching it." There is also a subfolder named "materials" which has a suggested sequence and over view of each sub lesson in a markdown document. Lessons are roughly one month in length, depending on the level of your students. A double block (1hr and 15m) class time is suggested. Teacher should have students mirror the folder and file structure of this github repo to help organize their work on their local computer. Cloud based storage such as google drive or drop box can be used but it is suggested that the files are accessible locally (either through drive for desktop or dropbox for desktop) as students will be running openSCAD locally. A class room entry routine could be:
-1. Teachers send email with attached lesson code or instructions night before or day of class 
-2. Students come into class on time and login to computer, open email and complete directions, downloading any attachments and placing them in the correct folder(s).
+---
 
-## Pre-Requisite Knowledge
-All skills to be completed with a laptop, unless otherwise noted.
-- Keyboarding 20 WPM all characters
-- Basic Windows OS navigation (launching programs, file explorer navigation, window/settings navigation, keyboard shortcuts)
-- Intermediate internet navigation skills
-  - Search
-  - Download
-  - Navigate known and unknown sites with minimal prompting
-- Email Proficiency 
-- Word Processing proficiency 
-- Text editing familiarity 
-- PowerPoint and presentation familiarity
-- Knowledge of the Cartesian coordinate plan 
+## Overview
 
-## Course Description
-TSBVI's Fundamentals of Computer Science course explores the building blocks of computer science and the engineering design process through the introduction of digital fabrication tools and the OpenSCAD programming language (based upon the C programming language). Throughout the course students will complete several independent and group "design challenges" where they will use their knowledge to design and implement solutions to real world problems posed by TSBVI staff. After each "design challenge" students will present technical documentation to stakeholders for review. Once a month students will lead a question and answer session with a STEM industry professionals.
+This curriculum teaches 3D design and fabrication using OpenSCAD and FDM 3D printing. Students progress from foundational skills through guided projects and into open-ended, stakeholder-driven design challenges. The curriculum is built around the principle of **explicit instruction before application** — each new skill is taught in a dedicated lesson before students are expected to apply it in a project.
 
-## Course Objectives
-Upon successful completion of the course students will be able to:
-- Understand and implement fundamental computer science concepts such as variables, basic boolean logic, basic control structures, and basic data structures
-- Measure objects precisely to prepare technical descriptions 
-- Use the engineering design process for problem solving 
-- Maintain technical documentation and develop technical presentations
-- Understand and implement the possibilities of digital fabrication in approaching and solving problems they may face in their everyday lives
-- Use advanced prototyping and manufacturing techniques in the production of objects
- 
+### Design Philosophy
 
-## Grading
-Grading is a combination of two areas:
-- Class participation and attendance 50%
-- Projects 50%
+Students move through four roles across the curriculum:
 
-### Project Rubric
-| Project Rubric                | 0                                                              | 1                                                         | 2                                                        | 3                                                                                               |
-|-------------------------------|----------------------------------------------------------------|-----------------------------------------------------------|----------------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| Meets Functional Requirements | Project meets few or no functional requirements satisfactorily | Project meets some functional requirements satisfactorily | Project meets all functional requirements satisfactorily | Project meets all functional requirements and implements a novel or outside of the box solution |
-| Includes Deliverables         | Project includes few or no deliverables completed              | Project includes some deliverables completed              | Project includes all deliverables completed              | Project includes all deliverables completed and goes beyond the expected level completion       |
-| Observes constraints          | Project observes few or no constraints listed                  | Project observes some constraints listed                  | Project observes all constraints listed                  | Project observes all constraints listed and student imposes additional practical constraints    |
+| Phase | Role | Focus |
+|-------|------|-------|
+| Unit 0 | **Observer/Learner** | Concepts, tools, safety |
+| Unit 1 | **Operator** | Guided replication, measurement |
+| Unit 2 | **Designer** | Parametric thinking, materials |
+| Unit 3 | **Problem-Solver** | Real users, iteration, impact |
 
-## Key Concepts
-Key concepts will build on each other and be used throughout the course.
+---
 
-### Semester 1 
-#### Measurement
-- Using digital calipers
-- Using rulers
-- Using tape measures
+## File Tree
 
-#### Technical Skills
-- Presentation Skills
-- Technical note taking and documentation
-- 3D printing and laser cutting basic skills
+```
+curriculum/
+│
+├── README.md                          ← This file
+│
+├── Reference_Materials/
+│   ├── openscad-cheat-sheet.md        ← Quick reference for all OpenSCAD commands
+│   ├── slicing-settings-reference.md  ← PrusaSlicer settings card
+│   ├── filament-comparison-table.md   ← PLA / PETG / TPU side-by-side
+│   ├── measurement-worksheet.md       ← Blank caliper measurement template
+│   ├── vocabulary-glossary.md         ← All key terms defined
+│   └── master-rubric.md              ← 0–9 point grading rubric
+│
+├── Unit_0_Foundations/
+│   ├── unit-0-overview.md
+│   ├── Lesson_0_1_Safety/
+│   │   ├── lesson-0-1-safety.md       ← Student lesson doc
+│   │   └── safety-checklist.md        ← Printable sign-off checklist
+│   ├── Lesson_0_2_How_3D_Printing_Works/
+│   │   └── lesson-0-2-how-fdm-works.md
+│   ├── Lesson_0_3_Intro_to_Calipers/
+│   │   ├── lesson-0-3-calipers.md
+│   │   └── caliper-practice-worksheet.md
+│   ├── Lesson_0_4_OpenSCAD_Part1/
+│   │   └── lesson-0-4-openscad-part1.md
+│   ├── Lesson_0_5_OpenSCAD_Part2/
+│   │   └── lesson-0-5-openscad-part2.md
+│   └── Lesson_0_6_Intro_to_Slicing/
+│       └── lesson-0-6-slicing.md
+│
+├── Unit_1_Guided_Projects/
+│   └── unit-1-overview.md             ← Links to existing Projects/ folder
+│
+├── Unit_2_Intermediate_Skills/
+│   ├── unit-2-overview.md
+│   ├── Lesson_2_1_Parametric_Design/
+│   │   └── lesson-2-1-parametric-modules.md
+│   ├── Lesson_2_2_Tolerances_and_Fit/
+│   │   ├── lesson-2-2-tolerances.md
+│   │   └── tolerance-test-design.md
+│   ├── Lesson_2_3_Advanced_Slicing/
+│   │   └── lesson-2-3-advanced-slicing.md
+│   └── Lesson_2_4_Material_Properties/
+│       └── lesson-2-4-materials.md
+│
+└── Unit_3_Open_Ended_Projects/
+    ├── unit-3-overview.md
+    ├── Lesson_3_1_Stakeholder_Interviews/
+    │   ├── lesson-3-1-stakeholder-interviews.md
+    │   └── stakeholder-interview-worksheet.md
+    └── Project_4_Assistive_Technology/
+        └── project-4-assistive-tech-briefing.md
+```
 
-#### OpenSCAD Basic Concepts
-- Basic primitives and transformations
-- Parameters (lists) 
-- Variables and parameterization
-- Boolean operations
-- Modules
-- More transformation
+---
 
-### Semester 2 
-#### OpenSCAD Intermediate Concepts
-- Extrusions and 2D Vector Design
-- Loops
-- Conditional statements (if else)
-- External libraries
-- Variables and parameterization (continued)
+## Prerequisites by Unit
 
+| Unit | Prerequisites |
+|------|--------------|
+| Unit 0 | None — start here |
+| Unit 1 (Projects 0–1) | Complete Unit 0 |
+| Unit 2 | Complete Unit 1 (Projects 0 and 1) |
+| Unit 3 (Projects 2–4) | Complete Unit 2 |
 
-### Bonus
-- Macros
-- Command line/ basic Linux commands
-- VSCode development
-- Python (openSCAD package)
+---
 
-## Projects
-### Project 0 Your First 3D Print
-- Measuring using calipers
-- 3D printing and slicing
-- Writing technical notes
-- Converting between inches and millimeters
+## Quick Links to Key Resources
 
-### Project 1 Tactile Floor Markers
-- 3D printing 
-- Designing a solution based on functional requirements and constraints
-- Preparing technical notes
-- meauring using calipers
-- testing multiple iterations
+- [OpenSCAD Download](https://openscad.org/downloads.html) — Free, cross-platform
+- [PrusaSlicer Download](https://www.prusa3d.com/page/prusaslicer_424/) — Free slicer software
+- [Printables](https://www.printables.com/) — 3D model repository
+- [Thingiverse](https://www.thingiverse.com/) — 3D model repository
+- [OpenSCAD Documentation](https://openscad.org/documentation.html) — Official reference
 
-### Project 2 Copy an Object
-- Find a real world device and copy it
-- Parameterize your code
-- Bonus if someone brings you a design problem
+---
 
-### Project 3 Holes and pins 
-- 3D printing
-- Using Boolean functions and transformations
-- Making smaller models to test things 
-- Scaffolding joints project
-- Using variables
+## How This Curriculum Was Expanded
 
-### Project 4 Laser cut storage
-- Laser cutting
-- Measuring with a tape measure
-- Internet navigation
+The original curriculum (Projects 0–Bonus) provided excellent real-world projects but assumed students could acquire skills through project work alone. This expanded curriculum adds:
 
-### Project 5 Joints
-- Laser cutting
-- Projection command in openSCAD
-
-
-## Interesting References
-[OpenSCAD user manual](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual)
-[OpenSCAD video tutorials](https://www.youtube.com/playlist?list=PLP1VMsgQcRUmC1jJhZrTId9rvjQ1m2FBH)
-[Geometry and OpenSCAD for VI studnets](http://www.nonscriptum.com/geometry)
+1. **Six foundational lessons** (Unit 0) that explicitly teach every skill before it is needed
+2. **Four intermediate lessons** (Unit 2) that bridge guided and open-ended projects
+3. **One stakeholder interview lesson** (Unit 3) that prepares students for Project 2
+4. **One new project** (Project 4: Assistive Technology)
+5. **Six reference documents** that serve as ongoing resources throughout the year
