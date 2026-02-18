@@ -1,0 +1,38 @@
+[book]
+title = "JAWS Scripting Language Manual"
+authors = ["Michael Ryan Hunsaker, M.Ed., Ph.D."]
+language = "en"
+description = "Description of the JAWS Scripting Language and Brief Introduction to Creating JAWS Scripts"
+src = "src"
+
+[output.html]
+additional-css = ["src/assets/custom.css"]
+additional-js = ["src/assets/jaws.js"]
+default-theme = "light"
+site-url = "https://github.com/mrhunsaker/VI_friendly_OpenSCAD_lessons"
+theme = "theme"
+
+[build]
+build-dir = "docs"
+create-missing = true
+use-default-preprocessors = true
+
+# Enables the search feature
+[output.html.search]
+enable = true
+limit-results = 30
+teaser-word-count = 30
+use-boolean-and = true
+boost-title = 2
+boost-hierarchy = 1
+boost-paragraph = 1
+expand = true
+heading-split-level = 3
+
+# Fold sections in the sidebar by default for easier navigation
+[output.html.fold]
+enable = true
+level = 1
+
+[preprocessor.index]
+[preprocessor.links]

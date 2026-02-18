@@ -1,0 +1,17 @@
+Project 0
+Author: 
+Date:
+
+Object Notes
+Description: The following object is the first iteration of a tactile floor marker for use with command strip velcro it is rectangular in shape. 
+Material: It is made out of PLA  
+
+Measurements 
+Desired X length =  70
+Desired Y length = 16
+Desired Z length = 5
+Measured X length = 
+Measured Y length =
+Measured Z length =
+
+Reflections

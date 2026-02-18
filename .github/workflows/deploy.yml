@@ -1,0 +1,66 @@
+
+name: Deploy mdBook to GitHub Pages
+
+on:
+  push:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install mdBook
+        run: |
+          wget https://github.com/rust-lang/mdBook/releases/download/v0.5.2/mdbook-v0.5.2-x86_64-unknown-linux-gnu.tar.gz
+          tar xzf mdbook-v0.5.2-x86_64-unknown-linux-gnu.tar.gz
+
+      - name: Install Rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          profile: minimal
+          override: true
+
+      - name: Add cargo bin to PATH
+        run: echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+
+      - name: "CI: debug versions and check bibliography"
+        run: |
+          echo "--- Versions ---"
+          mdbook --version || true
+          mdbook-bib --version || true
+          rustc --version || true
+          cargo --version || true
+          python3 --version || true
+          echo "--- Show suspect bib ranges ---"
+          sed -n '1018,1030p' my-book/src/global_bibliography.bib || true
+          sed -n '1433,1441p' my-book/src/global_bibliography.bib || true
+          echo "--- Run bib linter ---"
+          python3 scripts/check_bib.py || true
+
+      - name: Build book
+        run: |
+          cd my-book
+          ../mdbook build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./my-book/docs
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: github-pages
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+

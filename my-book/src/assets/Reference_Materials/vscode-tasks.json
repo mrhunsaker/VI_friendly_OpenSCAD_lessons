@@ -1,0 +1,53 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Preview in OpenSCAD",
+      "type": "shell",
+      "command": "openscad",
+      "args": ["${file}"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Export STL",
+      "type": "shell",
+      "command": "openscad",
+      "args": [
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}.stl",
+        "${file}"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Export STL (render, no GUI)",
+      "type": "shell",
+      "command": "openscad",
+      "args": [
+        "--render",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}.stl",
+        "${file}"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

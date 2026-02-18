@@ -1,0 +1,13 @@
+Briefing:
+In this project you will measure a small object using tactile calipers. This project is more constrained and guided then future projects which is why it is known as project 0. You will recreate the object and also 3D print it or any other model you have coded to learn how to use the 3D printer.
+
+Deliverables:
+- Technical documentation, this will be modeled after the project_0_student file
+- Written reflection
+- one 3D printed object
+
+Rubric:
+This assignment is either complete or in complete. If all deliverables are completed satisfactorily you will receive a complete if not you will be require to resubmit the assignment until it is complete.
+
+
+

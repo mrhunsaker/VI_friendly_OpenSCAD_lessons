@@ -1,0 +1,26 @@
+Briefing:
+In this project you will create a 3D printed beaded piece of jewelry
+
+Constraints: 
+- Your prototype must incorporate a 3D printed piece designed in OpenSCAD 
+- Your deliverables are due end of week
+- Code your project in one open SCAD file (all eight beads). We recommend printing your beads one at a time until you are happy with the shape.
+
+Functional Requirements:
+- Your OpenSCAD code must have two parametric modules for generating two different bead shapes
+- You must use two different shaped beads in your design
+- You must have at least 8 beads in your piece of jewelry
+- Its not enough to just have beads you need to have a completed and wearable piece of jewelry 
+
+Deliverables (via email and physically turn in 3D print):
+- Technical documentation, shared on google drive, including the following sections:
+  - Design Notes (ideas, measurements, etc.)
+  - Construction/ 3D Printing Notes
+  - Photos of the final prototype
+- .scad code file for your beads and .stl files 
+
+Rubric:
+Projects are graded on a 0 to 9 point scale as determined by the class project rubric
+
+
+

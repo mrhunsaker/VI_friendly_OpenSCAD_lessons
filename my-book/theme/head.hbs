@@ -1,0 +1,43 @@
+
+<!-- Highlight.js CSS -->
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+
+<!-- Highlight.js Core -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+<!-- Load your custom JAWSScript syntax -->
+<script src="{{ base_path }}/assets/jaws.js"></script>
+
+<script>
+  // Register the custom language
+  hljs.registerLanguage("jaws", window.hljsJaws);
+
+  // Activate highlighting
+  document.addEventListener("DOMContentLoaded", () => {
+    hljs.highlightAll();
+  });
+</script>
+
+<style>
+/* Terminal-style output with a black left bar */
+.leftbar {
+  display: block;
+  background: #f6f8fa;
+  border-left: 6px solid #000;
+  padding: 0.6em 1em;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", "Courier New", monospace;
+  white-space: pre;
+  color: #111;
+  margin: 0.5em 0;
+  font-size: 0.95em;
+  overflow: auto;
+}
+</style>
+
+<script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    mermaid.initialize({ startOnLoad: true });
+  });
+</script>

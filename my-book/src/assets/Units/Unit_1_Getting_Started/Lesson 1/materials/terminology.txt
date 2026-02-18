@@ -1,0 +1,16 @@
+Shape - Any graphical 2D or 3D object created by OpenSCAD.
+Primitives - A base shape that you can use to create your models.
+Design - An OpenSCAD creation (that is, an OpenSCAD program), which usually consists of a combination of multiple shapes.
+Operation - An OpenSCAD command that changes the appearance/properties of one or more shapes.
+Parameter - Any value that specifies characteristics of shapes, operations, modules, or functions.
+Preview - The process of quickly displaying a design on-screen.
+Render - The process of fully evaluating the geometry of a design (and showing it on-screen). Once it’s rendered, you can export a design.
+Units - All dimensions in OpenSCAD are specified in units. A unit is usually a millimeter (by 3D-printing industry convention), but OpenSCAD is technically unitless. All models should be explicitly sized in 3D-printing preparation software just prior to printing.
+Width - The dimension associated with the x-axis, which is the “left right” axis when 3D printing.
+Depth - The dimension associated with the y-axis, which is the “forward-backward” axis when 3D printing.
+Height - The dimension associated with the z-axis, which is the “up down” axis when 3D printing.
+2D shapes - Shapes with a width and length, but no height.
+3D shapes - Shapes with a width, length, and height.
+Comment - A piece of code that does not execute it is preceded with // or for a multiline comment any text between /* and */
+Syntax -  The specific set of words and symbols and the specific order to those words and symbols when we give the computer instructions. In other words how a programming language is spelled and formatted.
+STL - The type of 3D model file that is typically used for 3D printing.

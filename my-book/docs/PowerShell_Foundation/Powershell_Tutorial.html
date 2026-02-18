@@ -1,0 +1,536 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Overview &amp; Full Guide - JAWS Scripting Language Manual</title>
+
+
+        <!-- Custom HTML head -->
+
+        <!-- Highlight.js CSS -->
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+        
+        <!-- Highlight.js Core -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        
+        <!-- Load your custom JAWSScript syntax -->
+        <script src="/assets/jaws.js"></script>
+        
+        <script>
+          // Register the custom language
+          hljs.registerLanguage("jaws", window.hljsJaws);
+        
+          // Activate highlighting
+          document.addEventListener("DOMContentLoaded", () => {
+            hljs.highlightAll();
+          });
+        </script>
+        
+        <style>
+        /* Terminal-style output with a black left bar */
+        .leftbar {
+          display: block;
+          background: #f6f8fa;
+          border-left: 6px solid #000;
+          padding: 0.6em 1em;
+          font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", "Courier New", monospace;
+          white-space: pre;
+          color: #111;
+          margin: 0.5em 0;
+          font-size: 0.95em;
+          overflow: auto;
+        }
+        </style>
+        
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            mermaid.initialize({ startOnLoad: true });
+          });
+        </script>
+
+        <meta name="description" content="Description of the JAWS Scripting Language and Brief Introduction to Creating JAWS Scripts">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../css/general-2459343d.css">
+        <link rel="stylesheet" href="../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../src/assets/custom-8fad8bec.css">
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../searchindex-57e0f839.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc-f0b64133.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">JAWS Scripting Language Manual</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="getting-started-with-powershell"><a class="header" href="#getting-started-with-powershell">Getting Started with PowerShell</a></h1>
+<p>This guide introduces Microsoft PowerShell with a focus on practical tasks students will use to manage files, run command-line tools, and support 3D printing workflows. It emphasizes keyboard-driven, screen-reader-friendly techniques and gives reproducible examples you can try in class.</p>
+<h2 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites</a></h2>
+<ul>
+<li>Typing and basic text-editing skills</li>
+<li>Basic file-system knowledge (files, folders, paths)</li>
+<li>Familiarity with using a screen reader is helpful but not required</li>
+<li>Basic understanding of variables and parameters</li>
+</ul>
+<h2 id="what-is-powershell"><a class="header" href="#what-is-powershell">What is PowerShell?</a></h2>
+<p>PowerShell is a cross-platform command-line shell and scripting language that runs on Windows, Linux, and macOS. It lets you control your computer with text commands instead of a graphical user interface (GUI). In this course we use PowerShell to run CLI tools (like OpenSCAD, slicers, or 3DMake), move files, and automate repetitive tasks.</p>
+<h2 id="quick-tutorial-and-core-concepts"><a class="header" href="#quick-tutorial-and-core-concepts">Quick tutorial and core concepts</a></h2>
+<p>Open PowerShell (Windows+X → choose PowerShell, or search from Start). When it opens you are placed in your current user’s home directory (abbreviated <code>~</code>).</p>
+<h3 id="paths-and-navigation"><a class="header" href="#paths-and-navigation">Paths and navigation</a></h3>
+<ul>
+<li><code>~</code> — your home directory</li>
+<li><code>.</code> — current directory</li>
+<li><code>..</code> — parent directory</li>
+<li>Use Tab to autocomplete files and folders (try <code>~/D</code> then press Tab)</li>
+</ul>
+<h3 id="useful-commands-examples"><a class="header" href="#useful-commands-examples">Useful commands (examples)</a></h3>
+<pre><code class="language-powershell">pwd                # show current directory
+ls -n              # list file/folder names only (screen-reader friendly)
+cd path/to/dir     # change directory
+whoami             # current user
+</code></pre>
+<p>Tip: On Windows PowerShell, backslashes (<code>\\</code>) are standard, but most PowerShell commands accept forward slashes as well.</p>
+<h2 id="common-operations"><a class="header" href="#common-operations">Common operations</a></h2>
+<h3 id="file-and-folder-manipulation"><a class="header" href="#file-and-folder-manipulation">File and folder manipulation</a></h3>
+<pre><code class="language-powershell">mkdir my-folder          # create folder
+cp -r src dest           # copy (use -r for directories)
+mv oldname newname       # rename or move
+rm file                  # remove file
+</code></pre>
+<h3 id="input-output-and-piping"><a class="header" href="#input-output-and-piping">Input, output, and piping</a></h3>
+<pre><code class="language-powershell">echo 'hello' | clip      # copy to clipboard
+command &gt; output.txt     # redirect output to file
+command &gt; $null          # discard output
+</code></pre>
+<h3 id="editing-and-running-programs"><a class="header" href="#editing-and-running-programs">Editing and running programs</a></h3>
+<ul>
+<li>Use <code>notepad.exe</code> or your preferred editor to edit files from PowerShell: <code>notepad.exe file.txt</code></li>
+<li>Use the call operator <code>&amp;</code> to run scripts or local executables: <code>&amp; './script.ps1'</code></li>
+</ul>
+<h2 id="screen-reader-friendly-tips"><a class="header" href="#screen-reader-friendly-tips">Screen-reader friendly tips</a></h2>
+<ul>
+<li>Use <code>ls -n</code> to list only names and reduce verbosity.</li>
+<li>Use flags like <code>-af</code> (files) or <code>-ad</code> (directories) to filter <code>ls</code> output: <code>ls -n -af ~/Documents</code></li>
+<li>Reduce spoken clutter by redirecting large outputs to a file and opening it in the editor.</li>
+</ul>
+<h2 id="error-handling-and-control"><a class="header" href="#error-handling-and-control">Error handling and control</a></h2>
+<ul>
+<li>Abort a running command: <code>Ctrl+C</code></li>
+<li>View command history: Up/Down arrows</li>
+<li>Clear the screen: <code>clear</code></li>
+</ul>
+<p>If you encounter an error, read the first few lines for the gist, then re-run the command or paste short snippets into the editor for debugging.</p>
+<h2 id="environment-variables-and-path"><a class="header" href="#environment-variables-and-path">Environment variables and PATH</a></h2>
+<p>Environment variables store configuration for the session. The PATH environment variable tells PowerShell where to find executables.</p>
+<pre><code class="language-powershell">echo $env:PATH          # show PATH
+[Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\\mytools", "Machine")
+</code></pre>
+<p>Note: Setting machine-level environment variables requires Administrator privileges.</p>
+<h3 id="running-powershell-as-administrator"><a class="header" href="#running-powershell-as-administrator">Running PowerShell as Administrator</a></h3>
+<ol>
+<li>Press Windows+X and choose “Windows PowerShell (Admin)”.</li>
+<li>If a User Account Control dialog appears, use <code>Alt+Y</code> to accept.</li>
+</ol>
+<h2 id="running-cli-applications-and-archives"><a class="header" href="#running-cli-applications-and-archives">Running CLI applications and archives</a></h2>
+<ul>
+<li>Expand ZIP archives: <code>Expand-Archive -Path file.zip -DestinationPath folder</code> (see Microsoft docs)</li>
+</ul>
+<h2 id="other-shells-and-aliases"><a class="header" href="#other-shells-and-aliases">Other shells and aliases</a></h2>
+<p>PowerShell exposes many Linux-flavored aliases for convenience. The concepts are transferable to other environments (WSL, macOS, Linux), but be mindful of differences in commands and permissions.</p>
+<h2 id="helpful-resources"><a class="header" href="#helpful-resources">Helpful resources</a></h2>
+<ul>
+<li>Accessibility in PowerShell ISE (Microsoft): https://learn.microsoft.com/powershell/scripting/windows-powershell/ise/accessibility-in-windows-powershell-ise</li>
+<li>Learn PowerShell (Microsoft): https://learn.microsoft.com/powershell/scripting/overview</li>
+<li>PowerShell PATH &amp; environment variables: https://poshcode.gitbook.io/powershell-faq/src/getting-started/environment-variables</li>
+<li>PowerShell aliases: https://learn.microsoft.com/powershell/scripting/learn/shell/using-aliases</li>
+</ul>
+<h2 id="future-ideas"><a class="header" href="#future-ideas">Future ideas</a></h2>
+<ul>
+<li>Advanced piping and text processing (grep/regex)</li>
+<li>Networking in Linux and WSL</li>
+<li>Package management (apt, pip)</li>
+<li>Process management and job control</li>
+</ul>
+<h1 id="getting-started-with-powershell-1"><a class="header" href="#getting-started-with-powershell-1">Getting Started with PowerShell</a></h1>
+<p>In this brief guide you will learn some basics about Microsoft <strong>PowerShell</strong>. The point of this guide is to get you up and running with PowerShell so that you can use it to 3D print and slice your models independently. Follow along with the tutorial.</p>
+<h2 id="pre-requisite-knowledge"><a class="header" href="#pre-requisite-knowledge">Pre-Requisite Knowledge</a></h2>
+<ul>
+<li>Typing skills</li>
+<li>Text editing skills</li>
+<li>Basic Windows Navigation skills</li>
+<li>Basic screen reading skills</li>
+<li>Basic knowledge of what a computer <strong>operating system</strong> is and its features (ie file/folders/applications/shortcuts/file extenstions/etc.)</li>
+<li>Basic knowledge of computer hardware (hard drive/usb and other peripheral ports/cloud vs local storage)</li>
+<li>Basic understanding of variables and parameters</li>
+<li>Basic internet navigation skills and (URL structure)</li>
+</ul>
+<h2 id="what-is-powershell-1"><a class="header" href="#what-is-powershell-1">What is PowerShell?</a></h2>
+<p>Windows PowerShell is “a cross-platform task automation solution made up of a <strong>command-line shell</strong>, a scripting language, and a configuration management framework. PowerShell runs on Windows, Linux, and macOS,” but what the heck does that mean?</p>
+<p>Essentially PowerShell is a way to access your computer through text instead of through a graphical user interface (<strong>GUI</strong>). Most computer users are sighted therefore most computer programs and operating systems have a GUI where users interact with the computer primarily by using a mouse to navigate to and click on elements. PowerShell is, primarily for our purposes, a command-line shell this means we can control the computer with a keyboard and text instead of through GUI with a mouse! PowerShell also has a scripting language and a configuration management framework, but we don’t really need to worry about that (if are interested check out the links under the Helpful Resources heading), for now if you understand what a command line-shell is then we are good to move on.</p>
+<h3 id="what-will-we-do-with-it-and-why-should-we-use-it"><a class="header" href="#what-will-we-do-with-it-and-why-should-we-use-it">What will we do with it and why should we use it?</a></h3>
+<p>We will use PowerShell to run several different programs from their command-line interface (<strong>CLI</strong>). If you remember what our command-line shell is then you should be able to infer that a command line interface is, a text based interface for interacting with an application, don’t worry if you are confused it will make more sense when we start to practice. We will also use PowerShell to navigate and move files and folders on our computer, the PowerShell allows us to navigate our computer much like the file explorer, but with text, i.e. without having to tab around or use keyboard shortcuts. As you might have guessed, the powershell is pretty useful if you are navigating your computer auditorily. At the end of this lesson you will understand how the command line shell can be super powerful.</p>
+<ul>
+<li>Bin bash and built in Windows cli commands</li>
+</ul>
+<h2 id="tutorial"><a class="header" href="#tutorial">Tutorial</a></h2>
+<p>The best way to learn (in my opinion) is by doing. So lets launch a PowerShell and see what this thing can do. Windows X will pull up a list of options where you can select PowerShell you can also use the Windows key to search for PowerShell.</p>
+<p>Upon launch it will read you a header that has some copyright information and a warning that it detected a screen reader, it will then read you where you are currently at in the computer. You are now in a command-line shell (command-line for short).</p>
+<p>We call where things are located in the computer a <strong>path</strong> an address to a folder or file. Its kind of like a URL for where files and folders are on your computer. A path will read something like <code>C:\Users\name\</code>. When you launch PowerShell it should default you to your <strong>home directory</strong>. Directory is just another name for a folder they can be used interchangeably. The home directory has a path shortcut it is <code>~</code> this will be useful so you don’t have to type <code>C:\Users\name\</code> every time you want to use the home folder path.</p>
+<p><strong>parent directory</strong>
+Paths are structured by separating folder and file names with either a forward or backslash. Each separation is a folder level. The <strong>root directory</strong> is the lowest level directory it will typically be <code>C:\</code> a shortcut for it is <code>/</code>. For instance <code>C:\Users</code> is the path to all of the folder containing all of the Users on the C: drive. A path will typically be made up of folders and subfolders and will end in a file name. You would not see something like
+<code>/Users/photo.jpg/name/filename.txt</code>
+This would mean that a file has a subfolder, which can not be the case. Folders can have sub folders but files can not.</p>
+<p>You can use the tab key to autocomplete directory or file names when typing a path
+<strong>try typing <code>~/D</code> and then press tab</strong>
+This will autocomplete to the full home path and most likely your Desktop folder if you hit tab again it will go through the next folder starting with D in alphabetical order. If you dont type anything and press tab it will go through the folders and files in your current path in alphabetical order.</p>
+<p>You may notice that we typed a forward slash to seperate the folders and the path autocompleted to using back slashes on Windows the system uses back slashes on other operating systems like Mac and Linux it uses forward slashes since everyone likes those better Windows added support for forward slashes in ther powershell command line environment we are going to stick with forward slashes for the most part.</p>
+<p>A final note on paths <code>./</code> is a shortcut to the current path and <code>../</code> is a shortcut to the path above the current path. Try typing
+<code>./</code> and tab a couple times to listen to the files and folders in your current path
+<code>../</code> and tab a couple times to listen to the files and folders in the folder above your current path</p>
+<p>You may have noticed some files and directories begin with a “.” this means they are hidden and thusly GUI users most likely won’t use them or know about them.</p>
+<p>Quotes surround paths with spaces for string</p>
+<h4 id="realtive-paths-vs-full-paths"><a class="header" href="#realtive-paths-vs-full-paths">Realtive paths vs full paths</a></h4>
+<p>relative paths are usually quickerwiyth the screen reader because full paths even with shortcuts autocomplete to full path name ie “C:/user/etc/etc/etc”</p>
+<h3 id="parameters"><a class="header" href="#parameters">parameters</a></h3>
+<p>sperated by space
+flag wiht a -</p>
+<h3 id="shell-layout-and-functioning"><a class="header" href="#shell-layout-and-functioning">Shell layout and functioning</a></h3>
+<p>Tab key autocomplete</p>
+<h4 id="command-history"><a class="header" href="#command-history">Command history</a></h4>
+<p>Arrow key up and down</p>
+<h3 id="copying-and-pasting-into-and-from-the-powershell"><a class="header" href="#copying-and-pasting-into-and-from-the-powershell">Copying and pasting into and from the powershell</a></h3>
+<p>clip</p>
+<h3 id="users"><a class="header" href="#users">Users</a></h3>
+<p>whoami</p>
+<h4 id="shell-command-input-and-output"><a class="header" href="#shell-command-input-and-output">Shell Command Input and Output</a></h4>
+<p>Commands pressing enter</p>
+<h5 id="errors"><a class="header" href="#errors">Errors</a></h5>
+<p>If you type something incorrectly you will get an error. Usually a whole bunch of text. Try typing an incorrect path
+<code>./blah</code>
+Unless you have a folder named “blah” you will get an error message. These can be helpful but sometimes have way to much information, generally listen to it if you are confused move on if you know what is wrong. You will most likely encounter lots of these going forward and will become familiar with them.</p>
+<h4 id="control--c"><a class="header" href="#control--c">control -c</a></h4>
+<p>aborting commands</p>
+<h4 id="clear"><a class="header" href="#clear">clear</a></h4>
+<h4 id="history"><a class="header" href="#history">history</a></h4>
+<h4 id="exit"><a class="header" href="#exit">exit</a></h4>
+<h4 id="man"><a class="header" href="#man">man</a></h4>
+<h3 id="navigational-commands"><a class="header" href="#navigational-commands">Navigational Commands</a></h3>
+<h4 id="pwd"><a class="header" href="#pwd">pwd</a></h4>
+<h4 id="ls"><a class="header" href="#ls">ls</a></h4>
+<p>The ls command stands for “list” it is how we see the files and folders in our current path. Try it out. You are gonna here a lot of output. Starting with the current directory path, then a table. By defauly this table includes (Attributes), LastWriteTime, file size (Length), and the Name of the item. Listen to it but don’t worry if you are not sure what this all means yet.</p>
+<h5 id="screen-reader-adaptions"><a class="header" href="#screen-reader-adaptions">Screen reader adaptions</a></h5>
+<p>Add a  <code>-n</code> to the end of ls. This is known as a flag. It instructs the ls command to only have ls display file and folder names (n short for names). Try it
+<code>ls -n</code>
+Ahh much better. Sometimes we need all of the infromation about a file or folder but usually we just want the names. You can use the flag <code>-ad</code> or -<code>af</code> to list only the directories or files. Try it
+<code>ls -n -af</code>
+<code>ls -n -ad</code></p>
+<p>You can use ls with a path as well just put it after any of your flags. For instance try this:
+<code>ls -n -af ~/Documents</code></p>
+<p>This will display the names of all files in your <code>Documents</code> folder</p>
+<h4 id="wildcards--and-"><a class="header" href="#wildcards--and-">Wildcards: * and ?</a></h4>
+<p>The <code>*</code> wildcard will match zero or more characters.
+The <code>?</code> wildcard will match a single character.</p>
+<h4 id="cd"><a class="header" href="#cd">cd</a></h4>
+<p>The cd command stands for “change directory” it is the main command we use for navigating the command line.
+<code>.</code>. and <code>..</code></p>
+<h3 id="file-and-folder-manipulation-and-modification"><a class="header" href="#file-and-folder-manipulation-and-modification">File and Folder Manipulation and Modification</a></h3>
+<h4 id="mv"><a class="header" href="#mv">mv</a></h4>
+<p>renaming</p>
+<h4 id="cp--r"><a class="header" href="#cp--r">cp (-r)</a></h4>
+<h4 id="mkdir"><a class="header" href="#mkdir">mkdir</a></h4>
+<h4 id="rm"><a class="header" href="#rm">rm</a></h4>
+<h4 id="rmdir"><a class="header" href="#rmdir">rmdir</a></h4>
+<h4 id="ni-non-linux-touch-equivalent"><a class="header" href="#ni-non-linux-touch-equivalent">ni (non-linux touch equivalent)</a></h4>
+<h4 id="gdr-non-linux-equivalent-to-df"><a class="header" href="#gdr-non-linux-equivalent-to-df">gdr (non-Linux equivalent to df)</a></h4>
+<p>Get drive names and data used and free, recommend output to txt file</p>
+<h3 id="input-output-and-piping-1"><a class="header" href="#input-output-and-piping-1">Input, Output and Piping</a></h3>
+<h4 id="cat"><a class="header" href="#cat">cat</a></h4>
+<h4 id="echo"><a class="header" href="#echo">echo</a></h4>
+<h4 id="--null-supress-output"><a class="header" href="#--null-supress-output">&gt; (&gt; $null supress output)</a></h4>
+<h4 id=""><a class="header" href="#">|</a></h4>
+<h4 id="text-editing"><a class="header" href="#text-editing">text editing</a></h4>
+<p>notepad.exe</p>
+<h3 id="-to-open-the-call-operator-non-linux--similar-open-on-mac"><a class="header" href="#-to-open-the-call-operator-non-linux--similar-open-on-mac">&amp; to open (the call operator non-linux ./ similar open on mac)</a></h3>
+<p>$null &gt; filename.txt or command &gt; $null nothing output
+echo &gt;
+echo blah | clip</p>
+<h4 id="exit-1"><a class="header" href="#exit-1">exit</a></h4>
+<h3 id="aliases-not-same-as-linux"><a class="header" href="#aliases-not-same-as-linux">Aliases (NOT SAME AS LINUX?)</a></h3>
+<h3 id="running-apps"><a class="header" href="#running-apps">Running Apps</a></h3>
+<h1 id="zip-and-compression-not-same-as-linux-unzip"><a class="header" href="#zip-and-compression-not-same-as-linux-unzip">zip and compression? (NOT SAME AS LINUX: unzip)</a></h1>
+<p><a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.archive/Expand-Archive?view=powershell-7.3&amp;viewFallbackFrom=powershell-6">Expand-Archive</a></p>
+<h3 id="important-notes-command-line-environment-environment-variables-and-the-path-variable"><a class="header" href="#important-notes-command-line-environment-environment-variables-and-the-path-variable">Important Notes: <strong>Command-line Environment</strong>, <strong>Environment Variables</strong>, and the <strong>PATH Variable</strong></a></h3>
+<p>When you launch a PowerShell you will automatically be logged in with the current user account you are logged into. The environment refers to the settings and preferences of the current user. You can change these settings by editing variables these are called <strong>environment variables</strong>. The most useful of these (for us atleast) is the PATH variable. The PATH variable tells the command-line where to look for your apps. It is a collection of folder paths that hold the CLI apps you wand to run. Its is essentially a shortcut so we wont have to type out the path to the CLI application every time we want to run it.</p>
+<p>You can see the value of one of your current command-line environemnt variable by typing the command:
+<code>echo $env:{VARIABLE NAME}</code>
+for instance
+<code>echo $env:PATH</code>
+will display a semi-colon sperated list of all of the folder paths stored in your PATH environment variable.</p>
+<p>You can permanently add a folder path to the variable by typing the command
+<code>[Environment]::SetEnvironmentVariable("Path", $env:Path + ";{FOLDER PATH}", "Machine")</code>
+This permanently adds what ever you type for {FOLDER PATH} into your system environment variables for all users. <strong>In order to run this command you must have run PowerShell as administrator.</strong></p>
+<h4 id="steps-to-run-powershell-as-administrator-is-there-a-better-way---sudo"><a class="header" href="#steps-to-run-powershell-as-administrator-is-there-a-better-way---sudo">Steps to run PowerShell as Administrator (is there a better way???) -&gt; sudo?</a></h4>
+<ol>
+<li>Window-X</li>
+<li>Windows PowerShell (Admin)</li>
+<li>Change application focus (alt + tab) to “User Account Control” This is a pop up that asks if you want to change setting on the computer its doesnt default your focus to it upon launch (as of 2022 in Windows 10).</li>
+<li>alt + y to select yes</li>
+</ol>
+<h2 id="package-managers"><a class="header" href="#package-managers">Package Managers?</a></h2>
+<h2 id="other-shells-and-alternative-usage"><a class="header" href="#other-shells-and-alternative-usage">Other Shells and Alternative Usage</a></h2>
+<p>There are many ways to use PowerShell, for this tutorial we foucesd, on some of the simplest (and most easily extendable) ways  to get you going. Most of the PowerShell commands we have covered are not actually Powershell commands but (linux-flavored aliases)[https://learn.microsoft.com/en-us/powershell/scripting/learn/shell/using-aliases?view=powershell-7.3] for PowerShell commands. That way the concepts and commands are very easily extendable to other shell environemnts such as the Linux shell (WSL, or Windows Subsystem for Linux).</p>
+<h2 id="helpful-resources-1"><a class="header" href="#helpful-resources-1">Helpful Resources</a></h2>
+<p>(Accessibility in PowerShell ISE by Microsoft)[https://learn.microsoft.com/en-us/powershell/scripting/windows-powershell/ise/accessibility-in-windows-powershell-ise?view=powershell-7.3]
+(Learn PowerShell Microsoft)[https://learn.microsoft.com/en-us/powershell/scripting/overview?view=powershell-7.3]
+(Setting the PATH variable in PowerShell)[https://poshcode.gitbook.io/powershell-faq/src/getting-started/environment-variables]
+(PowerShell Aliases)[https://learn.microsoft.com/en-us/powershell/scripting/learn/shell/using-aliases?view=powershell-7.3]
+(linux commands)[https://www.guru99.com/linux-commands-cheat-sheet.html]
+(PowerShell cheat sheet)[https://www.theochem.ru.nl/~pwormer/teachmat/PS_cheat_sheet.html]
+(Learn powershell github)[https://github.com/PowerShell/PowerShell/tree/master/docs/learning-powershell]
+(Guru99 page)[https://www.guru99.com/powershell-tutorial.html]
+(PS for beginners Book scripting)[https://f.hubspotusercontent20.net/hubfs/4890073/PowerShell%20for%20Beginners%20eBook.pdf]</p>
+<h2 id="future-ideas-1"><a class="header" href="#future-ideas-1">Future Ideas</a></h2>
+<ul>
+<li>linux
+<ul>
+<li>grep/regex</li>
+<li>networking in linux</li>
+<li>package managemnet (apt-get/pip)</li>
+<li>more linux commands</li>
+<li>directory stacks</li>
+<li>more advanced piping</li>
+<li>file compression/de</li>
+<li>process management (ps kill %% bg fg)</li>
+</ul>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../Reference_Materials/terminology.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../PowerShell_Foundation/PS_0_getting_started_layout_paths.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../Reference_Materials/terminology.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../PowerShell_Foundation/PS_0_getting_started_layout_paths.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../mark-09e88c2c.min.js"></script>
+        <script src="../searcher-c2a407aa.js"></script>
+
+        <script src="../clipboard-1626706a.min.js"></script>
+        <script src="../highlight-abc7f01d.js"></script>
+        <script src="../book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="../src/assets/jaws-08240bd2.js"></script>
+
+
+
+    </div>
+    </body>
+</html>
