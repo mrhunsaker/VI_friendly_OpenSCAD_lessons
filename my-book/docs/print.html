@@ -80,10 +80,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-57e0f839.js";
+            window.path_to_searchindex_js = "searchindex-9980aec5.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-f0b64133.js"></script>
+        <script src="toc-953cb32a.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -220,7 +220,9 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="3d-design--printing-curriculum--enhanced-edition"><a class="header" href="#3d-design--printing-curriculum--enhanced-edition">3D Design &amp; Printing Curriculum — Enhanced Edition</a></h1>
-<p><strong>Author:</strong> Michael Ryan Hunsaker, M.Ed., Ph.D.<br><strong>Last Updated:</strong> 2026-02-17<br><strong>Target Audience:</strong> Blind/Visually Impaired High school students</p>
+<p><strong>Author:</strong> Michael Ryan Hunsaker, M.Ed., Ph.D.
+<strong>Last Updated:</strong> 2026-02-17
+<strong>Target Audience:</strong> Blind/Visually Impaired High school students</p>
 <hr>
 <h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
 <p>This curriculum teaches 3D design and fabrication using OpenSCAD and FDM 3D printing. Students progress from foundational skills through guided projects and into open-ended, stakeholder-driven design challenges.</p>
@@ -4422,15 +4424,539 @@ difference() {
 </li>
 </ol>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="unit-1-overview"><a class="header" href="#unit-1-overview">Unit 1 Overview</a></h1>
+<h1 id="project-11-my-first-3d-print"><a class="header" href="#project-11-my-first-3d-print">Project 1.1: My First 3D Print</a></h1>
+<p><br><br></p>
+<h2 id="briefing"><a class="header" href="#briefing">Briefing:</a></h2>
+<p>Welcome to your first hands-on project in 3D printing! In this project, you’ll be using the Prusa Mini+ 3D printer and a model of your choice from an online repository. You’ll learn about the process of downloading, setting up, and finally printing a 3D model. This project will help you understand the basics of 3D printing technology, and give you the confidence to progress to more complex prints in the future.
+<br><br></p>
+<h2 id="online-repository"><a class="header" href="#online-repository">Online Repository:</a></h2>
+<p>Below is a list of webpages you can use to download 3D model files:</p>
+<ul>
+<li><a href="https://www.thingiverse.com/">Thingiverse</a></li>
+<li><a href="https://www.printables.com/">Printables</a></li>
+</ul>
+<h2 id="constraints"><a class="header" href="#constraints">Constraints:</a></h2>
+<ul>
+<li>For this project, choose a relatively simple model from the online repository. You’re just getting started, so we don’t want to dive into the deep end too quickly. The model should not exceed a printing time of 2 hours.</li>
+<li>As you gain confidence with the 3D printer, we will move onto designing your own models in openSCAD, but for now, focus on understanding the printing process.</li>
+<li>Your printed model is due in 2 weeks.
+<br><br></li>
+</ul>
+<h2 id="functional-requirements"><a class="header" href="#functional-requirements">Functional Requirements:</a></h2>
+<ul>
+<li>The 3D model must be downloaded from an online repository.</li>
+<li>The 3D print should be done using the Prusa Mini+ printer.</li>
+<li>The print settings should be correctly configured for the chosen model.</li>
+<li>The model should be printed without any significant printing errors.
+<br><br></li>
+</ul>
+<h2 id="deliverables-via-email-and-physically-turn-in-3d-print"><a class="header" href="#deliverables-via-email-and-physically-turn-in-3d-print">Deliverables (via email and physically turn in 3D print):</a></h2>
+<ul>
+<li>A technical document detailing your experience with this project. Include sections on: ideas, measurements (dimensions of the model, amount of filament used, etc.), object notes (what the object is, where you found it, why you chose it), construction notes (any assembly needed post-printing), use notes (what is the printed object used for), and reflections on your first 3D printing experience. Also, include at least one photo of your final prototype.</li>
+<li>Your 3D printed prototype.</li>
+<li>Though not mandatory for this project, if you feel adventurous, you can try tweaking your model in openSCAD and provide the ‘.scad’ code file for your object.
+<br><br></li>
+</ul>
+<h2 id="rubric-1"><a class="header" href="#rubric-1">Rubric:</a></h2>
+<p>Projects are graded on a 0 to 9 point scale as determined by the class project rubric. Emphasis will be placed on correct use of the 3D printer, successful completion of the print, and the detail and reflection demonstrated in your technical documentation.</p>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="project-11-dice-dice-dice"><a class="header" href="#project-11-dice-dice-dice">Project 1.1: Dice Dice Dice</a></h1>
+<h1 id="practice-resizing"><a class="header" href="#practice-resizing">Practice Resizing</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="extension-your-first-print"><a class="header" href="#extension-your-first-print">Extension: Your First Print</a></h1>
+<h1 id="unit-1-guided-projects"><a class="header" href="#unit-1-guided-projects">Unit 1: Guided Projects</a></h1>
+<p><strong>Duration:</strong> 3–4 weeks
+<strong>Driving Question:</strong> How do you design an object that reliably solves a specific, measurable problem?</p>
+<hr>
+<h2 id="unit-summary-1"><a class="header" href="#unit-summary-1">Unit Summary</a></h2>
+<p>Unit 1 moves students from reproducing existing objects (Project 0) to designing original ones. Students take on the role of <strong>Operator</strong>: they are making real design decisions, but within a clearly defined problem space. The projects in this unit have specific, pre-written functional requirements — students learn to design to a spec before they learn to write specs themselves.</p>
+<hr>
+<h2 id="prerequisite-for-this-unit-1"><a class="header" href="#prerequisite-for-this-unit-1">Prerequisite for This Unit</a></h2>
+<p>Complete all of Unit 0 (Lessons 0.1–0.6 and Project 0).</p>
+<hr>
+<h2 id="projects-in-this-unit"><a class="header" href="#projects-in-this-unit">Projects in This Unit</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Project</th><th>Title</th><th>Duration</th></tr>
+</thead>
+<tbody>
+<tr><td>Project 1</td><td>Tactile Floor Marker</td><td>~2 weeks</td></tr>
+<tr><td>Project 1.1</td><td>Dice Dice Dice</td><td>~1 week</td></tr>
+<tr><td>Extensions</td><td>Your First Print / Bonus Print</td><td>Flexible</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="project-1-tactile-floor-marker"><a class="header" href="#project-1-tactile-floor-marker">Project 1: Tactile Floor Marker</a></h2>
+<p>See <code>project_1_briefing.txt</code> and <code>project_1_documentation_template.txt</code>.</p>
+<p>Students design an improved tactile floor marker for the production studio. The marker must meet all five functional requirements in the briefing. Students document their design process through at least two printed iterations.</p>
+<p><strong>Skills applied from Unit 0:</strong></p>
+<ul>
+<li>Calipers for measuring the command strip</li>
+<li>OpenSCAD for designing the marker</li>
+<li>PrusaSlicer for slicing and estimating print time</li>
+<li>Safe printer operation</li>
+</ul>
+<p><strong>New skills introduced in this project:</strong></p>
+<ul>
+<li>Working from functional requirements</li>
+<li>Iterating based on a physical test</li>
+<li>Writing technical documentation through a design process (not just describing a finished object)</li>
+</ul>
+<hr>
+<h2 id="project-11-dice-dice-dice"><a class="header" href="#project-11-dice-dice-dice">Project 1.1: Dice Dice Dice</a></h2>
+<p>See <code>Extensions/dice-dice-dice.md</code>.</p>
+<p>Students design three unique dice in OpenSCAD. Each die must be different. Bonus points if they differ in more than three ways.</p>
+<p><strong>Skills applied:</strong></p>
+<ul>
+<li>All Unit 0 OpenSCAD skills</li>
+<li>Parametric thinking — designing variations of a similar object efficiently</li>
+</ul>
+<p><strong>New skills introduced:</strong></p>
+<ul>
+<li><code>intersection()</code> for rounded corners (connect to Lesson 2-4 in the existing scad files)</li>
+<li>Module design for creating multiple dice efficiently</li>
+</ul>
+<hr>
+<h2 id="suggested-lesson-sequence"><a class="header" href="#suggested-lesson-sequence">Suggested Lesson Sequence</a></h2>
+<p>Because Unit 1 is project-driven, there are no standalone lessons. However, the following skills should be introduced or reviewed at the start of each project:</p>
+<p><strong>Before Project 1:</strong></p>
+<ul>
+<li>Review functional requirements (what makes a requirement testable?)</li>
+<li>Review calipers (students will need to measure the command strip)</li>
+<li>Introduce the concept of iteration — design, print, test, revise</li>
+</ul>
+<p><strong>Before Project 1.1:</strong></p>
+<ul>
+<li>Review <code>intersection()</code> for rounded shapes</li>
+<li>Introduce modules with parameters (preview of Unit 2 Lesson 2.1)</li>
+<li>Discuss how to organize a file that generates multiple related objects</li>
+</ul>
+<hr>
+<h2 id="rubric-2"><a class="header" href="#rubric-2">Rubric</a></h2>
+<p>Projects in Unit 1 are graded on the 0–9 point scale from the master rubric. Project 0 remains complete/incomplete only.</p>
+<hr>
+<h2 id="key-vocabulary-for-this-unit-1"><a class="header" href="#key-vocabulary-for-this-unit-1">Key Vocabulary for This Unit</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Term</th><th>Definition</th></tr>
+</thead>
+<tbody>
+<tr><td>Functional requirement</td><td>A statement of what an object must do, written so it can be tested</td></tr>
+<tr><td>Constraint</td><td>A fixed limit the design must work within</td></tr>
+<tr><td>Iteration</td><td>A revised version of a design, created after testing the previous version</td></tr>
+<tr><td>Prototype</td><td>A test version of a design — not the final product, but a physical test of an idea</td></tr>
+<tr><td>Technical documentation</td><td>Written records of your design process, measurements, decisions, and reflections</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="materials-needed"><a class="header" href="#materials-needed">Materials Needed</a></h2>
+<ul>
+<li>Prusa Mini+ printer</li>
+<li>PLA filament</li>
+<li>Velcro command strips (2–3 per student for prototyping, 1 for final product — Project 1)</li>
+<li>Digital or tactile calipers</li>
+<li>Computers with OpenSCAD and PrusaSlicer (or VSCode with task runner)</li>
+</ul>
+<hr>
+<h2 id="teacher-notes-1"><a class="header" href="#teacher-notes-1">Teacher Notes</a></h2>
+<ul>
+<li>The most important habit to establish in Project 1 is testing against the functional requirements before calling the project done. Build in an explicit test session where students check each requirement.</li>
+<li>Students often want to jump straight from design to final print. Encourage printing small test sections first (just the cross-section profile, just the attachment area) to save filament and time.</li>
+<li>Project 1.1 (dice) is a good project for building confidence with more creative, less constrained design. Some students find the open-ended nature refreshing; others find it harder than a spec-driven project.</li>
+<li>For students who finish early, the Extension projects (Your First Print, Bonus Print) give additional practice without requiring new concepts.</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="extension-real-life-problem-solving"><a class="header" href="#extension-real-life-problem-solving">Extension: Real-Life Problem Solving</a></h1>
+<h1 id="lesson-10-openscad-basics"><a href="#lesson-10-openscad-basics" class="header">Lesson 1.0: OpenSCAD Basics</a></h1>
+<h2 id="lesson-10--openscad-basics"><a class="header" href="#lesson-10--openscad-basics">Lesson 1.0 — OpenSCAD Basics</a></h2>
+<h3 id="materials"><a class="header" href="#materials">Materials</a></h3>
+<ul>
+<li>Ruler / calipers</li>
+<li>Computer with OpenSCAD installed</li>
+<li>(Optional) Braille display or other assistive hardware</li>
+</ul>
+<h3 id="overview-2"><a class="header" href="#overview-2">Overview</a></h3>
+<p>This lesson introduces the OpenSCAD workflow and the editor environment. Students will create their first shape (<code>cube()</code>), learn how to add comments, and understand the difference between previewing and fully rendering a model for export.</p>
+<h3 id="sequence--notes"><a class="header" href="#sequence--notes">Sequence &amp; Notes</a></h3>
+<ul>
+<li>What is OpenSCAD: code-driven 3D modelling, parametric design, advantages for reproducibility and accessibility.</li>
+<li>OpenSCAD terminology: module, primitive, variable, parameter, preview vs render.</li>
+<li>Comments: single-line (<code>// comment</code>) and block (<code>/* comment */</code>) comments for documenting code.</li>
+<li>Helpful editor features: syntax highlighting, find/replace, indentation — recommend using VSCode or Notepad++ for larger projects.</li>
+<li>The OpenSCAD editor layout: code editor (left), 3D preview (right), console (bottom).</li>
+<li>Your first shape: <code>cube([length, width, height]);</code> — practice creating and previewing a cube.</li>
+<li>Preview vs Render: <code>F5</code> for preview (fast), <code>F6</code> for full render (required before export).</li>
+<li>Export: File → Export → Export as STL after a full render.</li>
+<li>Units: OpenSCAD treats numeric values as unit-less; treat them as millimeters for 3D printing projects.</li>
+</ul>
+<h3 id="classroom-activities"><a class="header" href="#classroom-activities">Classroom Activities</a></h3>
+<ol>
+<li>Open OpenSCAD, create a new file, and type the example cube code. Press <code>F5</code> to preview.</li>
+<li>Change the cube dimensions using named variables and re-preview.</li>
+<li>Save the file and perform a full render (<code>F6</code>) and export to STL.</li>
+</ol>
+<h3 id="check-for-understanding-6"><a class="header" href="#check-for-understanding-6">Check for understanding</a></h3>
+<ul>
+<li>What is a comment and how do you add one in OpenSCAD?</li>
+<li>What is the difference between <code>F5</code> and <code>F6</code>?</li>
+<li>Why do we treat numbers as millimeters in these lessons?</li>
+</ul>
+<h3 id="quiz--lesson-10"><a class="header" href="#quiz--lesson-10">Quiz — Lesson 1.0</a></h3>
+<ol>
+<li>Short answer: How do you write a single-line comment in OpenSCAD? (Answer: <code>// comment</code>)</li>
+<li>Multiple choice: Which key performs a fast preview? (A) F5  (B) F6  (C) Ctrl+S  — Answer: A</li>
+<li>True/False: You must do a full render before exporting an STL. — Answer: True</li>
+<li>Short answer: Give one reason why OpenSCAD is useful for reproducible designs.</li>
+<li>Practical: Write code for a cube that is 40 mm × 20 mm × 10 mm and render it.</li>
+</ol>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="extension-bonus-print"><a class="header" href="#extension-bonus-print">Extension: Bonus Print</a></h1>
+<h1 id="lesson-11--primitives"><a class="header" href="#lesson-11--primitives">Lesson 1.1 — Primitives</a></h1>
+<h2 id="materials-1"><a class="header" href="#materials-1">Materials</a></h2>
+<ul>
+<li>Computer with OpenSCAD installed</li>
+<li>3D-printed primitive models (optional tactile examples)</li>
+</ul>
+<h2 id="overview-3"><a class="header" href="#overview-3">Overview</a></h2>
+<p>This lesson covers the three basic 3D primitives in OpenSCAD: <code>cube()</code>, <code>sphere()</code>, and <code>cylinder()</code>. Students will learn parameter syntax, centering, and the <code>$fn</code> variable for controlling curve resolution.</p>
+<h2 id="sequence--notes-1"><a class="header" href="#sequence--notes-1">Sequence &amp; Notes</a></h2>
+<ul>
+<li>Warm-up: quick terminology review and header metadata (author, date, description) in the file.</li>
+<li>Syntax rules: statements end with a semicolon; whitespace is ignored; comments are allowed.</li>
+<li><code>cube([x, y, z])</code>: vector parameters. Explain <code>center=true</code> and how centering affects translation.</li>
+<li><code>sphere(r = value)</code> or <code>sphere(d = value)</code>: radius or diameter. Introduce <code>$fn</code> (a special variable controlling the number of fragments used to approximate curves) — use small values for fast preview, larger values for final export.</li>
+<li><code>cylinder(h = height, r = radius)</code> or <code>cylinder(h = height, d = diameter)</code>. Show <code>r1</code>/<code>r2</code> for cones.</li>
+</ul>
+<h2 id="classroom-activities-1"><a class="header" href="#classroom-activities-1">Classroom Activities</a></h2>
+<ol>
+<li>Type a <code>cube()</code> using literal numbers and preview.</li>
+<li>Rewrite the cube using named variables and <code>center=true</code> to see how the object shifts.</li>
+<li>Create a sphere and experiment with <code>$fn = 20</code> vs <code>$fn = 80</code>.</li>
+<li>Create a cylinder and then a tapered cone using <code>r1</code> and <code>r2</code>.</li>
+</ol>
+<h2 id="common-pitfalls"><a class="header" href="#common-pitfalls">Common Pitfalls</a></h2>
+<ul>
+<li>Forgetting the semicolon will cause a syntax error.</li>
+<li>Using <code>center=true</code> will reposition shapes relative to the origin; be explicit about where you want the object.</li>
+</ul>
+<h3 id="quiz--lesson-11"><a class="header" href="#quiz--lesson-11">Quiz — Lesson 1.1</a></h3>
+<ol>
+<li>Short answer: How do you make a cube centered at the origin? (Example answer: <code>cube([10,10,10], center=true);</code>)</li>
+<li>Multiple choice: <code>$fn</code> affects: (A) color (B) curve smoothness (C) position — Answer: B</li>
+<li>True/False: <code>sphere(d = 20);</code> creates a sphere 20 mm in diameter. — Answer: True</li>
+<li>Practical: Write OpenSCAD code for a cone using <code>cylinder()</code> where bottom radius = 6 mm, top radius = 2 mm, height = 20 mm.</li>
+<li>Short answer: Why use named variables instead of raw numbers?</li>
+</ol>
+<h1 id="lesson-1_1-primitives"><a class="header" href="#lesson-1_1-primitives">Lesson 1_1: Primitives</a></h1>
+<h2 id="materials-1-1"><a class="header" href="#materials-1-1">Materials</a></h2>
+<ul>
+<li>computer with openSCAD installed</li>
+<li>3D printed primatives (scale as needed in 3d printer slicer program but keep porportions locked for at least the cylinder and sphere)</li>
+<li>3D printed 1_1 models</li>
+</ul>
+<h2 id="sequence"><a class="header" href="#sequence">Sequence</a></h2>
+<ul>
+<li>Warm up review terminology</li>
+<li>Header Author, date, description fill it out or make one always!</li>
+<li>shape commands parameters and ending with a semi-colon
+<ul>
+<li>can have any amount of space in the code since all shape commands end with a semi-colon</li>
+</ul>
+</li>
+<li>cheat sheet for syntax
+<ul>
+<li>layout of cheat sheet (headings)</li>
+<li>| or symbol</li>
+</ul>
+</li>
+<li>the cube continued
+<ul>
+<li>vectors</li>
+<li>the center flag (ABC- always be centering!)</li>
+</ul>
+</li>
+<li>the sphere
+<ul>
+<li>introduce the $fn code (call it a command for now but explain its actually something else, a reserved variable will learn more about in lesson 1_3 and lesson 2)</li>
+</ul>
+</li>
+<li>cylinder
+<ul>
+<li>cones</li>
+</ul>
+</li>
+</ul>
+<h2 id="check-for-understanding-7"><a class="header" href="#check-for-understanding-7">Check for understanding</a></h2>
+<ul>
+<li>What are parameters?</li>
+<li>Where are each shapes centered</li>
+<li>How do you make a pointed cone facing down?</li>
+<li>Practice problems</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="project-0--your-first-3d-print"><a class="header" href="#project-0--your-first-3d-print">Project 0 — Your First 3D Print</a></h1>
+<h2 id="materials-2"><a class="header" href="#materials-2">Materials</a></h2>
+<ul>
+<li>Calipers</li>
+<li>3D print of Project 0 (example) and student models</li>
+<li>Project 0 briefing and student documentation template</li>
+<li>Computer with a slicer (e.g., PrusaSlicer, Cura) — recommend a slicer with accessible CLI or UI features</li>
+</ul>
+<h2 id="objectives"><a class="header" href="#objectives">Objectives</a></h2>
+<ul>
+<li>Measure an object with calipers and record dimensions</li>
+<li>Model a simple object in OpenSCAD using measured parameters</li>
+<li>Render and slice the model for 3D printing</li>
+<li>Convert between inches and millimeters when necessary</li>
+</ul>
+<h2 id="sequence-1"><a class="header" href="#sequence-1">Sequence</a></h2>
+<ol>
+<li>Present the project briefing and distribute the physical object for measurement.</li>
+<li>Students measure the object with calipers and log dimensions in the documentation template.</li>
+<li>Students model the object in OpenSCAD using variables for key dimensions.</li>
+<li>After previewing and rendering, students slice the STL and prepare G-code for printing.</li>
+<li>Optional: If available, use OctoPrint or a similar tool for wireless printing.</li>
+<li>Reflect: Compare measured dimensions vs printed result and document any discrepancies.</li>
+</ol>
+<h2 id="instructor-notes"><a class="header" href="#instructor-notes">Instructor notes</a></h2>
+<ul>
+<li>Double-check student slicing profiles before printing. Encourage students to preview the G-code layers if the slicer supports it.</li>
+<li>Provide a troubleshooting checklist for common print problems (bed adhesion, under-extrusion, over-extrusion).</li>
+</ul>
+<h1 id="project-0-your-first-3d-print"><a class="header" href="#project-0-your-first-3d-print">Project 0 Your First 3D Print</a></h1>
+<h2 id="materials-1-2"><a class="header" href="#materials-1-2">Materials</a></h2>
+<ul>
+<li>Calipers</li>
+<li>3D print of project 0</li>
+<li>a 3D model of one of the practice problems you solved or are working on</li>
+<li>Project 0 briefing</li>
+<li>Project 0 student (technical documentation template)</li>
+<li>Student computer loaded with a slicer program we recommend slic3r as it is command line based and thus more accessible</li>
+<li><strong>How to 3D Print: Slicing</strong></li>
+<li>(optional) <strong>How to 3D print: Octoprint</strong></li>
+</ul>
+<h2 id="objectives-1"><a class="header" href="#objectives-1">Objectives</a></h2>
+<ul>
+<li>Measuring using calipers</li>
+<li>3D printing and slicing</li>
+<li>Writing technical notes</li>
+<li>Converting between inches and millimeters</li>
+</ul>
+<h2 id="sequence-1-1"><a class="header" href="#sequence-1-1">Sequence</a></h2>
+<ol>
+<li>Introduce the project briefing to studnets give students the 3D model and callipers teach them how to measure using the callipers and have them measure and document the measured dimensions of the object.</li>
+<li>Have students model the object in openSCAD</li>
+<li>Have students render the model or render a model they coded and either email it to you or compelete steps 4-6</li>
+</ol>
+<p>The next steps are optional but highly suggested to improve studnets indepednence
+4. Go through the “how to 3D print: slicing” document with students ** NEEDS DOC **
+5. Have students slice their object and either export their GCODE to an SD card or email it to you to 3D print (Make sure to double check models with students to make sure there slicing configuration profiles are correct) ** NEEDS DOC **
+6. Instead of step five set up octoprint and have students independently print wirelessly. ** NEEDS DOC **</p>
+<ol start="7">
+<li>Reflect on the 3D printed object with students did it turn out how they expected does it measure the same as the parameters they coded? Were their any issues with teh print process? Have them write their reflections in their technical documentation.</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="lesson-12--basic-shape-modifications-translations"><a class="header" href="#lesson-12--basic-shape-modifications-translations">Lesson 1.2 — Basic Shape Modifications: Translations</a></h1>
+<h2 id="materials-3"><a class="header" href="#materials-3">Materials</a></h2>
+<ul>
+<li>Computer with OpenSCAD installed</li>
+<li>Tactile examples (optional)</li>
+</ul>
+<h2 id="overview-4"><a class="header" href="#overview-4">Overview</a></h2>
+<p>This lesson focuses on moving objects with <code>translate()</code>, working with centered objects, and reasoning about object extents (width/height) so that students can place parts precisely.</p>
+<h2 id="sequence--notes-2"><a class="header" href="#sequence--notes-2">Sequence &amp; Notes</a></h2>
+<ul>
+<li>Review <code>center=true</code> and how it affects the object’s origin.</li>
+<li><code>translate([x, y, z])</code> moves objects by the specified amounts along each axis.</li>
+<li>When translating centered shapes, use half of the shape’s dimension to align edges (for example, to place a sphere’s edge at X = 10, translate by <code>sphere_radius</code> if centered).</li>
+<li>Octants: teach coordinates and how positive/negative values map to left/right, forward/back, up/down.</li>
+</ul>
+<h2 id="classroom-activities-2"><a class="header" href="#classroom-activities-2">Classroom Activities</a></h2>
+<ol>
+<li>Create a cube and translate it to four different quadrants; listen to or examine coordinates.</li>
+<li>Place a sphere so its surface touches the top face of a cube: compute the needed translate Z value.</li>
+<li>Use <code>translate()</code> and multiple primitives to assemble a compound shape.</li>
+</ol>
+<h2 id="check-for-understanding-8"><a class="header" href="#check-for-understanding-8">Check for understanding</a></h2>
+<ul>
+<li>What is the width of a cylinder with <code>d = 20</code>? (Answer: 20 mm)</li>
+<li>How do you move an object 15 mm to the left? (Answer: <code>translate([-15,0,0])</code>)</li>
+</ul>
+<h3 id="quiz--lesson-12"><a class="header" href="#quiz--lesson-12">Quiz — Lesson 1.2</a></h3>
+<ol>
+<li>Short answer: Write the <code>translate()</code> call to move an object up by 10 mm.</li>
+<li>Multiple choice: If a sphere has <code>r = 8</code> and is centered, how far do you translate it in Z so its bottom touches Z = 0? (A) 0  (B) 8  (C) 16 — Answer: B</li>
+<li>Practical: Create two cubes side-by-side with a 2 mm gap between them; provide the code.</li>
+<li>Short answer: Explain what happens if you <code>translate()</code> before <code>rotate()</code> vs rotate before translate.</li>
+</ol>
+<h1 id="lesson-1_2-basic-shape-modifications-translations"><a class="header" href="#lesson-1_2-basic-shape-modifications-translations">Lesson 1_2: Basic Shape Modifications: Translations</a></h1>
+<h2 id="materials-1-3"><a class="header" href="#materials-1-3">Materials</a></h2>
+<ul>
+<li>computer with openSCAD installed</li>
+<li>3D printed primatives</li>
+<li>3D printed 1_2 models</li>
+<li>APH graph board (two for +z and -z)</li>
+</ul>
+<h2 id="sequence-2"><a class="header" href="#sequence-2">Sequence</a></h2>
+<ul>
+<li>Review center flag</li>
+<li>Translation</li>
+<li>The width of a sphere/cylinder and translating cented objects by half of their dimension</li>
+<li>Different octants</li>
+</ul>
+<h2 id="check-for-understanding-1-1"><a class="header" href="#check-for-understanding-1-1">Check for understanding</a></h2>
+<ul>
+<li>What is the width of a cylinder?</li>
+<li>What is the width of a sphere?</li>
+<li>What is the height of a sphere?</li>
+<li>Translation practice assignment</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="lesson-13--debugging-resolution-and-practice"><a class="header" href="#lesson-13--debugging-resolution-and-practice">Lesson 1.3 — Debugging, Resolution, and Practice</a></h1>
+<h2 id="materials-4"><a class="header" href="#materials-4">Materials</a></h2>
+<ul>
+<li>Computer with OpenSCAD installed</li>
+<li>Low- and medium-resolution printed primitives (optional)</li>
+</ul>
+<h2 id="overview-5"><a class="header" href="#overview-5">Overview</a></h2>
+<p>This lesson covers common syntax errors, debugging workflows in OpenSCAD, and the role of <code>$fn</code> and resolution when previewing and rendering curved geometry.</p>
+<h2 id="sequence--notes-3"><a class="header" href="#sequence--notes-3">Sequence &amp; Notes</a></h2>
+<ul>
+<li>Debugging basics: read the console output, identify syntax errors (missing semicolons, unmatched braces), and use small incremental changes to isolate problems.</li>
+<li>Editor navigation: use keyboard shortcuts to move to the line indicated by an error, or copy the error text into a search in your editor.</li>
+<li><code>$fn</code>: a special variable that controls the number of fragments used to approximate circles and curves. Set <code>$fn</code> lower for faster previews and higher for final renders.</li>
+<li>Practice incremental rendering: use <code>F5</code> while developing and <code>F6</code> before export.</li>
+</ul>
+<h2 id="classroom-activities-3"><a class="header" href="#classroom-activities-3">Classroom Activities</a></h2>
+<ol>
+<li>Introduce a small intentional syntax error and have students locate and fix it.</li>
+<li>Show how changing <code>$fn</code> changes the preview and render times; have students compare <code>$fn = 12</code> vs <code>$fn = 80</code>.</li>
+<li>Provide a short multi-part object with several primitives and ask students to debug placement and resolution issues.</li>
+</ol>
+<h2 id="check-for-understanding-9"><a class="header" href="#check-for-understanding-9">Check for understanding</a></h2>
+<ul>
+<li>What is a common cause of a parse error in OpenSCAD? (Missing <code>;</code> or unmatched <code>{}</code>)</li>
+<li>How does increasing <code>$fn</code> affect render time and model smoothness?</li>
+</ul>
+<h3 id="quiz--lesson-13"><a class="header" href="#quiz--lesson-13">Quiz — Lesson 1.3</a></h3>
+<ol>
+<li>Short answer: What does <code>$fn</code> control? Give a short explanation.</li>
+<li>Multiple choice: Which of these is likely to cause a syntax error? (A) Missing semicolon  (B) Using <code>;</code> at the end of a line  (C) Properly matched braces — Answer: A</li>
+<li>Practical: Given a piece of code that fails to render, describe three steps you would take to find the problem.</li>
+<li>True/False: Setting <code>$fn</code> to 200 is always better. — Answer: False (renders smoother but takes longer)</li>
+</ol>
+<h1 id="lesson-1_3-debugging-resolution-and-translation-pracitce"><a class="header" href="#lesson-1_3-debugging-resolution-and-translation-pracitce">Lesson 1_3: Debugging Resolution and translation Pracitce</a></h1>
+<h2 id="materials-1-4"><a class="header" href="#materials-1-4">Materials</a></h2>
+<ul>
+<li>computer with openSCAD installed</li>
+<li>3D printed primatives med resolution (scale as needed in 3d printer slicer program but keep porportions locked for atleast the cylinder and sphere)</li>
+<li>3D printed 1_2 models</li>
+</ul>
+<h2 id="sequence-3"><a class="header" href="#sequence-3">Sequence</a></h2>
+<ul>
+<li>1_3 Debugging
+<ul>
+<li>ctrl alt e and arrow key around if you are getting an error after previewing</li>
+<li>this lesson just goes over syntax errors for actual bugs check out lesson 2 debugging lesson</li>
+</ul>
+</li>
+<li>1_3 Resolution
+<ul>
+<li>$fn at the top always after header…</li>
+</ul>
+</li>
+</ul>
+<h2 id="check-for-understanding-1-2"><a class="header" href="#check-for-understanding-1-2">Check for understanding</a></h2>
+<ul>
+<li>What is debugging?</li>
+<li>Why do you need to debug?</li>
+<li>What type of debugging are we going to focus on today?</li>
+<li>What is $fn how does changing it effect your code, the shape,  its rendering/previewing?</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="project-1--tactile-floor-markers"><a class="header" href="#project-1--tactile-floor-markers">Project 1 — Tactile Floor Markers</a></h1>
+<h2 id="materials-5"><a class="header" href="#materials-5">Materials</a></h2>
+<ul>
+<li>Failed 3D printed prototypes for examples</li>
+<li>Example project documentation and briefing files</li>
+<li>Calipers</li>
+<li>An environment (real or simulated) for placing floor markers</li>
+</ul>
+<h2 id="objectives-2"><a class="header" href="#objectives-2">Objectives</a></h2>
+<ul>
+<li>Design and iterate on a tactile floor marker that meets functional requirements</li>
+<li>Produce technical documentation and measurement data</li>
+<li>Test prototypes and refine designs across iterations</li>
+</ul>
+<h2 id="sequence-approx-2-weeks"><a class="header" href="#sequence-approx-2-weeks">Sequence (approx. 2 weeks)</a></h2>
+<ol>
+<li>Read the design briefing and clarify functional requirements.</li>
+<li>Sketch concepts and take measurements of target surfaces.</li>
+<li>Implement a chosen design in OpenSCAD using variables for major dimensions.</li>
+<li>Print prototypes, evaluate against acceptance criteria, and iterate.</li>
+<li>Finalize documentation, take at least one photo of the physical device, and submit deliverables.</li>
+</ol>
+<h2 id="instructor-notes-1"><a class="header" href="#instructor-notes-1">Instructor notes</a></h2>
+<ul>
+<li>Encourage multiple quick iterations with low <code>SHELL</code> settings for faster printing when testing fit.</li>
+<li>Emphasize documentation: students should include measured values, code, print settings, and reflections.</li>
+</ul>
+<h1 id="project-1-tactile-floor-markers"><a class="header" href="#project-1-tactile-floor-markers">Project 1 Tactile Floor Markers</a></h1>
+<h2 id="materials-1-5"><a class="header" href="#materials-1-5">Materials</a></h2>
+<ul>
+<li>Failed 3d printed prototype</li>
+<li>Example Project doc file</li>
+<li>Project briefing file</li>
+<li>Callipers</li>
+<li>A room with furniture that can be moved and needs to be put back in place (this can be made up, but its helpful if its a real life example or use for students)</li>
+</ul>
+<h2 id="objectives-1-1"><a class="header" href="#objectives-1-1">Objectives</a></h2>
+<ul>
+<li>3D printing</li>
+<li>Designing a solution based on functional requirements and constraints</li>
+<li>Preparing technical notes</li>
+<li>Meauring using calipers</li>
+<li>Testing multiple iterations</li>
+</ul>
+<h2 id="sequence-4"><a class="header" href="#sequence-4">Sequence</a></h2>
+<p><em>Project should take around 2 weeks</em></p>
+<ol>
+<li>Have student read the design briefing.</li>
+<li>Have students sketch out some ideas and take measurements.</li>
+<li>Have students pick the idea they would like to implement and begin programming it.</li>
+<li>Have students 3D print their prototype and evaluate it against the projects functional requirements and criteria.</li>
+<li>Have students reiterate on their prototype.</li>
+<li>Have students finish their documentation file and take atleast one product photo.</li>
+<li>Have students send all virutal deliverables via email and present the physical device in class.</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="project-11-dice-dice-dice-1"><a class="header" href="#project-11-dice-dice-dice-1">Project 1.1: Dice Dice Dice</a></h1>
+<p><br><br></p>
+<h2 id="briefing-1"><a class="header" href="#briefing-1">Briefing:</a></h2>
+<p>Make three die. Bonus points if they are different in more than 3 ways.
+<br><br></p>
+<h2 id="constraints-1"><a class="header" href="#constraints-1">Constraints:</a></h2>
+<ul>
+<li>Your prototype must incorporate a 3D printed piece designed in openSCAD</li>
+<li>Each die must be unique
+<br><br></li>
+</ul>
+<h2 id="functional-requirements-1"><a class="header" href="#functional-requirements-1">Functional Requirements:</a></h2>
+<ul>
+<li>Dice will not break when thrown
+<br><br></li>
+</ul>
+<h2 id="deliverables-via-email-and-physically-turn-in-3d-print-1"><a class="header" href="#deliverables-via-email-and-physically-turn-in-3d-print-1">Deliverables (via email and physically turn in 3D print):</a></h2>
+<ul>
+<li>Technical documentation including sections on: ideas, measurements, object notes, construction notes, assembly/installation/use notes, and reflections along with atleast one photo of your final prototye</li>
+<li>3D printed prototype</li>
+<li>.scad code file for your object
+<br><br></li>
+</ul>
+<h2 id="rubric-3"><a class="header" href="#rubric-3">Rubric:</a></h2>
+<p>Projects are graded on a 0 to 9 point scale. Grading will be based on how well your prototype meets the identified problem, the effectiveness of the solution, the complexity and originality of the design, and the quality of your documentation.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="intermediate-skills-outline"><a class="header" href="#intermediate-skills-outline">Intermediate Skills Outline</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="lesson-21-parametric-design--modules-in-openscad"><a class="header" href="#lesson-21-parametric-design--modules-in-openscad">Lesson 2.1: Parametric Design &amp; Modules in OpenSCAD</a></h1>
 <p><strong>Unit:</strong> 2 — Intermediate Skills<br><strong>Duration:</strong> 1–2 class periods<br><strong>Prerequisite:</strong> Unit 0 (all lessons) and Unit 1 (Projects 0 and 1 complete)</p>
@@ -5559,39 +6085,33 @@ Load pulls at layers ↓   Load is parallel to layers
 <p><strong>Stakeholder signature (if available):</strong> ___________________________________</p>
 <p><em>If a written signature is not possible, note the method of confirmation (verbal, email, etc.) and attach any written evidence.</em></p>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="project-4-assistive-technology-design-briefing"><a class="header" href="#project-4-assistive-technology-design-briefing">Project 4: Assistive Technology Design (Briefing)</a></h1>
-<div style="break-before: page; page-break-before: always;"></div>
-<h1 id="project-x"><a class="header" href="#project-x">Project X</a></h1>
-<ul>
-<li>Author:</li>
-<li>Date:</li>
-<li>Description:</li>
-</ul>
-<h2 id="object-notes"><a class="header" href="#object-notes">Object Notes</a></h2>
-<h3 id="measurements"><a class="header" href="#measurements">Measurements</a></h3>
-<ul>
-<li>Dice 1</li>
-<li>Dice 2</li>
-<li>Dice 3</li>
-</ul>
-<h3 id="construction-notes"><a class="header" href="#construction-notes">Construction Notes</a></h3>
-<h3 id="use-notes"><a class="header" href="#use-notes">Use Notes</a></h3>
-<h2 id="reflections"><a class="header" href="#reflections">Reflections</a></h2>
-<div style="break-before: page; page-break-before: always;"></div>
-<h1 id="project-xx-___"><a class="header" href="#project-xx-___">Project X.X: ___</a></h1>
+<h1 id="project-12-real-life-problem-solving-with-3d-printing"><a class="header" href="#project-12-real-life-problem-solving-with-3d-printing">Project 1.2: Real-Life Problem Solving with 3D Printing</a></h1>
 <p><br><br></p>
-<h2 id="briefing"><a class="header" href="#briefing">Briefing:</a></h2>
-<p><br><br></p>
-<h2 id="modifications"><a class="header" href="#modifications">Modifications:</a></h2>
+<h2 id="briefing-2"><a class="header" href="#briefing-2">Briefing:</a></h2>
+<p>3D modeling and 3D printing can be used to solve tangible, everyday problems. For this project, you are tasked to identify a real-life problem encountered by you or someone you know that can be solved with a 3D printed object. Using a 3D model from an online repository, like <a href="https://thingiverse.com/">Thingiverse</a> or <a href="https://www.printables.com/model">Printables</a>, you will solve this problem and become familiar with the engineering design process.
+<br><br></p>
+<h2 id="constraints-2"><a class="header" href="#constraints-2">Constraints:</a></h2>
 <ul>
-<li>Your prototype must incorporate a 3D printed piece designed in openSCAD</li>
-<li>Your prototype and project are due in _____ weeks
+<li>Your prototype must incorporate a 3D printed piece.</li>
+<li>You must utilize a 3D model from an online repository and adapt it for your purpose.
 <br><br></li>
 </ul>
-<h2 id="teaching-tips"><a class="header" href="#teaching-tips">Teaching Tips:</a></h2>
-<h2 id="technical-tips"><a class="header" href="#technical-tips">Technical Tips:</a></h2>
-<h2 id="rubric-1"><a class="header" href="#rubric-1">Rubric:</a></h2>
-<p>Projects are graded on a 0 to 9 point scale as determined by the class project rubric.</p>
+<h2 id="functional-requirements-2"><a class="header" href="#functional-requirements-2">Functional Requirements:</a></h2>
+<ul>
+<li>Your prototype should solve the problem you’ve identified effectively and safely.
+<br><br></li>
+</ul>
+<h2 id="deliverables-via-email-and-physically-turn-in-3d-print-2"><a class="header" href="#deliverables-via-email-and-physically-turn-in-3d-print-2">Deliverables (via email and physically turn in 3D print):</a></h2>
+<ul>
+<li>Technical documentation, including sections on: identified problem, solution concept, design ideas, measurements, object notes, construction notes, assembly/installation/use notes, and reflections along with at least one photo of your final prototype.</li>
+<li>3D printed prototype.</li>
+<li>3D model file (.stl or .obj) of your prototype
+<br><br></li>
+</ul>
+<h2 id="rubric-4"><a class="header" href="#rubric-4">Rubric:</a></h2>
+<p>Projects are graded on a 0 to 9 point scale. Grading will be based on how well your prototype meets the identified problem, the effectiveness of the solution, the complexity and originality of the design, and the quality of your documentation.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="project-1-documentation-template"><a class="header" href="#project-1-documentation-template">Project 1 Documentation Template</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="project-2-documentation-template"><a class="header" href="#project-2-documentation-template">Project 2 Documentation Template</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
@@ -6282,22 +6802,6 @@ max(3, 5, 1)           // returns 5
         <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
         <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
 
-        <!-- Livereload script (if served using the cli tool) -->
-        <script>
-            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
-            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
-            const socket = new WebSocket(wsAddress);
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
 
 
         <script>

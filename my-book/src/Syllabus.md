@@ -1,8 +1,8 @@
 # 3D Design & Printing Curriculum — Enhanced Edition
 
-**Author:** Michael Ryan Hunsaker, M.Ed., Ph.D.    
-**Last Updated:** 2026-02-17     
-**Target Audience:** Blind/Visually Impaired High school students    
+**Author:** Michael Ryan Hunsaker, M.Ed., Ph.D.
+**Last Updated:** 2026-02-17
+**Target Audience:** Blind/Visually Impaired High school students
 
 ---
 
@@ -64,7 +64,6 @@ This project is graded on a 0–9 point scale:
 - [Thingiverse](https://www.thingiverse.com/) — 3D model repository
 - [OpenSCAD Documentation](https://openscad.org/documentation.html) — Official reference
 - [Make3D Documentation](http://github.com/tdeck/3dmake) - Official Documentation
-
 
 ## Resources for Research
 

@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>3D Make Tutorial - JAWS Scripting Language Manual</title>
+        <title>Project 1: Tactile Floor Markers - JAWS Scripting Language Manual</title>
 
 
         <!-- Custom HTML head -->
@@ -55,34 +55,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../favicon-de23e50b.svg">
-        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
-        <link rel="stylesheet" href="../css/variables-8adf115d.css">
-        <link rel="stylesheet" href="../css/general-2459343d.css">
-        <link rel="stylesheet" href="../css/chrome-ae938929.css">
-        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-2459343d.css">
+        <link rel="stylesheet" href="../../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../src/assets/custom-8fad8bec.css">
+        <link rel="stylesheet" href="../../src/assets/custom-8fad8bec.css">
 
 
         <!-- Provide site root and default themes to javascript -->
         <script>
-            const path_to_root = "../";
+            const path_to_root = "../../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9980aec5.js";
+            window.path_to_searchindex_js = "../../searchindex-9980aec5.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-953cb32a.js"></script>
+        <script src="../../toc-953cb32a.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -149,7 +149,7 @@
             <!-- populated by js -->
             <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
             <noscript>
-                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
             </noscript>
             <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -184,7 +184,7 @@
                     <h1 class="menu-title">JAWS Scripting Language Manual</h1>
 
                     <div class="right-buttons">
-                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
                             <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
                         </a>
 
@@ -218,279 +218,71 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="3dmake-non-visual-3d-printing-tutorial"><a class="header" href="#3dmake-non-visual-3d-printing-tutorial">3dmake: Non-Visual 3D Printing Tutorial</a></h1>
-<p><em>A step-by-step guide for blind and low-vision users</em></p>
-<hr>
-<h2 id="1-what-is-3dmake"><a class="header" href="#1-what-is-3dmake">1. What is 3dmake?</a></h2>
-<p>3dmake is a command-line tool designed specifically for blind and visually impaired users to design, inspect, and print 3D models using a non-visual workflow.</p>
-<p>It combines:</p>
+                        <h1 id="project-1--tactile-floor-markers"><a class="header" href="#project-1--tactile-floor-markers">Project 1 — Tactile Floor Markers</a></h1>
+<h2 id="materials"><a class="header" href="#materials">Materials</a></h2>
 <ul>
-<li>Text-based modeling with OpenSCAD</li>
-<li>Model description tools</li>
-<li>STL generation</li>
-<li>Slicing to G-code</li>
-<li>Automatic orientation</li>
-<li>Tactile preview generation</li>
-<li>Direct printing support</li>
+<li>Failed 3D printed prototypes for examples</li>
+<li>Example project documentation and briefing files</li>
+<li>Calipers</li>
+<li>An environment (real or simulated) for placing floor markers</li>
 </ul>
-<p>All functions are accessible from a single command-line interface.</p>
-<hr>
-<h2 id="2-requirements"><a class="header" href="#2-requirements">2. Requirements</a></h2>
-<p>You will need:</p>
+<h2 id="objectives"><a class="header" href="#objectives">Objectives</a></h2>
 <ul>
-<li>A Windows or Linux computer</li>
-<li>A screen reader such as NVDA, JAWS, or Orca</li>
-<li>A terminal or command prompt</li>
-<li>A 3D printer (optional for first steps)</li>
+<li>Design and iterate on a tactile floor marker that meets functional requirements</li>
+<li>Produce technical documentation and measurement data</li>
+<li>Test prototypes and refine designs across iterations</li>
 </ul>
-<hr>
-<h2 id="3-installing-3dmake"><a class="header" href="#3-installing-3dmake">3. Installing 3dmake</a></h2>
-<h3 id="step-1-download-the-program"><a class="header" href="#step-1-download-the-program">Step 1: Download the program</a></h3>
-<p>Go to:</p>
-<p><a href="http://github.com/tdeck/3dmake">http://github.com/tdeck/3dmake</a></p>
-<p>Download the latest release for your operating system.</p>
-<hr>
-<h3 id="step-2-extract-the-program"><a class="header" href="#step-2-extract-the-program">Step 2: Extract the program</a></h3>
+<h2 id="sequence-approx-2-weeks"><a class="header" href="#sequence-approx-2-weeks">Sequence (approx. 2 weeks)</a></h2>
 <ol>
-<li>Extract the downloaded file.</li>
-<li>Open a terminal.</li>
-<li>Navigate to the extracted folder.</li>
+<li>Read the design briefing and clarify functional requirements.</li>
+<li>Sketch concepts and take measurements of target surfaces.</li>
+<li>Implement a chosen design in OpenSCAD using variables for major dimensions.</li>
+<li>Print prototypes, evaluate against acceptance criteria, and iterate.</li>
+<li>Finalize documentation, take at least one photo of the physical device, and submit deliverables.</li>
 </ol>
-<p>Example:</p>
-<pre><code class="language-pwsh">cd ~\Downloads\3dmak
-</code></pre>
-<hr>
-<h3 id="step-3-run-the-setup-command"><a class="header" href="#step-3-run-the-setup-command">Step 3: Run the setup command</a></h3>
-<pre><code class="language-pwsh">.\3dm setup
-</code></pre>
-<p>Follow the prompts to:</p>
+<h2 id="instructor-notes"><a class="header" href="#instructor-notes">Instructor notes</a></h2>
 <ul>
-<li>Choose a printer profile</li>
-<li>Configure AI features (optional)</li>
-<li>Set default options</li>
+<li>Encourage multiple quick iterations with low <code>SHELL</code> settings for faster printing when testing fit.</li>
+<li>Emphasize documentation: students should include measured values, code, print settings, and reflections.</li>
 </ul>
-<p>After setup, the <code>3dm</code> command should work globally.</p>
-<hr>
-<h2 id="4-understanding-the-3dmake-workflow"><a class="header" href="#4-understanding-the-3dmake-workflow">4. Understanding the 3dmake workflow</a></h2>
-<p>A typical workflow:</p>
+<h1 id="project-1-tactile-floor-markers"><a class="header" href="#project-1-tactile-floor-markers">Project 1 Tactile Floor Markers</a></h1>
+<h2 id="materials-1"><a class="header" href="#materials-1">Materials</a></h2>
+<ul>
+<li>Failed 3d printed prototype</li>
+<li>Example Project doc file</li>
+<li>Project briefing file</li>
+<li>Callipers</li>
+<li>A room with furniture that can be moved and needs to be put back in place (this can be made up, but its helpful if its a real life example or use for students)</li>
+</ul>
+<h2 id="objectives-1"><a class="header" href="#objectives-1">Objectives</a></h2>
+<ul>
+<li>3D printing</li>
+<li>Designing a solution based on functional requirements and constraints</li>
+<li>Preparing technical notes</li>
+<li>Meauring using calipers</li>
+<li>Testing multiple iterations</li>
+</ul>
+<h2 id="sequence"><a class="header" href="#sequence">Sequence</a></h2>
+<p><em>Project should take around 2 weeks</em></p>
 <ol>
-<li>Create a project</li>
-<li>Edit a model</li>
-<li>Build the model</li>
-<li>Slice into G-code</li>
-<li>Print or preview</li>
+<li>Have student read the design briefing.</li>
+<li>Have students sketch out some ideas and take measurements.</li>
+<li>Have students pick the idea they would like to implement and begin programming it.</li>
+<li>Have students 3D print their prototype and evaluate it against the projects functional requirements and criteria.</li>
+<li>Have students reiterate on their prototype.</li>
+<li>Have students finish their documentation file and take atleast one product photo.</li>
+<li>Have students send all virutal deliverables via email and present the physical device in class.</li>
 </ol>
-<hr>
-<h2 id="5-creating-a-new-project"><a class="header" href="#5-creating-a-new-project">5. Creating a new project</a></h2>
-<p>Open a terminal and go to the folder where you want the project.</p>
-<p>Example:</p>
-<pre><code class="language-pwsh">cd ~\3dprojects
-</code></pre>
-<p>Create a new project:</p>
-<pre><code class="language-pwsh">3dm new
-</code></pre>
-<p>This creates a project structure:</p>
-<pre><code class="language-bwsh">project\
- ├── src\
- │    └── main.scad
- ├── build\
- └── 3dmake.toml
-</code></pre>
-<p>Meaning:</p>
-<ul>
-<li><code>src\</code> contains the model code</li>
-<li><code>build\</code> contains output files</li>
-<li><code>3dmake.toml</code> contains settings</li>
-</ul>
-<hr>
-<h2 id="6-editing-your-first-model"><a class="header" href="#6-editing-your-first-model">6. Editing your first model</a></h2>
-<p>3dmake uses OpenSCAD, a text-based 3D modeling language.</p>
-<p>Open the main model:</p>
-<pre><code class="language-pwsh">3dm edit-model
-</code></pre>
-<p>Replace the contents with this simple cube:</p>
-<pre><code class="language-scad">cube([20, 20, 20]);
-</code></pre>
-<p>Save and close the editor.</p>
-<hr>
-<h2 id="7-building-a-3d-model"><a class="header" href="#7-building-a-3d-model">7. Building a 3D model</a></h2>
-<p>Build the model into an STL file:</p>
-<pre><code class="language-pwsh">3dm build
-</code></pre>
-<p>This creates:</p>
-<pre><code>build\main.stl
-</code></pre>
-<p>STL is the standard format for 3D printing.</p>
-<hr>
-<h2 id="8-getting-a-description-of-the-model"><a class="header" href="#8-getting-a-description-of-the-model">8. Getting a description of the model</a></h2>
-<p>You can get information about the model:</p>
-<pre><code class="language-pwsh">3dm info
-</code></pre>
-<p>Without AI:</p>
-<ul>
-<li>Shows size and bounding box</li>
-</ul>
-<p>With AI configured:</p>
-<ul>
-<li>Provides a natural language description</li>
-<li>May identify possible print issues</li>
-</ul>
-<hr>
-<h2 id="9-slicing-the-model-for-printing"><a class="header" href="#9-slicing-the-model-for-printing">9. Slicing the model for printing</a></h2>
-<p>Slicing converts the STL into G-code.</p>
-<p>Run:</p>
-<pre><code class="language-pwsh">3dm build slice
-</code></pre>
-<p>This produces:</p>
-<pre><code>build\main.stl
-build\main.gcode
-</code></pre>
-<hr>
-<h2 id="10-printing-the-model"><a class="header" href="#10-printing-the-model">10. Printing the model</a></h2>
-<p>If your printer is configured:</p>
-<pre><code class="language-pwsh">3dm build print
-</code></pre>
-<p>This will:</p>
-<ol>
-<li>Build the model</li>
-<li>Slice it</li>
-<li>Send it to the printer</li>
-</ol>
-<hr>
-<h2 id="11-using-tactile-previews"><a class="header" href="#11-using-tactile-previews">11. Using tactile previews</a></h2>
-<p>Previews are small, fast prints showing the outline of the object.</p>
-<p>They:</p>
-<ul>
-<li>Print quickly</li>
-<li>Use less filament</li>
-<li>Help you feel the shape before printing the full object</li>
-</ul>
-<p>Slice a preview:</p>
-<pre><code class="language-pwsh">3dm preview slice
-</code></pre>
-<p>Print a preview:</p>
-<pre><code class="language-pwsh">3dm preview print
-</code></pre>
-<p>By default, previews include:</p>
-<ul>
-<li>Front view</li>
-<li>Left view</li>
-<li>Bottom view</li>
-</ul>
-<hr>
-<h2 id="12-auto-orienting-a-model"><a class="header" href="#12-auto-orienting-a-model">12. Auto-orienting a model</a></h2>
-<p>Correct orientation can:</p>
-<ul>
-<li>Reduce support material</li>
-<li>Improve surface quality</li>
-<li>Shorten print time</li>
-</ul>
-<p>Run:</p>
-<pre><code class="language-pwsh">3dm build orient print
-</code></pre>
-<p>This:</p>
-<ol>
-<li>Builds the model</li>
-<li>Chooses the best orientation</li>
-<li>Slices it</li>
-<li>Prints it</li>
-</ol>
-<hr>
-<h2 id="13-changing-slicer-settings-with-overlays"><a class="header" href="#13-changing-slicer-settings-with-overlays">13. Changing slicer settings with overlays</a></h2>
-<p>3dmake uses text-based configuration.</p>
-<p>There are two types:</p>
-<h3 id="profiles"><a class="header" href="#profiles">Profiles</a></h3>
-<p>Full printer configurations.</p>
-<p>List them:</p>
-<pre><code class="language-pwsh">3dm list-profiles
-</code></pre>
-<hr>
-<h3 id="overlays"><a class="header" href="#overlays">Overlays</a></h3>
-<p>Small changes to slicer settings, such as supports or materials.</p>
-<p>List overlays:</p>
-<pre><code class="language-pwsh">3dm list-overlays
-</code></pre>
-<p>Use an overlay:</p>
-<pre><code class="language-pwsh">3dm build slice -o supports
-</code></pre>
-<hr>
-<h2 id="14-installing-openscad-libraries"><a class="header" href="#14-installing-openscad-libraries">14. Installing OpenSCAD libraries</a></h2>
-<p>Libraries provide reusable shapes.</p>
-<p>Open the file:</p>
-<pre><code class="language-pwsh">3dmake.toml
-</code></pre>
-<p>Add a library:</p>
-<pre><code class="language-toml">libraries = ["bosl"]
-</code></pre>
-<p>Install the libraries:</p>
-<pre><code class="language-pwsh">3dm install-libraries
-</code></pre>
-<hr>
-<h2 id="15-typical-beginner-workflow"><a class="header" href="#15-typical-beginner-workflow">15. Typical beginner workflow</a></h2>
-<p>Create a project:</p>
-<pre><code class="language-pwsh">3dm new
-</code></pre>
-<p>Edit the model:</p>
-<pre><code class="language-pwsh">3dm edit-model
-</code></pre>
-<p>Build the model:</p>
-<pre><code class="language-pwsh">3dm build
-</code></pre>
-<p>Print a preview:</p>
-<pre><code class="language-pwsh">3dm preview print
-</code></pre>
-<p>Print the full model:</p>
-<pre><code class="language-pwsh">3dm build print
-</code></pre>
-<hr>
-<h1 id="cli-cheat-sheet"><a class="header" href="#cli-cheat-sheet">CLI Cheat Sheet</a></h1>
-<h2 id="project-commands"><a class="header" href="#project-commands">Project commands</a></h2>
-<pre><code class="language-pwsh">3dm new
-3dm edit-model
-3dm info
-</code></pre>
-<hr>
-<h2 id="build-and-print"><a class="header" href="#build-and-print">Build and print</a></h2>
-<pre><code class="language-pwsh">3dm build
-3dm build slice
-3dm build print
-3dm build orient print
-</code></pre>
-<hr>
-<h2 id="preview-commands"><a class="header" href="#preview-commands">Preview commands</a></h2>
-<pre><code class="language-pwsh">3dm preview slice
-3dm preview print
-</code></pre>
-<hr>
-<h2 id="slicer-configuration"><a class="header" href="#slicer-configuration">Slicer configuration</a></h2>
-<pre><code class="language-pwsh">3dm list-profiles
-3dm list-overlays
-3dm build -o supports
-</code></pre>
-<hr>
-<h2 id="library-commands"><a class="header" href="#library-commands">Library commands</a></h2>
-<pre><code class="language-pwsh">3dm list-libraries
-3dm install-libraries
-</code></pre>
-<hr>
-<h2 id="help-and-version"><a class="header" href="#help-and-version">Help and version</a></h2>
-<pre><code class="language-pwsh">3dm help
-3dm version
-</code></pre>
-<hr>
-<h1 id="references-apa"><a class="header" href="#references-apa">References (APA)</a></h1>
-<p>Deck, T. (n.d.). <em>3dmake: Non-visual 3D design and 3D printing tool</em>. GitHub. Retrieved February 18, 2026, from <a href="http://github.com/tdeck/3dmake">http://github.com/tdeck/3dmake</a></p>
-<p>OpenSCAD. (n.d.). <em>The programmers solid 3D CAD modeller</em>. Retrieved February 18, 2026, from <a href="https://openscad.org">https://openscad.org</a></p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../PowerShell_Foundation/PS_Quiz_1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../Units/Unit_1_Guided_Projects/lesson_1_3.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="../3dMake_Foundation/Lessons_3dMake_1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../Extension_Projects/dice-dice-dice.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -500,11 +292,11 @@ build\main.gcode
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../PowerShell_Foundation/PS_Quiz_1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../Units/Unit_1_Guided_Projects/lesson_1_3.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="../3dMake_Foundation/Lessons_3dMake_1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../Extension_Projects/dice-dice-dice.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>
@@ -524,16 +316,16 @@ build\main.gcode
         </script>
 
 
-        <script src="../elasticlunr-ef4e11c1.min.js"></script>
-        <script src="../mark-09e88c2c.min.js"></script>
-        <script src="../searcher-c2a407aa.js"></script>
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-c2a407aa.js"></script>
 
-        <script src="../clipboard-1626706a.min.js"></script>
-        <script src="../highlight-abc7f01d.js"></script>
-        <script src="../book-a0b12cfe.js"></script>
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-abc7f01d.js"></script>
+        <script src="../../book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
-        <script src="../src/assets/jaws-08240bd2.js"></script>
+        <script src="../../src/assets/jaws-08240bd2.js"></script>
 
 
 

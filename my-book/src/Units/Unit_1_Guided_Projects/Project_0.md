@@ -1,6 +1,38 @@
-# Project 0 Your First 3D Print
+# Project 0 — Your First 3D Print
+
 ## Materials
-- Callipers
+
+- Calipers
+- 3D print of Project 0 (example) and student models
+- Project 0 briefing and student documentation template
+- Computer with a slicer (e.g., PrusaSlicer, Cura) — recommend a slicer with accessible CLI or UI features
+
+## Objectives
+
+- Measure an object with calipers and record dimensions
+- Model a simple object in OpenSCAD using measured parameters
+- Render and slice the model for 3D printing
+- Convert between inches and millimeters when necessary
+
+## Sequence
+
+1. Present the project briefing and distribute the physical object for measurement.
+2. Students measure the object with calipers and log dimensions in the documentation template.
+3. Students model the object in OpenSCAD using variables for key dimensions.
+4. After previewing and rendering, students slice the STL and prepare G-code for printing.
+5. Optional: If available, use OctoPrint or a similar tool for wireless printing.
+6. Reflect: Compare measured dimensions vs printed result and document any discrepancies.
+
+## Instructor notes
+
+- Double-check student slicing profiles before printing. Encourage students to preview the G-code layers if the slicer supports it.
+- Provide a troubleshooting checklist for common print problems (bed adhesion, under-extrusion, over-extrusion).
+
+# Project 0 Your First 3D Print
+
+## Materials
+
+- Calipers
 - 3D print of project 0
 - a 3D model of one of the practice problems you solved or are working on 
 - Project 0 briefing
@@ -10,12 +42,14 @@
 - (optional) **How to 3D print: Octoprint**
 
 ## Objectives
+
 - Measuring using calipers
 - 3D printing and slicing
 - Writing technical notes
 - Converting between inches and millimeters
 
 ## Sequence
+
 1. Introduce the project briefing to studnets give students the 3D model and callipers teach them how to measure using the callipers and have them measure and document the measured dimensions of the object.
 2. Have students model the object in openSCAD
 3. Have students render the model or render a model they coded and either email it to you or compelete steps 4-6
