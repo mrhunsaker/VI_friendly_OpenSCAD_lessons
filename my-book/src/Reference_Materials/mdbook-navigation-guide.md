@@ -1,6 +1,6 @@
 # Navigating This Curriculum — mdBook Guide (Self-Paced)
 
-**Accessibility:** When including images or diagrams, add short alt-text and provide a comment-based walkthrough for any .scad examples so screen-reader users can follow the design steps.
+
 
 
 *This curriculum is published as a web book using mdBook. This page explains how to find what you need, navigate between chapters, and use the book with a screen reader.*

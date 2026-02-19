@@ -1,6 +1,6 @@
 # PS-1: Navigation — Moving Around Your File System
 
-**Accessibility:** When including images or diagrams, add short alt-text and provide a comment-based walkthrough for any .scad examples so screen-reader users can follow the design steps.
+
 
 
 **Duration:** 1 class period

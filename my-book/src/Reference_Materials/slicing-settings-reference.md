@@ -1,6 +1,6 @@
 # Slicing Settings Quick Reference — PrusaSlicer (Self-Paced)
 
-**Accessibility:** When including images or diagrams, add short alt-text and provide a comment-based walkthrough for any .scad examples so screen-reader users can follow the design steps.
+
 
 
 *Print this page and keep it next to the printer.*

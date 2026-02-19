@@ -1,6 +1,6 @@
 # Master Project Rubric — 0–9 Point Scale (Self-Paced)
 
-**Accessibility:** When including images or diagrams, add short alt-text and provide a comment-based walkthrough for any .scad examples so screen-reader users can follow the design steps.
+
 
 
 *This rubric applies to all Unit 1, 2, and 3 projects unless otherwise noted in the project briefing. Project 0 is complete/incomplete only.*

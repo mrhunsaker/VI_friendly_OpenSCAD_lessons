@@ -1,7 +1,7 @@
 
 # Lesson 5: Safety Protocols and the Physical Fabrication Interface (Self-Paced)
 
-**Accessibility:** When including images or diagrams, add short alt-text and provide a comment-based walkthrough for any .scad examples so screen-reader users can follow the design steps.
+
 
 
 Estimated time: 60–90 minutes

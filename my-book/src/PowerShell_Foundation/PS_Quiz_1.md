@@ -1,6 +1,6 @@
 # Quiz 1: PowerShell Basics (Self-Paced) — ~20 minutes
 
-**Accessibility:** When including images or diagrams, add short alt-text and provide a comment-based walkthrough for any .scad examples so screen-reader users can follow the design steps.
+
 
 
 Instructions: Complete the tasks below. When asked to capture output, save screenshots or copy output into a single text file to submit.

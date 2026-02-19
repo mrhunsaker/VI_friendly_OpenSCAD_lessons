@@ -1,6 +1,6 @@
 # Summary (Self-Paced Accesible 3D Printing with OpenSCAD and 3DMake Course)
 
-**Accessibility:** When including images or diagrams, add short alt-text and provide a comment-based walkthrough for any .scad examples so screen-reader users can follow the design steps.
+
 
 - [Syllabus](Syllabus.md)
 - [Introduction](README.md)

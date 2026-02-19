@@ -1,6 +1,6 @@
 # Screen Reader Coding Tips — NVDA & JAWS (Self-Paced)
 
-**Accessibility:** When including images or diagrams, add short alt-text and provide a comment-based walkthrough for any .scad examples so screen-reader users can follow the design steps.
+
 
 
 *A consolidated reference for using NVDA or JAWS while writing OpenSCAD code in VSCode or Notepad++. Tips that were previously scattered across lesson files are collected here.*

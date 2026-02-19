@@ -1,7 +1,7 @@
 
 # PS-5: Filling in the Gaps — Control Flow, Profiles, and Useful Tricks (Self-Paced)
 
-**Accessibility:** When including images or diagrams, add short alt-text and provide a comment-based walkthrough for any .scad examples so screen-reader users can follow the design steps.
+
 
 
 Estimated time: 30–45 minutes

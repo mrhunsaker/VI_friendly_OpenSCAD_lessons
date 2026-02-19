@@ -1,6 +1,6 @@
 # Vocabulary Glossary — 3D Design & Printing (Self-Paced)
 
-**Accessibility:** When including images or diagrams, add short alt-text and provide a comment-based walkthrough for any .scad examples so screen-reader users can follow the design steps.
+
 
 
 *A reference for all key terms used in this curriculum. Terms are organized alphabetically.*
