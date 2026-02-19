@@ -1,4 +1,3 @@
-```markdown
 # Miniature Assembly — Extension Project (Self-Paced)
 
 Estimated time: 4–8 hours
@@ -15,4 +14,3 @@ Tasks:
 Deliverable:
 - Source `.scad` files, STLs, assembly photos, and an assembly guide.
 
-``` 
