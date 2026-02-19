@@ -25,6 +25,10 @@ By the end of this self-paced lesson you will be able to:
 - Notebook or laptop for notes (optionally a recorder with consent)
 - Sample stakeholder scenarios (below)
 
+Project resources
+
+- [Project 3 Briefing](../../../assets/Units/Unit_3_Open_Ended_Projects/project_3_briefing.txt)
+
 ---
 
 ## Step‑by‑Step Activities

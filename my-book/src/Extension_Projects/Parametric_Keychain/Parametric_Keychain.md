@@ -1,8 +1,5 @@
 This project has been moved into a named subfolder to keep `Extension_Projects` tidy.
 
-See: [Extension_Projects/Parametric_Keychain/Parametric_Keychain.md](Extension_Projects/Parametric_Keychain/Parametric_Keychain.md)
-
-(The canonical copy lives in `Extension_Projects/Parametric_Keychain/`.)
 ```markdown
 # Parametric Keychain — Extension Project (Self-Paced)
 
@@ -21,6 +18,7 @@ Deliverable:
 - `keychain.scad`, three STLs, and a short note on parameter choices and print settings.
 
 Starter files
-- [starter.scad](../../docs/assets/Extension_Projects/Parametric_Keychain/starter.scad) — minimal parametric scaffold to begin.
+- [starter.scad](../../assets/Extension_Projects/Parametric_Keychain/starter.scad) — minimal parametric scaffold to begin.
 
-``` 
+```
+- [starter.scad](../../assets/Extension_Projects/Parametric_Keychain/starter.scad) — minimal parametric scaffold to begin.

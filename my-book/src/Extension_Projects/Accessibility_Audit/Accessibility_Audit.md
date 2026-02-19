@@ -16,6 +16,6 @@ Deliverable:
 - A one-page audit report and a patch (diff) suggestion for the target lesson.
 
 Starter files
-- [starter.scad](../../docs/assets/Extension_Projects/Accessibility_Audit/starter.scad) — small tactile marker scaffold for testing contrast and tactile cues.
+- [starter.scad](../../assets/Extension_Projects/Accessibility_Audit/starter.scad) — small tactile marker scaffold for testing contrast and tactile cues.
 
 ``` 

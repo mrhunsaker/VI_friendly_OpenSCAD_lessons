@@ -45,6 +45,41 @@
         }
         </style>
         
+        <style>
+        /* Load Atkinson Hyperlegible fonts from the book assets */
+        @font-face {
+          font-family: 'Atkinson Hyperlegible Next';
+          src: url('/assets/fonts/AtkinsonHyperlegibleNext-Regular.ttf') format('truetype');
+          font-weight: 400;
+          font-style: normal;
+          font-display: swap;
+        }
+        @font-face {
+          font-family: 'Atkinson Hyperlegible Mono';
+          src: url('/assets/fonts/AtkinsonHyperlegibleMono-SemiBold.ttf') format('truetype');
+          font-weight: 600;
+          font-style: normal;
+          font-display: swap;
+        }
+        @font-face {
+          font-family: 'Atkinson Hyperlegible Mono';
+          src: url('/assets/fonts/AtkinsonHyperlegibleMono-Regular.otf') format('opentype');
+          font-weight: 400;
+          font-style: normal;
+          font-display: swap;
+        }
+        
+        /* Apply the fonts to code blocks and highlighted code */
+        pre, code, .hljs, .leftbar {
+          font-family: 'Atkinson Hyperlegible Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", "Courier New", monospace !important;
+        }
+        
+        /* Optionally set body to Atkinson Hyperlegible Next for improved legibility */
+        body {
+          font-family: 'Atkinson Hyperlegible Next', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        </style>
+        
         <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
         <script>
           document.addEventListener("DOMContentLoaded", () => {
@@ -80,10 +115,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-9b312cf5.js";
+            window.path_to_searchindex_js = "searchindex-e27e15a7.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-3786228f.js"></script>
+        <script src="toc-61f61fa6.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -274,10 +309,10 @@
 <tr><td><strong>Stakeholder process</strong></td><td>0–3</td><td>Quality of interviews, stakeholder involvement, and co-developed functional requirements</td></tr>
 <tr><td><strong>Design &amp; iteration</strong></td><td>0–3</td><td>Evidence of genuine iteration (Prototype 2 is meaningfully better than Prototype 1); quality of OpenSCAD design</td></tr>
 <tr><td><strong>Final prototype</strong></td><td>0–3</td><td>How well the final print meets the functional requirements; build quality</td></tr>
+<tr><td><strong>Bonus:</strong></td><td>0-1</td><td>Exceptional documentation; user testimonial; especially creative or impactful design.</td></tr>
 </tbody>
 </table>
 </div>
-<p><strong>Bonus (up to 1 point):</strong> Exceptional documentation; user testimonial; especially creative or impactful design.</p>
 <hr>
 <h2 id="quick-links-to-key-resources"><a class="header" href="#quick-links-to-key-resources">Quick Links to Key Resources</a></h2>
 <ul>
@@ -1067,367 +1102,374 @@ Accessibility (a11y) - Ensuring materials and workflows work for
 people using assistive technology (screen readers, braille displays,
 keyboard navigation).</p>
 <hr><div style="break-before: page; page-break-before: always;"></div>
-<h1 id="getting-started-with-powershell-self-paced"><a class="header" href="#getting-started-with-powershell-self-paced">Getting Started with PowerShell (Self-Paced)</a></h1>
-<p>Estimated time: 30–45 minutes</p>
-<p><strong>Learning Objectives</strong></p>
+<h1 id="introduction-to-command-line-interfaces"><a href="#introduction-to-command-line-interfaces" class="header">Introduction to Command Line Interfaces</a></h1>
+<pre><code class="language-markdown"># PowerShell Introduction — Screen-reader friendly (JAWS/NVDA)
+
+Estimated time: 20–30 minutes
+
+**Target audience:** Users who are new to the command line and use screen readers.
+
+**Learning Goals**
+- Open and identify the PowerShell prompt
+- Run basic commands: `pwd`, `ls -n`, `cd`, `ni`, `cat`, `echo`
+- Redirect and page through long outputs for screen readers
+- Use `Get-Help` and `Get-Command` to learn more
+
+## Starting PowerShell
+
+Windows
+1. Press **Windows**, type `PowerShell`, then press **Enter**.
+2. If you need elevated rights, press **Windows+X** then choose **Windows PowerShell (Admin)**.
+
+macOS / Linux
+1. Open Terminal.app (macOS) or your preferred terminal (Linux).
+2. Type `pwsh` and press Enter (PowerShell Core / pwsh must be installed).
+
+When PowerShell starts you will hear the prompt and usually your current path. The default prompt often includes `PS` followed by the path, e.g., `PS C:\Users\YourName&gt;`.
+
+## Essential commands — short list
+
+- `pwd` — print working directory (where you are now)
+- `ls -n` — list file and folder names only (recommended for screen readers)
+- `cd &lt;path&gt;` — change directory
+- `ni &lt;filename&gt;` — create a file (alias for New-Item)
+- `cat &lt;file&gt;` — show file contents
+- `echo &lt;text&gt;` — print text
+
+Quick examples:
+
+```powershell
+pwd
+ls -n
+cd Documents
+ni notes.txt
+echo "hello" &gt; notes.txt
+cat notes.txt
+</code></pre>
+<h2 id="paging-long-outputs-for-screen-readers"><a class="header" href="#paging-long-outputs-for-screen-readers">Paging long outputs for screen readers</a></h2>
 <ul>
-<li>Launch PowerShell and identify the prompt</li>
-<li>Use <code>pwd</code>, <code>ls -n</code>, and <code>cd</code> to navigate</li>
-<li>Create, open, and edit a simple file from PowerShell</li>
+<li>If an output is long, redirect to a file and open it in an editor: <code>some-command &gt; output.txt ; notepad.exe output.txt</code>.</li>
+<li>Or pipe to <code>more</code>: <code>some-command | more</code> (press Space to advance pages, Q to quit).</li>
+<li>For very long listings prefer <code>ls -n | Out-File -FilePath list.txt -Encoding utf8</code> then open <code>list.txt</code>.</li>
 </ul>
-<p><strong>Materials</strong></p>
+<h2 id="help-and-discovery"><a class="header" href="#help-and-discovery">Help and discovery</a></h2>
 <ul>
-<li>PowerShell (installed)</li>
-<li>A text editor (Notepad or VS Code)</li>
+<li><code>Get-Help &lt;command&gt;</code> shows help: <code>Get-Help ls</code> or <code>Get-Help Get-ChildItem</code>.</li>
+<li><code>Get-Command &lt;name&gt;</code> locates a program or cmdlet: <code>Get-Command openscad</code>.</li>
 </ul>
-<p>Step-by-step Tasks</p>
-<ol>
-<li>Open PowerShell and confirm the prompt shows your path.</li>
-<li>Run <code>pwd</code> and <code>ls -n</code> in your home directory.</li>
-<li>Create <code>exercise1.txt</code> with <code>ni exercise1.txt</code> and open it in Notepad.</li>
-<li>Practice moving between folders with <code>cd</code> and using tab completion.</li>
-<li>Close and re-open PowerShell; confirm behavior is consistent.</li>
-</ol>
-<p>Quick Quiz</p>
-<ol>
-<li>How do you list only file/folder names?</li>
-<li>What does <code>pwd</code> do?</li>
-<li>How do you create a new file?</li>
-<li>What key is used for autocomplete?</li>
-<li>How do you open a file in Notepad from PowerShell?</li>
-</ol>
-<p>Extension Problems</p>
-<ol>
-<li>Save the output of <code>ls -n</code> to <code>list.txt</code> and open it.</li>
-<li>Create a nested folder structure and practice <code>cd</code> into it.</li>
-<li>Use <code>ls -n *.scad</code> to find SCAD files.</li>
-<li>Use <code>Get-Command code</code> to verify VS Code in PATH.</li>
-<li>Try redirecting <code>pwd</code> to a file and read it with <code>cat</code>.</li>
-</ol>
-<h2 id="what-is-powershell"><a class="header" href="#what-is-powershell">What is PowerShell?</a></h2>
-<p>PowerShell is a cross-platform command-line shell and scripting language that runs on Windows, Linux, and macOS. It lets you control your computer with text commands instead of a graphical user interface (GUI). In this course we use PowerShell to run CLI tools (like OpenSCAD, slicers, or 3DMake), move files, and automate repetitive tasks.</p>
-<h2 id="quick-tutorial-and-core-concepts"><a class="header" href="#quick-tutorial-and-core-concepts">Quick tutorial and core concepts</a></h2>
-<p>Open PowerShell (Windows+X → choose PowerShell, or search from Start). When it opens you are placed in your current user’s home directory (abbreviated <code>~</code>).</p>
-<h3 id="paths-and-navigation"><a class="header" href="#paths-and-navigation">Paths and navigation</a></h3>
+<p>Tip: Redirect <code>Get-Help</code> into a file for easier reading: <code>Get-Help Get-Command | Out-File help.txt ; notepad.exe help.txt</code>.</p>
+<h2 id="running-scripts-and-executables"><a class="header" href="#running-scripts-and-executables">Running scripts and executables</a></h2>
 <ul>
-<li><code>~</code> — your home directory</li>
-<li><code>.</code> — current directory</li>
-<li><code>..</code> — parent directory</li>
-<li>Use Tab to autocomplete files and folders (try <code>~/D</code> then press Tab)</li>
+<li>Use the call operator <code>&amp;</code> to run files with spaces or when PowerShell might treat them differently: <code>&amp; "./script.ps1"</code>.</li>
+<li>To run an executable by path: <code>&amp; 'C:\Program Files\OpenSCAD\openscad.exe'</code>.</li>
 </ul>
-<h3 id="useful-commands-examples"><a class="header" href="#useful-commands-examples">Useful commands (examples)</a></h3>
-<pre><code class="language-powershell">pwd                # show current directory
-ls -n              # list file/folder names only (screen-reader friendly)
+<h2 id="screen-reader-specific-tips-jaws-nvda"><a class="header" href="#screen-reader-specific-tips-jaws-nvda">Screen reader specific tips (JAWS, NVDA)</a></h2>
+<ul>
+<li>Use <code>ls -n</code> to avoid cluttered, multi-column listings.</li>
+<li>Redirect large outputs to a text file and open it in an editor that your screen reader handles well.</li>
+<li>If output stops being announced, try moving focus with <code>Alt+Tab</code> and back, or briefly pressing <code>Ctrl</code> or <code>Shift</code> to force announcement.</li>
+</ul>
+<h2 id="suggested-learning-path"><a class="header" href="#suggested-learning-path">Suggested learning path</a></h2>
+<ol>
+<li>Open PowerShell, run <code>pwd</code>, <code>ls -n</code>, <code>cd</code> into Documents.</li>
+<li>Create a file with <code>ni test.txt</code>, add a line with <code>echo "hi" &gt; test.txt</code>, and read it with <code>cat test.txt</code>.</li>
+<li>Use <code>Get-Help ls</code> and redirect output to a file to read comfortably.</li>
+</ol>
+<h2 id="hands-on-explore-the-terminal-beginner"><a class="header" href="#hands-on-explore-the-terminal-beginner">Hands-on: Explore the terminal (Beginner)</a></h2>
+<ol>
+<li>Run <code>pwd</code> and speak or note the output.</li>
+<li>Run <code>ls -n</code> in your home directory. If the list is long, save it: <code>ls -n &gt; listing.txt ; notepad.exe listing.txt</code>.</li>
+<li>Create a folder and file: <code>mkdir PS_Practice ; cd PS_Practice ; ni notes.txt</code>.</li>
+<li>Add a line: <code>echo "My first note" &gt; notes.txt ; cat notes.txt</code>.</li>
+</ol>
+<h2 id="extension-exercises"><a class="header" href="#extension-exercises">Extension Exercises</a></h2>
+<ol>
+<li>Use wildcards to list only <code>.scad</code> files: <code>ls -n *.scad</code>.</li>
+<li>Save a long command’s output and search it with <code>Select-String</code>.</li>
+<li>Create a small script that prints a timestamp and test it with <code>&amp;</code>.</li>
+</ol>
+<h2 id="quick-quiz-5-questions"><a class="header" href="#quick-quiz-5-questions">Quick Quiz (5 questions)</a></h2>
+<ol>
+<li>What command shows your current directory?</li>
+<li>How do you list names only for screen readers?</li>
+<li>How do you create an empty file?</li>
+<li>What operator runs a script or executable by path?</li>
+<li>How do you page through long output?</li>
+</ol>
+<h2 id="references-2"><a class="header" href="#references-2">References</a></h2>
+<ul>
+<li>PowerShell docs: https://learn.microsoft.com/powershell/</li>
+<li>Using Out-File: https://learn.microsoft.com/powershell/module/microsoft.powershell.utility/out-file</li>
+</ul>
+<pre><code></code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="overview--full-guide"><a href="#overview--full-guide" class="header">Overview &amp; Full Guide</a></h1>
+<pre><code class="language-markdown"># PowerShell Tutorial (Self-Paced)
+
+Estimated time: 30–45 minutes
+
+**Learning Objectives**
+- Launch PowerShell and identify the prompt
+- Understand and use basic path notation (`~`, `./`, `../`)
+- Use `pwd`, `ls -n`, and `cd` to navigate the filesystem
+- Open files in an external editor and run simple commands
+
+**Materials**
+- A computer with PowerShell installed
+- Access to a text editor (Notepad, VS Code)
+
+## Pre-Requisite Knowledge
+- Typing and basic text-editing skills
+- Familiarity with file/folder concepts and basic OS navigation
+- Basic screen-reading familiarity (if applicable)
+
+## What is PowerShell?
+
+PowerShell is a cross-platform command-line shell and scripting language that runs on Windows, Linux, and macOS. It lets you control your computer with text commands instead of a graphical user interface (GUI). In this course we use PowerShell to run CLI tools (like OpenSCAD, slicers, or 3DMake), move files, and automate repetitive tasks.
+
+## What we'll do and why
+
+You'll use PowerShell to run CLI programs, navigate the filesystem, and manipulate files — tasks that are especially efficient when using a keyboard or a screen reader.
+
+## Quick tutorial &amp; core concepts
+
+### Paths and navigation
+
+* `~` — home directory
+* `.` — current directory
+* `..` — parent directory
+* `./` — current directory shortcut
+* `../` — parent directory shortcut
+* Use **Tab** to autocomplete files and folders (try typing `~/D` then press Tab)
+
+Paths typically use `\` on Windows and `/` on Unix-like systems; PowerShell accepts `/` in most contexts.
+
+### Useful commands (examples)
+
+```powershell
+pwd                # show current directory
+ls -n              # list names only (screen-reader friendly)
 cd path/to/dir     # change directory
 whoami             # current user
-</code></pre>
-<p>Tip: On Windows PowerShell, backslashes (<code>\\</code>) are standard, but most PowerShell commands accept forward slashes as well.</p>
-<h2 id="common-operations"><a class="header" href="#common-operations">Common operations</a></h2>
-<h3 id="file-and-folder-manipulation"><a class="header" href="#file-and-folder-manipulation">File and folder manipulation</a></h3>
-<pre><code class="language-powershell">mkdir my-folder          # create folder
+```
+
+### Wildcards
+
+* `*` matches zero or more characters
+* `?` matches a single character
+
+Use `ls -n *.scad` to filter by extension, for example.
+
+## Common operations
+
+### File and folder manipulation
+
+```powershell
+mkdir my-folder          # create folder
 cp -r src dest           # copy (use -r for directories)
 mv oldname newname       # rename or move
 rm file                  # remove file
-</code></pre>
-<h3 id="input-output-and-piping"><a class="header" href="#input-output-and-piping">Input, output, and piping</a></h3>
-<pre><code class="language-powershell">echo 'hello' | clip      # copy to clipboard
+ni filename.txt          # create new file (New-Item alias)
+```
+
+### Input, output, and piping
+
+```powershell
+echo 'hello' | clip      # copy to clipboard
 command &gt; output.txt     # redirect output to file
-command &gt; $null          # discard output
+command &gt; $null          # discard/suppress output
+```
+
+Use `|` to pipe output and `&gt;` to redirect into files.
+
+### Editing and running programs
+
+```powershell
+notepad.exe file.txt     # open in Notepad (Windows)
+code file.txt            # open in VS Code (if in PATH)
+&amp; './script.ps1'         # call operator to run a script or executable
+```
+
+On Linux/macOS, use `./myapp` for local executables where appropriate.
+
+## Screen-reader friendly tips
+
+- Prefer `ls -n` for name-only output.
+- Filter lists with `-af` (files) or `-ad` (directories): `ls -n -af ~/Documents`.
+- Redirect very long outputs to a file and open it in an editor.
+
+## Error handling and control
+
+- Abort a running command: `Ctrl+C`
+- View history: Up/Down arrows or `Get-History`
+- Clear screen: `clear`
+- If an error is long, read the first few lines for the gist and copy short snippets into an editor to examine.
+
+## Environment variables &amp; PATH
+
+Environment variables configure your session. `PATH` tells the shell where to find executables.
+
+```powershell
+echo $env:PATH
+[Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:/mytools", "Machine")
+```
+
+Setting machine-level environment variables requires Administrator privileges.
+
+### Running PowerShell as Administrator
+
+1. Press **Windows+X** and choose **Windows PowerShell (Admin)**.
+2. If a UAC dialog appears, press **Alt+Y** to accept.
+
+## Running CLI applications and archives
+
+To extract ZIP archives:
+
+```powershell
+Expand-Archive -Path file.zip -DestinationPath folder
+```
+
+## Aliases and cross-platform notes
+
+PowerShell provides aliases (`ls`, `cp`, `mv`) mapping to cmdlets (`Get-ChildItem`, `Copy-Item`, `Move-Item`). They make PowerShell feel familiar but can behave differently than native Linux tools. Concepts transfer to WSL, macOS, and Linux, but watch path and permission differences.
+
+## Step-by-step Tasks (Hands-on)
+1. Open PowerShell; listen for the prompt and current path.
+2. Run `pwd` to confirm your location.
+3. Run `ls -n` in your home directory and note the output.
+4. Practice `cd Documents`, `cd ../`, and `cd ~` to move between folders.
+5. Create and open a file: `ni example.txt ; notepad.exe example.txt` (or `code example.txt`).
+
+## Checkpoints
+- After step 3 you should be able to state your current directory.
+- After step 5 you should be able to create and open a text file from PowerShell.
+
+## Quick Quiz (5 questions)
+1. What command prints your current directory?
+2. What does `~` represent?
+3. How do you list only names with `ls`?
+4. How do you go up one directory level?
+5. How would you open `notes.txt` in Notepad from PowerShell?
+
+## Extension Problems
+1. Create a folder `OpenSCAD_Projects` in Documents and verify its contents.
+2. Create three files named `a.scad`, `b.scad`, `c.scad` and list them with a wildcard.
+3. Save `ls -n ~/Documents` output to `doc_list.txt` and open it.
+4. Try tab-completion in a deeply nested folder and note behavior.
+5. Capture `pwd` output into a file and open it: `pwd &gt; cwd.txt ; notepad.exe cwd.txt`.
+
+## Helpful Resources
+- Accessibility in PowerShell ISE (Microsoft): https://learn.microsoft.com/powershell/scripting/windows-powershell/ise/accessibility-in-windows-powershell-ise
+- Learn PowerShell (Microsoft Docs): https://learn.microsoft.com/powershell/scripting/overview
+- Environment Variables &amp; PATH: https://poshcode.gitbook.io/powershell-faq/src/getting-started/environment-variables
+- Alias Reference: https://learn.microsoft.com/powershell/scripting/learn/shell/using-aliases
+
+
+
 </code></pre>
-<h3 id="editing-and-running-programs"><a class="header" href="#editing-and-running-programs">Editing and running programs</a></h3>
-<ul>
-<li>Use <code>notepad.exe</code> or your preferred editor to edit files from PowerShell: <code>notepad.exe file.txt</code></li>
-<li>Use the call operator <code>&amp;</code> to run scripts or local executables: <code>&amp; './script.ps1'</code></li>
-</ul>
-<h2 id="screen-reader-friendly-tips"><a class="header" href="#screen-reader-friendly-tips">Screen-reader friendly tips</a></h2>
-<ul>
-<li>Use <code>ls -n</code> to list only names and reduce verbosity.</li>
-<li>Use flags like <code>-af</code> (files) or <code>-ad</code> (directories) to filter <code>ls</code> output: <code>ls -n -af ~/Documents</code></li>
-<li>Reduce spoken clutter by redirecting large outputs to a file and opening it in the editor.</li>
-</ul>
-<h2 id="error-handling-and-control"><a class="header" href="#error-handling-and-control">Error handling and control</a></h2>
-<ul>
-<li>Abort a running command: <code>Ctrl+C</code></li>
-<li>View command history: Up/Down arrows</li>
-<li>Clear the screen: <code>clear</code></li>
-</ul>
-<p>If you encounter an error, read the first few lines for the gist, then re-run the command or paste short snippets into the editor for debugging.</p>
-<h2 id="environment-variables-and-path"><a class="header" href="#environment-variables-and-path">Environment variables and PATH</a></h2>
-<p>Environment variables store configuration for the session. The PATH environment variable tells PowerShell where to find executables.</p>
-<pre><code class="language-powershell">echo $env:PATH          # show PATH
-[Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\\mytools", "Machine")
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="intro-lesson-layout-and-paths"><a href="#intro-lesson-layout-and-paths" class="header">Intro Lesson: Layout and Paths</a></h1>
+<pre><code class="language-markdown"># PS-0: Getting Started — Layout, Paths, and the Shell (Self-Paced)
+
+Estimated time: 20–30 minutes
+
+**Learning Objectives**
+- Launch PowerShell and locate the prompt
+- Understand path notation and shortcuts (`~`, `./`, `../`)
+- Use tab completion to navigate quickly
+
+**Materials**
+- Computer with PowerShell
+- Editor (Notepad/VS Code)
+
+Step-by-step Tasks
+1. Open PowerShell and note the prompt (it includes the current path).
+2. Run `pwd` and say or note the printed path.
+3. Use `ls -n` to list names in your home directory.
+4. Practice `cd Documents`, `cd ../` and `cd ~` until comfortable.
+5. Try tab-completion: type `cd ~/D` and press Tab.
+
+Checkpoints
+- Confirm you can state your current path and move to `Documents`.
+
+Quick Quiz
+1. What is a path?
+2. What does `~` mean?
+3. How do you autocomplete a path?
+4. How do you go up one directory?
+5. What command lists only names (`ls` flag)?
+
+Extension Problems
+1. Create a nested folder and practice `cd` into it by typing partial names and using Tab.
+2. Use `ls -n -af` to list only files in a folder.
+3. Save `pwd` output to a file and open it in Notepad.
+4. Try `cd` into a folder whose name contains spaces; observe how quotes are handled.
+5. Create a short note file and open it from PowerShell.
+
+## Check for Understanding
+
+Answer these before moving on:
+
+1. What is a path?
+2. What does `~` represent?
+3. What key do you press to autocomplete a path?
+4. If you are in `C:\Users\YourName\Documents` and you type `cd ../`, where do you end up?
+
 </code></pre>
-<p>Note: Setting machine-level environment variables requires Administrator privileges.</p>
-<h3 id="running-powershell-as-administrator"><a class="header" href="#running-powershell-as-administrator">Running PowerShell as Administrator</a></h3>
-<ol>
-<li>Press Windows+X and choose “Windows PowerShell (Admin)”.</li>
-<li>If a User Account Control dialog appears, use <code>Alt+Y</code> to accept.</li>
-</ol>
-<h2 id="running-cli-applications-and-archives"><a class="header" href="#running-cli-applications-and-archives">Running CLI applications and archives</a></h2>
-<ul>
-<li>Expand ZIP archives: <code>Expand-Archive -Path file.zip -DestinationPath folder</code> (see Microsoft docs)</li>
-</ul>
-<h2 id="other-shells-and-aliases"><a class="header" href="#other-shells-and-aliases">Other shells and aliases</a></h2>
-<p>PowerShell exposes many Linux-flavored aliases for convenience. The concepts are transferable to other environments (WSL, macOS, Linux), but be mindful of differences in commands and permissions.</p>
-<h2 id="helpful-resources"><a class="header" href="#helpful-resources">Helpful resources</a></h2>
-<ul>
-<li>Accessibility in PowerShell ISE (Microsoft): https://learn.microsoft.com/powershell/scripting/windows-powershell/ise/accessibility-in-windows-powershell-ise</li>
-<li>Learn PowerShell (Microsoft): https://learn.microsoft.com/powershell/scripting/overview</li>
-<li>PowerShell PATH &amp; environment variables: https://poshcode.gitbook.io/powershell-faq/src/getting-started/environment-variables</li>
-<li>PowerShell aliases: https://learn.microsoft.com/powershell/scripting/learn/shell/using-aliases</li>
-</ul>
-<h2 id="future-ideas"><a class="header" href="#future-ideas">Future ideas</a></h2>
-<ul>
-<li>Advanced piping and text processing (grep/regex)</li>
-<li>Networking in Linux and WSL</li>
-<li>Package management (apt, pip)</li>
-<li>Process management and job control</li>
-</ul>
-<h1 id="getting-started-with-powershell"><a class="header" href="#getting-started-with-powershell">Getting Started with PowerShell</a></h1>
-<p>In this brief guide you will learn some basics about Microsoft <strong>PowerShell</strong>. The point of this guide is to get you up and running with PowerShell so that you can use it to 3D print and slice your models independently. Follow along with the tutorial.</p>
-<h2 id="pre-requisite-knowledge"><a class="header" href="#pre-requisite-knowledge">Pre-Requisite Knowledge</a></h2>
-<ul>
-<li>Typing skills</li>
-<li>Text editing skills</li>
-<li>Basic Windows Navigation skills</li>
-<li>Basic screen reading skills</li>
-<li>Basic knowledge of what a computer <strong>operating system</strong> is and its features (ie file/folders/applications/shortcuts/file extenstions/etc.)</li>
-<li>Basic knowledge of computer hardware (hard drive/usb and other peripheral ports/cloud vs local storage)</li>
-<li>Basic understanding of variables and parameters</li>
-<li>Basic internet navigation skills and (URL structure)</li>
-</ul>
-<h2 id="what-is-powershell-1"><a class="header" href="#what-is-powershell-1">What is PowerShell?</a></h2>
-<p>Windows PowerShell is “a cross-platform task automation solution made up of a <strong>command-line shell</strong>, a scripting language, and a configuration management framework. PowerShell runs on Windows, Linux, and macOS,” but what the heck does that mean?</p>
-<p>Essentially PowerShell is a way to access your computer through text instead of through a graphical user interface (<strong>GUI</strong>). Most computer users are sighted therefore most computer programs and operating systems have a GUI where users interact with the computer primarily by using a mouse to navigate to and click on elements. PowerShell is, primarily for our purposes, a command-line shell this means we can control the computer with a keyboard and text instead of through GUI with a mouse! PowerShell also has a scripting language and a configuration management framework, but we don’t really need to worry about that (if are interested check out the links under the Helpful Resources heading), for now if you understand what a command line-shell is then we are good to move on.</p>
-<h3 id="what-will-we-do-with-it-and-why-should-we-use-it"><a class="header" href="#what-will-we-do-with-it-and-why-should-we-use-it">What will we do with it and why should we use it?</a></h3>
-<p>We will use PowerShell to run several different programs from their command-line interface (<strong>CLI</strong>). If you remember what our command-line shell is then you should be able to infer that a command line interface is, a text based interface for interacting with an application, don’t worry if you are confused it will make more sense when we start to practice. We will also use PowerShell to navigate and move files and folders on our computer, the PowerShell allows us to navigate our computer much like the file explorer, but with text, i.e. without having to tab around or use keyboard shortcuts. As you might have guessed, the powershell is pretty useful if you are navigating your computer auditorily. At the end of this lesson you will understand how the command line shell can be super powerful.</p>
-<ul>
-<li>Bin bash and built in Windows cli commands</li>
-</ul>
-<h2 id="tutorial"><a class="header" href="#tutorial">Tutorial</a></h2>
-<p>The best way to learn (in my opinion) is by doing. So lets launch a PowerShell and see what this thing can do. Windows X will pull up a list of options where you can select PowerShell you can also use the Windows key to search for PowerShell.</p>
-<p>Upon launch it will read you a header that has some copyright information and a warning that it detected a screen reader, it will then read you where you are currently at in the computer. You are now in a command-line shell (command-line for short).</p>
-<p>We call where things are located in the computer a <strong>path</strong> an address to a folder or file. Its kind of like a URL for where files and folders are on your computer. A path will read something like <code>C:\Users\name\</code>. When you launch PowerShell it should default you to your <strong>home directory</strong>. Directory is just another name for a folder they can be used interchangeably. The home directory has a path shortcut it is <code>~</code> this will be useful so you don’t have to type <code>C:\Users\name\</code> every time you want to use the home folder path.</p>
-<p><strong>parent directory</strong>
-Paths are structured by separating folder and file names with either a forward or backslash. Each separation is a folder level. The <strong>root directory</strong> is the lowest level directory it will typically be <code>C:\</code> a shortcut for it is <code>/</code>. For instance <code>C:\Users</code> is the path to all of the folder containing all of the Users on the C: drive. A path will typically be made up of folders and subfolders and will end in a file name. You would not see something like
-<code>/Users/photo.jpg/name/filename.txt</code>
-This would mean that a file has a subfolder, which can not be the case. Folders can have sub folders but files can not.</p>
-<p>You can use the tab key to autocomplete directory or file names when typing a path
-<strong>try typing <code>~/D</code> and then press tab</strong>
-This will autocomplete to the full home path and most likely your Desktop folder if you hit tab again it will go through the next folder starting with D in alphabetical order. If you dont type anything and press tab it will go through the folders and files in your current path in alphabetical order.</p>
-<p>You may notice that we typed a forward slash to seperate the folders and the path autocompleted to using back slashes on Windows the system uses back slashes on other operating systems like Mac and Linux it uses forward slashes since everyone likes those better Windows added support for forward slashes in ther powershell command line environment we are going to stick with forward slashes for the most part.</p>
-<p>A final note on paths <code>./</code> is a shortcut to the current path and <code>../</code> is a shortcut to the path above the current path. Try typing
-<code>./</code> and tab a couple times to listen to the files and folders in your current path
-<code>../</code> and tab a couple times to listen to the files and folders in the folder above your current path</p>
-<p>You may have noticed some files and directories begin with a “.” this means they are hidden and thusly GUI users most likely won’t use them or know about them.</p>
-<p>Quotes surround paths with spaces for string</p>
-<h4 id="realtive-paths-vs-full-paths"><a class="header" href="#realtive-paths-vs-full-paths">Realtive paths vs full paths</a></h4>
-<p>relative paths are usually quickerwiyth the screen reader because full paths even with shortcuts autocomplete to full path name ie “C:/user/etc/etc/etc”</p>
-<h3 id="parameters"><a class="header" href="#parameters">parameters</a></h3>
-<p>sperated by space
-flag wiht a -</p>
-<h3 id="shell-layout-and-functioning"><a class="header" href="#shell-layout-and-functioning">Shell layout and functioning</a></h3>
-<p>Tab key autocomplete</p>
-<h4 id="command-history"><a class="header" href="#command-history">Command history</a></h4>
-<p>Arrow key up and down</p>
-<h3 id="copying-and-pasting-into-and-from-the-powershell"><a class="header" href="#copying-and-pasting-into-and-from-the-powershell">Copying and pasting into and from the powershell</a></h3>
-<p>clip</p>
-<h3 id="users"><a class="header" href="#users">Users</a></h3>
-<p>whoami</p>
-<h4 id="shell-command-input-and-output"><a class="header" href="#shell-command-input-and-output">Shell Command Input and Output</a></h4>
-<p>Commands pressing enter</p>
-<h5 id="errors"><a class="header" href="#errors">Errors</a></h5>
-<p>If you type something incorrectly you will get an error. Usually a whole bunch of text. Try typing an incorrect path
-<code>./blah</code>
-Unless you have a folder named “blah” you will get an error message. These can be helpful but sometimes have way to much information, generally listen to it if you are confused move on if you know what is wrong. You will most likely encounter lots of these going forward and will become familiar with them.</p>
-<h4 id="control--c"><a class="header" href="#control--c">control -c</a></h4>
-<p>aborting commands</p>
-<h4 id="clear"><a class="header" href="#clear">clear</a></h4>
-<h4 id="history"><a class="header" href="#history">history</a></h4>
-<h4 id="exit"><a class="header" href="#exit">exit</a></h4>
-<h4 id="man"><a class="header" href="#man">man</a></h4>
-<h3 id="navigational-commands"><a class="header" href="#navigational-commands">Navigational Commands</a></h3>
-<h4 id="pwd"><a class="header" href="#pwd">pwd</a></h4>
-<h4 id="ls"><a class="header" href="#ls">ls</a></h4>
-<p>The ls command stands for “list” it is how we see the files and folders in our current path. Try it out. You are gonna here a lot of output. Starting with the current directory path, then a table. By defauly this table includes (Attributes), LastWriteTime, file size (Length), and the Name of the item. Listen to it but don’t worry if you are not sure what this all means yet.</p>
-<h5 id="screen-reader-adaptions"><a class="header" href="#screen-reader-adaptions">Screen reader adaptions</a></h5>
-<p>Add a  <code>-n</code> to the end of ls. This is known as a flag. It instructs the ls command to only have ls display file and folder names (n short for names). Try it
-<code>ls -n</code>
-Ahh much better. Sometimes we need all of the infromation about a file or folder but usually we just want the names. You can use the flag <code>-ad</code> or -<code>af</code> to list only the directories or files. Try it
-<code>ls -n -af</code>
-<code>ls -n -ad</code></p>
-<p>You can use ls with a path as well just put it after any of your flags. For instance try this:
-<code>ls -n -af ~/Documents</code></p>
-<p>This will display the names of all files in your <code>Documents</code> folder</p>
-<h4 id="wildcards--and-"><a class="header" href="#wildcards--and-">Wildcards: * and ?</a></h4>
-<p>The <code>*</code> wildcard will match zero or more characters.
-The <code>?</code> wildcard will match a single character.</p>
-<h4 id="cd"><a class="header" href="#cd">cd</a></h4>
-<p>The cd command stands for “change directory” it is the main command we use for navigating the command line.
-<code>.</code>. and <code>..</code></p>
-<h3 id="file-and-folder-manipulation-and-modification"><a class="header" href="#file-and-folder-manipulation-and-modification">File and Folder Manipulation and Modification</a></h3>
-<h4 id="mv"><a class="header" href="#mv">mv</a></h4>
-<p>renaming</p>
-<h4 id="cp--r"><a class="header" href="#cp--r">cp (-r)</a></h4>
-<h4 id="mkdir"><a class="header" href="#mkdir">mkdir</a></h4>
-<h4 id="rm"><a class="header" href="#rm">rm</a></h4>
-<h4 id="rmdir"><a class="header" href="#rmdir">rmdir</a></h4>
-<h4 id="ni-non-linux-touch-equivalent"><a class="header" href="#ni-non-linux-touch-equivalent">ni (non-linux touch equivalent)</a></h4>
-<h4 id="gdr-non-linux-equivalent-to-df"><a class="header" href="#gdr-non-linux-equivalent-to-df">gdr (non-Linux equivalent to df)</a></h4>
-<p>Get drive names and data used and free, recommend output to txt file</p>
-<h3 id="input-output-and-piping-1"><a class="header" href="#input-output-and-piping-1">Input, Output and Piping</a></h3>
-<h4 id="cat"><a class="header" href="#cat">cat</a></h4>
-<h4 id="echo"><a class="header" href="#echo">echo</a></h4>
-<h4 id="--null-supress-output"><a class="header" href="#--null-supress-output">&gt; (&gt; $null supress output)</a></h4>
-<h4 id=""><a class="header" href="#">|</a></h4>
-<h4 id="text-editing"><a class="header" href="#text-editing">text editing</a></h4>
-<p>notepad.exe</p>
-<h3 id="-to-open-the-call-operator-non-linux--similar-open-on-mac"><a class="header" href="#-to-open-the-call-operator-non-linux--similar-open-on-mac">&amp; to open (the call operator non-linux ./ similar open on mac)</a></h3>
-<p>$null &gt; filename.txt or command &gt; $null nothing output
-echo &gt;
-echo blah | clip</p>
-<h4 id="exit-1"><a class="header" href="#exit-1">exit</a></h4>
-<h3 id="aliases-not-same-as-linux"><a class="header" href="#aliases-not-same-as-linux">Aliases (NOT SAME AS LINUX?)</a></h3>
-<h3 id="running-apps"><a class="header" href="#running-apps">Running Apps</a></h3>
-<h1 id="zip-and-compression-not-same-as-linux-unzip"><a class="header" href="#zip-and-compression-not-same-as-linux-unzip">zip and compression? (NOT SAME AS LINUX: unzip)</a></h1>
-<p><a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.archive/Expand-Archive?view=powershell-7.3&amp;viewFallbackFrom=powershell-6">Expand-Archive</a></p>
-<h3 id="important-notes-command-line-environment-environment-variables-and-the-path-variable"><a class="header" href="#important-notes-command-line-environment-environment-variables-and-the-path-variable">Important Notes: <strong>Command-line Environment</strong>, <strong>Environment Variables</strong>, and the <strong>PATH Variable</strong></a></h3>
-<p>When you launch a PowerShell you will automatically be logged in with the current user account you are logged into. The environment refers to the settings and preferences of the current user. You can change these settings by editing variables these are called <strong>environment variables</strong>. The most useful of these (for us atleast) is the PATH variable. The PATH variable tells the command-line where to look for your apps. It is a collection of folder paths that hold the CLI apps you wand to run. Its is essentially a shortcut so we wont have to type out the path to the CLI application every time we want to run it.</p>
-<p>You can see the value of one of your current command-line environemnt variable by typing the command:
-<code>echo $env:{VARIABLE NAME}</code>
-for instance
-<code>echo $env:PATH</code>
-will display a semi-colon sperated list of all of the folder paths stored in your PATH environment variable.</p>
-<p>You can permanently add a folder path to the variable by typing the command
-<code>[Environment]::SetEnvironmentVariable("Path", $env:Path + ";{FOLDER PATH}", "Machine")</code>
-This permanently adds what ever you type for {FOLDER PATH} into your system environment variables for all users. <strong>In order to run this command you must have run PowerShell as administrator.</strong></p>
-<h4 id="steps-to-run-powershell-as-administrator-is-there-a-better-way---sudo"><a class="header" href="#steps-to-run-powershell-as-administrator-is-there-a-better-way---sudo">Steps to run PowerShell as Administrator (is there a better way???) -&gt; sudo?</a></h4>
-<ol>
-<li>Window-X</li>
-<li>Windows PowerShell (Admin)</li>
-<li>Change application focus (alt + tab) to “User Account Control” This is a pop up that asks if you want to change setting on the computer its doesnt default your focus to it upon launch (as of 2022 in Windows 10).</li>
-<li>alt + y to select yes</li>
-</ol>
-<h2 id="package-managers"><a class="header" href="#package-managers">Package Managers?</a></h2>
-<h2 id="other-shells-and-alternative-usage"><a class="header" href="#other-shells-and-alternative-usage">Other Shells and Alternative Usage</a></h2>
-<p>There are many ways to use PowerShell, for this tutorial we foucesd, on some of the simplest (and most easily extendable) ways  to get you going. Most of the PowerShell commands we have covered are not actually Powershell commands but (linux-flavored aliases)[https://learn.microsoft.com/en-us/powershell/scripting/learn/shell/using-aliases?view=powershell-7.3] for PowerShell commands. That way the concepts and commands are very easily extendable to other shell environemnts such as the Linux shell (WSL, or Windows Subsystem for Linux).</p>
-<h2 id="helpful-resources-1"><a class="header" href="#helpful-resources-1">Helpful Resources</a></h2>
-<p>(Accessibility in PowerShell ISE by Microsoft)[https://learn.microsoft.com/en-us/powershell/scripting/windows-powershell/ise/accessibility-in-windows-powershell-ise?view=powershell-7.3]
-(Learn PowerShell Microsoft)[https://learn.microsoft.com/en-us/powershell/scripting/overview?view=powershell-7.3]
-(Setting the PATH variable in PowerShell)[https://poshcode.gitbook.io/powershell-faq/src/getting-started/environment-variables]
-(PowerShell Aliases)[https://learn.microsoft.com/en-us/powershell/scripting/learn/shell/using-aliases?view=powershell-7.3]
-(linux commands)[https://www.guru99.com/linux-commands-cheat-sheet.html]
-(PowerShell cheat sheet)[https://www.theochem.ru.nl/~pwormer/teachmat/PS_cheat_sheet.html]
-(Learn powershell github)[https://github.com/PowerShell/PowerShell/tree/master/docs/learning-powershell]
-(Guru99 page)[https://www.guru99.com/powershell-tutorial.html]
-(PS for beginners Book scripting)[https://f.hubspotusercontent20.net/hubfs/4890073/PowerShell%20for%20Beginners%20eBook.pdf]</p>
-<h2 id="future-ideas-1"><a class="header" href="#future-ideas-1">Future Ideas</a></h2>
-<ul>
-<li>linux
-<ul>
-<li>grep/regex</li>
-<li>networking in linux</li>
-<li>package managemnet (apt-get/pip)</li>
-<li>more linux commands</li>
-<li>directory stacks</li>
-<li>more advanced piping</li>
-<li>file compression/de</li>
-<li>process management (ps kill %% bg fg)</li>
-</ul>
-</li>
-</ul>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="ps-0-getting-started--layout-paths-and-the-shell-self-paced"><a class="header" href="#ps-0-getting-started--layout-paths-and-the-shell-self-paced">PS-0: Getting Started — Layout, Paths, and the Shell (Self-Paced)</a></h1>
-<p>Estimated time: 20–30 minutes</p>
-<p><strong>Learning Objectives</strong></p>
-<ul>
-<li>Launch PowerShell and locate the prompt</li>
-<li>Understand path notation and shortcuts (<code>~</code>, <code>./</code>, <code>../</code>)</li>
-<li>Use tab completion to navigate quickly</li>
-</ul>
-<p><strong>Materials</strong></p>
-<ul>
-<li>Computer with PowerShell</li>
-<li>Editor (Notepad/VS Code)</li>
-</ul>
-<p>Step-by-step Tasks</p>
-<ol>
-<li>Open PowerShell and note the prompt (it includes the current path).</li>
-<li>Run <code>pwd</code> and say or note the printed path.</li>
-<li>Use <code>ls -n</code> to list names in your home directory.</li>
-<li>Practice <code>cd Documents</code>, <code>cd ../</code> and <code>cd ~</code> until comfortable.</li>
-<li>Try tab-completion: type <code>cd ~/D</code> and press Tab.</li>
-</ol>
-<p>Checkpoints</p>
-<ul>
-<li>Confirm you can state your current path and move to <code>Documents</code>.</li>
-</ul>
-<p>Quick Quiz</p>
-<ol>
-<li>What is a path?</li>
-<li>What does <code>~</code> mean?</li>
-<li>How do you autocomplete a path?</li>
-<li>How do you go up one directory?</li>
-<li>What command lists only names (<code>ls</code> flag)?</li>
-</ol>
-<p>Extension Problems</p>
-<ol>
-<li>Create a nested folder and practice <code>cd</code> into it by typing partial names and using Tab.</li>
-<li>Use <code>ls -n -af</code> to list only files in a folder.</li>
-<li>Save <code>pwd</code> output to a file and open it in Notepad.</li>
-<li>Try <code>cd</code> into a folder whose name contains spaces; observe how quotes are handled.</li>
-<li>Create a short note file and open it from PowerShell.</li>
-</ol>
-<h2 id="check-for-understanding"><a class="header" href="#check-for-understanding">Check for Understanding</a></h2>
-<p>Answer these before moving on:</p>
-<ol>
-<li>What is a path?</li>
-<li>What does <code>~</code> represent?</li>
-<li>What key do you press to autocomplete a path?</li>
-<li>If you are in <code>C:\Users\YourName\Documents</code> and you type <code>cd ../</code>, where do you end up?</li>
-</ol>
-<div style="break-before: page; page-break-before: always;"></div>
-<h1 id="ps-1-navigation--moving-around-your-file-system"><a class="header" href="#ps-1-navigation--moving-around-your-file-system">PS-1: Navigation — Moving Around Your File System</a></h1>
-<p><strong>Duration:</strong> 1 class period
-<strong>Prerequisite:</strong> PS-0 (Getting Started)</p>
-<hr>
-<h2 id="learning-objectives"><a class="header" href="#learning-objectives">Learning Objectives</a></h2>
-<p>By the end of this lesson, you will be able to:</p>
-<ul>
-<li>Use <code>pwd</code> to print your current location</li>
-<li>Use <code>cd</code> to move between directories</li>
-<li>Use <code>ls</code> (and its flags) to list files and folders</li>
-<li>Use wildcards <code>*</code> and <code>?</code> to filter listings</li>
-<li>Navigate relative vs. absolute paths</li>
-</ul>
-<hr>
-<h2 id="commands-covered-in-this-lesson"><a class="header" href="#commands-covered-in-this-lesson">Commands Covered in This Lesson</a></h2>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Command</th><th>What It Does</th></tr>
-</thead>
-<tbody>
-<tr><td><code>pwd</code></td><td>Print Working Directory — shows where you are</td></tr>
-<tr><td><code>cd path</code></td><td>Change Directory — move to a new location</td></tr>
-<tr><td><code>ls</code></td><td>List — shows files and folders in current location</td></tr>
-<tr><td><code>ls -n</code></td><td>List names only (screen reader friendly)</td></tr>
-<tr><td><code>ls -n -af</code></td><td>List names of files only</td></tr>
-<tr><td><code>ls -n -ad</code></td><td>List names of directories only</td></tr>
-</tbody>
-</table>
-</div>
-<hr>
-<h2 id="pwd--where-am-i"><a class="header" href="#pwd--where-am-i"><code>pwd</code> — Where Am I?</a></h2>
-<p>Type <code>pwd</code> and press <code>Enter</code>. PowerShell prints the full path to your current location.</p>
-<pre><code class="language-powershell">pwd
+<h1 id="lesson-ps1-navigation"><a href="#lesson-ps1-navigation" class="header">Lesson PS.1: Navigation</a></h1>
+<pre><code class="language-markdown"># PS-1: Navigation — Moving Around Your File System
+
+
+
+**Duration:** 1 class period
+**Prerequisite:** PS-0 (Getting Started)
+
+---
+
+## Learning Objectives
+
+By the end of this lesson, you will be able to:
+- Use `pwd` to print your current location
+- Use `cd` to move between directories
+- Use `ls` (and its flags) to list files and folders
+- Use wildcards `*` and `?` to filter listings
+- Navigate relative vs. absolute paths
+
+---
+
+## Commands Covered in This Lesson
+
+| Command | What It Does |
+|---------|-------------|
+| `pwd` | Print Working Directory — shows where you are |
+| `cd path` | Change Directory — move to a new location |
+| `ls` | List — shows files and folders in current location |
+| `ls -n` | List names only (screen reader friendly) |
+| `ls -n -af` | List names of files only |
+| `ls -n -ad` | List names of directories only |
+
+---
+
+## `pwd` — Where Am I?
+
+Type `pwd` and press `Enter`. PowerShell prints the full path to your current location.
+
+```powershell
+pwd
 # Output: C:\Users\YourName
-</code></pre>
-<p>Use this whenever you are unsure where you are.</p>
-<hr>
-<h2 id="cd--changing-directories"><a class="header" href="#cd--changing-directories"><code>cd</code> — Changing Directories</a></h2>
-<p><code>cd</code> stands for “change directory.”</p>
-<pre><code class="language-powershell"># PS-1: Navigation — Moving Around Your File System (Self-Paced)
+```
+
+Use this whenever you are unsure where you are.
+
+---
+
+## `cd` — Changing Directories
+
+`cd` stands for "change directory."
+
+```powershell
+# PS-1: Navigation — Moving Around Your File System (Self-Paced)
 
 Estimated time: 25–40 minutes
 
@@ -1464,127 +1506,161 @@ Extension Problems
 4. Create a shortcut alias in the session for a long path and test it.
 5. Practice tab-completion in a directory with many similarly named files.
 ## `ls` — Listing Files and Folders
+
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="ps-2-file-and-folder-manipulation-self-paced"><a class="header" href="#ps-2-file-and-folder-manipulation-self-paced">PS-2: File and Folder Manipulation (Self-Paced)</a></h1>
-<p>Estimated time: 30–45 minutes</p>
-<p><strong>Learning Objectives</strong></p>
-<ul>
-<li>Create, copy, move, and delete files and folders from PowerShell</li>
-<li>Use <code>ni</code>, <code>mkdir</code>, <code>cp</code>, <code>mv</code>, <code>rm</code>, and <code>rmdir</code> safely</li>
-<li>Understand when operations are permanent and how to confirm results</li>
-</ul>
-<p><strong>Materials</strong></p>
-<ul>
-<li>PowerShell</li>
-<li>Small practice folder for exercises</li>
-</ul>
-<p>Step-by-step Tasks</p>
-<ol>
-<li>Create a practice directory: <code>mkdir ~/Documents/PS_Practice</code> and <code>cd</code> into it.</li>
-<li>Create two files: <code>ni file1.txt</code> and <code>ni file2.txt</code>.</li>
-<li>Copy <code>file1.txt</code> to <code>file1_backup.txt</code> with <code>cp</code> and confirm with <code>ls -n</code>.</li>
-<li>Rename <code>file2.txt</code> to <code>notes.txt</code> using <code>mv</code> and confirm.</li>
-<li>Delete <code>file1.txt</code> with <code>rm</code> and verify the backup remains.</li>
-</ol>
-<p>Checkpoints</p>
-<ul>
-<li>After step 3 you should see both the original and the backup file.</li>
-</ul>
-<p>Quick Quiz</p>
-<ol>
-<li>How do you create an empty file from PowerShell?</li>
-<li>What command copies a file?</li>
-<li>How do you rename a file?</li>
-<li>What does <code>rm -r</code> do?</li>
-<li>Why is <code>rm</code> potentially dangerous?</li>
-</ol>
-<p>Extension Problems</p>
-<ol>
-<li>Create a folder tree and copy it to a new location with <code>cp -r</code>.</li>
-<li>Write a one-line command that creates three files named <code>a b c</code> and lists them.</li>
-<li>Move a file into a new folder and confirm the move.</li>
-<li>Use wildcards to delete files matching a pattern in a safe test folder.</li>
-<li>Export a listing of the practice folder to <code>practice_listing.txt</code>.</li>
-</ol>
+<h1 id="lesson-ps2-file-and-folder-manipulation"><a href="#lesson-ps2-file-and-folder-manipulation" class="header">Lesson PS.2: File and Folder Manipulation</a></h1>
+<pre><code class="language-markdown"># PS-2: File and Folder Manipulation (Self-Paced)
+
+
+
+Estimated time: 30–45 minutes
+
+**Learning Objectives**
+- Create, copy, move, and delete files and folders from PowerShell
+- Use `ni`, `mkdir`, `cp`, `mv`, `rm`, and `rmdir` safely
+- Understand when operations are permanent and how to confirm results
+
+**Materials**
+- PowerShell
+- Small practice folder for exercises
+
+Step-by-step Tasks
+1. Create a practice directory: `mkdir ~/Documents/PS_Practice` and `cd` into it.
+2. Create two files: `ni file1.txt` and `ni file2.txt`.
+3. Copy `file1.txt` to `file1_backup.txt` with `cp` and confirm with `ls -n`.
+4. Rename `file2.txt` to `notes.txt` using `mv` and confirm.
+5. Delete `file1.txt` with `rm` and verify the backup remains.
+
+Checkpoints
+- After step 3 you should see both the original and the backup file.
+
+Quick Quiz
+1. How do you create an empty file from PowerShell?
+2. What command copies a file?
+3. How do you rename a file?
+4. What does `rm -r` do?
+5. Why is `rm` potentially dangerous?
+
+Extension Problems
+1. Create a folder tree and copy it to a new location with `cp -r`.
+2. Write a one-line command that creates three files named `a b c` and lists them.
+3. Move a file into a new folder and confirm the move.
+4. Use wildcards to delete files matching a pattern in a safe test folder.
+5. Export a listing of the practice folder to `practice_listing.txt`.
+
+
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="ps-3-input-output-and-piping"><a class="header" href="#ps-3-input-output-and-piping">PS-3: Input, Output, and Piping</a></h1>
-<p><strong>Duration:</strong> 1 class period
-<strong>Prerequisite:</strong> PS-2 (File and Folder Manipulation)</p>
-<hr>
-<h2 id="learning-objectives-1"><a class="header" href="#learning-objectives-1">Learning Objectives</a></h2>
-<p>By the end of this lesson, you will be able to:</p>
-<ul>
-<li>Use <code>echo</code> to print text to the screen</li>
-<li>Use <code>cat</code> to read file contents</li>
-<li>Use <code>&gt;</code> to redirect output into a file</li>
-<li>Use <code>|</code> (pipe) to send one command’s output to another</li>
-<li>Copy output to the clipboard with <code>clip</code></li>
-<li>Open files with a text editor from the command line</li>
-</ul>
-<hr>
-<h2 id="commands-covered"><a class="header" href="#commands-covered">Commands Covered</a></h2>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Command</th><th>What It Does</th></tr>
-</thead>
-<tbody>
-<tr><td><code>echo "text"</code></td><td>Print text to the screen</td></tr>
-<tr><td><code>cat filename</code></td><td>Print the contents of a file</td></tr>
-<tr><td><code>&gt; filename</code></td><td>Redirect output into a file (overwrites)</td></tr>
-<tr><td><code>&gt;&gt; filename</code></td><td>Append output to a file (adds to end)</td></tr>
-<tr><td><code>|</code></td><td>Pipe — send output from one command to the next</td></tr>
-<tr><td><code>clip</code></td><td>Copy piped input to the Windows clipboard</td></tr>
-<tr><td><code>notepad.exe filename</code></td><td>Open a file in Notepad</td></tr>
-</tbody>
-</table>
-</div>
-<hr>
-<h2 id="echo--printing-text"><a class="header" href="#echo--printing-text"><code>echo</code> — Printing Text</a></h2>
-<p><code>echo</code> prints text to the screen. It is useful for testing, for writing text into files, and for understanding how piping works.</p>
-<pre><code class="language-powershell">echo "Hello, World"
+<h1 id="lesson-ps3-input-output-and-piping"><a href="#lesson-ps3-input-output-and-piping" class="header">Lesson PS.3: Input, Output, and Piping</a></h1>
+<pre><code class="language-markdown"># PS-3: Input, Output, and Piping
+
+
+
+**Duration:** 1 class period
+**Prerequisite:** PS-2 (File and Folder Manipulation)
+
+---
+
+## Learning Objectives
+
+By the end of this lesson, you will be able to:
+- Use `echo` to print text to the screen
+- Use `cat` to read file contents
+- Use `&gt;` to redirect output into a file
+- Use `|` (pipe) to send one command's output to another
+- Copy output to the clipboard with `clip`
+- Open files with a text editor from the command line
+
+---
+
+## Commands Covered
+
+| Command | What It Does |
+|---------|-------------|
+| `echo "text"` | Print text to the screen |
+| `cat filename` | Print the contents of a file |
+| `&gt; filename` | Redirect output into a file (overwrites) |
+| `&gt;&gt; filename` | Append output to a file (adds to end) |
+| `\|` | Pipe — send output from one command to the next |
+| `clip` | Copy piped input to the Windows clipboard |
+| `notepad.exe filename` | Open a file in Notepad |
+
+---
+
+## `echo` — Printing Text
+
+`echo` prints text to the screen. It is useful for testing, for writing text into files, and for understanding how piping works.
+
+```powershell
+echo "Hello, World"
 echo "This is a test"
-</code></pre>
-<hr>
-<h2 id="cat--reading-files"><a class="header" href="#cat--reading-files"><code>cat</code> — Reading Files</a></h2>
-<p><code>cat</code> prints the contents of a file to the screen.</p>
-<pre><code class="language-powershell"># Read a text file
+```
+
+---
+
+## `cat` — Reading Files
+
+`cat` prints the contents of a file to the screen.
+
+```powershell
+# Read a text file
 cat ~/Documents/notes.txt
 
 # Read an OpenSCAD file
 cat ~/Documents/OpenSCAD_Projects/project0.scad
-</code></pre>
-<p>With a long file, use <code>cat filename | more</code> to read it page by page (press <code>Space</code> to advance, <code>Q</code> to quit).</p>
-<hr>
-<h2 id="--redirecting-output-to-a-file"><a class="header" href="#--redirecting-output-to-a-file"><code>&gt;</code> — Redirecting Output to a File</a></h2>
-<p>The <code>&gt;</code> symbol redirects output from the screen into a file instead.</p>
-<pre><code class="language-powershell"># Create a file with a single line
+```
+
+With a long file, use `cat filename | more` to read it page by page (press `Space` to advance, `Q` to quit).
+
+---
+
+## `&gt;` — Redirecting Output to a File
+
+The `&gt;` symbol redirects output from the screen into a file instead.
+
+```powershell
+# Create a file with a single line
 echo "Author: Your Name" &gt; header.txt
 
 # Confirm the file was created and has content
 cat header.txt
-</code></pre>
-<p><strong>Warning:</strong> <code>&gt;</code> overwrites the file if it already exists. Use <code>&gt;&gt;</code> to append instead:</p>
-<pre><code class="language-powershell">echo "Date: 2025" &gt;&gt; header.txt
+```
+
+**Warning:** `&gt;` overwrites the file if it already exists. Use `&gt;&gt;` to append instead:
+
+```powershell
+echo "Date: 2025" &gt;&gt; header.txt
 echo "Project: Floor Marker" &gt;&gt; header.txt
 cat header.txt
-</code></pre>
-<hr>
-<h2 id="--piping"><a class="header" href="#--piping"><code>|</code> — Piping</a></h2>
-<p>The pipe symbol <code>|</code> sends the output of one command to the input of the next. This lets you chain commands together.</p>
-<pre><code class="language-powershell"># List files and send the list to clip (copies to clipboard)
+```
+
+---
+
+## `|` — Piping
+
+The pipe symbol `|` sends the output of one command to the input of the next. This lets you chain commands together.
+
+```powershell
+# List files and send the list to clip (copies to clipboard)
 ls -n | clip
 
 # Now paste with Ctrl + V anywhere
-</code></pre>
-<pre><code class="language-powershell"># Search within a file's contents using Select-String (like grep)
+```
+
+```powershell
+# Search within a file's contents using Select-String (like grep)
 cat project0.scad | Select-String "cube"
-</code></pre>
-<hr>
-<h2 id="clip--copying-to-clipboard"><a class="header" href="#clip--copying-to-clipboard"><code>clip</code> — Copying to Clipboard</a></h2>
-<p><code>clip</code> takes whatever is piped to it and puts it on the Windows clipboard.</p>
-<pre><code class="language-powershell"># Copy your current directory path to the clipboard
+```
+
+---
+
+## `clip` — Copying to Clipboard
+
+`clip` takes whatever is piped to it and puts it on the Windows clipboard.
+
+```powershell
+# Copy your current directory path to the clipboard
 pwd | clip
 
 # Copy a file listing to clipboard
@@ -1592,11 +1668,16 @@ ls -n | clip
 
 # Copy the contents of a file to clipboard
 cat notes.txt | clip
-</code></pre>
-<p>After any of these, press <code>Ctrl + V</code> in any application to paste.</p>
-<hr>
-<h2 id="opening-files-in-notepad"><a class="header" href="#opening-files-in-notepad">Opening Files in Notepad</a></h2>
-<pre><code class="language-powershell"># Open a file in Notepad
+```
+
+After any of these, press `Ctrl + V` in any application to paste.
+
+---
+
+## Opening Files in Notepad
+
+```powershell
+# Open a file in Notepad
 notepad.exe ~/Documents/notes.txt
 
 # Open a .scad file
@@ -1641,91 +1722,94 @@ Extension Problems
 4. Practice copying different command outputs to clipboard and pasting.
 5. Create a small script that generates a report (counts of files by extension).
 
+
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="ps-4-environment-variables-path-and-aliases-self-paced"><a class="header" href="#ps-4-environment-variables-path-and-aliases-self-paced">PS-4: Environment Variables, PATH, and Aliases (Self-Paced)</a></h1>
-<p>Estimated time: 30–45 minutes</p>
-<p><strong>Learning Objectives</strong></p>
-<ul>
-<li>Read environment variables with <code>$env:VARNAME</code></li>
-<li>Inspect and verify programs in the <code>PATH</code></li>
-<li>Create temporary aliases and understand making them persistent via the profile</li>
-</ul>
-<p><strong>Materials</strong></p>
-<ul>
-<li>PowerShell (with rights to open profile if desired)</li>
-</ul>
-<p>Step-by-step Tasks</p>
-<ol>
-<li>Show your username and home path with <code>echo $env:USERNAME</code> and <code>echo $env:USERPROFILE</code>.</li>
-<li>Inspect <code>echo $env:PATH</code> and identify whether <code>openscad</code> or <code>code</code> would be found.</li>
-<li>Run <code>Get-Command openscad</code> and note the result.</li>
-<li>Create a temporary alias: <code>Set-Alias -Name preview -Value openscad</code> and test <code>preview myfile.scad</code>.</li>
-<li>Open your profile (<code>notepad.exe $PROFILE</code>) and add the alias line to make it persistent (advanced).</li>
-</ol>
-<p>Checkpoints</p>
-<ul>
-<li>After step 3 you can determine whether a program will be found by <code>PATH</code>.</li>
-</ul>
-<p>Quick Quiz</p>
-<ol>
-<li>How do you print an environment variable?</li>
-<li>What is the purpose of <code>PATH</code>?</li>
-<li>How do you check whether <code>openscad</code> is available?</li>
-<li>How do you create a temporary alias?</li>
-<li>Where would you make an alias permanent?</li>
-</ol>
-<p>Extension Problems</p>
-<ol>
-<li>Add a folder to PATH for a test program (describe steps; do not change system PATH without admin).</li>
-<li>Create a short profile snippet that sets two aliases and test re-opening PowerShell.</li>
-<li>Use <code>Get-Command</code> to list the path for several common programs.</li>
-<li>Explore <code>$env:TEMP</code> and create a file there.</li>
-<li>Save a copy of your current PATH to a text file and examine it in your editor.</li>
-</ol>
+<h1 id="lesson-ps4-environment-variables-and-aliases"><a href="#lesson-ps4-environment-variables-and-aliases" class="header">Lesson PS.4: Environment Variables and Aliases</a></h1>
+<pre><code class="language-markdown"># PS-4: Environment Variables, PATH, and Aliases (Self-Paced)
+
+
+
+Estimated time: 30–45 minutes
+
+**Learning Objectives**
+- Read environment variables with `$env:VARNAME`
+- Inspect and verify programs in the `PATH`
+- Create temporary aliases and understand making them persistent via the profile
+
+**Materials**
+- PowerShell (with rights to open profile if desired)
+
+Step-by-step Tasks
+1. Show your username and home path with `echo $env:USERNAME` and `echo $env:USERPROFILE`.
+2. Inspect `echo $env:PATH` and identify whether `openscad` or `code` would be found.
+3. Run `Get-Command openscad` and note the result.
+4. Create a temporary alias: `Set-Alias -Name preview -Value openscad` and test `preview myfile.scad`.
+5. Open your profile (`notepad.exe $PROFILE`) and add the alias line to make it persistent (advanced).
+
+Checkpoints
+- After step 3 you can determine whether a program will be found by `PATH`.
+
+Quick Quiz
+1. How do you print an environment variable?
+2. What is the purpose of `PATH`?
+3. How do you check whether `openscad` is available?
+4. How do you create a temporary alias?
+5. Where would you make an alias permanent?
+
+Extension Problems
+1. Add a folder to PATH for a test program (describe steps; do not change system PATH without admin).
+2. Create a short profile snippet that sets two aliases and test re-opening PowerShell.
+3. Use `Get-Command` to list the path for several common programs.
+4. Explore `$env:TEMP` and create a file there.
+5. Save a copy of your current PATH to a text file and examine it in your editor.
+
+
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="ps-5-filling-in-the-gaps--control-flow-profiles-and-useful-tricks-self-paced"><a class="header" href="#ps-5-filling-in-the-gaps--control-flow-profiles-and-useful-tricks-self-paced">PS-5: Filling in the Gaps — Control Flow, Profiles, and Useful Tricks (Self-Paced)</a></h1>
-<p>Estimated time: 30–45 minutes</p>
-<p><strong>Learning Objectives</strong></p>
-<ul>
-<li>Use history and abort commands (<code>history</code>, <code>Ctrl+C</code>)</li>
-<li>Inspect and edit your PowerShell profile for persistent settings</li>
-<li>Run programs by full path using the <code>&amp;</code> operator</li>
-<li>Handle common screen reader edge cases when using the terminal</li>
-</ul>
-<p><strong>Materials</strong></p>
-<ul>
-<li>PowerShell and an editor (Notepad/VS Code)</li>
-</ul>
-<p>Step-by-step Tasks</p>
-<ol>
-<li>Run several simple commands (e.g., <code>pwd</code>, <code>ls -n</code>, <code>echo hi</code>) then run <code>history</code> to view them.</li>
-<li>Use <code>Invoke-History &lt;n&gt;</code> to re-run a previous command (replace <code>&lt;n&gt;</code> with a history number).</li>
-<li>Practice aborting a long-running command with <code>Ctrl + C</code> (for example, <code>ping 8.8.8.8</code>).</li>
-<li>Open your profile: <code>notepad.exe $PROFILE</code>; if it doesn’t exist, create it: <code>ni $PROFILE -Force</code>.</li>
-<li>Add a persistent alias line to your profile (example: <code>Set-Alias -Name preview -Value openscad</code>), save, and reopen PowerShell to verify.</li>
-</ol>
-<p>Checkpoints</p>
-<ul>
-<li>After step 2 you can re-run a recent command by history number.</li>
-<li>After step 5 your alias should persist across sessions.</li>
-</ul>
-<p>Quick Quiz (5)</p>
-<ol>
-<li>How do you view the command history?</li>
-<li>Which key combination aborts a running command?</li>
-<li>What does <code>echo $PROFILE</code> show?</li>
-<li>How does the <code>&amp;</code> operator help run executables?</li>
-<li>What is one strategy if terminal output stops being announced by your screen reader?</li>
-</ol>
-<p>Extension Problems (5)</p>
-<ol>
-<li>Add an alias and an environment variable change to your profile and document the behavior after reopening PowerShell.</li>
-<li>Create a short script that automates creating a project folder and an initial .scad file.</li>
-<li>Experiment with running OpenSCAD by full path using <code>&amp;</code> and by placing it in PATH; compare results.</li>
-<li>Practice redirecting <code>Get-Help</code> output to a file and reading it in Notepad for screen reader clarity.</li>
-<li>Document three screen reader troubleshooting steps you used and when they helped.</li>
-</ol>
+<h1 id="lesson-ps5-filling-in-the-gaps"><a href="#lesson-ps5-filling-in-the-gaps" class="header">Lesson PS.5: Filling in the Gaps</a></h1>
+<pre><code class="language-markdown">
+# PS-5: Filling in the Gaps — Control Flow, Profiles, and Useful Tricks (Self-Paced)
+
+
+
+Estimated time: 30–45 minutes
+
+**Learning Objectives**
+- Use history and abort commands (`history`, `Ctrl+C`)
+- Inspect and edit your PowerShell profile for persistent settings
+- Run programs by full path using the `&amp;` operator
+- Handle common screen reader edge cases when using the terminal
+
+**Materials**
+- PowerShell and an editor (Notepad/ VS Code)
+
+Step-by-step Tasks
+1. Run several simple commands (e.g., `pwd`, `ls -n`, `echo hi`) then run `history` to view them.
+2. Use `Invoke-History &lt;n&gt;` to re-run a previous command (replace `&lt;n&gt;` with a history number).
+3. Practice aborting a long-running command with `Ctrl + C` (for example, `ping 8.8.8.8`).
+4. Open your profile: `notepad.exe $PROFILE`; if it doesn't exist, create it: `ni $PROFILE -Force`.
+5. Add a persistent alias line to your profile (example: `Set-Alias -Name preview -Value openscad`), save, and reopen PowerShell to verify.
+
+Checkpoints
+- After step 2 you can re-run a recent command by history number.
+- After step 5 your alias should persist across sessions.
+
+Quick Quiz (5)
+1. How do you view the command history?
+2. Which key combination aborts a running command?
+3. What does `echo $PROFILE` show?
+4. How does the `&amp;` operator help run executables?
+5. What is one strategy if terminal output stops being announced by your screen reader?
+
+Extension Problems (5)
+1. Add an alias and an environment variable change to your profile and document the behavior after reopening PowerShell.
+2. Create a short script that automates creating a project folder and an initial .scad file.
+3. Experiment with running OpenSCAD by full path using `&amp;` and by placing it in PATH; compare results.
+4. Practice redirecting `Get-Help` output to a file and reading it in Notepad for screen reader clarity.
+5. Document three screen reader troubleshooting steps you used and when they helped.
+
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="quiz-1-powershell-basics-self-paced--20-minutes"><a class="header" href="#quiz-1-powershell-basics-self-paced--20-minutes">Quiz 1: PowerShell Basics (Self-Paced) — ~20 minutes</a></h1>
 <p>Instructions: Complete the tasks below. When asked to capture output, save screenshots or copy output into a single text file to submit.</p>
@@ -1750,470 +1834,533 @@ Extension Problems
 <li>If screenshots are difficult, copy command output into a text file and submit that file instead.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="3dmake-non-visual-3d-printing-tutorial-self-paced"><a class="header" href="#3dmake-non-visual-3d-printing-tutorial-self-paced">3dmake: Non-Visual 3D Printing Tutorial (Self-Paced)</a></h1>
-<p>Estimated time: 45–75 minutes</p>
-<p><strong>Learning Objectives</strong></p>
-<ul>
-<li>Describe the 3dMake command-line workflow and project structure</li>
-<li>Create a new 3dMake project, edit <code>src/main.scad</code>, and run <code>3dm build</code></li>
-<li>Slice a model and produce a tactile preview or full G-code</li>
-</ul>
-<p><strong>Materials</strong></p>
-<ul>
-<li>Computer with 3dMake installed</li>
-<li>Screen reader (NVDA, JAWS, Orca) configured</li>
-<li>Example project files in <code>assets/</code> or classroom repo</li>
-</ul>
-<hr>
-<p>Step-by-step Tasks</p>
-<ol>
-<li>Verify prerequisites: confirm <code>3dm</code>, <code>openscad</code>, and your slicer are discoverable in the terminal (<code>which 3dm</code>, <code>which openscad</code>).</li>
-<li>Create a new project: <code>3dm new</code> → open <code>src/main.scad</code> with <code>3dm edit-model</code> and add a simple cube: <code>cube([20,20,20]);</code>.</li>
-<li>Build the project: <code>3dm build</code> and confirm <code>build/main.stl</code> exists.</li>
-<li>Slice a preview: <code>3dm preview slice</code> then <code>3dm preview print</code> (or export preview STL) to test tactile output.</li>
-<li>Slice for full print: <code>3dm build slice</code> → inspect <code>build/main.gcode</code> with a layer-preview option in your slicer.</li>
-</ol>
-<p>Checkpoints</p>
-<ul>
-<li>After step 2 you can open and edit <code>src/main.scad</code> from the terminal.</li>
-<li>After step 3 the <code>build/</code> folder contains <code>main.stl</code>.</li>
-</ul>
-<hr>
-<p>Quick Quiz (5)</p>
-<ol>
-<li>What command creates a new 3dMake project?</li>
-<li>Where does 3dMake put compiled STLs by default?</li>
-<li>How do you open the model editor from the CLI?</li>
-<li>What command slices a preview for tactile testing?</li>
-<li>Why is it useful to run a preview before a full print?</li>
-</ol>
-<p>Extension Problems (5)</p>
-<ol>
-<li>Create two variants of a parameterized cube (different sizes) and export both STLs; compare their file sizes and estimated print times.</li>
-<li>Add a <code>3dmake.toml</code> overlay that changes layer height and document the visible effect on the preview.</li>
-<li>Build and slice a small object, then import the STL into a second slicer and report any differences in estimated time.</li>
-<li>Create a short shell script that automates new → edit → build for a classroom scaffold.</li>
-<li>Describe three safety checks you will perform before starting a multi-hour print.</li>
-</ol>
-<hr>
-<p>Notes: This lesson is intended to be hands-on. If networked AI features are not configured, skip the AI verification steps and focus on deterministic renders and slicer previews.</p>
-<hr>
-<h2 id="library-commands"><a class="header" href="#library-commands">Library commands</a></h2>
-<pre><code class="language-pwsh">3dm list-libraries
+<h1 id="3d-make-intro"><a href="#3d-make-intro" class="header">3D Make Intro</a></h1>
+<pre><code class="language-markdown">
+
+# **The Programmatic Fabrication Lifecycle: An Instructional Framework for 3DMake and OpenSCAD in Secondary STEM Education**
+
+The transition from traditional, direct-manipulation computer-aided design (CAD) to programmatic, declarative modeling represents a fundamental shift in how physical objects are conceptualized and engineered. For the high school junior, this transition is not merely a change in software but a pivot toward computational thinking, where geometry is derived from mathematical logic rather than visual approximation. The 3DMake ecosystem, an open-source command-line toolchain, serves as the critical connective tissue in this lifecycle, automating the translation of source code into physical matter.1 By integrating OpenSCAD’s script-based modeling with 3DMake’s automation of rendering, slicing, and verification, students engage with a workflow that mirrors professional DevOps and industrial manufacturing pipelines.1 This report provides an exhaustive pedagogical guide, safety background, and technical analysis of this ecosystem, tailored for an advanced secondary education environment.
+
+## **The Architecture of Programmatic Design: Introduction to 3DMake**
+
+Programmatic CAD differs from standard industry tools like Fusion 360 or SolidWorks by utilizing a "code-as-model" philosophy. OpenSCAD, the primary engine supported by 3DMake, uses a functional programming language to define three-dimensional volumes.3 This approach is particularly robust for parametric design, where the dimensions of an object are defined as variables, allowing for instantaneous reconfiguration without manual rebuilding.4 3DMake enhances this by providing a unified command-line interface (CLI) to manage the entire process, from editing source files to triggering remote print jobs through interfaces like OctoPrint or Bambu Connect.1  
+The educational value of this toolchain lies in its transparency. Students are not hidden behind a proprietary user interface; they interact directly with the file system, configuration files, and API integrations. This exposure fosters a deeper understanding of how modern software interacts with hardware, a skill set increasingly vital in robotics and aerospace engineering.6 However, the shift to a terminal-based environment requires a structured instructional approach to overcome initial barriers to entry.
+
+## **Background on AI Integration and Model Descriptive Feedback**
+
+The integration of artificial intelligence into the 3DMake workflow represents a significant advancement in democratizing CAD for students with varying levels of spatial reasoning skills. The 3dm info command acts as a multimodal bridge between the deterministic world of OpenSCAD and the probabilistic world of LLMs.1  
+When a student executes 3dm info, the system initiates a rendering pipeline. It generates multiple viewpoints of the current model, which are then packaged as image data.1 If the Gemini API is configured, these images are sent to the model along with a prompt that requires the AI to synthesize a 3D understanding from 2D representations. The AI's response is then returned to the terminal, providing a descriptive summary that can include the model's intended function, aesthetic qualities, and potential engineering failures.1
+
+### **The Limits of AI Spatial Reasoning**
+
+While this feature is powerful, there is a fundamental disconnect in how current LLMs process 3D data. Most models are trained on 2D images and text; they do not possess a true "3D world model".10 This leads to several common failures:
+
+* **Detached Geometry:** The AI might describe a "table" even if the legs are hovering below the tabletop—a common error in OpenSCAD translation.10  
+* **Scale Misinterpretation:** Without a reference object in the render, the AI may misjudge the scale of the model, leading to inappropriate feedback on wall thickness.1  
+* **Hallucination of Detail:** The AI may describe features (like "engraved text") that it expects to see based on the prompt, even if the student’s code failed to render them.10
+
+For the high school student, the takeaway is that AI is a **verification assistant**, not a source of truth. The deterministic rendering of OpenSCAD remains the final authority on the model's geometry. The AI is most useful as a "sanity check" to catch obvious mistakes before wasting filament on a failed print.1
+
+## **Occupational Health and Safety in the 3D Printing Environment**
+
+Safety in the 3DMake workflow is not limited to the digital realm. The physical act of printing involves thermal, chemical, and mechanical risks that must be addressed through rigorous institutional policies. The National Institute for Occupational Safety and Health (NIOSH) and various university environmental health departments provide a clear framework for these risks.12
+
+### **Chemical and Particulate Emissions**
+
+The melting of plastic filament is a thermal degradation process. ABS (Acrylonitrile Butadiene Styrene) is particularly hazardous, releasing styrene, a known respiratory irritant and potential carcinogen.12 Even PLA (Polylactic Acid), often marketed as "safe" and "biodegradable," emits millions of ultrafine particles (UFPs) per minute during extrusion.12 These particles, smaller than 100 nanometers, can penetrate deep into the lungs and cross into the bloodstream.12
+
+| Emission Component             | Primary Source Filaments | Mitigation Strategy                                |
+| :----------------------------- | :----------------------- | :------------------------------------------------- |
+| **Styrene**                    | ABS, ASA                 | Enclosed printer with carbon filtration.12         |
+| **Formaldehyde**               | POM, Nylon               | High-efficiency external ventilation.12            |
+| **Ultrafine Particles**        | All filaments            | HEPA filtration and "20-minute" settling period.14 |
+| **Volatile Organic Compounds** | All filaments            | Minimum 6 air changes per hour in the room.15      |
+
+### **Physical and Mechanical Hazards**
+
+3D printers utilize high-torque stepper motors and heated elements. The extruder nozzle can reach $260^\\circ\\text{C}$, and the heated build plate can reach $110^\\circ\\text{C}$.13 Mechanical hazards include "pinch points" in the gantry system where fingers or loose clothing can be trapped.14 Furthermore, post-processing activities—such as removing supports or sanding parts—introduce the risk of cuts from sharp tools and the inhalation of plastic dust.12  
+Standard operating procedures (SOPs) for a student lab must include:
+
+* **Pre-use Inspection:** Checking for frayed wires, loose belts, and a clear build surface.15  
+* **Environmental Controls:** Prohibiting eating or drinking in the print area to avoid ingestion of contaminants.13  
+* **Emergency Response:** Locating the nearest Class D fire extinguisher (for metal prints) or standard ABC extinguisher.16  
+* **Post-Print Cooling:** Ensuring the printer has cooled to below $30^\\circ\\text{C}$ before attempting to remove the model.15
+
+## **Challenges Inherent in the OpenSCAD Language**
+
+OpenSCAD is often described as "the programmer's CAD," but its declarative nature and unique rendering kernel present specific hurdles for high school students. Unlike imperative languages (where you tell the computer *how* to do something), OpenSCAD is declarative.19 This can be counterintuitive for students familiar with Python or JavaScript.
+
+### **The Problem of Immutable State**
+
+In OpenSCAD, variables are not truly "variable" in the traditional sense; they are more like constants within a specific scope. If a student writes x \= 5; x \= 10;, OpenSCAD will use the last value assigned to x for the entire script.20 This behavior is similar to SQL or XSLT, and requires the student to adopt a functional programming mindset where geometry is defined by its state rather than its sequence of movements.20
+
+### **Performance Bottlenecks and Functional Limits**
+
+OpenSCAD uses the CGAL (Computational Geometry Algorithms Library) as its geometry kernel. While highly accurate, CGAL is notoriously slow for certain operations.
+
+* **Minkowski Sums:** This operation, often used to round corners, is computationally explosive. A simple rounded cube can take minutes to render if the resolution (defined by $fn) is too high.21  
+* **Hull Operations:** The hull() function creates a convex "shrink-wrap" around objects. While faster than minkowski, it cannot be used inside certain loops and can fail if the child objects are non-manifold.9  
+* **Lack of Native Filleting:** Unlike modern CAD tools, OpenSCAD has no native "fillet" command. Students must manually construct these features using boolean subtractions or libraries like BOSL2.4
+
+### **The "Absolute Coordinate" Barrier**
+
+In tools like Fusion 360, parts are often "jointed" relative to one another. OpenSCAD has no concept of relative constraints.9 Every object is positioned in absolute $(\\text{X}, \\text{Y}, \\text{Z})$ space. If a student moves one part, they must manually calculate and update the translation of every related part.9 This necessitates the heavy use of variables and mathematical offsets, a process that is highly prone to human error.9
+
+## **Technical Limitations and Risks of the 3DMake Tool**
+
+While 3DMake provides a powerful automation layer, it introduces its own set of limitations and risks.
+
+### **Dependency Management and Setup Complexity**
+
+3DMake is a CLI wrapper, meaning its functionality is entirely dependent on the host machine's configuration. The ./3dm setup process is a critical point of failure.1 If the student provides an incorrect path to the OpenSCAD executable or the slicer, the tool will fail or produce cryptic errors. In a school environment with restricted user permissions, setting up the necessary environmental variables can be a significant administrative hurdle.1
+
+### **The Risks of Automated Scripting**
+
+The power of 3DMake lies in its ability to string together actions: 3dm build slice print.1 This "one-command" fabrication is efficient but dangerous if the student bypasses visual verification. If the OpenSCAD code contains a subtle error that results in a "non-manifold" mesh, the slicer may still produce a G-code file that causes the printer to behave erratically—such as extruding into mid-air.24
+
+| Limitation           | Technical Root Cause                                 | Educational Impact                                           |
+| :------------------- | :--------------------------------------------------- | :----------------------------------------------------------- |
+| **CLI Barrier**      | No graphical interface for configuration.            | Steep learning curve for students with zero terminal experience.1 |
+| **API Dependency**   | AI features require external internet and API keys.  | Advanced features fail in offline school networks.1          |
+| **Slicer Lock-in**   | Reliant on external templates for G-code generation. | Students may not learn the nuance of slicing settings.1      |
+| **Feedback Latency** | No real-time "live" preview in the editor.           | The "edit-compile-view" cycle is slower than GUI-based CAD.1 |
+
+### **Non-Manifold Geometry and Slicing Errors**
+
+A recurring challenge for 3DMake users is the production of "non-manifold" STLs. A manifold object is "water-tight"—it has a clear inside and outside.28 OpenSCAD can easily produce non-manifold geometry through "zero-thickness" walls or improperly closed polyhedrons.24 3DMake’s build command will generate the STL without warning, but the slice command may then fail or produce a corrupt G-code file.24 This requires the student to learn mesh verification skills, often requiring third-party tools like MeshLab or PrusaSlicer’s repair functions.28
+
+## **Local Resources and Community Support: Salt Lake County Ecosystem**
+
+For students located in the Salt Lake County area, the transition from digital model to physical object is supported by a robust network of makerspaces and public library resources.
+
+### **Public Library "Create Spaces" and Creative Labs**
+
+The Salt Lake County and City Library systems offer specialized makerspaces where students can bring their 3DMake-generated files for printing.
+
+| Facility                    | Location                        | Key Hardware                                    | Policies/Costs                                               |
+| :-------------------------- | :------------------------------ | :---------------------------------------------- | :----------------------------------------------------------- |
+| **SLC Public Creative Lab** | Main Library (Level 1\)         | Prusa i3 MK3, LulzBot Taz 5, Elegoo Mars 2      | Free for prints under 6 hours; Material cost \+ $0.50/hr otherwise.31 |
+| **County Library "Create"** | Daybreak, Granite, Kearns, etc. | Flashforge Adventurer 5M Pro, LulzBot Workhorse | $0.06 per gram of filament used.26                           |
+| **Make Salt Lake**          | 663 W 100 S, SLC                | CNC, Metal Shop, Large-scale FDM and Resin      | Membership-based; offers certification classes for advanced tools.32 |
+
+### **Higher Education and Specialized Maker Hubs**
+
+For advanced students, the University of Utah provides several makerspaces, including the Lassonde Studios and the Eccles Health Sciences Library Technology Hub.34 These centers offer access to "industrial-grade" printing technologies, such as Selective Laser Sintering (SLS), which require even more rigorous safety training regarding inert gas (Argon/Nitrogen) asphyxiation hazards.16
+
+## **Conclusion: The Pedagogy of Programmatic Manufacturing**
+
+The integration of OpenSCAD and 3DMake into a high school curriculum is a powerful strategy for developing the next generation of engineers. By shifting the focus from "visual sculpting" to "mathematical definition," students are forced to confront the underlying logic of their designs. The 3DMake toolchain facilitates this by removing the friction of manual rendering and slicing, allowing the student to stay in the "flow state" of coding.  
+However, the success of this instructional model depends on a comprehensive understanding of its limitations. The instructor must balance the efficiency of AI-assisted verification with a healthy skepticism of LLM spatial reasoning. They must enforce rigid safety protocols to mitigate the invisible risks of UFP and VOC emissions. And finally, they must guide the student through the idiosyncratic challenges of the OpenSCAD language—its absolute coordinates and its strict manifold requirements.
+
+## **References**
+
+Deck, T. (2025). *3DMake: A command-line tool for 3D printing workflows*. GitHub. [https://github.com/tdeck/3dmake](https://github.com/tdeck/3dmake)  
+Gohde, J., &amp; Kintel, M. (2021). *Programming with OpenSCAD: A beginner's guide to coding 3D-printable objects*. No Starch Press.  
+Gonzalez Avila, J. F., Pietrzak, T., &amp; Casiez, G. (2024). *Understanding the challenges of OpenSCAD users for 3D printing*. Proceedings of the ACM Symposium on User Interface Software and Technology.  
+Google. (2025). *Vertex AI Gemini 3 Pro Preview: Getting started with generative AI*. [https://docs.cloud.google.com/vertex-ai/generative-ai/docs/start/get-started-with-gemini-3](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/start/get-started-with-gemini-3)  
+National Institute for Occupational Safety and Health (NIOSH). (2024). *Approaches to safe 3D printing: A guide for makerspace users, schools, libraries, and small businesses*. [https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html](https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html)  
+Ohio State University Environmental Health and Safety. (2026). *3D printer safety concerns and ventilation*. [https://ehs.osu.edu/kb/3d-printer-safety](https://ehs.osu.edu/kb/3d-printer-safety)  
+Salt Lake City Public Library. (2026). *Creative Lab: Available hardware and 3D printing procedures*. [https://services.slcpl.org/creativelab](https://services.slcpl.org/creativelab)  
+Salt Lake County Library. (2026). *Create Spaces: Hardware specifications and filament fees*. [https://www.slcolibrary.org/what-we-have/create](https://www.slcolibrary.org/what-we-have/create)  
+University of Utah. (2026). *Marriott Library ProtoSpace and Maker hubs*. [https://lib.utah.edu/protospace.php](https://lib.utah.edu/protospace.php)  
+Washington State Department of Health. (2026). *3D printer and filament selection for safe school environments*. [https://doh.wa.gov/community-and-environment/schools/3d-printers](https://doh.wa.gov/community-and-environment/schools/3d-printers)
+
+## **Works cited**
+
+1. tdeck/3dmake: Non-visual 3D design and 3D printing tool \- GitHub, accessed February 18, 2026, [https://github.com/tdeck/3dmake](https://github.com/tdeck/3dmake)  
+2. Books \- OpenSCAD, accessed February 18, 2026, [https://openscad.org/documentation-books.html](https://openscad.org/documentation-books.html)  
+3. Programming with OpenSCAD, accessed February 18, 2026, [https://programmingwithopenscad.github.io/](https://programmingwithopenscad.github.io/)  
+4. OpenSCAD Review \- Worth learning? \- CadHub, accessed February 18, 2026, [https://learn.cadhub.xyz/blog/openscad-review/](https://learn.cadhub.xyz/blog/openscad-review/)  
+5. Activity · tdeck/3dmake \- GitHub, accessed February 18, 2026, [https://github.com/tdeck/3dmake/activity](https://github.com/tdeck/3dmake/activity)  
+6. 10+ OpenSCAD Online Courses for 2026 | Explore Free Courses &amp; Certifications, accessed February 18, 2026, [https://www.classcentral.com/subject/openscad](https://www.classcentral.com/subject/openscad)  
+7. 3dmake/e2e\_test.py at main \- GitHub, accessed February 18, 2026, [https://github.com/tdeck/3dmake/blob/main/e2e\_test.py](https://github.com/tdeck/3dmake/blob/main/e2e_test.py)  
+8. OpenSCAD Prompt Creation \- DocsBot AI, accessed February 18, 2026, [https://docsbot.ai/prompts/technical/openscad-prompt-creation](https://docsbot.ai/prompts/technical/openscad-prompt-creation)  
+9. The great thing about OpenSCAD is that it makes it easy to 3D model things which... | Hacker News, accessed February 18, 2026, [https://news.ycombinator.com/item?id=46338565](https://news.ycombinator.com/item?id=46338565)  
+10. Build Great AI: LLM-Powered 3D Model Generation for 3D Printing \- ZenML LLMOps Database, accessed February 18, 2026, [https://www.zenml.io/llmops-database/llm-powered-3d-model-generation-for-3d-printing](https://www.zenml.io/llmops-database/llm-powered-3d-model-generation-for-3d-printing)  
+11. Generating CAD Code with Vision-Language Models for 3D Designs \- arXiv, accessed February 18, 2026, [https://arxiv.org/html/2410.05340v2](https://arxiv.org/html/2410.05340v2)  
+12. 3D Printer Safety \- Environmental Health and Safety \- The Ohio State University, accessed February 18, 2026, [https://ehs.osu.edu/kb/3d-printer-safety](https://ehs.osu.edu/kb/3d-printer-safety)  
+13. 3-D Printer Safety | Environmental Health &amp; Safety | RIT, accessed February 18, 2026, [https://www.rit.edu/ehs/3-d-printer-safety](https://www.rit.edu/ehs/3-d-printer-safety)  
+14. Safe 3D Printing is for Everyone, Everywhere | NIOSH Blogs \- CDC, accessed February 18, 2026, [https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html](https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html)  
+15. 3D Printers | Washington State Department of Health, accessed February 18, 2026, [https://doh.wa.gov/community-and-environment/schools/3d-printers](https://doh.wa.gov/community-and-environment/schools/3d-printers)  
+16. 3D Printer Safety \- Environmental Health &amp; Safety \- University of Tennessee, Knoxville, accessed February 18, 2026, [https://ehs.utk.edu/index.php/table-of-policies-plans-procedures-guides/3d-printer-safety/](https://ehs.utk.edu/index.php/table-of-policies-plans-procedures-guides/3d-printer-safety/)  
+17. Using LLMs for Code Generation: A Guide to Improving Accuracy and Addressing Common Issues \- PromptHub, accessed February 18, 2026, [https://www.prompthub.us/blog/using-llms-for-code-generation-a-guide-to-improving-accuracy-and-addressing-common-issues](https://www.prompthub.us/blog/using-llms-for-code-generation-a-guide-to-improving-accuracy-and-addressing-common-issues)  
+18. Goodbye Minkowski : r/openscad \- Reddit, accessed February 18, 2026, [https://www.reddit.com/r/openscad/comments/1fhbku5/goodbye_minkowski/](https://www.reddit.com/r/openscad/comments/1fhbku5/goodbye_minkowski/)  
+19. Understanding the Challenges of OpenSCAD Users for 3D Printing \- Thomas Pietrzak, accessed February 18, 2026, [https://thomaspietrzak.com/bibliography/gonzalez24.pdf](https://thomaspietrzak.com/bibliography/gonzalez24.pdf)  
+20. Why is there so little content and community around a tool as powerful and interesting as OpenSCAD? (beyond the awesome folks in this channel) \- Reddit, accessed February 18, 2026, [https://www.reddit.com/r/openscad/comments/1fxj8xv/why_is_there_so_little_content_and_community/](https://www.reddit.com/r/openscad/comments/1fxj8xv/why_is_there_so_little_content_and_community/)  
+
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="3d-make-tutorial"><a href="#3d-make-tutorial" class="header">3D Make Tutorial</a></h1>
+<pre><code class="language-markdown"># 3dmake: Non-Visual 3D Printing Tutorial (Self-Paced
+
+
+
+Estimated time: 45–75 minutes
+
+**Learning Objectives**
+- Describe the 3dMake command-line workflow and project structure
+- Create a new 3dMake project, edit `src/main.scad`, and run `3dm build`
+- Slice a model and produce a tactile preview or full G-code
+
+**Materials**
+- Computer with 3dMake installed
+- Screen reader (NVDA, JAWS, Orca) configured
+- Example project files in `assets/` or classroom repo
+
+---
+
+Step-by-step Tasks
+1. Verify prerequisites: confirm `3dm`, `openscad`, and your slicer are discoverable in the terminal (`which 3dm`, `which openscad`).
+2. Create a new project: `3dm new` → open `src/main.scad` with `3dm edit-model` and add a simple cube: `cube([20,20,20]);`.
+3. Build the project: `3dm build` and confirm `build/main.stl` exists.
+4. Slice a preview: `3dm preview slice` then `3dm preview print` (or export preview STL) to test tactile output.
+5. Slice for full print: `3dm build slice` → inspect `build/main.gcode` with a layer-preview option in your slicer.
+
+Checkpoints
+- After step 2 you can open and edit `src/main.scad` from the terminal.
+- After step 3 the `build/` folder contains `main.stl`.
+
+---
+
+Quick Quiz (5)
+1. What command creates a new 3dMake project?
+2. Where does 3dMake put compiled STLs by default?
+3. How do you open the model editor from the CLI?
+4. What command slices a preview for tactile testing?
+5. Why is it useful to run a preview before a full print?
+
+Extension Problems (5)
+1. Create two variants of a parameterized cube (different sizes) and export both STLs; compare their file sizes and estimated print times.
+2. Add a `3dmake.toml` overlay that changes layer height and document the visible effect on the preview.
+3. Build and slice a small object, then import the STL into a second slicer and report any differences in estimated time.
+4. Create a short shell script that automates new → edit → build for a classroom scaffold.
+5. Describe three safety checks you will perform before starting a multi-hour print.
+
+---
+
+Notes: This lesson is intended to be hands-on. If networked AI features are not configured, skip the AI verification steps and focus on deterministic renders and slicer previews.
+
+---
+
+## Library commands
+
+```pwsh
+3dm list-libraries
 3dm install-libraries
-</code></pre>
-<hr>
-<h2 id="help-and-version"><a class="header" href="#help-and-version">Help and version</a></h2>
-<pre><code class="language-pwsh">3dm help
+```
+
+---
+
+## Help and version
+
+```pwsh
+3dm help
 3dm version
+```
+
+---
+
+# References (APA)
+
+Deck, T. (n.d.). *3dmake: Non-visual 3D design and 3D printing tool*. GitHub. Retrieved February 18, 2026, from [http://github.com/tdeck/3dmake](http://github.com/tdeck/3dmake)
+
+OpenSCAD. (n.d.). *The programmers solid 3D CAD modeller*. Retrieved February 18, 2026, from [https://openscad.org](https://openscad.org)
+
 </code></pre>
-<hr>
-<h1 id="references-apa"><a class="header" href="#references-apa">References (APA)</a></h1>
-<p>Deck, T. (n.d.). <em>3dmake: Non-visual 3D design and 3D printing tool</em>. GitHub. Retrieved February 18, 2026, from <a href="http://github.com/tdeck/3dmake">http://github.com/tdeck/3dmake</a></p>
-<p>OpenSCAD. (n.d.). <em>The programmers solid 3D CAD modeller</em>. Retrieved February 18, 2026, from <a href="https://openscad.org">https://openscad.org</a></p>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="lesson-1-environmental-configuration-and-the-developer-workflow-self-paced"><a class="header" href="#lesson-1-environmental-configuration-and-the-developer-workflow-self-paced">Lesson 1: Environmental Configuration and the Developer Workflow (Self-Paced)</a></h1>
-<p>Estimated time: 60–90 minutes</p>
-<p><strong>Learning Objectives</strong></p>
-<ul>
-<li>Install and verify <code>3dm</code>, <code>openscad</code>, and a slicer are discoverable in the terminal</li>
-<li>Initialize a 3dMake project and understand the project scaffold (<code>src/</code>, <code>build/</code>, <code>3dmake.toml</code>)</li>
-<li>Edit <code>src/main.scad</code>, run <code>3dm build</code>, and inspect the generated <code>build/main.stl</code></li>
-</ul>
-<p><strong>Materials</strong></p>
-<ul>
-<li>Terminal with 3dMake installed</li>
-<li>Editor (VS Code or Notepad)</li>
-<li>Example scaffold or classroom repository</li>
-</ul>
-<hr>
-<p>Step-by-step Tasks</p>
-<ol>
-<li>Run <code>./3dm setup</code> or follow instructor’s installation notes; confirm tools with <code>which 3dm</code> and <code>which openscad</code>.</li>
-<li>Create a project scaffold with <code>3dm new</code> and open <code>src/main.scad</code> using <code>3dm edit-model</code>.</li>
-<li>Add three top-level parameters (e.g., <code>width</code>, <code>height</code>, <code>thickness</code>) and a minimal model (<code>cube([width, height, thickness]);</code>).</li>
-<li>Run <code>3dm build</code> and verify <code>build/main.stl</code> exists.</li>
-<li>Open the STL in your slicer to check for thin walls or non-manifold geometry; if issues appear, iterate on <code>main.scad</code> and rebuild.</li>
-</ol>
-<p>Checkpoints</p>
-<ul>
-<li>After step 2 you can locate <code>3dmake.toml</code> and the <code>build/</code> directory.</li>
-<li>After step 4 the <code>build/</code> folder contains a valid <code>main.stl</code>.</li>
-</ul>
-<hr>
-<p>Quick Quiz (5)</p>
-<ol>
-<li>What command initializes a 3dMake project?</li>
-<li>What folder holds generated STLs?</li>
-<li>How do you open the main model editor from the CLI?</li>
-<li>Why is it useful to run <code>3dm build</code> frequently during development?</li>
-<li>Give one reason to prefer an external editor over editing inline.</li>
-</ol>
-<p>Extension Problems (5)</p>
-<ol>
-<li>Add a README entry explaining your top-level parameters and expected units.</li>
-<li>Create a parameter variant by changing <code>width</code> by 20% and build both variants; compare dimensions with calipers.</li>
-<li>Script a <code>3dm</code> command sequence that automates new → edit → build for the scaffold.</li>
-<li>Intentionally create a thin-wall error and document the steps you took to find and fix it.</li>
-<li>Prepare a short instructor sign-off checklist describing safety checks before printing.</li>
-</ol>
-<h2 id="works-cited"><a class="header" href="#works-cited"><strong>Works cited</strong></a></h2>
-<ol>
-<li>tdeck/3dmake: Non-visual 3D design and 3D printing tool - GitHub, accessed February 18, 2026, <a href="https://github.com/tdeck/3dmake">https://github.com/tdeck/3dmake</a></li>
-<li>Books - OpenSCAD, accessed February 18, 2026, <a href="https://openscad.org/documentation-books.html">https://openscad.org/documentation-books.html</a></li>
-<li>Programming with OpenSCAD, accessed February 18, 2026, <a href="https://programmingwithopenscad.github.io/">https://programmingwithopenscad.github.io/</a></li>
-<li>OpenSCAD Review - Worth learning? - CadHub, accessed February 18, 2026, <a href="https://learn.cadhub.xyz/blog/openscad-review/">https://learn.cadhub.xyz/blog/openscad-review/</a></li>
-<li>Activity · tdeck/3dmake - GitHub, accessed February 18, 2026, <a href="https://github.com/tdeck/3dmake/activity">https://github.com/tdeck/3dmake/activity</a></li>
-<li>10+ OpenSCAD Online Courses for 2026 | Explore Free Courses &amp; Certifications, accessed February 18, 2026, <a href="https://www.classcentral.com/subject/openscad">https://www.classcentral.com/subject/openscad</a></li>
-<li>3dmake/e2e_test.py at main - GitHub, accessed February 18, 2026, <a href="https://github.com/tdeck/3dmake/blob/main/e2e_test.py">https://github.com/tdeck/3dmake/blob/main/e2e_test.py</a></li>
-<li>OpenSCAD Prompt Creation - DocsBot AI, accessed February 18, 2026, <a href="https://docsbot.ai/prompts/technical/openscad-prompt-creation">https://docsbot.ai/prompts/technical/openscad-prompt-creation</a></li>
-<li>The great thing about OpenSCAD is that it makes it easy to 3D model things which… | Hacker News, accessed February 18, 2026, <a href="https://news.ycombinator.com/item?id=46338565">https://news.ycombinator.com/item?id=46338565</a></li>
-<li>Build Great AI: LLM-Powered 3D Model Generation for 3D Printing - ZenML LLMOps Database, accessed February 18, 2026, <a href="https://www.zenml.io/llmops-database/llm-powered-3d-model-generation-for-3d-printing">https://www.zenml.io/llmops-database/llm-powered-3d-model-generation-for-3d-printing</a></li>
-<li>Generating CAD Code with Vision-Language Models for 3D Designs - arXiv, accessed February 18, 2026, <a href="https://arxiv.org/html/2410.05340v2">https://arxiv.org/html/2410.05340v2</a></li>
-<li>3D Printer Safety - Environmental Health and Safety - The Ohio State University, accessed February 18, 2026, <a href="https://ehs.osu.edu/kb/3d-printer-safety">https://ehs.osu.edu/kb/3d-printer-safety</a></li>
-<li>3-D Printer Safety | Environmental Health &amp; Safety | RIT, accessed February 18, 2026, <a href="https://www.rit.edu/ehs/3-d-printer-safety">https://www.rit.edu/ehs/3-d-printer-safety</a></li>
-<li>Safe 3D Printing is for Everyone, Everywhere | NIOSH Blogs - CDC, accessed February 18, 2026, <a href="https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html">https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html</a></li>
-<li>3D Printers | Washington State Department of Health, accessed February 18, 2026, <a href="https://doh.wa.gov/community-and-environment/schools/3d-printers">https://doh.wa.gov/community-and-environment/schools/3d-printers</a></li>
-<li>3D Printer Safety - Environmental Health &amp; Safety - University of Tennessee, Knoxville, accessed February 18, 2026, <a href="https://ehs.utk.edu/index.php/table-of-policies-plans-procedures-guides/3d-printer-safety/">https://ehs.utk.edu/index.php/table-of-policies-plans-procedures-guides/3d-printer-safety/</a></li>
-<li>Using LLMs for Code Generation: A Guide to Improving Accuracy and Addressing Common Issues - PromptHub, accessed February 18, 2026, <a href="https://www.prompthub.us/blog/using-llms-for-code-generation-a-guide-to-improving-accuracy-and-addressing-common-issues">https://www.prompthub.us/blog/using-llms-for-code-generation-a-guide-to-improving-accuracy-and-addressing-common-issues</a></li>
-<li>Goodbye Minkowski : r/openscad - Reddit, accessed February 18, 2026, <a href="https://www.reddit.com/r/openscad/comments/1fhbku5/goodbye_minkowski/">https://www.reddit.com/r/openscad/comments/1fhbku5/goodbye_minkowski/</a></li>
-<li>Understanding the Challenges of OpenSCAD Users for 3D Printing - Thomas Pietrzak, accessed February 18, 2026, <a href="https://thomaspietrzak.com/bibliography/gonzalez24.pdf">https://thomaspietrzak.com/bibliography/gonzalez24.pdf</a></li>
-<li>Why is there so little content and community around a tool as powerful and interesting as OpenSCAD? (beyond the awesome folks in this channel) - Reddit, accessed February 18, 2026, <a href="https://www.reddit.com/r/openscad/comments/1fxj8xv/why_is_there_so_little_content_and_community/">https://www.reddit.com/r/openscad/comments/1fxj8xv/why_is_there_so_little_content_and_community/</a></li>
-<li>minkowski render problem: slow and bogus error message · Issue #6130 - GitHub, accessed February 18, 2026, <a href="https://github.com/openscad/openscad/issues/6130">https://github.com/openscad/openscad/issues/6130</a></li>
-<li>OpenSCAD: Tieing It Together With Hull() - Hackaday, accessed February 18, 2026, <a href="https://hackaday.com/2018/02/13/openscad-tieing-it-together-with-hull/">https://hackaday.com/2018/02/13/openscad-tieing-it-together-with-hull/</a></li>
-<li>OpenSCAD Hull/Minkowski function by hand? - Computer Graphics Stack Exchange, accessed February 18, 2026, <a href="https://computergraphics.stackexchange.com/questions/2188/openscad-hull-minkowski-function-by-hand">https://computergraphics.stackexchange.com/questions/2188/openscad-hull-minkowski-function-by-hand</a></li>
-<li>OpenSCAD is creating non-manifold models · Issue #6114 - GitHub, accessed February 18, 2026, <a href="https://github.com/openscad/openscad/issues/6114">https://github.com/openscad/openscad/issues/6114</a></li>
-<li>Boolean operation fails with message that mesh is non-manifold, but mesh appears to be manifold · Issue #5493 · openscad/openscad - GitHub, accessed February 18, 2026, <a href="https://github.com/openscad/openscad/issues/5493">https://github.com/openscad/openscad/issues/5493</a></li>
-<li>Create Space | The County Library, accessed February 18, 2026, <a href="https://www.slcolibrary.org/what-we-have/create">https://www.slcolibrary.org/what-we-have/create</a></li>
-<li>Understanding the Challenges of OpenSCAD Users for 3D Printing - Semantic Scholar, accessed February 18, 2026, <a href="https://www.semanticscholar.org/paper/6520ba2b822efd57074f60376a1d607605cd63fc">https://www.semanticscholar.org/paper/6520ba2b822efd57074f60376a1d607605cd63fc</a></li>
-<li>How to fix non-manifold geometry issues on 3D models - Sculpteo, accessed February 18, 2026, <a href="https://www.sculpteo.com/en/3d-learning-hub/create-3d-file/fix-non-manifold-geometry/">https://www.sculpteo.com/en/3d-learning-hub/create-3d-file/fix-non-manifold-geometry/</a></li>
-<li>What is a non-manifold geometry and how to avoid it - crwjaakko, accessed February 18, 2026, <a href="https://www.creativewithjaakko.com/tutorials/what-is-a-non-manifold-geometry-and-how-to-avoid-it/">https://www.creativewithjaakko.com/tutorials/what-is-a-non-manifold-geometry-and-how-to-avoid-it/</a></li>
-<li>How to Fix a Non-manifold Boolean Issue in SelfCAD, accessed February 18, 2026, <a href="https://www.selfcad.com/blog/fix-non-manifold-boolean-issue">https://www.selfcad.com/blog/fix-non-manifold-boolean-issue</a></li>
-<li>Creative Lab - The City Library, accessed February 18, 2026, <a href="https://services.slcpl.org/creativelab">https://services.slcpl.org/creativelab</a></li>
-<li>Make Salt Lake - Meetup, accessed February 18, 2026, <a href="https://www.meetup.com/makesaltlake/">https://www.meetup.com/makesaltlake/</a></li>
-<li>About Us - Make Salt Lake, accessed February 18, 2026, <a href="https://makesaltlake.org/about-us">https://makesaltlake.org/about-us</a></li>
-<li>ProtoSpace | Marriott Library, accessed February 18, 2026, <a href="https://lib.utah.edu/protospace.php">https://lib.utah.edu/protospace.php</a></li>
-</ol>
+<h1 id="lesson-1-environmental-configuration-and-the-developer-workflow"><a href="#lesson-1-environmental-configuration-and-the-developer-workflow" class="header">Lesson 1: Environmental Configuration and the Developer Workflow</a></h1>
+<pre><code class="language-markdown">
+
+# Lesson 1: Environmental Configuration and the Developer Workflow (Self-Paced)
+
+
+
+Estimated time: 60–90 minutes
+
+**Learning Objectives**
+- Install and verify `3dm`, `openscad`, and a slicer are discoverable in the terminal
+- Initialize a 3dMake project and understand the project scaffold (`src/`, `build/`, `3dmake.toml`)
+- Edit `src/main.scad`, run `3dm build`, and inspect the generated `build/main.stl`
+
+**Materials**
+- Terminal with 3dMake installed
+- Editor (VS Code or Notepad)
+- Example scaffold or classroom repository
+
+---
+
+Step-by-step Tasks
+1. Run `./3dm setup` or follow instructor's installation notes; confirm tools with `which 3dm` and `which openscad`.
+2. Create a project scaffold with `3dm new` and open `src/main.scad` using `3dm edit-model`.
+3. Add three top-level parameters (e.g., `width`, `height`, `thickness`) and a minimal model (`cube([width, height, thickness]);`).
+4. Run `3dm build` and verify `build/main.stl` exists.
+5. Open the STL in your slicer to check for thin walls or non-manifold geometry; if issues appear, iterate on `main.scad` and rebuild.
+
+Checkpoints
+- After step 2 you can locate `3dmake.toml` and the `build/` directory.
+- After step 4 the `build/` folder contains a valid `main.stl`.
+
+---
+
+Quick Quiz (5)
+1. What command initializes a 3dMake project?
+2. What folder holds generated STLs?
+3. How do you open the main model editor from the CLI?
+4. Why is it useful to run `3dm build` frequently during development?
+5. Give one reason to prefer an external editor over editing inline.
+
+Extension Problems (5)
+1. Add a README entry explaining your top-level parameters and expected units.
+2. Create a parameter variant by changing `width` by 20% and build both variants; compare dimensions with calipers.
+3. Script a `3dm` command sequence that automates new → edit → build for the scaffold.
+4. Intentionally create a thin-wall error and document the steps you took to find and fix it.
+5. Prepare a short instructor sign-off checklist describing safety checks before printing.
+
+## **Works cited**
+
+1. tdeck/3dmake: Non-visual 3D design and 3D printing tool \- GitHub, accessed February 18, 2026, [https://github.com/tdeck/3dmake](https://github.com/tdeck/3dmake)  
+2. Books \- OpenSCAD, accessed February 18, 2026, [https://openscad.org/documentation-books.html](https://openscad.org/documentation-books.html)  
+3. Programming with OpenSCAD, accessed February 18, 2026, [https://programmingwithopenscad.github.io/](https://programmingwithopenscad.github.io/)  
+4. OpenSCAD Review \- Worth learning? \- CadHub, accessed February 18, 2026, [https://learn.cadhub.xyz/blog/openscad-review/](https://learn.cadhub.xyz/blog/openscad-review/)  
+5. Activity · tdeck/3dmake \- GitHub, accessed February 18, 2026, [https://github.com/tdeck/3dmake/activity](https://github.com/tdeck/3dmake/activity)  
+6. 10+ OpenSCAD Online Courses for 2026 | Explore Free Courses &amp; Certifications, accessed February 18, 2026, [https://www.classcentral.com/subject/openscad](https://www.classcentral.com/subject/openscad)  
+7. 3dmake/e2e\_test.py at main \- GitHub, accessed February 18, 2026, [https://github.com/tdeck/3dmake/blob/main/e2e\_test.py](https://github.com/tdeck/3dmake/blob/main/e2e_test.py)  
+8. OpenSCAD Prompt Creation \- DocsBot AI, accessed February 18, 2026, [https://docsbot.ai/prompts/technical/openscad-prompt-creation](https://docsbot.ai/prompts/technical/openscad-prompt-creation)  
+9. The great thing about OpenSCAD is that it makes it easy to 3D model things which... | Hacker News, accessed February 18, 2026, [https://news.ycombinator.com/item?id=46338565](https://news.ycombinator.com/item?id=46338565)  
+10. Build Great AI: LLM-Powered 3D Model Generation for 3D Printing \- ZenML LLMOps Database, accessed February 18, 2026, [https://www.zenml.io/llmops-database/llm-powered-3d-model-generation-for-3d-printing](https://www.zenml.io/llmops-database/llm-powered-3d-model-generation-for-3d-printing)  
+
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="lesson-2-geometric-primitives-and-constructive-solid-geometry-self-paced"><a class="header" href="#lesson-2-geometric-primitives-and-constructive-solid-geometry-self-paced">Lesson 2: Geometric Primitives and Constructive Solid Geometry (Self-Paced)</a></h1>
-<p>Estimated time: 60 minutes</p>
-<p><strong>Learning Objectives</strong></p>
-<ul>
-<li>Use OpenSCAD primitives (<code>cube()</code>, <code>sphere()</code>, <code>cylinder()</code>) and transforms (<code>translate()</code>, <code>rotate()</code>, <code>scale()</code>)</li>
-<li>Apply CSG operators (<code>union</code>, <code>difference</code>, <code>intersection</code>) safely and diagnose common numerical issues</li>
-<li>Use quick diagnostic renders and validate geometry in a slicer</li>
-</ul>
-<p><strong>Materials</strong></p>
-<ul>
-<li>3dMake project scaffold with <code>src/main.scad</code></li>
-<li>Example primitive snippets (provided in assets)</li>
-</ul>
-<p>Step-by-step Tasks</p>
-<ol>
-<li>Open <code>src/main.scad</code>; identify and run simple examples using <code>cube()</code>, <code>sphere()</code>, and <code>cylinder()</code>.</li>
-<li>Create three short examples demonstrating <code>union()</code>, <code>difference()</code>, and <code>intersection()</code> and render with reduced <code>$fn</code>.</li>
-<li>Reproduce a failing <code>difference()</code> case and apply the 0.001 offset strategy to the subtractor; re-render and confirm fix.</li>
-<li>Build an STL with <code>3dm build</code> and open it in your slicer to check for thin walls or islands.</li>
-<li>Document any fixes in the project README and commit the working <code>main.scad</code> and STL.</li>
-</ol>
-<p>Checkpoints</p>
-<ul>
-<li>After task 3 the problematic boolean should render without non-manifold warnings.</li>
-</ul>
-<p>Quick Quiz (5)</p>
-<ol>
-<li>Name three primitive functions in OpenSCAD.</li>
-<li>What does <code>difference()</code> accomplish?</li>
-<li>Why might two coincident faces cause a render failure?</li>
-<li>What is the 0.001 rule and why is it useful?</li>
-<li>How does lowering <code>$fn</code> help during debugging?</li>
-</ol>
-<p>Extension Problems (5)</p>
-<ol>
-<li>Create a small assembly using <code>union()</code> of three primitives and export the STL.</li>
-<li>Intentionally create a failing boolean and fix it using offsets; explain your approach.</li>
-<li>Write a short test script that generates three variants with varying <code>$fn</code> values and compare render times.</li>
-<li>Use <code>3dm info</code> (if available) to generate a report on your model and document any recommendations.</li>
-<li>Explore using a library module (e.g., a fillet helper) to fix a sharp corner and note the difference in final STL.</li>
-</ol>
-<h2 id="references-2"><a class="header" href="#references-2"><strong>References</strong></a></h2>
-<p>Deck, T. (2025). <em>3DMake: A command-line tool for 3D printing workflows</em>. GitHub. <a href="https://github.com/tdeck/3dmake">https://github.com/tdeck/3dmake</a><br>Gohde, J., &amp; Kintel, M. (2021). <em>Programming with OpenSCAD: A beginner’s guide to coding 3D-printable objects</em>. No Starch Press.<br>Gonzalez Avila, J. F., Pietrzak, T., &amp; Casiez, G. (2024). <em>Understanding the challenges of OpenSCAD users for 3D printing</em>. Proceedings of the ACM Symposium on User Interface Software and Technology.<br>Google. (2025). <em>Vertex AI Gemini 3 Pro Preview: Getting started with generative AI</em>. <a href="https://docs.cloud.google.com/vertex-ai/generative-ai/docs/start/get-started-with-gemini-3">https://docs.cloud.google.com/vertex-ai/generative-ai/docs/start/get-started-with-gemini-3</a><br>National Institute for Occupational Safety and Health (NIOSH). (2024). <em>Approaches to safe 3D printing: A guide for makerspace users, schools, libraries, and small businesses</em>. <a href="https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html">https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html</a><br>Ohio State University Environmental Health and Safety. (2026). <em>3D printer safety concerns and ventilation</em>. <a href="https://ehs.osu.edu/kb/3d-printer-safety">https://ehs.osu.edu/kb/3d-printer-safety</a><br>Salt Lake City Public Library. (2026). <em>Creative Lab: Available hardware and 3D printing procedures</em>. <a href="https://services.slcpl.org/creativelab">https://services.slcpl.org/creativelab</a><br>Salt Lake County Library. (2026). <em>Create Spaces: Hardware specifications and filament fees</em>. <a href="https://www.slcolibrary.org/what-we-have/create">https://www.slcolibrary.org/what-we-have/create</a><br>University of Utah. (2026). <em>Marriott Library ProtoSpace and Maker hubs</em>. <a href="https://lib.utah.edu/protospace.php">https://lib.utah.edu/protospace.php</a><br>Washington State Department of Health. (2026). <em>3D printer and filament selection for safe school environments</em>. <a href="https://doh.wa.gov/community-and-environment/schools/3d-printers">https://doh.wa.gov/community-and-environment/schools/3d-printers</a></p>
-<h2 id="works-cited-1"><a class="header" href="#works-cited-1"><strong>Works cited</strong></a></h2>
-<ol>
-<li>tdeck/3dmake: Non-visual 3D design and 3D printing tool - GitHub, accessed February 18, 2026, <a href="https://github.com/tdeck/3dmake">https://github.com/tdeck/3dmake</a></li>
-<li>Books - OpenSCAD, accessed February 18, 2026, <a href="https://openscad.org/documentation-books.html">https://openscad.org/documentation-books.html</a></li>
-<li>Programming with OpenSCAD, accessed February 18, 2026, <a href="https://programmingwithopenscad.github.io/">https://programmingwithopenscad.github.io/</a></li>
-<li>OpenSCAD Review - Worth learning? - CadHub, accessed February 18, 2026, <a href="https://learn.cadhub.xyz/blog/openscad-review/">https://learn.cadhub.xyz/blog/openscad-review/</a></li>
-<li>Activity · tdeck/3dmake - GitHub, accessed February 18, 2026, <a href="https://github.com/tdeck/3dmake/activity">https://github.com/tdeck/3dmake/activity</a></li>
-<li>10+ OpenSCAD Online Courses for 2026 | Explore Free Courses &amp; Certifications, accessed February 18, 2026, <a href="https://www.classcentral.com/subject/openscad">https://www.classcentral.com/subject/openscad</a></li>
-<li>3dmake/e2e_test.py at main - GitHub, accessed February 18, 2026, <a href="https://github.com/tdeck/3dmake/blob/main/e2e_test.py">https://github.com/tdeck/3dmake/blob/main/e2e_test.py</a></li>
-<li>OpenSCAD Prompt Creation - DocsBot AI, accessed February 18, 2026, <a href="https://docsbot.ai/prompts/technical/openscad-prompt-creation">https://docsbot.ai/prompts/technical/openscad-prompt-creation</a></li>
-<li>The great thing about OpenSCAD is that it makes it easy to 3D model things which… | Hacker News, accessed February 18, 2026, <a href="https://news.ycombinator.com/item?id=46338565">https://news.ycombinator.com/item?id=46338565</a></li>
-<li>Build Great AI: LLM-Powered 3D Model Generation for 3D Printing - ZenML LLMOps Database, accessed February 18, 2026, <a href="https://www.zenml.io/llmops-database/llm-powered-3d-model-generation-for-3d-printing">https://www.zenml.io/llmops-database/llm-powered-3d-model-generation-for-3d-printing</a></li>
-<li>Generating CAD Code with Vision-Language Models for 3D Designs - arXiv, accessed February 18, 2026, <a href="https://arxiv.org/html/2410.05340v2">https://arxiv.org/html/2410.05340v2</a></li>
-<li>3D Printer Safety - Environmental Health and Safety - The Ohio State University, accessed February 18, 2026, <a href="https://ehs.osu.edu/kb/3d-printer-safety">https://ehs.osu.edu/kb/3d-printer-safety</a></li>
-<li>3-D Printer Safety | Environmental Health &amp; Safety | RIT, accessed February 18, 2026, <a href="https://www.rit.edu/ehs/3-d-printer-safety">https://www.rit.edu/ehs/3-d-printer-safety</a></li>
-<li>Safe 3D Printing is for Everyone, Everywhere | NIOSH Blogs - CDC, accessed February 18, 2026, <a href="https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html">https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html</a></li>
-<li>3D Printers | Washington State Department of Health, accessed February 18, 2026, <a href="https://doh.wa.gov/community-and-environment/schools/3d-printers">https://doh.wa.gov/community-and-environment/schools/3d-printers</a></li>
-<li>3D Printer Safety - Environmental Health &amp; Safety - University of Tennessee, Knoxville, accessed February 18, 2026, <a href="https://ehs.utk.edu/index.php/table-of-policies-plans-procedures-guides/3d-printer-safety/">https://ehs.utk.edu/index.php/table-of-policies-plans-procedures-guides/3d-printer-safety/</a></li>
-<li>Using LLMs for Code Generation: A Guide to Improving Accuracy and Addressing Common Issues - PromptHub, accessed February 18, 2026, <a href="https://www.prompthub.us/blog/using-llms-for-code-generation-a-guide-to-improving-accuracy-and-addressing-common-issues">https://www.prompthub.us/blog/using-llms-for-code-generation-a-guide-to-improving-accuracy-and-addressing-common-issues</a></li>
-<li>Goodbye Minkowski : r/openscad - Reddit, accessed February 18, 2026, <a href="https://www.reddit.com/r/openscad/comments/1fhbku5/goodbye_minkowski/">https://www.reddit.com/r/openscad/comments/1fhbku5/goodbye_minkowski/</a></li>
-<li>Understanding the Challenges of OpenSCAD Users for 3D Printing - Thomas Pietrzak, accessed February 18, 2026, <a href="https://thomaspietrzak.com/bibliography/gonzalez24.pdf">https://thomaspietrzak.com/bibliography/gonzalez24.pdf</a></li>
-<li>Why is there so little content and community around a tool as powerful and interesting as OpenSCAD? (beyond the awesome folks in this channel) - Reddit, accessed February 18, 2026, <a href="https://www.reddit.com/r/openscad/comments/1fxj8xv/why_is_there_so_little_content_and_community/">https://www.reddit.com/r/openscad/comments/1fxj8xv/why_is_there_so_little_content_and_community/</a></li>
-<li>minkowski render problem: slow and bogus error message · Issue #6130 - GitHub, accessed February 18, 2026, <a href="https://github.com/openscad/openscad/issues/6130">https://github.com/openscad/openscad/issues/6130</a></li>
-<li>OpenSCAD: Tieing It Together With Hull() - Hackaday, accessed February 18, 2026, <a href="https://hackaday.com/2018/02/13/openscad-tieing-it-together-with-hull/">https://hackaday.com/2018/02/13/openscad-tieing-it-together-with-hull/</a></li>
-<li>OpenSCAD Hull/Minkowski function by hand? - Computer Graphics Stack Exchange, accessed February 18, 2026, <a href="https://computergraphics.stackexchange.com/questions/2188/openscad-hull-minkowski-function-by-hand">https://computergraphics.stackexchange.com/questions/2188/openscad-hull-minkowski-function-by-hand</a></li>
-<li>OpenSCAD is creating non-manifold models · Issue #6114 - GitHub, accessed February 18, 2026, <a href="https://github.com/openscad/openscad/issues/6114">https://github.com/openscad/openscad/issues/6114</a></li>
-<li>Boolean operation fails with message that mesh is non-manifold, but mesh appears to be manifold · Issue #5493 · openscad/openscad - GitHub, accessed February 18, 2026, <a href="https://github.com/openscad/openscad/issues/5493">https://github.com/openscad/openscad/issues/5493</a></li>
-<li>Create Space | The County Library, accessed February 18, 2026, <a href="https://www.slcolibrary.org/what-we-have/create">https://www.slcolibrary.org/what-we-have/create</a></li>
-<li>Understanding the Challenges of OpenSCAD Users for 3D Printing - Semantic Scholar, accessed February 18, 2026, <a href="https://www.semanticscholar.org/paper/6520ba2b822efd57074f60376a1d607605cd63fc">https://www.semanticscholar.org/paper/6520ba2b822efd57074f60376a1d607605cd63fc</a></li>
-<li>How to fix non-manifold geometry issues on 3D models - Sculpteo, accessed February 18, 2026, <a href="https://www.sculpteo.com/en/3d-learning-hub/create-3d-file/fix-non-manifold-geometry/">https://www.sculpteo.com/en/3d-learning-hub/create-3d-file/fix-non-manifold-geometry/</a></li>
-<li>What is a non-manifold geometry and how to avoid it - crwjaakko, accessed February 18, 2026, <a href="https://www.creativewithjaakko.com/tutorials/what-is-a-non-manifold-geometry-and-how-to-avoid-it/">https://www.creativewithjaakko.com/tutorials/what-is-a-non-manifold-geometry-and-how-to-avoid-it/</a></li>
-<li>How to Fix a Non-manifold Boolean Issue in SelfCAD, accessed February 18, 2026, <a href="https://www.selfcad.com/blog/fix-non-manifold-boolean-issue">https://www.selfcad.com/blog/fix-non-manifold-boolean-issue</a></li>
-<li>Creative Lab - The City Library, accessed February 18, 2026, <a href="https://services.slcpl.org/creativelab">https://services.slcpl.org/creativelab</a></li>
-<li>Make Salt Lake - Meetup, accessed February 18, 2026, <a href="https://www.meetup.com/makesaltlake/">https://www.meetup.com/makesaltlake/</a></li>
-<li>About Us - Make Salt Lake, accessed February 18, 2026, <a href="https://makesaltlake.org/about-us">https://makesaltlake.org/about-us</a></li>
-<li>ProtoSpace | Marriott Library, accessed February 18, 2026, <a href="https://lib.utah.edu/protospace.php">https://lib.utah.edu/protospace.php</a></li>
-</ol>
+<h1 id="lesson-2-geometric-primitives-and-the-mathematics-of-constructive-solid-geometry"><a href="#lesson-2-geometric-primitives-and-the-mathematics-of-constructive-solid-geometry" class="header">Lesson 2: Geometric Primitives and the Mathematics of Constructive Solid Geometry</a></h1>
+<pre><code class="language-markdown">
+
+# Lesson 2: Geometric Primitives and Constructive Solid Geometry (Self-Paced)
+
+
+
+Estimated time: 60 minutes
+
+**Learning Objectives**
+- Use OpenSCAD primitives (`cube()`, `sphere()`, `cylinder()`) and transforms (`translate()`, `rotate()`, `scale()`)
+- Apply CSG operators (`union`, `difference`, `intersection`) safely and diagnose common numerical issues
+- Use quick diagnostic renders and validate geometry in a slicer
+
+**Materials**
+- 3dMake project scaffold with `src/main.scad`
+- Example primitive snippets (provided in assets)
+
+Step-by-step Tasks
+1. Open `src/main.scad`; identify and run simple examples using `cube()`, `sphere()`, and `cylinder()`.
+2. Create three short examples demonstrating `union()`, `difference()`, and `intersection()` and render with reduced `$fn`.
+3. Reproduce a failing `difference()` case and apply the 0.001 offset strategy to the subtractor; re-render and confirm fix.
+4. Build an STL with `3dm build` and open it in your slicer to check for thin walls or islands.
+5. Document any fixes in the project README and commit the working `main.scad` and STL.
+
+Checkpoints
+- After task 3 the problematic boolean should render without non-manifold warnings.
+
+Quick Quiz (5)
+1. Name three primitive functions in OpenSCAD.
+2. What does `difference()` accomplish?
+3. Why might two coincident faces cause a render failure?
+4. What is the 0.001 rule and why is it useful?
+5. How does lowering `$fn` help during debugging?
+
+Extension Problems (5)
+1. Create a small assembly using `union()` of three primitives and export the STL.
+2. Intentionally create a failing boolean and fix it using offsets; explain your approach.
+3. Write a short test script that generates three variants with varying `$fn` values and compare render times.
+4. Use `3dm info` (if available) to generate a report on your model and document any recommendations.
+5. Explore using a library module (e.g., a fillet helper) to fix a sharp corner and note the difference in final STL.
+
+
+## **References**
+
+Deck, T. (2025). *3DMake: A command-line tool for 3D printing workflows*. GitHub. [https://github.com/tdeck/3dmake](https://github.com/tdeck/3dmake)  
+Gohde, J., &amp; Kintel, M. (2021). *Programming with OpenSCAD: A beginner's guide to coding 3D-printable objects*. No Starch Press.  
+Gonzalez Avila, J. F., Pietrzak, T., &amp; Casiez, G. (2024). *Understanding the challenges of OpenSCAD users for 3D printing*. Proceedings of the ACM Symposium on User Interface Software and Technology.  
+Google. (2025). *Vertex AI Gemini 3 Pro Preview: Getting started with generative AI*. [https://docs.cloud.google.com/vertex-ai/generative-ai/docs/start/get-started-with-gemini-3](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/start/get-started-with-gemini-3)  
+National Institute for Occupational Safety and Health (NIOSH). (2024). *Approaches to safe 3D printing: A guide for makerspace users, schools, libraries, and small businesses*. [https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html](https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html)  
+Ohio State University Environmental Health and Safety. (2026). *3D printer safety concerns and ventilation*. [https://ehs.osu.edu/kb/3d-printer-safety](https://ehs.osu.edu/kb/3d-printer-safety)  
+Salt Lake City Public Library. (2026). *Creative Lab: Available hardware and 3D printing procedures*. [https://services.slcpl.org/creativelab](https://services.slcpl.org/creativelab)  
+Salt Lake County Library. (2026). *Create Spaces: Hardware specifications and filament fees*. [https://www.slcolibrary.org/what-we-have/create](https://www.slcolibrary.org/what-we-have/create)  
+University of Utah. (2026). *Marriott Library ProtoSpace and Maker hubs*. [https://lib.utah.edu/protospace.php](https://lib.utah.edu/protospace.php)  
+Washington State Department of Health. (2026). *3D printer and filament selection for safe school environments*. [https://doh.wa.gov/community-and-environment/schools/3d-printers](https://doh.wa.gov/community-and-environment/schools/3d-printers)
+
+## **Works cited**
+
+1. tdeck/3dmake: Non-visual 3D design and 3D printing tool \- GitHub, accessed February 18, 2026, [https://github.com/tdeck/3dmake](https://github.com/tdeck/3dmake)  
+2. Books \- OpenSCAD, accessed February 18, 2026, [https://openscad.org/documentation-books.html](https://openscad.org/documentation-books.html)  
+3. Programming with OpenSCAD, accessed February 18, 2026, [https://programmingwithopenscad.github.io/](https://programmingwithopenscad.github.io/)  
+
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="lesson-3-parametric-architecture-and-modular-libraries-self-paced"><a class="header" href="#lesson-3-parametric-architecture-and-modular-libraries-self-paced">Lesson 3: Parametric Architecture and Modular Libraries (Self-Paced)</a></h1>
-<p>Estimated time: 60 minutes</p>
-<p><strong>Learning Objectives</strong></p>
-<ul>
-<li>Define and document top-level parameters and use them to drive model variants</li>
-<li>Create reusable modules and import a library module into a project</li>
-<li>Produce and test low-resolution renders and export a working STL</li>
-</ul>
-<p><strong>Materials</strong></p>
-<ul>
-<li>A 3dMake project scaffold with <code>src/main.scad</code></li>
-<li>Example library (e.g., BOSL) available in <code>lib/</code> or classroom assets</li>
-</ul>
-<p>Step-by-step Tasks</p>
-<ol>
-<li>Open <code>src/main.scad</code> and add three top-level parameters (with units) at the top of the file.</li>
-<li>Implement a simple <code>module bracket(width, height, thickness)</code> that composes primitives and boolean operations.</li>
-<li>Include a library module (e.g., <code>include &lt;bosl/constants.scad&gt;</code>) and call a small helper from it; run <code>3dm build</code>.</li>
-<li>Produce a low-resolution render to confirm topology, then export an STL and inspect it in a slicer.</li>
-<li>Refactor the module into <code>lib/</code> with a short README and a usage example.</li>
-</ol>
-<p>Checkpoints</p>
-<ul>
-<li>After step 2 you have a parametric module you can call with different arguments.</li>
-</ul>
-<p>Quick Quiz (5)</p>
-<ol>
-<li>What is a parametric module and why is it useful?</li>
-<li>How do you include an external library in OpenSCAD?</li>
-<li>What is one advantage of moving code into <code>lib/</code>?</li>
-<li>How can you test a module quickly without a full high-resolution render?</li>
-<li>Name one safety or documentation step to include when producing a reusable module.</li>
-</ol>
-<p>Extension Problems (5)</p>
-<ol>
-<li>Create a module for a mounting bracket with parameters for hole size and spacing; publish a usage example.</li>
-<li>Use a library module to add a fillet and compare the final STL before and after.</li>
-<li>Produce three variants by changing a parameter and record estimated print times.</li>
-<li>Move a working module into <code>lib/</code> and commit with a clear commit message.</li>
-<li>Write a short README for your module describing parameter ranges and expected units.
-Washington State Department of Health. (2026). <em>3D printer and filament selection for safe school environments</em>. <a href="https://doh.wa.gov/community-and-environment/schools/3d-printers">https://doh.wa.gov/community-and-environment/schools/3d-printers</a></li>
-</ol>
-<h4 id="works-cited-2"><a class="header" href="#works-cited-2"><strong>Works cited</strong></a></h4>
-<ol>
-<li>tdeck/3dmake: Non-visual 3D design and 3D printing tool - GitHub, accessed February 18, 2026, <a href="https://github.com/tdeck/3dmake">https://github.com/tdeck/3dmake</a></li>
-<li>Books - OpenSCAD, accessed February 18, 2026, <a href="https://openscad.org/documentation-books.html">https://openscad.org/documentation-books.html</a></li>
-<li>Programming with OpenSCAD, accessed February 18, 2026, <a href="https://programmingwithopenscad.github.io/">https://programmingwithopenscad.github.io/</a></li>
-<li>OpenSCAD Review - Worth learning? - CadHub, accessed February 18, 2026, <a href="https://learn.cadhub.xyz/blog/openscad-review/">https://learn.cadhub.xyz/blog/openscad-review/</a></li>
-<li>Activity · tdeck/3dmake - GitHub, accessed February 18, 2026, <a href="https://github.com/tdeck/3dmake/activity">https://github.com/tdeck/3dmake/activity</a></li>
-<li>10+ OpenSCAD Online Courses for 2026 | Explore Free Courses &amp; Certifications, accessed February 18, 2026, <a href="https://www.classcentral.com/subject/openscad">https://www.classcentral.com/subject/openscad</a></li>
-<li>3dmake/e2e_test.py at main - GitHub, accessed February 18, 2026, <a href="https://github.com/tdeck/3dmake/blob/main/e2e_test.py">https://github.com/tdeck/3dmake/blob/main/e2e_test.py</a></li>
-<li>OpenSCAD Prompt Creation - DocsBot AI, accessed February 18, 2026, <a href="https://docsbot.ai/prompts/technical/openscad-prompt-creation">https://docsbot.ai/prompts/technical/openscad-prompt-creation</a></li>
-<li>The great thing about OpenSCAD is that it makes it easy to 3D model things which… | Hacker News, accessed February 18, 2026, <a href="https://news.ycombinator.com/item?id=46338565">https://news.ycombinator.com/item?id=46338565</a></li>
-<li>Build Great AI: LLM-Powered 3D Model Generation for 3D Printing - ZenML LLMOps Database, accessed February 18, 2026, <a href="https://www.zenml.io/llmops-database/llm-powered-3d-model-generation-for-3d-printing">https://www.zenml.io/llmops-database/llm-powered-3d-model-generation-for-3d-printing</a></li>
-<li>Generating CAD Code with Vision-Language Models for 3D Designs - arXiv, accessed February 18, 2026, <a href="https://arxiv.org/html/2410.05340v2">https://arxiv.org/html/2410.05340v2</a></li>
-<li>3D Printer Safety - Environmental Health and Safety - The Ohio State University, accessed February 18, 2026, <a href="https://ehs.osu.edu/kb/3d-printer-safety">https://ehs.osu.edu/kb/3d-printer-safety</a></li>
-<li>3-D Printer Safety | Environmental Health &amp; Safety | RIT, accessed February 18, 2026, <a href="https://www.rit.edu/ehs/3-d-printer-safety">https://www.rit.edu/ehs/3-d-printer-safety</a></li>
-<li>Safe 3D Printing is for Everyone, Everywhere | NIOSH Blogs - CDC, accessed February 18, 2026, <a href="https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html">https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html</a></li>
-<li>3D Printers | Washington State Department of Health, accessed February 18, 2026, <a href="https://doh.wa.gov/community-and-environment/schools/3d-printers">https://doh.wa.gov/community-and-environment/schools/3d-printers</a></li>
-<li>3D Printer Safety - Environmental Health &amp; Safety - University of Tennessee, Knoxville, accessed February 18, 2026, <a href="https://ehs.utk.edu/index.php/table-of-policies-plans-procedures-guides/3d-printer-safety/">https://ehs.utk.edu/index.php/table-of-policies-plans-procedures-guides/3d-printer-safety/</a></li>
-<li>Using LLMs for Code Generation: A Guide to Improving Accuracy and Addressing Common Issues - PromptHub, accessed February 18, 2026, <a href="https://www.prompthub.us/blog/using-llms-for-code-generation-a-guide-to-improving-accuracy-and-addressing-common-issues">https://www.prompthub.us/blog/using-llms-for-code-generation-a-guide-to-improving-accuracy-and-addressing-common-issues</a></li>
-<li>Goodbye Minkowski : r/openscad - Reddit, accessed February 18, 2026, <a href="https://www.reddit.com/r/openscad/comments/1fhbku5/goodbye_minkowski/">https://www.reddit.com/r/openscad/comments/1fhbku5/goodbye_minkowski/</a></li>
-<li>Understanding the Challenges of OpenSCAD Users for 3D Printing - Thomas Pietrzak, accessed February 18, 2026, <a href="https://thomaspietrzak.com/bibliography/gonzalez24.pdf">https://thomaspietrzak.com/bibliography/gonzalez24.pdf</a></li>
-<li>Why is there so little content and community around a tool as powerful and interesting as OpenSCAD? (beyond the awesome folks in this channel) - Reddit, accessed February 18, 2026, <a href="https://www.reddit.com/r/openscad/comments/1fxj8xv/why_is_there_so_little_content_and_community/">https://www.reddit.com/r/openscad/comments/1fxj8xv/why_is_there_so_little_content_and_community/</a></li>
-<li>minkowski render problem: slow and bogus error message · Issue #6130 - GitHub, accessed February 18, 2026, <a href="https://github.com/openscad/openscad/issues/6130">https://github.com/openscad/openscad/issues/6130</a></li>
-<li>OpenSCAD: Tieing It Together With Hull() - Hackaday, accessed February 18, 2026, <a href="https://hackaday.com/2018/02/13/openscad-tieing-it-together-with-hull/">https://hackaday.com/2018/02/13/openscad-tieing-it-together-with-hull/</a></li>
-<li>OpenSCAD Hull/Minkowski function by hand? - Computer Graphics Stack Exchange, accessed February 18, 2026, <a href="https://computergraphics.stackexchange.com/questions/2188/openscad-hull-minkowski-function-by-hand">https://computergraphics.stackexchange.com/questions/2188/openscad-hull-minkowski-function-by-hand</a></li>
-<li>OpenSCAD is creating non-manifold models · Issue #6114 - GitHub, accessed February 18, 2026, <a href="https://github.com/openscad/openscad/issues/6114">https://github.com/openscad/openscad/issues/6114</a></li>
-<li>Boolean operation fails with message that mesh is non-manifold, but mesh appears to be manifold · Issue #5493 · openscad/openscad - GitHub, accessed February 18, 2026, <a href="https://github.com/openscad/openscad/issues/5493">https://github.com/openscad/openscad/issues/5493</a></li>
-<li>Create Space | The County Library, accessed February 18, 2026, <a href="https://www.slcolibrary.org/what-we-have/create">https://www.slcolibrary.org/what-we-have/create</a></li>
-<li>Understanding the Challenges of OpenSCAD Users for 3D Printing - Semantic Scholar, accessed February 18, 2026, <a href="https://www.semanticscholar.org/paper/6520ba2b822efd57074f60376a1d607605cd63fc">https://www.semanticscholar.org/paper/6520ba2b822efd57074f60376a1d607605cd63fc</a></li>
-<li>How to fix non-manifold geometry issues on 3D models - Sculpteo, accessed February 18, 2026, <a href="https://www.sculpteo.com/en/3d-learning-hub/create-3d-file/fix-non-manifold-geometry/">https://www.sculpteo.com/en/3d-learning-hub/create-3d-file/fix-non-manifold-geometry/</a></li>
-<li>What is a non-manifold geometry and how to avoid it - crwjaakko, accessed February 18, 2026, <a href="https://www.creativewithjaakko.com/tutorials/what-is-a-non-manifold-geometry-and-how-to-avoid-it/">https://www.creativewithjaakko.com/tutorials/what-is-a-non-manifold-geometry-and-how-to-avoid-it/</a></li>
-<li>How to Fix a Non-manifold Boolean Issue in SelfCAD, accessed February 18, 2026, <a href="https://www.selfcad.com/blog/fix-non-manifold-boolean-issue">https://www.selfcad.com/blog/fix-non-manifold-boolean-issue</a></li>
-<li>Creative Lab - The City Library, accessed February 18, 2026, <a href="https://services.slcpl.org/creativelab">https://services.slcpl.org/creativelab</a></li>
-<li>Make Salt Lake - Meetup, accessed February 18, 2026, <a href="https://www.meetup.com/makesaltlake/">https://www.meetup.com/makesaltlake/</a></li>
-<li>About Us - Make Salt Lake, accessed February 18, 2026, <a href="https://makesaltlake.org/about-us">https://makesaltlake.org/about-us</a></li>
-<li>ProtoSpace | Marriott Library, accessed February 18, 2026, <a href="https://lib.utah.edu/protospace.php">https://lib.utah.edu/protospace.php</a></li>
-</ol>
+<h1 id="lesson-3-parametric-architecture-and-modular-libraries"><a href="#lesson-3-parametric-architecture-and-modular-libraries" class="header">Lesson 3: Parametric Architecture and Modular Libraries</a></h1>
+<pre><code class="language-markdown">
+
+# Lesson 3: Parametric Architecture and Modular Libraries (Self-Paced)
+
+
+
+Estimated time: 60 minutes
+
+**Learning Objectives**
+- Define and document top-level parameters and use them to drive model variants
+- Create reusable modules and import a library module into a project
+- Produce and test low-resolution renders and export a working STL
+
+**Materials**
+- A 3dMake project scaffold with `src/main.scad`
+- Example library (e.g., BOSL) available in `lib/` or classroom assets
+
+Step-by-step Tasks
+1. Open `src/main.scad` and add three top-level parameters (with units) at the top of the file.
+2. Implement a simple `module bracket(width, height, thickness)` that composes primitives and boolean operations.
+3. Include a library module (e.g., `include &lt;bosl/constants.scad&gt;`) and call a small helper from it; run `3dm build`.
+4. Produce a low-resolution render to confirm topology, then export an STL and inspect it in a slicer.
+5. Refactor the module into `lib/` with a short README and a usage example.
+
+Checkpoints
+- After step 2 you have a parametric module you can call with different arguments.
+
+Quick Quiz (5)
+1. What is a parametric module and why is it useful?
+2. How do you include an external library in OpenSCAD?
+3. What is one advantage of moving code into `lib/`?
+4. How can you test a module quickly without a full high-resolution render?
+5. Name one safety or documentation step to include when producing a reusable module.
+
+Extension Problems (5)
+1. Create a module for a mounting bracket with parameters for hole size and spacing; publish a usage example.
+2. Use a library module to add a fillet and compare the final STL before and after.
+3. Produce three variants by changing a parameter and record estimated print times.
+4. Move a working module into `lib/` and commit with a clear commit message.
+5. Write a short README for your module describing parameter ranges and expected units.
+Washington State Department of Health. (2026). *3D printer and filament selection for safe school environments*. [https://doh.wa.gov/community-and-environment/schools/3d-printers](https://doh.wa.gov/community-and-environment/schools/3d-printers)
+
+## **Works cited**
+
+1. tdeck/3dmake: Non-visual 3D design and 3D printing tool \- GitHub, accessed February 18, 2026, [https://github.com/tdeck/3dmake](https://github.com/tdeck/3dmake)  
+2. Books \- OpenSCAD, accessed February 18, 2026, [https://openscad.org/documentation-books.html](https://openscad.org/documentation-books.html)  
+3. Programming with OpenSCAD, accessed February 18, 2026, [https://programmingwithopenscad.github.io/](https://programmingwithopenscad.github.io/)  
+4. OpenSCAD Review \- Worth learning? \- CadHub, accessed February 18, 2026, [https://learn.cadhub.xyz/blog/openscad-review/](https://learn.cadhub.xyz/blog/openscad-review/)  
+5. Activity · tdeck/3dmake \- GitHub, accessed February 18, 2026, [https://github.com/tdeck/3dmake/activity](https://github.com/tdeck/3dmake/activity)  
+
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="lesson-4-ai-enhanced-verification-and-multimodal-feedback-self-paced"><a class="header" href="#lesson-4-ai-enhanced-verification-and-multimodal-feedback-self-paced">Lesson 4: AI-Enhanced Verification and Multimodal Feedback (Self-Paced)</a></h1>
-<p>Estimated time: 45–60 minutes</p>
-<p><strong>Learning Objectives</strong></p>
-<ul>
-<li>Run <code>3dm info</code> to collect deterministic renders and AI diagnostics (if configured)</li>
-<li>Compare AI suggestions with renderer and slicer outputs and prioritize deterministic fixes</li>
-<li>Record and sanitize AI prompts and outputs for reproducibility and data governance</li>
-</ul>
-<p><strong>Materials</strong></p>
-<ul>
-<li>3dMake configured with an LLM API key (optional)</li>
-<li>Example project with renderable geometry</li>
-</ul>
-<p>Step-by-step Tasks</p>
-<ol>
-<li>Verify API configuration (if used) or run <code>3dm info --dry-run</code> to confirm render pipeline works locally.</li>
-<li>Run <code>3dm info</code> and save the produced images and textual report to <code>build/</code>.</li>
-<li>Inspect deterministic outputs (render warnings, slicer preview) and compare them to AI recommendations; prioritize deterministic issues.</li>
-<li>Iterate prompt engineering (in <code>3dmake.toml</code> or via <code>--prompt</code>) with precise technical primitives and re-run <code>3dm info</code> to examine changes.</li>
-<li>Document all prompts, AI outputs, and deterministic validation steps in <code>AI-notes.md</code> within the project.</li>
-</ol>
-<p>Checkpoints</p>
-<ul>
-<li>After step 2 you have stored render images and the AI report in <code>build/</code>.</li>
-</ul>
-<p>Quick Quiz (5)</p>
-<ol>
-<li>What command generates AI diagnostics and model renders?</li>
-<li>Why must AI outputs be validated against renderer/slicer results?</li>
-<li>Name one privacy or governance concern when sending models/images to an API.</li>
-<li>What is an example of a technical primitive to include in a prompt?</li>
-<li>Where should you record prompts and AI outputs in the project?</li>
-</ol>
-<p>Extension Problems (5)</p>
-<ol>
-<li>Create an <code>AI-notes.md</code> documenting three prompts and the AI’s responses; indicate which suggestions you acted on.</li>
-<li>Simulate a false-positive AI warning: describe how you validated and rejected it using deterministic checks.</li>
-<li>Generate a short prompt that requests the top three structural risks and record the results.</li>
-<li>Create a short checklist for sanitizing uploads before sending to an API.</li>
-<li>Re-run <code>3dm info</code> after a code fix and compare the differences in the AI report.</li>
-</ol>
-<h2 id="works-cited-3"><a class="header" href="#works-cited-3"><strong>Works cited</strong></a></h2>
-<ol>
-<li>tdeck/3dmake: Non-visual 3D design and 3D printing tool - GitHub, accessed February 18, 2026, <a href="https://github.com/tdeck/3dmake">https://github.com/tdeck/3dmake</a></li>
-<li>Books - OpenSCAD, accessed February 18, 2026, <a href="https://openscad.org/documentation-books.html">https://openscad.org/documentation-books.html</a></li>
-<li>Programming with OpenSCAD, accessed February 18, 2026, <a href="https://programmingwithopenscad.github.io/">https://programmingwithopenscad.github.io/</a></li>
-<li>OpenSCAD Review - Worth learning? - CadHub, accessed February 18, 2026, <a href="https://learn.cadhub.xyz/blog/openscad-review/">https://learn.cadhub.xyz/blog/openscad-review/</a></li>
-<li>Activity · tdeck/3dmake - GitHub, accessed February 18, 2026, <a href="https://github.com/tdeck/3dmake/activity">https://github.com/tdeck/3dmake/activity</a></li>
-<li>10+ OpenSCAD Online Courses for 2026 | Explore Free Courses &amp; Certifications, accessed February 18, 2026, <a href="https://www.classcentral.com/subject/openscad">https://www.classcentral.com/subject/openscad</a></li>
-<li>3dmake/e2e_test.py at main - GitHub, accessed February 18, 2026, <a href="https://github.com/tdeck/3dmake/blob/main/e2e_test.py">https://github.com/tdeck/3dmake/blob/main/e2e_test.py</a></li>
-<li>OpenSCAD Prompt Creation - DocsBot AI, accessed February 18, 2026, <a href="https://docsbot.ai/prompts/technical/openscad-prompt-creation">https://docsbot.ai/prompts/technical/openscad-prompt-creation</a></li>
-<li>The great thing about OpenSCAD is that it makes it easy to 3D model things which… | Hacker News, accessed February 18, 2026, <a href="https://news.ycombinator.com/item?id=46338565">https://news.ycombinator.com/item?id=46338565</a></li>
-<li>Build Great AI: LLM-Powered 3D Model Generation for 3D Printing - ZenML LLMOps Database, accessed February 18, 2026, <a href="https://www.zenml.io/llmops-database/llm-powered-3d-model-generation-for-3d-printing">https://www.zenml.io/llmops-database/llm-powered-3d-model-generation-for-3d-printing</a></li>
-<li>Generating CAD Code with Vision-Language Models for 3D Designs - arXiv, accessed February 18, 2026, <a href="https://arxiv.org/html/2410.05340v2">https://arxiv.org/html/2410.05340v2</a></li>
-<li>3D Printer Safety - Environmental Health and Safety - The Ohio State University, accessed February 18, 2026, <a href="https://ehs.osu.edu/kb/3d-printer-safety">https://ehs.osu.edu/kb/3d-printer-safety</a></li>
-<li>3-D Printer Safety | Environmental Health &amp; Safety | RIT, accessed February 18, 2026, <a href="https://www.rit.edu/ehs/3-d-printer-safety">https://www.rit.edu/ehs/3-d-printer-safety</a></li>
-<li>Safe 3D Printing is for Everyone, Everywhere | NIOSH Blogs - CDC, accessed February 18, 2026, <a href="https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html">https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html</a></li>
-<li>3D Printers | Washington State Department of Health, accessed February 18, 2026, <a href="https://doh.wa.gov/community-and-environment/schools/3d-printers">https://doh.wa.gov/community-and-environment/schools/3d-printers</a></li>
-<li>3D Printer Safety - Environmental Health &amp; Safety - University of Tennessee, Knoxville, accessed February 18, 2026, <a href="https://ehs.utk.edu/index.php/table-of-policies-plans-procedures-guides/3d-printer-safety/">https://ehs.utk.edu/index.php/table-of-policies-plans-procedures-guides/3d-printer-safety/</a></li>
-<li>Using LLMs for Code Generation: A Guide to Improving Accuracy and Addressing Common Issues - PromptHub, accessed February 18, 2026, <a href="https://www.prompthub.us/blog/using-llms-for-code-generation-a-guide-to-improving-accuracy-and-addressing-common-issues">https://www.prompthub.us/blog/using-llms-for-code-generation-a-guide-to-improving-accuracy-and-addressing-common-issues</a></li>
-<li>Goodbye Minkowski : r/openscad - Reddit, accessed February 18, 2026, <a href="https://www.reddit.com/r/openscad/comments/1fhbku5/goodbye_minkowski/">https://www.reddit.com/r/openscad/comments/1fhbku5/goodbye_minkowski/</a></li>
-<li>Understanding the Challenges of OpenSCAD Users for 3D Printing - Thomas Pietrzak, accessed February 18, 2026, <a href="https://thomaspietrzak.com/bibliography/gonzalez24.pdf">https://thomaspietrzak.com/bibliography/gonzalez24.pdf</a></li>
-<li>Why is there so little content and community around a tool as powerful and interesting as OpenSCAD? (beyond the awesome folks in this channel) - Reddit, accessed February 18, 2026, <a href="https://www.reddit.com/r/openscad/comments/1fxj8xv/why_is_there_so_little_content_and_community/">https://www.reddit.com/r/openscad/comments/1fxj8xv/why_is_there_so_little_content_and_community/</a></li>
-<li>minkowski render problem: slow and bogus error message · Issue #6130 - GitHub, accessed February 18, 2026, <a href="https://github.com/openscad/openscad/issues/6130">https://github.com/openscad/openscad/issues/6130</a></li>
-<li>OpenSCAD: Tieing It Together With Hull() - Hackaday, accessed February 18, 2026, <a href="https://hackaday.com/2018/02/13/openscad-tieing-it-together-with-hull/">https://hackaday.com/2018/02/13/openscad-tieing-it-together-with-hull/</a></li>
-<li>OpenSCAD Hull/Minkowski function by hand? - Computer Graphics Stack Exchange, accessed February 18, 2026, <a href="https://computergraphics.stackexchange.com/questions/2188/openscad-hull-minkowski-function-by-hand">https://computergraphics.stackexchange.com/questions/2188/openscad-hull-minkowski-function-by-hand</a></li>
-<li>OpenSCAD is creating non-manifold models · Issue #6114 - GitHub, accessed February 18, 2026, <a href="https://github.com/openscad/openscad/issues/6114">https://github.com/openscad/openscad/issues/6114</a></li>
-<li>Boolean operation fails with message that mesh is non-manifold, but mesh appears to be manifold · Issue #5493 · openscad/openscad - GitHub, accessed February 18, 2026, <a href="https://github.com/openscad/openscad/issues/5493">https://github.com/openscad/openscad/issues/5493</a></li>
-<li>Create Space | The County Library, accessed February 18, 2026, <a href="https://www.slcolibrary.org/what-we-have/create">https://www.slcolibrary.org/what-we-have/create</a></li>
-<li>Understanding the Challenges of OpenSCAD Users for 3D Printing - Semantic Scholar, accessed February 18, 2026, <a href="https://www.semanticscholar.org/paper/6520ba2b822efd57074f60376a1d607605cd63fc">https://www.semanticscholar.org/paper/6520ba2b822efd57074f60376a1d607605cd63fc</a></li>
-<li>How to fix non-manifold geometry issues on 3D models - Sculpteo, accessed February 18, 2026, <a href="https://www.sculpteo.com/en/3d-learning-hub/create-3d-file/fix-non-manifold-geometry/">https://www.sculpteo.com/en/3d-learning-hub/create-3d-file/fix-non-manifold-geometry/</a></li>
-<li>What is a non-manifold geometry and how to avoid it - crwjaakko, accessed February 18, 2026, <a href="https://www.creativewithjaakko.com/tutorials/what-is-a-non-manifold-geometry-and-how-to-avoid-it/">https://www.creativewithjaakko.com/tutorials/what-is-a-non-manifold-geometry-and-how-to-avoid-it/</a></li>
-<li>How to Fix a Non-manifold Boolean Issue in SelfCAD, accessed February 18, 2026, <a href="https://www.selfcad.com/blog/fix-non-manifold-boolean-issue">https://www.selfcad.com/blog/fix-non-manifold-boolean-issue</a></li>
-<li>Creative Lab - The City Library, accessed February 18, 2026, <a href="https://services.slcpl.org/creativelab">https://services.slcpl.org/creativelab</a></li>
-<li>Make Salt Lake - Meetup, accessed February 18, 2026, <a href="https://www.meetup.com/makesaltlake/">https://www.meetup.com/makesaltlake/</a></li>
-<li>About Us - Make Salt Lake, accessed February 18, 2026, <a href="https://makesaltlake.org/about-us">https://makesaltlake.org/about-us</a></li>
-<li>ProtoSpace | Marriott Library, accessed February 18, 2026, <a href="https://lib.utah.edu/protospace.php">https://lib.utah.edu/protospace.php</a></li>
-</ol>
+<h1 id="lesson-4-ai-enhanced-verification-and-multimodal-feedback"><a href="#lesson-4-ai-enhanced-verification-and-multimodal-feedback" class="header">Lesson 4: AI-Enhanced Verification and Multimodal Feedback</a></h1>
+<pre><code class="language-markdown">
+
+# Lesson 4: AI-Enhanced Verification and Multimodal Feedback (Self-Paced)
+
+
+
+Estimated time: 45–60 minutes
+
+**Learning Objectives**
+- Run `3dm info` to collect deterministic renders and AI diagnostics (if configured)
+- Compare AI suggestions with renderer and slicer outputs and prioritize deterministic fixes
+- Record and sanitize AI prompts and outputs for reproducibility and data governance
+
+**Materials**
+- 3dMake configured with an LLM API key (optional)
+- Example project with renderable geometry
+
+Step-by-step Tasks
+1. Verify API configuration (if used) or run `3dm info --dry-run` to confirm render pipeline works locally.
+2. Run `3dm info` and save the produced images and textual report to `build/`.
+3. Inspect deterministic outputs (render warnings, slicer preview) and compare them to AI recommendations; prioritize deterministic issues.
+4. Iterate prompt engineering (in `3dmake.toml` or via `--prompt`) with precise technical primitives and re-run `3dm info` to examine changes.
+5. Document all prompts, AI outputs, and deterministic validation steps in `AI-notes.md` within the project.
+
+Checkpoints
+- After step 2 you have stored render images and the AI report in `build/`.
+
+Quick Quiz (5)
+1. What command generates AI diagnostics and model renders?
+2. Why must AI outputs be validated against renderer/slicer results?
+3. Name one privacy or governance concern when sending models/images to an API.
+4. What is an example of a technical primitive to include in a prompt?
+5. Where should you record prompts and AI outputs in the project?
+
+Extension Problems (5)
+1. Create an `AI-notes.md` documenting three prompts and the AI’s responses; indicate which suggestions you acted on.
+2. Simulate a false-positive AI warning: describe how you validated and rejected it using deterministic checks.
+3. Generate a short prompt that requests the top three structural risks and record the results.
+4. Create a short checklist for sanitizing uploads before sending to an API.
+5. Re-run `3dm info` after a code fix and compare the differences in the AI report.
+
+## **Works cited**
+
+1. tdeck/3dmake: Non-visual 3D design and 3D printing tool \- GitHub, accessed February 18, 2026, [https://github.com/tdeck/3dmake](https://github.com/tdeck/3dmake)  
+2. Books \- OpenSCAD, accessed February 18, 2026, [https://openscad.org/documentation-books.html](https://openscad.org/documentation-books.html)  
+3. Programming with OpenSCAD, accessed February 18, 2026, [https://programmingwithopenscad.github.io/](https://programmingwithopenscad.github.io/)  
+4. OpenSCAD Review \- Worth learning? \- CadHub, accessed February 18, 2026, [https://learn.cadhub.xyz/blog/openscad-review/](https://learn.cadhub.xyz/blog/openscad-review/)  
+5. Activity · tdeck/3dmake \- GitHub, accessed February 18, 2026, [https://github.com/tdeck/3dmake/activity](https://github.com/tdeck/3dmake/activity)  
+6. 10+ OpenSCAD Online Courses for 2026 | Explore Free Courses &amp; Certifications, accessed February 18, 2026, [https://www.classcentral.com/subject/openscad](https://www.classcentral.com/subject/openscad)  
+7. 3dmake/e2e\_test.py at main \- GitHub, accessed February 18, 2026, [https://github.com/tdeck/3dmake/blob/main/e2e\_test.py](https://github.com/tdeck/3dmake/blob/main/e2e_test.py)  
+8. OpenSCAD Prompt Creation \- DocsBot AI, accessed February 18, 2026, [https://docsbot.ai/prompts/technical/openscad-prompt-creation](https://docsbot.ai/prompts/technical/openscad-prompt-creation)  
+9. The great thing about OpenSCAD is that it makes it easy to 3D model things which... | Hacker News, accessed February 18, 2026, [https://news.ycombinator.com/item?id=46338565](https://news.ycombinator.com/item?id=46338565)  
+10. Build Great AI: LLM-Powered 3D Model Generation for 3D Printing \- ZenML LLMOps Database, accessed February 18, 2026, [https://www.zenml.io/llmops-database/llm-powered-3d-model-generation-for-3d-printing](https://www.zenml.io/llmops-database/llm-powered-3d-model-generation-for-3d-printing)  
+
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="lesson-5-safety-protocols-and-the-physical-fabrication-interface-self-paced"><a class="header" href="#lesson-5-safety-protocols-and-the-physical-fabrication-interface-self-paced">Lesson 5: Safety Protocols and the Physical Fabrication Interface (Self-Paced)</a></h1>
-<p>Estimated time: 60–90 minutes</p>
-<p><strong>Learning Objectives</strong></p>
-<ul>
-<li>Describe the Hierarchy of Controls and apply it to a classroom maker-space</li>
-<li>Perform pre-print environmental and equipment checks</li>
-<li>Validate the digital-to-physical pipeline and document post-print inspection results</li>
-</ul>
-<p><strong>Materials</strong></p>
-<ul>
-<li>Classroom 3D printer, enclosure, and filtration (or documented lab SOP)</li>
-<li>Example parametric OpenSCAD project and slicer profile</li>
-</ul>
-<p>Step-by-step Tasks</p>
-<ol>
-<li>Conduct a safety briefing: review the Hierarchy of Controls and locate safety equipment.</li>
-<li>Verify environmental controls and printer readiness: confirm filtration, bed adhesion, and spool metadata.</li>
-<li>Run <code>3dm build</code> and inspect the STL in a slicer; check layer-preview and non-manifold warnings.</li>
-<li>If using remote submission (OctoPrint), confirm camera monitoring and logging before any unattended prints.</li>
-<li>Obtain instructor sign-off and monitor the first layers in-person or via camera.</li>
-<li>After printing, wait for the part to cool (&lt; $30^\circ\text{C}$), measure critical dimensions, and record observations.</li>
-</ol>
-<p>Checkpoints</p>
-<ul>
-<li>Completed environmental checklist and saved inspection notes in the project README.</li>
-</ul>
-<p>Quick Quiz (5)</p>
-<ol>
-<li>What are the four levels of the Hierarchy of Controls?</li>
-<li>Name two engineering controls useful for reducing emissions.</li>
-<li>Why must you monitor the first layers of a new print profile?</li>
-<li>Where should you record spool metadata and print observations?</li>
-<li>What is the safe cooldown temperature suggested before part removal?</li>
-</ol>
-<p>Extension Problems (5)</p>
-<ol>
-<li>Draft a one-page SOP for start-to-finish supervised prints in your lab.</li>
-<li>Create a checklist script that verifies spool metadata and build settings before <code>3dm build</code> runs.</li>
-<li>Run a test print and log measured deviations; propose a parameter change to correct the error.</li>
-<li>Design an accessible post-print inspection checklist that non-visual users can follow.</li>
-<li>Research filtration options and recommend one for your classroom, including maintenance intervals.</li>
-</ol>
-<h2 id="works-cited-4"><a class="header" href="#works-cited-4"><strong>Works cited</strong></a></h2>
-<ol>
-<li>tdeck/3dmake: Non-visual 3D design and 3D printing tool - GitHub, accessed February 18, 2026, <a href="https://github.com/tdeck/3dmake">https://github.com/tdeck/3dmake</a></li>
-<li>Books - OpenSCAD, accessed February 18, 2026, <a href="https://openscad.org/documentation-books.html">https://openscad.org/documentation-books.html</a></li>
-<li>Programming with OpenSCAD, accessed February 18, 2026, <a href="https://programmingwithopenscad.github.io/">https://programmingwithopenscad.github.io/</a></li>
-<li>OpenSCAD Review - Worth learning? - CadHub, accessed February 18, 2026, <a href="https://learn.cadhub.xyz/blog/openscad-review/">https://learn.cadhub.xyz/blog/openscad-review/</a></li>
-<li>Activity · tdeck/3dmake - GitHub, accessed February 18, 2026, <a href="https://github.com/tdeck/3dmake/activity">https://github.com/tdeck/3dmake/activity</a></li>
-<li>10+ OpenSCAD Online Courses for 2026 | Explore Free Courses &amp; Certifications, accessed February 18, 2026, <a href="https://www.classcentral.com/subject/openscad">https://www.classcentral.com/subject/openscad</a></li>
-<li>3dmake/e2e_test.py at main - GitHub, accessed February 18, 2026, <a href="https://github.com/tdeck/3dmake/blob/main/e2e_test.py">https://github.com/tdeck/3dmake/blob/main/e2e_test.py</a></li>
-<li>OpenSCAD Prompt Creation - DocsBot AI, accessed February 18, 2026, <a href="https://docsbot.ai/prompts/technical/openscad-prompt-creation">https://docsbot.ai/prompts/technical/openscad-prompt-creation</a></li>
-<li>The great thing about OpenSCAD is that it makes it easy to 3D model things which… | Hacker News, accessed February 18, 2026, <a href="https://news.ycombinator.com/item?id=46338565">https://news.ycombinator.com/item?id=46338565</a></li>
-<li>Build Great AI: LLM-Powered 3D Model Generation for 3D Printing - ZenML LLMOps Database, accessed February 18, 2026, <a href="https://www.zenml.io/llmops-database/llm-powered-3d-model-generation-for-3d-printing">https://www.zenml.io/llmops-database/llm-powered-3d-model-generation-for-3d-printing</a></li>
-<li>Generating CAD Code with Vision-Language Models for 3D Designs - arXiv, accessed February 18, 2026, <a href="https://arxiv.org/html/2410.05340v2">https://arxiv.org/html/2410.05340v2</a></li>
-<li>3D Printer Safety - Environmental Health and Safety - The Ohio State University, accessed February 18, 2026, <a href="https://ehs.osu.edu/kb/3d-printer-safety">https://ehs.osu.edu/kb/3d-printer-safety</a></li>
-<li>3-D Printer Safety | Environmental Health &amp; Safety | RIT, accessed February 18, 2026, <a href="https://www.rit.edu/ehs/3-d-printer-safety">https://www.rit.edu/ehs/3-d-printer-safety</a></li>
-<li>Safe 3D Printing is for Everyone, Everywhere | NIOSH Blogs - CDC, accessed February 18, 2026, <a href="https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html">https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html</a></li>
-<li>3D Printers | Washington State Department of Health, accessed February 18, 2026, <a href="https://doh.wa.gov/community-and-environment/schools/3d-printers">https://doh.wa.gov/community-and-environment/schools/3d-printers</a></li>
-<li>3D Printer Safety - Environmental Health &amp; Safety - University of Tennessee, Knoxville, accessed February 18, 2026, <a href="https://ehs.utk.edu/index.php/table-of-policies-plans-procedures-guides/3d-printer-safety/">https://ehs.utk.edu/index.php/table-of-policies-plans-procedures-guides/3d-printer-safety/</a></li>
-<li>Using LLMs for Code Generation: A Guide to Improving Accuracy and Addressing Common Issues - PromptHub, accessed February 18, 2026, <a href="https://www.prompthub.us/blog/using-llms-for-code-generation-a-guide-to-improving-accuracy-and-addressing-common-issues">https://www.prompthub.us/blog/using-llms-for-code-generation-a-guide-to-improving-accuracy-and-addressing-common-issues</a></li>
-<li>Goodbye Minkowski : r/openscad - Reddit, accessed February 18, 2026, <a href="https://www.reddit.com/r/openscad/comments/1fhbku5/goodbye_minkowski/">https://www.reddit.com/r/openscad/comments/1fhbku5/goodbye_minkowski/</a></li>
-<li>Understanding the Challenges of OpenSCAD Users for 3D Printing - Thomas Pietrzak, accessed February 18, 2026, <a href="https://thomaspietrzak.com/bibliography/gonzalez24.pdf">https://thomaspietrzak.com/bibliography/gonzalez24.pdf</a></li>
-<li>Why is there so little content and community around a tool as powerful and interesting as OpenSCAD? (beyond the awesome folks in this channel) - Reddit, accessed February 18, 2026, <a href="https://www.reddit.com/r/openscad/comments/1fxj8xv/why_is_there_so_little_content_and_community/">https://www.reddit.com/r/openscad/comments/1fxj8xv/why_is_there_so_little_content_and_community/</a></li>
-<li>minkowski render problem: slow and bogus error message · Issue #6130 - GitHub, accessed February 18, 2026, <a href="https://github.com/openscad/openscad/issues/6130">https://github.com/openscad/openscad/issues/6130</a></li>
-<li>OpenSCAD: Tieing It Together With Hull() - Hackaday, accessed February 18, 2026, <a href="https://hackaday.com/2018/02/13/openscad-tieing-it-together-with-hull/">https://hackaday.com/2018/02/13/openscad-tieing-it-together-with-hull/</a></li>
-<li>OpenSCAD Hull/Minkowski function by hand? - Computer Graphics Stack Exchange, accessed February 18, 2026, <a href="https://computergraphics.stackexchange.com/questions/2188/openscad-hull-minkowski-function-by-hand">https://computergraphics.stackexchange.com/questions/2188/openscad-hull-minkowski-function-by-hand</a></li>
-<li>OpenSCAD is creating non-manifold models · Issue #6114 - GitHub, accessed February 18, 2026, <a href="https://github.com/openscad/openscad/issues/6114">https://github.com/openscad/openscad/issues/6114</a></li>
-<li>Boolean operation fails with message that mesh is non-manifold, but mesh appears to be manifold · Issue #5493 · openscad/openscad - GitHub, accessed February 18, 2026, <a href="https://github.com/openscad/openscad/issues/5493">https://github.com/openscad/openscad/issues/5493</a></li>
-<li>Create Space | The County Library, accessed February 18, 2026, <a href="https://www.slcolibrary.org/what-we-have/create">https://www.slcolibrary.org/what-we-have/create</a></li>
-<li>Understanding the Challenges of OpenSCAD Users for 3D Printing - Semantic Scholar, accessed February 18, 2026, <a href="https://www.semanticscholar.org/paper/6520ba2b822efd57074f60376a1d607605cd63fc">https://www.semanticscholar.org/paper/6520ba2b822efd57074f60376a1d607605cd63fc</a></li>
-<li>How to fix non-manifold geometry issues on 3D models - Sculpteo, accessed February 18, 2026, <a href="https://www.sculpteo.com/en/3d-learning-hub/create-3d-file/fix-non-manifold-geometry/">https://www.sculpteo.com/en/3d-learning-hub/create-3d-file/fix-non-manifold-geometry/</a></li>
-<li>What is a non-manifold geometry and how to avoid it - crwjaakko, accessed February 18, 2026, <a href="https://www.creativewithjaakko.com/tutorials/what-is-a-non-manifold-geometry-and-how-to-avoid-it/">https://www.creativewithjaakko.com/tutorials/what-is-a-non-manifold-geometry-and-how-to-avoid-it/</a></li>
-<li>How to Fix a Non-manifold Boolean Issue in SelfCAD, accessed February 18, 2026, <a href="https://www.selfcad.com/blog/fix-non-manifold-boolean-issue">https://www.selfcad.com/blog/fix-non-manifold-boolean-issue</a></li>
-<li>Creative Lab - The City Library, accessed February 18, 2026, <a href="https://services.slcpl.org/creativelab">https://services.slcpl.org/creativelab</a></li>
-<li>Make Salt Lake - Meetup, accessed February 18, 2026, <a href="https://www.meetup.com/makesaltlake/">https://www.meetup.com/makesaltlake/</a></li>
-<li>About Us - Make Salt Lake, accessed February 18, 2026, <a href="https://makesaltlake.org/about-us">https://makesaltlake.org/about-us</a></li>
-<li>ProtoSpace | Marriott Library, accessed February 18, 2026, <a href="https://lib.utah.edu/protospace.php">https://lib.utah.edu/protospace.php</a></li>
-</ol>
+<h1 id="lesson-5-safety-protocols-and-the-physical-fabrication-interface"><a href="#lesson-5-safety-protocols-and-the-physical-fabrication-interface" class="header">Lesson 5: Safety Protocols and the Physical Fabrication Interface</a></h1>
+<pre><code class="language-markdown">
+# Lesson 5: Safety Protocols and the Physical Fabrication Interface (Self-Paced)
+
+
+
+Estimated time: 60–90 minutes
+
+**Learning Objectives**
+- Describe the Hierarchy of Controls and apply it to a classroom maker-space
+- Perform pre-print environmental and equipment checks
+- Validate the digital-to-physical pipeline and document post-print inspection results
+
+**Materials**
+- Classroom 3D printer, enclosure, and filtration (or documented lab SOP)
+- Example parametric OpenSCAD project and slicer profile
+
+Step-by-step Tasks
+1. Conduct a safety briefing: review the Hierarchy of Controls and locate safety equipment.
+2. Verify environmental controls and printer readiness: confirm filtration, bed adhesion, and spool metadata.
+3. Run `3dm build` and inspect the STL in a slicer; check layer-preview and non-manifold warnings.
+4. If using remote submission (OctoPrint), confirm camera monitoring and logging before any unattended prints.
+5. Obtain instructor sign-off and monitor the first layers in-person or via camera.
+6. After printing, wait for the part to cool (&lt; $30^\\circ\\text{C}$), measure critical dimensions, and record observations.
+
+Checkpoints
+- Completed environmental checklist and saved inspection notes in the project README.
+
+Quick Quiz (5)
+1. What are the four levels of the Hierarchy of Controls?
+2. Name two engineering controls useful for reducing emissions.
+3. Why must you monitor the first layers of a new print profile?
+4. Where should you record spool metadata and print observations?
+5. What is the safe cooldown temperature suggested before part removal?
+
+Extension Problems (5)
+1. Draft a one-page SOP for start-to-finish supervised prints in your lab.
+2. Create a checklist script that verifies spool metadata and build settings before `3dm build` runs.
+3. Run a test print and log measured deviations; propose a parameter change to correct the error.
+4. Design an accessible post-print inspection checklist that non-visual users can follow.
+5. Research filtration options and recommend one for your classroom, including maintenance intervals.
+
+## **Works cited**
+
+1. tdeck/3dmake: Non-visual 3D design and 3D printing tool \- GitHub, accessed February 18, 2026, [https://github.com/tdeck/3dmake](https://github.com/tdeck/3dmake)  
+2. Books \- OpenSCAD, accessed February 18, 2026, [https://openscad.org/documentation-books.html](https://openscad.org/documentation-books.html)  
+3. Programming with OpenSCAD, accessed February 18, 2026, [https://programmingwithopenscad.github.io/](https://programmingwithopenscad.github.io/)  
+4. OpenSCAD Review \- Worth learning? \- CadHub, accessed February 18, 2026, [https://learn.cadhub.xyz/blog/openscad-review/](https://learn.cadhub.xyz/blog/openscad-review/)  
+5. Activity · tdeck/3dmake \- GitHub, accessed February 18, 2026, [https://github.com/tdeck/3dmake/activity](https://github.com/tdeck/3dmake/activity)  
+6. 10+ OpenSCAD Online Courses for 2026 | Explore Free Courses &amp; Certifications, accessed February 18, 2026, [https://www.classcentral.com/subject/openscad](https://www.classcentral.com/subject/openscad)  
+7. 3dmake/e2e\_test.py at main \- GitHub, accessed February 18, 2026, [https://github.com/tdeck/3dmake/blob/main/e2e\_test.py](https://github.com/tdeck/3dmake/blob/main/e2e_test.py)  
+8. OpenSCAD Prompt Creation \- DocsBot AI, accessed February 18, 2026, [https://docsbot.ai/prompts/technical/openscad-prompt-creation](https://docsbot.ai/prompts/technical/openscad-prompt-creation)  
+9. The great thing about OpenSCAD is that it makes it easy to 3D model things which... | Hacker News, accessed February 18, 2026, [https://news.ycombinator.com/item?id=46338565](https://news.ycombinator.com/item?id=46338565)  
+10. Build Great AI: LLM-Powered 3D Model Generation for 3D Printing \- ZenML LLMOps Database, accessed February 18, 2026, [https://www.zenml.io/llmops-database/llm-powered-3d-model-generation-for-3d-printing](https://www.zenml.io/llmops-database/llm-powered-3d-model-generation-for-3d-printing)  
+
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="unit-0-foundations-self-paced-primer"><a class="header" href="#unit-0-foundations-self-paced-primer">Unit 0: Foundations (Self-Paced Primer)</a></h1>
 <p><strong>Accessibility:</strong> When including sample images or slicer screenshots, add a short alt-text description and provide a comment-based walkthrough for any example <code>.scad</code> files so screen-reader users can follow step-by-step.</p>
@@ -2248,7 +2395,12 @@ Washington State Department of Health. (2026). <em>3D printer and filament selec
 <p><strong>Accessibility:</strong> When including sample images or slicer screenshots, add a short alt-text description and provide a comment-based walkthrough for any example .scad files so screen-reader users can follow step-by-step.</p>
 <h2 id="available-scad-files-for-study"><a class="header" href="#available-scad-files-for-study">Available .scad files for study</a></h2>
 <ul>
-<li><a href="Units/docs/assets/Units/Unit_0_Foundations/project_0.scad">project_0.scad</a></li>
+<li><a href="assets/Units/Unit_0_Foundations/project_0.scad">project_0.scad</a></li>
+</ul>
+<h2 id="project-0-resources"><a class="header" href="#project-0-resources">Project 0 resources</a></h2>
+<ul>
+<li><a href="assets/Units/Unit_0_Foundations/project_0_briefing.txt">Project 0 Briefing</a></li>
+<li><a href="assets/Units/Unit_0_Foundations/project_0_student.txt">Project 0 Student Instructions</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="lesson-01--safety--printer-orientation-self-paced"><a class="header" href="#lesson-01--safety--printer-orientation-self-paced">Lesson 0.1 — Safety &amp; Printer Orientation (Self-Paced)</a></h1>
@@ -2476,7 +2628,7 @@ cube([length, width, height]);
 <p><strong>Accessibility:</strong> When including sample images or slicer screenshots, add a short alt-text description and provide a comment-based walkthrough for any example <code>.scad</code> files so screen-reader users can follow step-by-step.</p>
 <p><strong>Unit:</strong> 0 — Foundations<br><strong>Duration:</strong> 1–2 class periods (50–60 min each)<br><strong>Prerequisite:</strong> Lessons 0.1–0.3</p>
 <hr>
-<h2 id="learning-objectives-2"><a class="header" href="#learning-objectives-2">Learning Objectives</a></h2>
+<h2 id="learning-objectives"><a class="header" href="#learning-objectives">Learning Objectives</a></h2>
 <p>By the end of this lesson, students will be able to:</p>
 <ul>
 <li>Open OpenSCAD and navigate the interface</li>
@@ -2582,7 +2734,7 @@ cube([length, width, height]);
 <p><strong>Accessibility:</strong> When including sample images or slicer screenshots, add a short alt-text description and provide a comment-based walkthrough for any example <code>.scad</code> files so screen-reader users can follow step-by-step.</p>
 <p><strong>Unit:</strong> 0 — Foundations<br><strong>Duration:</strong> 1–2 class periods (50–60 min each)<br><strong>Prerequisite:</strong> Lesson 0.4 (Part 1)</p>
 <hr>
-<h2 id="learning-objectives-3"><a class="header" href="#learning-objectives-3">Learning Objectives</a></h2>
+<h2 id="learning-objectives-1"><a class="header" href="#learning-objectives-1">Learning Objectives</a></h2>
 <p>By the end of this lesson, students will be able to:</p>
 <ul>
 <li>Move objects using <code>translate()</code></li>
@@ -2759,7 +2911,7 @@ Wikibooks. (2019). *OpenSCAD tutorial*. https://en.wikibooks.org/wiki/OpenSCAD_T
 <p><strong>Accessibility:</strong> When including sample images or slicer screenshots, add a short alt-text description and provide a comment-based walkthrough for any example <code>.scad</code> files so screen-reader users can follow step-by-step.</p>
 <p><strong>Unit:</strong> 0 — Foundations<br><strong>Duration:</strong> 1 class period (50–60 min)<br><strong>Prerequisite:</strong> Lessons 0.4 and 0.5 (you need an STL file to slice)</p>
 <hr>
-<h2 id="learning-objectives-4"><a class="header" href="#learning-objectives-4">Learning Objectives</a></h2>
+<h2 id="learning-objectives-2"><a class="header" href="#learning-objectives-2">Learning Objectives</a></h2>
 <p>By the end of this lesson, students will be able to:</p>
 <ul>
 <li>Open PrusaSlicer and configure it for the classroom printer</li>
@@ -2953,21 +3105,28 @@ Wikibooks. (2019). *OpenSCAD tutorial*. https://en.wikibooks.org/wiki/OpenSCAD_T
 <p><strong>Accessibility:</strong> When including sample images or slicer screenshots, add a short alt-text description and provide a comment-based walkthrough for any example .scad files so screen-reader users can follow step-by-step.</p>
 <h2 id="available-scad-files-for-study-1"><a class="header" href="#available-scad-files-for-study-1">Available .scad files for study</a></h2>
 <ul>
-<li>[1_0_intro_to_openscad.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_0_intro_to_openscad.scad)</li>
-<li>[1_0_intro_to_openscad_student.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_0_intro_to_openscad_student.scad)</li>
-<li>[1_1_basic_shapes.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_1_basic_shapes.scad)</li>
-<li>[1_1_basic_shapes_student.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_1_basic_shapes_student.scad)</li>
-<li>[1_2_modifying_basic_shapes.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_2_modifying_basic_shapes.scad)</li>
-<li>[1_2_modifying_basic_shapes_student.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_2_modifying_basic_shapes_student.scad)</li>
-<li>[1_2_transformation_scale_rotation.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_2_transformation_scale_rotation.scad)</li>
-<li>[1_2_translation_practice.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_2_translation_practice.scad)</li>
-<li>[1_3_debugging.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_3_debugging.scad)</li>
-<li>[1_3_debugging_student.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_3_debugging_student.scad)</li>
-<li>[1_3_resolution.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_3_resolution.scad)</li>
-<li>[1_3_resolution_student.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_3_resolution_student.scad)</li>
-<li>[1_4_import_scale_size_student.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_4_import_scale_size_student.scad)</li>
-<li>[1_5_rotation_student.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_5_rotation_student.scad)</li>
-<li>[1_bonus_importing_external_models.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_bonus_importing_external_models.scad)</li>
+<li>[1_0_intro_to_openscad.scad](../../assets/Units/Unit_1_Getting_Started/Lesson 1/1_0_intro_to_openscad.scad)</li>
+<li>[1_0_intro_to_openscad_student.scad](../../assets/Units/Unit_1_Getting_Started/Lesson 1/1_0_intro_to_openscad_student.scad)</li>
+<li>[1_1_basic_shapes.scad](../../assets/Units/Unit_1_Getting_Started/Lesson 1/1_1_basic_shapes.scad)</li>
+<li>[1_1_basic_shapes_student.scad](../../assets/Units/Unit_1_Getting_Started/Lesson 1/1_1_basic_shapes_student.scad)</li>
+<li>[1_2_modifying_basic_shapes.scad](../../assets/Units/Unit_1_Getting_Started/Lesson 1/1_2_modifying_basic_shapes.scad)</li>
+<li>[1_2_modifying_basic_shapes_student.scad](../../assets/Units/Unit_1_Getting_Started/Lesson 1/1_2_modifying_basic_shapes_student.scad)</li>
+<li>[1_2_transformation_scale_rotation.scad](../../assets/Units/Unit_1_Getting_Started/Lesson 1/1_2_transformation_scale_rotation.scad)</li>
+<li>[1_2_translation_practice.scad](../../assets/Units/Unit_1_Getting_Started/Lesson 1/1_2_translation_practice.scad)</li>
+<li>[1_3_debugging.scad](../../assets/Units/Unit_1_Getting_Started/Lesson 1/1_3_debugging.scad)</li>
+<li>[1_3_debugging_student.scad](../../assets/Units/Unit_1_Getting_Started/Lesson 1/1_3_debugging_student.scad)</li>
+<li>[1_3_resolution.scad](../../assets/Units/Unit_1_Getting_Started/Lesson 1/1_3_resolution.scad)</li>
+<li>[1_3_resolution_student.scad](../../assets/Units/Unit_1_Getting_Started/Lesson 1/1_3_resolution_student.scad)</li>
+<li>[1_4_import_scale_size_student.scad](../../assets/Units/Unit_1_Getting_Started/Lesson 1/1_4_import_scale_size_student.scad)</li>
+<li>[1_5_rotation_student.scad](../../assets/Units/Unit_1_Getting_Started/Lesson 1/1_5_rotation_student.scad)</li>
+<li>[1_bonus_importing_external_models.scad](../../assets/Units/Unit_1_Getting_Started/Lesson 1/1_bonus_importing_external_models.scad)</li>
+</ul>
+<h2 id="project-resources"><a class="header" href="#project-resources">Project resources</a></h2>
+<ul>
+<li><a href="assets/Units/Unit_1_Getting_Started/project_1_briefing.txt">Project 1 Briefing</a></li>
+<li><a href="assets/Units/Unit_1_Getting_Started/project_1_documentation_template.txt">Project 1 Documentation Template</a></li>
+<li>[Lesson 1 Terminology](../../assets/Units/Unit_1_Getting_Started/Lesson 1/materials/terminology.txt)</li>
+<li>[Project 1 Documentation Example](../../assets/Units/Unit_1_Getting_Started/doc (example)/project_1_doc_example.txt)</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="lesson-10-openscad-basics"><a href="#lesson-10-openscad-basics" class="header">Lesson 1.0: OpenSCAD Basics</a></h1>
@@ -3330,10 +3489,9 @@ Extension problems (5):
 <p><strong>Accessibility:</strong> When including sample images or slicer screenshots, add a short alt-text description and provide a comment-based walkthrough for any example .scad files so screen-reader users can follow step-by-step.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="lesson-21--parametric-design--modules-self-paced"><a class="header" href="#lesson-21--parametric-design--modules-self-paced">Lesson 2.1 — Parametric Design &amp; Modules (Self-Paced)</a></h1>
-<p><strong>Accessibility:</strong> Add a short walkthrough in example <code>.scad</code> files and annotate key parameters so screen-reader users can follow the example code step-by-step.</p>
 <p><strong>Unit:</strong> 2 — Intermediate Skills<br><strong>Duration:</strong> 1–2 class periods<br><strong>Prerequisite:</strong> Unit 0 (all lessons) and Unit 1 (Projects 0 and 1 complete)</p>
 <hr>
-<h2 id="learning-objectives-5"><a class="header" href="#learning-objectives-5">Learning Objectives</a></h2>
+<h2 id="learning-objectives-3"><a class="header" href="#learning-objectives-3">Learning Objectives</a></h2>
 <p>By the end of this lesson, students will be able to:</p>
 <ul>
 <li>Explain what “parametric design” means and why it matters</li>
@@ -3445,7 +3603,7 @@ translate([80, 0, 0]) storage_box(/* your values */);
 <p><strong>Accessibility:</strong> Provide a short text description of the tolerance test layout and include annotated <code>.scad</code> comments for screen-reader users to follow measurement and comparison steps.</p>
 <p><strong>Unit:</strong> 2 — Intermediate Skills<br><strong>Duration:</strong> 1–2 class periods (plus a print session)<br><strong>Prerequisite:</strong> Lesson 2.1; understanding of calipers (Lesson 0.3)</p>
 <hr>
-<h2 id="learning-objectives-6"><a class="header" href="#learning-objectives-6">Learning Objectives</a></h2>
+<h2 id="learning-objectives-4"><a class="header" href="#learning-objectives-4">Learning Objectives</a></h2>
 <p>By the end of this lesson, students will be able to:</p>
 <ul>
 <li>Explain why 3D printed objects do not exactly match their designed dimensions</li>
@@ -3806,7 +3964,7 @@ Load pulls at layers ↓   Load is parallel to layers
 <p><strong>Accessibility:</strong> Include short text descriptions of any images and annotate material comparison tests so screen-reader users can follow procedure and results.</p>
 <p><strong>Unit:</strong> 2 — Intermediate Skills<br><strong>Duration:</strong> 1 class period (50–60 min)<br><strong>Prerequisite:</strong> Lessons 0.1 (Safety) and 0.6 (Slicing)</p>
 <hr>
-<h2 id="learning-objectives-7"><a class="header" href="#learning-objectives-7">Learning Objectives</a></h2>
+<h2 id="learning-objectives-5"><a class="header" href="#learning-objectives-5">Learning Objectives</a></h2>
 <p>By the end of this lesson, students will be able to:</p>
 <ul>
 <li>Compare the physical properties of PLA, PETG, and TPU</li>
@@ -4146,7 +4304,7 @@ The 3D Printer Bee. (n.d.). *PLA vs ABS, PETG, TPU for 3D printing: Comparison &
 <strong>Duration:</strong> 1–2 class periods (self-paced: ~90 minutes total)
 <strong>Prerequisite:</strong> Unit 0 &amp; Unit 1 fundamentals</p>
 <hr>
-<h2 id="learning-objectives-8"><a class="header" href="#learning-objectives-8">Learning Objectives</a></h2>
+<h2 id="learning-objectives-6"><a class="header" href="#learning-objectives-6">Learning Objectives</a></h2>
 <p>By the end of this self-paced lesson you will be able to:</p>
 <ul>
 <li>Identify relevant stakeholders and their roles</li>
@@ -4161,6 +4319,10 @@ The 3D Printer Bee. (n.d.). *PLA vs ABS, PETG, TPU for 3D printing: Comparison &
 <li>Interview worksheet (provided)</li>
 <li>Notebook or laptop for notes (optionally a recorder with consent)</li>
 <li>Sample stakeholder scenarios (below)</li>
+</ul>
+<p>Project resources</p>
+<ul>
+<li><a href="assets/Units/Unit_3_Open_Ended_Projects/project_3_briefing.txt">Project 3 Briefing</a></li>
 </ul>
 <hr>
 <h2 id="stepbystep-activities"><a class="header" href="#stepbystep-activities">Step‑by‑Step Activities</a></h2>
@@ -4628,31 +4790,31 @@ The 3D Printer Bee. (n.d.). *PLA vs ABS, PETG, TPU for 3D printing: Comparison &
 
 This file lists the extension projects, where they live, their primary didactic purpose, and the starter OpenSCAD file included in each folder.
 
-- **Your First Print**: [Extension_Projects/Your_First_Print/your-first-print.md](Extension_Projects/Your_First_Print/your-first-print.md)
+-- **Your First Print**: [Your_First_Print/your-first-print.md](Your_First_Print/your-first-print.md)
   - Purpose: low-friction introduction to the printing workflow and slicer checks; suitable for first-time printers.
   - Starter SCAD: `Extension_Projects/Your_First_Print/starter.scad` (basic cube example to slice and print).
 
-- **Real-Life Problem Solver**: [Extension_Projects/Your_Second_Print/your-second-print.md](Extension_Projects/Your_Second_Print/your-second-print.md)
+-- **Real-Life Problem Solver**: [Your_Second_Print/your-second-print.md](Your_Second_Print/your-second-print.md)
   - Purpose: adapt existing models to meet user needs; practice iteration and changelogs.
   - Starter SCAD: `Extension_Projects/Your_Second_Print/starter.scad` (small mounting/bracket scaffold).
 
-- **Dice Design Workshop**: [Extension_Projects/Dice_Dice_Dice/Dice_Dice_Dice.md](Extension_Projects/Dice_Dice_Dice/Dice_Dice_Dice.md)
+-- **Dice Design Workshop**: [Dice_Dice_Dice/Dice_Dice_Dice.md](Dice_Dice_Dice/Dice_Dice_Dice.md)
   - Purpose: parametric design and mass/distribution testing; introduces testing methodology.
   - Starter SCAD: `Extension_Projects/Dice_Dice_Dice/starter.scad` (parametric die scaffold).
 
-- **Bonus Print**: [Extension_Projects/Bonus_Print/bonus-print.md](Extension_Projects/Bonus_Print/bonus-print.md)
+-- **Bonus Print**: [Bonus_Print/bonus-print.md](Bonus_Print/bonus-print.md)
   - Purpose: scaling and simple modifications; multi-part printing and documentation.
   - Starter SCAD: `Extension_Projects/Bonus_Print/starter.scad` (scaling example).
 
-- **Parametric Keychain**: [Extension_Projects/Parametric_Keychain/Parametric_Keychain.md](Extension_Projects/Parametric_Keychain/Parametric_Keychain.md)
+-- **Parametric Keychain**: [Parametric_Keychain/Parametric_Keychain.md](Parametric_Keychain/Parametric_Keychain.md)
   - Purpose: string together basic 2D → 3D workflows and introduce text/embossing concepts.
   - Starter SCAD: `Extension_Projects/Parametric_Keychain/starter.scad`.
 
-- **Snap-Fit Clip**: [Extension_Projects/Snap_Fit_Clip/Snap_Fit_Clip.md](Extension_Projects/Snap_Fit_Clip/Snap_Fit_Clip.md)
+-- **Snap-Fit Clip**: [Snap_Fit_Clip/Snap_Fit_Clip.md](Snap_Fit_Clip/Snap_Fit_Clip.md)
   - Purpose: teach tolerance testing and mechanical considerations for snap-fit joints.
   - Starter SCAD: `Extension_Projects/Snap_Fit_Clip/starter.scad`.
 
-- **Accessibility Audit**: [Extension_Projects/Accessibility_Audit/Accessibility_Audit.md](Extension_Projects/Accessibility_Audit/Accessibility_Audit.md)
+-- **Accessibility Audit**: [Accessibility_Audit/Accessibility_Audit.md](Accessibility_Audit/Accessibility_Audit.md)
   - Purpose: practical exercise in improving lessons for non-visual users; includes small annotated example.
   - Starter SCAD: `Extension_Projects/Accessibility_Audit/starter.scad` (annotated minimal example).
 

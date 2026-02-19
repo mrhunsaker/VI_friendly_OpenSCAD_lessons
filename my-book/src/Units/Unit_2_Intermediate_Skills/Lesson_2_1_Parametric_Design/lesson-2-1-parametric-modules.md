@@ -1,7 +1,5 @@
 # Lesson 2.1 — Parametric Design & Modules (Self-Paced)
 
-**Accessibility:** Add a short walkthrough in example `.scad` files and annotate key parameters so screen-reader users can follow the example code step-by-step.
-
 **Unit:** 2 — Intermediate Skills  
 **Duration:** 1–2 class periods  
 **Prerequisite:** Unit 0 (all lessons) and Unit 1 (Projects 0 and 1 complete)

@@ -60,15 +60,19 @@ Extension activities (5):
 
 ## Available .scad files for study
 
-- [2_0_variables.scad](../docs/assets/Units/Unit_2_Intermediate_Skills/Lesson 2/2_0_variables.scad)
-- [2_0_variables_student.scad](../docs/assets/Units/Unit_2_Intermediate_Skills/Lesson 2/2_0_variables_student.scad)
-- [2_1_parameterization_practice.scad](../docs/assets/Units/Unit_2_Intermediate_Skills/Lesson 2/2_1_parameterization_practice.scad)
-- [2_1_parameterization_practice_2_student.scad](../docs/assets/Units/Unit_2_Intermediate_Skills/Lesson 2/2_1_parameterization_practice_2_student.scad)
-- [2_1_parameterization_practice_student.scad](../docs/assets/Units/Unit_2_Intermediate_Skills/Lesson 2/2_1_parameterization_practice_student.scad)
-- [2_2_bool_diff.scad](../docs/assets/Units/Unit_2_Intermediate_Skills/Lesson 2/2_2_bool_diff.scad)
-- [2_2_bool_diff_student.scad](../docs/assets/Units/Unit_2_Intermediate_Skills/Lesson 2/2_2_bool_diff_student.scad)
-- [2_3_bool_union_nested.scad](../docs/assets/Units/Unit_2_Intermediate_Skills/Lesson 2/2_3_bool_union_nested.scad)
-- [2_3_bool_union_nested_student.scad](../docs/assets/Units/Unit_2_Intermediate_Skills/Lesson 2/2_3_bool_union_nested_student.scad)
-- [2_4_intersection.scad](../docs/assets/Units/Unit_2_Intermediate_Skills/Lesson 2/2_4_intersection.scad)
-- [2_4_intersection_student.scad](../docs/assets/Units/Unit_2_Intermediate_Skills/Lesson 2/2_4_intersection_student.scad)
-- [error_hunt_1.scad](../docs/assets/Units/Unit_2_Intermediate_Skills/Lesson 2/error_hunt_1.scad)
+- [2_0_variables.scad](../../assets/Units/Unit_2_Intermediate_Skills/Lesson 2/2_0_variables.scad)
+- [2_0_variables_student.scad](../../assets/Units/Unit_2_Intermediate_Skills/Lesson 2/2_0_variables_student.scad)
+- [2_1_parameterization_practice.scad](../../assets/Units/Unit_2_Intermediate_Skills/Lesson 2/2_1_parameterization_practice.scad)
+- [2_1_parameterization_practice_2_student.scad](../../assets/Units/Unit_2_Intermediate_Skills/Lesson 2/2_1_parameterization_practice_2_student.scad)
+- [2_1_parameterization_practice_student.scad](../../assets/Units/Unit_2_Intermediate_Skills/Lesson 2/2_1_parameterization_practice_student.scad)
+- [2_2_bool_diff.scad](../../assets/Units/Unit_2_Intermediate_Skills/Lesson 2/2_2_bool_diff.scad)
+- [2_2_bool_diff_student.scad](../../assets/Units/Unit_2_Intermediate_Skills/Lesson 2/2_2_bool_diff_student.scad)
+- [2_3_bool_union_nested.scad](../../assets/Units/Unit_2_Intermediate_Skills/Lesson 2/2_3_bool_union_nested.scad)
+- [2_3_bool_union_nested_student.scad](../../assets/Units/Unit_2_Intermediate_Skills/Lesson 2/2_3_bool_union_nested_student.scad)
+- [2_4_intersection.scad](../../assets/Units/Unit_2_Intermediate_Skills/Lesson 2/2_4_intersection.scad)
+- [2_4_intersection_student.scad](../../assets/Units/Unit_2_Intermediate_Skills/Lesson 2/2_4_intersection_student.scad)
+- [error_hunt_1.scad](../../assets/Units/Unit_2_Intermediate_Skills/Lesson 2/error_hunt_1.scad)
+
+## Project resources
+
+- [Project 2 Briefing](../../assets/Units/Unit_2_Intermediate_Skills/project_2_briefing.txt)

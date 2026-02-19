@@ -1,8 +1,5 @@
 # 3D Design & Printing Curriculum — Enhanced Edition (Self-Paced)
 
-
-
-
 **Author:** Michael Ryan Hunsaker, M.Ed., Ph.D.
 **Last Updated:** 2026-02-17
 **Target Audience:** Blind/Visually Impaired High school students
@@ -54,8 +51,7 @@ This project is graded on a 0–9 point scale:
 | **Stakeholder process** | 0–3 | Quality of interviews, stakeholder involvement, and co-developed functional requirements |
 | **Design & iteration** | 0–3 | Evidence of genuine iteration (Prototype 2 is meaningfully better than Prototype 1); quality of OpenSCAD design |
 | **Final prototype** | 0–3 | How well the final print meets the functional requirements; build quality |
-
-**Bonus (up to 1 point):** Exceptional documentation; user testimonial; especially creative or impactful design.
+|**Bonus:** | 0-1 | Exceptional documentation; user testimonial; especially creative or impactful design.|
 
 ---
 

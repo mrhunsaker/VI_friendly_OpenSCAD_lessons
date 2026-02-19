@@ -44,6 +44,41 @@
         }
         </style>
         
+        <style>
+        /* Load Atkinson Hyperlegible fonts from the book assets */
+        @font-face {
+          font-family: 'Atkinson Hyperlegible Next';
+          src: url('/assets/fonts/AtkinsonHyperlegibleNext-Regular.ttf') format('truetype');
+          font-weight: 400;
+          font-style: normal;
+          font-display: swap;
+        }
+        @font-face {
+          font-family: 'Atkinson Hyperlegible Mono';
+          src: url('/assets/fonts/AtkinsonHyperlegibleMono-SemiBold.ttf') format('truetype');
+          font-weight: 600;
+          font-style: normal;
+          font-display: swap;
+        }
+        @font-face {
+          font-family: 'Atkinson Hyperlegible Mono';
+          src: url('/assets/fonts/AtkinsonHyperlegibleMono-Regular.otf') format('opentype');
+          font-weight: 400;
+          font-style: normal;
+          font-display: swap;
+        }
+        
+        /* Apply the fonts to code blocks and highlighted code */
+        pre, code, .hljs, .leftbar {
+          font-family: 'Atkinson Hyperlegible Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", "Courier New", monospace !important;
+        }
+        
+        /* Optionally set body to Atkinson Hyperlegible Next for improved legibility */
+        body {
+          font-family: 'Atkinson Hyperlegible Next', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        </style>
+        
         <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
         <script>
           document.addEventListener("DOMContentLoaded", () => {
@@ -79,10 +114,10 @@
             const path_to_root = "../../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-9b312cf5.js";
+            window.path_to_searchindex_js = "../../searchindex-e27e15a7.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-3786228f.js"></script>
+        <script src="../../toc-61f61fa6.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -252,21 +287,28 @@
 <p><strong>Accessibility:</strong> When including sample images or slicer screenshots, add a short alt-text description and provide a comment-based walkthrough for any example .scad files so screen-reader users can follow step-by-step.</p>
 <h2 id="available-scad-files-for-study"><a class="header" href="#available-scad-files-for-study">Available .scad files for study</a></h2>
 <ul>
-<li>[1_0_intro_to_openscad.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_0_intro_to_openscad.scad)</li>
-<li>[1_0_intro_to_openscad_student.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_0_intro_to_openscad_student.scad)</li>
-<li>[1_1_basic_shapes.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_1_basic_shapes.scad)</li>
-<li>[1_1_basic_shapes_student.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_1_basic_shapes_student.scad)</li>
-<li>[1_2_modifying_basic_shapes.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_2_modifying_basic_shapes.scad)</li>
-<li>[1_2_modifying_basic_shapes_student.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_2_modifying_basic_shapes_student.scad)</li>
-<li>[1_2_transformation_scale_rotation.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_2_transformation_scale_rotation.scad)</li>
-<li>[1_2_translation_practice.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_2_translation_practice.scad)</li>
-<li>[1_3_debugging.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_3_debugging.scad)</li>
-<li>[1_3_debugging_student.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_3_debugging_student.scad)</li>
-<li>[1_3_resolution.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_3_resolution.scad)</li>
-<li>[1_3_resolution_student.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_3_resolution_student.scad)</li>
-<li>[1_4_import_scale_size_student.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_4_import_scale_size_student.scad)</li>
-<li>[1_5_rotation_student.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_5_rotation_student.scad)</li>
-<li>[1_bonus_importing_external_models.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_bonus_importing_external_models.scad)</li>
+<li>[1_0_intro_to_openscad.scad](../../assets/Units/Unit_1_Getting_Started/Lesson 1/1_0_intro_to_openscad.scad)</li>
+<li>[1_0_intro_to_openscad_student.scad](../../assets/Units/Unit_1_Getting_Started/Lesson 1/1_0_intro_to_openscad_student.scad)</li>
+<li>[1_1_basic_shapes.scad](../../assets/Units/Unit_1_Getting_Started/Lesson 1/1_1_basic_shapes.scad)</li>
+<li>[1_1_basic_shapes_student.scad](../../assets/Units/Unit_1_Getting_Started/Lesson 1/1_1_basic_shapes_student.scad)</li>
+<li>[1_2_modifying_basic_shapes.scad](../../assets/Units/Unit_1_Getting_Started/Lesson 1/1_2_modifying_basic_shapes.scad)</li>
+<li>[1_2_modifying_basic_shapes_student.scad](../../assets/Units/Unit_1_Getting_Started/Lesson 1/1_2_modifying_basic_shapes_student.scad)</li>
+<li>[1_2_transformation_scale_rotation.scad](../../assets/Units/Unit_1_Getting_Started/Lesson 1/1_2_transformation_scale_rotation.scad)</li>
+<li>[1_2_translation_practice.scad](../../assets/Units/Unit_1_Getting_Started/Lesson 1/1_2_translation_practice.scad)</li>
+<li>[1_3_debugging.scad](../../assets/Units/Unit_1_Getting_Started/Lesson 1/1_3_debugging.scad)</li>
+<li>[1_3_debugging_student.scad](../../assets/Units/Unit_1_Getting_Started/Lesson 1/1_3_debugging_student.scad)</li>
+<li>[1_3_resolution.scad](../../assets/Units/Unit_1_Getting_Started/Lesson 1/1_3_resolution.scad)</li>
+<li>[1_3_resolution_student.scad](../../assets/Units/Unit_1_Getting_Started/Lesson 1/1_3_resolution_student.scad)</li>
+<li>[1_4_import_scale_size_student.scad](../../assets/Units/Unit_1_Getting_Started/Lesson 1/1_4_import_scale_size_student.scad)</li>
+<li>[1_5_rotation_student.scad](../../assets/Units/Unit_1_Getting_Started/Lesson 1/1_5_rotation_student.scad)</li>
+<li>[1_bonus_importing_external_models.scad](../../assets/Units/Unit_1_Getting_Started/Lesson 1/1_bonus_importing_external_models.scad)</li>
+</ul>
+<h2 id="project-resources"><a class="header" href="#project-resources">Project resources</a></h2>
+<ul>
+<li><a href="../../assets/Units/Unit_1_Getting_Started/project_1_briefing.txt">Project 1 Briefing</a></li>
+<li><a href="../../assets/Units/Unit_1_Getting_Started/project_1_documentation_template.txt">Project 1 Documentation Template</a></li>
+<li>[Lesson 1 Terminology](../../assets/Units/Unit_1_Getting_Started/Lesson 1/materials/terminology.txt)</li>
+<li>[Project 1 Documentation Example](../../assets/Units/Unit_1_Getting_Started/doc (example)/project_1_doc_example.txt)</li>
 </ul>
 
                     </main>

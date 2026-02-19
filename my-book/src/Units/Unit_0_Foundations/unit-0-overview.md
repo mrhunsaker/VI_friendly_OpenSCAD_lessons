@@ -32,4 +32,9 @@ Assessment:
 
 ## Available .scad files for study
 
-- [project_0.scad](../docs/assets/Units/Unit_0_Foundations/project_0.scad)
+- [project_0.scad](../../assets/Units/Unit_0_Foundations/project_0.scad)
+
+## Project 0 resources
+
+- [Project 0 Briefing](../../assets/Units/Unit_0_Foundations/project_0_briefing.txt)
+- [Project 0 Student Instructions](../../assets/Units/Unit_0_Foundations/project_0_student.txt)

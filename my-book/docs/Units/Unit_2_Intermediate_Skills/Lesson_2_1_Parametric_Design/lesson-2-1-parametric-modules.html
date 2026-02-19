@@ -44,6 +44,41 @@
         }
         </style>
         
+        <style>
+        /* Load Atkinson Hyperlegible fonts from the book assets */
+        @font-face {
+          font-family: 'Atkinson Hyperlegible Next';
+          src: url('/assets/fonts/AtkinsonHyperlegibleNext-Regular.ttf') format('truetype');
+          font-weight: 400;
+          font-style: normal;
+          font-display: swap;
+        }
+        @font-face {
+          font-family: 'Atkinson Hyperlegible Mono';
+          src: url('/assets/fonts/AtkinsonHyperlegibleMono-SemiBold.ttf') format('truetype');
+          font-weight: 600;
+          font-style: normal;
+          font-display: swap;
+        }
+        @font-face {
+          font-family: 'Atkinson Hyperlegible Mono';
+          src: url('/assets/fonts/AtkinsonHyperlegibleMono-Regular.otf') format('opentype');
+          font-weight: 400;
+          font-style: normal;
+          font-display: swap;
+        }
+        
+        /* Apply the fonts to code blocks and highlighted code */
+        pre, code, .hljs, .leftbar {
+          font-family: 'Atkinson Hyperlegible Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", "Courier New", monospace !important;
+        }
+        
+        /* Optionally set body to Atkinson Hyperlegible Next for improved legibility */
+        body {
+          font-family: 'Atkinson Hyperlegible Next', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        </style>
+        
         <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
         <script>
           document.addEventListener("DOMContentLoaded", () => {
@@ -79,10 +114,10 @@
             const path_to_root = "../../../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../searchindex-9b312cf5.js";
+            window.path_to_searchindex_js = "../../../searchindex-e27e15a7.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../../toc-3786228f.js"></script>
+        <script src="../../../toc-61f61fa6.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -219,7 +254,6 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="lesson-21--parametric-design--modules-self-paced"><a class="header" href="#lesson-21--parametric-design--modules-self-paced">Lesson 2.1 — Parametric Design &amp; Modules (Self-Paced)</a></h1>
-<p><strong>Accessibility:</strong> Add a short walkthrough in example <code>.scad</code> files and annotate key parameters so screen-reader users can follow the example code step-by-step.</p>
 <p><strong>Unit:</strong> 2 — Intermediate Skills<br><strong>Duration:</strong> 1–2 class periods<br><strong>Prerequisite:</strong> Unit 0 (all lessons) and Unit 1 (Projects 0 and 1 complete)</p>
 <hr>
 <h2 id="learning-objectives"><a class="header" href="#learning-objectives">Learning Objectives</a></h2>

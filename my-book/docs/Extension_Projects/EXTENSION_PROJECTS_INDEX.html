@@ -44,6 +44,41 @@
         }
         </style>
         
+        <style>
+        /* Load Atkinson Hyperlegible fonts from the book assets */
+        @font-face {
+          font-family: 'Atkinson Hyperlegible Next';
+          src: url('/assets/fonts/AtkinsonHyperlegibleNext-Regular.ttf') format('truetype');
+          font-weight: 400;
+          font-style: normal;
+          font-display: swap;
+        }
+        @font-face {
+          font-family: 'Atkinson Hyperlegible Mono';
+          src: url('/assets/fonts/AtkinsonHyperlegibleMono-SemiBold.ttf') format('truetype');
+          font-weight: 600;
+          font-style: normal;
+          font-display: swap;
+        }
+        @font-face {
+          font-family: 'Atkinson Hyperlegible Mono';
+          src: url('/assets/fonts/AtkinsonHyperlegibleMono-Regular.otf') format('opentype');
+          font-weight: 400;
+          font-style: normal;
+          font-display: swap;
+        }
+        
+        /* Apply the fonts to code blocks and highlighted code */
+        pre, code, .hljs, .leftbar {
+          font-family: 'Atkinson Hyperlegible Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", "Courier New", monospace !important;
+        }
+        
+        /* Optionally set body to Atkinson Hyperlegible Next for improved legibility */
+        body {
+          font-family: 'Atkinson Hyperlegible Next', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        </style>
+        
         <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
         <script>
           document.addEventListener("DOMContentLoaded", () => {
@@ -79,10 +114,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9b312cf5.js";
+            window.path_to_searchindex_js = "../searchindex-e27e15a7.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-3786228f.js"></script>
+        <script src="../toc-61f61fa6.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -222,31 +257,31 @@
 
 This file lists the extension projects, where they live, their primary didactic purpose, and the starter OpenSCAD file included in each folder.
 
-- **Your First Print**: [Extension_Projects/Your_First_Print/your-first-print.md](Extension_Projects/Your_First_Print/your-first-print.md)
+-- **Your First Print**: [Your_First_Print/your-first-print.md](Your_First_Print/your-first-print.md)
   - Purpose: low-friction introduction to the printing workflow and slicer checks; suitable for first-time printers.
   - Starter SCAD: `Extension_Projects/Your_First_Print/starter.scad` (basic cube example to slice and print).
 
-- **Real-Life Problem Solver**: [Extension_Projects/Your_Second_Print/your-second-print.md](Extension_Projects/Your_Second_Print/your-second-print.md)
+-- **Real-Life Problem Solver**: [Your_Second_Print/your-second-print.md](Your_Second_Print/your-second-print.md)
   - Purpose: adapt existing models to meet user needs; practice iteration and changelogs.
   - Starter SCAD: `Extension_Projects/Your_Second_Print/starter.scad` (small mounting/bracket scaffold).
 
-- **Dice Design Workshop**: [Extension_Projects/Dice_Dice_Dice/Dice_Dice_Dice.md](Extension_Projects/Dice_Dice_Dice/Dice_Dice_Dice.md)
+-- **Dice Design Workshop**: [Dice_Dice_Dice/Dice_Dice_Dice.md](Dice_Dice_Dice/Dice_Dice_Dice.md)
   - Purpose: parametric design and mass/distribution testing; introduces testing methodology.
   - Starter SCAD: `Extension_Projects/Dice_Dice_Dice/starter.scad` (parametric die scaffold).
 
-- **Bonus Print**: [Extension_Projects/Bonus_Print/bonus-print.md](Extension_Projects/Bonus_Print/bonus-print.md)
+-- **Bonus Print**: [Bonus_Print/bonus-print.md](Bonus_Print/bonus-print.md)
   - Purpose: scaling and simple modifications; multi-part printing and documentation.
   - Starter SCAD: `Extension_Projects/Bonus_Print/starter.scad` (scaling example).
 
-- **Parametric Keychain**: [Extension_Projects/Parametric_Keychain/Parametric_Keychain.md](Extension_Projects/Parametric_Keychain/Parametric_Keychain.md)
+-- **Parametric Keychain**: [Parametric_Keychain/Parametric_Keychain.md](Parametric_Keychain/Parametric_Keychain.md)
   - Purpose: string together basic 2D → 3D workflows and introduce text/embossing concepts.
   - Starter SCAD: `Extension_Projects/Parametric_Keychain/starter.scad`.
 
-- **Snap-Fit Clip**: [Extension_Projects/Snap_Fit_Clip/Snap_Fit_Clip.md](Extension_Projects/Snap_Fit_Clip/Snap_Fit_Clip.md)
+-- **Snap-Fit Clip**: [Snap_Fit_Clip/Snap_Fit_Clip.md](Snap_Fit_Clip/Snap_Fit_Clip.md)
   - Purpose: teach tolerance testing and mechanical considerations for snap-fit joints.
   - Starter SCAD: `Extension_Projects/Snap_Fit_Clip/starter.scad`.
 
-- **Accessibility Audit**: [Extension_Projects/Accessibility_Audit/Accessibility_Audit.md](Extension_Projects/Accessibility_Audit/Accessibility_Audit.md)
+-- **Accessibility Audit**: [Accessibility_Audit/Accessibility_Audit.md](Accessibility_Audit/Accessibility_Audit.md)
   - Purpose: practical exercise in improving lessons for non-visual users; includes small annotated example.
   - Starter SCAD: `Extension_Projects/Accessibility_Audit/starter.scad` (annotated minimal example).
 

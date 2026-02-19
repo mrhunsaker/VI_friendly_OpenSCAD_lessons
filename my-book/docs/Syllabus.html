@@ -44,6 +44,41 @@
         }
         </style>
         
+        <style>
+        /* Load Atkinson Hyperlegible fonts from the book assets */
+        @font-face {
+          font-family: 'Atkinson Hyperlegible Next';
+          src: url('/assets/fonts/AtkinsonHyperlegibleNext-Regular.ttf') format('truetype');
+          font-weight: 400;
+          font-style: normal;
+          font-display: swap;
+        }
+        @font-face {
+          font-family: 'Atkinson Hyperlegible Mono';
+          src: url('/assets/fonts/AtkinsonHyperlegibleMono-SemiBold.ttf') format('truetype');
+          font-weight: 600;
+          font-style: normal;
+          font-display: swap;
+        }
+        @font-face {
+          font-family: 'Atkinson Hyperlegible Mono';
+          src: url('/assets/fonts/AtkinsonHyperlegibleMono-Regular.otf') format('opentype');
+          font-weight: 400;
+          font-style: normal;
+          font-display: swap;
+        }
+        
+        /* Apply the fonts to code blocks and highlighted code */
+        pre, code, .hljs, .leftbar {
+          font-family: 'Atkinson Hyperlegible Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", "Courier New", monospace !important;
+        }
+        
+        /* Optionally set body to Atkinson Hyperlegible Next for improved legibility */
+        body {
+          font-family: 'Atkinson Hyperlegible Next', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        </style>
+        
         <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
         <script>
           document.addEventListener("DOMContentLoaded", () => {
@@ -79,10 +114,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-9b312cf5.js";
+            window.path_to_searchindex_js = "searchindex-e27e15a7.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-3786228f.js"></script>
+        <script src="toc-61f61fa6.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -273,10 +308,10 @@
 <tr><td><strong>Stakeholder process</strong></td><td>0–3</td><td>Quality of interviews, stakeholder involvement, and co-developed functional requirements</td></tr>
 <tr><td><strong>Design &amp; iteration</strong></td><td>0–3</td><td>Evidence of genuine iteration (Prototype 2 is meaningfully better than Prototype 1); quality of OpenSCAD design</td></tr>
 <tr><td><strong>Final prototype</strong></td><td>0–3</td><td>How well the final print meets the functional requirements; build quality</td></tr>
+<tr><td><strong>Bonus:</strong></td><td>0-1</td><td>Exceptional documentation; user testimonial; especially creative or impactful design.</td></tr>
 </tbody>
 </table>
 </div>
-<p><strong>Bonus (up to 1 point):</strong> Exceptional documentation; user testimonial; especially creative or impactful design.</p>
 <hr>
 <h2 id="quick-links-to-key-resources"><a class="header" href="#quick-links-to-key-resources">Quick Links to Key Resources</a></h2>
 <ul>

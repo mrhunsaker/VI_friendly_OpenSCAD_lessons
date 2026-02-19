@@ -13,24 +13,25 @@
 - [Terminology](Reference_Materials/terminology.md)
 
 # Foundations of Powershell
-
-- [Overview & Full Guide](PowerShell_Foundation/Powershell_Tutorial.md)
-- [Intro Lesson: Layout and Paths](PowerShell_Foundation/PS_0_getting_started_layout_paths.md)
-- [Lesson PS.1: Navigation](PowerShell_Foundation/PS_1_navigation.md)
-- [Lesson PS.2: File and Folder Manipulation](PowerShell_Foundation/PS_2_file_folder_manipulation_modification.md)
-- [Lesson PS.3: Input, Output, and Piping](PowerShell_Foundation/PS_3_input_output_piping.md)
-- [Lesson PS.4: Environment Variables and Aliases](PowerShell_Foundation/PS_4_environment_variables_aliases.md)
-- [Lesson PS.5: Filling in the Gaps](PowerShell_Foundation/PS_5_filling_in_the_gaps.md)
-- [Quiz 1: Navigation](PowerShell_Foundation/PS_Quiz_1.md)
+ - [Introduction to Command Line Interfaces](PowerShell_Foundation/Powershell_Introduction/Powershell_Introduction.md)
+ - [Overview & Full Guide](PowerShell_Foundation/Powershell_Tutorial/Powershell_Tutorial.md)
+ - [Intro Lesson: Layout and Paths](PowerShell_Foundation/PS_0_getting_started_layout_paths/PS_0_getting_started_layout_paths.md)
+ - [Lesson PS.1: Navigation](PowerShell_Foundation/PS_1_navigation/PS_1_navigation.md)
+ - [Lesson PS.2: File and Folder Manipulation](PowerShell_Foundation/PS_2_file_folder_manipulation_modification/PS_2_file_folder_manipulation_modification.md)
+ - [Lesson PS.3: Input, Output, and Piping](PowerShell_Foundation/PS_3_input_output_piping/PS_3_input_output_piping.md)
+ - [Lesson PS.4: Environment Variables and Aliases](PowerShell_Foundation/PS_4_environment_variables_aliases/PS_4_environment_variables_aliases.md)
+ - [Lesson PS.5: Filling in the Gaps](PowerShell_Foundation/PS_5_filling_in_the_gaps/PS_5_filling_in_the_gaps.md)
+ - [Quiz 1: Navigation](PowerShell_Foundation/PS_Quiz_1/PS_Quiz_1.md)
 
 # Foundations of 3D Make
 
-- [3D Make Tutorial](3dMake_Foundation/3dMake_Tutorial.md)
-- [Lesson 1: Environmental Configuration and the Developer Workflow](3dMake_Foundation/Lessons_3dMake_1.md)
-- [Lesson 2: Geometric Primitives and the Mathematics of Constructive Solid Geometry](3dMake_Foundation/Lessons_3dMake_2.md)
-- [Lesson 3: Parametric Architecture and Modular Libraries](3dMake_Foundation/Lessons_3dMake_3.md)
-- [Lesson 4: AI-Enhanced Verification and Multimodal Feedback](3dMake_Foundation/Lessons_3dMake_4.md)
-- [Lesson 5: Safety Protocols and the Physical Fabrication Interface](3dMake_Foundation/Lessons_3dMake_5.md)
+- [3D Make Intro](3dMake_Foundation/3dMake_Intro/3dMake_Intro.md)
+- [3D Make Tutorial](3dMake_Foundation/3dMake_Tutorial/3dMake_Tutorial.md)
+- [Lesson 1: Environmental Configuration and the Developer Workflow](3dMake_Foundation/Lessons_3dMake_1/Lessons_3dMake_1.md)
+- [Lesson 2: Geometric Primitives and the Mathematics of Constructive Solid Geometry](3dMake_Foundation/Lessons_3dMake_2/Lessons_3dMake_2.md)
+- [Lesson 3: Parametric Architecture and Modular Libraries](3dMake_Foundation/Lessons_3dMake_3/Lessons_3dMake_3.md)
+- [Lesson 4: AI-Enhanced Verification and Multimodal Feedback](3dMake_Foundation/Lessons_3dMake_4/Lessons_3dMake_4.md)
+- [Lesson 5: Safety Protocols and the Physical Fabrication Interface](3dMake_Foundation/Lessons_3dMake_5/Lessons_3dMake_5.md)
 
 # Foundations of 3D Printing
 

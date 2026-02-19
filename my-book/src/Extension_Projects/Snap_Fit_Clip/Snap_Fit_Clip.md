@@ -6,7 +6,7 @@ Estimated time: 3–6 hours
 Objective:
 This project has been moved into a named subfolder to keep `Extension_Projects` tidy.
 
-See: [Extension_Projects/Snap_Fit_Clip/Snap_Fit_Clip.md](Extension_Projects/Snap_Fit_Clip/Snap_Fit_Clip.md)
+Starter files
 
-(The canonical copy lives in `Extension_Projects/Snap_Fit_Clip/`.)
+- `starter.scad` is available at `assets/Extension_Projects/Snap_Fit_Clip/starter.scad`.
 3. Print test pieces for three tolerance values and document fit and failure modes.
