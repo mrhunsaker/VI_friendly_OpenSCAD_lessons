@@ -1,8 +1,8 @@
 # 3D Design & Printing Curriculum — Enhanced Edition (Self-Paced)
 
-**Author:** Michael Ryan Hunsaker, M.Ed., Ph.D.
-**Last Updated:** 2026-02-17
-**Target Audience:** Blind/Visually Impaired High school students
+**Author:** Michael Ryan Hunsaker, M.Ed., Ph.D.   
+**Last Updated:** 2026-02-17   
+**Target Audience:** Blind/Visually Impaired High school students, as well as anyone interested in 3d printing.    
 
 ---
 

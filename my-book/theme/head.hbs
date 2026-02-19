@@ -54,9 +54,9 @@
 }
 </style>
 
-/* Load Atkinson Hyperlegible fonts from the book assets (injected at runtime so paths are correct on GitHub Pages) */
 <script>
   (function(){
+    // Load Atkinson Hyperlegible fonts from the book assets (injected at runtime so paths are correct on GitHub Pages)
     try {
       const link = Array.from(document.getElementsByTagName('link')).find(l => l.href && l.href.match(/\/css\/variables-.*\.css$/));
       const base = (function(){
