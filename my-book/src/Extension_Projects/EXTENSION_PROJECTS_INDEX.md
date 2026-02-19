@@ -1,4 +1,3 @@
-```markdown
 # Extension Projects — Locations & Didactic Purposes
 
 This file lists the extension projects, where they live, their primary didactic purpose, and the starter OpenSCAD file included in each folder.
@@ -30,5 +29,3 @@ This file lists the extension projects, where they live, their primary didactic 
 -- **Accessibility Audit**: [Accessibility_Audit/Accessibility_Audit.md](Accessibility_Audit/Accessibility_Audit.md)
   - Purpose: practical exercise in improving lessons for non-visual users; includes small annotated example.
   - Starter SCAD: `Extension_Projects/Accessibility_Audit/starter.scad` (annotated minimal example).
-
-

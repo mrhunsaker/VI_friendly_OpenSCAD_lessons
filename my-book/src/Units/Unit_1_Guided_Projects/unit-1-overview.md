@@ -54,4 +54,4 @@ Teacher / mentor guidance (if available):
 - [Project 1 Briefing](../../assets/Units/Unit_1_Getting_Started/project_1_briefing.txt)
 - [Project 1 Documentation Template](../../assets/Units/Unit_1_Getting_Started/project_1_documentation_template.txt)
 - [Lesson 1 Terminology](../../assets/Units/Unit_1_Getting_Started/Lesson 1/materials/terminology.txt)
-- [Project 1 Documentation Example](../../assets/Units/Unit_1_Getting_Started/doc (example)/project_1_doc_example.txt)
+- [Project 1 Documentation Example](../../assets/Units/Unit_1_Getting_Started/doc-example/project_1_doc_example.txt)
