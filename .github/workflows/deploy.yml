@@ -57,10 +57,11 @@ jobs:
       - name: Verify @font-face in HTML
         run: |
           grep -R "@font-face" -n my-book/docs/index.html
-            - name: Upload artifact
-              uses: actions/upload-pages-artifact@v3
-              with:
-                path: ./my-book/docs
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./my-book/docs
 
   deploy:
     runs-on: ubuntu-latest
