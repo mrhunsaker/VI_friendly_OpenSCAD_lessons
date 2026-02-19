@@ -1,0 +1,34 @@
+```markdown
+# Lesson 2.4: Material Properties — PLA, PETG, and TPU
+
+**Unit:** 2 — Intermediate Skills  
+**Duration:** 1 class period (50–60 min)  
+**Prerequisite:** Lessons 0.1 (Safety) and 0.6 (Slicing)
+
+---
+
+## Learning Objectives
+
+By the end of this lesson, students will be able to:
+- Compare the physical properties of PLA, PETG, and TPU
+- Choose an appropriate filament material for a given design application
+- Explain how printing settings change when switching materials
+- Describe the safety considerations specific to each material
+
+---
+
+## The Three Materials
+
+### PLA — Polylactic Acid
+
+PLA is the standard starting point for FDM printing. It is bio-derived (from corn starch or sugarcane) and relatively low-emission.
+
+### PETG — Polyethylene Terephthalate Glycol-Modified
+
+PETG is described as combining the ease of PLA with the toughness of ABS. It's more durable and heat-resistant than PLA.
+
+### TPU — Thermoplastic Polyurethane
+
+TPU is a **flexible filament** — it bends, stretches, and returns to its shape like rubber.
+
+```

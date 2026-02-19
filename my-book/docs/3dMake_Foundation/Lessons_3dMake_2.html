@@ -79,10 +79,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9980aec5.js";
+            window.path_to_searchindex_js = "../searchindex-705389fb.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-953cb32a.js"></script>
+        <script src="../toc-3786228f.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -218,61 +218,47 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="lesson-2-geometric-primitives-and-the-mathematics-of-constructive-solid-geometry"><a class="header" href="#lesson-2-geometric-primitives-and-the-mathematics-of-constructive-solid-geometry"><strong>Lesson 2: Geometric Primitives and the Mathematics of Constructive Solid Geometry</strong></a></h1>
-<p>Lesson 2 moves from the tooling environment into the core logic of programmatic modeling. OpenSCAD is rooted in Constructive Solid Geometry (CSG), a paradigm that composes complex solids by combining simple primitives through boolean operations.3 For students this is an applied exercise in 3D analytic geometry (working in $\mathbb{R}^3$): coordinates, vectors, and transforms become the language for describing form. Emphasize that modeling in OpenSCAD is declarative—students describe <em>what</em> the geometry is, not <em>how</em> to draw it step-by-step.</p>
-<p>The lesson surveys the fundamental primitives (<code>cube()</code>, <code>sphere()</code>, <code>cylinder()</code>, <code>polyhedron()</code>) and their use as building blocks. Equally important are transforms (<code>translate()</code>, <code>rotate()</code>, <code>scale()</code>), which modify coordinate frames for subsequent primitives. A core conceptual hurdle is that transforms apply to the objects that follow them; teaching a nested, block-structured approach (grouping transforms with braces) helps students reason about local vs. global coordinates and avoids common placement errors.</p>
-<p>Boolean operations form the algebra of shape construction. Students practice with the three canonical CSG operators:</p>
+                        <h1 id="lesson-2-geometric-primitives-and-constructive-solid-geometry-self-paced"><a class="header" href="#lesson-2-geometric-primitives-and-constructive-solid-geometry-self-paced">Lesson 2: Geometric Primitives and Constructive Solid Geometry (Self-Paced)</a></h1>
+<p><strong>Accessibility:</strong> When including images or diagrams, add short alt-text and provide a comment-based walkthrough for any .scad examples so screen-reader users can follow the design steps.</p>
+<p>Estimated time: 60 minutes</p>
+<p><strong>Learning Objectives</strong></p>
+<ul>
+<li>Use OpenSCAD primitives (<code>cube()</code>, <code>sphere()</code>, <code>cylinder()</code>) and transforms (<code>translate()</code>, <code>rotate()</code>, <code>scale()</code>)</li>
+<li>Apply CSG operators (<code>union</code>, <code>difference</code>, <code>intersection</code>) safely and diagnose common numerical issues</li>
+<li>Use quick diagnostic renders and validate geometry in a slicer</li>
+</ul>
+<p><strong>Materials</strong></p>
+<ul>
+<li>3dMake project scaffold with <code>src/main.scad</code></li>
+<li>Example primitive snippets (provided in assets)</li>
+</ul>
+<p>Step-by-step Tasks</p>
 <ol>
-<li><strong>Union:</strong> $A \cup B$ — merges volumes into a single manifold.</li>
-<li><strong>Difference:</strong> $A \setminus B$ — subtracts the second volume from the first.</li>
-<li><strong>Intersection:</strong> $A \cap B$ — keeps only shared volume.3</li>
+<li>Open <code>src/main.scad</code>; identify and run simple examples using <code>cube()</code>, <code>sphere()</code>, and <code>cylinder()</code>.</li>
+<li>Create three short examples demonstrating <code>union()</code>, <code>difference()</code>, and <code>intersection()</code> and render with reduced <code>$fn</code>.</li>
+<li>Reproduce a failing <code>difference()</code> case and apply the 0.001 offset strategy to the subtractor; re-render and confirm fix.</li>
+<li>Build an STL with <code>3dm build</code> and open it in your slicer to check for thin walls or islands.</li>
+<li>Document any fixes in the project README and commit the working <code>main.scad</code> and STL.</li>
 </ol>
-<p>A practical emphasis in this lesson is numerical robustness. CSG operations are sensitive to coincident faces, near-zero-thickness walls, and poorly conditioned coordinate values. The so-called “0.001 rule” is introduced as a pragmatic technique: when performing <code>difference()</code> operations, offset or slightly enlarge the subtractor (for example, use $h+0.002$ and a tiny translation like $z-0.001$) to avoid coincident-face artifacts that lead to non-manifold meshes.9 Students are also shown how to reduce <code>$fn</code> for quick diagnostic renders and then increase it for final exports to balance speed and fidelity.</p>
-<p>The lesson closes by connecting these geometric principles to digital fabrication constraints: thin walls, tiny bridging spans, and intersecting coplanar faces often render correctly in OpenSCAD’s preview but fail in slicers or produce fragile prints. Students learn to interpret render warnings, run lightweight mesh checks, and iterate with small, testable changes so that mathematical intent maps reliably to manufactured results.</p>
-<h2 id="lesson-steps"><a class="header" href="#lesson-steps">Lesson steps</a></h2>
+<p>Checkpoints</p>
+<ul>
+<li>After task 3 the problematic boolean should render without non-manifold warnings.</li>
+</ul>
+<p>Quick Quiz (5)</p>
 <ol>
-<li>
-<p>Review primitives and transforms</p>
-<ul>
-<li>Open <code>src/main.scad</code> and identify examples of <code>cube()</code>, <code>cylinder()</code>, and <code>sphere()</code>.</li>
-<li>Experiment with <code>translate()</code> and <code>rotate()</code> lines: add a small translation and observe the object’s position in the preview.</li>
-</ul>
-</li>
-<li>
-<p>Practice basic CSG operations</p>
-<ul>
-<li>Create three small example blocks demonstrating <code>union()</code>, <code>difference()</code>, and <code>intersection()</code>.</li>
-<li>Render each example with a low <code>$fn</code> and note any warnings or errors produced by the renderer.</li>
-</ul>
-</li>
-<li>
-<p>Apply the 0.001 rule and numerical workarounds</p>
-<ul>
-<li>Reproduce a failing <code>difference()</code> example and apply a tiny offset to the subtracting shape (for example, increase one dimension by 0.002 and shift by -0.001 on the coincident axis).</li>
-<li>Re-render and confirm the boolean operation completes without producing non-manifold warnings.</li>
-</ul>
-</li>
-<li>
-<p>Diagnostic rendering strategy</p>
-<ul>
-<li>Use reduced <code>$fn</code> for rapid checks, then increase <code>$fn</code> or resolution before exporting STL.</li>
-<li>Use <code>3dm build</code> to create an STL, then open it in the slicer to inspect for thin walls or unexpected islands.</li>
-</ul>
-</li>
-<li>
-<p>Mesh validation and remediation</p>
-<ul>
-<li>If slicer reports problems, simplify boolean chains (split complex booleans into stepwise operations), or use analysis primitives to isolate the problematic sub-shape.</li>
-<li>Re-run <code>3dm build</code> after each incremental fix until the STL loads cleanly.</li>
-</ul>
-</li>
-<li>
-<p>Reflection and documentation</p>
-<ul>
-<li>Add comments near tricky boolean code explaining why offsets were used and what geometric invariants are expected.</li>
-<li>Record a short note in the project README about the <code>$fn</code> and offset strategy used for this model.</li>
-</ul>
-</li>
+<li>Name three primitive functions in OpenSCAD.</li>
+<li>What does <code>difference()</code> accomplish?</li>
+<li>Why might two coincident faces cause a render failure?</li>
+<li>What is the 0.001 rule and why is it useful?</li>
+<li>How does lowering <code>$fn</code> help during debugging?</li>
+</ol>
+<p>Extension Problems (5)</p>
+<ol>
+<li>Create a small assembly using <code>union()</code> of three primitives and export the STL.</li>
+<li>Intentionally create a failing boolean and fix it using offsets; explain your approach.</li>
+<li>Write a short test script that generates three variants with varying <code>$fn</code> values and compare render times.</li>
+<li>Use <code>3dm info</code> (if available) to generate a report on your model and document any recommendations.</li>
+<li>Explore using a library module (e.g., a fillet helper) to fix a sharp corner and note the difference in final STL.</li>
 </ol>
 <h2 id="references"><a class="header" href="#references"><strong>References</strong></a></h2>
 <p>Deck, T. (2025). <em>3DMake: A command-line tool for 3D printing workflows</em>. GitHub. <a href="https://github.com/tdeck/3dmake">https://github.com/tdeck/3dmake</a><br>Gohde, J., &amp; Kintel, M. (2021). <em>Programming with OpenSCAD: A beginner’s guide to coding 3D-printable objects</em>. No Starch Press.<br>Gonzalez Avila, J. F., Pietrzak, T., &amp; Casiez, G. (2024). <em>Understanding the challenges of OpenSCAD users for 3D printing</em>. Proceedings of the ACM Symposium on User Interface Software and Technology.<br>Google. (2025). <em>Vertex AI Gemini 3 Pro Preview: Getting started with generative AI</em>. <a href="https://docs.cloud.google.com/vertex-ai/generative-ai/docs/start/get-started-with-gemini-3">https://docs.cloud.google.com/vertex-ai/generative-ai/docs/start/get-started-with-gemini-3</a><br>National Institute for Occupational Safety and Health (NIOSH). (2024). <em>Approaches to safe 3D printing: A guide for makerspace users, schools, libraries, and small businesses</em>. <a href="https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html">https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html</a><br>Ohio State University Environmental Health and Safety. (2026). <em>3D printer safety concerns and ventilation</em>. <a href="https://ehs.osu.edu/kb/3d-printer-safety">https://ehs.osu.edu/kb/3d-printer-safety</a><br>Salt Lake City Public Library. (2026). <em>Creative Lab: Available hardware and 3D printing procedures</em>. <a href="https://services.slcpl.org/creativelab">https://services.slcpl.org/creativelab</a><br>Salt Lake County Library. (2026). <em>Create Spaces: Hardware specifications and filament fees</em>. <a href="https://www.slcolibrary.org/what-we-have/create">https://www.slcolibrary.org/what-we-have/create</a><br>University of Utah. (2026). <em>Marriott Library ProtoSpace and Maker hubs</em>. <a href="https://lib.utah.edu/protospace.php">https://lib.utah.edu/protospace.php</a><br>Washington State Department of Health. (2026). <em>3D printer and filament selection for safe school environments</em>. <a href="https://doh.wa.gov/community-and-environment/schools/3d-printers">https://doh.wa.gov/community-and-environment/schools/3d-printers</a></p>

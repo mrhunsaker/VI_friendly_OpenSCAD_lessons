@@ -1,0 +1,37 @@
+# PS-2: File and Folder Manipulation (Self-Paced)
+
+Estimated time: 30–45 minutes
+
+**Learning Objectives**
+- Create, copy, move, and delete files and folders from PowerShell
+- Use `ni`, `mkdir`, `cp`, `mv`, `rm`, and `rmdir` safely
+- Understand when operations are permanent and how to confirm results
+
+**Materials**
+- PowerShell
+- Small practice folder for exercises
+
+Step-by-step Tasks
+1. Create a practice directory: `mkdir ~/Documents/PS_Practice` and `cd` into it.
+2. Create two files: `ni file1.txt` and `ni file2.txt`.
+3. Copy `file1.txt` to `file1_backup.txt` with `cp` and confirm with `ls -n`.
+4. Rename `file2.txt` to `notes.txt` using `mv` and confirm.
+5. Delete `file1.txt` with `rm` and verify the backup remains.
+
+Checkpoints
+- After step 3 you should see both the original and the backup file.
+
+Quick Quiz
+1. How do you create an empty file from PowerShell?
+2. What command copies a file?
+3. How do you rename a file?
+4. What does `rm -r` do?
+5. Why is `rm` potentially dangerous?
+
+Extension Problems
+1. Create a folder tree and copy it to a new location with `cp -r`.
+2. Write a one-line command that creates three files named `a b c` and lists them.
+3. Move a file into a new folder and confirm the move.
+4. Use wildcards to delete files matching a pattern in a safe test folder.
+5. Export a listing of the practice folder to `practice_listing.txt`.
+

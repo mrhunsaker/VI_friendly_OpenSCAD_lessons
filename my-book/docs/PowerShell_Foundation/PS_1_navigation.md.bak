@@ -1,0 +1,86 @@
+# PS-1: Navigation — Moving Around Your File System
+
+**Duration:** 1 class period
+**Prerequisite:** PS-0 (Getting Started)
+
+---
+
+## Learning Objectives
+
+By the end of this lesson, you will be able to:
+- Use `pwd` to print your current location
+- Use `cd` to move between directories
+- Use `ls` (and its flags) to list files and folders
+- Use wildcards `*` and `?` to filter listings
+- Navigate relative vs. absolute paths
+
+---
+
+## Commands Covered in This Lesson
+
+| Command | What It Does |
+|---------|-------------|
+| `pwd` | Print Working Directory — shows where you are |
+| `cd path` | Change Directory — move to a new location |
+| `ls` | List — shows files and folders in current location |
+| `ls -n` | List names only (screen reader friendly) |
+| `ls -n -af` | List names of files only |
+| `ls -n -ad` | List names of directories only |
+
+---
+
+## `pwd` — Where Am I?
+
+Type `pwd` and press `Enter`. PowerShell prints the full path to your current location.
+
+```powershell
+pwd
+# Output: C:\Users\YourName
+```
+
+Use this whenever you are unsure where you are.
+
+---
+
+## `cd` — Changing Directories
+
+`cd` stands for "change directory."
+
+```powershell
+# PS-1: Navigation — Moving Around Your File System (Self-Paced)
+
+Estimated time: 25–40 minutes
+
+**Learning Objectives**
+- Use `pwd` to confirm location
+- Use `cd` to move through relative and absolute paths
+- Use `ls -n` and wildcards to find files
+
+**Materials**
+- PowerShell
+- Editor
+
+Step-by-step Tasks
+1. Run `pwd` and read the returned path aloud.
+2. Move to `Documents` with `cd Documents`, confirm with `pwd`.
+3. Use `ls -n` and `ls -n -af` to list files only and directories only.
+4. Practice using `*` and `?` wildcards to list matching files.
+5. Return home with `cd ~`.
+
+Checkpoints
+- After task 2 you can state the path printed by `pwd`.
+
+Quick Quiz
+1. What does `pwd` show?
+2. How do you list directories only with `ls`?
+3. What wildcard matches any number of characters?
+4. How do you list files with the `.scad` extension?
+5. Give an example of an absolute path and a relative path.
+
+Extension Problems
+1. Write a one-line script that lists `.scad` files and saves to `scad_list.txt`.
+2. Use `ls -n ~/Documents | more` to page through long listings.
+3. Combine `ls` with `Select-String` to search for a filename pattern.
+4. Create a shortcut alias in the session for a long path and test it.
+5. Practice tab-completion in a directory with many similarly named files.
+## `ls` — Listing Files and Folders

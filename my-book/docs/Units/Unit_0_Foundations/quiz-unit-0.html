@@ -79,10 +79,10 @@
             const path_to_root = "../../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-9980aec5.js";
+            window.path_to_searchindex_js = "../../searchindex-705389fb.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-953cb32a.js"></script>
+        <script src="../../toc-3786228f.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -218,133 +218,25 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="quiz-unit-0-foundations"><a class="header" href="#quiz-unit-0-foundations">Quiz: Unit 0 Foundations</a></h1>
-<p><em>Complete this quiz after finishing Lessons 0.1 through 0.6. Submit answers to your instructor.</em></p>
-<hr>
-<h2 id="section-1-safety-lesson-01"><a class="header" href="#section-1-safety-lesson-01">Section 1: Safety (Lesson 0.1)</a></h2>
+                        <h1 id="unit-0--self-paced-quiz-skills-check"><a class="header" href="#unit-0--self-paced-quiz-skills-check">Unit 0 — Self-Paced Quiz (Skills Check)</a></h1>
+<p><strong>Accessibility:</strong> Provide short text descriptions for any images and allow quiz answers to be submitted as text or audio transcripts for non-visual learners.</p>
+<p>Complete this short quiz after finishing Lessons 0.1–0.6. Submit answers as directed by your instructor.</p>
 <ol>
-<li>
-<p>What is the approximate operating temperature of the printer nozzle?</p>
-</li>
-<li>
-<p>List two things you should never do while the printer is operating.</p>
-</li>
-<li>
-<p>Why should you not stand directly over the printer while it is running?</p>
-</li>
-<li>
-<p>What should you do if you smell burning or see smoke from the printer?</p>
-</li>
-<li>
-<p>True or False: PLA filament is completely harmless and requires no ventilation.</p>
-</li>
+<li>Safety: What is one immediate action you should take if you smell burning while a printer is running?</li>
+<li>FDM basics: What does FDM stand for?</li>
+<li>Calipers: You measure an object three times and record 24.1 mm, 24.2 mm, and 23.9 mm. What value should you use in code and why? (short answer)</li>
+<li>OpenSCAD: Write a 3-line snippet that defines <code>length=50; width=30; height=10;</code> and creates a cube using those variables.</li>
+<li>Slicing: Name two slicer settings that directly affect print time and explain how they affect it (short answer).</li>
 </ol>
-<hr>
-<h2 id="section-2-how-3d-printing-works-lesson-02"><a class="header" href="#section-2-how-3d-printing-works-lesson-02">Section 2: How 3D Printing Works (Lesson 0.2)</a></h2>
-<ol start="6">
-<li>
-<p>What does FDM stand for?</p>
-</li>
-<li>
-<p>Describe in your own words how an FDM printer builds an object. Use the words “layer,” “filament,” and “nozzle” in your answer.</p>
-</li>
-<li>
-<p>What is infill? What does 15% infill mean?</p>
-</li>
-<li>
-<p>A model has an overhang — a portion that sticks out horizontally with nothing below it. What does the slicer add to support this?</p>
-</li>
-<li>
-<p>Put the following steps of the 3D printing workflow in the correct order:</p>
-<ul>
-<li>Slice the file in PrusaSlicer</li>
-<li>Load G-code onto the printer</li>
-<li>Write code in OpenSCAD</li>
-<li>Export an STL file</li>
-<li>Print the object</li>
-</ul>
-</li>
+<p>Extension problems (complete any two for mastery):</p>
+<ol>
+<li>Modify an OpenSCAD box to include a 3 mm tolerance on one dimension and explain why tolerance matters for fit.</li>
+<li>Create a small OpenSCAD file that uses <code>difference()</code> to cut a hole through a cube and render it. Submit the <code>.scad</code> and an exported STL.</li>
+<li>Using PrusaSlicer, slice the same STL at 0.20 mm and 0.30 mm layer heights; record the estimated times and explain the difference.</li>
+<li>Prepare and sign the <code>safety-checklist.md</code> (scan or photograph the signed copy) and submit it.</li>
+<li>Design a short 3-step troubleshooting checklist for failed prints (e.g., bed adhesion) and explain when to use each step.</li>
 </ol>
-<hr>
-<h2 id="section-3-calipers-lesson-03"><a class="header" href="#section-3-calipers-lesson-03">Section 3: Calipers (Lesson 0.3)</a></h2>
-<ol start="11">
-<li>
-<p>What should the caliper display read before you take any measurement?</p>
-</li>
-<li>
-<p>You measure the same object three times and get 24.1 mm, 23.9 mm, and 24.2 mm. What value would you use in your OpenSCAD code and why?</p>
-</li>
-<li>
-<p>Which part of the caliper do you use to measure the inside diameter of a hole?</p>
-</li>
-<li>
-<p>Why is a ruler not precise enough for 3D printing design work?</p>
-</li>
-</ol>
-<hr>
-<h2 id="section-4-openscad-part-1-lesson-04"><a class="header" href="#section-4-openscad-part-1-lesson-04">Section 4: OpenSCAD Part 1 (Lesson 0.4)</a></h2>
-<ol start="15">
-<li>
-<p>Write the OpenSCAD code to create a box that is 50 mm long, 30 mm wide, and 10 mm tall. Use variables — do not use raw numbers inside the cube command.</p>
-</li>
-<li>
-<p>What is the difference between pressing F5 and pressing F6 in OpenSCAD?</p>
-</li>
-<li>
-<p>What does <code>$fn = 50;</code> do?</p>
-</li>
-<li>
-<p>Write the OpenSCAD code to create a sphere with a radius of 15 mm with smooth rendering.</p>
-</li>
-</ol>
-<hr>
-<h2 id="section-5-openscad-part-2-lesson-05"><a class="header" href="#section-5-openscad-part-2-lesson-05">Section 5: OpenSCAD Part 2 (Lesson 0.5)</a></h2>
-<ol start="19">
-<li>
-<p>Write the OpenSCAD code that creates a 20 mm cube with a cylindrical hole (radius 3 mm) going all the way through the center vertically. Use <code>difference()</code>.</p>
-</li>
-<li>
-<p>What is the purpose of extending the subtracting shape slightly beyond the base shape (e.g., starting the cylinder at Z = -1 instead of Z = 0) when using <code>difference()</code>?</p>
-</li>
-<li>
-<p>What does <code>translate([10, 0, 0])</code> do to a shape?</p>
-</li>
-<li>
-<p>In OpenSCAD, what happens when you list two shapes without any Boolean operator? Does the result look different from using <code>union()</code>?</p>
-</li>
-</ol>
-<hr>
-<h2 id="section-6-slicing-lesson-06"><a class="header" href="#section-6-slicing-lesson-06">Section 6: Slicing (Lesson 0.6)</a></h2>
-<ol start="23">
-<li>
-<p>What is a slicer, and what file format does it output?</p>
-</li>
-<li>
-<p>You need to print a prototype quickly to test if a design works. Which layer height would you choose and why: 0.10 mm, 0.20 mm, or 0.30 mm?</p>
-</li>
-<li>
-<p>A model has a large horizontal surface 30 mm off the build plate with nothing below it. What slicer setting do you need to turn on?</p>
-</li>
-<li>
-<p>After slicing, where in PrusaSlicer can you see exactly how the printer will build your model layer by layer?</p>
-</li>
-<li>
-<p>You slice a model and the estimated print time is 4 hours and 20 minutes. You change the layer height from 0.20 mm to 0.30 mm. Will the new print time be longer, shorter, or the same? Why?</p>
-</li>
-</ol>
-<hr>
-<h2 id="short-answer"><a class="header" href="#short-answer">Short Answer</a></h2>
-<ol start="28">
-<li>
-<p>Explain in 2–3 sentences why we use variables in OpenSCAD instead of typing numbers directly.</p>
-</li>
-<li>
-<p>A student designs a box to hold a command strip, types in the exact measured dimensions, prints it, and finds the command strip doesn’t fit. Name two reasons this might happen and what they could do to fix it.</p>
-</li>
-<li>
-<p>You are about to start a 3-hour print and need to leave the classroom. What should you do?</p>
-</li>
-</ol>
+<p><strong>Accessibility:</strong> When including sample images or slicer screenshots, add a short alt-text description and provide a comment-based walkthrough for any example .scad files so screen-reader users can follow step-by-step.</p>
 
                     </main>
 
@@ -354,7 +246,7 @@
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="../../Extension_Projects/your-first-print.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../Extension_Projects/Your_First_Print/your-first-print.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -368,7 +260,7 @@
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="../../Extension_Projects/your-first-print.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../Extension_Projects/Your_First_Print/your-first-print.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>

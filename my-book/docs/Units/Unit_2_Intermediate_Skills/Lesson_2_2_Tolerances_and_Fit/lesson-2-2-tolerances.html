@@ -79,10 +79,10 @@
             const path_to_root = "../../../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../searchindex-9980aec5.js";
+            window.path_to_searchindex_js = "../../../searchindex-705389fb.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../../toc-953cb32a.js"></script>
+        <script src="../../../toc-3786228f.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -218,7 +218,8 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="lesson-22-tolerances--fit-in-3d-printing"><a class="header" href="#lesson-22-tolerances--fit-in-3d-printing">Lesson 2.2: Tolerances &amp; Fit in 3D Printing</a></h1>
+                        <h1 id="lesson-22--tolerances--fit-self-paced"><a class="header" href="#lesson-22--tolerances--fit-self-paced">Lesson 2.2 — Tolerances &amp; Fit (Self-Paced)</a></h1>
+<p><strong>Accessibility:</strong> Provide a short text description of the tolerance test layout and include annotated <code>.scad</code> comments for screen-reader users to follow measurement and comparison steps.</p>
 <p><strong>Unit:</strong> 2 — Intermediate Skills<br><strong>Duration:</strong> 1–2 class periods (plus a print session)<br><strong>Prerequisite:</strong> Lesson 2.1; understanding of calipers (Lesson 0.3)</p>
 <hr>
 <h2 id="learning-objectives"><a class="header" href="#learning-objectives">Learning Objectives</a></h2>
@@ -273,126 +274,46 @@
 </div>
 <p><strong>Note:</strong> These values are starting points. Every printer is slightly different. The tolerance test in this lesson will determine the right values for your specific printer.</p>
 <hr>
-<h2 id="why-holes-always-print-undersized"><a class="header" href="#why-holes-always-print-undersized">Why Holes Always Print Undersized</a></h2>
-<p>When you design a hole using a <code>cylinder()</code> in OpenSCAD and subtract it with <code>difference()</code>, the printed hole is almost always <strong>slightly smaller than designed</strong>. This happens because:</p>
+<p>Estimated time: 60–120 minutes (includes print time)</p>
+<p>Learning objectives:</p>
+<ul>
+<li>Explain tolerance, clearance, and common fit types for FDM parts</li>
+<li>Run a tolerance test print and record peg/hole fits</li>
+<li>Apply measured clearances to designs that must fit together</li>
+</ul>
+<p>Materials:</p>
+<ul>
+<li>Tolerance test <code>.scad</code> file (provided), calipers, printer access</li>
+</ul>
+<p>Step-by-step student tasks:</p>
 <ol>
-<li>The STL file format represents curves as triangles. A circular hole becomes a many-sided polygon — a circumscribed circle is always slightly smaller than the true circle.</li>
-<li>The melted filament “swells” slightly as it cools, slightly filling the edges of the hole.</li>
+<li>Open the provided <code>tolerance_test.scad</code> and preview the file in OpenSCAD.</li>
+<li>Export the STL and slice it with your normal classroom profile (0.20 mm, 15% infill).</li>
+<li>Print the file and use the reference peg to test each hole. Record whether each peg fits and how it feels.</li>
+<li>Measure the holes and pegs with calipers and compute the measured clearance for each test.</li>
+<li>Choose a working “normal fit” clearance for your printer and record it in your notes.</li>
 </ol>
-<p><strong>Practical rule:</strong> For a hole that needs to fit a 5 mm bolt, design it as 5.3–5.5 mm. Test and adjust.</p>
-<hr>
-<h2 id="tolerance-test-design"><a class="header" href="#tolerance-test-design">Tolerance Test Design</a></h2>
-<p>In this lesson, you will design and print a <strong>tolerance test file</strong> that helps you characterize your printer. The test consists of pegs of a fixed size paired with holes of varying sizes.</p>
-<h3 id="tolerance-test-code"><a class="header" href="#tolerance-test-code">Tolerance Test Code</a></h3>
-<pre><code class="language-scad">// Tolerance Test for FDM Printer
-// Author: (your name)
-// Date: (today)
-// Usage: Print this, then test which hole best fits the 5mm peg.
-
-$fn = 40;
-peg_d = 5;      // fixed peg diameter
-height = 8;     // height of all cylinders
-spacing = 15;   // space between test pieces
-
-// === Reference Peg (the peg to test with) ===
-cylinder(h = height, d = peg_d);
-
-// === Test holes at different clearances ===
-// 0.0 mm clearance (exact same size — should be very tight or impossible)
-translate([spacing * 1, 0, 0])
-difference() {
-    cube([spacing - 2, spacing - 2, height]);
-    translate([(spacing - 2) / 2, (spacing - 2) / 2, -1])
-        cylinder(h = height + 2, d = peg_d + 0.0);
-}
-
-// 0.1 mm clearance
-translate([spacing * 2, 0, 0])
-difference() {
-    cube([spacing - 2, spacing - 2, height]);
-    translate([(spacing - 2) / 2, (spacing - 2) / 2, -1])
-        cylinder(h = height + 2, d = peg_d + 0.1);
-}
-
-// 0.2 mm clearance
-translate([spacing * 3, 0, 0])
-difference() {
-    cube([spacing - 2, spacing - 2, height]);
-    translate([(spacing - 2) / 2, (spacing - 2) / 2, -1])
-        cylinder(h = height + 2, d = peg_d + 0.2);
-}
-
-// 0.3 mm clearance
-translate([spacing * 4, 0, 0])
-difference() {
-    cube([spacing - 2, spacing - 2, height]);
-    translate([(spacing - 2) / 2, (spacing - 2) / 2, -1])
-        cylinder(h = height + 2, d = peg_d + 0.3);
-}
-
-// 0.5 mm clearance
-translate([spacing * 5, 0, 0])
-difference() {
-    cube([spacing - 2, spacing - 2, height]);
-    translate([(spacing - 2) / 2, (spacing - 2) / 2, -1])
-        cylinder(h = height + 2, d = peg_d + 0.5);
-}
-</code></pre>
-<h3 id="after-printing-record-your-results"><a class="header" href="#after-printing-record-your-results">After Printing: Record Your Results</a></h3>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Clearance</th><th>Does the peg fit?</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>0.0 mm</td><td></td><td></td></tr>
-<tr><td>0.1 mm</td><td></td><td></td></tr>
-<tr><td>0.2 mm</td><td></td><td></td></tr>
-<tr><td>0.3 mm</td><td></td><td></td></tr>
-<tr><td>0.5 mm</td><td></td><td></td></tr>
-</tbody>
-</table>
-</div>
-<p>Use this data to determine your printer’s “normal fit” clearance. Record it here:</p>
-<p><strong>My printer’s normal clearance value: ________ mm</strong></p>
-<p>Keep this in your reference materials for all future projects.</p>
-<hr>
-<h2 id="applying-tolerances-jewelry-beads-project-3-preview"><a class="header" href="#applying-tolerances-jewelry-beads-project-3-preview">Applying Tolerances: Jewelry Beads (Project 3 Preview)</a></h2>
-<p>In Project 3, your beads must fit on a cord. If you design a hole with <code>d = cord_diameter</code>, the bead probably won’t slide. Instead:</p>
-<pre><code class="language-scad">cord_d = 2;          // actual cord diameter (measure with calipers)
-clearance = 0.3;     // your printer's clearance value from the test
-
-module round_bead(outer_d = 15, hole_d = cord_d + clearance) {
-    difference() {
-        sphere(d = outer_d);
-        cylinder(h = outer_d + 2, d = hole_d, center = true);
-    }
-}
-</code></pre>
-<hr>
-<h2 id="video-resources"><a class="header" href="#video-resources">Video Resources</a></h2>
+<p>Checkpoint:</p>
+<ul>
+<li>Upload your filled tolerance table (which hole fits which description) and the chosen normal clearance value.</li>
+</ul>
+<p><strong>Accessibility:</strong> Provide a short text description of the tolerance test layout and annotate the STL preview images so screen-reader users can follow your results.
+Quiz — Lesson 2.2 (5 items):</p>
 <ol>
-<li>
-<p><strong>3D Printing Tolerances &amp; Fits — 3DChimera</strong> (written guide with practical values)<br><a href="https://3dchimera.com/blogs/connecting-the-dots/3d-printing-tolerances-fits">https://3dchimera.com/blogs/connecting-the-dots/3d-printing-tolerances-fits</a><br><em>Explains why holes are undersized and provides ready-to-use clearance values.</em></p>
-</li>
-<li>
-<p><strong>Guide to 3D Printing Tolerances, Accuracy, and Precision — Formlabs</strong><br><a href="https://formlabs.com/blog/understanding-accuracy-precision-tolerance-in-3d-printing/">https://formlabs.com/blog/understanding-accuracy-precision-tolerance-in-3d-printing/</a><br><em>Technical but thorough explanation of clearance, transition, and interference fits with engineering diagrams.</em></p>
-</li>
-<li>
-<p><strong>How to Manage 3D Printing Tolerances — MakerVerse</strong><br><a href="https://www.makerverse.com/resources/3d-printing/3d-printing-tolerances-guide/">https://www.makerverse.com/resources/3d-printing/3d-printing-tolerances-guide/</a><br><em>Practical guide with a quick-reference table of tight/standard/loose clearance values.</em></p>
-</li>
-<li>
-<p><strong>Tolerances for 3D Printing — Sinterit</strong><br><a href="https://sinterit.com/3d-printing-guide/design-for-3d-printing/tolerances-3d-printing/">https://sinterit.com/3d-printing-guide/design-for-3d-printing/tolerances-3d-printing/</a><br><em>Covers tolerance values by printing technology (FDM, SLA, SLS) and explains factors that affect accuracy.</em></p>
-</li>
-<li>
-<p><strong>3D Printing Design Tips — Markforged</strong><br><a href="https://markforged.com/resources/learn/design-for-additive-manufacturing-plastics-composites/3d-printing-strategies-for-composites/composites-3d-printing-design-tips">https://markforged.com/resources/learn/design-for-additive-manufacturing-plastics-composites/3d-printing-strategies-for-composites/composites-3d-printing-design-tips</a><br><em>Includes the concept of “unit tests” (small test prints) for verifying tolerances — a method used by professional engineers.</em></p>
-</li>
+<li>Short answer: Define “clearance” in one sentence.</li>
+<li>Multiple choice: Which fit type usually requires negative clearance? (A) Clearance fit (B) Transition fit (C) Interference fit) — Answer: C</li>
+<li>Practical: If your peg measures 5.02 mm and the hole measures 5.30 mm, what is the clearance? (show calculation)</li>
+<li>Short answer: Why are printed holes often smaller than their design values?</li>
+<li>Practical: Given a cord diameter of 2.0 mm and your measured normal clearance of 0.3 mm, what hole diameter should you design? Show the formula.</li>
 </ol>
-<hr>
-<h2 id="references"><a class="header" href="#references">References</a></h2>
-<p>3DChimera. (2019). <em>3D printing tolerances &amp; fits</em>. https://3dchimera.com/blogs/connecting-the-dots/3d-printing-tolerances-fits</p>
-<p>eufymake. (n.d.). <em>3D printing tolerances: Accuracy for professional results</em>. https://www.eufymake.com/blogs/printing-guides/3d-printing-tolerances</p>
-<p>Formlabs. (2023). <em>Guide to 3D printing tolerances, accuracy, and precision</em>. https://formlabs.com/blog/understanding-accuracy-precision-tolerance-in-3d-printing/</p>
+<p>Extension problems (5):</p>
+<ol>
+<li>Design a tolerance strip that tests both horizontal and vertical holes; explain differences you observe.</li>
+<li>Create a parametric tolerance tester <code>.scad</code> that generates N holes with user-set spacing and clearances using a <code>for()</code> loop.</li>
+<li>Run the tolerance test with three different slicer profiles (0.15, 0.20, 0.30 mm) and report differences.</li>
+<li>Design a snap-fit test piece and determine what clearance yields a reliable snap for your printer.</li>
+<li>Write a short guide for future students describing your printer’s tolerance behavior and recommended clearances.</li>
+</ol>
 <p>MakerVerse. (2025). <em>How to manage 3D printing tolerances: Smart design for reliable results</em>. https://www.makerverse.com/resources/3d-printing/3d-printing-tolerances-guide/</p>
 <p>Markforged. (2021). <em>3D printing design tips</em>. https://markforged.com/resources/learn/design-for-additive-manufacturing-plastics-composites/3d-printing-strategies-for-composites/composites-3d-printing-design-tips</p>
 <p>Sinterit. (2025). <em>Tolerances for 3D printing: Accuracy, clearance &amp; design tips</em>. https://sinterit.com/3d-printing-guide/design-for-3d-printing/tolerances-3d-printing/</p>

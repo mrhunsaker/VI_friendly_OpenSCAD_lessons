@@ -30,3 +30,21 @@ Teacher / mentor guidance (if available):
 - For students working fully independently, require that they submit the documentation template and at least one photo or STL for review.
 
 **Accessibility:** When including sample images or slicer screenshots, add a short alt-text description and provide a comment-based walkthrough for any example .scad files so screen-reader users can follow step-by-step.
+
+## Available .scad files for study
+
+- [1_0_intro_to_openscad.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_0_intro_to_openscad.scad)
+- [1_0_intro_to_openscad_student.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_0_intro_to_openscad_student.scad)
+- [1_1_basic_shapes.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_1_basic_shapes.scad)
+- [1_1_basic_shapes_student.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_1_basic_shapes_student.scad)
+- [1_2_modifying_basic_shapes.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_2_modifying_basic_shapes.scad)
+- [1_2_modifying_basic_shapes_student.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_2_modifying_basic_shapes_student.scad)
+- [1_2_transformation_scale_rotation.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_2_transformation_scale_rotation.scad)
+- [1_2_translation_practice.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_2_translation_practice.scad)
+- [1_3_debugging.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_3_debugging.scad)
+- [1_3_debugging_student.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_3_debugging_student.scad)
+- [1_3_resolution.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_3_resolution.scad)
+- [1_3_resolution_student.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_3_resolution_student.scad)
+- [1_4_import_scale_size_student.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_4_import_scale_size_student.scad)
+- [1_5_rotation_student.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_5_rotation_student.scad)
+- [1_bonus_importing_external_models.scad](../docs/assets/Units/Unit_1_Getting_Started/Lesson 1/1_bonus_importing_external_models.scad)

@@ -120,3 +120,8 @@ Provide alt-text for photos and a short written walkthrough of how your `.scad` 
 ## Notes
 
 The attached asset `project_3_briefing.txt` was used as the source. If you want me to also copy the original `.txt` into a `.bak` in the same folder, I can do that — tell me and I'll create an adjacent `.bak` file.
+
+## Available .scad files for study
+
+- (No unit-level .scad assets found in docs/assets for this unit)
+

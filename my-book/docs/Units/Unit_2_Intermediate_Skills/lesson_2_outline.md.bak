@@ -1,0 +1,34 @@
+```markdown
+# Unit 2: Problem Finding and Stakeholder Design
+**Duration:** 3 weeks  
+**Driving Question:** How do you design something for someone else's needs, not your own assumptions?
+
+---
+
+## Unit Summary
+Unit 2 introduces students to the human side of design. Up to this point students have been given requirements — now they must discover them. This unit teaches stakeholder interviewing, need-finding, and the discipline of designing for someone else's context rather than their own. Students also expand their OpenSCAD skills with loops and arrays to handle more complex geometry. The unit culminates in Project 2, where students work with an actual external stakeholder.
+
+---
+
+## Lessons
+
+### Lesson 2.1 — How to Interview a Stakeholder
+**Objective:** Students can conduct a structured stakeholder interview and convert the results into a written list of functional requirements.
+
+### Lesson 2.2 — Loops and Arrays in OpenSCAD
+**Objective:** Students can use `for()` loops in OpenSCAD to generate repeated or patterned geometry.
+
+### Lesson 2.3 — Designing for Someone Else: Constraints and Context
+**Objective:** Students can identify constraints that come from a stakeholder's environment and build those into their design.
+
+### Lesson 2.4 — Iterating with a Stakeholder
+**Objective:** Students can present a prototype to a stakeholder, collect feedback, and translate it into design revisions.
+
+---
+
+## Project 2 — External Stakeholder Project
+*See `Projects/Project_2/project_2_briefing.txt`*
+
+Students choose between the sock holder or model rocket project (or a project with an external stakeholder of their own). They conduct a stakeholder meeting, define functional requirements, produce at least two printed iterations, and obtain stakeholder sign-off on the final prototype.
+
+```

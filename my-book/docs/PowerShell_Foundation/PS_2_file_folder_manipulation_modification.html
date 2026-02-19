@@ -79,10 +79,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9980aec5.js";
+            window.path_to_searchindex_js = "../searchindex-705389fb.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-953cb32a.js"></script>
+        <script src="../toc-3786228f.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -218,152 +218,47 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="ps-2-file-and-folder-manipulation"><a class="header" href="#ps-2-file-and-folder-manipulation">PS-2: File and Folder Manipulation</a></h1>
-<p><strong>Duration:</strong> 1 class period
-<strong>Prerequisite:</strong> PS-1 (Navigation)</p>
-<hr>
-<h2 id="learning-objectives"><a class="header" href="#learning-objectives">Learning Objectives</a></h2>
-<p>By the end of this lesson, you will be able to:</p>
+                        <h1 id="ps-2-file-and-folder-manipulation-self-paced"><a class="header" href="#ps-2-file-and-folder-manipulation-self-paced">PS-2: File and Folder Manipulation (Self-Paced)</a></h1>
+<p><strong>Accessibility:</strong> When including images or diagrams, add short alt-text and provide a comment-based walkthrough for any .scad examples so screen-reader users can follow the design steps.</p>
+<p>Estimated time: 30–45 minutes</p>
+<p><strong>Learning Objectives</strong></p>
 <ul>
-<li>Create new folders with <code>mkdir</code></li>
-<li>Create new empty files with <code>ni</code></li>
-<li>Copy files and folders with <code>cp</code></li>
-<li>Move and rename files with <code>mv</code></li>
-<li>Delete files and folders with <code>rm</code> and <code>rmdir</code></li>
+<li>Create, copy, move, and delete files and folders from PowerShell</li>
+<li>Use <code>ni</code>, <code>mkdir</code>, <code>cp</code>, <code>mv</code>, <code>rm</code>, and <code>rmdir</code> safely</li>
+<li>Understand when operations are permanent and how to confirm results</li>
 </ul>
-<hr>
-<h2 id="commands-covered"><a class="header" href="#commands-covered">Commands Covered</a></h2>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Command</th><th>What It Does</th></tr>
-</thead>
-<tbody>
-<tr><td><code>mkdir name</code></td><td>Make a new directory (folder)</td></tr>
-<tr><td><code>ni filename</code></td><td>New Item — create an empty file</td></tr>
-<tr><td><code>cp source dest</code></td><td>Copy a file or folder</td></tr>
-<tr><td><code>cp -r source dest</code></td><td>Copy a folder and all its contents recursively</td></tr>
-<tr><td><code>mv source dest</code></td><td>Move or rename a file or folder</td></tr>
-<tr><td><code>rm filename</code></td><td>Remove (delete) a file — permanent, no recycle bin</td></tr>
-<tr><td><code>rmdir foldername</code></td><td>Remove an empty directory</td></tr>
-<tr><td><code>rm -r foldername</code></td><td>Remove a folder and all its contents — use with caution</td></tr>
-</tbody>
-</table>
-</div>
-<hr>
-<h2 id="-important-warning"><a class="header" href="#-important-warning">⚠️ Important Warning</a></h2>
-<p><code>rm</code> and <code>rm -r</code> delete files and folders <strong>permanently</strong>. There is no recycle bin. There is no undo. Double-check your command before pressing Enter.</p>
-<hr>
-<h2 id="mkdir--creating-folders"><a class="header" href="#mkdir--creating-folders"><code>mkdir</code> — Creating Folders</a></h2>
-<pre><code class="language-powershell"># Create a folder called OpenSCAD_Projects in your Documents
-mkdir ~/Documents/OpenSCAD_Projects
-
-# Create a folder inside another folder
-mkdir ~/Documents/OpenSCAD_Projects/Lesson_1
-</code></pre>
-<p>Confirm it was created:</p>
-<pre><code class="language-powershell">ls -n ~/Documents/OpenSCAD_Projects
-</code></pre>
-<hr>
-<h2 id="ni--creating-files"><a class="header" href="#ni--creating-files"><code>ni</code> — Creating Files</a></h2>
-<p><code>ni</code> stands for New-Item. It creates an empty file.</p>
-<pre><code class="language-powershell"># Create an empty .scad file in your current directory
-ni my_first_shape.scad
-
-# Create a file in a specific location
-ni ~/Documents/OpenSCAD_Projects/project0.scad
-</code></pre>
-<hr>
-<h2 id="cp--copying-files"><a class="header" href="#cp--copying-files"><code>cp</code> — Copying Files</a></h2>
-<pre><code class="language-powershell"># Copy a file from one location to another
-cp ~/Downloads/example.scad ~/Documents/OpenSCAD_Projects/example.scad
-
-# Copy and rename at the same time
-cp project0.scad project0_backup.scad
-
-# Copy a whole folder (use -r for recursive)
-cp -r ~/Documents/OpenSCAD_Projects ~/Desktop/OpenSCAD_Backup
-</code></pre>
-<hr>
-<h2 id="mv--moving-and-renaming"><a class="header" href="#mv--moving-and-renaming"><code>mv</code> — Moving and Renaming</a></h2>
-<p><code>mv</code> can do two things depending on whether the destination is an existing folder or a new name.</p>
-<pre><code class="language-powershell"># Move a file into a folder
-mv ~/Downloads/myfile.scad ~/Documents/OpenSCAD_Projects/
-
-# Rename a file (same folder, new name)
-mv old_name.scad new_name.scad
-
-# Move and rename at the same time
-mv ~/Downloads/temp.scad ~/Documents/OpenSCAD_Projects/project1_v1.scad
-</code></pre>
-<hr>
-<h2 id="rm--deleting-files"><a class="header" href="#rm--deleting-files"><code>rm</code> — Deleting Files</a></h2>
-<pre><code class="language-powershell"># Delete a single file
-rm ~/Documents/OpenSCAD_Projects/test.scad
-
-# Delete multiple files using a wildcard
-rm ~/Documents/OpenSCAD_Projects/test*.scad
-</code></pre>
-<hr>
-<h2 id="rmdir-and-rm--r--deleting-folders"><a class="header" href="#rmdir-and-rm--r--deleting-folders"><code>rmdir</code> and <code>rm -r</code> — Deleting Folders</a></h2>
-<pre><code class="language-powershell"># Remove an empty folder
-rmdir ~/Documents/OpenSCAD_Projects/empty_folder
-
-# Remove a folder and everything inside it — DANGEROUS, be careful
-rm -r ~/Documents/OpenSCAD_Projects/old_folder
-</code></pre>
-<hr>
-<h2 id="practice-sequence"><a class="header" href="#practice-sequence">Practice Sequence</a></h2>
-<p>Work through these steps. Confirm each step with <code>ls -n</code> before moving on.</p>
-<pre><code class="language-powershell"># 1. Go to Documents
-cd ~/Documents
-
-# 2. Create a practice folder
-mkdir PS_Practice
-
-# 3. Navigate into it
-cd PS_Practice
-
-# 4. Create two files
-ni file1.txt
-ni file2.txt
-
-# 5. Confirm both files are there
-ls -n
-
-# 6. Copy file1.txt and name the copy file1_backup.txt
-cp file1.txt file1_backup.txt
-
-# 7. Confirm three files now exist
-ls -n
-
-# 8. Rename file2.txt to notes.txt
-mv file2.txt notes.txt
-
-# 9. Confirm the rename
-ls -n
-
-# 10. Delete file1.txt (not the backup)
-rm file1.txt
-
-# 11. Confirm deletion
-ls -n
-
-# 12. Navigate up and delete the whole practice folder
-cd ../
-rm -r PS_Practice
-
-# 13. Confirm the folder is gone
-ls -n
-</code></pre>
-<hr>
-<h2 id="check-for-understanding"><a class="header" href="#check-for-understanding">Check for Understanding</a></h2>
+<p><strong>Materials</strong></p>
+<ul>
+<li>PowerShell</li>
+<li>Small practice folder for exercises</li>
+</ul>
+<p>Step-by-step Tasks</p>
 <ol>
-<li>What is the difference between <code>cp</code> and <code>mv</code>?</li>
-<li>What happens to the original file when you use <code>mv</code> to rename it?</li>
-<li>Why should you be careful with <code>rm -r</code>?</li>
-<li>How would you copy the folder <code>~/Documents/Project1</code> to your Desktop?</li>
-<li>How would you rename <code>sketch_v1.scad</code> to <code>sketch_v2.scad</code>?</li>
+<li>Create a practice directory: <code>mkdir ~/Documents/PS_Practice</code> and <code>cd</code> into it.</li>
+<li>Create two files: <code>ni file1.txt</code> and <code>ni file2.txt</code>.</li>
+<li>Copy <code>file1.txt</code> to <code>file1_backup.txt</code> with <code>cp</code> and confirm with <code>ls -n</code>.</li>
+<li>Rename <code>file2.txt</code> to <code>notes.txt</code> using <code>mv</code> and confirm.</li>
+<li>Delete <code>file1.txt</code> with <code>rm</code> and verify the backup remains.</li>
+</ol>
+<p>Checkpoints</p>
+<ul>
+<li>After step 3 you should see both the original and the backup file.</li>
+</ul>
+<p>Quick Quiz</p>
+<ol>
+<li>How do you create an empty file from PowerShell?</li>
+<li>What command copies a file?</li>
+<li>How do you rename a file?</li>
+<li>What does <code>rm -r</code> do?</li>
+<li>Why is <code>rm</code> potentially dangerous?</li>
+</ol>
+<p>Extension Problems</p>
+<ol>
+<li>Create a folder tree and copy it to a new location with <code>cp -r</code>.</li>
+<li>Write a one-line command that creates three files named <code>a b c</code> and lists them.</li>
+<li>Move a file into a new folder and confirm the move.</li>
+<li>Use wildcards to delete files matching a pattern in a safe test folder.</li>
+<li>Export a listing of the practice folder to <code>practice_listing.txt</code>.</li>
 </ol>
 
                     </main>

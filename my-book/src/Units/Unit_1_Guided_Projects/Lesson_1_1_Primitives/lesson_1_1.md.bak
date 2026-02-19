@@ -1,0 +1,72 @@
+````plaintext
+# Lesson 1.1 — Primitives (original backup)
+
+```
+# Lesson 1.1 — Primitives
+
+## Materials
+
+- Computer with OpenSCAD installed
+- 3D-printed primitive models (optional tactile examples)
+
+## Overview
+
+This lesson covers the three basic 3D primitives in OpenSCAD: `cube()`, `sphere()`, and `cylinder()`. Students will learn parameter syntax, centering, and the `$fn` variable for controlling curve resolution.
+
+## Sequence & Notes
+
+- Warm-up: quick terminology review and header metadata (author, date, description) in the file.
+- Syntax rules: statements end with a semicolon; whitespace is ignored; comments are allowed.
+- `cube([x, y, z])`: vector parameters. Explain `center=true` and how centering affects translation.
+- `sphere(r = value)` or `sphere(d = value)`: radius or diameter. Introduce `$fn` (a special variable controlling the number of fragments used to approximate curves) — use small values for fast preview, larger values for final export.
+- `cylinder(h = height, r = radius)` or `cylinder(h = height, d = diameter)`. Show `r1`/`r2` for cones.
+
+## Classroom Activities
+
+1. Type a `cube()` using literal numbers and preview.
+2. Rewrite the cube using named variables and `center=true` to see how the object shifts.
+3. Create a sphere and experiment with `$fn = 20` vs `$fn = 80`.
+4. Create a cylinder and then a tapered cone using `r1` and `r2`.
+
+## Common Pitfalls
+
+- Forgetting the semicolon will cause a syntax error.
+- Using `center=true` will reposition shapes relative to the origin; be explicit about where you want the object.
+
+### Quiz — Lesson 1.1
+
+1. Short answer: How do you make a cube centered at the origin? (Example answer: `cube([10,10,10], center=true);`)
+2. Multiple choice: `$fn` affects: (A) color (B) curve smoothness (C) position — Answer: B
+3. True/False: `sphere(d = 20);` creates a sphere 20 mm in diameter. — Answer: True
+4. Practical: Write OpenSCAD code for a cone using `cylinder()` where bottom radius = 6 mm, top radius = 2 mm, height = 20 mm.
+5. Short answer: Why use named variables instead of raw numbers?
+
+# Lesson 1_1: Primitives
+## Materials
+- computer with OpenSCAD installed
+- 3D printed primatives (scale as needed in 3d printer slicer program but keep porportions locked for at least the cylinder and sphere)
+- 3D printed 1_1 models
+
+## Sequence
+- Warm up review terminology 
+- Header Author, date, description fill it out or make one always!
+- shape commands parameters and ending with a semi-colon
+  - can have any amount of space in the code since all shape commands end with a semi-colon
+- cheat sheet for syntax
+  - layout of cheat sheet (headings)
+  - | or symbol
+- the cube continued
+  - vectors
+  - the center flag (ABC- always be centering!)
+- the sphere
+  - introduce the $fn code (call it a command for now but explain its actually something else, a reserved variable will learn more about in lesson 1_3 and lesson 2)
+- cylinder
+  - cones
+
+## Check for understanding
+- What are parameters?
+- Where are each shapes centered
+- How do you make a pointed cone facing down?
+- Practice problems
+
+````

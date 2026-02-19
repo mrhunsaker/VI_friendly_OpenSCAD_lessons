@@ -79,10 +79,10 @@
             const path_to_root = "../../../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../searchindex-9980aec5.js";
+            window.path_to_searchindex_js = "../../../searchindex-705389fb.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../../toc-953cb32a.js"></script>
+        <script src="../../../toc-3786228f.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -219,6 +219,7 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="tolerance-test-design--lesson-22-companion"><a class="header" href="#tolerance-test-design--lesson-22-companion">Tolerance Test Design — Lesson 2.2 Companion</a></h1>
+<p><strong>Accessibility:</strong> When describing printed test pieces, include short, step-by-step text instructions and expected tactile cues so non-visual learners can perform the clearance tests.</p>
 <p><em>This document accompanies Lesson 2.2: Tolerances &amp; Fit. Print the test piece, run the tests below, and record your results. Keep this sheet — you will reference your printer’s clearance value in every project that requires parts to fit together.</em></p>
 <hr>
 <h2 id="what-you-are-testing"><a class="header" href="#what-you-are-testing">What You Are Testing</a></h2>
@@ -250,113 +251,51 @@
 <thead>
 <tr><th>Block</th><th>Designed Hole Diameter</th><th>Does It Fit?</th><th>Fit Description</th></tr>
 </thead>
-<tbody>
-<tr><td>0.0 mm clearance</td><td>5.0 mm</td><td>Yes / No</td><td></td></tr>
-<tr><td>0.1 mm clearance</td><td>5.1 mm</td><td>Yes / No</td><td></td></tr>
-<tr><td>0.2 mm clearance</td><td>5.2 mm</td><td>Yes / No</td><td></td></tr>
-<tr><td>0.3 mm clearance</td><td>5.3 mm</td><td>Yes / No</td><td></td></tr>
-<tr><td>0.5 mm clearance</td><td>5.5 mm</td><td>Yes / No</td><td></td></tr>
-</tbody>
+<tbody></tbody>
 </table>
 </div>
-<p><strong>Fit descriptions to choose from:</strong></p>
-<ul>
-<li>Won’t fit at all</li>
-<li>Forces in but won’t come out</li>
-<li>Forces in, comes out with effort</li>
-<li>Snug — firm but removable by hand</li>
-<li>Slides in with light push</li>
-<li>Slides freely with noticeable play</li>
-<li>Falls through — too loose</li>
-</ul>
-<hr>
-<h2 id="also-measure-the-holes"><a class="header" href="#also-measure-the-holes">Also Measure the Holes</a></h2>
-<p>Use your calipers to measure the inside diameter of each hole and compare to the designed size:</p>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Block</th><th>Designed Hole (mm)</th><th>Measured Hole (mm)</th><th>Difference (mm)</th></tr>
-</thead>
-<tbody>
-<tr><td>0.0 mm clearance</td><td>5.0</td><td></td><td></td></tr>
-<tr><td>0.2 mm clearance</td><td>5.2</td><td></td><td></td></tr>
-<tr><td>0.5 mm clearance</td><td>5.5</td><td></td><td></td></tr>
-</tbody>
-</table>
-</div>
-<p>Are the holes larger or smaller than designed? _______________</p>
-<p>This is expected — FDM holes are almost always slightly undersized because of how the slicer generates the perimeter path and how plastic cools. The amount of undersizing is a property of your specific printer and settings.</p>
-<hr>
-<h2 id="determine-your-printers-clearance-values"><a class="header" href="#determine-your-printers-clearance-values">Determine Your Printer’s Clearance Values</a></h2>
-<p>Based on your test results, fill in the values that work for your printer:</p>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Fit Type</th><th>Clearance Value That Worked</th></tr>
-</thead>
-<tbody>
-<tr><td>Press fit (forces in, permanent)</td><td>_______ mm</td></tr>
-<tr><td>Snug fit (removable by hand)</td><td>_______ mm</td></tr>
-<tr><td>Normal / loose fit (slides easily)</td><td>_______ mm</td></tr>
-<tr><td>Free sliding (moves with no resistance)</td><td>_______ mm</td></tr>
-</tbody>
-</table>
-</div>
-<p><strong>My printer’s standard clearance for a normal fit: _______ mm</strong></p>
-<p>Write this number somewhere you can find it — you will use it in Project 3 (jewelry beads) and Project 2 (any part that must fit something).</p>
-<hr>
-<h2 id="applying-what-you-learned"><a class="header" href="#applying-what-you-learned">Applying What You Learned</a></h2>
-<h3 id="example-jewelry-bead-project-3"><a class="header" href="#example-jewelry-bead-project-3">Example: Jewelry Bead (Project 3)</a></h3>
-<p>Your cord measures _______ mm diameter (measure it now with calipers).</p>
-<p>To design a hole that fits the cord easily:</p>
-<pre><code>hole_diameter = cord_diameter + my_clearance_value
-hole_diameter = _______ + _______ = _______ mm
-</code></pre>
-<p>In OpenSCAD:</p>
-<pre><code class="language-scad">cord_d = ;        // measured cord diameter
-clearance = ;     // your clearance value from this test
-
-hole_d = cord_d + clearance;
-</code></pre>
-<h3 id="example-command-strip-slot-project-1-context"><a class="header" href="#example-command-strip-slot-project-1-context">Example: Command Strip Slot (Project 1 context)</a></h3>
-<p>If a command strip measures 16.2 mm wide and you want it to slide into a slot:</p>
-<pre><code>slot_width = 16.2 + my_clearance_value
-slot_width = 16.2 + _______ = _______ mm
-</code></pre>
-<hr>
-<h2 id="reflection-questions"><a class="header" href="#reflection-questions">Reflection Questions</a></h2>
+<h1 id="tolerance-test-worksheet--self-paced-companion"><a class="header" href="#tolerance-test-worksheet--self-paced-companion">Tolerance Test Worksheet — Self-Paced Companion</a></h1>
+<p>Use this worksheet while you print and evaluate the tolerance test. Keep your filled worksheet in your project folder for future reference.</p>
+<p>Before testing:</p>
 <ol>
-<li>Were the holes printed larger or smaller than designed? By roughly how much?</li>
+<li>Measure the reference peg three times with calipers and record the average.</li>
+<li>Note the filament and printer used.</li>
 </ol>
-<hr>
-<ol start="2">
-<li>Why do you think FDM printers consistently produce holes that are a different size than designed?</li>
+<p>Test results (fill these during hands-on work):</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Block</th><th>Designed Hole (mm)</th><th>Measured Hole (mm)</th><th>Fits? (Y/N)</th><th>Fit Notes</th></tr>
+</thead>
+<tbody>
+<tr><td>0.0 mm</td><td>5.0</td><td></td><td></td><td></td></tr>
+<tr><td>0.1 mm</td><td>5.1</td><td></td><td></td><td></td></tr>
+<tr><td>0.2 mm</td><td>5.2</td><td></td><td></td><td></td></tr>
+<tr><td>0.3 mm</td><td>5.3</td><td></td><td></td><td></td></tr>
+<tr><td>0.5 mm</td><td>5.5</td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+</div>
+<p>Determine your printer’s standard clearances and write them here for future projects:</p>
+<p>Press fit: _____ mm
+Snug fit: _____ mm
+Normal fit: _____ mm
+Free sliding: _____ mm</p>
+<p>Reflection (short answers):</p>
+<ol>
+<li>Were holes printed larger or smaller than designed? By about _____ mm.</li>
+<li>Which clearance produced a reliable “snug” fit for your printer?</li>
+<li>For a cord diameter of X mm and your normal clearance, what hole size will you design? Show calc.</li>
 </ol>
-<hr>
-<hr>
-<ol start="3">
-<li>You are designing a hinge where two parts need to rotate freely against each other. Based on your test results, what clearance would you use between the two surfaces?</li>
-</ol>
-<hr>
-<ol start="4">
-<li>You are designing a cap that needs to snap onto a cylindrical post and stay in place. What clearance would you use?</li>
-</ol>
-<hr>
-<hr>
-<h2 id="quick-reference-card"><a class="header" href="#quick-reference-card">Quick Reference Card</a></h2>
-<p><em>Cut out or copy this section to keep at your workstation.</em></p>
-<pre><code>MY PRINTER TOLERANCE VALUES
-============================
-Printer model: ________________
-Filament: ________________
-Date tested: ________________
-
-Press fit:      _______ mm
+<p>Extension: create a parametric tester that generates N holes using <code>for(i=[0:N-1])</code> and accepts base peg diameter and step size as parameters.</p>
+<p>Date tested: ________________</p>
+<p>Press fit:      _______ mm
 Snug fit:       _______ mm
 Normal fit:     _______ mm
-Free sliding:   _______ mm
-
-Holes print approx _______ mm SMALLER than designed.
+Free sliding:   _______ mm</p>
+<p>Holes print approx _______ mm SMALLER than designed.</p>
+<pre><code>
+**Accessibility:** When including sample images or slicer screenshots, add a short alt-text description and provide a comment-based walkthrough for any example .scad files so screen-reader users can follow step-by-step.
 </code></pre>
 
                     </main>

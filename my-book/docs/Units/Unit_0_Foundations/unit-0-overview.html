@@ -79,10 +79,10 @@
             const path_to_root = "../../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-9980aec5.js";
+            window.path_to_searchindex_js = "../../searchindex-705389fb.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-953cb32a.js"></script>
+        <script src="../../toc-3786228f.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -218,88 +218,40 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="unit-0-foundations"><a class="header" href="#unit-0-foundations">Unit 0: Foundations</a></h1>
-<p><strong>Duration:</strong> 2 weeks
-<strong>Driving Question:</strong> How does a 3D printer turn a digital design into a physical object?</p>
-<hr>
-<h2 id="unit-summary"><a class="header" href="#unit-summary">Unit Summary</a></h2>
-<p>Before students touch a printer, they need a mental model of how the whole system works — from measurement to code to sliced file to printed object. This unit builds that foundation step by step. Every lesson feeds directly into Project 0, which serves as the unit’s culminating assessment.</p>
-<p>Students complete Unit 0 in the role of <strong>Observer and Learner</strong>: they are absorbing how the system works, building vocabulary, and developing the skills they will apply in Unit 1.</p>
-<hr>
-<h2 id="prerequisite-for-this-unit"><a class="header" href="#prerequisite-for-this-unit">Prerequisite for This Unit</a></h2>
-<p>None — this is the starting point for all students.</p>
-<hr>
-<h2 id="lessons-in-this-unit"><a class="header" href="#lessons-in-this-unit">Lessons in This Unit</a></h2>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Lesson</th><th>Title</th><th>Duration</th></tr>
-</thead>
-<tbody>
-<tr><td>0.1</td><td>Safety &amp; Printer Orientation</td><td>1 class period</td></tr>
-<tr><td>0.2</td><td>How 3D Printing Works (FDM Fundamentals)</td><td>1 class period</td></tr>
-<tr><td>0.3</td><td>Introduction to Calipers</td><td>1–2 class periods</td></tr>
-<tr><td>0.4</td><td>Introduction to OpenSCAD — Part 1</td><td>1–2 class periods</td></tr>
-<tr><td>0.5</td><td>Introduction to OpenSCAD — Part 2</td><td>1–2 class periods</td></tr>
-<tr><td>0.6</td><td>Introduction to Slicing with PrusaSlicer</td><td>1 class period</td></tr>
-</tbody>
-</table>
-</div>
-<p>Followed by: <strong>Project 0 — Measure and Recreate</strong> (the unit assessment)</p>
-<hr>
-<h2 id="learning-progression"><a class="header" href="#learning-progression">Learning Progression</a></h2>
-<p>Each lesson in Unit 0 builds directly on the previous one and prepares students for Project 0:</p>
+                        <h1 id="unit-0-foundations-self-paced-primer"><a class="header" href="#unit-0-foundations-self-paced-primer">Unit 0: Foundations (Self-Paced Primer)</a></h1>
+<p><strong>Accessibility:</strong> When including sample images or slicer screenshots, add a short alt-text description and provide a comment-based walkthrough for any example <code>.scad</code> files so screen-reader users can follow step-by-step.</p>
+<p>Estimated duration: 1–2 weeks (self-paced learners may compress or expand tasks)</p>
+<p>Purpose: Provide independent learners with step-by-step lessons, quick checkpoints, a unit quiz, and extension problems that build toward Project 0: Measure and Recreate.</p>
+<p>How to use this unit:</p>
 <ul>
-<li><strong>Lesson 0.1</strong> establishes safe habits before any contact with equipment</li>
-<li><strong>Lesson 0.2</strong> gives students a mental model of the whole process before they touch any software</li>
-<li><strong>Lesson 0.3</strong> teaches measurement, which students need to accurately recreate an object</li>
-<li><strong>Lessons 0.4 and 0.5</strong> teach the OpenSCAD skills needed to write the Project 0 code</li>
-<li><strong>Lesson 0.6</strong> teaches slicing, the final step before printing</li>
+<li>Complete Lessons 0.1–0.6 in order. Each lesson includes a short step-by-step activity, a 5-question quiz, and 5 extension problems.</li>
+<li>Complete the safety checklist in <code>Lesson_0_1_Safety/safety-checklist.md</code> before any hands-on work.</li>
+<li>After finishing the lessons, complete <code>Project 0</code> following the Project 0 instructions in this folder.</li>
 </ul>
-<hr>
-<h2 id="project-0-measure-and-recreate"><a class="header" href="#project-0-measure-and-recreate">Project 0: Measure and Recreate</a></h2>
-<p>See <code>project_0_briefing.txt</code> and <code>project_0_student.txt</code> in this folder.</p>
-<p>Students measure the provided tactile floor marker using calipers, recreate it in OpenSCAD, slice it, and print it. This project is the assessment for Unit 0. It is <strong>complete / incomplete</strong> — no 0–9 point scale. All deliverables must be submitted satisfactorily.</p>
-<hr>
-<h2 id="key-vocabulary-for-this-unit"><a class="header" href="#key-vocabulary-for-this-unit">Key Vocabulary for This Unit</a></h2>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Term</th><th>Definition</th></tr>
-</thead>
-<tbody>
-<tr><td>FDM</td><td>Fused Deposition Modeling — printing by melting and depositing plastic layer by layer</td></tr>
-<tr><td>Filament</td><td>The plastic material fed into the printer</td></tr>
-<tr><td>Layer height</td><td>The thickness of each printed layer; affects quality and print time</td></tr>
-<tr><td>Infill</td><td>The internal structure of a print, expressed as a percentage</td></tr>
-<tr><td>Slicer</td><td>Software that converts a 3D model into printer instructions (G-code)</td></tr>
-<tr><td>G-code</td><td>Machine instructions that tell the printer exactly where to move and at what temperature</td></tr>
-<tr><td>Caliper</td><td>A precision measuring tool accurate to 0.1 mm</td></tr>
-<tr><td>Primitive</td><td>A basic 3D shape in OpenSCAD: cube, sphere, or cylinder</td></tr>
-<tr><td>Variable</td><td>A named value in code that can be changed in one place</td></tr>
-<tr><td>Boolean operation</td><td>A way of combining or subtracting shapes: union, difference, intersection</td></tr>
-</tbody>
-</table>
-</div>
-<hr>
-<h2 id="materials-needed-for-this-unit"><a class="header" href="#materials-needed-for-this-unit">Materials Needed for This Unit</a></h2>
+<p>Unit learning goals:</p>
 <ul>
-<li>Prusa Mini+ printer (or equivalent FDM printer)</li>
-<li>Digital or tactile calipers (one per student or pair)</li>
-<li>PLA filament</li>
-<li>Computers with OpenSCAD and PrusaSlicer installed (or VSCode with the task runner configured — see the VSCode Setup Guide in Reference Materials)</li>
-<li>5 small objects for Lesson 0.3 measurement practice (e.g., small blocks, hex nuts, coins, an eraser)</li>
-<li>The Project 0 tactile floor marker physical sample</li>
+<li>Build a mental model of the full 3D-printing pipeline (measure → model → slice → print)</li>
+<li>Practice accurate measurement with calipers and translate measurements into parametric OpenSCAD code</li>
+<li>Learn basic OpenSCAD commands and transformations needed to recreate simple objects</li>
+<li>Use a slicer (PrusaSlicer) to prepare prints and interpret print estimates</li>
 </ul>
-<hr>
-<h2 id="teacher-notes"><a class="header" href="#teacher-notes">Teacher Notes</a></h2>
+<p>Self-paced checkpoints:</p>
 <ul>
-<li>Complete Lesson 0.1 (safety) before students are near any printer. The safety checklist must be signed before any hands-on work.</li>
-<li>Lesson 0.3 (calipers) can feel tedious but is critical — students who skip careful measurement practice produce inaccurate prints throughout the course.</li>
-<li>For Lessons 0.4 and 0.5, students using VSCode should follow the VSCode Setup Guide to configure their environment before the first coding lesson.</li>
-<li>Lesson 0.6 (slicing) can be done entirely in the slicer software without printing anything. The goal is reading the interface, not producing a print.</li>
-<li>Project 0 should be the student’s second print if possible — consider running a very short test print (e.g., a small cube) so students experience the printer before an assignment is attached.</li>
-<li>Lesson 0.2 works well alongside an actual print in progress — if you can run a print while teaching, students can observe the layer-by-layer process in real time.</li>
+<li>Each lesson contains a short checkpoint you must complete before proceeding. Keep a copy of your files and submit the deliverables specified in the project instructions.</li>
+</ul>
+<p>Accessibility notes:</p>
+<ul>
+<li>Provide tactile examples and low-resolution prototype prints for non-visual learners.</li>
+<li>Use CLI slicing or accessible slicer workflows as needed; include exported textual previews as supplementary material.</li>
+</ul>
+<p>Assessment:</p>
+<ul>
+<li>Project 0 is complete/incomplete. Submit <code>project0.scad</code>, the exported STL, and the completed documentation template.</li>
+</ul>
+<p><strong>Accessibility:</strong> When including sample images or slicer screenshots, add a short alt-text description and provide a comment-based walkthrough for any example .scad files so screen-reader users can follow step-by-step.</p>
+<h2 id="available-scad-files-for-study"><a class="header" href="#available-scad-files-for-study">Available .scad files for study</a></h2>
+<ul>
+<li><a href="../docs/assets/Units/Unit_0_Foundations/project_0.scad">project_0.scad</a></li>
 </ul>
 
                     </main>

@@ -1,0 +1,124 @@
+````markdown
+# Lesson 0.5: Introduction to OpenSCAD — Part 2
+
+**Unit:** 0 — Foundations  
+**Duration:** 1–2 class periods (50–60 min each)  
+**Prerequisite:** Lesson 0.4 (Part 1)
+
+---
+
+## Learning Objectives
+
+By the end of this lesson, students will be able to:
+- Move objects using `translate()`
+- Rotate objects using `rotate()`
+- Combine objects using `union()`
+- Create holes and subtractions using `difference()`
+- Design a simple composite object (a box with a hole in it)
+- Understand the concept of constructive solid geometry (CSG)
+
+---
+
+## Constructive Solid Geometry (CSG)
+
+OpenSCAD uses a design approach called **constructive solid geometry**. The idea is that complex shapes are made by combining, subtracting, or intersecting simple shapes.
+
+Think of it like working with **clay** — you start with basic blocks and either add more clay (union) or carve pieces away (difference).
+
+The three Boolean operations in OpenSCAD:
+
+| Operation | What It Does | Analogy |
+|-----------|-------------|---------|
+| `union()` | Combines two or more shapes into one | Gluing pieces together |
+| `difference()` | Subtracts one shape from another | Carving a hole |
+| `intersection()` | Keeps only the overlapping region | Cookie-cutter through two shapes |
+
+---
+
+## `translate()` — Moving Objects
+
+By default, all shapes appear at the origin (0, 0, 0). `translate()` moves a shape to a new position.
+
+```scad
+translate([x, y, z]) shape;
+```
+
+**Example: Two boxes side by side**
+
+```scad
+cube([20, 10, 5]);                    // first box at origin
+translate([25, 0, 0]) cube([20, 10, 5]);  // second box, moved 25mm to the right
+```
+
+---
+
+## `rotate()` — Rotating Objects
+
+```scad
+rotate([x_angle, y_angle, z_angle]) shape;
+```
+
+**Example: A cylinder lying on its side**
+
+```scad
+rotate([90, 0, 0]) cylinder(h = 20, r = 5);
+```
+
+---
+
+## `union()` — Combining Shapes
+
+```scad
+union() {
+    shape1;
+    shape2;
+}
+```
+
+---
+
+## `difference()` — Subtracting Shapes
+
+```scad
+difference() {
+    base_shape;     // the shape you start with
+    hole_shape;     // the shape you remove
+}
+```
+
+---
+
+## Putting It Together: A Slotted Box
+
+```scad
+// Slotted project box
+// Variables
+box_l = 60;
+box_w = 30;
+box_h = 10;
+slot_w = 20;
+slot_h = 4;
+wall = 3;
+
+$fn = 40;
+
+difference() {
+    cube([box_l, box_w, box_h]);
+    translate([(box_l - slot_w) / 2, -1, box_h - slot_h])
+        cube([slot_w, box_w + 2, slot_h + 1]);
+}
+```
+
+---
+
+## Challenge Project
+
+Design a simple stand or mount using only what you've learned. Use variables and at least one `difference()` hole.
+
+---
+
+## References
+
+- OpenSCAD tutorials and No Starch book
+
+````

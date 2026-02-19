@@ -1,0 +1,44 @@
+````markdown
+# Lesson 0.6: Introduction to Slicing with PrusaSlicer
+
+**Unit:** 0 — Foundations  
+**Duration:** 1 class period (50–60 min)  
+**Prerequisite:** Lessons 0.4 and 0.5 (you need an STL file to slice)
+
+---
+
+## Learning Objectives
+
+By the end of this lesson, students will be able to:
+- Open PrusaSlicer and import an STL
+- Set layer height, infill, and supports
+- Preview layers and estimate print time and filament use
+- Export a G-code file ready for printing
+
+---
+
+## Step-by-step student tasks:
+1. Open PrusaSlicer and import a provided STL or your exported `lesson0_5.stl`.
+2. Place the model on the virtual bed and use `Place on face` to set the flattest surface down.
+3. Set quality to `0.20mm` and infill to `15%`; leave supports off initially.
+4. Click `Slice now`, switch to Preview, and inspect the first few layers for a good first-layer and no floating islands.
+5. Export the G-code and note the estimated time and filament usage.
+
+Checkpoint (submit or self-check):
+- Record the slicer settings, estimated time, and filament used; attach the `.gcode` if possible.
+
+Quiz — Lesson 0.6 (5 items):
+1. Short answer: What is G-code? Why does a slicer generate it?
+2. Multiple choice: Which setting primarily determines layer visibility? (A) Infill (B) Layer height (C) Support) — Answer: B
+3. Short answer: Why use `Place on face` before printing?
+4. Practical: Change layer height to 0.30mm and note how estimated time changes.
+5. Practical: Export a G-code filename and report the estimated time from the slicer.
+
+Extension problems (5):
+1. Slice the same model with 0.15mm, 0.20mm, and 0.30mm; document the time and filament differences.
+2. Experiment with supports: compare `None`, `Build plate only`, and `Everywhere` on a model with overhangs.
+3. Create a slicer profile for a different filament (e.g., PETG) and document temperature/speed changes.
+4. Use the slicer preview to count how many perimeter shells and top layers your profile produces; explain why those numbers matter.
+5. Write a short accessibility note explaining how to describe a preview image for a blind student.
+
+````

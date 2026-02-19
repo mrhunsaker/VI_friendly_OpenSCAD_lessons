@@ -1,0 +1,77 @@
+# 3D Design & Printing Curriculum — Enhanced Edition
+
+**Accessibility:** When including images or diagrams, add short alt-text and provide a comment-based walkthrough for any .scad examples so screen-reader users can follow the design steps.
+
+
+**Author:** Michael Ryan Hunsaker, M.Ed., Ph.D.
+**Last Updated:** 2026-02-17
+**Target Audience:** Blind/Visually Impaired High school students
+
+---
+
+## Overview
+
+This curriculum teaches 3D design and fabrication using OpenSCAD and FDM 3D printing. Students progress from foundational skills through guided projects and into open-ended, stakeholder-driven design challenges.
+
+The work in this course is explicitly oriented toward learners who are blind or visually impaired. That requires more than simply moving existing lessons into a new format: core concepts must be taught in tactile and algorithmic ways, measurement and spatial reasoning must be scaffolded, and toolchains must be selected to support non-visual workflows. By teaching the principles and the practical skills separately — then bringing them together in projects — we give students reliable cognitive scaffolding that reduces frustration and increases independence.
+
+Finally, this curriculum emphasizes inclusion and real-world problem solving. Low-cost digital fabrication makes it practical for students to design, iterate, and deliver custom assistive solutions for real users. The course therefore teaches not only technical skills (CAD, slicing, printing) but also human-centered design, stakeholder communication, and documentation practices that prepare students for employment, community collaboration, and lifelong learning.
+
+### Design Philosophy
+
+Students move through four roles across the curriculum:
+
+| Phase | Role | Focus |
+|-------|------|-------|
+| PowerShell Foundation | **Observer/Learner** | Command Line Interfacce (CLI) Usage|
+| Make3D Foundation |  **Observer/Learner**| Use of CLI-based Assistive Tool|
+| Unit 0 | **Observer/Learner** | Concepts, tools, safety |
+| Unit 1 | **Operator** | Guided replication, measurement |
+| Unit 2 | **Designer** | Parametric thinking, materials |
+| Unit 3 | **Problem-Solver** | Real users, iteration, impact |
+
+---
+
+## Prerequisites by Unit
+
+| Unit | Prerequisites |
+|------|--------------|
+| Powershell Foundation | None — start here |
+| Make3D Foundation | Basic knowledge of Powershell and Command Line Interface Usage |
+| Unit 0 | Completion of the Make 3D Foundation Unit|
+| Unit 1 (Projects 0–1) | Complete Unit 0 |
+| Unit 2 | Complete Unit 1 (Projects 0 and 1) |
+| Unit 3 (Projects 2–4) | Complete Unit 2 |
+
+---
+
+## Rubric
+
+This project is graded on a 0–9 point scale:
+
+| Category | Points | Description |
+|----------|--------|-------------|
+| **Stakeholder process** | 0–3 | Quality of interviews, stakeholder involvement, and co-developed functional requirements |
+| **Design & iteration** | 0–3 | Evidence of genuine iteration (Prototype 2 is meaningfully better than Prototype 1); quality of OpenSCAD design |
+| **Final prototype** | 0–3 | How well the final print meets the functional requirements; build quality |
+
+**Bonus (up to 1 point):** Exceptional documentation; user testimonial; especially creative or impactful design.
+
+---
+
+## Quick Links to Key Resources
+
+- [OpenSCAD Download](https://openscad.org/downloads.html) — Free, cross-platform
+- [PrusaSlicer Download](https://www.prusa3d.com/page/prusaslicer_424/) — Free slicer software
+- [Printables](https://www.printables.com/) — 3D model repository
+- [Thingiverse](https://www.thingiverse.com/) — 3D model repository
+- [OpenSCAD Documentation](https://openscad.org/documentation.html) — Official reference
+- [Make3D Documentation](http://github.com/tdeck/3dmake) - Official Documentation
+
+## Resources for Research
+
+- [Enable Community Foundation / e-NABLE — 3D printed hand and arm devices](https://enablingthefuture.org/)
+- [Makers Making Change — assistive technology designs](https://www.makersmakingchange.com/)
+- [NIH 3D Print Exchange — Medical/Assistive Models](https://3dprint.nih.gov/)
+- [Printables — search "assistive technology"](https://www.printables.com/)
+- [Thingiverse — search "adaptive" or "accessibility"](https://www.thingiverse.com/)

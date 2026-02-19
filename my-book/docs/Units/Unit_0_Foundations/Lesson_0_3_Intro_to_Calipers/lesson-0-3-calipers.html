@@ -79,10 +79,10 @@
             const path_to_root = "../../../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../searchindex-9980aec5.js";
+            window.path_to_searchindex_js = "../../../searchindex-705389fb.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../../toc-953cb32a.js"></script>
+        <script src="../../../toc-3786228f.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -218,175 +218,54 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="lesson-03-introduction-to-calipers"><a class="header" href="#lesson-03-introduction-to-calipers">Lesson 0.3: Introduction to Calipers</a></h1>
-<p><strong>Unit:</strong> 0 — Foundations<br><strong>Duration:</strong> 1–2 class periods (50–60 min each)<br><strong>Prerequisite:</strong> Lessons 0.1 and 0.2</p>
-<hr>
-<h2 id="learning-objectives"><a class="header" href="#learning-objectives">Learning Objectives</a></h2>
-<p>By the end of this lesson, students will be able to:</p>
+                        <h1 id="lesson-03--introduction-to-calipers-self-paced"><a class="header" href="#lesson-03--introduction-to-calipers-self-paced">Lesson 0.3 — Introduction to Calipers (Self-Paced)</a></h1>
+<p><strong>Accessibility:</strong> When including sample images or slicer screenshots, add a short alt-text description and provide a comment-based walkthrough for any example <code>.scad</code> files so screen-reader users can follow step-by-step.</p>
+<p>Estimated time: 45–75 minutes</p>
+<p>Learning objectives:</p>
 <ul>
-<li>Identify the parts of a digital or tactile caliper</li>
-<li>Zero (calibrate) a caliper before measuring</li>
-<li>Take outside, inside, and depth measurements accurately</li>
-<li>Record measurements in millimeters to one decimal place (e.g., 25.3 mm)</li>
-<li>Measure the same object three times and calculate the average</li>
+<li>Identify caliper parts and take outside, inside, and depth measurements accurately</li>
+<li>Record three trials and calculate an average to use in OpenSCAD</li>
 </ul>
-<hr>
-<h2 id="why-calipers"><a class="header" href="#why-calipers">Why Calipers?</a></h2>
-<p>When you design an object in OpenSCAD, every dimension you type into your code becomes a real physical measurement in your print. If your object needs to fit around something — a command strip, a bolt, a finger — the fit depends entirely on accurate measurements. A ruler is not precise enough for this work.</p>
-<p><strong>Calipers</strong> are precision measuring tools that can measure to the nearest <strong>0.1 mm</strong> (digital) or even <strong>0.02 mm</strong> (vernier). For our purposes, accuracy to <strong>0.5 mm</strong> is usually sufficient, but the habit of careful measurement is what matters.</p>
-<p>You will use calipers in every project in this class.</p>
-<hr>
-<h2 id="types-of-calipers"><a class="header" href="#types-of-calipers">Types of Calipers</a></h2>
-<p>There are three common types. We will primarily use <strong>digital calipers</strong>, which are the easiest to read.</p>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Type</th><th>How You Read It</th><th>Notes</th></tr>
-</thead>
-<tbody>
-<tr><td><strong>Digital</strong></td><td>LCD screen</td><td>Easiest; requires battery</td></tr>
-<tr><td><strong>Dial</strong></td><td>Analog dial + main scale</td><td>No battery needed; very durable</td></tr>
-<tr><td><strong>Vernier</strong></td><td>Two scales, read manually</td><td>No battery; requires more skill to read</td></tr>
-</tbody>
-</table>
-</div>
-<hr>
-<h2 id="parts-of-a-digital-caliper"><a class="header" href="#parts-of-a-digital-caliper">Parts of a Digital Caliper</a></h2>
-<pre><code>╔══════════════════════════════════════════╗
-║  Outside jaw (large)   Inside jaw (small)║
-║  ┌─┐                          ┌─┐        ║
-║  │ │◄──── Object here ────────│ │        ║
-║  └─┘                          └─┘        ║
-║                                          ║
-║  [ON/ZERO]  [mm/in]   [ 025.3 mm ]       ║
-║                                          ║
-║  ────────────── Scale ───────────────►   ║
-║                                Depth Rod ║
-║                                   │      ║
-╚═══════════════════════════════════▼══════╝
-</code></pre>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Part</th><th>Function</th></tr>
-</thead>
-<tbody>
-<tr><td>Outside jaws (large)</td><td>Measure external dimensions (width, length, diameter)</td></tr>
-<tr><td>Inside jaws (small, top)</td><td>Measure internal dimensions (hole diameter, channel width)</td></tr>
-<tr><td>Depth rod</td><td>Measures the depth of a hole or recess</td></tr>
-<tr><td>Thumbwheel</td><td>Slides the jaw smoothly</td></tr>
-<tr><td>Locking screw</td><td>Locks the jaw in place to preserve a measurement</td></tr>
-<tr><td>On/Zero button</td><td>Turns on; resets to zero</td></tr>
-<tr><td>mm/in button</td><td>Switches between metric and imperial</td></tr>
-<tr><td>Display</td><td>Shows the measurement</td></tr>
-</tbody>
-</table>
-</div>
-<hr>
-<h2 id="step-by-step-taking-an-outside-measurement"><a class="header" href="#step-by-step-taking-an-outside-measurement">Step-by-Step: Taking an Outside Measurement</a></h2>
-<p>This is the most common measurement you’ll take — the external width, height, or length of an object.</p>
+<p>Materials:</p>
+<ul>
+<li>Digital caliper (or vernier/dial), 5 small objects for practice, practice worksheet in this folder</li>
+</ul>
+<p>Step-by-step practice:</p>
 <ol>
-<li><strong>Turn on</strong> the caliper. Press the ON/ZERO button.</li>
-<li><strong>Close the jaws</strong> completely. Confirm the display reads <strong>0.0 mm</strong> (or 0.00). If it doesn’t, press ZERO again.</li>
-<li><strong>Open the outside jaws</strong> by sliding the thumbwheel.</li>
-<li><strong>Place the object</strong> between the large outside jaws. Ensure the object sits flat and parallel to the jaws, not tilted.</li>
-<li><strong>Gently close the jaws</strong> until they make firm but light contact with the object. Do not squeeze hard — over-tightening gives a false reading and can damage the caliper.</li>
-<li><strong>Read the display.</strong> Record the value in millimeters.</li>
-<li><strong>Lock the screw</strong> if you need to preserve the measurement.</li>
+<li>Power on the caliper and zero it with the jaws closed. Confirm display reads <code>0.0 mm</code>.</li>
+<li>Measure the outside width of Object 1 three times, record the values, calculate the average, and write the value in the worksheet.</li>
+<li>Measure an inside diameter with the small jaws and record three trials.</li>
+<li>Use the depth rod to measure a recess and record three trials.</li>
+<li>Enter your averaged values into a short OpenSCAD snippet and preview (example below).</li>
 </ol>
-<h3 id="repeat-three-times"><a class="header" href="#repeat-three-times">Repeat Three Times</a></h3>
-<p>To ensure accuracy, measure the same feature three times and record all three values. Calculate the average.</p>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Measurement 1</th><th>Measurement 2</th><th>Measurement 3</th><th>Average</th></tr>
-</thead>
-<tbody>
-<tr><td>________ mm</td><td>________ mm</td><td>________ mm</td><td>________ mm</td></tr>
-</tbody>
-</table>
-</div>
-<hr>
-<h2 id="step-by-step-taking-a-depth-measurement"><a class="header" href="#step-by-step-taking-a-depth-measurement">Step-by-Step: Taking a Depth Measurement</a></h2>
-<ol>
-<li>Zero the caliper with jaws closed.</li>
-<li>Place the base of the caliper flat on the rim of the hole or recess.</li>
-<li>Extend the depth rod downward by sliding the thumbwheel.</li>
-<li>When the rod touches the bottom, read the display.</li>
-</ol>
-<hr>
-<h2 id="common-mistakes"><a class="header" href="#common-mistakes">Common Mistakes</a></h2>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Mistake</th><th>Effect</th><th>Fix</th></tr>
-</thead>
-<tbody>
-<tr><td>Not zeroing before measuring</td><td>All readings are offset</td><td>Always press ZERO with jaws fully closed</td></tr>
-<tr><td>Tilting the object in the jaws</td><td>Reads a diagonal dimension, not true width</td><td>Keep object parallel to the jaw faces</td></tr>
-<tr><td>Over-tightening jaws</td><td>False (small) reading; can damage caliper</td><td>Stop when you feel light resistance</td></tr>
-<tr><td>Measuring in inches by accident</td><td>Completely wrong numbers</td><td>Check the mm/in button</td></tr>
-<tr><td>Reading before the display stabilizes</td><td>Unstable reading</td><td>Wait one second after closing jaws</td></tr>
-</tbody>
-</table>
-</div>
-<hr>
-<h2 id="practice-activity-measure-5-objects"><a class="header" href="#practice-activity-measure-5-objects">Practice Activity: Measure 5 Objects</a></h2>
-<p>Your instructor will provide 5 small objects (e.g., a coin, an eraser, a small block, a PLA print sample, a hex nut). Use the caliper to measure and record:</p>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Object</th><th>Feature Measured</th><th>M1</th><th>M2</th><th>M3</th><th>Average</th></tr>
-</thead>
-<tbody>
-<tr><td>1</td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>2</td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>3</td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>4</td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr><td>5</td><td></td><td></td><td></td><td></td><td></td></tr>
-</tbody>
-</table>
-</div>
-<p>When you are done, compare your averages with a partner. If your readings differ by more than <strong>1 mm</strong>, remeasure together and find the source of the discrepancy.</p>
-<hr>
-<h2 id="connecting-to-openscad"><a class="header" href="#connecting-to-openscad">Connecting to OpenSCAD</a></h2>
-<p>Once you start designing in OpenSCAD (Lessons 0.4 and 0.5), every number you type is a millimeter. For example:</p>
-<pre><code class="language-scad">cube([70, 16, 5]);
+<p>Example OpenSCAD snippet (use your measured averages):</p>
+<pre><code>length = 24.1; // example average
+width  = 10.5;
+height = 5.0;
+cube([length, width, height]);
 </code></pre>
-<p>This creates a cube 70 mm long, 16 mm wide, and 5 mm tall. If you measured a command strip and got 70.3 mm × 16.1 mm, you might enter:</p>
-<pre><code class="language-scad">cube([70.5, 16.5, 5]);
-</code></pre>
-<p>…adding a small tolerance so the strip fits inside without forcing. We’ll learn more about tolerances in Lesson 2.2.</p>
-<hr>
-<h2 id="video-resources"><a class="header" href="#video-resources">Video Resources</a></h2>
+<p>Checkpoint:</p>
+<ul>
+<li>Submit your part A worksheet (filled) and the OpenSCAD snippet with averaged values.</li>
+</ul>
+<p>Quiz — Lesson 0.3 (5 items):</p>
 <ol>
-<li>
-<p><strong>How to Use Digital Calipers — Instructables</strong> (step-by-step with photos)<br><a href="https://www.instructables.com/How-to-Use-Calipers/">https://www.instructables.com/How-to-Use-Calipers/</a><br><em>Excellent visual walkthrough of all four measurement types.</em></p>
-</li>
-<li>
-<p><strong>How to Use a Caliper — Bantam Tools</strong> (animated GIF tutorials)<br><a href="https://support.bantamtools.com/hc/en-us/articles/115001656313-Proper-Use-of-Digital-Calipers">https://support.bantamtools.com/hc/en-us/articles/115001656313-Proper-Use-of-Digital-Calipers</a><br><em>Shows correct and incorrect technique side by side — very useful for catching common errors.</em></p>
-</li>
-<li>
-<p><strong>Caliper Usage Guide — DigiKey Maker</strong> (comprehensive written guide)<br><a href="https://www.digikey.com/en/maker/tutorials/2024/how-to-use-a-caliper">https://www.digikey.com/en/maker/tutorials/2024/how-to-use-a-caliper</a><br><em>Covers all parts, all measurement types, and best practices for accuracy.</em></p>
-</li>
-<li>
-<p><strong>How to Use Calipers — System Scale</strong> (written guide with component diagrams)<br><a href="https://www.system-scale.com/how-to-use-digital-calipers">https://www.system-scale.com/how-to-use-digital-calipers</a><br><em>Includes a diagram of every component and step-by-step instructions for all five measurement types.</em></p>
-</li>
-<li>
-<p><strong>Measuring with Calipers — Fire Mountain Gems</strong> (video tutorial)<br><a href="https://www.firemountaingems.com/learn/categories/essential-resources/how-tos/A90C-video-tutorial-with-instructions.html">https://www.firemountaingems.com/learn/categories/essential-resources/how-tos/A90C-video-tutorial-with-instructions.html</a><br><em>Short video demonstration of caliper technique — great for tactile learners.</em></p>
-</li>
-<li>
-<p><strong>How to Read a Dial Caliper — Travers Tool</strong> (YouTube demo)<br><a href="https://solutions.travers.com/metalworking-machining/measuring-inspection/how-to-read-a-dial-caliper">https://solutions.travers.com/metalworking-machining/measuring-inspection/how-to-read-a-dial-caliper</a><br><em>For students using dial calipers instead of digital. Includes video and written guide.</em></p>
-</li>
+<li>Short answer: What does the ON/ZERO button do and when should you press it?</li>
+<li>Multiple choice: Which jaws are used for inside diameter? (A) large outside jaws (B) small inside jaws (C) depth rod — Answer: B</li>
+<li>Practical: Measure a small object three times and report the three values and the average.</li>
+<li>Short answer: Why is averaging three trials better than using one reading? (short answer)</li>
+<li>Practical: Provide the OpenSCAD code that uses your averaged values to create a cube.</li>
 </ol>
-<hr>
-<h2 id="references"><a class="header" href="#references">References</a></h2>
-<p>Bantam Tools. (n.d.). <em>Proper use of digital calipers</em>. https://support.bantamtools.com/hc/en-us/articles/115001656313-Proper-Use-of-Digital-Calipers</p>
-<p>DigiKey. (2024). <em>How to use a caliper</em>. https://www.digikey.com/en/maker/tutorials/2024/how-to-use-a-caliper</p>
-<p>Instructables. (2023). <em>How to use calipers</em>. https://www.instructables.com/How-to-Use-Calipers/</p>
-<p>Machine MFG. (2025). <em>Comprehensive guide to caliper usage: A step-by-step tutorial</em>. https://shop.machinemfg.com/comprehensive-guide-to-caliper-usage/</p>
-<p>Mitutoyo. (2024). <em>Correct use of calipers, how to read them, and precautions</em>. https://en-40020.site-translation.com/about-metrology/knowledge/calipers/</p>
+<p>Extension problems (5):</p>
+<ol>
+<li>Create a short 1-page guide with photos demonstrating three correct and three incorrect caliper techniques.</li>
+<li>Measure a threaded nut’s inside diameter and estimate the tolerance needed for a matching bolt (brief justification).</li>
+<li>Using three different calipers (if available), measure the same object and compare results; report discrepancies and possible causes.</li>
+<li>Create a short screencast (or audio) explaining how to measure depth with a caliper.</li>
+<li>Propose a simple classroom routine for checking and storing calipers to keep them in working condition.</li>
+</ol>
 <p>System Scale. (2025). <em>How to use digital calipers</em>. https://www.system-scale.com/how-to-use-digital-calipers</p>
+<p><strong>Accessibility:</strong> When including sample images or slicer screenshots, add a short alt-text description and provide a comment-based walkthrough for any example .scad files so screen-reader users can follow step-by-step.</p>
 
                     </main>
 

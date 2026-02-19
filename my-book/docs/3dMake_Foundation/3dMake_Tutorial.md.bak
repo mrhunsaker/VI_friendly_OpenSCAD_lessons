@@ -1,0 +1,72 @@
+# 3dmake: Non-Visual 3D Printing Tutorial (Self-Paced)
+
+Estimated time: 45–75 minutes
+
+**Learning Objectives**
+- Describe the 3dMake command-line workflow and project structure
+- Create a new 3dMake project, edit `src/main.scad`, and run `3dm build`
+- Slice a model and produce a tactile preview or full G-code
+
+**Materials**
+- Computer with 3dMake installed
+- Screen reader (NVDA, JAWS, Orca) configured
+- Example project files in `assets/` or classroom repo
+
+---
+
+Step-by-step Tasks
+1. Verify prerequisites: confirm `3dm`, `openscad`, and your slicer are discoverable in the terminal (`which 3dm`, `which openscad`).
+2. Create a new project: `3dm new` → open `src/main.scad` with `3dm edit-model` and add a simple cube: `cube([20,20,20]);`.
+3. Build the project: `3dm build` and confirm `build/main.stl` exists.
+4. Slice a preview: `3dm preview slice` then `3dm preview print` (or export preview STL) to test tactile output.
+5. Slice for full print: `3dm build slice` → inspect `build/main.gcode` with a layer-preview option in your slicer.
+
+Checkpoints
+- After step 2 you can open and edit `src/main.scad` from the terminal.
+- After step 3 the `build/` folder contains `main.stl`.
+
+---
+
+Quick Quiz (5)
+1. What command creates a new 3dMake project?
+2. Where does 3dMake put compiled STLs by default?
+3. How do you open the model editor from the CLI?
+4. What command slices a preview for tactile testing?
+5. Why is it useful to run a preview before a full print?
+
+Extension Problems (5)
+1. Create two variants of a parameterized cube (different sizes) and export both STLs; compare their file sizes and estimated print times.
+2. Add a `3dmake.toml` overlay that changes layer height and document the visible effect on the preview.
+3. Build and slice a small object, then import the STL into a second slicer and report any differences in estimated time.
+4. Create a short shell script that automates new → edit → build for a classroom scaffold.
+5. Describe three safety checks you will perform before starting a multi-hour print.
+
+---
+
+Notes: This lesson is intended to be hands-on. If networked AI features are not configured, skip the AI verification steps and focus on deterministic renders and slicer previews.
+
+---
+
+## Library commands
+
+```pwsh
+3dm list-libraries
+3dm install-libraries
+```
+
+---
+
+## Help and version
+
+```pwsh
+3dm help
+3dm version
+```
+
+---
+
+# References (APA)
+
+Deck, T. (n.d.). *3dmake: Non-visual 3D design and 3D printing tool*. GitHub. Retrieved February 18, 2026, from [http://github.com/tdeck/3dmake](http://github.com/tdeck/3dmake)
+
+OpenSCAD. (n.d.). *The programmers solid 3D CAD modeller*. Retrieved February 18, 2026, from [https://openscad.org](https://openscad.org)

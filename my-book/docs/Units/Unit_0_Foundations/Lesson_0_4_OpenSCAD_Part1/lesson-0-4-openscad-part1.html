@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Lesson 0.4: OpenSCAD Part 1 	6 Primitives &amp; Variables - 3D Printing Course for Blind and Visually Impaired Learners</title>
+        <title>Lesson 0.4: OpenSCAD Part 1  6 Primitives &amp; Variables - 3D Printing Course for Blind and Visually Impaired Learners</title>
 
 
         <!-- Custom HTML head -->
@@ -79,10 +79,10 @@
             const path_to_root = "../../../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../searchindex-9980aec5.js";
+            window.path_to_searchindex_js = "../../../searchindex-705389fb.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../../toc-953cb32a.js"></script>
+        <script src="../../../toc-3786228f.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -218,7 +218,8 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="lesson-04-introduction-to-openscad--part-1"><a class="header" href="#lesson-04-introduction-to-openscad--part-1">Lesson 0.4: Introduction to OpenSCAD — Part 1</a></h1>
+                        <h1 id="lesson-04-introduction-to-openscad--part-1-self-paced"><a class="header" href="#lesson-04-introduction-to-openscad--part-1-self-paced">Lesson 0.4: Introduction to OpenSCAD — Part 1 (Self-Paced)</a></h1>
+<p><strong>Accessibility:</strong> When including sample images or slicer screenshots, add a short alt-text description and provide a comment-based walkthrough for any example <code>.scad</code> files so screen-reader users can follow step-by-step.</p>
 <p><strong>Unit:</strong> 0 — Foundations<br><strong>Duration:</strong> 1–2 class periods (50–60 min each)<br><strong>Prerequisite:</strong> Lessons 0.1–0.3</p>
 <hr>
 <h2 id="learning-objectives"><a class="header" href="#learning-objectives">Learning Objectives</a></h2>
@@ -275,127 +276,53 @@
 <tbody>
 <tr><td><code>F5</code></td><td>Preview (fast, good for working)</td></tr>
 <tr><td><code>F6</code></td><td>Full render (slower, needed for export)</td></tr>
-<tr><td><code>Ctrl + S</code></td><td>Save</td></tr>
-<tr><td>Mouse drag (left)</td><td>Rotate the 3D view</td></tr>
-<tr><td>Mouse drag (right)</td><td>Pan</td></tr>
-<tr><td>Scroll wheel</td><td>Zoom</td></tr>
+<tr><td>box_height = 10;</td><td></td></tr>
 </tbody>
 </table>
 </div>
-<hr>
-<h2 id="primitive-1-cube"><a class="header" href="#primitive-1-cube">Primitive 1: <code>cube()</code></a></h2>
-<p>The simplest shape. Creates a rectangular box.</p>
-<pre><code class="language-scad">cube([length, width, height]);
-</code></pre>
-<p><strong>Example:</strong></p>
-<pre><code class="language-scad">cube([70, 16, 5]);
-</code></pre>
-<p>This creates a box that is 70 mm long, 16 mm wide, and 5 mm tall. This is exactly the floor marker from Project 0.</p>
-<p><strong>Try it:</strong> Type this in the editor and press F5. You should see a flat rectangular box.</p>
-<h3 id="variables"><a class="header" href="#variables">Variables</a></h3>
-<p>Instead of typing raw numbers, store them in variables:</p>
-<pre><code class="language-scad">length = 70;
-width = 16;
-height = 5;
-
-cube([length, width, height]);
-</code></pre>
-<p>This does the same thing but is much easier to modify. If you want to change the length, you change one number instead of hunting through your code.</p>
-<p><strong>Rules for variables:</strong></p>
+<h1 id="lesson-04--introduction-to-openscad--part-1-self-paced"><a class="header" href="#lesson-04--introduction-to-openscad--part-1-self-paced">Lesson 0.4 — Introduction to OpenSCAD — Part 1 (Self-Paced)</a></h1>
+<p>Estimated time: 45–75 minutes</p>
+<p>Learning objectives:</p>
 <ul>
-<li>Variable names are case-sensitive (<code>Length</code> ≠ <code>length</code>)</li>
-<li>Use descriptive names (<code>width</code> is better than <code>w</code>)</li>
-<li>End each statement with a semicolon <code>;</code></li>
-<li>Comments start with <code>//</code> and are ignored by OpenSCAD</li>
+<li>Open OpenSCAD, create <code>cube()</code>, <code>sphere()</code>, and <code>cylinder()</code> primitives, and export an STL</li>
+<li>Use named variables and comments to make code readable and parametric</li>
 </ul>
-<pre><code class="language-scad">// This is a comment — OpenSCAD ignores this line
-length = 70;   // also a comment — useful for notes
-</code></pre>
-<hr>
-<h2 id="primitive-2-sphere"><a class="header" href="#primitive-2-sphere">Primitive 2: <code>sphere()</code></a></h2>
-<p>Creates a sphere.</p>
-<pre><code class="language-scad">sphere(r = 10);   // radius = 10 mm, so diameter = 20 mm
-</code></pre>
-<p>Or using diameter:</p>
-<pre><code class="language-scad">sphere(d = 20);   // diameter = 20 mm
-</code></pre>
-<p><strong>Note:</strong> Spheres look blocky at first. Add <code>$fn = 50;</code> to make them smoother (more faces):</p>
-<pre><code class="language-scad">$fn = 50;
-sphere(r = 10);
-</code></pre>
-<p>Higher <code>$fn</code> values = smoother curves = longer render time. Use <code>$fn = 20</code> while working, <code>$fn = 50–100</code> for final export.</p>
-<hr>
-<h2 id="primitive-3-cylinder"><a class="header" href="#primitive-3-cylinder">Primitive 3: <code>cylinder()</code></a></h2>
-<p>Creates a cylinder (or cone if the two radii differ).</p>
-<pre><code class="language-scad">cylinder(h = 20, r = 5);         // height 20, radius 5
-cylinder(h = 20, d = 10);        // height 20, diameter 10
-cylinder(h = 20, r1 = 5, r2 = 2); // cone: 5mm bottom, 2mm top
-</code></pre>
-<p>Add <code>$fn = 50;</code> for smooth cylinders:</p>
-<pre><code class="language-scad">$fn = 50;
-cylinder(h = 20, r = 5);
-</code></pre>
-<hr>
-<h2 id="practice-three-shapes"><a class="header" href="#practice-three-shapes">Practice: Three Shapes</a></h2>
-<p>Open a new OpenSCAD file. Write code to create all three primitives using variables for their dimensions. Add comments explaining what each shape is. Press F5 to preview after each addition.</p>
-<pre><code class="language-scad">// Practice file — three primitives
-
-// Box
-box_length = 50;
-box_width = 30;
-box_height = 10;
-cube([box_length, box_width, box_height]);
-
-// Sphere (in a different location — more on translate() in Lesson 0.5)
-// $fn = 40;
-// sphere(r = 15);
-
-// Cylinder
-// cylinder(h = 25, r = 8);
-</code></pre>
-<hr>
-<h2 id="exporting-to-stl"><a class="header" href="#exporting-to-stl">Exporting to STL</a></h2>
-<p>When you’re ready to print or turn in a file:</p>
+<p>Materials:</p>
+<ul>
+<li>OpenSCAD installed; text editor optional; example <code>practice0_4.scad</code> file</li>
+</ul>
+<p>Step-by-step student tasks:</p>
 <ol>
-<li>Press <code>F6</code> (full render — wait for it to complete)</li>
-<li>Go to <strong>File &gt; Export &gt; Export as STL</strong></li>
-<li>Save the file with a clear name (e.g., <code>project0_v1.stl</code>)</li>
+<li>Open OpenSCAD and create a new file named <code>lesson0_4.scad</code>.</li>
+<li>Type and preview the example cube: <code>cube([70,16,5]);</code> Press <code>F5</code>.</li>
+<li>Replace literal numbers with variables at the top of the file:
+<code>length=70; width=16; height=5; cube([length,width,height]);</code></li>
+<li>Add comments explaining each section and save the file.</li>
+<li>Create a <code>sphere(d=20);</code> and set <code>$fn=24</code> to preview, then <code>$fn=80</code> for a smoother render.</li>
+<li>Create a cylinder <code>cylinder(h=20,d=10);</code> and preview.</li>
+<li>Press <code>F6</code> for final render and export as STL.</li>
 </ol>
-<hr>
-<h2 id="video-resources"><a class="header" href="#video-resources">Video Resources</a></h2>
+<p>Checkpoint (submit or self-check):</p>
+<ul>
+<li>Attach <code>lesson0_4.scad</code> showing variables and comments and an exported <code>lesson0_4.stl</code>.</li>
+</ul>
+<p>Quiz — Lesson 0.4 (5 items):</p>
 <ol>
-<li>
-<p><strong>OpenSCAD Tutorial Part 1: Introduction (IDE Usage)</strong> — via Class Central<br><a href="https://www.classcentral.com/course/youtube-openscad-tutorial-90515">https://www.classcentral.com/course/youtube-openscad-tutorial-90515</a><br><em>Multi-part YouTube tutorial series covering IDE, primitives, transformations, and modules.</em></p>
-</li>
-<li>
-<p><strong>OpenSCAD Tutorial Chapter 1 — Wikibooks</strong><br><a href="https://en.wikibooks.org/wiki/OpenSCAD_Tutorial/Chapter_1">https://en.wikibooks.org/wiki/OpenSCAD_Tutorial/Chapter_1</a><br><em>Free, detailed written tutorial on cubes, variables, and the interface. Excellent for self-paced learning.</em></p>
-</li>
-<li>
-<p><strong>Beginner’s Guide to OpenSCAD: Programming 3D Printed Models — MakeUseOf</strong><br><a href="https://www.makeuseof.com/tag/beginners-guide-openscad-programming-3d-printed-models/">https://www.makeuseof.com/tag/beginners-guide-openscad-programming-3d-printed-models/</a><br><em>Covers primitives, variables, and STL export. Well-written for beginners with no coding background.</em></p>
-</li>
-<li>
-<p><strong>OpenSCAD Tutorial for Beginners: 10 Easy Steps — All3DP</strong><br><a href="https://all3dp.com/2/openscad-tutorial-beginner/">https://all3dp.com/2/openscad-tutorial-beginner/</a><br><em>Step-by-step written guide with screenshots. Good for working through at your own pace.</em></p>
-</li>
-<li>
-<p><strong>OpenSCAD Beginner Tutorial — EduTech Wiki</strong><br><a href="https://edutechwiki.unige.ch/en/OpenScad_beginners_tutorial">https://edutechwiki.unige.ch/en/OpenScad_beginners_tutorial</a><br><em>Academic-style tutorial with examples; good if you want more depth on any specific command.</em></p>
-</li>
-<li>
-<p><strong>OpenSCAD Official Documentation</strong><br><a href="https://openscad.org/documentation.html">https://openscad.org/documentation.html</a><br><em>The official reference. Use this to look up any command when you’re unsure of the syntax.</em></p>
-</li>
+<li>Short answer: What is the difference between <code>F5</code> and <code>F6</code>?</li>
+<li>Multiple choice: Which command creates a box? (A) <code>sphere()</code> (B) <code>cube()</code> (C) <code>cylinder()</code> — Answer: B</li>
+<li>Practical: Provide code that defines <code>length=50</code> and creates a cube using that variable.</li>
+<li>Short answer: What does <code>$fn</code> affect? (brief)</li>
+<li>Practical: Export an STL and report the filename and file size (or note if not possible).</li>
 </ol>
-<hr>
-<h2 id="book-resource"><a class="header" href="#book-resource">Book Resource</a></h2>
-<p>Gohde, J., &amp; Kintel, M. (2021). <em>Programming with OpenSCAD: A beginner’s guide to coding 3D-printable objects</em>. No Starch Press.<br><a href="https://nostarch.com/programmingopenscad">https://nostarch.com/programmingopenscad</a></p>
-<p><em>Written for students at the middle/high school level. Covers all concepts we use in this course and more. Highly recommended if you want to go further.</em></p>
-<hr>
-<h2 id="references"><a class="header" href="#references">References</a></h2>
-<p>All3DP. (2023). <em>OpenSCAD tutorial for beginners: 10 easy steps</em>. https://all3dp.com/2/openscad-tutorial-beginner/</p>
-<p>Class Central. (n.d.). <em>OpenSCAD tutorial</em> [YouTube course]. https://www.classcentral.com/course/youtube-openscad-tutorial-90515</p>
-<p>EduTech Wiki. (n.d.). <em>OpenScad beginners tutorial</em>. https://edutechwiki.unige.ch/en/OpenScad_beginners_tutorial</p>
-<p>Gohde, J., &amp; Kintel, M. (2021). <em>Programming with OpenSCAD: A beginner’s guide to coding 3D-printable objects</em>. No Starch Press. https://nostarch.com/programmingopenscad</p>
-<p>MakeUseOf. (2017). <em>Beginner’s guide to OpenSCAD: Programming 3D printed models</em>. https://www.makeuseof.com/tag/beginners-guide-openscad-programming-3d-printed-models/</p>
-<p>OpenSCAD. (n.d.). <em>Documentation</em>. https://openscad.org/documentation.html</p>
-<p>Wikibooks. (2019). <em>OpenSCAD tutorial/Chapter 1</em>. https://en.wikibooks.org/wiki/OpenSCAD_Tutorial/Chapter_1</p>
+<p>Extension problems (5):</p>
+<ol>
+<li>Create a short cheat-sheet (one page) of OpenSCAD syntax common to Lessons 0.4–0.5.</li>
+<li>Write a comment-based walkthrough inside <code>lesson0_4.scad</code> explaining each line for a peer who is blind or low-vision.</li>
+<li>Create three variations of a cube (different dimensions via variables) and export all three STLs.</li>
+<li>Explore <code>$fn</code> at values 12, 40, and 120; document preview and render times and quality differences.</li>
+<li>Add a second primitive and translate it so both are visible in the preview; submit the <code>.scad</code> file.</li>
+</ol>
+<p><strong>Accessibility:</strong> When including sample images or slicer screenshots, add a short alt-text description and provide a comment-based walkthrough for any example .scad files so screen-reader users can follow step-by-step.</p>
 
                     </main>
 

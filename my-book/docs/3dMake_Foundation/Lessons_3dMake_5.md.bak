@@ -1,0 +1,75 @@
+
+# Lesson 5: Safety Protocols and the Physical Fabrication Interface (Self-Paced)
+
+Estimated time: 60–90 minutes
+
+**Learning Objectives**
+- Describe the Hierarchy of Controls and apply it to a classroom maker-space
+- Perform pre-print environmental and equipment checks
+- Validate the digital-to-physical pipeline and document post-print inspection results
+
+**Materials**
+- Classroom 3D printer, enclosure, and filtration (or documented lab SOP)
+- Example parametric OpenSCAD project and slicer profile
+
+Step-by-step Tasks
+1. Conduct a safety briefing: review the Hierarchy of Controls and locate safety equipment.
+2. Verify environmental controls and printer readiness: confirm filtration, bed adhesion, and spool metadata.
+3. Run `3dm build` and inspect the STL in a slicer; check layer-preview and non-manifold warnings.
+4. If using remote submission (OctoPrint), confirm camera monitoring and logging before any unattended prints.
+5. Obtain instructor sign-off and monitor the first layers in-person or via camera.
+6. After printing, wait for the part to cool (< $30^\\circ\\text{C}$), measure critical dimensions, and record observations.
+
+Checkpoints
+- Completed environmental checklist and saved inspection notes in the project README.
+
+Quick Quiz (5)
+1. What are the four levels of the Hierarchy of Controls?
+2. Name two engineering controls useful for reducing emissions.
+3. Why must you monitor the first layers of a new print profile?
+4. Where should you record spool metadata and print observations?
+5. What is the safe cooldown temperature suggested before part removal?
+
+Extension Problems (5)
+1. Draft a one-page SOP for start-to-finish supervised prints in your lab.
+2. Create a checklist script that verifies spool metadata and build settings before `3dm build` runs.
+3. Run a test print and log measured deviations; propose a parameter change to correct the error.
+4. Design an accessible post-print inspection checklist that non-visual users can follow.
+5. Research filtration options and recommend one for your classroom, including maintenance intervals.
+
+## **Works cited**
+
+1. tdeck/3dmake: Non-visual 3D design and 3D printing tool \- GitHub, accessed February 18, 2026, [https://github.com/tdeck/3dmake](https://github.com/tdeck/3dmake)  
+2. Books \- OpenSCAD, accessed February 18, 2026, [https://openscad.org/documentation-books.html](https://openscad.org/documentation-books.html)  
+3. Programming with OpenSCAD, accessed February 18, 2026, [https://programmingwithopenscad.github.io/](https://programmingwithopenscad.github.io/)  
+4. OpenSCAD Review \- Worth learning? \- CadHub, accessed February 18, 2026, [https://learn.cadhub.xyz/blog/openscad-review/](https://learn.cadhub.xyz/blog/openscad-review/)  
+5. Activity · tdeck/3dmake \- GitHub, accessed February 18, 2026, [https://github.com/tdeck/3dmake/activity](https://github.com/tdeck/3dmake/activity)  
+6. 10+ OpenSCAD Online Courses for 2026 | Explore Free Courses & Certifications, accessed February 18, 2026, [https://www.classcentral.com/subject/openscad](https://www.classcentral.com/subject/openscad)  
+7. 3dmake/e2e\_test.py at main \- GitHub, accessed February 18, 2026, [https://github.com/tdeck/3dmake/blob/main/e2e\_test.py](https://github.com/tdeck/3dmake/blob/main/e2e_test.py)  
+8. OpenSCAD Prompt Creation \- DocsBot AI, accessed February 18, 2026, [https://docsbot.ai/prompts/technical/openscad-prompt-creation](https://docsbot.ai/prompts/technical/openscad-prompt-creation)  
+9. The great thing about OpenSCAD is that it makes it easy to 3D model things which... | Hacker News, accessed February 18, 2026, [https://news.ycombinator.com/item?id=46338565](https://news.ycombinator.com/item?id=46338565)  
+10. Build Great AI: LLM-Powered 3D Model Generation for 3D Printing \- ZenML LLMOps Database, accessed February 18, 2026, [https://www.zenml.io/llmops-database/llm-powered-3d-model-generation-for-3d-printing](https://www.zenml.io/llmops-database/llm-powered-3d-model-generation-for-3d-printing)  
+11. Generating CAD Code with Vision-Language Models for 3D Designs \- arXiv, accessed February 18, 2026, [https://arxiv.org/html/2410.05340v2](https://arxiv.org/html/2410.05340v2)  
+12. 3D Printer Safety \- Environmental Health and Safety \- The Ohio State University, accessed February 18, 2026, [https://ehs.osu.edu/kb/3d-printer-safety](https://ehs.osu.edu/kb/3d-printer-safety)  
+13. 3-D Printer Safety | Environmental Health & Safety | RIT, accessed February 18, 2026, [https://www.rit.edu/ehs/3-d-printer-safety](https://www.rit.edu/ehs/3-d-printer-safety)  
+14. Safe 3D Printing is for Everyone, Everywhere | NIOSH Blogs \- CDC, accessed February 18, 2026, [https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html](https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html)  
+15. 3D Printers | Washington State Department of Health, accessed February 18, 2026, [https://doh.wa.gov/community-and-environment/schools/3d-printers](https://doh.wa.gov/community-and-environment/schools/3d-printers)  
+16. 3D Printer Safety \- Environmental Health & Safety \- University of Tennessee, Knoxville, accessed February 18, 2026, [https://ehs.utk.edu/index.php/table-of-policies-plans-procedures-guides/3d-printer-safety/](https://ehs.utk.edu/index.php/table-of-policies-plans-procedures-guides/3d-printer-safety/)  
+17. Using LLMs for Code Generation: A Guide to Improving Accuracy and Addressing Common Issues \- PromptHub, accessed February 18, 2026, [https://www.prompthub.us/blog/using-llms-for-code-generation-a-guide-to-improving-accuracy-and-addressing-common-issues](https://www.prompthub.us/blog/using-llms-for-code-generation-a-guide-to-improving-accuracy-and-addressing-common-issues)  
+18. Goodbye Minkowski : r/openscad \- Reddit, accessed February 18, 2026, [https://www.reddit.com/r/openscad/comments/1fhbku5/goodbye\_minkowski/](https://www.reddit.com/r/openscad/comments/1fhbku5/goodbye_minkowski/)  
+19. Understanding the Challenges of OpenSCAD Users for 3D Printing \- Thomas Pietrzak, accessed February 18, 2026, [https://thomaspietrzak.com/bibliography/gonzalez24.pdf](https://thomaspietrzak.com/bibliography/gonzalez24.pdf)  
+20. Why is there so little content and community around a tool as powerful and interesting as OpenSCAD? (beyond the awesome folks in this channel) \- Reddit, accessed February 18, 2026, [https://www.reddit.com/r/openscad/comments/1fxj8xv/why\_is\_there\_so\_little\_content\_and\_community/](https://www.reddit.com/r/openscad/comments/1fxj8xv/why_is_there_so_little_content_and_community/)  
+21. minkowski render problem: slow and bogus error message · Issue \#6130 \- GitHub, accessed February 18, 2026, [https://github.com/openscad/openscad/issues/6130](https://github.com/openscad/openscad/issues/6130)  
+22. OpenSCAD: Tieing It Together With Hull() \- Hackaday, accessed February 18, 2026, [https://hackaday.com/2018/02/13/openscad-tieing-it-together-with-hull/](https://hackaday.com/2018/02/13/openscad-tieing-it-together-with-hull/)  
+23. OpenSCAD Hull/Minkowski function by hand? \- Computer Graphics Stack Exchange, accessed February 18, 2026, [https://computergraphics.stackexchange.com/questions/2188/openscad-hull-minkowski-function-by-hand](https://computergraphics.stackexchange.com/questions/2188/openscad-hull-minkowski-function-by-hand)  
+24. OpenSCAD is creating non-manifold models · Issue \#6114 \- GitHub, accessed February 18, 2026, [https://github.com/openscad/openscad/issues/6114](https://github.com/openscad/openscad/issues/6114)  
+25. Boolean operation fails with message that mesh is non-manifold, but mesh appears to be manifold · Issue \#5493 · openscad/openscad \- GitHub, accessed February 18, 2026, [https://github.com/openscad/openscad/issues/5493](https://github.com/openscad/openscad/issues/5493)  
+26. Create Space | The County Library, accessed February 18, 2026, [https://www.slcolibrary.org/what-we-have/create](https://www.slcolibrary.org/what-we-have/create)  
+27. Understanding the Challenges of OpenSCAD Users for 3D Printing \- Semantic Scholar, accessed February 18, 2026, [https://www.semanticscholar.org/paper/6520ba2b822efd57074f60376a1d607605cd63fc](https://www.semanticscholar.org/paper/6520ba2b822efd57074f60376a1d607605cd63fc)  
+28. How to fix non-manifold geometry issues on 3D models \- Sculpteo, accessed February 18, 2026, [https://www.sculpteo.com/en/3d-learning-hub/create-3d-file/fix-non-manifold-geometry/](https://www.sculpteo.com/en/3d-learning-hub/create-3d-file/fix-non-manifold-geometry/)  
+29. What is a non-manifold geometry and how to avoid it \- crwjaakko, accessed February 18, 2026, [https://www.creativewithjaakko.com/tutorials/what-is-a-non-manifold-geometry-and-how-to-avoid-it/](https://www.creativewithjaakko.com/tutorials/what-is-a-non-manifold-geometry-and-how-to-avoid-it/)  
+30. How to Fix a Non-manifold Boolean Issue in SelfCAD, accessed February 18, 2026, [https://www.selfcad.com/blog/fix-non-manifold-boolean-issue](https://www.selfcad.com/blog/fix-non-manifold-boolean-issue)  
+31. Creative Lab \- The City Library, accessed February 18, 2026, [https://services.slcpl.org/creativelab](https://services.slcpl.org/creativelab)  
+32. Make Salt Lake \- Meetup, accessed February 18, 2026, [https://www.meetup.com/makesaltlake/](https://www.meetup.com/makesaltlake/)  
+33. About Us \- Make Salt Lake, accessed February 18, 2026, [https://makesaltlake.org/about-us](https://makesaltlake.org/about-us)  
+34. ProtoSpace | Marriott Library, accessed February 18, 2026, [https://lib.utah.edu/protospace.php](https://lib.utah.edu/protospace.php)

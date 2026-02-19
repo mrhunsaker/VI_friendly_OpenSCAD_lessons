@@ -1,0 +1,216 @@
+# Stakeholder Interview Worksheet
+
+**Student (Designer) Name:** ___________________________________
+**Stakeholder Name:** ___________________________________
+**Stakeholder Role / Relationship:** ___________________________________
+**Date of Interview:** ___________________________________
+**Project:** ___________________________________
+
+---
+
+## Before the Interview
+
+Write 5–8 questions you plan to ask. Focus on open-ended questions — ones that can't be answered with just "yes" or "no."
+
+**My planned questions:**
+
+1. ___________________________________________________________________________
+
+2. ___________________________________________________________________________
+
+3. ___________________________________________________________________________
+
+4. ___________________________________________________________________________
+
+5. ___________________________________________________________________________
+
+6. ___________________________________________________________________________
+
+7. ___________________________________________________________________________
+
+8. ___________________________________________________________________________
+
+---
+
+## During the Interview — Notes
+
+*Write quickly. Don't worry about complete sentences. Capture specific words, numbers, and stories the stakeholder uses — you can clean up later.*
+
+**What the stakeholder described about the problem / situation:**
+
+___________________________________________________________________________
+
+___________________________________________________________________________
+
+___________________________________________________________________________
+
+___________________________________________________________________________
+
+**Specific details, measurements, or constraints they mentioned:**
+
+___________________________________________________________________________
+
+___________________________________________________________________________
+
+___________________________________________________________________________
+
+**Anything that surprised you or that you didn't expect:**
+
+___________________________________________________________________________
+
+___________________________________________________________________________
+
+**Follow-up questions you asked (that weren't planned):**
+
+___________________________________________________________________________
+
+___________________________________________________________________________
+
+___________________________________________________________________________
+
+---
+
+## After the Interview — Organizing Your Notes
+
+Complete this section within 30 minutes of the interview while details are fresh.
+
+### The Problem (In Your Own Words)
+
+Write 2–3 sentences summarizing the core problem the stakeholder needs solved:
+
+___________________________________________________________________________
+
+___________________________________________________________________________
+
+___________________________________________________________________________
+
+### Wants, Needs, and Constraints
+
+Sort what the stakeholder told you into the three categories:
+
+**NEEDS** — Must-have. The design fails without these.
+
+| # | Need |
+|---|------|
+| 1 | |
+| 2 | |
+| 3 | |
+| 4 | |
+
+**WANTS** — Nice-to-have. Would improve the design but not essential.
+
+| # | Want |
+|---|------|
+| 1 | |
+| 2 | |
+| 3 | |
+
+**CONSTRAINTS** — Fixed limits you must work within (size, location, cost, etc.)
+
+| # | Constraint |
+|---|-----------|
+| 1 | |
+| 2 | |
+| 3 | |
+
+---
+
+## Writing Functional Requirements
+
+Transform your Needs into formal functional requirements. Each requirement should:
+- Describe **what** the object must do, not how it looks
+- Be specific enough to test (pass / fail)
+- Avoid assuming a particular solution
+
+**Template:** "The [object] must [action / behavior] [measurable condition]."
+
+| # | Functional Requirement | How I Would Test It |
+|---|----------------------|-------------------|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+| 4 | | |
+| 5 | | |
+| 6 | | |
+
+---
+
+## Questions I Still Have
+
+What do you still need to know before designing? Note questions to ask at your next meeting or via email.
+
+1. ___________________________________________________________________________
+
+2. ___________________________________________________________________________
+
+3. ___________________________________________________________________________
+
+---
+
+## Stakeholder Contact Information
+
+*(For follow-up questions and prototype review)*
+
+**Preferred contact method:** ___________________________________
+
+**Contact info:** ___________________________________
+
+**Best time to reach them:** ___________________________________
+
+---
+
+## Interview 2 — Prototype Feedback
+
+*Complete this section at your second meeting, after your first prototype is ready.*
+
+**Date of second interview:** ___________________________________
+
+**Prototype shown:** ___________________________________
+
+**Stakeholder's response to the prototype:**
+
+___________________________________________________________________________
+
+___________________________________________________________________________
+
+___________________________________________________________________________
+
+**What they said works well:**
+
+___________________________________________________________________________
+
+___________________________________________________________________________
+
+**What they said doesn't work or needs to change:**
+
+___________________________________________________________________________
+
+___________________________________________________________________________
+
+**Specific changes requested:**
+
+| Change | Priority (High / Medium / Low) | Will you make it? Why / why not? |
+|--------|-------------------------------|----------------------------------|
+| | | |
+| | | |
+| | | |
+
+---
+
+## Stakeholder Sign-Off
+
+When your final prototype meets the functional requirements, have your stakeholder review it and confirm below.
+
+**Stakeholder statement** (write what they said, or have them write it):
+
+___________________________________________________________________________
+
+___________________________________________________________________________
+
+**Stakeholder name:** ___________________________________ **Date:** ___________
+
+**Stakeholder signature (if available):** ___________________________________
+
+*If a written signature is not possible, note the method of confirmation (verbal, email, etc.) and attach any written evidence.*
+
+```

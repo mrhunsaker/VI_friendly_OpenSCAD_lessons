@@ -1,0 +1,20 @@
+# Quiz 1: PowerShell Basics (Self-Paced) — ~20 minutes
+
+Instructions: Complete the tasks below. When asked to capture output, save screenshots or copy output into a single text file to submit.
+
+Part A — Hands-on tasks (capture evidence)
+1. Run `ls -n ~` and capture the output (screenshot or copy to a file).
+2. Run `ls -n ~/Documents` and capture the output.
+3. Run `ls -n /` (or `ls -n C:\` on Windows) and capture the output.
+4. Move a downloaded file into `~/Documents/OpenSCAD_Projects/Lessons` and capture the `ls -n` output showing it.
+5. Rename that file to include your name and capture the `ls -n` output again.
+
+Part B — Short answers (include in your submission)
+1. What is a path?
+2. How do you include spaces in a path?
+3. How do you separate command arguments from flags?
+4. What is another name for a folder?
+5. Which command lists only names and is screen-reader-friendly?
+
+Notes
+- If screenshots are difficult, copy command output into a text file and submit that file instead.

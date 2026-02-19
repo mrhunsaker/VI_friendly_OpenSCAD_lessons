@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Lesson 0.5: OpenSCAD Part 2 	6 Transforms &amp; Booleans - 3D Printing Course for Blind and Visually Impaired Learners</title>
+        <title>Lesson 0.5: OpenSCAD Part 2  6 Transforms &amp; Booleans - 3D Printing Course for Blind and Visually Impaired Learners</title>
 
 
         <!-- Custom HTML head -->
@@ -79,10 +79,10 @@
             const path_to_root = "../../../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../searchindex-9980aec5.js";
+            window.path_to_searchindex_js = "../../../searchindex-705389fb.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../../toc-953cb32a.js"></script>
+        <script src="../../../toc-3786228f.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -218,7 +218,8 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="lesson-05-introduction-to-openscad--part-2"><a class="header" href="#lesson-05-introduction-to-openscad--part-2">Lesson 0.5: Introduction to OpenSCAD — Part 2</a></h1>
+                        <h1 id="lesson-05-introduction-to-openscad--part-2-self-paced"><a class="header" href="#lesson-05-introduction-to-openscad--part-2-self-paced">Lesson 0.5: Introduction to OpenSCAD — Part 2 (Self-Paced)</a></h1>
+<p><strong>Accessibility:</strong> When including sample images or slicer screenshots, add a short alt-text description and provide a comment-based walkthrough for any example <code>.scad</code> files so screen-reader users can follow step-by-step.</p>
 <p><strong>Unit:</strong> 0 — Foundations<br><strong>Duration:</strong> 1–2 class periods (50–60 min each)<br><strong>Prerequisite:</strong> Lesson 0.4 (Part 1)</p>
 <hr>
 <h2 id="learning-objectives"><a class="header" href="#learning-objectives">Learning Objectives</a></h2>
@@ -249,163 +250,150 @@
 </table>
 </div>
 <hr>
-<h2 id="editors-3dmake-and-describing-orientations"><a class="header" href="#editors-3dmake-and-describing-orientations">Editors, 3dMake, and describing orientations</a></h2>
+<h1 id="lesson-05--introduction-to-openscad--part-2-self-paced"><a class="header" href="#lesson-05--introduction-to-openscad--part-2-self-paced">Lesson 0.5 — Introduction to OpenSCAD — Part 2 (Self-Paced)</a></h1>
+<p>Estimated time: 45–75 minutes</p>
+<p>Learning objectives:</p>
 <ul>
-<li>Editors: Visual Studio Code (VSCode) with an OpenSCAD extension provides syntax highlighting, snippets, and build-task integration which makes editing <code>.scad</code> files easier for students; Notepad++ is a lightweight Windows alternative. Encourage students to use an editor that supports search, multiple tabs, and basic code navigation.</li>
-<li>3dMake / automation: use <code>3dMake</code> (or your chosen build pipeline) to automate rendering, export, and to produce screenshots from several standard orientations. These screenshots can be paired with short textual descriptions (alt-text) to help describe what is visible on screen from each view.</li>
+<li>Use <code>translate()</code> and <code>rotate()</code> to position parts</li>
+<li>Combine and subtract primitives with <code>union()</code> and <code>difference()</code></li>
+<li>Build a small composite object (slotted box or stand) and export STL</li>
 </ul>
-<p>Example (pseudo) commands — adapt to your local 3dMake/OpenSCAD setup:</p>
-<pre><code class="language-bash"># render STL
-3dmake render project.scad --output project.stl
-
-# take screenshots from standard views
-3dmake screenshot project.scad --view front  --out front.png
-3dmake screenshot project.scad --view top    --out top.png
-3dmake screenshot project.scad --view right  --out right.png
-3dmake screenshot project.scad --view iso    --out iso.png
-
-# produce a short textual description for the view (example: counts of primitives, main features)
-3dmake describe project.scad --view front --out front.txt
-</code></pre>
-<p>Use the generated PNGs and <code>front.txt</code> descriptions as accessible artifacts for students who use screen readers — include the description content as alt-text in lesson handouts or attach the text files alongside the images.</p>
-<p>Note: the exact <code>3dmake</code> subcommands and flags depend on the version and local configuration; treat these as examples and update them to match your toolchain.</p>
-<h2 id="translate--moving-objects"><a class="header" href="#translate--moving-objects"><code>translate()</code> — Moving Objects</a></h2>
-<p>By default, all shapes appear at the origin (0, 0, 0). <code>translate()</code> moves a shape to a new position.</p>
-<pre><code class="language-scad">translate([x, y, z]) shape;
-</code></pre>
-<p><strong>Example: Two boxes side by side</strong></p>
-<pre><code class="language-scad">cube([20, 10, 5]);                    // first box at origin
-translate([25, 0, 0]) cube([20, 10, 5]);  // second box, moved 25mm to the right
-</code></pre>
-<p>The numbers in <code>translate()</code> are the distances to move along each axis:</p>
+<p>Materials:</p>
 <ul>
-<li>X = left/right</li>
-<li>Y = front/back</li>
-<li>Z = up/down</li>
+<li>OpenSCAD; example <code>practice0_5.scad</code> file; calculator for simple expressions</li>
 </ul>
-<hr>
-<h2 id="rotate--rotating-objects"><a class="header" href="#rotate--rotating-objects"><code>rotate()</code> — Rotating Objects</a></h2>
-<pre><code class="language-scad">rotate([x_angle, y_angle, z_angle]) shape;
-</code></pre>
-<p><strong>Example: A cylinder lying on its side</strong></p>
-<pre><code class="language-scad">rotate([90, 0, 0]) cylinder(h = 20, r = 5);
-</code></pre>
-<p>This rotates the cylinder 90 degrees around the X axis, tipping it from vertical to horizontal.</p>
-<p><strong>Important:</strong> Rotation happens <strong>before</strong> translation in OpenSCAD. If you need to both rotate and move an object, put <code>translate()</code> outside and <code>rotate()</code> inside:</p>
-<pre><code class="language-scad">translate([10, 0, 0]) rotate([90, 0, 0]) cylinder(h = 20, r = 5);
-</code></pre>
-<hr>
-<h2 id="union--combining-shapes"><a class="header" href="#union--combining-shapes"><code>union()</code> — Combining Shapes</a></h2>
-<pre><code class="language-scad">union() {
-    shape1;
-    shape2;
-}
-</code></pre>
-<p><strong>Example: An L-shaped bracket</strong></p>
-<pre><code class="language-scad">union() {
-    cube([40, 5, 20]);              // vertical part
-    cube([20, 5, 5]);               // horizontal part (base)
-}
-</code></pre>
-<p><strong>Note:</strong> In OpenSCAD, multiple objects listed without any Boolean operator are implicitly unioned. <code>union()</code> is most useful when you want to be explicit or when combining inside <code>difference()</code>.</p>
-<hr>
-<h2 id="difference--subtracting-shapes"><a class="header" href="#difference--subtracting-shapes"><code>difference()</code> — Subtracting Shapes</a></h2>
-<p>This is one of the most important operations in OpenSCAD. You start with a solid shape and then subtract another shape from it.</p>
-<pre><code class="language-scad">difference() {
-    base_shape;     // the shape you start with
-    hole_shape;     // the shape you remove
-}
-</code></pre>
-<p><strong>Example: A box with a round hole</strong></p>
-<pre><code class="language-scad">$fn = 50;
+<p>Step-by-step student tasks:</p>
+<ol>
+<li>Open <code>lesson0_5.scad</code> (or create a new file) and copy the slotted box example below.</li>
+<li>Preview (F5) after each edit; use <code>$fn=40</code> for smoother curves while testing.</li>
+<li>Replace hard-coded numbers with variables for box length, width, height, and slot size.</li>
+<li>Add a circular hole at one end using <code>difference()</code> + <code>cylinder()</code>; extend the cylinder 1–2 mm past the box to ensure a clean subtraction.</li>
+<li>Practice using <code>translate()</code> and <code>rotate()</code> to place a small decorative cylinder on the top surface.</li>
+<li>Render (F6) and export an STL when complete.</li>
+</ol>
+<p>Checkpoint (submit or self-check):</p>
+<ul>
+<li>Attach <code>lesson0_5.scad</code> and <code>lesson0_5.stl</code> (or note if export not possible).</li>
+</ul>
+<p>Quiz — Lesson 0.5 (5 items):</p>
+<ol>
+<li>Short answer: Name the three CSG operations in OpenSCAD.</li>
+<li>Multiple choice: Which command removes material? (A) <code>union()</code> (B) <code>difference()</code> (C) <code>intersection()</code> — Answer: B</li>
+<li>Practical: Provide code that subtracts a centered cylinder from a cube to make a hole.</li>
+<li>Short answer: Why should the subtracting shape extend beyond the target shape by a small amount?</li>
+<li>Practical: Show code that translates a cube by 10 mm on X and 5 mm on Z.</li>
+</ol>
+<p>Extension problems (5):</p>
+<ol>
+<li>Create a slotted box with two different slot sizes and export both versions.</li>
+<li>Make a clip-style mount using <code>difference()</code> and <code>union()</code>; document dimensions with variables.</li>
+<li>Use <code>rotate()</code> to create a compound object (e.g., four cylinders rotated to form a flower); export an image of the preview.</li>
+<li>Write an accessible comment-based walkthrough inside your <code>.scad</code> for a peer who is blind or low-vision.</li>
+<li>Automate rendering two variants using your 3dMake pipeline or a simple shell script.</li>
+</ol>
+<p>Example starter code (type and test):</p>
+<pre><code class="language-scad">// Starter — slotted box with hole
+box_l = 60; box_w = 30; box_h = 10;
+slot_w = 20; slot_h = 4;
+$fn = 40;
 
 difference() {
-    cube([30, 30, 10]);                    // solid box
-    translate([15, 15, -1]) cylinder(h = 12, r = 5);  // cylinder to subtract
+    cube([box_l, box_w, box_h]);
+    // slot through top
+    translate([(box_l - slot_w)/2, -1, box_h - slot_h])
+        cube([slot_w, box_w+2, slot_h+1]);
+    // round hole on one end
+    translate([5, box_w/2, box_h/2]) rotate([90,0,0]) cylinder(h = box_w+4, r = 3);
 }
 </code></pre>
-<p><strong>Key technique:</strong> When making holes with <code>difference()</code>, make the subtracting shape <strong>slightly taller</strong> than the base shape (extend it above and below). In the example above, the cylinder starts at Z = -1 (1 mm below the base) and has height 12 (2 mm above the top of the 10 mm box). This prevents a “zero-thickness wall” artifact that appears in the preview.</p>
-<hr>
-<h2 id="putting-it-together-a-slotted-box"><a class="header" href="#putting-it-together-a-slotted-box">Putting It Together: A Slotted Box</a></h2>
-<p>Here is a complete example combining everything learned so far. Study it, type it, and render it:</p>
-<pre><code class="language-scad">// Slotted project box
-// Author: (your name)
-// Date: (today)
-
-// Variables
+<p>// Author: (your name)
+// Date: (today)</p>
+<p>// Variables
 box_l = 60;
 box_w = 30;
 box_h = 10;
 slot_w = 20;
 slot_h = 4;
-wall = 3;
-
-$fn = 40;
-
-// Main box with a rectangular slot cut through the top
+wall = 3;</p>
+<p>$fn = 40;</p>
+<p>// Main box with a rectangular slot cut through the top
 difference() {
-    cube([box_l, box_w, box_h]);
-    
-    // Slot in the center of the top
-    translate([(box_l - slot_w) / 2, -1, box_h - slot_h])
-        cube([slot_w, box_w + 2, slot_h + 1]);
-}
+cube([box_l, box_w, box_h]);</p>
+<pre><code>// Slot in the center of the top
+translate([(box_l - slot_w) / 2, -1, box_h - slot_h])
+    cube([slot_w, box_w + 2, slot_h + 1]);
 </code></pre>
-<p><strong>Challenge:</strong> Add a circular hole on one end of the box using <code>difference()</code> and <code>cylinder()</code>.</p>
-<hr>
-<h2 id="common-mistakes-and-fixes"><a class="header" href="#common-mistakes-and-fixes">Common Mistakes and Fixes</a></h2>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Mistake</th><th>Symptom</th><th>Fix</th></tr>
-</thead>
-<tbody>
-<tr><td>Forgetting <code>;</code> at end of line</td><td>Red error in console</td><td>Add semicolons to every statement</td></tr>
-<tr><td>Forgetting <code>{</code> <code>}</code> around a Boolean operation</td><td>Shapes don’t combine correctly</td><td>Always wrap multiple shapes in <code>{ }</code></td></tr>
-<tr><td>Subtracting shape doesn’t extend through the base</td><td>Thin “skin” remains at top/bottom of hole</td><td>Extend the subtracting shape 1 mm above and below</td></tr>
-<tr><td>Shapes overlap unexpectedly</td><td>Parts fuse together</td><td>Use <code>translate()</code> to position shapes carefully</td></tr>
-<tr><td>Rotated object is in the wrong place</td><td>Shape ends up in a strange location</td><td>Remember: <code>rotate()</code> applies before <code>translate()</code></td></tr>
-</tbody>
-</table>
-</div>
-<hr>
-<h2 id="video-resources"><a class="header" href="#video-resources">Video Resources</a></h2>
-<ol>
-<li>
-<p><strong>OpenSCAD Tutorial Part 3: Transformations</strong> — via Class Central<br><a href="https://www.classcentral.com/course/youtube-openscad-tutorial-90515">https://www.classcentral.com/course/youtube-openscad-tutorial-90515</a><br><em>Watch Part 3 (Transformations) and Part 8 (3D Boolean Operations) from this playlist.</em></p>
-</li>
-<li>
-<p><strong>OpenSCAD Tutorial Chapter 2 — Wikibooks</strong> (translate, rotate, union, difference)<br><a href="https://en.wikibooks.org/wiki/OpenSCAD_Tutorial">https://en.wikibooks.org/wiki/OpenSCAD_Tutorial</a><br><em>Free written tutorial continuing from Chapter 1. Covers all transformations and Boolean operations.</em></p>
-</li>
-<li>
-<p><strong>i.materialise OpenSCAD Tutorial — Part 1</strong> (moving, rotating, and subtracting)<br><a href="https://3dprint.com/161219/openscad-imaterialise-tutorial/">https://3dprint.com/161219/openscad-imaterialise-tutorial/</a><br><em>Short videos that demonstrate copy-paste-rotate workflow and difference() for making holes.</em></p>
-</li>
-<li>
-<p><strong>Programming with OpenSCAD — No Starch Press</strong> (Chapter 2: More Ways to Transform Shapes)<br><a href="https://nostarch.com/programmingopenscad">https://nostarch.com/programmingopenscad</a><br><em>Chapters 1 and 2 cover exactly the content of Lessons 0.4 and 0.5.</em></p>
-</li>
-<li>
-<p><strong>OpenSCAD Official Cheat Sheet</strong><br><a href="https://openscad.org/cheatsheet/">https://openscad.org/cheatsheet/</a><br><em>A single-page reference for every OpenSCAD command. Bookmark this — you’ll use it constantly.</em></p>
-</li>
-</ol>
-<hr>
-<h2 id="challenge-project"><a class="header" href="#challenge-project">Challenge Project</a></h2>
-<p>Design a <strong>simple stand or mount</strong> using only what you’ve learned in Lessons 0.4 and 0.5:</p>
-<ul>
-<li>At least two different primitives</li>
-<li>At least one <code>translate()</code> or <code>rotate()</code></li>
-<li>At least one <code>difference()</code> (a hole, slot, or recess)</li>
-<li>Use variables for all major dimensions</li>
-<li>Add comments explaining your design</li>
-</ul>
-<p>This is a practice file — it does not need to be printed. But if you’d like to print it, bring it to your instructor.</p>
-<hr>
-<h2 id="references"><a class="header" href="#references">References</a></h2>
-<p>All3DP. (2023). <em>OpenSCAD tutorial for beginners: 10 easy steps</em>. https://all3dp.com/2/openscad-tutorial-beginner/</p>
-<p>Class Central. (n.d.). <em>OpenSCAD tutorial</em> [YouTube course]. https://www.classcentral.com/course/youtube-openscad-tutorial-90515</p>
-<p>Gohde, J., &amp; Kintel, M. (2021). <em>Programming with OpenSCAD: A beginner’s guide to coding 3D-printable objects</em>. No Starch Press. https://nostarch.com/programmingopenscad</p>
-<p>OpenSCAD. (n.d.). <em>OpenSCAD cheatsheet</em>. https://openscad.org/cheatsheet/</p>
-<p>Wikibooks. (2019). <em>OpenSCAD tutorial</em>. https://en.wikibooks.org/wiki/OpenSCAD_Tutorial</p>
-<p>3DPrint.com. (2021). <em>Learn how to use OpenSCAD software with helpful i.materialise tutorial and how-to videos</em>. https://3dprint.com/161219/openscad-imaterialise-tutorial/</p>
+<p>}</p>
+<pre><code>
+**Challenge:** Add a circular hole on one end of the box using `difference()` and `cylinder()`.
+
+---
+
+## Common Mistakes and Fixes
+
+| Mistake | Symptom | Fix |
+|---------|---------|-----|
+| Forgetting `;` at end of line | Red error in console | Add semicolons to every statement |
+| Forgetting `{` `}` around a Boolean operation | Shapes don't combine correctly | Always wrap multiple shapes in `{ }` |
+| Subtracting shape doesn't extend through the base | Thin "skin" remains at top/bottom of hole | Extend the subtracting shape 1 mm above and below |
+| Shapes overlap unexpectedly | Parts fuse together | Use `translate()` to position shapes carefully |
+| Rotated object is in the wrong place | Shape ends up in a strange location | Remember: `rotate()` applies before `translate()` |
+
+---
+
+## Video Resources
+
+1. **OpenSCAD Tutorial Part 3: Transformations** — via Class Central  
+   [https://www.classcentral.com/course/youtube-openscad-tutorial-90515](https://www.classcentral.com/course/youtube-openscad-tutorial-90515)  
+   *Watch Part 3 (Transformations) and Part 8 (3D Boolean Operations) from this playlist.*
+
+2. **OpenSCAD Tutorial Chapter 2 — Wikibooks** (translate, rotate, union, difference)  
+   [https://en.wikibooks.org/wiki/OpenSCAD_Tutorial](https://en.wikibooks.org/wiki/OpenSCAD_Tutorial)  
+   *Free written tutorial continuing from Chapter 1. Covers all transformations and Boolean operations.*
+
+3. **i.materialise OpenSCAD Tutorial — Part 1** (moving, rotating, and subtracting)  
+   [https://3dprint.com/161219/openscad-imaterialise-tutorial/](https://3dprint.com/161219/openscad-imaterialise-tutorial/)  
+   *Short videos that demonstrate copy-paste-rotate workflow and difference() for making holes.*
+
+4. **Programming with OpenSCAD — No Starch Press** (Chapter 2: More Ways to Transform Shapes)  
+   [https://nostarch.com/programmingopenscad](https://nostarch.com/programmingopenscad)  
+   *Chapters 1 and 2 cover exactly the content of Lessons 0.4 and 0.5.*
+
+5. **OpenSCAD Official Cheat Sheet**  
+   [https://openscad.org/cheatsheet/](https://openscad.org/cheatsheet/)  
+   *A single-page reference for every OpenSCAD command. Bookmark this — you'll use it constantly.*
+
+---
+
+## Challenge Project
+
+Design a **simple stand or mount** using only what you've learned in Lessons 0.4 and 0.5:
+- At least two different primitives
+- At least one `translate()` or `rotate()`
+- At least one `difference()` (a hole, slot, or recess)
+- Use variables for all major dimensions
+- Add comments explaining your design
+
+This is a practice file — it does not need to be printed. But if you'd like to print it, bring it to your instructor.
+
+---
+
+## References
+
+All3DP. (2023). *OpenSCAD tutorial for beginners: 10 easy steps*. https://all3dp.com/2/openscad-tutorial-beginner/
+
+Class Central. (n.d.). *OpenSCAD tutorial* [YouTube course]. https://www.classcentral.com/course/youtube-openscad-tutorial-90515
+
+Gohde, J., &amp; Kintel, M. (2021). *Programming with OpenSCAD: A beginner's guide to coding 3D-printable objects*. No Starch Press. https://nostarch.com/programmingopenscad
+
+OpenSCAD. (n.d.). *OpenSCAD cheatsheet*. https://openscad.org/cheatsheet/
+
+Wikibooks. (2019). *OpenSCAD tutorial*. https://en.wikibooks.org/wiki/OpenSCAD_Tutorial
+
+3DPrint.com. (2021). *Learn how to use OpenSCAD software with helpful i.materialise tutorial and how-to videos*. https://3dprint.com/161219/openscad-imaterialise-tutorial/
+
+**Accessibility:** When including sample images or slicer screenshots, add a short alt-text description and provide a comment-based walkthrough for any example .scad files so screen-reader users can follow step-by-step.
+</code></pre>
 
                     </main>
 

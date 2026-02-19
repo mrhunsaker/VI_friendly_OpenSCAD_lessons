@@ -1,0 +1,216 @@
+# Screen Reader Coding Tips — NVDA & JAWS
+
+**Accessibility:** When including images or diagrams, add short alt-text and provide a comment-based walkthrough for any .scad examples so screen-reader users can follow the design steps.
+
+
+*A consolidated reference for using NVDA or JAWS while writing OpenSCAD code in VSCode or Notepad++. Tips that were previously scattered across lesson files are collected here.*
+
+---
+
+## General Principles for Coding with a Screen Reader
+
+- **Turn punctuation up.** All OpenSCAD syntax — semicolons, brackets, parentheses, commas — is meaningful. If your screen reader skips punctuation, you will miss syntax errors. Set punctuation to **Most** or **All** before coding.
+- **Navigate by line.** Arrow up and down to move through code one line at a time. Use `Ctrl + Left/Right` to move word by word within a line.
+- **Use go-to-line.** Both VSCode and Notepad++ let you jump to a specific line number with `Ctrl + G`. OpenSCAD errors always give a line number — use this to find them fast.
+- **Spell when uncertain.** If you are not sure what a character is, spell the line character by character using your screen reader's spell command.
+- **Comment as you go.** Adding a short comment after a block of code lets you navigate by searching for recognizable words with `Ctrl + F`.
+
+---
+
+## NVDA Quick Reference
+
+### Setting Punctuation Level
+`NVDA + P` — cycles through: None → Some → Most → All
+
+For code: set to **Most** or **All**.
+
+You can also set a permanent default:
+`NVDA + N` → Preferences → Settings → Speech → Symbol level
+
+### Essential Reading Commands
+
+| Action | Keys |
+|--------|------|
+| Read current line | `NVDA + Up Arrow` |
+| Spell current line | `NVDA + Up Arrow` (twice quickly) |
+| Read from cursor to end | `NVDA + Down Arrow` |
+| Read current word | `NVDA + Numpad 5` |
+| Spell current word | `NVDA + Numpad 5` (twice quickly) |
+| Read current character | `NVDA + Numpad 2` |
+| Stop reading | `Ctrl` |
+
+### Navigation in VSCode with NVDA
+
+| Action | Keys |
+|--------|------|
+| Move by character | `Left / Right Arrow` |
+| Move by word | `Ctrl + Left / Right Arrow` |
+| Move by line | `Up / Down Arrow` |
+| Start / end of line | `Home / End` |
+| Start / end of file | `Ctrl + Home / Ctrl + End` |
+| Go to line number | `Ctrl + G`, type number, `Enter` |
+| Find text | `Ctrl + F` |
+| Toggle line comment | `Ctrl + /` |
+
+### If NVDA Stops Reading the Editor
+
+1. Click in the editor area once with the mouse (or press `Escape` and then click)
+2. Press `NVDA + Space` to toggle between Browse and Application mode — for code editors, you want Application mode
+
+---
+
+## JAWS Quick Reference
+
+### Setting Punctuation Level
+`JAWS Key + Shift + 2` — cycles through punctuation levels
+
+For code: set to **All**.
+
+### Essential Reading Commands
+
+| Action | Keys |
+|--------|------|
+| Read current line | `JAWS Key + Up Arrow` |
+| Spell current line | `JAWS Key + Up Arrow` (twice quickly) |
+| Read from cursor | `JAWS Key + A` |
+| Read current word | `JAWS Key + Numpad 5` |
+| Read next word | `JAWS Key + Right Arrow` |
+| Read current character | `JAWS Key + Numpad 5` (once = word, twice = spell) |
+| Stop reading | `Ctrl` |
+
+### Adjusting Speech Rate
+
+| Action | Keys |
+|--------|------|
+| Increase rate | `Alt + Ctrl + Page Up` (or `Fn + Up Arrow` on laptops) |
+| Decrease rate | `Alt + Ctrl + Page Down` (or `Fn + Down Arrow` on laptops) |
+
+### Navigation in VSCode with JAWS
+
+| Action | Keys |
+|--------|------|
+| Move by character | `Left / Right Arrow` |
+| Move by word | `Ctrl + Left / Right Arrow` |
+| Move by line | `Up / Down Arrow` |
+| Start / end of line | `Home / End` |
+| Start / end of file | `Ctrl + Home / Ctrl + End` |
+| Go to line number | `Ctrl + G` |
+| Find text | `Ctrl + F` |
+| Toggle line comment | `Ctrl + /` |
+
+### If JAWS Stops Reading the Editor
+
+1. Press `JAWS Key + Z` to toggle Virtual/Browse mode off — for VSCode you want Virtual mode **off**
+2. Focus the menu bar with `Alt`, then press `Escape` to return to the editor
+3. If still not working, press `Alt + F4` to close VSCode and reopen it
+
+### Window Focus
+
+When you launch OpenSCAD from VSCode (via the task runner), focus stays in VSCode. To switch to OpenSCAD to read the console or error messages:
+
+- `Alt + Tab` to cycle through open windows
+- JAWS will announce the application name as you cycle
+
+---
+
+## OpenSCAD-Specific Tips
+
+### Reading Errors
+
+When OpenSCAD can't render your code, it outputs an error. The error message always includes:
+- **Line number** — use `Ctrl + G` in VSCode to jump there
+- **Error type** — usually a missing semicolon, a typo in a command name, or mismatched brackets
+
+Common errors and what they sound like:
+
+| Error message | What it usually means |
+|--------------|----------------------|
+| "Expected ';' ..." | You forgot a semicolon at the end of a statement |
+| "Expected ',' or ')' ..." | Missing comma between parameters, or unclosed parenthesis |
+| "Identifier ... is undefined" | You typed a variable name wrong, or used a variable before declaring it |
+| "WARNING: Normalized tree is empty" | Your shape has no geometry (e.g., you subtracted more than you started with) |
+
+### Bracket Matching
+
+All OpenSCAD shapes and operations use brackets and braces:
+- Parentheses `()` — hold parameters: `cube([10, 10, 10])`
+- Square brackets `[]` — hold vectors (lists of numbers): `[10, 10, 10]`
+- Curly braces `{}` — hold groups of shapes for boolean operations
+
+Every opening bracket must have a closing bracket. If you are missing one, OpenSCAD will report an error somewhere near (but not always exactly at) the problem.
+
+VSCode can help: when your cursor is on a bracket, VSCode highlights the matching bracket. With NVDA, you can navigate to the matching bracket with `Ctrl + Shift + \`.
+
+### Commenting Out Code
+
+To test part of your code without deleting it, comment it out:
+
+- Single line: position cursor at start of line, type `//`
+- Multiple lines: select the lines, press `Ctrl + /` in VSCode (adds `//` to each selected line)
+- Block comment: type `/*` before and `*/` after the block
+
+To uncomment: select the commented lines, press `Ctrl + /` again.
+
+### Navigating Large Files
+
+Use `Ctrl + F` (Find) to locate sections of your code:
+- Search for your module names to jump to them: e.g., `module round_bead`
+- Search for comments you wrote: e.g., `// Step 2`
+- Search for line numbers in error messages
+
+---
+
+## Caliper and OpenSCAD Workflow Tips
+
+When measuring an object and entering it into OpenSCAD, say the measurement aloud before typing it to reduce transcription errors. Then read the number back after typing it to confirm.
+
+Recommended sequence:
+1. Measure → say "seventy point three millimeters"
+2. Type `70.3` in OpenSCAD
+3. Read back: "seven zero point three" to confirm
+
+---
+
+## mdBook Navigation (Web Version of This Curriculum)
+
+If you are reading this curriculum through the web version (mdBook), here are tips for navigating with a screen reader:
+
+### NVDA + Browser
+
+- `H` to jump between headings (chapter navigation)
+- `Ctrl + F` to search within the current page
+- The sidebar table of contents is a navigation landmark — use `NVDA + F7` to list landmarks, or press `D` to jump between landmark regions
+- Previous/Next chapter links are at the bottom of each page
+
+### JAWS + Browser
+
+- `H` to move between headings
+- `Ctrl + F` (browser Find) to search
+- `JAWS Key + F6` to list headings
+- `R` to jump to regions/landmarks
+- Use the search box in the mdBook header to search across all chapters
+
+### Keyboard Navigation (No Screen Reader)
+
+- `Left Arrow / Right Arrow` — previous/next chapter
+- `S` — focus the search box
+- `Escape` — close search results
+- `T` — toggle the table of contents sidebar
+
+---
+
+## References
+
+NV Access. (2024). *NVDA user guide*. https://www.nvaccess.org/files/nvda/documentation/userGuide.html
+
+Freedom Scientific. (2024). *JAWS for Windows help*. https://support.freedomscientific.com/Content/Documents/Manuals/JAWS/JAWS-Screen-Reader-Help.pdf
+
+Microsoft. (2024). *Visual Studio Code accessibility*. https://code.visualstudio.com/docs/editor/accessibility
+
+---
+
+### More on mdBook navigation
+
+- **mdBook (general / keyboard navigation):** https://rust-lang.github.io/mdBook/ — includes documentation and basic navigation/usage for the mdBook web UI.
+- **Curriculum mdBook navigation (with accessibility tips):** [mdBook Navigation Guide](mdbook-navigation-guide.md) - local guide in this curriculum with notes for using mdBook with and without screen readers.
+

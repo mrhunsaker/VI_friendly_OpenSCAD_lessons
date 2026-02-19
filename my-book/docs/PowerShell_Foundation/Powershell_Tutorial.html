@@ -79,10 +79,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9980aec5.js";
+            window.path_to_searchindex_js = "../searchindex-705389fb.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-953cb32a.js"></script>
+        <script src="../toc-3786228f.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -218,15 +218,44 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="getting-started-with-powershell"><a class="header" href="#getting-started-with-powershell">Getting Started with PowerShell</a></h1>
-<p>This guide introduces Microsoft PowerShell with a focus on practical tasks students will use to manage files, run command-line tools, and support 3D printing workflows. It emphasizes keyboard-driven, screen-reader-friendly techniques and gives reproducible examples you can try in class.</p>
-<h2 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites</a></h2>
+                        <h1 id="getting-started-with-powershell-self-paced"><a class="header" href="#getting-started-with-powershell-self-paced">Getting Started with PowerShell (Self-Paced)</a></h1>
+<p><strong>Accessibility:</strong> When including images or diagrams, add short alt-text and provide a comment-based walkthrough for any .scad examples so screen-reader users can follow the design steps.</p>
+<p>Estimated time: 30–45 minutes</p>
+<p><strong>Learning Objectives</strong></p>
 <ul>
-<li>Typing and basic text-editing skills</li>
-<li>Basic file-system knowledge (files, folders, paths)</li>
-<li>Familiarity with using a screen reader is helpful but not required</li>
-<li>Basic understanding of variables and parameters</li>
+<li>Launch PowerShell and identify the prompt</li>
+<li>Use <code>pwd</code>, <code>ls -n</code>, and <code>cd</code> to navigate</li>
+<li>Create, open, and edit a simple file from PowerShell</li>
 </ul>
+<p><strong>Materials</strong></p>
+<ul>
+<li>PowerShell (installed)</li>
+<li>A text editor (Notepad or VS Code)</li>
+</ul>
+<p>Step-by-step Tasks</p>
+<ol>
+<li>Open PowerShell and confirm the prompt shows your path.</li>
+<li>Run <code>pwd</code> and <code>ls -n</code> in your home directory.</li>
+<li>Create <code>exercise1.txt</code> with <code>ni exercise1.txt</code> and open it in Notepad.</li>
+<li>Practice moving between folders with <code>cd</code> and using tab completion.</li>
+<li>Close and re-open PowerShell; confirm behavior is consistent.</li>
+</ol>
+<p>Quick Quiz</p>
+<ol>
+<li>How do you list only file/folder names?</li>
+<li>What does <code>pwd</code> do?</li>
+<li>How do you create a new file?</li>
+<li>What key is used for autocomplete?</li>
+<li>How do you open a file in Notepad from PowerShell?</li>
+</ol>
+<p>Extension Problems</p>
+<ol>
+<li>Save the output of <code>ls -n</code> to <code>list.txt</code> and open it.</li>
+<li>Create a nested folder structure and practice <code>cd</code> into it.</li>
+<li>Use <code>ls -n *.scad</code> to find SCAD files.</li>
+<li>Use <code>Get-Command code</code> to verify VS Code in PATH.</li>
+<li>Try redirecting <code>pwd</code> to a file and read it with <code>cat</code>.</li>
+</ol>
 <h2 id="what-is-powershell"><a class="header" href="#what-is-powershell">What is PowerShell?</a></h2>
 <p>PowerShell is a cross-platform command-line shell and scripting language that runs on Windows, Linux, and macOS. It lets you control your computer with text commands instead of a graphical user interface (GUI). In this course we use PowerShell to run CLI tools (like OpenSCAD, slicers, or 3DMake), move files, and automate repetitive tasks.</p>
 <h2 id="quick-tutorial-and-core-concepts"><a class="header" href="#quick-tutorial-and-core-concepts">Quick tutorial and core concepts</a></h2>
@@ -306,7 +335,7 @@ command &gt; $null          # discard output
 <li>Package management (apt, pip)</li>
 <li>Process management and job control</li>
 </ul>
-<h1 id="getting-started-with-powershell-1"><a class="header" href="#getting-started-with-powershell-1">Getting Started with PowerShell</a></h1>
+<h1 id="getting-started-with-powershell"><a class="header" href="#getting-started-with-powershell">Getting Started with PowerShell</a></h1>
 <p>In this brief guide you will learn some basics about Microsoft <strong>PowerShell</strong>. The point of this guide is to get you up and running with PowerShell so that you can use it to 3D print and slice your models independently. Follow along with the tutorial.</p>
 <h2 id="pre-requisite-knowledge"><a class="header" href="#pre-requisite-knowledge">Pre-Requisite Knowledge</a></h2>
 <ul>

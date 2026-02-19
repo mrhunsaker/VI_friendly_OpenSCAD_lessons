@@ -79,10 +79,10 @@
             const path_to_root = "../../../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../searchindex-9980aec5.js";
+            window.path_to_searchindex_js = "../../../searchindex-705389fb.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../../toc-953cb32a.js"></script>
+        <script src="../../../toc-3786228f.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -218,144 +218,50 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="lesson-02-how-3d-printing-works-fdm-fundamentals"><a class="header" href="#lesson-02-how-3d-printing-works-fdm-fundamentals">Lesson 0.2: How 3D Printing Works (FDM Fundamentals)</a></h1>
-<p><strong>Unit:</strong> 0 — Foundations<br><strong>Duration:</strong> 1 class period (50–60 min)<br><strong>Prerequisite:</strong> Lesson 0.1 (Safety Checklist completed)</p>
-<hr>
-<h2 id="learning-objectives"><a class="header" href="#learning-objectives">Learning Objectives</a></h2>
-<p>By the end of this lesson, students will be able to:</p>
+                        <h1 id="lesson-02--how-3d-printing-works-self-paced"><a class="header" href="#lesson-02--how-3d-printing-works-self-paced">Lesson 0.2 — How 3D Printing Works (Self-Paced)</a></h1>
+<p><strong>Accessibility:</strong> When including sample images or slicer screenshots, add a short alt-text description and provide a comment-based walkthrough for any example <code>.scad</code> files so screen-reader users can follow step-by-step.</p>
+<p>Estimated time: 30–45 minutes</p>
+<p>Learning objectives:</p>
 <ul>
-<li>Explain in plain language how FDM 3D printing works</li>
-<li>Define the key terms: filament, nozzle, layer height, infill, support structures, G-code, slicing</li>
-<li>Identify why layer height and infill affect strength, surface quality, and print time</li>
-<li>Describe the journey from a 3D model file to a finished physical object</li>
+<li>Explain the FDM printing pipeline from design to printed part</li>
+<li>Identify how layer height, infill, and supports affect print quality, time, and strength</li>
 </ul>
-<hr>
-<h2 id="what-is-fdm-3d-printing"><a class="header" href="#what-is-fdm-3d-printing">What Is FDM 3D Printing?</a></h2>
-<p><strong>FDM</strong> stands for <strong>Fused Deposition Modeling</strong>. It is the most common type of desktop 3D printing. The idea is straightforward: a plastic filament is fed into a heated nozzle, melted, and deposited on a surface in precise locations. The object is built up <strong>layer by layer</strong>, from the bottom up, each layer fusing to the one below it as the plastic cools.</p>
-<p>Think of it like a very precise, very slow hot glue gun that is controlled by a computer.</p>
-<h3 id="the-basic-process-step-by-step"><a class="header" href="#the-basic-process-step-by-step">The Basic Process, Step by Step</a></h3>
-<ol>
-<li><strong>Design</strong> — You create or download a 3D model (in OpenSCAD, we write code that generates the model)</li>
-<li><strong>Export</strong> — The model is exported as a <code>.stl</code> file (a standard format that describes 3D geometry as triangles)</li>
-<li><strong>Slice</strong> — A program called a <strong>slicer</strong> (we use PrusaSlicer) takes the <code>.stl</code> and converts it to a series of two-dimensional layers, generating machine instructions called <strong>G-code</strong></li>
-<li><strong>Print</strong> — The G-code file is loaded onto the printer (via SD card or USB), and the printer follows those instructions to build your object layer by layer</li>
-<li><strong>Post-process</strong> — When done, you remove the object from the build plate and clean up any support structures</li>
-</ol>
-<h3 id="key-components-of-an-fdm-printer"><a class="header" href="#key-components-of-an-fdm-printer">Key Components of an FDM Printer</a></h3>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Component</th><th>Role</th></tr>
-</thead>
-<tbody>
-<tr><td>Filament spool</td><td>Holds the raw plastic material</td></tr>
-<tr><td>Extruder</td><td>Grips and feeds filament into the hot end</td></tr>
-<tr><td>Hot end / nozzle</td><td>Heats and melts filament, deposits it precisely</td></tr>
-<tr><td>Print bed / build plate</td><td>The surface the object is built on</td></tr>
-<tr><td>X/Y/Z motion system</td><td>Moves the printhead (or bed) in three dimensions</td></tr>
-<tr><td>Firmware / controller board</td><td>The printer’s “brain” that reads G-code</td></tr>
-</tbody>
-</table>
-</div>
-<hr>
-<h2 id="critical-concepts"><a class="header" href="#critical-concepts">Critical Concepts</a></h2>
-<h3 id="layer-height"><a class="header" href="#layer-height">Layer Height</a></h3>
-<p>Layer height is how thick each individual layer of plastic is. Typical values are <strong>0.1 mm to 0.3 mm</strong>.</p>
+<p>Materials:</p>
 <ul>
-<li><strong>Thinner layers (0.1 mm):</strong> smoother surface, more detail, longer print time</li>
-<li><strong>Thicker layers (0.3 mm):</strong> rougher surface, less detail, faster print time</li>
+<li>Slides or handout (this file), an example printed part, and access to a slicer for inspection</li>
 </ul>
-<p>A good all-purpose starting point is <strong>0.2 mm</strong>.</p>
-<h3 id="infill"><a class="header" href="#infill">Infill</a></h3>
-<p>Infill is the internal structure of a printed object. Objects are rarely printed solid — instead, the printer creates a geometric pattern inside the walls.</p>
+<p>Step-by-step tasks:</p>
+<ol>
+<li>Read the brief FDM overview below and review the STL→G-code pipeline diagram.</li>
+<li>Open a provided STL in PrusaSlicer (or inspect the example screenshots). Identify layer height and infill settings.</li>
+<li>Use the slicer preview slider to inspect layers and note where supports are generated.</li>
+<li>Complete the quick checkpoint questions and the quiz below.</li>
+</ol>
+<p>Checkpoint:</p>
 <ul>
-<li><strong>0% infill:</strong> hollow shell</li>
-<li><strong>15–20% infill:</strong> adequate for most models; balanced strength and speed</li>
-<li><strong>50%+ infill:</strong> strong functional parts; slower and more material-intensive</li>
-<li><strong>100% infill:</strong> completely solid; rarely necessary</li>
+<li>What layer height and infill are used in the example file? (short answer)</li>
+<li>Does the example require supports? (yes/no)</li>
 </ul>
-<p>Different infill patterns (grid, gyroid, honeycomb, etc.) offer different strength characteristics.</p>
-<h3 id="support-structures"><a class="header" href="#support-structures">Support Structures</a></h3>
-<p>Some geometries overhang or float in mid-air — the printer cannot print into empty space. <strong>Support structures</strong> are automatically generated temporary scaffolding that the printer builds first, providing a surface for overhanging features to rest on. They are removed after printing.</p>
-<p>Good design practice reduces the need for supports by orienting prints wisely.</p>
-<h3 id="bed-adhesion"><a class="header" href="#bed-adhesion">Bed Adhesion</a></h3>
-<p>The first layer must stick to the build plate. If it doesn’t, the print will fail (a common problem called <strong>warping</strong>). Methods for improving adhesion include a heated bed, glue stick, painter’s tape, and proper leveling.</p>
-<hr>
-<h2 id="the-stl--g-code-pipeline-diagram"><a class="header" href="#the-stl--g-code-pipeline-diagram">The STL → G-code Pipeline (Diagram)</a></h2>
-<pre><code>[OpenSCAD Code]
-      ↓  (Render + Export)
-  [.stl file]
-      ↓  (Import to PrusaSlicer)
-[Slicer Settings]
-  - Layer height
-  - Infill %
-  - Supports on/off
-  - Print temperature
-      ↓  (Slice Now)
-  [.gcode file]
-      ↓  (Load onto printer)
-[Physical Print]
-</code></pre>
-<hr>
-<h2 id="hands-on-observation-activity"><a class="header" href="#hands-on-observation-activity">Hands-On Observation Activity</a></h2>
-<p>Your instructor will run a print during or before this lesson. As it runs, observe and record:</p>
+<p>Quiz — Lesson 0.2 (5 items):</p>
 <ol>
-<li>What is the layer height being used? _______________</li>
-<li>What is the infill percentage? _______________</li>
-<li>Does the model require support structures? _______________</li>
-<li>How long is the estimated print time? _______________</li>
-<li>Describe in your own words what you see happening as the layers build up:</li>
+<li>Short answer: What does FDM stand for?</li>
+<li>Multiple choice: Which setting primarily affects print time? (A) Color (B) Layer height (C) File name — Answer: B</li>
+<li>Short answer: What is infill used for and give one common percent value for classroom prints.</li>
+<li>Practical: In PrusaSlicer, where do you change the layer height? (brief answer)</li>
+<li>Short answer: Name one method to improve bed adhesion.</li>
 </ol>
-<hr>
-<hr>
-<hr>
-<h2 id="video-resources"><a class="header" href="#video-resources">Video Resources</a></h2>
-<p>Watch these videos to reinforce the concepts covered in class:</p>
+<p>Extension problems (5):</p>
 <ol>
-<li>
-<p><strong>What Is FDM 3D Printing? — Protolabs Network</strong> (YouTube, ~10 min)<br><a href="https://www.hubs.com/blog/the-3d-printing-handbook-now-as-youtube-series/">https://www.hubs.com/blog/the-3d-printing-handbook-now-as-youtube-series/</a><br><em>Covers how FDM works, layers, infill, and support material clearly and visually.</em></p>
-</li>
-<li>
-<p><strong>How a 3D Printer Works — Product Design Online</strong> (written guide with visuals)<br><a href="https://productdesignonline.com/how-a-3d-printer-works-explained-for-beginners/">https://productdesignonline.com/how-a-3d-printer-works-explained-for-beginners/</a><br><em>Excellent beginner overview including the filament-to-finished-print pipeline.</em></p>
-</li>
-<li>
-<p><strong>FDM 3D Printing: Complete Beginner Guide — All3DP</strong><br><a href="https://all3dp.com/2/3d-printing-for-beginners-all-you-need-to-know-to-get-started/">https://all3dp.com/2/3d-printing-for-beginners-all-you-need-to-know-to-get-started/</a><br><em>Comprehensive written guide covering printer components, materials, and first print tips.</em></p>
-</li>
-<li>
-<p><strong>Introduction to FDM 3D Printing — Hubs Knowledge Base</strong><br><a href="https://www.hubs.com/knowledge-base/what-is-fdm-3d-printing/">https://www.hubs.com/knowledge-base/what-is-fdm-3d-printing/</a><br><em>Technical but accessible article with great diagrams on layer height, infill, and warping.</em></p>
-</li>
-<li>
-<p><strong>BYU Makerspace 3D Printing Overview — 75-Second Intro Video</strong><br><a href="https://guides.lib.byu.edu/3Dprinting">https://guides.lib.byu.edu/3Dprinting</a><br><em>A very quick visual overview — great for a first glance at the overall process.</em></p>
-</li>
+<li>Slice the same STL at 0.20 mm and 0.30 mm; record estimated print times and explain the tradeoffs.</li>
+<li>Create a 1-page diagram that shows the STL → G-code pipeline with annotations for where layer height, infill, and supports are applied.</li>
+<li>Test three infill patterns (grid, gyroid, honeycomb) and write a short paragraph comparing perceived strength and print time.</li>
+<li>Identify three common causes of warping and propose one mitigation for each.</li>
+<li>Observe a live print (or time-lapse) and write a 200-word description of what you observed about layer adhesion.</li>
 </ol>
-<hr>
-<h2 id="vocabulary-check"><a class="header" href="#vocabulary-check">Vocabulary Check</a></h2>
-<p>Define the following terms in your own words:</p>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Term</th><th>My Definition</th></tr>
-</thead>
-<tbody>
-<tr><td>Filament</td><td></td></tr>
-<tr><td>Nozzle</td><td></td></tr>
-<tr><td>Layer height</td><td></td></tr>
-<tr><td>Infill</td><td></td></tr>
-<tr><td>Support structures</td><td></td></tr>
-<tr><td>G-code</td><td></td></tr>
-<tr><td>Slicer</td><td></td></tr>
-<tr><td>Build plate</td><td></td></tr>
-<tr><td>Warping</td><td></td></tr>
-</tbody>
-</table>
-</div>
-<hr>
-<h2 id="references"><a class="header" href="#references">References</a></h2>
-<p>Hubs (Protolabs Network). (2023). <em>What is FDM (fused deposition modeling) 3D printing?</em> https://www.hubs.com/knowledge-base/what-is-fdm-3d-printing/</p>
-<p>FacFox. (2021). <em>Introduction to FDM 3D printing</em>. https://facfox.com/docs/kb/introduction-to-fdm-3d-printing</p>
 <p>Lewis, A. (2022). <em>How a 3D printer works (explained for beginners)</em>. Product Design Online. https://productdesignonline.com/how-a-3d-printer-works-explained-for-beginners/</p>
 <p>Sculpteo. (2025). <em>Mastering FDM 3D printing: Techniques and applications</em>. https://www.sculpteo.com/en/3d-learning-hub/3d-printing-technologies-and-processes/fdm-3d-printing/</p>
 <p>Taylor, T. (2025). <em>3D printing for beginners: How to get started with FDM</em>. All3DP. https://all3dp.com/2/3d-printing-for-beginners-all-you-need-to-know-to-get-started/</p>
+<p><strong>Accessibility:</strong> When including sample images or slicer screenshots, add a short alt-text description and provide a comment-based walkthrough for any example .scad files so screen-reader users can follow step-by-step.</p>
 
                     </main>
 

@@ -79,10 +79,10 @@
             const path_to_root = "../../../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../searchindex-9980aec5.js";
+            window.path_to_searchindex_js = "../../../searchindex-705389fb.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../../toc-953cb32a.js"></script>
+        <script src="../../../toc-3786228f.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -218,7 +218,8 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="lesson-21-parametric-design--modules-in-openscad"><a class="header" href="#lesson-21-parametric-design--modules-in-openscad">Lesson 2.1: Parametric Design &amp; Modules in OpenSCAD</a></h1>
+                        <h1 id="lesson-21--parametric-design--modules-self-paced"><a class="header" href="#lesson-21--parametric-design--modules-self-paced">Lesson 2.1 — Parametric Design &amp; Modules (Self-Paced)</a></h1>
+<p><strong>Accessibility:</strong> Add a short walkthrough in example <code>.scad</code> files and annotate key parameters so screen-reader users can follow the example code step-by-step.</p>
 <p><strong>Unit:</strong> 2 — Intermediate Skills<br><strong>Duration:</strong> 1–2 class periods<br><strong>Prerequisite:</strong> Unit 0 (all lessons) and Unit 1 (Projects 0 and 1 complete)</p>
 <hr>
 <h2 id="learning-objectives"><a class="header" href="#learning-objectives">Learning Objectives</a></h2>
@@ -233,81 +234,46 @@
 <hr>
 <h2 id="what-is-parametric-design"><a class="header" href="#what-is-parametric-design">What Is Parametric Design?</a></h2>
 <p>When you store a dimension in a variable, you’ve taken your first step toward parametric design. <strong>Parametric design</strong> means building your model around adjustable parameters so that a single change automatically updates the whole design.</p>
-<p><strong>Example without parametric thinking:</strong></p>
-<pre><code class="language-scad">cube([70, 16, 5]);
-translate([0, 20, 0]) cube([70, 16, 5]);
-translate([0, 40, 0]) cube([70, 16, 5]);
-</code></pre>
-<p>If you want to change the width from 16 to 20, you must edit three places. If you have 30 of these, that’s 30 edits — and you’ll probably miss one.</p>
-<p><strong>Example with parametric thinking:</strong></p>
-<pre><code class="language-scad">w = 16;  // change this one number to update the whole design
-cube([70, w, 5]);
-translate([0, 20, 0]) cube([70, w, 5]);
-translate([0, 40, 0]) cube([70, w, 5]);
-</code></pre>
-<p>Better — but there’s still a lot of repetition. That’s where <strong>modules</strong> come in.</p>
-<hr>
-<h2 id="modules"><a class="header" href="#modules">Modules</a></h2>
-<p>A <strong>module</strong> is a reusable block of code. You define it once, give it a name, and then call it by name as many times as you need.</p>
-<h3 id="basic-module-syntax"><a class="header" href="#basic-module-syntax">Basic Module Syntax</a></h3>
-<pre><code class="language-scad">module my_module_name() {
-    // your shapes here
-    cube([10, 10, 10]);
-}
-
-// Call the module:
-my_module_name();
-</code></pre>
-<h3 id="module-with-parameters"><a class="header" href="#module-with-parameters">Module with Parameters</a></h3>
-<pre><code class="language-scad">module floor_marker(length, width, height) {
-    cube([length, width, height]);
-}
-
-// Call with different sizes:
-floor_marker(70, 16, 5);
-translate([0, 30, 0]) floor_marker(50, 12, 3);
-</code></pre>
-<p>Parameters work like variables that are local to the module. When you call <code>floor_marker(70, 16, 5)</code>, the value 70 is assigned to <code>length</code>, 16 to <code>width</code>, and 5 to <code>height</code> — but only inside that module call.</p>
-<h3 id="default-parameter-values"><a class="header" href="#default-parameter-values">Default Parameter Values</a></h3>
-<p>You can give parameters default values so you don’t have to specify them every time:</p>
-<pre><code class="language-scad">module floor_marker(length = 70, width = 16, height = 5) {
-    cube([length, width, height]);
-}
-
-floor_marker();                  // uses all defaults: 70 x 16 x 5
-floor_marker(50);                // length=50, width=16, height=5
-floor_marker(length = 80, height = 8);  // width stays at default 16
-</code></pre>
-<hr>
-<h2 id="why-modules-matter-for-projects"><a class="header" href="#why-modules-matter-for-projects">Why Modules Matter for Projects</a></h2>
-<h3 id="project-1--revisited"><a class="header" href="#project-1--revisited">Project 1 — Revisited</a></h3>
-<p>Your Project 1 floor marker had specific dimensions. But what if the school needed markers in two sizes — one for desks and one for chairs? With a module:</p>
-<pre><code class="language-scad">module velcro_marker(length = 70, width = 16, height = 5, lip = 1) {
-    difference() {
-        cube([length, width, height]);
-        // Optional recess for command strip
-        translate([lip, lip, -0.1])
-            cube([length - 2*lip, width - 2*lip, height - 1]);
-    }
-}
-
-// Desk marker (original size)
-velcro_marker();
-
-// Chair marker (smaller)
-translate([0, 30, 0]) velcro_marker(length = 50, width = 12);
-</code></pre>
-<h3 id="project-3-jewelry-beads--preview"><a class="header" href="#project-3-jewelry-beads--preview">Project 3 (Jewelry Beads) — Preview</a></h3>
-<p>Project 3 requires <strong>two different bead shapes</strong> made with <strong>parametric modules</strong>. Here’s the structure you’ll build:</p>
-<pre><code class="language-scad">module round_bead(diameter = 15, hole_d = 3) {
-    // Your bead shape here
-}
-
-module faceted_bead(size = 12, hole_d = 3) {
-    // Your different bead shape here
-}
-</code></pre>
-<p>You’ll define both modules in one file and call them to build your complete jewelry piece.</p>
+<p>Estimated time: 60–90 minutes</p>
+<p>Learning objectives:</p>
+<ul>
+<li>Explain parametric design and why it matters</li>
+<li>Define and call <code>module()</code> with parameters in OpenSCAD</li>
+<li>Refactor repeated geometry into modules and default parameters</li>
+</ul>
+<p>Materials:</p>
+<ul>
+<li>OpenSCAD; an example <code>.scad</code> file to refactor; text editor</li>
+</ul>
+<p>Step-by-step student tasks:</p>
+<ol>
+<li>Open <code>lesson-2-1-parametric-modules.md</code> starter file or your Project 1 <code>.scad</code>.</li>
+<li>Identify one repeated shape or pattern and extract it into a <code>module</code> with parameters.</li>
+<li>Replace repeated code with calls to your module; use default parameter values where sensible.</li>
+<li>Create a <code>storage_box(length, width, height, wall)</code> module that produces a hollow box using <code>difference()</code>.</li>
+<li>Call <code>storage_box()</code> three times with different sizes and arrange them side-by-side using <code>translate()</code>.</li>
+</ol>
+<p>Checkpoint:</p>
+<ul>
+<li>Upload <code>lesson2_1_refactor.scad</code> showing at least one module and three size variants, plus brief comments.</li>
+</ul>
+<p>Quiz — Lesson 2.1 (5 items):</p>
+<ol>
+<li>Short answer: What is a module in OpenSCAD?</li>
+<li>Multiple choice: How do you give a parameter a default value? (A) <code>param = 5</code> inside module header (B) <code>module foo(x=5)</code> (C) <code>default(x=5)</code> ) — Answer: B</li>
+<li>Practical: Show module code that creates a cube using <code>length</code> and <code>width</code> parameters.</li>
+<li>Short answer: Why prefer modules over copy‑paste for repeated geometry?</li>
+<li>Practical: Provide the <code>storage_box</code> call that creates a 30×20×15 box.</li>
+</ol>
+<p>Extension problems (5):</p>
+<ol>
+<li>Refactor an entire Project 1 <code>.scad</code> file into modules and submit a small changelog of edits.</li>
+<li>Create a module with optional parameters (use defaults) and demonstrate calling it with named parameters.</li>
+<li>Write a tiny test script that generates 5 variants of a module in a row using a <code>for()</code> loop.</li>
+<li>Build a small parts library file <code>parts.scad</code> that other students can <code>use</code> or <code>include</code> in their projects.</li>
+<li>Create a README explaining how to use your <code>storage_box</code> module (include parameter meanings and example calls).</li>
+</ol>
+<p><strong>Accessibility:</strong> Add comments and a short, line-by-line walkthrough in your <code>.scad</code> file so a screen-reader user can understand the structure and parameter meanings.</p>
 <hr>
 <h2 id="practice-build-a-parametric-box-set"><a class="header" href="#practice-build-a-parametric-box-set">Practice: Build a Parametric Box Set</a></h2>
 <p>Design a module called <code>storage_box</code> that accepts <code>length</code>, <code>width</code>, <code>height</code>, and <code>wall_thickness</code> as parameters. The module should create a hollow box (open on top) using <code>difference()</code>.</p>

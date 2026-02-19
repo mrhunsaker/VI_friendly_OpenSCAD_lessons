@@ -79,10 +79,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9980aec5.js";
+            window.path_to_searchindex_js = "../searchindex-705389fb.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-953cb32a.js"></script>
+        <script src="../toc-3786228f.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -219,6 +219,7 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="ps-3-input-output-and-piping"><a class="header" href="#ps-3-input-output-and-piping">PS-3: Input, Output, and Piping</a></h1>
+<p><strong>Accessibility:</strong> When including images or diagrams, add short alt-text and provide a comment-based walkthrough for any .scad examples so screen-reader users can follow the design steps.</p>
 <p><strong>Duration:</strong> 1 class period
 <strong>Prerequisite:</strong> PS-2 (File and Folder Manipulation)</p>
 <hr>
@@ -314,50 +315,44 @@ notepad.exe ~/Documents/OpenSCAD_Projects/project0.scad
 
 # Create a new file and open it
 ni new_notes.txt
-notepad.exe new_notes.txt
+# PS-3: Input, Output, and Piping (Self-Paced)
+
+Estimated time: 25–40 minutes
+
+**Learning Objectives**
+- Use `echo`, `cat`, `&gt;` and `&gt;&gt;` for basic IO
+- Use `|` to pipe outputs between commands
+- Copy command output to the clipboard with `clip`
+
+**Materials**
+- PowerShell
+- Example text files for practice
+
+Step-by-step Tasks
+1. Create `practice.txt` with three lines using `echo` and `&gt;`/`&gt;&gt;`.
+2. Read the file with `cat practice.txt`.
+3. Pipe the file into `Select-String` to search for a word.
+4. Copy the file contents to clipboard with `cat practice.txt | clip`.
+5. Redirect `ls -n` into `list.txt` and open it in Notepad.
+
+Checkpoints
+- After step 3 you should be able to find a keyword using piping.
+
+Quick Quiz
+1. What is the difference between `&gt;` and `&gt;&gt;`?
+2. What does the pipe `|` do?
+3. How do you copy output to the clipboard?
+4. How would you page through long output?
+5. How do you suppress output to nowhere?
+
+Extension Problems
+1. Use piping to count lines in a file (hint: `Select-String -Pattern '.' | Measure-Object`).
+2. Save a long `ls -n` output and search it with `Select-String`.
+3. Chain multiple pipes to filter and then save results.
+4. Practice copying different command outputs to clipboard and pasting.
+5. Create a small script that generates a report (counts of files by extension).
+
 </code></pre>
-<hr>
-<h2 id="suppressing-output"><a class="header" href="#suppressing-output">Suppressing Output</a></h2>
-<p>Sometimes a command produces output you don’t want to see. Use <code>&gt; $null</code> to suppress it:</p>
-<pre><code class="language-powershell"># Run a command silently (no output shown)
-some_command &gt; $null
-</code></pre>
-<hr>
-<h2 id="practice"><a class="header" href="#practice">Practice</a></h2>
-<pre><code class="language-powershell"># 1. Create a folder and navigate into it
-mkdir ~/Documents/PS3_Practice
-cd ~/Documents/PS3_Practice
-
-# 2. Create a simple text file using echo and &gt;
-echo "Line 1: This is my first line" &gt; practice.txt
-echo "Line 2: This is my second line" &gt;&gt; practice.txt
-echo "Line 3: This is my third line" &gt;&gt; practice.txt
-
-# 3. Read the file
-cat practice.txt
-
-# 4. Copy the file contents to the clipboard
-cat practice.txt | clip
-
-# 5. Open the file in Notepad, add a line, save and close
-notepad.exe practice.txt
-
-# 6. Read it again to confirm your addition
-cat practice.txt
-
-# 7. Clean up
-cd ~/Documents
-rm -r PS3_Practice
-</code></pre>
-<hr>
-<h2 id="check-for-understanding"><a class="header" href="#check-for-understanding">Check for Understanding</a></h2>
-<ol>
-<li>What is the difference between <code>&gt;</code> and <code>&gt;&gt;</code>?</li>
-<li>What does the pipe <code>|</code> do?</li>
-<li>How would you copy the output of <code>ls -n</code> to your clipboard?</li>
-<li>How would you search for the word “cylinder” in an OpenSCAD file using <code>cat</code> and <code>Select-String</code>?</li>
-<li>What would happen to a file that already has content if you used <code>&gt;</code> to write to it?</li>
-</ol>
 
                     </main>
 

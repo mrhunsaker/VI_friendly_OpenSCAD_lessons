@@ -79,10 +79,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9980aec5.js";
+            window.path_to_searchindex_js = "../searchindex-705389fb.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-953cb32a.js"></script>
+        <script src="../toc-3786228f.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -218,163 +218,48 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="ps-5-filling-in-the-gaps--control-flow-profiles-and-useful-tricks"><a class="header" href="#ps-5-filling-in-the-gaps--control-flow-profiles-and-useful-tricks">PS-5: Filling in the Gaps — Control Flow, Profiles, and Useful Tricks</a></h1>
-<p><strong>Duration:</strong> 1 class period
-<strong>Prerequisite:</strong> PS-4 (Environment Variables and Aliases)</p>
-<hr>
-<h2 id="learning-objectives"><a class="header" href="#learning-objectives">Learning Objectives</a></h2>
-<p>By the end of this lesson, you will be able to:</p>
+                        <h1 id="ps-5-filling-in-the-gaps--control-flow-profiles-and-useful-tricks-self-paced"><a class="header" href="#ps-5-filling-in-the-gaps--control-flow-profiles-and-useful-tricks-self-paced">PS-5: Filling in the Gaps — Control Flow, Profiles, and Useful Tricks (Self-Paced)</a></h1>
+<p><strong>Accessibility:</strong> When including images or diagrams, add short alt-text and provide a comment-based walkthrough for any .scad examples so screen-reader users can follow the design steps.</p>
+<p>Estimated time: 30–45 minutes</p>
+<p><strong>Learning Objectives</strong></p>
 <ul>
-<li>Use <code>history</code> and <code>Ctrl + C</code> effectively</li>
-<li>Clear the screen with <code>clear</code></li>
-<li>Use <code>man</code> (Get-Help) to look up any command</li>
-<li>Understand what the PowerShell profile is and how to add persistent settings</li>
-<li>Run programs with <code>&amp;</code> (the call operator)</li>
-<li>Handle a few common screen reader edge cases</li>
+<li>Use history and abort commands (<code>history</code>, <code>Ctrl+C</code>)</li>
+<li>Inspect and edit your PowerShell profile for persistent settings</li>
+<li>Run programs by full path using the <code>&amp;</code> operator</li>
+<li>Handle common screen reader edge cases when using the terminal</li>
 </ul>
-<hr>
-<h2 id="commands-covered"><a class="header" href="#commands-covered">Commands Covered</a></h2>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Command</th><th>What It Does</th></tr>
-</thead>
-<tbody>
-<tr><td><code>history</code></td><td>Show a list of recently run commands</td></tr>
-<tr><td><code>Ctrl + C</code></td><td>Abort a running command</td></tr>
-<tr><td><code>clear</code></td><td>Clear the terminal screen</td></tr>
-<tr><td><code>Get-Help commandname</code></td><td>Show documentation for any command</td></tr>
-<tr><td><code>exit</code></td><td>Close the PowerShell window</td></tr>
-<tr><td><code>&amp; "path\to\program.exe"</code></td><td>Run a program by its full path</td></tr>
-<tr><td><code>whoami</code></td><td>Print your current username</td></tr>
-</tbody>
-</table>
-</div>
-<hr>
-<h2 id="history--command-history"><a class="header" href="#history--command-history"><code>history</code> — Command History</a></h2>
-<p><code>history</code> shows a numbered list of commands you have typed in the current session.</p>
-<pre><code class="language-powershell">history
-</code></pre>
-<p>You can re-run any command from history by pressing <code>Up Arrow</code> to cycle through recent commands. You can also use <code>Invoke-History</code> with a number:</p>
-<pre><code class="language-powershell"># Re-run command number 5 from history
-Invoke-History 5
-</code></pre>
-<hr>
-<h2 id="ctrl--c--aborting-commands"><a class="header" href="#ctrl--c--aborting-commands"><code>Ctrl + C</code> — Aborting Commands</a></h2>
-<p>If a command is running and taking too long, or you started the wrong command, press <code>Ctrl + C</code> to abort it.</p>
-<p>This is safe to use — it stops the command cleanly without closing PowerShell.</p>
-<pre><code class="language-powershell"># Start something that takes time, then press Ctrl + C to stop it
-ping 8.8.8.8
-</code></pre>
-<hr>
-<h2 id="clear--clearing-the-screen"><a class="header" href="#clear--clearing-the-screen"><code>clear</code> — Clearing the Screen</a></h2>
-<p><code>clear</code> clears all the text from the terminal window. It does not delete any files or undo anything — it just clears the visual display.</p>
-<pre><code class="language-powershell">clear
-</code></pre>
-<p>Useful when the screen has accumulated a lot of output and you want a clean start.</p>
-<hr>
-<h2 id="get-help--looking-up-commands"><a class="header" href="#get-help--looking-up-commands"><code>Get-Help</code> — Looking Up Commands</a></h2>
-<p><code>Get-Help</code> (aliased to <code>man</code> or <code>help</code>) shows documentation for any PowerShell command.</p>
-<pre><code class="language-powershell"># Get help for the ls command (Get-ChildItem)
-Get-Help ls
-
-# Get detailed help
-Get-Help ls -Detailed
-
-# Get examples only
-Get-Help ls -Examples
-</code></pre>
-<p>For screen readers, piping to a text file and opening it in Notepad is often more readable than reading the help output directly:</p>
-<pre><code class="language-powershell">Get-Help ls -Examples &gt; help_output.txt
-notepad.exe help_output.txt
-</code></pre>
-<hr>
-<h2 id="exit--closing-powershell"><a class="header" href="#exit--closing-powershell"><code>exit</code> — Closing PowerShell</a></h2>
-<pre><code class="language-powershell">exit
-</code></pre>
-<p>Closes the current PowerShell window. If a script is running, <code>exit</code> ends it and closes the shell.</p>
-<hr>
-<h2 id="--running-programs-by-path"><a class="header" href="#--running-programs-by-path"><code>&amp;</code> — Running Programs by Path</a></h2>
-<p>The <code>&amp;</code> call operator runs a program when you give it the full path. This is useful when a program is not in your PATH.</p>
-<pre><code class="language-powershell"># Run OpenSCAD with a file if it's not in PATH
-&amp; "C:\Program Files\OpenSCAD\openscad.exe" myfile.scad
-
-# Run VSCode
-&amp; "C:\Users\YourName\AppData\Local\Programs\Microsoft VS Code\Code.exe"
-</code></pre>
-<hr>
-<h2 id="whoami--current-user"><a class="header" href="#whoami--current-user"><code>whoami</code> — Current User</a></h2>
-<pre><code class="language-powershell">whoami
-</code></pre>
-<p>Prints your current username in <code>DOMAIN\username</code> format. Useful to confirm which user account you are running as.</p>
-<hr>
-<h2 id="the-powershell-profile"><a class="header" href="#the-powershell-profile">The PowerShell Profile</a></h2>
-<p>The <strong>profile</strong> is a <code>.ps1</code> script file that runs automatically every time you open PowerShell. You can put persistent aliases, environment variable changes, and custom settings there.</p>
-<p>Find your profile file path:</p>
-<pre><code class="language-powershell">echo $PROFILE
-</code></pre>
-<p>Open or create your profile in Notepad:</p>
-<pre><code class="language-powershell">notepad.exe $PROFILE
-</code></pre>
-<p>If the file doesn’t exist yet, create it:</p>
-<pre><code class="language-powershell">ni $PROFILE -Force
-notepad.exe $PROFILE
-</code></pre>
-<h3 id="adding-a-persistent-alias"><a class="header" href="#adding-a-persistent-alias">Adding a Persistent Alias</a></h3>
-<p>Add this line to your profile file and save:</p>
-<pre><code class="language-powershell">Set-Alias -Name preview -Value openscad
-</code></pre>
-<p>Now <code>preview</code> works as an alias for <code>openscad</code> every time you open PowerShell.</p>
-<hr>
-<h2 id="screen-reader-edge-cases"><a class="header" href="#screen-reader-edge-cases">Screen Reader Edge Cases</a></h2>
-<h3 id="when-output-stops-being-read"><a class="header" href="#when-output-stops-being-read">When Output Stops Being Read</a></h3>
-<p>Occasionally PowerShell output stops being announced. Try:</p>
+<p><strong>Materials</strong></p>
+<ul>
+<li>PowerShell and an editor (Notepad/VS Code)</li>
+</ul>
+<p>Step-by-step Tasks</p>
 <ol>
-<li>Press <code>Enter</code> once (empty command) to trigger a new prompt announcement</li>
-<li>Click once in the terminal window to refocus</li>
-<li>Press <code>Alt + Tab</code> away and back</li>
+<li>Run several simple commands (e.g., <code>pwd</code>, <code>ls -n</code>, <code>echo hi</code>) then run <code>history</code> to view them.</li>
+<li>Use <code>Invoke-History &lt;n&gt;</code> to re-run a previous command (replace <code>&lt;n&gt;</code> with a history number).</li>
+<li>Practice aborting a long-running command with <code>Ctrl + C</code> (for example, <code>ping 8.8.8.8</code>).</li>
+<li>Open your profile: <code>notepad.exe $PROFILE</code>; if it doesn’t exist, create it: <code>ni $PROFILE -Force</code>.</li>
+<li>Add a persistent alias line to your profile (example: <code>Set-Alias -Name preview -Value openscad</code>), save, and reopen PowerShell to verify.</li>
 </ol>
-<h3 id="navigating-long-output"><a class="header" href="#navigating-long-output">Navigating Long Output</a></h3>
-<p>When a command produces many lines of output, use <code>| more</code> to page through it:</p>
-<pre><code class="language-powershell">ls -n ~/Documents | more
-</code></pre>
-<p>Press <code>Space</code> to advance one page, <code>Enter</code> to advance one line, <code>Q</code> to quit.</p>
-<h3 id="copying-output-to-read-later"><a class="header" href="#copying-output-to-read-later">Copying Output to Read Later</a></h3>
-<p>Pipe any output to a text file, then open it in Notepad where it is easier to navigate:</p>
-<pre><code class="language-powershell">ls -n ~/Documents &gt; file_list.txt
-notepad.exe file_list.txt
-</code></pre>
-<hr>
-<h2 id="full-openscad-workflow-from-powershell"><a class="header" href="#full-openscad-workflow-from-powershell">Full OpenSCAD Workflow from PowerShell</a></h2>
-<p>Now that you know all the PowerShell basics, here is the complete workflow:</p>
-<pre><code class="language-powershell"># 1. Navigate to your OpenSCAD projects folder
-cd ~/Documents/OpenSCAD_Projects
-
-# 2. Create a new file
-ni project2.scad
-
-# 3. Open it in VSCode
-code project2.scad
-# (Edit your code in VSCode, then press Ctrl + Shift + B to preview in OpenSCAD)
-
-# 4. When happy, export STL using the VSCode Export task
-# OR export from the command line:
-openscad -o project2.stl project2.scad
-
-# 5. Confirm the STL was created
-ls -n *.stl
-
-# 6. Open PrusaSlicer with the STL
-&amp; "C:\Program Files\PrusaSlicer\prusa-slicer.exe" project2.stl
-</code></pre>
-<hr>
-<h2 id="check-for-understanding"><a class="header" href="#check-for-understanding">Check for Understanding</a></h2>
+<p>Checkpoints</p>
+<ul>
+<li>After step 2 you can re-run a recent command by history number.</li>
+<li>After step 5 your alias should persist across sessions.</li>
+</ul>
+<p>Quick Quiz (5)</p>
 <ol>
-<li>How do you abort a command that is currently running?</li>
-<li>What does the PowerShell profile do?</li>
-<li>How would you look up the examples for the <code>mv</code> command?</li>
-<li>If OpenSCAD is not in your PATH, how can you still run it from the command line?</li>
-<li>How would you make an alias permanent so it works every time you open PowerShell?</li>
+<li>How do you view the command history?</li>
+<li>Which key combination aborts a running command?</li>
+<li>What does <code>echo $PROFILE</code> show?</li>
+<li>How does the <code>&amp;</code> operator help run executables?</li>
+<li>What is one strategy if terminal output stops being announced by your screen reader?</li>
+</ol>
+<p>Extension Problems (5)</p>
+<ol>
+<li>Add an alias and an environment variable change to your profile and document the behavior after reopening PowerShell.</li>
+<li>Create a short script that automates creating a project folder and an initial .scad file.</li>
+<li>Experiment with running OpenSCAD by full path using <code>&amp;</code> and by placing it in PATH; compare results.</li>
+<li>Practice redirecting <code>Get-Help</code> output to a file and reading it in Notepad for screen reader clarity.</li>
+<li>Document three screen reader troubleshooting steps you used and when they helped.</li>
 </ol>
 
                     </main>

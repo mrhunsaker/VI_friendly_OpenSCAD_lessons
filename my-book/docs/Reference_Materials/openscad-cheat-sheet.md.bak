@@ -1,0 +1,169 @@
+# OpenSCAD Quick Reference — Cheat Sheet
+
+**Accessibility:** When including images or diagrams, add short alt-text and provide a comment-based walkthrough for any .scad examples so screen-reader users can follow the design steps.
+
+
+*Keep this handy during all OpenSCAD work. For full documentation: https://openscad.org/documentation.html*
+
+---
+
+## Basic Shapes (Primitives)
+
+```scad
+cube([length, width, height]);          // rectangular box
+cube([l, w, h], center = true);        // centered at origin
+
+sphere(r = radius);                     // sphere by radius
+sphere(d = diameter);                   // sphere by diameter
+
+cylinder(h = height, r = radius);       // cylinder
+cylinder(h = height, d = diameter);     // cylinder by diameter
+cylinder(h = height, r1 = 5, r2 = 2);  // cone (different top/bottom radii)
+
+$fn = 50;  // sets smoothness for spheres/cylinders (higher = smoother, slower)
+```
+
+---
+
+## Transformations
+
+```scad
+translate([x, y, z]) shape;             // move
+rotate([x_deg, y_deg, z_deg]) shape;    // rotate
+scale([x, y, z]) shape;                 // scale (1.5 = 150%)
+mirror([1, 0, 0]) shape;               // mirror across YZ plane (use [0,1,0] for XZ, [0,0,1] for XY)
+```
+
+---
+
+## Boolean Operations
+
+```scad
+union() { shape1; shape2; }            // combine shapes
+difference() { base; subtract; }       // remove one shape from another
+intersection() { shape1; shape2; }     // keep only overlapping region
+```
+
+**Tip for difference():** Always make the subtracting shape 1 mm taller on both ends than the base shape to avoid zero-thickness artifacts.
+
+```scad
+// Example — box with a hole:
+difference() {
+    cube([30, 30, 10]);
+    translate([15, 15, -1]) cylinder(h = 12, r = 5);  // extends -1 to +11
+}
+```
+
+---
+
+## Variables
+
+```scad
+length = 70;      // define a variable
+width = 16;
+height = 5;
+
+cube([length, width, height]);    // use the variables
+cube([length * 2, width, height]); // math works too
+```
+
+---
+
+## Modules (Reusable Functions)
+
+```scad
+// Define a module:
+module my_box(l = 20, w = 15, h = 10) {
+    cube([l, w, h]);
+}
+
+// Call the module:
+my_box();               // uses all defaults
+my_box(30, 20, 8);     // positional arguments
+my_box(l = 50);         // named argument; others use defaults
+```
+
+---
+
+## Loops
+
+```scad
+// Repeat a shape N times:
+for (i = [0 : 4]) {         // i goes 0, 1, 2, 3, 4
+    translate([i * 20, 0, 0]) cube([15, 15, 5]);
+}
+
+// Step size:
+for (i = [0 : 5 : 20]) {   // i goes 0, 5, 10, 15, 20
+    translate([i, 0, 0]) sphere(r = 3);
+}
+```
+
+---
+
+## 2D Shapes (for extrusion)
+
+```scad
+circle(r = 10);            // 2D circle
+square([w, h]);            // 2D rectangle
+polygon([[0,0],[10,0],[5,10]]);  // arbitrary 2D shape
+
+// Extrude a 2D shape into 3D:
+linear_extrude(height = 5) circle(r = 10);  // makes a cylinder
+rotate_extrude() translate([15, 0]) circle(r = 3);  // makes a torus
+```
+
+---
+
+## Useful Functions
+
+```scad
+len([a, b, c])         // returns 3 (length of a vector)
+sqrt(25)               // returns 5
+pow(2, 8)              // returns 256 (2^8)
+abs(-5)                // returns 5
+min(3, 5, 1)           // returns 1
+max(3, 5, 1)           // returns 5
+```
+
+---
+
+## Comments
+
+```scad
+// Single-line comment
+
+/*
+  Multi-line
+  comment
+*/
+```
+
+---
+
+## Keyboard Shortcuts
+
+| Key | Action |
+|-----|--------|
+| F5 | Preview (fast) |
+| F6 | Full render (for export) |
+| Ctrl+S | Save |
+| Ctrl+Z | Undo |
+| F3 | Reset camera view |
+| F5 then scroll | Zoom with mouse |
+
+---
+
+## Export Workflow
+
+1. Press **F6** (full render — wait for it to complete)
+2. **File > Export > Export as STL**
+3. Save with a descriptive filename: `projectname_v2.stl`
+
+---
+
+## Sources
+
+OpenSCAD. (n.d.). *OpenSCAD cheatsheet*. https://openscad.org/cheatsheet/  
+OpenSCAD. (n.d.). *OpenSCAD documentation*. https://openscad.org/documentation.html  
+Gohde, J., & Kintel, M. (2021). *Programming with OpenSCAD*. No Starch Press. https://nostarch.com/programmingopenscad

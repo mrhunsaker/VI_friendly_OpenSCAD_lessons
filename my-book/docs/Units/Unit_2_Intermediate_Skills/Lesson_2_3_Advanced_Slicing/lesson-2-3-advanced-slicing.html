@@ -79,10 +79,10 @@
             const path_to_root = "../../../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../searchindex-9980aec5.js";
+            window.path_to_searchindex_js = "../../../searchindex-705389fb.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../../toc-953cb32a.js"></script>
+        <script src="../../../toc-3786228f.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -218,33 +218,47 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="lesson-23-advanced-slicing--supports-orientation--print-strength"><a class="header" href="#lesson-23-advanced-slicing--supports-orientation--print-strength">Lesson 2.3: Advanced Slicing — Supports, Orientation &amp; Print Strength</a></h1>
-<p><strong>Unit:</strong> 2 — Intermediate Skills<br><strong>Duration:</strong> 1–2 class periods<br><strong>Prerequisite:</strong> Lesson 0.6 (Intro to Slicing)</p>
-<hr>
-<h2 id="learning-objectives"><a class="header" href="#learning-objectives">Learning Objectives</a></h2>
-<p>By the end of this lesson, students will be able to:</p>
+                        <h1 id="lesson-23--advanced-slicing-self-paced"><a class="header" href="#lesson-23--advanced-slicing-self-paced">Lesson 2.3 — Advanced Slicing (Self-Paced)</a></h1>
+<p><strong>Accessibility:</strong> When including slicer previews, add short alt-text descriptions and provide a text-only walkthrough of the layer-preview steps for screen-reader users.</p>
+<p>Estimated time: 60–90 minutes (includes slicing and comparison)</p>
+<p>Learning objectives:</p>
 <ul>
-<li>Identify which features of a model require support structures</li>
-<li>Understand the 45-degree overhang rule</li>
-<li>Choose an optimal print orientation to minimize supports and maximize strength</li>
-<li>Compare the same model sliced in different orientations</li>
-<li>Use PrusaSlicer’s layer preview to diagnose potential print problems</li>
+<li>Determine when to use supports and which support style is best</li>
+<li>Choose print orientation for strength and surface quality</li>
+<li>Use PrusaSlicer preview to find potential printing problems</li>
 </ul>
-<hr>
-<h2 id="the-45-degree-overhang-rule"><a class="header" href="#the-45-degree-overhang-rule">The 45-Degree Overhang Rule</a></h2>
-<p>FDM printing builds layer by layer, from the bottom up. Each layer must rest on either:</p>
+<p>Materials:</p>
+<ul>
+<li>PrusaSlicer, a short test STL (T-bracket) or your own exported STL</li>
+</ul>
+<p>Step-by-step student tasks:</p>
 <ol>
-<li>The layer below it</li>
-<li>A support structure</li>
+<li>Obtain or export a T-shaped bracket STL from OpenSCAD.</li>
+<li>Import it into PrusaSlicer and slice it in three orientations: flat, upright, and on its side.</li>
+<li>For each orientation, record estimated print time and support volume (use the slice preview).</li>
+<li>Inspect the layer preview for floating geometry, thin walls, or problematic bridges; note any issues.</li>
+<li>Decide the best orientation for strength and minimal support; write a 1–2 sentence justification.</li>
 </ol>
-<p>An <strong>overhang</strong> is any surface that extends beyond the layer below. FDM printers can handle overhangs up to about <strong>45 degrees</strong> from vertical without supports, because each new layer has enough material below it to hold its position.</p>
-<p>Beyond 45 degrees, the print will sag, fail, or produce rough surfaces — unless you add supports.</p>
-<pre><code>OK (≤45°):       NEEDS SUPPORT (&gt;45°):
-                 
-    ████          ████████
-  ████          ████
-████           (hanging in air)
-</code></pre>
+<p>Checkpoint:</p>
+<ul>
+<li>Submit the three slice screenshots or exported G-code filenames and your orientation choice justification.</li>
+</ul>
+<p>Quiz — Lesson 2.3 (5 items):</p>
+<ol>
+<li>Short answer: What is the 45-degree rule? Why does it matter?</li>
+<li>Multiple choice: Which support style tends to use less material and be easier to remove? (A) Standard supports (B) Tree supports (C) Dense supports) — Answer: B</li>
+<li>Practical: Describe one situation where reorienting a model reduces required supports.</li>
+<li>Short answer: Why are FDM parts anisotropic (different strength directions)?</li>
+<li>Practical: In one sentence, justify the best orientation for a hook that must support weight.</li>
+</ol>
+<p>Extension problems (5):</p>
+<ol>
+<li>Experiment with tree supports and standard supports for the same model and document removal difficulty and surface quality.</li>
+<li>Slice a model with and without support enforcers (paint-on supports) and report differences.</li>
+<li>Create a small bracket that benefits from being split into two printed parts to reduce supports; document the assembly method.</li>
+<li>Try variable layer height (if your slicer supports it) and report on print time vs. surface finish.</li>
+<li>Write a short guide for a blind or low-vision peer describing how to inspect the slicer preview (what to narrate, where to look).</li>
+</ol>
 <h3 id="common-features-that-require-supports"><a class="header" href="#common-features-that-require-supports">Common Features That Require Supports</a></h3>
 <div class="table-wrapper">
 <table>
@@ -383,6 +397,7 @@ Load pulls at layers ↓   Load is parallel to layers
 <p>Markforged. (2021). <em>3D printing design tips</em>. https://markforged.com/resources/learn/design-for-additive-manufacturing-plastics-composites/3d-printing-strategies-for-composites/composites-3d-printing-design-tips</p>
 <p>Prusa Research. (2023). <em>PrusaSlicer knowledge base</em>. https://help.prusa3d.com/category/prusaslicer_204</p>
 <p>UAS@UCLA. (2024). <em>Prusa slicer</em>. https://uas.seas.ucla.edu/wiki/books/3d-printing/page/prusa-slicer</p>
+<p><strong>Accessibility:</strong> When including sample images or slicer screenshots, add a short alt-text description and provide a comment-based walkthrough for any example .scad files so screen-reader users can follow step-by-step.</p>
 
                     </main>
 

@@ -29,3 +29,7 @@ Assessment:
 - Project 0 is complete/incomplete. Submit `project0.scad`, the exported STL, and the completed documentation template.
 
 **Accessibility:** When including sample images or slicer screenshots, add a short alt-text description and provide a comment-based walkthrough for any example .scad files so screen-reader users can follow step-by-step.
+
+## Available .scad files for study
+
+- [project_0.scad](../docs/assets/Units/Unit_0_Foundations/project_0.scad)

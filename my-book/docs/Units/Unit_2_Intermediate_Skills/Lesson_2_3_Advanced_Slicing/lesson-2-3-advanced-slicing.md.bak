@@ -1,0 +1,36 @@
+````markdown
+# Lesson 2.3: Advanced Slicing — Supports, Orientation & Print Strength
+
+**Unit:** 2 — Intermediate Skills  
+**Duration:** 1–2 class periods  
+**Prerequisite:** Lesson 0.6 (Intro to Slicing)
+
+---
+
+## Learning Objectives
+
+By the end of this lesson, students will be able to:
+- Identify which features of a model require support structures
+- Understand the 45-degree overhang rule
+- Choose an optimal print orientation to minimize supports and maximize strength
+- Compare the same model sliced in different orientations
+- Use PrusaSlicer's layer preview to diagnose potential print problems
+
+---
+
+## The 45-Degree Overhang Rule
+
+FDM printing builds layer by layer, from the bottom up. Each layer must rest on either:
+1. The layer below it
+2. A support structure
+
+An **overhang** is any surface that extends beyond the layer below. FDM printers can handle overhangs up to about **45 degrees** from vertical without supports, because each new layer has enough material below it to hold its position.
+
+---
+
+## Practice Activity
+
+1. Design a simple T-shaped bracket in OpenSCAD and export as STL.
+2. Slice it three ways and record print time and support volume for each orientation.
+
+````

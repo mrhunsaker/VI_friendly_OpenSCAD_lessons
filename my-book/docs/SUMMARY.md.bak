@@ -1,0 +1,83 @@
+# Summary
+
+**Accessibility:** When including images or diagrams, add short alt-text and provide a comment-based walkthrough for any .scad examples so screen-reader users can follow the design steps.
+
+- [Syllabus](Syllabus.md)
+- [Introduction](README.md)
+
+# Getting Started
+- [How to Navigate This Book](Reference_Materials/mdbook-navigation-guide.md)
+- [VSCode Setup Guide](Reference_Materials/vscode-setup-guide.md)
+- [Screen Reader Coding Tips (NVDA & JAWS)](Reference_Materials/nvda-jaws-coding-tips.md)
+- [Terminology](Reference_Materials/terminology.md)
+
+# Foundations of Powershell
+- [Overview & Full Guide](PowerShell_Foundation/Powershell_Tutorial.md)
+- [Intro Lesson: Layout and Paths](PowerShell_Foundation/PS_0_getting_started_layout_paths.md)
+- [Lesson PS.1: Navigation](PowerShell_Foundation/PS_1_navigation.md)
+- [Lesson PS.2: File and Folder Manipulation](PowerShell_Foundation/PS_2_file_folder_manipulation_modification.md)
+- [Lesson PS.3: Input, Output, and Piping](PowerShell_Foundation/PS_3_input_output_piping.md)
+- [Lesson PS.4: Environment Variables and Aliases](PowerShell_Foundation/PS_4_environment_variables_aliases.md)
+- [Lesson PS.5: Filling in the Gaps](PowerShell_Foundation/PS_5_filling_in_the_gaps.md)
+- [Quiz 1: Navigation](PowerShell_Foundation/PS_Quiz_1.md)
+
+# Foundations of 3D Make
+- [3D Make Tutorial](3dMake_Foundation/3dMake_Tutorial.md)
+- [Lesson 1: Environmental Configuration and the Developer Workflow](3dMake_Foundation/Lessons_3dMake_1.md)
+- [Lesson 2: Geometric Primitives and the Mathematics of Constructive Solid Geometry](3dMake_Foundation/Lessons_3dMake_2.md)
+- [Lesson 3: Parametric Architecture and Modular Libraries](3dMake_Foundation/Lessons_3dMake_3.md)
+- [Lesson 4: AI-Enhanced Verification and Multimodal Feedback](3dMake_Foundation/Lessons_3dMake_4.md)
+- [Lesson 5: Safety Protocols and the Physical Fabrication Interface](3dMake_Foundation/Lessons_3dMake_5.md)
+
+# Foundations of 3D Printing
+- [Foundations of 3D Printing Overview](Units/Unit_0_Foundations/unit-0-overview.md)
+- [Lesson 0.1: Safety 	6 Printer Orientation](Units/Unit_0_Foundations/Lesson_0_1_Safety/lesson-0-1-safety.md)
+- [Safety Checklist](Units/Unit_0_Foundations/Lesson_0_1_Safety/safety-checklist.md)
+- [Lesson 0.2: How 3D Printing Works](Units/Unit_0_Foundations/Lesson_0_2_How_3D_Printing_Works/lesson-0-2-how-fdm-works.md)
+- [Lesson 0.3: Introduction to Calipers](Units/Unit_0_Foundations/Lesson_0_3_Intro_to_Calipers/lesson-0-3-calipers.md)
+- [Caliper Practice Worksheet](Units/Unit_0_Foundations/Lesson_0_3_Intro_to_Calipers/caliper-practice-worksheet.md)
+- [Lesson 0.4: OpenSCAD Part 1 	6 Primitives & Variables](Units/Unit_0_Foundations/Lesson_0_4_OpenSCAD_Part1/lesson-0-4-openscad-part1.md)
+- [Lesson 0.5: OpenSCAD Part 2 	6 Transforms & Booleans](Units/Unit_0_Foundations/Lesson_0_5_OpenSCAD_Part2/lesson-0-5-openscad-part2.md)
+- [Lesson 0.6: Introduction to Slicing](Units/Unit_0_Foundations/Lesson_0_6_Intro_to_Slicing/lesson-0-6-slicing.md)
+- [Unit 0 Quiz](Units/Unit_0_Foundations/quiz-unit-0.md)
+- [First Print Project](Extension_Projects/your-first-print.md)
+- [Practice Resizing](Extension_Projects/bonus_print.md)
+
+
+# 3D Printing Projects
+- [3D Printing Basics Overview](Units/Unit_1_Guided_Projects/unit-1-overview.md)
+- [Lesson 1.0: OpenSCAD Basics](Units/Unit_1_Guided_Projects/lesson_1_0.md)  
+- [Lesson 1.1: Primitives](Units/Unit_1_Guided_Projects/lesson_1_1.md)  
+- [Project 0: Your First 3D Print](Units/Unit_1_Guided_Projects/Project_0.md)  
+- [Lesson 1.2: Translations](Units/Unit_1_Guided_Projects/lesson_1_2.md)  
+- [Lesson 1.3: Debugging & Resolution](Units/Unit_1_Guided_Projects/lesson_1_3.md)  
+- [Project 1: Tactile Floor Markers](Units/Unit_1_Guided_Projects/Project_1.md)  
+- [Extension: Dice-Dice-Dice](Extension_Projects/dice-dice-dice.md)
+
+# Intermediate 3D Printing Skills
+- [Intermediate Skills Outline](Units/Unit_2_Intermediate_Skills/Lesson_2_1_Parametric_Design/lesson_2_outline.md)
+- [Lesson 2.1: Parametric Design & Modules](Units/Unit_2_Intermediate_Skills/Lesson_2_1_Parametric_Design/lesson-2-1-parametric-modules.md)
+- [Lesson 2.2: Tolerances & Fit](Units/Unit_2_Intermediate_Skills/Lesson_2_2_Tolerances_and_Fit/lesson-2-2-tolerances.md)
+- [Tolerance Test Design Sheet](Units/Unit_2_Intermediate_Skills/Lesson_2_2_Tolerances_and_Fit/tolerance-test-design.md)
+- [Lesson 2.3: Advanced Slicing](Units/Unit_2_Intermediate_Skills/Lesson_2_3_Advanced_Slicing/lesson-2-3-advanced-slicing.md)
+- [Lesson 2.4: Material Properties](Units/Unit_2_Intermediate_Skills/Lesson_2_4_Material_Properties/lesson-2-4-materials.md)
+
+# Open-Ended Application of 3D Printing Skills
+- [Lesson 3.1: Stakeholder Interviews & Functional Requirements](Units/Unit_3_Open_Ended_Projects/Lesson_3_1_Stakeholder_Interviews/lesson-3-1-stakeholder-interviews.md)
+- [Stakeholder Interview Worksheet](Units/Unit_3_Open_Ended_Projects/Lesson_3_1_Stakeholder_Interviews/stakeholder-interview-worksheet.md)
+- [Use 3D Print to Solve Real-Life Problems](Extension_Projects/your-second-print.md)
+
+# Project Templates
+- [Project 1 Documentation Template](Templates/project-1-documentation-template.md)  
+- [Project 2 Documentation Template](Templates/project-2-documentation-template.md)  
+- [Project 3 Documentation Template](Templates/project-3-documentation-template.md)  
+- [Project 4 Documentation Template](Templates/project-4-documentation-template.md)  
+ 
+# Reference Materials and Cheat Sheets
+- [OpenSCAD Cheat Sheet](Reference_Materials/openscad-cheat-sheet.md)
+- [Slicing Settings Quick Reference](Reference_Materials/slicing-settings-reference.md)
+- [Filament Comparison Table](Reference_Materials/filament-comparison-table.md)
+- [Measurement Worksheet](Reference_Materials/measurement-worksheet.md)
+- [Vocabulary Glossary](Reference_Materials/vocabulary-glossary.md)
+- [Master Rubric (0	69 Scale)](Reference_Materials/master-rubric.md)
+- [VSCode tasks.json Template](Reference_Materials/vscode-tasks.json)

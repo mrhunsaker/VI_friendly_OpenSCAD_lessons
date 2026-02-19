@@ -79,10 +79,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9980aec5.js";
+            window.path_to_searchindex_js = "../searchindex-705389fb.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-953cb32a.js"></script>
+        <script src="../toc-3786228f.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -218,75 +218,49 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="lesson-5-safety-protocols-and-the-physical-fabrication-interface"><a class="header" href="#lesson-5-safety-protocols-and-the-physical-fabrication-interface"><strong>Lesson 5: Safety Protocols and the Physical Fabrication Interface</strong></a></h1>
-<p>The final lesson moves students from purely digital workflows into the workshop, where a completed model becomes a physical object. While 3DMake streamlines the transition—coordinating render, slice, and print—the classroom context requires careful framing of risks, controls, and verification steps. Students must understand that each stage of the pipeline introduces new hazards: thermal and electrical risks from the printer hardware, chemical exposure from heated polymers, and geometric risks arising from flawed meshes that can cause unpredictable printing behavior.</p>
-<p>Chemical exposures from common filaments (ABS, PLA, PETG, nylon) are non-trivial. Heating thermoplastics emits Ultrafine Particles (UFPs) and Volatile Organic Compounds (VOCs) such as styrene and formaldehyde; concentration and composition depend on filament chemistry and extrusion temperature.12 Instructors should emphasize engineering mitigations (enclosures, HEPA/activated-carbon filtration, and adequate ventilation) and administrative measures (time-limited access, consumption-free build areas) before permitting hands-on printing. Students should also learn practical monitoring techniques: logging ambient air changes, checking enclosure filters, and recording filament lot and print temperatures when anomalous odors or sensor alerts occur.</p>
-<p>The course explicitly teaches the <strong>Hierarchy of Controls</strong> so students can prioritize interventions that remove or reduce hazards. The list below retains the original emphasis while providing operational detail:</p>
+                        <h1 id="lesson-5-safety-protocols-and-the-physical-fabrication-interface-self-paced"><a class="header" href="#lesson-5-safety-protocols-and-the-physical-fabrication-interface-self-paced">Lesson 5: Safety Protocols and the Physical Fabrication Interface (Self-Paced)</a></h1>
+<p><strong>Accessibility:</strong> When including images or diagrams, add short alt-text and provide a comment-based walkthrough for any .scad examples so screen-reader users can follow the design steps.</p>
+<p>Estimated time: 60–90 minutes</p>
+<p><strong>Learning Objectives</strong></p>
+<ul>
+<li>Describe the Hierarchy of Controls and apply it to a classroom maker-space</li>
+<li>Perform pre-print environmental and equipment checks</li>
+<li>Validate the digital-to-physical pipeline and document post-print inspection results</li>
+</ul>
+<p><strong>Materials</strong></p>
+<ul>
+<li>Classroom 3D printer, enclosure, and filtration (or documented lab SOP)</li>
+<li>Example parametric OpenSCAD project and slicer profile</li>
+</ul>
+<p>Step-by-step Tasks</p>
 <ol>
-<li><strong>Elimination/Substitution:</strong> Prefer lower-emission materials (for example, PLA instead of ABS where mechanical properties permit). Encourage design choices that avoid high-temperature-resistant filaments unless necessary, and select breakaway or soluble support systems that reduce manual post-processing.</li>
-<li><strong>Engineering Controls:</strong> Use enclosed printers with properly rated HEPA and activated-carbon filtration, position printers near exhaust or in rooms with measured air-change rates, and apply physical interlocks where possible to prevent access while the heater is active. Document filter change intervals and verify airflow rates as part of lab maintenance.</li>
-<li><strong>Administrative Controls:</strong> Implement written SOPs, require pre-print sign-offs for new designs, limit access during active prints, and mandate clear labeling of spool metadata (material, diameter, vendor, print temperature). Train students to log prints and report unexpected behaviors immediately.</li>
-<li><strong>Personal Protective Equipment (PPE):</strong> Use heat-resistant gloves and eye protection when removing parts and supports; wear appropriate respiratory protection when doing sanding or resin post-processing that generates fine particulates. PPE is the last line of defense and should supplement—never replace—engineering and administrative controls.</li>
+<li>Conduct a safety briefing: review the Hierarchy of Controls and locate safety equipment.</li>
+<li>Verify environmental controls and printer readiness: confirm filtration, bed adhesion, and spool metadata.</li>
+<li>Run <code>3dm build</code> and inspect the STL in a slicer; check layer-preview and non-manifold warnings.</li>
+<li>If using remote submission (OctoPrint), confirm camera monitoring and logging before any unattended prints.</li>
+<li>Obtain instructor sign-off and monitor the first layers in-person or via camera.</li>
+<li>After printing, wait for the part to cool (&lt; $30^\circ\text{C}$), measure critical dimensions, and record observations.</li>
 </ol>
-<p>The lesson also covers remote and networked workflows. Integrating OctoPrint (or similar print microservices) with 3DMake via <code>3dm print</code> introduces operational conveniences—and new responsibilities. Remote submissions require thoughtful monitoring policies: confirm camera-based observation is available, maintain a remote user log, and require an instructor or designated operator to be present during the first layers of any new profile. Because printers operate at high temperatures and draw substantial current, fire-safety procedures (clear access to extinguishers, known electrical cut-off points, and emergency shutdown drills) must be practiced and documented.</p>
-<p>Concluding the unit, students complete a full lifecycle exercise: author a parametric model, run the automated build pipeline, validate the STL in the slicer, and produce a supervised print. Emphasis is placed on pre-print verification and post-print inspection; the physical object becomes a focal point for reflective engineering: did the part meet dimensional expectations, were supports removable without damage, and what changes in code would improve the next iteration?</p>
-<h2 id="lesson-steps"><a class="header" href="#lesson-steps">Lesson steps</a></h2>
+<p>Checkpoints</p>
+<ul>
+<li>Completed environmental checklist and saved inspection notes in the project README.</li>
+</ul>
+<p>Quick Quiz (5)</p>
 <ol>
-<li>
-<p>Pre-class safety briefing and vocabulary check</p>
-<ul>
-<li>Review the <strong>Hierarchy of Controls</strong> and classroom SOPs; ensure students can explain why elimination and engineering controls are prioritized over PPE.</li>
-<li>Confirm that all students know the location of safety equipment: fire extinguisher, first-aid kit, and electrical shutoff.</li>
-</ul>
-</li>
-<li>
-<p>Environmental and equipment checks</p>
-<ul>
-<li>Verify ventilation and filtration units are operational and logged.</li>
-<li>Inspect the printer for loose wiring, damaged belts, and correct bed adhesion surface.</li>
-<li>Confirm the spool metadata (material, diameter, vendor) is recorded.</li>
-</ul>
-</li>
-<li>
-<p>Model and pipeline verification (digital-first)</p>
-<ul>
-<li>Run <code>3dm build</code> to generate the STL; inspect render logs for warnings.</li>
-<li>Open the STL in the slicer, run the layer-preview, and check for non-manifold regions or thin walls.</li>
-<li>If issues are found, iterate in OpenSCAD and re-run <code>3dm build</code> until the STL loads cleanly.</li>
-</ul>
-</li>
-<li>
-<p>Slicing and remote-submission rehearsal</p>
-<ul>
-<li>Slice with the approved classroom profile, export G-code to <code>build/</code>, and perform a final layer-preview.</li>
-<li>If using OctoPrint, perform a supervised test submission (no-extrusion dry-run if available) and confirm camera &amp; logging are active.</li>
-</ul>
-</li>
-<li>
-<p>Instructor sign-off and initial print monitoring</p>
-<ul>
-<li>Obtain instructor approval before starting the physical print.</li>
-<li>Observe the first few layers in-person or via camera feed; be prepared to pause or cancel on detection of adhesion failure, extrusion issues, or abnormal odors/smoke.</li>
-</ul>
-</li>
-<li>
-<p>Post-print procedures and documentation</p>
-<ul>
-<li>Allow the part to cool below $30^\circ\text{C}$ before removal.</li>
-<li>Perform a dimensional check with calipers and document observations in the project README.</li>
-<li>Safely remove supports, dispose of waste filaments per lab policy, and clean the build surface.</li>
-</ul>
-</li>
-<li>
-<p>Reflective iteration and optional automation</p>
-<ul>
-<li>Modify a parameter to address observed defects, produce a new build, and compare measurements.</li>
-<li>Optionally commit a build script or CI hook that runs <code>3dm build</code> on parameterized inputs for reproducible variants.</li>
-</ul>
-</li>
+<li>What are the four levels of the Hierarchy of Controls?</li>
+<li>Name two engineering controls useful for reducing emissions.</li>
+<li>Why must you monitor the first layers of a new print profile?</li>
+<li>Where should you record spool metadata and print observations?</li>
+<li>What is the safe cooldown temperature suggested before part removal?</li>
 </ol>
-<h2 id="references"><a class="header" href="#references"><strong>References</strong></a></h2>
-<p>Deck, T. (2025). <em>3DMake: A command-line tool for 3D printing workflows</em>. GitHub. <a href="https://github.com/tdeck/3dmake">https://github.com/tdeck/3dmake</a><br>Gohde, J., &amp; Kintel, M. (2021). <em>Programming with OpenSCAD: A beginner’s guide to coding 3D-printable objects</em>. No Starch Press.<br>Gonzalez Avila, J. F., Pietrzak, T., &amp; Casiez, G. (2024). <em>Understanding the challenges of OpenSCAD users for 3D printing</em>. Proceedings of the ACM Symposium on User Interface Software and Technology.<br>Google. (2025). <em>Vertex AI Gemini 3 Pro Preview: Getting started with generative AI</em>. <a href="https://docs.cloud.google.com/vertex-ai/generative-ai/docs/start/get-started-with-gemini-3">https://docs.cloud.google.com/vertex-ai/generative-ai/docs/start/get-started-with-gemini-3</a><br>National Institute for Occupational Safety and Health (NIOSH). (2024). <em>Approaches to safe 3D printing: A guide for makerspace users, schools, libraries, and small businesses</em>. <a href="https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html">https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html</a><br>Ohio State University Environmental Health and Safety. (2026). <em>3D printer safety concerns and ventilation</em>. <a href="https://ehs.osu.edu/kb/3d-printer-safety">https://ehs.osu.edu/kb/3d-printer-safety</a><br>Salt Lake City Public Library. (2026). <em>Creative Lab: Available hardware and 3D printing procedures</em>. <a href="https://services.slcpl.org/creativelab">https://services.slcpl.org/creativelab</a><br>Salt Lake County Library. (2026). <em>Create Spaces: Hardware specifications and filament fees</em>. <a href="https://www.slcolibrary.org/what-we-have/create">https://www.slcolibrary.org/what-we-have/create</a><br>University of Utah. (2026). <em>Marriott Library ProtoSpace and Maker hubs</em>. <a href="https://lib.utah.edu/protospace.php">https://lib.utah.edu/protospace.php</a><br>Washington State Department of Health. (2026). <em>3D printer and filament selection for safe school environments</em>. <a href="https://doh.wa.gov/community-and-environment/schools/3d-printers">https://doh.wa.gov/community-and-environment/schools/3d-printers</a></p>
+<p>Extension Problems (5)</p>
+<ol>
+<li>Draft a one-page SOP for start-to-finish supervised prints in your lab.</li>
+<li>Create a checklist script that verifies spool metadata and build settings before <code>3dm build</code> runs.</li>
+<li>Run a test print and log measured deviations; propose a parameter change to correct the error.</li>
+<li>Design an accessible post-print inspection checklist that non-visual users can follow.</li>
+<li>Research filtration options and recommend one for your classroom, including maintenance intervals.</li>
+</ol>
 <h2 id="works-cited"><a class="header" href="#works-cited"><strong>Works cited</strong></a></h2>
 <ol>
 <li>tdeck/3dmake: Non-visual 3D design and 3D printing tool - GitHub, accessed February 18, 2026, <a href="https://github.com/tdeck/3dmake">https://github.com/tdeck/3dmake</a></li>

@@ -79,10 +79,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9980aec5.js";
+            window.path_to_searchindex_js = "../searchindex-705389fb.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-953cb32a.js"></script>
+        <script src="../toc-3786228f.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -219,6 +219,7 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="ps-1-navigation--moving-around-your-file-system"><a class="header" href="#ps-1-navigation--moving-around-your-file-system">PS-1: Navigation — Moving Around Your File System</a></h1>
+<p><strong>Accessibility:</strong> When including images or diagrams, add short alt-text and provide a comment-based walkthrough for any .scad examples so screen-reader users can follow the design steps.</p>
 <p><strong>Duration:</strong> 1 class period
 <strong>Prerequisite:</strong> PS-0 (Getting Started)</p>
 <hr>
@@ -258,122 +259,44 @@
 <hr>
 <h2 id="cd--changing-directories"><a class="header" href="#cd--changing-directories"><code>cd</code> — Changing Directories</a></h2>
 <p><code>cd</code> stands for “change directory.”</p>
-<pre><code class="language-powershell"># Go to a folder by name (relative path — from where you are now)
-cd Documents
+<pre><code class="language-powershell"># PS-1: Navigation — Moving Around Your File System (Self-Paced)
 
-# Go to a folder by full path (absolute path)
-cd C:\Users\YourName\Documents
+Estimated time: 25–40 minutes
 
-# Go to your home directory
-cd ~
+**Learning Objectives**
+- Use `pwd` to confirm location
+- Use `cd` to move through relative and absolute paths
+- Use `ls -n` and wildcards to find files
 
-# Go up one level
-cd ../
+**Materials**
+- PowerShell
+- Editor
 
-# Go up two levels
-cd ../../
+Step-by-step Tasks
+1. Run `pwd` and read the returned path aloud.
+2. Move to `Documents` with `cd Documents`, confirm with `pwd`.
+3. Use `ls -n` and `ls -n -af` to list files only and directories only.
+4. Practice using `*` and `?` wildcards to list matching files.
+5. Return home with `cd ~`.
+
+Checkpoints
+- After task 2 you can state the path printed by `pwd`.
+
+Quick Quiz
+1. What does `pwd` show?
+2. How do you list directories only with `ls`?
+3. What wildcard matches any number of characters?
+4. How do you list files with the `.scad` extension?
+5. Give an example of an absolute path and a relative path.
+
+Extension Problems
+1. Write a one-line script that lists `.scad` files and saves to `scad_list.txt`.
+2. Use `ls -n ~/Documents | more` to page through long listings.
+3. Combine `ls` with `Select-String` to search for a filename pattern.
+4. Create a shortcut alias in the session for a long path and test it.
+5. Practice tab-completion in a directory with many similarly named files.
+## `ls` — Listing Files and Folders
 </code></pre>
-<p><strong>Relative vs. absolute paths:</strong></p>
-<ul>
-<li>A <strong>relative path</strong> starts from where you currently are: <code>cd Documents</code></li>
-<li>An <strong>absolute path</strong> starts from the root or home: <code>cd ~/Documents</code></li>
-</ul>
-<p>Both reach the same place if you are currently in your home folder. Relative paths are shorter to type; absolute paths work from anywhere.</p>
-<h3 id="practice-sequence"><a class="header" href="#practice-sequence">Practice sequence:</a></h3>
-<pre><code class="language-powershell">cd ~
-cd Documents
-pwd
-cd ../
-pwd
-cd ~
-</code></pre>
-<p>Listen to the output of each <code>pwd</code> to confirm where you are.</p>
-<hr>
-<h2 id="ls--listing-files-and-folders"><a class="header" href="#ls--listing-files-and-folders"><code>ls</code> — Listing Files and Folders</a></h2>
-<p><code>ls</code> shows the contents of your current directory. By default it shows a table with attributes, dates, sizes, and names — a lot of output.</p>
-<pre><code class="language-powershell">ls
-</code></pre>
-<h3 id="screen-reader-friendly-ls--n"><a class="header" href="#screen-reader-friendly-ls--n">Screen Reader Friendly: <code>ls -n</code></a></h3>
-<p>The <code>-n</code> flag tells <code>ls</code> to show <strong>names only</strong>. This is much easier to navigate with a screen reader.</p>
-<pre><code class="language-powershell">ls -n
-</code></pre>
-<h3 id="filtering-files-only-or-folders-only"><a class="header" href="#filtering-files-only-or-folders-only">Filtering: Files Only or Folders Only</a></h3>
-<pre><code class="language-powershell">ls -n -af   # show only files (not folders)
-ls -n -ad   # show only directories (not files)
-</code></pre>
-<h3 id="listing-a-specific-path"><a class="header" href="#listing-a-specific-path">Listing a Specific Path</a></h3>
-<p>You can <code>ls</code> a path without being in it:</p>
-<pre><code class="language-powershell">ls -n ~/Documents
-ls -n ~/Desktop
-</code></pre>
-<hr>
-<h2 id="relative-and-absolute-paths--summary"><a class="header" href="#relative-and-absolute-paths--summary">Relative and Absolute Paths — Summary</a></h2>
-<pre><code class="language-powershell"># You are currently in C:\Users\YourName
-
-# Relative — starts from current location
-cd Documents             # goes to C:\Users\YourName\Documents
-ls -n ./Documents        # lists Documents without moving
-
-# Absolute — starts from root or home
-cd ~/Documents           # same as above, from anywhere
-cd C:\Users\YourName\Documents   # same, fully explicit
-</code></pre>
-<hr>
-<h2 id="wildcards"><a class="header" href="#wildcards">Wildcards</a></h2>
-<p>Wildcards let you match multiple files at once without knowing their exact names.</p>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Wildcard</th><th>Matches</th></tr>
-</thead>
-<tbody>
-<tr><td><code>*</code></td><td>Zero or more characters</td></tr>
-<tr><td><code>?</code></td><td>Exactly one character</td></tr>
-</tbody>
-</table>
-</div>
-<p><strong>Examples:</strong></p>
-<pre><code class="language-powershell"># List all .scad files in current directory
-ls -n *.scad
-
-# List all files starting with "project"
-ls -n project*
-
-# List all files with exactly one character before .txt
-ls -n ?.txt
-</code></pre>
-<hr>
-<h2 id="practice"><a class="header" href="#practice">Practice</a></h2>
-<p>Complete these tasks:</p>
-<pre><code class="language-powershell"># 1. Print your current location
-pwd
-
-# 2. List the names of everything in your home directory
-ls -n ~
-
-# 3. Navigate to your Documents folder and confirm you are there
-cd ~/Documents
-pwd
-
-# 4. List only the folders in Documents
-ls -n -ad
-
-# 5. Go up one level and confirm
-cd ../
-pwd
-
-# 6. Return home
-cd ~
-</code></pre>
-<hr>
-<h2 id="check-for-understanding"><a class="header" href="#check-for-understanding">Check for Understanding</a></h2>
-<ol>
-<li>What command shows you where you are?</li>
-<li>What is the difference between <code>cd Documents</code> and <code>cd ~/Documents</code>?</li>
-<li>What flag makes <code>ls</code> show only names?</li>
-<li>How would you list only the <code>.scad</code> files in your current folder?</li>
-<li>If you are in <code>~/Documents/OpenSCAD_Projects</code> and you type <code>cd ../../</code>, where do you end up?</li>
-</ol>
 
                     </main>
 

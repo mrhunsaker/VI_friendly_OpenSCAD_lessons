@@ -1,0 +1,172 @@
+# Terminology
+
+**Accessibility:** When including images or diagrams, add short alt-text and provide a comment-based walkthrough for any .scad examples so screen-reader users can follow the design steps.
+
+
+## How to Use This Terminology File
+
+- Review the glossary before lessons that reference terms (e.g., the
+  OpenSCAD lessons, Make3D build walkthroughs, and PowerShell guides).
+- Encourage students to keep a personal glossary when they encounter
+  new words during projects and prototyping.
+- Maintain and extend this file as new tools or workflows are adopted.
+
+## General Terms
+Shape - Any graphical 2D or 3D object created by OpenSCAD.
+Design - An OpenSCAD creation (an OpenSCAD program) which usually
+  consists of a combination of multiple shapes and operations.
+Operation - An OpenSCAD command that changes the appearance or
+  properties of one or more shapes (for example translate(), rotate(),
+  difference(), union()).
+Parameter - A named value passed into a module, function, or used as a
+  variable to control dimensions and behavior.
+Preview - A fast, approximate display of a design in OpenSCAD used for
+  checking structure before full render.
+Render - Full evaluation of a design's geometry in OpenSCAD; required
+  before exporting to an STL for printing.
+Units - The measurement units used in designs. OpenSCAD is unitless by
+  default, but in 3D printing contexts millimeters are conventionally
+  used; be explicit about units when sharing models.
+Width / Length / Height - X, Y, and Z axis dimensions respectively.
+2D shape - A planar geometry with width and length but negligible
+  height (e.g., a 2D profile used for extrusion).
+3D shape - A solid geometry with width, length, and height.
+
+---
+
+## 3D Printing Terminology
+
+Layer Height - The vertical thickness of each printed layer, typically
+  measured in millimeters; smaller values give finer Z resolution.
+Nozzle (Extruder) - The heated tip on the printer that melts filament
+  and deposits it onto the print surface.
+Filament - Thermoplastic material supplied as a long strand (e.g., PLA,
+  PETG, ABS, TPU) used by FDM printers.
+Infill - The internal lattice or pattern printed inside a solid object to
+  provide strength while saving material; expressed as a percentage.
+Shell (Wall) - The outer perimeters printed around each layer that form
+  the visible surface and structural walls of a part.
+Brim / Raft / Skirt - Temporary structures printed to improve bed
+  adhesion or prime the extruder; removed after printing.
+Retraction - A printer motion that withdraws filament to reduce ooze
+  when moving between print areas.
+Overhang - A portion of a model that extends outward such that it has
+  little or no support underneath; critical for printability.
+Support - Additional printed material used to hold up overhangs during
+  printing; removed after printing (manually or dissolvable).
+Bed Adhesion - Methods and materials used to keep the first layer
+  attached to the build plate (tape, glue stick, PEI, heated bed).
+Print Speed - The rate at which the printer moves while extruding;
+  faster speeds reduce time but can reduce print quality.
+Layer Cooling - Use of fans to cool freshly extruded plastic; affects
+  bridging and overhang quality.
+G-code - The low-level instructions sent to a 3D printer describing
+  moves, extrusion, temperatures, and other commands.
+STL - A common 3D model file format (surface tessellation) used for
+  3D printing; does not hold scale or unit metadata.
+Slicing - The process of converting a 3D model (e.g., STL) into per-layer
+  toolpaths and G-code for a specific printer and filament.
+Print Bed / Build Plate - The surface on which prints are produced.
+Warping - Distortion caused by uneven cooling, often lifting corners
+  from the build plate; mitigated by bed adhesion and enclosure.
+Calibration - The process of adjusting printer settings (e.g., steps/mm,
+  nozzle height) to ensure accurate prints.
+
+---
+
+## OpenSCAD-Specific Terms
+
+Module - A reusable block of OpenSCAD code defined with `module name(){}`
+  which can be called with different parameters to produce geometry.
+Function - A small, parameterized computation defined with `function`
+  that returns a value used in modules or expressions.
+Boolean Operations - `union()`, `difference()`, `intersection()` used to
+  combine or subtract solids.
+Transform - Operations that change object position or orientation,
+  including `translate()`, `rotate()`, and `scale()`.
+Children - In module calls, the nested code that becomes part of the
+  module's execution context when using `children()`.
+CSG (Constructive Solid Geometry) - The technique of building complex
+  shapes by combining primitive solids with boolean operations.
+Primitive - Simple built-in shapes like `cube()`, `cylinder()`,
+  `sphere()`, and `polyhedron()`.
+Linear Extrusion - `linear_extrude()` which creates a 3D shape from
+  a 2D profile by extruding along the Z axis.
+Rotate_extrude - `rotate_extrude()` which sweeps a 2D profile around
+  an axis to form rotationally symmetric solids.
+Children() - A special OpenSCAD construct that allows a module to
+  render nested content passed into it.
+Preview vs Render - Preview is quick and approximate; render (`F6`)
+  evaluates the final geometry for export.
+Parameterization - Designing with variables and parameters so that a
+  single file can generate many variants by changing inputs.
+
+---
+
+## 3dMake / Make3D Terminology (CLI-based toolchain concepts)
+
+3dMake (Make3D) - A command-line workflow or helper scripts that
+  automate building, slicing, and managing OpenSCAD-based projects.
+Build Script - A script that automates repetitive steps (rendering,
+  slicing, packaging) for reproducible builds.
+Pipeline - The sequence of steps from source (.scad) to final G-code
+  (render -> export STL -> slice -> generate G-code).
+Artifacts - Files produced by the build pipeline (STL, G-code, logs).
+Parameter File - External file (JSON, TOML, or similar) that provides
+  default parameter values to feed into OpenSCAD builds.
+Headless Render - Running OpenSCAD from the command line (no GUI)
+  to render models and export STLs programmatically.
+Automation - Using scripts or CI to produce builds and test changes
+  without manual GUI interaction.
+
+---
+
+## PowerShell Terminology (relevant to automation and workflows)
+
+PowerShell - A task automation and configuration management framework
+  from Microsoft that uses cmdlets and a scripting language.
+Cmdlet - A lightweight command in PowerShell (e.g., `Get-ChildItem`,
+  `Set-ExecutionPolicy`) with structured input and output.
+Script - A `.ps1` file containing PowerShell commands, functions, and
+  logic used to automate tasks.
+Module (PowerShell) - A package of functions, cmdlets, or scripts that
+  can be imported with `Import-Module`.
+Pipeline (PowerShell) - Passing the output of one cmdlet as the input
+  to another using the `|` operator for chained processing.
+Object - PowerShell passes rich objects (not plain text) between
+  commands, enabling structured data manipulation.
+PSProvider - A PowerShell interface that exposes data stores as drives
+  (e.g., `HKLM:`, `Variable:`), enabling uniform access.
+Execution Policy - Security setting controlling whether scripts can
+  run on a machine (e.g., `Restricted`, `RemoteSigned`).
+Cmdlet Parameters - Named options passed to cmdlets (e.g., `-Path`,
+  `-Recurse`) to customize behavior.
+Remote Session - Using `Enter-PSSession` or `Invoke-Command` to run
+  commands on a remote system.
+Error Handling - Using `try{ } catch { } finally { }` and `$Error`
+  variables to handle script failures gracefully.
+Splatting - Passing a collection of parameters to a cmdlet using `@{}`
+  or `@array` for cleaner code.
+Format-Table / Format-List - Cmdlets for controlling how objects are
+  displayed in the console; for automation prefer raw objects to
+  formatted text.
+
+---
+
+## Testing, Documentation, and Workflow Terms
+
+Linting - Static analysis to detect style or simple errors in code
+  (e.g., PowerShell Script Analyzer).
+Unit / Integration Test - Automated checks that verify functions or
+  the build pipeline produce expected outputs.
+Versioning - Tracking changes to files (git) to manage collaboration
+  and releases.
+Release Assets - Packaged files attached to a release (useful for
+  distributing large binaries or fonts without committing them to the
+  repository).
+Accessibility (a11y) - Ensuring materials and workflows work for
+  people using assistive technology (screen readers, braille displays,
+  keyboard navigation).
+
+---
+

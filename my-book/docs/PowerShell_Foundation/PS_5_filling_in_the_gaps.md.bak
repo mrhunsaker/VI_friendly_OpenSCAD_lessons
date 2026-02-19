@@ -1,0 +1,38 @@
+
+# PS-5: Filling in the Gaps — Control Flow, Profiles, and Useful Tricks (Self-Paced)
+
+Estimated time: 30–45 minutes
+
+**Learning Objectives**
+- Use history and abort commands (`history`, `Ctrl+C`)
+- Inspect and edit your PowerShell profile for persistent settings
+- Run programs by full path using the `&` operator
+- Handle common screen reader edge cases when using the terminal
+
+**Materials**
+- PowerShell and an editor (Notepad/VS Code)
+
+Step-by-step Tasks
+1. Run several simple commands (e.g., `pwd`, `ls -n`, `echo hi`) then run `history` to view them.
+2. Use `Invoke-History <n>` to re-run a previous command (replace `<n>` with a history number).
+3. Practice aborting a long-running command with `Ctrl + C` (for example, `ping 8.8.8.8`).
+4. Open your profile: `notepad.exe $PROFILE`; if it doesn't exist, create it: `ni $PROFILE -Force`.
+5. Add a persistent alias line to your profile (example: `Set-Alias -Name preview -Value openscad`), save, and reopen PowerShell to verify.
+
+Checkpoints
+- After step 2 you can re-run a recent command by history number.
+- After step 5 your alias should persist across sessions.
+
+Quick Quiz (5)
+1. How do you view the command history?
+2. Which key combination aborts a running command?
+3. What does `echo $PROFILE` show?
+4. How does the `&` operator help run executables?
+5. What is one strategy if terminal output stops being announced by your screen reader?
+
+Extension Problems (5)
+1. Add an alias and an environment variable change to your profile and document the behavior after reopening PowerShell.
+2. Create a short script that automates creating a project folder and an initial .scad file.
+3. Experiment with running OpenSCAD by full path using `&` and by placing it in PATH; compare results.
+4. Practice redirecting `Get-Help` output to a file and reading it in Notepad for screen reader clarity.
+5. Document three screen reader troubleshooting steps you used and when they helped.

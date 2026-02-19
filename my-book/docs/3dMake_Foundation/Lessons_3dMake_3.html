@@ -79,10 +79,10 @@
             const path_to_root = "../";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-9980aec5.js";
+            window.path_to_searchindex_js = "../searchindex-705389fb.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-953cb32a.js"></script>
+        <script src="../toc-3786228f.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -218,71 +218,49 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="lesson-3-parametric-architecture-and-modular-libraries"><a class="header" href="#lesson-3-parametric-architecture-and-modular-libraries"><strong>Lesson 3: Parametric Architecture and Modular Libraries</strong></a></h1>
-<p>This lesson demonstrates the practical power of parameterization and modular design in programmatic CAD. Rather than hard-coding dimensions, students are taught to define named parameters at the top of their scripts (for example, <code>wall_thickness = 2.5</code>) and propagate those parameters through primitives and modules. This practice enables rapid exploration: changing a single variable produces predictable variants of a model without manual editing of every feature, which encourages experimentation and a data-driven design mindset.</p>
-<p>The curriculum also introduces the value of curated libraries and dependency management. 3DMake can automatically fetch, pin, and include external libraries (for example, BOSL) so students can reuse battle-tested primitives for threads, gears, and geometric utilities. Teaching students to <code>include &lt;library_name&gt;</code> or <code>use &lt;library_name&gt;</code> reinforces software-engineering best practices: reuse instead of reimplement, prefer well-documented modules, and version-control library dependencies to ensure reproducible builds across machines.</p>
-<p>Pedagogically, the lesson foregrounds readability, testability, and parameter documentation. Students are encouraged to document each top-level parameter with a one-line description and an expected unit, add default ranges for common classroom materials, and include simple unit tests: small render checks that build an STL at a reduced resolution to confirm geometry compiles. These habits reduce debugging time and make collaborative projects tractable when multiple students modify the same project scaffold.</p>
-<p>The following commands and examples are used as in-class references:</p>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th style="text-align: left">Command</th><th style="text-align: left">Purpose</th><th style="text-align: left">Instructional Context</th></tr>
-</thead>
-<tbody>
-<tr><td style="text-align: left">include &lt;bosl/constants.scad&gt;</td><td style="text-align: left">Global Variables</td><td style="text-align: left">Importing standard engineering constants.1</td></tr>
-<tr><td style="text-align: left">use &lt;bosl/shapes.scad&gt;</td><td style="text-align: left">Module Access</td><td style="text-align: left">Accessing complex shapes like pyramids or fillets.1</td></tr>
-<tr><td style="text-align: left">3dm build slice</td><td style="text-align: left">Multi-stage Pipeline</td><td style="text-align: left">Combining rendering and slicing into one command.1</td></tr>
-</tbody>
-</table>
-</div>
-<p>A key second-order insight in this lesson is the concept of “Abstraction.” By creating their own module (the OpenSCAD equivalent of a function), students can define a complex object once and “call” it multiple times with different parameters.3 For example, a student might create a <code>leg(height, thickness)</code> module and then call it four times to create a table, demonstrating the efficiency of code reuse over manual duplication.</p>
-<h2 id="lesson-steps"><a class="header" href="#lesson-steps">Lesson steps</a></h2>
+                        <h1 id="lesson-3-parametric-architecture-and-modular-libraries-self-paced"><a class="header" href="#lesson-3-parametric-architecture-and-modular-libraries-self-paced">Lesson 3: Parametric Architecture and Modular Libraries (Self-Paced)</a></h1>
+<p><strong>Accessibility:</strong> When including images or diagrams, add short alt-text and provide a comment-based walkthrough for any .scad examples so screen-reader users can follow the design steps.</p>
+<p>Estimated time: 60 minutes</p>
+<p><strong>Learning Objectives</strong></p>
+<ul>
+<li>Define and document top-level parameters and use them to drive model variants</li>
+<li>Create reusable modules and import a library module into a project</li>
+<li>Produce and test low-resolution renders and export a working STL</li>
+</ul>
+<p><strong>Materials</strong></p>
+<ul>
+<li>A 3dMake project scaffold with <code>src/main.scad</code></li>
+<li>Example library (e.g., BOSL) available in <code>lib/</code> or classroom assets</li>
+</ul>
+<p>Step-by-step Tasks</p>
 <ol>
-<li>
-<p>Confirm project scaffold and parameters</p>
-<ul>
-<li>Run <code>3dm new</code> (or open the classroom scaffold) and inspect <code>src/main.scad</code> for existing parameter definitions.</li>
-<li>Add or edit three top-level parameters (for example, <code>wall_thickness</code>, <code>hole_diameter</code>, <code>socket_depth</code>) and document each with a brief inline comment and units.</li>
-</ul>
-</li>
-<li>
-<p>Use a library and import one module</p>
-<ul>
-<li>Add an <code>include &lt;bosl/constants.scad&gt;</code> or an equivalent classroom-approved library to the top of <code>main.scad</code>.</li>
-<li>Call a simple library module (for example a threaded nut or rounded corner helper) inside a small test block and run <code>3dm build</code> to ensure the library resolves correctly.</li>
-</ul>
-</li>
-<li>
-<p>Create a parametric module</p>
-<ul>
-<li>Implement a <code>module bracket(width, height, thickness)</code> that composes primitives and boolean operations.</li>
-<li>Use internal variables for fillet radius or mounting-hole offsets derived from the top-level parameters.</li>
-</ul>
-</li>
-<li>
-<p>Test with targeted renders</p>
-<ul>
-<li>Render a low-resolution preview (<code>$fn</code> reduced) to confirm shape topology; if the render fails, simplify the module and re-run until successful.</li>
-<li>Export the STL to <code>build/</code> and inspect in the slicer for obvious mesh problems.</li>
-</ul>
-</li>
-<li>
-<p>Produce variants and record results</p>
-<ul>
-<li>Adjust a top-level parameter (for example, increase <code>wall_thickness</code> by 25%) and rerun <code>3dm build</code> to produce a variant.</li>
-<li>Measure and record dimensional changes with calipers and update the project README with observations.</li>
-</ul>
-</li>
-<li>
-<p>Refactor into reusable library code</p>
-<ul>
-<li>If the module proves broadly useful, move it into a <code>lib/</code> folder and add a short usage example.</li>
-<li>Add a <code>README</code> for the library describing parameter meanings and expected units; commit to version control with an explanatory message.</li>
-</ul>
-</li>
+<li>Open <code>src/main.scad</code> and add three top-level parameters (with units) at the top of the file.</li>
+<li>Implement a simple <code>module bracket(width, height, thickness)</code> that composes primitives and boolean operations.</li>
+<li>Include a library module (e.g., <code>include &lt;bosl/constants.scad&gt;</code>) and call a small helper from it; run <code>3dm build</code>.</li>
+<li>Produce a low-resolution render to confirm topology, then export an STL and inspect it in a slicer.</li>
+<li>Refactor the module into <code>lib/</code> with a short README and a usage example.</li>
 </ol>
-<h2 id="references"><a class="header" href="#references"><strong>References</strong></a></h2>
-<p>Deck, T. (2025). <em>3DMake: A command-line tool for 3D printing workflows</em>. GitHub. <a href="https://github.com/tdeck/3dmake">https://github.com/tdeck/3dmake</a><br>Gohde, J., &amp; Kintel, M. (2021). <em>Programming with OpenSCAD: A beginner’s guide to coding 3D-printable objects</em>. No Starch Press.<br>Gonzalez Avila, J. F., Pietrzak, T., &amp; Casiez, G. (2024). <em>Understanding the challenges of OpenSCAD users for 3D printing</em>. Proceedings of the ACM Symposium on User Interface Software and Technology.<br>Google. (2025). <em>Vertex AI Gemini 3 Pro Preview: Getting started with generative AI</em>. <a href="https://docs.cloud.google.com/vertex-ai/generative-ai/docs/start/get-started-with-gemini-3">https://docs.cloud.google.com/vertex-ai/generative-ai/docs/start/get-started-with-gemini-3</a><br>National Institute for Occupational Safety and Health (NIOSH). (2024). <em>Approaches to safe 3D printing: A guide for makerspace users, schools, libraries, and small businesses</em>. <a href="https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html">https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html</a><br>Ohio State University Environmental Health and Safety. (2026). <em>3D printer safety concerns and ventilation</em>. <a href="https://ehs.osu.edu/kb/3d-printer-safety">https://ehs.osu.edu/kb/3d-printer-safety</a><br>Salt Lake City Public Library. (2026). <em>Creative Lab: Available hardware and 3D printing procedures</em>. <a href="https://services.slcpl.org/creativelab">https://services.slcpl.org/creativelab</a><br>Salt Lake County Library. (2026). <em>Create Spaces: Hardware specifications and filament fees</em>. <a href="https://www.slcolibrary.org/what-we-have/create">https://www.slcolibrary.org/what-we-have/create</a><br>University of Utah. (2026). <em>Marriott Library ProtoSpace and Maker hubs</em>. <a href="https://lib.utah.edu/protospace.php">https://lib.utah.edu/protospace.php</a><br>Washington State Department of Health. (2026). <em>3D printer and filament selection for safe school environments</em>. <a href="https://doh.wa.gov/community-and-environment/schools/3d-printers">https://doh.wa.gov/community-and-environment/schools/3d-printers</a></p>
+<p>Checkpoints</p>
+<ul>
+<li>After step 2 you have a parametric module you can call with different arguments.</li>
+</ul>
+<p>Quick Quiz (5)</p>
+<ol>
+<li>What is a parametric module and why is it useful?</li>
+<li>How do you include an external library in OpenSCAD?</li>
+<li>What is one advantage of moving code into <code>lib/</code>?</li>
+<li>How can you test a module quickly without a full high-resolution render?</li>
+<li>Name one safety or documentation step to include when producing a reusable module.</li>
+</ol>
+<p>Extension Problems (5)</p>
+<ol>
+<li>Create a module for a mounting bracket with parameters for hole size and spacing; publish a usage example.</li>
+<li>Use a library module to add a fillet and compare the final STL before and after.</li>
+<li>Produce three variants by changing a parameter and record estimated print times.</li>
+<li>Move a working module into <code>lib/</code> and commit with a clear commit message.</li>
+<li>Write a short README for your module describing parameter ranges and expected units.
+Washington State Department of Health. (2026). <em>3D printer and filament selection for safe school environments</em>. <a href="https://doh.wa.gov/community-and-environment/schools/3d-printers">https://doh.wa.gov/community-and-environment/schools/3d-printers</a></li>
+</ol>
 <h4 id="works-cited"><a class="header" href="#works-cited"><strong>Works cited</strong></a></h4>
 <ol>
 <li>tdeck/3dmake: Non-visual 3D design and 3D printing tool - GitHub, accessed February 18, 2026, <a href="https://github.com/tdeck/3dmake">https://github.com/tdeck/3dmake</a></li>

@@ -1,0 +1,36 @@
+# PS-4: Environment Variables, PATH, and Aliases (Self-Paced)
+
+Estimated time: 30–45 minutes
+
+**Learning Objectives**
+- Read environment variables with `$env:VARNAME`
+- Inspect and verify programs in the `PATH`
+- Create temporary aliases and understand making them persistent via the profile
+
+**Materials**
+- PowerShell (with rights to open profile if desired)
+
+Step-by-step Tasks
+1. Show your username and home path with `echo $env:USERNAME` and `echo $env:USERPROFILE`.
+2. Inspect `echo $env:PATH` and identify whether `openscad` or `code` would be found.
+3. Run `Get-Command openscad` and note the result.
+4. Create a temporary alias: `Set-Alias -Name preview -Value openscad` and test `preview myfile.scad`.
+5. Open your profile (`notepad.exe $PROFILE`) and add the alias line to make it persistent (advanced).
+
+Checkpoints
+- After step 3 you can determine whether a program will be found by `PATH`.
+
+Quick Quiz
+1. How do you print an environment variable?
+2. What is the purpose of `PATH`?
+3. How do you check whether `openscad` is available?
+4. How do you create a temporary alias?
+5. Where would you make an alias permanent?
+
+Extension Problems
+1. Add a folder to PATH for a test program (describe steps; do not change system PATH without admin).
+2. Create a short profile snippet that sets two aliases and test re-opening PowerShell.
+3. Use `Get-Command` to list the path for several common programs.
+4. Explore `$env:TEMP` and create a file there.
+5. Save a copy of your current PATH to a text file and examine it in your editor.
+

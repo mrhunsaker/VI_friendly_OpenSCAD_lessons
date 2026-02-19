@@ -1,0 +1,45 @@
+# PS-0: Getting Started — Layout, Paths, and the Shell (Self-Paced)
+
+Estimated time: 20–30 minutes
+
+**Learning Objectives**
+- Launch PowerShell and locate the prompt
+- Understand path notation and shortcuts (`~`, `./`, `../`)
+- Use tab completion to navigate quickly
+
+**Materials**
+- Computer with PowerShell
+- Editor (Notepad/VS Code)
+
+Step-by-step Tasks
+1. Open PowerShell and note the prompt (it includes the current path).
+2. Run `pwd` and say or note the printed path.
+3. Use `ls -n` to list names in your home directory.
+4. Practice `cd Documents`, `cd ../` and `cd ~` until comfortable.
+5. Try tab-completion: type `cd ~/D` and press Tab.
+
+Checkpoints
+- Confirm you can state your current path and move to `Documents`.
+
+Quick Quiz
+1. What is a path?
+2. What does `~` mean?
+3. How do you autocomplete a path?
+4. How do you go up one directory?
+5. What command lists only names (`ls` flag)?
+
+Extension Problems
+1. Create a nested folder and practice `cd` into it by typing partial names and using Tab.
+2. Use `ls -n -af` to list only files in a folder.
+3. Save `pwd` output to a file and open it in Notepad.
+4. Try `cd` into a folder whose name contains spaces; observe how quotes are handled.
+5. Create a short note file and open it from PowerShell.
+
+## Check for Understanding
+
+Answer these before moving on:
+
+1. What is a path?
+2. What does `~` represent?
+3. What key do you press to autocomplete a path?
+4. If you are in `C:\Users\YourName\Documents` and you type `cd ../`, where do you end up?

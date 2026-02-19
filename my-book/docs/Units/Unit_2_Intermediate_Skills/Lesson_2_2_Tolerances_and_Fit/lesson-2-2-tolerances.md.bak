@@ -1,0 +1,36 @@
+````markdown
+# Lesson 2.2: Tolerances & Fit in 3D Printing
+
+**Unit:** 2 — Intermediate Skills  
+**Duration:** 1–2 class periods (plus a print session)  
+**Prerequisite:** Lesson 2.1; understanding of calipers (Lesson 0.3)
+
+---
+
+## Learning Objectives
+
+By the end of this lesson, students will be able to:
+- Explain why 3D printed objects do not exactly match their designed dimensions
+- Define tolerance, clearance, and the three types of fit (clearance, transition, interference)
+- Design and print a tolerance test part to characterize their specific printer
+- Apply appropriate tolerance values when designing parts that must fit together
+- Understand why holes in printed parts are always slightly undersized
+
+---
+
+## The Problem: Your Print Won't Be Exactly the Right Size
+
+When you type `cube([20, 20, 20])` in OpenSCAD, you expect a 20 mm cube. In practice, **FDM printing introduces small dimensional errors** — typically ±0.1 to ±0.3 mm for a desktop printer.
+
+This matters enormously when designing parts that:
+- Must fit over, around, or inside another object
+- Must snap or press together with another printed part
+- Must slide freely against another surface
+
+---
+
+## Tolerance Test Design
+
+This lesson includes a printable tolerance test (separate file). Print it, test peg/hole fits, and record your results.
+
+````

@@ -1,0 +1,108 @@
+````markdown
+# Lesson 2.1: Parametric Design & Modules in OpenSCAD
+
+**Unit:** 2 — Intermediate Skills  
+**Duration:** 1–2 class periods  
+**Prerequisite:** Unit 0 (all lessons) and Unit 1 (Projects 0 and 1 complete)
+
+---
+
+## Learning Objectives
+
+By the end of this lesson, students will be able to:
+- Explain what "parametric design" means and why it matters
+- Define a `module` in OpenSCAD with parameters
+- Call a module with different values to generate variations
+- Refactor an existing design to use modules
+- Recognize when a module would simplify repeated design elements
+
+---
+
+## What Is Parametric Design?
+
+When you store a dimension in a variable, you've taken your first step toward parametric design. **Parametric design** means building your model around adjustable parameters so that a single change automatically updates the whole design.
+
+**Example without parametric thinking:**
+
+```scad
+cube([70, 16, 5]);
+translate([0, 20, 0]) cube([70, 16, 5]);
+translate([0, 40, 0]) cube([70, 16, 5]);
+```
+
+If you want to change the width from 16 to 20, you must edit three places. If you have 30 of these, that's 30 edits — and you'll probably miss one.
+
+**Example with parametric thinking:**
+
+```scad
+w = 16;  // change this one number to update the whole design
+cube([70, w, 5]);
+translate([0, 20, 0]) cube([70, w, 5]);
+translate([0, 40, 0]) cube([70, w, 5]);
+```
+
+Better — but there's still a lot of repetition. That's where **modules** come in.
+
+---
+
+## Modules
+
+A **module** is a reusable block of code. You define it once, give it a name, and then call it by name as many times as you need.
+
+### Basic Module Syntax
+
+```scad
+module my_module_name() {
+    // your shapes here
+    cube([10, 10, 10]);
+}
+
+// Call the module:
+my_module_name();
+```
+
+### Module with Parameters
+
+```scad
+module floor_marker(length, width, height) {
+    cube([length, width, height]);
+}
+
+// Call with different sizes:
+floor_marker(70, 16, 5);
+translate([0, 30, 0]) floor_marker(50, 12, 3);
+```
+
+---
+
+## Practice: Build a Parametric Box Set
+
+Design a module called `storage_box` that accepts `length`, `width`, `height`, and `wall_thickness` as parameters. The module should create a hollow box (open on top) using `difference()`.
+
+Then call your module three times with different sizes to create a small, medium, and large box arranged side by side.
+
+**Starter code:**
+
+```scad
+module storage_box(length = 40, width = 30, height = 20, wall = 2) {
+    difference() {
+        // outer shell
+        cube([length, width, height]);
+        
+        // inner hollow (remove the inside, keep the walls and bottom)
+        translate([wall, wall, wall])
+            cube([length - 2*wall, width - 2*wall, height]);
+    }
+}
+
+// Small box
+storage_box(30, 20, 15);
+
+// Medium box — position it next to the small one
+translate([35, 0, 0]) storage_box(40, 30, 20);
+
+// Large box — fill in the parameters yourself
+translate([80, 0, 0]) storage_box(/* your values */);
+```
+
+````
