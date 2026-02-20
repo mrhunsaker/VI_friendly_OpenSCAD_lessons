@@ -20,11 +20,9 @@
 - [PS-5: Filling in the Gaps - Control Flow, Profiles, and Useful Tricks](PowerShell_Foundation/PS_5_filling_in_the_gaps/PS_5_filling_in_the_gaps.md)
 # Advanced Level - Professional Workflows
 - [PS-6: Advanced Terminal Techniques - Scripts, Functions & Professional Workflows](PowerShell_Foundation/PS_6_Advanced_Techniques/PS_6_Advanced_Techniques.md)
-
 # Reference & Tutorial
 - [Introduction to Command Line Interfaces](PowerShell_Foundation/Powershell_Introduction/Powershell_Introduction.md)
 - [PowerShell Overview & Full Guide](PowerShell_Foundation/Powershell_Tutorial/Powershell_Tutorial.md)
-
 # Assessment
 - [PowerShell Unit Test & Practice](PowerShell_Foundation/PS_Unit_Test/PS_Unit_Test.md)
 
@@ -53,11 +51,11 @@
 - [Lesson 2](3dMake_Foundation/Lessons_3dMake_2/Lessons_3dMake_2.md)
     - [OpenSCAD Cheat Sheet](3dMake_Foundation/Lessons_3dMake_2/openscad-cheat-sheet.md)
     - [Your Second Print Project](3dMake_Foundation/Lessons_3dMake_2/your-second-print.md)
-    - [Your Second Print - Student Template](3dMake_Foundation/Lessons_3dMake_2/your_second_print_student_template.md)
-    - [Your Second Print - Teacher Template](3dMake_Foundation/Lessons_3dMake_2/your_second_print_teacher_template.md)
+        - [Your Second Print - Student Template](3dMake_Foundation/Lessons_3dMake_2/your_second_print_student_template.md)
+        - [Your Second Print - Teacher Template](3dMake_Foundation/Lessons_3dMake_2/your_second_print_teacher_template.md)
     - [Bonus Print Project](3dMake_Foundation/Lessons_3dMake_2/bonus-print.md)
-    - [Bonus Print - Student Template](3dMake_Foundation/Lessons_3dMake_2/bonus_print_student_template.md)
-    - [Bonus Print - Teacher Template](3dMake_Foundation/Lessons_3dMake_2/bonus_print_teacher_template.md)
+        - [Bonus Print - Student Template](3dMake_Foundation/Lessons_3dMake_2/bonus_print_student_template.md)
+        - [Bonus Print - Teacher Template](3dMake_Foundation/Lessons_3dMake_2/bonus_print_teacher_template.md)
 
 # Lesson 3: Parametric Architecture and Modular Libraries
 - [Lesson 3](3dMake_Foundation/Lessons_3dMake_3/Lessons_3dMake_3.md)
@@ -67,8 +65,8 @@
 # Lesson 4: AI-Enhanced Verification and Multimodal Feedback
 - [Lesson 4](3dMake_Foundation/Lessons_3dMake_4/Lessons_3dMake_4.md)
     - [Dice-Dice-Dice Project](3dMake_Foundation/Lessons_3dMake_4/Dice_Dice_Dice.md)
-    - [Dice-Dice-Dice - Student Template](3dMake_Foundation/Lessons_3dMake_4/dice_dice_dice_student_template.md)
-    - [Dice-Dice-Dice - Teacher Template](3dMake_Foundation/Lessons_3dMake_4/dice_dice_dice_teacher_template.md)
+        - [Dice-Dice-Dice - Student Template](3dMake_Foundation/Lessons_3dMake_4/dice_dice_dice_student_template.md)
+        - [Dice-Dice-Dice - Teacher Template](3dMake_Foundation/Lessons_3dMake_4/dice_dice_dice_teacher_template.md)
 
 # Lesson 5: Safety Protocols and the Physical Fabrication Interface
 - [Lesson 5](3dMake_Foundation/Lessons_3dMake_5/Lessons_3dMake_5.md)
@@ -85,8 +83,8 @@
     - [Slicing Settings - Anycubic](3dMake_Foundation/Lessons_3dMake_6/slicing-settings-reference-anycubic.md)
     - [Cube Keycap Example](assets/3dMake_Foundation/Lessons_3dMake_6/cube_keycap.scad)
     - [Parametric Keychain Project](3dMake_Foundation/Lessons_3dMake_6/parametric-keychain.md)
-    - [Parametric Keychain - Student Template](3dMake_Foundation/Lessons_3dMake_6/parametric_keychain_student_template.md)
-    - [Parametric Keychain - Teacher Template](3dMake_Foundation/Lessons_3dMake_6/parametric_keychain_teacher_template.md)
+        - [Parametric Keychain - Student Template](3dMake_Foundation/Lessons_3dMake_6/parametric_keychain_student_template.md)
+        - [Parametric Keychain - Teacher Template](3dMake_Foundation/Lessons_3dMake_6/parametric_keychain_teacher_template.md)
 
 # Lesson 7: Parametric Transforms and the Phone Stand Project
 - [Lesson 7](3dMake_Foundation/Lessons_3dMake_7/Lessons_3dMake_7.md)
@@ -96,8 +94,8 @@
 - [Lesson 8](3dMake_Foundation/Lessons_3dMake_8/Lessons_3dMake_8.md)
     - [Stackable Bins Example](assets/3dMake_Foundation/Lessons_3dMake_8/stackable_bins.scad)
     - [Snap-Fit Clip Project](3dMake_Foundation/Lessons_3dMake_8/snap-fit-clip.md)
-    - [Snap-Fit Clip - Student Template](3dMake_Foundation/Lessons_3dMake_8/snap_fit_clip_student_template.md)
-    - [Snap-Fit Clip - Teacher Template](3dMake_Foundation/Lessons_3dMake_8/snap_fit_clip_teacher_template.md)
+        - [Snap-Fit Clip - Student Template](3dMake_Foundation/Lessons_3dMake_8/snap_fit_clip_student_template.md)
+        - [Snap-Fit Clip - Teacher Template](3dMake_Foundation/Lessons_3dMake_8/snap_fit_clip_teacher_template.md)
 
 # Lesson 9: Automation and 3dm Workflows
 - [Lesson 9](3dMake_Foundation/Lessons_3dMake_9/Lessons_3dMake_9.md)
@@ -112,8 +110,8 @@
     - [Diagnostic Checklist](3dMake_Foundation/Lessons_3dMake_10/diagnostic_checklist.md)
     - [Measurement Worksheet](3dMake_Foundation/Lessons_3dMake_10/measurement-worksheet.md)
     - [Accessibility Audit Project](3dMake_Foundation/Lessons_3dMake_10/accessibility-audit.md)
-    - [Accessibility Audit - Student Template](3dMake_Foundation/Lessons_3dMake_10/accessibility_audit_student_template.md)
-    - [Accessibility Audit - Teacher Template](3dMake_Foundation/Lessons_3dMake_10/accessibility_audit_teacher_template.md)
+        - [Accessibility Audit - Student Template](3dMake_Foundation/Lessons_3dMake_10/accessibility_audit_student_template.md)
+        - [Accessibility Audit - Teacher Template](3dMake_Foundation/Lessons_3dMake_10/accessibility_audit_teacher_template.md)
 
 # Lesson 11: Stakeholder-Centric Design and the Beaded Jewelry Project
 - [Lesson 11](3dMake_Foundation/Lessons_3dMake_11/Lessons_3dMake_11.md)
@@ -130,9 +128,10 @@
 
 # 3D Make Foundation Appendices
 
-- [Appendix A: Comprehensive Slicing Guide - All Major Slicers](3dMake_Foundation/Appendix_A_Comprehensive_Slicing_Guide.md)
-- [Appendix B: Material Properties & Selection Guide](3dMake_Foundation/Appendix_B_Material_Properties.md)
-- [Appendix C: Tolerance Testing & Quality Assurance Matrix](3dMake_Foundation/Appendix_C_Tolerance_QA.md)
-- [Appendix D: PowerShell Integration for SCAD Workflows](3dMake_Foundation/Appendix_D_PowerShell_Integration.md)
+[Appendix A: Comprehensive Slicing Guide - All Major Slicers](3dMake_Foundation/Appendix_A_Comprehensive_Slicing_Guide.md)
+[Appendix B: Material Properties & Selection Guide](3dMake_Foundation/Appendix_B_Material_Properties.md)
+[Appendix C: Tolerance Testing & Quality Assurance Matrix](3dMake_Foundation/Appendix_C_Tolerance_QA.md)
+[Appendix D: PowerShell Integration for SCAD Workflows](3dMake_Foundation/Appendix_D_PowerShell_Integration.md)
 
 ---
+[Contributors]()
