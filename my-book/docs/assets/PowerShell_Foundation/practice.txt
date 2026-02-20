@@ -1,4 +1,0 @@
-1. In a command create a new file named test.scad place it in your openSCAD folder
-2. Open the file add your name as a comment to the top of the file and close it
-3. In powershell copy the file and name it test2.scad
-4. Remove test.scad and test2.scad

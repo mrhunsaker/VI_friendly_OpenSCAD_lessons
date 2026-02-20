@@ -34,12 +34,17 @@
 4. What command slices a preview for tactile testing?
 5. Why is it useful to run a preview before a full print?
 
-## Extension Problems (5)
+## Extension Problems (10)
 1. Create two variants of a parameterized cube (different sizes) and export both STLs; compare their file sizes and estimated print times.
 2. Add a `3dmake.toml` overlay that changes layer height and document the visible effect on the preview.
 3. Build and slice a small object, then import the STL into a second slicer and report any differences in estimated time.
 4. Create a short shell script that automates new → edit → build for a classroom scaffold.
 5. Describe three safety checks you will perform before starting a multi-hour print.
+6. Develop an accessibility audit of 3DMake's web interface and CLI tools; test keyboard navigation, screen-reader compatibility, and error message clarity.
+7. Build a 3DMake workflow automation script: integrates model creation, parameter validation, and batch STL generation.
+8. Create a 3DMake best practices guide for your classroom: document common patterns, troubleshooting tips, and performance optimization.
+9. Design a parametric model library in 3DMake with shared modules; test reuse across multiple student projects.
+10. Compare 3DMake vs. desktop slicers on 5+ models; create a decision matrix for when to use each tool.
 
 ---
 

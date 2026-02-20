@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Overview &amp; Full Guide - 3D Printing Course for Blind and Visually Impaired Learners</title>
+        <title>PowerShell Overview &amp; Full Guide - 3D Printing Course for Blind and Visually Impaired Learners</title>
 
 
         <!-- Custom HTML head -->
@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-4bc6e054.js";
+            window.path_to_searchindex_js = "../../searchindex-9554f408.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-90c12225.js"></script>
+        <script src="../../toc-13636583.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -330,13 +330,18 @@ code file.txt            # open in VS Code (if in PATH)
 <li>After step 3 you should be able to state your current directory.</li>
 <li>After step 5 you should be able to create and open a text file from PowerShell.</li>
 </ul>
-<h2 id="quick-quiz-5-questions"><a class="header" href="#quick-quiz-5-questions">Quick Quiz (5 questions)</a></h2>
+<h2 id="quick-quiz-10-questions"><a class="header" href="#quick-quiz-10-questions">Quick Quiz (10 questions)</a></h2>
 <ol>
 <li>What command prints your current directory?</li>
 <li>What does <code>~</code> represent?</li>
 <li>How do you list only names with <code>ls</code>?</li>
 <li>How do you go up one directory level?</li>
 <li>How would you open <code>notes.txt</code> in Notepad from PowerShell?</li>
+<li>True or False: The pipe operator <code>|</code> sends output to a file.</li>
+<li>Explain why running commands with elevated privileges (as Administrator) might be necessary.</li>
+<li>What is the difference between running a script with <code>./script.ps1</code> versus <code>&amp; './script.ps1'</code>?</li>
+<li>Describe how you would handle a very long command output when using a screen reader.</li>
+<li>What does the <code>PATH</code> environment variable do, and why is it important when running programs like OpenSCAD?</li>
 </ol>
 <h2 id="extension-problems"><a class="header" href="#extension-problems">Extension Problems</a></h2>
 <ol>
@@ -345,7 +350,18 @@ code file.txt            # open in VS Code (if in PATH)
 <li>Save <code>ls -n ~/Documents</code> output to <code>doc_list.txt</code> and open it.</li>
 <li>Try tab-completion in a deeply nested folder and note behavior.</li>
 <li>Capture <code>pwd</code> output into a file and open it: <code>pwd &gt; cwd.txt ; notepad.exe cwd.txt</code>.</li>
+<li>Build an automated setup script that creates a complete project directory structure, initializes placeholder files, and generates a README.</li>
+<li>Create a PowerShell cheat sheet for your most-used commands; organize by category (navigation, files, scripting, troubleshooting).</li>
+<li>Write a non-visual tutorial for PowerShell basics; use audio descriptions and keyboard-only navigation as the primary learning method.</li>
+<li>Develop a workflow automation script: combines multiple PowerShell concepts (folders, aliases, piping) to solve a real 3D printing task.</li>
+<li>Create a PowerShell proficiency self-assessment: list all concepts covered, provide test commands for each, and reflect on what you learned.</li>
 </ol>
+<h2 id="references"><a class="header" href="#references">References</a></h2>
+<ul>
+<li>Microsoft. (2024). <em>Accessibility in PowerShell ISE</em>. https://learn.microsoft.com/powershell/scripting/windows-powershell/ise/accessibility-in-windows-powershell-ise</li>
+<li>Microsoft. (2024). <em>Learn PowerShell scripting language</em>. https://learn.microsoft.com/powershell/scripting/overview</li>
+<li>Microsoft. (2024). <em>Environment variables and PATH configuration</em>. https://learn.microsoft.com/powershell/scripting/learn/shell/using-aliases</li>
+</ul>
 <h2 id="helpful-resources"><a class="header" href="#helpful-resources">Helpful Resources</a></h2>
 <ul>
 <li>Accessibility in PowerShell ISE (Microsoft): https://learn.microsoft.com/powershell/scripting/windows-powershell/ise/accessibility-in-windows-powershell-ise</li>
@@ -362,7 +378,7 @@ code file.txt            # open in VS Code (if in PATH)
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="../../PowerShell_Foundation/PS_0_getting_started_layout_paths/PS_0_getting_started_layout_paths.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../PowerShell_Foundation/PS_Unit_Test/PS_Unit_Test.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -376,7 +392,7 @@ code file.txt            # open in VS Code (if in PATH)
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="../../PowerShell_Foundation/PS_0_getting_started_layout_paths/PS_0_getting_started_layout_paths.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../PowerShell_Foundation/PS_Unit_Test/PS_Unit_Test.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>

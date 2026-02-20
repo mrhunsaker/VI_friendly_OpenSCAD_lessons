@@ -84,16 +84,29 @@ Tip: Redirect `Get-Help` into a file for easier reading: `Get-Help Get-Command |
 1. Use wildcards to list only `.scad` files: `ls -n *.scad`. Proceed to search for other types of files.
 2. Save a long command's output and search it with `Select-String`.
 3. Create a small script that prints a timestamp and test it with `&`.
+4. Build a project template generator: write a script that creates a folder structure for a new 3D printing project.
+5. Create a personalized PowerShell profile with aliases for frequently used commands; test it after restart.
+6. Write a PowerShell script that combines multiple concepts: navigates folders, creates files, and performs file operations.
+7. Create a screen-reader navigation guide for PowerShell ISE; test with actual screen reader if available.
+8. Build a data analysis script: read a CSV file, filter and process data, and generate a report.
+9. Develop a troubleshooting aide: common PowerShell error messages, their causes, and solutions.
+10. Design a comprehensive PowerShell learning portfolio: document skills developed, commands mastered, scripts created, and practical applications.
 
-## Quick Quiz (5 questions)
+## Quick Quiz (10 questions)
 
 1. What command shows your current directory?
 2. How do you list names only for screen readers?
 3. How do you create an empty file?
 4. What operator runs a script or executable by path?
 5. How do you page through long output?
+6. True or False: PowerShell only runs on Windows.
+7. What does the `~` symbol represent in a PowerShell path?
+8. Explain why redirecting output to a file (e.g., `command > output.txt`) is helpful for screen reader users.
+9. What is the difference between `Get-Help` and `Get-Command`?
+10. Describe a practical scenario where you would use piping (`|`) in PowerShell.
 
 ## References
 
-- PowerShell docs: https://learn.microsoft.com/powershell/
-- Using Out-File: https://learn.microsoft.com/powershell/module/microsoft.powershell.utility/out-file
+- Microsoft. (2024). *PowerShell scripting language documentation*. https://learn.microsoft.com/powershell/
+- Microsoft. (2024). *Out-File cmdlet reference*. https://learn.microsoft.com/powershell/module/microsoft.powershell.utility/out-file
+- Wadhwa, K. & others. (2024). *PowerShell for DevOps and system administration*. https://learn.microsoft.com/powershell/scripting/learn/shell/navigate-the-filesystem

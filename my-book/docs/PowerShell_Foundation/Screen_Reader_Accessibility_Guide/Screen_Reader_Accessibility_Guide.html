@@ -1,0 +1,737 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Screen Reader Accessibility Guide - 3D Printing Course for Blind and Visually Impaired Learners</title>
+
+
+        <!-- Custom HTML head -->
+        <script>
+          (function(){
+            // Load Atkinson Hyperlegible fonts from the book assets (injected at runtime so paths are correct on GitHub Pages)
+            try {
+              const link = Array.from(document.getElementsByTagName('link')).find(l => l.href && l.href.match(/\/css\/variables-.*\.css$/));
+              const base = (function(){
+                if (!link) return (window.location.origin||'') + '/';
+                const u = new URL(link.href, window.location.href);
+                const basePath = u.pathname.replace(/\/css\/.*$/,'');
+                return u.origin + basePath + (basePath.endsWith('/') ? '' : '/');
+              })();
+        
+              const css = `\
+        @font-face {\
+          font-family: 'Atkinson Hyperlegible Next';\
+          src: url('${base}assets/fonts/AtkinsonHyperlegibleNext-Regular.ttf') format('truetype');\
+          font-weight: 400; font-style: normal; font-display: swap;\
+        }\
+        @font-face {\
+          font-family: 'Atkinson Hyperlegible Mono';\
+          src: url('${base}assets/fonts/AtkinsonHyperlegibleMono-SemiBold.ttf') format('truetype');\
+          font-weight: 600; font-style: normal; font-display: swap;\
+        }\
+        @font-face {\
+          font-family: 'Atkinson Hyperlegible Mono';\
+          src: url('${base}assets/fonts/AtkinsonHyperlegibleMono-Regular.otf') format('opentype');\
+          font-weight: 400; font-style: normal; font-display: swap;\
+        }\
+        pre, code, .hljs, .leftbar { font-family: 'Atkinson Hyperlegible Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", "Courier New", monospace !important; }\
+        body { font-family: 'Atkinson Hyperlegible Next', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }\
+        `;
+        
+              const style = document.createElement('style');
+              style.appendChild(document.createTextNode(css));
+              document.head.appendChild(style);
+            } catch (e) { console.warn('Font injection failed', e); }
+          })();
+        </script>
+        
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            mermaid.initialize({ startOnLoad: true });
+          });
+        </script>
+
+        <meta name="description" content="An introduction to 3D printing for blind and visually impaired learners, using OpenSCAD and 3DMake to create accessible 3D models.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-2459343d.css">
+        <link rel="stylesheet" href="../../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../../src/assets/custom-e98d0106.css">
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../../searchindex-9554f408.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc-13636583.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">3D Printing Course for Blind and Visually Impaired Learners</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="screen-reader-accessibility-guide-for-powershell"><a class="header" href="#screen-reader-accessibility-guide-for-powershell">Screen Reader Accessibility Guide for PowerShell</a></h1>
+<p><strong>Target Users:</strong> NVDA, JAWS, and other screen reader users<br><strong>Last Updated:</strong> 2026</p>
+<p>This guide is used throughout the PowerShell Foundation curriculum to help screen reader users navigate and work efficiently with the terminal.</p>
+<hr>
+<h2 id="table-of-contents"><a class="header" href="#table-of-contents">Table of Contents</a></h2>
+<ol>
+<li><a href="#getting-started">Getting Started with Screen Readers</a></li>
+<li><a href="#nvda-tips">NVDA-Specific Tips</a></li>
+<li><a href="#jaws-tips">JAWS-Specific Tips</a></li>
+<li><a href="#general-terminal">General Terminal Accessibility</a></li>
+<li><a href="#long-output">Working with Long Output</a></li>
+<li><a href="#shortcuts">Keyboard Shortcuts Reference</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+</ol>
+<hr>
+<h2 id="getting-started"><a class="header" href="#getting-started">Getting Started with Screen Readers</a></h2>
+<h3 id="which-screen-reader-should-i-use"><a class="header" href="#which-screen-reader-should-i-use">Which Screen Reader Should I Use?</a></h3>
+<p>Both NVDA and JAWS work well with PowerShell, but they have different strengths:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Feature</th><th>NVDA</th><th>JAWS</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Cost</strong></td><td>Free</td><td>Commercial (paid)</td></tr>
+<tr><td><strong>Installation</strong></td><td>Simple</td><td>Complex but thorough</td></tr>
+<tr><td><strong>PowerShell Support</strong></td><td>Excellent</td><td>Excellent</td></tr>
+<tr><td><strong>Learning Curve</strong></td><td>Gentle</td><td>Steeper</td></tr>
+<tr><td><strong>Customization</strong></td><td>Good</td><td>Extensive</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>Recommendation:</strong> Start with NVDA if you’re new to screen readers. Both will work for this curriculum.</p>
+<h3 id="before-you-start"><a class="header" href="#before-you-start">Before You Start</a></h3>
+<ol>
+<li>Make sure your screen reader is running before opening PowerShell</li>
+<li>Open PowerShell and let your screen reader read the title and prompt</li>
+<li>If you don’t hear anything, press <strong>Alt+Tab</strong> to cycle windows and find PowerShell</li>
+<li>Use your screen reader’s screen review features to understand the layout</li>
+</ol>
+<hr>
+<h2 id="nvda-tips"><a class="header" href="#nvda-tips">NVDA-Specific Tips</a></h2>
+<p>NVDA is free and available from https://www.nvaccess.org/</p>
+<h3 id="key-commands-for-powershell"><a class="header" href="#key-commands-for-powershell">Key Commands for PowerShell</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Command</th><th>What It Does</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>NVDA+Home</strong></td><td>Read the current line (your command or output)</td></tr>
+<tr><td><strong>NVDA+Down Arrow</strong></td><td>Read from cursor to end of screen</td></tr>
+<tr><td><strong>NVDA+Up Arrow</strong></td><td>Read from top to cursor</td></tr>
+<tr><td><strong>NVDA+Page Down</strong></td><td>Read next page</td></tr>
+<tr><td><strong>NVDA+Page Up</strong></td><td>Read previous page</td></tr>
+<tr><td><strong>NVDA+F7</strong></td><td>Open the Review Mode viewer (can scroll through text)</td></tr>
+<tr><td><strong>NVDA+Shift+Right Arrow</strong></td><td>Read next word</td></tr>
+<tr><td><strong>NVDA+Shift+Down Arrow</strong></td><td>Read entire screen</td></tr>
+<tr><td><strong>NVDA+End</strong></td><td>Jump to end of line</td></tr>
+<tr><td><strong>NVDA+Home</strong></td><td>Jump to start of line</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="example-reading-long-output"><a class="header" href="#example-reading-long-output">Example: Reading Long Output</a></h3>
+<p><strong>Scenario:</strong> You ran <code>ls -n</code> and it listed 50 files. You can’t hear them all.</p>
+<p><strong>Solution with NVDA:</strong></p>
+<ol>
+<li>After the command finishes, press <strong>NVDA+Home</strong> to read the current line</li>
+<li>Press <strong>NVDA+Down Arrow</strong> repeatedly to read all output</li>
+<li>Or press <strong>NVDA+F7</strong> to open Review Mode and use arrow keys to scroll</li>
+</ol>
+<h3 id="nvda-settings-for-powershell"><a class="header" href="#nvda-settings-for-powershell">NVDA Settings for PowerShell</a></h3>
+<p><strong>Enable verbosity for better feedback:</strong></p>
+<ol>
+<li>Press <strong>NVDA+Ctrl+V</strong> to open NVDA menu</li>
+<li>Go to Preferences → Settings</li>
+<li>Under “Speech”, increase verbosity</li>
+<li>Look for “Report font changes” and enable it (helps with code)</li>
+</ol>
+<hr>
+<h2 id="jaws-tips"><a class="header" href="#jaws-tips">JAWS-Specific Tips</a></h2>
+<p>JAWS is a commercial screen reader available from https://www.freedomscientific.com/</p>
+<h3 id="key-commands-for-powershell-1"><a class="header" href="#key-commands-for-powershell-1">Key Commands for PowerShell</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Command</th><th>What It Does</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Insert+Down Arrow</strong></td><td>Read line by line downward</td></tr>
+<tr><td><strong>Insert+Up Arrow</strong></td><td>Read line by line upward</td></tr>
+<tr><td><strong>Insert+Page Down</strong></td><td>Read next page of text</td></tr>
+<tr><td><strong>Insert+Page Up</strong></td><td>Read previous page of text</td></tr>
+<tr><td><strong>Insert+End</strong></td><td>Jump to end of text on screen</td></tr>
+<tr><td><strong>Insert+Home</strong></td><td>Jump to start of text on screen</td></tr>
+<tr><td><strong>Insert+Ctrl+Down</strong></td><td>Read to end of screen</td></tr>
+<tr><td><strong>Insert+Ctrl+Up</strong></td><td>Read to beginning of screen</td></tr>
+<tr><td><strong>Insert+Shift+Page Down</strong></td><td>Select and read next page</td></tr>
+<tr><td><strong>Insert+F3</strong></td><td>Open JAWS menu</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="example-reading-long-output-1"><a class="header" href="#example-reading-long-output-1">Example: Reading Long Output</a></h3>
+<p><strong>Scenario:</strong> You ran <code>ls -n | Out-File list.txt</code> and saved output to a file.</p>
+<p><strong>Solution with JAWS:</strong></p>
+<ol>
+<li>Open the file: <code>notepad.exe list.txt</code></li>
+<li>In Notepad, press <strong>Insert+Ctrl+Down</strong> to hear all content</li>
+<li>Use <strong>Insert+Down Arrow</strong> to read line by line at your own pace</li>
+</ol>
+<h3 id="jaws-settings-for-powershell"><a class="header" href="#jaws-settings-for-powershell">JAWS Settings for PowerShell</a></h3>
+<p><strong>Enable specific settings for terminals:</strong></p>
+<ol>
+<li>Press <strong>Insert+F3</strong> to open JAWS menu</li>
+<li>Go to “Options” → “Settings Manager”</li>
+<li>Search for “terminal” or “console”</li>
+<li>Enable “Announce output” and “Speak when program speaks”</li>
+</ol>
+<hr>
+<h2 id="general-terminal"><a class="header" href="#general-terminal">General Terminal Accessibility</a></h2>
+<h3 id="understanding-the-powershell-layout"><a class="header" href="#understanding-the-powershell-layout">Understanding the PowerShell Layout</a></h3>
+<p>The PowerShell window contains:</p>
+<ol>
+<li><strong>Title bar:</strong> Window name (e.g., “Windows PowerShell”)</li>
+<li><strong>Content area:</strong> Command history and output</li>
+<li><strong>Prompt:</strong> The <code>PS&gt;</code> area where you type</li>
+</ol>
+<p><strong>Your screen reader reads from top to bottom, but focus is at the prompt (bottom).</strong></p>
+<h3 id="navigation-sequence"><a class="header" href="#navigation-sequence">Navigation Sequence</a></h3>
+<p><strong>When you open PowerShell:</strong></p>
+<ol>
+<li>Your screen reader announces the window title</li>
+<li>Then it announces the prompt line</li>
+<li>Anything before the prompt is previous output</li>
+<li>Anything after the prompt is where new output will appear</li>
+</ol>
+<h3 id="reading-output-effectively"><a class="header" href="#reading-output-effectively">Reading Output Effectively</a></h3>
+<p><strong>Strategy 1: Immediate Output (Small Amount)</strong></p>
+<ul>
+<li>Run a command</li>
+<li>Your screen reader announces output immediately</li>
+<li>This works well for short outputs (a few lines)</li>
+</ul>
+<p><strong>Strategy 2: Large Output (Many Lines)</strong></p>
+<ul>
+<li>Redirect to a file: <code>command &gt; output.txt</code></li>
+<li>Open the file: <code>notepad.exe output.txt</code></li>
+<li>Read in Notepad (easier for long text)</li>
+</ul>
+<p><strong>Strategy 3: Searching Output</strong></p>
+<ul>
+<li>Use <code>findstr</code> (find string) to filter:
+<pre><code class="language-powershell">ls -n | findstr "pattern"
+</code></pre>
+</li>
+<li>Only results matching “pattern” are shown</li>
+</ul>
+<hr>
+<h2 id="long-output"><a class="header" href="#long-output">Working with Long Output</a></h2>
+<p>This is one of the most common challenges for screen reader users. Here are proven solutions:</p>
+<h3 id="solution-1-redirect-to-a-file"><a class="header" href="#solution-1-redirect-to-a-file">Solution 1: Redirect to a File</a></h3>
+<p><strong>Command:</strong></p>
+<pre><code class="language-powershell">ls -n &gt; list.txt
+</code></pre>
+<p><strong>Then open:</strong></p>
+<pre><code class="language-powershell">notepad.exe list.txt
+</code></pre>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Easy to navigate at your own pace</li>
+<li>Works with all screen readers</li>
+<li>Output doesn’t scroll away</li>
+<li>You can save it for later</li>
+</ul>
+<h3 id="solution-2-use-pagination"><a class="header" href="#solution-2-use-pagination">Solution 2: Use Pagination</a></h3>
+<p><strong>Command:</strong></p>
+<pre><code class="language-powershell">ls -n | more
+</code></pre>
+<p><strong>How to use:</strong></p>
+<ul>
+<li>Press <strong>Space</strong> to see next page</li>
+<li>Press <strong>Q</strong> to quit</li>
+<li><strong>Note:</strong> Some screen readers struggle with <code>more</code>, so Solution 1 is preferred</li>
+</ul>
+<h3 id="solution-3-filter-output"><a class="header" href="#solution-3-filter-output">Solution 3: Filter Output</a></h3>
+<p><strong>Example: Find only .scad files</strong></p>
+<pre><code class="language-powershell">ls -n | findstr "\.scad"
+</code></pre>
+<p><strong>How it works:</strong></p>
+<ul>
+<li><code>findstr</code> searches for a pattern</li>
+<li><code>\.scad</code> means “files ending in .scad”</li>
+<li>Only matching items are displayed</li>
+</ul>
+<h3 id="solution-4-count-before-displaying"><a class="header" href="#solution-4-count-before-displaying">Solution 4: Count Before Displaying</a></h3>
+<p><strong>Command:</strong></p>
+<pre><code class="language-powershell">(ls -n).Count
+</code></pre>
+<p><strong>What it does:</strong></p>
+<ul>
+<li>Tells you how many items there are</li>
+<li>Helps you know if you should redirect to file</li>
+<li>If count &gt; 20, probably use file method</li>
+</ul>
+<hr>
+<h2 id="shortcuts"><a class="header" href="#shortcuts">Keyboard Shortcuts Reference</a></h2>
+<h3 id="all-users-works-in-powershell-regardless-of-screen-reader"><a class="header" href="#all-users-works-in-powershell-regardless-of-screen-reader">All Users (Works in PowerShell regardless of screen reader)</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Key</th><th>Action</th><th>Why It Matters</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Up Arrow</strong></td><td>Show previous command</td><td>Repeat commands without retyping</td></tr>
+<tr><td><strong>Down Arrow</strong></td><td>Show next command</td><td>Navigate through history</td></tr>
+<tr><td><strong>Tab</strong></td><td>Auto-complete</td><td>Faster than typing full names</td></tr>
+<tr><td><strong>Shift+Tab</strong></td><td>Cycle backward through completions</td><td>If Tab went too far</td></tr>
+<tr><td><strong>Home</strong></td><td>Jump to start of line</td><td>Edit beginning of command</td></tr>
+<tr><td><strong>End</strong></td><td>Jump to end of line</td><td>Edit end of command</td></tr>
+<tr><td><strong>Ctrl+A</strong></td><td>Select all</td><td>Copy entire command line</td></tr>
+<tr><td><strong>Ctrl+C</strong></td><td>Stop command</td><td>Abort long-running tasks</td></tr>
+<tr><td><strong>Ctrl+L</strong></td><td>Clear screen</td><td>Start fresh</td></tr>
+<tr><td><strong>Ctrl+K</strong></td><td>Clear all</td><td>(Alternative to Ctrl+L)</td></tr>
+<tr><td><strong>Enter</strong></td><td>Run command</td><td>Execute what you typed</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="screen-reader-navigation"><a class="header" href="#screen-reader-navigation">Screen Reader Navigation</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Key</th><th>NVDA Action</th><th>JAWS Action</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Up/Down</strong></td><td>Move through line (native)</td><td>Move through line (native)</td></tr>
+<tr><td><strong>Numpad+</strong></td><td>Start/stop review mode</td><td>(Not needed in JAWS)</td></tr>
+<tr><td><strong>Function+Home</strong></td><td>Read current line</td><td>Read current line</td></tr>
+<tr><td><strong>Function+Page Down</strong></td><td>Read next page</td><td>Read next page</td></tr>
+<tr><td><strong>Alt+Tab</strong></td><td>Switch windows (works in any app)</td><td>Switch windows (works in any app)</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
+<h3 id="problem-1-i-cant-hear-the-output-after-running-a-command"><a class="header" href="#problem-1-i-cant-hear-the-output-after-running-a-command">Problem 1: “I Can’t Hear the Output After Running a Command”</a></h3>
+<p><strong>Causes &amp; Solutions:</strong></p>
+<ol>
+<li>
+<p><strong>Cursor not at prompt</strong></p>
+<ul>
+<li>Solution: Press <strong>End</strong> or <strong>Ctrl+End</strong> to go to the end of text</li>
+<li>Then use <strong>Up Arrow</strong> or screen reader commands to review</li>
+</ul>
+</li>
+<li>
+<p><strong>Output scrolled off-screen</strong></p>
+<ul>
+<li>Solution: Redirect to file: <code>command &gt; output.txt</code></li>
+<li>Then read file: <code>notepad.exe output.txt</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Screen reader focus on window title, not content</strong></p>
+<ul>
+<li>Solution: Press <strong>Tab</strong> or arrow keys to move to the content area</li>
+<li>Then use screen reader commands to read</li>
+</ul>
+</li>
+<li>
+<p><strong>Large amount of output overwhelming screen reader</strong></p>
+<ul>
+<li>Solution: Use filtering: <code>ls -n | findstr "pattern"</code></li>
+<li>Or save to file for paced reading</li>
+</ul>
+</li>
+</ol>
+<h3 id="problem-2-tab-completion-isnt-working"><a class="header" href="#problem-2-tab-completion-isnt-working">Problem 2: “Tab Completion Isn’t Working”</a></h3>
+<p><strong>Causes &amp; Solutions:</strong></p>
+<ol>
+<li>
+<p><strong>Need at least one character</strong></p>
+<ul>
+<li>Wrong: Type <code>cd</code> then Tab (won’t work without a path)</li>
+<li>Right: Type <code>cd D</code> then Tab</li>
+</ul>
+</li>
+<li>
+<p><strong>Exact path needed</strong></p>
+<ul>
+<li>If folder is “Documents”, typing <code>cd Doc</code> and Tab works</li>
+<li>But typing <code>cd X</code> won’t find “Documents”</li>
+</ul>
+</li>
+<li>
+<p><strong>Check if item exists</strong></p>
+<ul>
+<li>Use <code>ls -n</code> first to see available items</li>
+<li>Then Tab-complete to them</li>
+</ul>
+</li>
+</ol>
+<h3 id="problem-3-screen-reader-says-access-denied-or-permission-denied"><a class="header" href="#problem-3-screen-reader-says-access-denied-or-permission-denied">Problem 3: “Screen Reader Says ‘Access Denied’ or ‘Permission Denied’”</a></h3>
+<p><strong>Causes &amp; Solutions:</strong></p>
+<ol>
+<li>
+<p><strong>Need admin rights</strong></p>
+<ul>
+<li>Close PowerShell</li>
+<li>Right-click PowerShell → Run as administrator</li>
+<li>Confirm the UAC prompt</li>
+</ul>
+</li>
+<li>
+<p><strong>File is in use</strong></p>
+<ul>
+<li>Close any programs using the file</li>
+<li>Try the command again</li>
+</ul>
+</li>
+<li>
+<p><strong>File path contains spaces</strong></p>
+<ul>
+<li>Use quotes: <code>cd "Program Files"</code></li>
+<li>Or use Tab completion (handles spaces automatically)</li>
+</ul>
+</li>
+</ol>
+<h3 id="problem-4-command-runs-forever-and-wont-stop"><a class="header" href="#problem-4-command-runs-forever-and-wont-stop">Problem 4: “Command Runs Forever and Won’t Stop”</a></h3>
+<p><strong>Solution:</strong> Press <strong>Ctrl+C</strong></p>
+<p><strong>Examples of long-running commands:</strong></p>
+<ul>
+<li><code>ping google.com</code> (will ping forever until stopped)</li>
+<li>Connecting to a slow server</li>
+<li>Large file operations</li>
+</ul>
+<p><strong>Always press Ctrl+C when a command seems stuck.</strong></p>
+<h3 id="problem-5-i-need-to-edit-my-last-command"><a class="header" href="#problem-5-i-need-to-edit-my-last-command">Problem 5: “I Need to Edit My Last Command”</a></h3>
+<p><strong>Solutions:</strong></p>
+<ol>
+<li><strong>Press Up Arrow</strong> to show previous command</li>
+<li><strong>Use arrow keys</strong> to move through it</li>
+<li><strong>Edit</strong> the command as needed</li>
+<li><strong>Press Enter</strong> to run the modified version</li>
+</ol>
+<p><strong>Example:</strong></p>
+<ul>
+<li>You typed: <code>cd Document</code> (missing the ‘s’)</li>
+<li>Press Up Arrow to show it again</li>
+<li>Press End to go to the end</li>
+<li>Type <code>s</code> to make it <code>cd Documents</code></li>
+<li>Press Enter to run it</li>
+</ul>
+<h3 id="problem-6-my-screen-reader-keeps-interrupting-each-other"><a class="header" href="#problem-6-my-screen-reader-keeps-interrupting-each-other">Problem 6: “My Screen Reader Keeps Interrupting Each Other”</a></h3>
+<p><strong>Causes &amp; Solutions:</strong></p>
+<ol>
+<li>
+<p><strong>NVDA verbosity too high</strong></p>
+<ul>
+<li>Press <strong>NVDA+Ctrl+V</strong> to open menu</li>
+<li>Go to Settings → Speech</li>
+<li>Lower the verbosity level</li>
+</ul>
+</li>
+<li>
+<p><strong>Multiple applications speaking</strong></p>
+<ul>
+<li>Use <strong>Alt+Tab</strong> to make PowerShell active window</li>
+<li>Minimize other programs</li>
+</ul>
+</li>
+<li>
+<p><strong>JAWS reading too fast</strong></p>
+<ul>
+<li>Press <strong>Insert+Down Arrow</strong> in settings</li>
+<li>Look for speech rate and slow it down</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="pro-tips-for-efficiency"><a class="header" href="#pro-tips-for-efficiency">Pro Tips for Efficiency</a></h2>
+<h3 id="1-create-aliases-for-frequently-used-commands"><a class="header" href="#1-create-aliases-for-frequently-used-commands">1. Create Aliases for Frequently Used Commands</a></h3>
+<p><strong>Example in PowerShell:</strong></p>
+<pre><code class="language-powershell">Set-Alias -Name la -Value "ls -n -ad"
+</code></pre>
+<p>Now you can type just <code>la</code> instead of <code>ls -n -ad</code>.</p>
+<h3 id="2-use-command-history-effectively"><a class="header" href="#2-use-command-history-effectively">2. Use Command History Effectively</a></h3>
+<p><strong>See all recent commands:</strong></p>
+<pre><code class="language-powershell">history
+</code></pre>
+<p><strong>Run a previous command by number:</strong></p>
+<pre><code class="language-powershell">Invoke-History 5
+</code></pre>
+<p>(Runs the 5th command in history)</p>
+<h3 id="3-redirect-everything-to-files-for-accessibility"><a class="header" href="#3-redirect-everything-to-files-for-accessibility">3. Redirect Everything to Files for Accessibility</a></h3>
+<p><strong>If a command produces output, save it:</strong></p>
+<pre><code class="language-powershell">command-name &gt; results.txt
+notepad.exe results.txt
+</code></pre>
+<p>This is always more accessible than reading from terminal.</p>
+<h3 id="4-create-a-readme-for-yourself"><a class="header" href="#4-create-a-readme-for-yourself">4. Create a README for Yourself</a></h3>
+<p><strong>Create a simple help file:</strong></p>
+<pre><code class="language-powershell">echo "ls -n means list names only (screen reader friendly)" &gt; my-notes.txt
+echo "cd means change directory" &gt;&gt; my-notes.txt
+notepad.exe my-notes.txt
+</code></pre>
+<p>Come back to it whenever you forget something.</p>
+<hr>
+<h2 id="recommended-workflow"><a class="header" href="#recommended-workflow">Recommended Workflow</a></h2>
+<p><strong>For every new task:</strong></p>
+<ol>
+<li><strong>Know where you are:</strong> <code>pwd</code></li>
+<li><strong>See what’s around:</strong> <code>ls -n</code></li>
+<li><strong>Plan your next step:</strong> Think before typing</li>
+<li><strong>Run the command:</strong> Type and press Enter</li>
+<li><strong>Check the output:</strong> Use screen reader or redirect to file</li>
+<li><strong>Move forward:</strong> Next command or <code>cd</code> to next folder</li>
+</ol>
+<p><strong>This workflow keeps you oriented and prevents errors.</strong></p>
+<hr>
+<h2 id="quick-reference-card"><a class="header" href="#quick-reference-card">Quick Reference Card</a></h2>
+<p><strong>Print or save this:</strong></p>
+<pre><code>EVERY COMMAND STARTS WITH:
+1. pwd (where am I?)
+2. ls -n (what's here?)
+3. cd path (go there)
+
+LONG OUTPUT?
+→ command &gt; file.txt
+→ notepad.exe file.txt
+
+STUCK?
+→ Ctrl+C
+
+WANT TO REPEAT?
+→ Up Arrow
+→ History
+
+NEED HELP?
+→ Get-Help command-name
+</code></pre>
+<hr>
+<h2 id="additional-resources"><a class="header" href="#additional-resources">Additional Resources</a></h2>
+<ul>
+<li><strong>NVDA Documentation:</strong> https://www.nvaccess.org/documentation/</li>
+<li><strong>JAWS Documentation:</strong> https://www.freedomscientific.com/support/</li>
+<li><strong>PowerShell Docs:</strong> https://docs.microsoft.com/powershell/</li>
+<li><strong>Accessibility Best Practices:</strong> https://www.w3.org/WAI/</li>
+</ul>
+<hr>
+<h2 id="feedback"><a class="header" href="#feedback">Feedback</a></h2>
+<p>This guide is meant to help YOU. If something isn’t clear:</p>
+<ul>
+<li>Try a different approach from the “Solutions” sections</li>
+<li>Reach out to instructors with specific questions</li>
+<li>Share what worked for you with classmates</li>
+</ul>
+<p>Remember: Using a terminal with a screen reader is absolutely possible. These tools and techniques will help you master it.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../PowerShell_Foundation/PowerShell_Curriculum_Overview/PowerShell_Curriculum_Overview.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../../PowerShell_Foundation/PS_Pre_Your_First_Terminal/PS_Pre_Your_First_Terminal.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../PowerShell_Foundation/PowerShell_Curriculum_Overview/PowerShell_Curriculum_Overview.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../../PowerShell_Foundation/PS_Pre_Your_First_Terminal/PS_Pre_Your_First_Terminal.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-c2a407aa.js"></script>
+
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-abc7f01d.js"></script>
+        <script src="../../book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Lesson 1: Environmental Configuration and the Developer Workflow - 3D Printing Course for Blind and Visually Impaired Learners</title>
+        <title>Lesson 1 - 3D Printing Course for Blind and Visually Impaired Learners</title>
 
 
         <!-- Custom HTML head -->
@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-4bc6e054.js";
+            window.path_to_searchindex_js = "../../searchindex-9554f408.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-90c12225.js"></script>
+        <script src="../../toc-13636583.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -237,54 +237,190 @@
 <hr>
 <h2 id="step-by-step-tasks"><a class="header" href="#step-by-step-tasks">Step-by-step Tasks</a></h2>
 <ol>
-<li>Run <code>./3dm setup</code> or follow instructor’s installation notes; confirm tools with <code>which 3dm</code> and <code>which openscad</code>. Verify your 3dMake installation is properly configured<sup class="footnote-reference" id="fr-1-2"><a href="#footnote-1">1</a></sup>.</li>
-<li>Create a project scaffold with <code>3dm new</code> and open <code>src/main.scad</code> using <code>3dm edit-model</code>. For a comprehensive introduction to the workflow, consult the OpenSCAD documentation<sup class="footnote-reference" id="fr-2-2"><a href="#footnote-2">2</a></sup>.</li>
-<li>Add three top-level parameters (e.g., <code>width</code>, <code>height</code>, <code>thickness</code>) and a minimal model (<code>cube([width, height, thickness]);</code>). This demonstrates the parametric design philosophy central to OpenSCAD<sup class="footnote-reference" id="fr-3-2"><a href="#footnote-3">3</a></sup>.</li>
-<li>Run <code>3dm build</code> and verify <code>build/main.stl</code> exists. Compare this build process to standard OpenSCAD workflows<sup class="footnote-reference" id="fr-4-1"><a href="#footnote-4">4</a></sup>.</li>
-<li>Open the STL in your slicer to check for thin walls or non-manifold geometry<sup class="footnote-reference" id="fr-8-1"><a href="#footnote-8">5</a></sup>; if issues appear, iterate on <code>main.scad</code> and rebuild.</li>
+<li>
+<p>Run <code>./3dm setup</code> or follow instructor’s installation notes; confirm tools with <code>which 3dm</code> and <code>which openscad</code>. Verify your 3dMake installation is properly configured<sup class="footnote-reference" id="fr-1-2"><a href="#footnote-1">1</a></sup>.</p>
+</li>
+<li>
+<p>Create a project scaffold with <code>3dm new</code> and open <code>src/main.scad</code> using <code>3dm edit-model</code>. For a comprehensive introduction to the workflow, consult the OpenSCAD documentation<sup class="footnote-reference" id="fr-2-2"><a href="#footnote-2">2</a></sup>.</p>
+</li>
+<li>
+<p>Add three top-level parameters (e.g., <code>width</code>, <code>height</code>, <code>thickness</code>) and a minimal model. This demonstrates the parametric design philosophy central to OpenSCAD<sup class="footnote-reference" id="fr-3-2"><a href="#footnote-3">3</a></sup>.</p>
+<p><strong>Example <code>src/main.scad</code>:</strong></p>
+<pre><code class="language-openscad">// Top-level parameters (change these to customize your model)
+width = 50;      // mm
+height = 30;     // mm
+thickness = 5;   // mm
+
+// Main model
+cube([width, height, thickness]);
+</code></pre>
+</li>
+<li>
+<p>Run <code>3dm build</code> and verify <code>build/main.stl</code> exists. Compare this build process to standard OpenSCAD workflows<sup class="footnote-reference" id="fr-4-1"><a href="#footnote-4">4</a></sup>.</p>
+</li>
+<li>
+<p>Open the STL in your slicer to check for thin walls or non-manifold geometry<sup class="footnote-reference" id="fr-8-1"><a href="#footnote-8">5</a></sup>; if issues appear, iterate on <code>main.scad</code> and rebuild.</p>
+</li>
+<li>
+<p>Try modifying the parameters and running <code>3dm build</code> again to see how parametric design allows you to quickly create variants.</p>
+</li>
 </ol>
 <h3 id="checkpoints"><a class="header" href="#checkpoints">Checkpoints</a></h3>
 <ul>
 <li>After step 2 you can locate <code>3dmake.toml</code> and the <code>build/</code> directory. Ensure your project scaffold matches the expected structure described in the 3dMake repository<sup class="footnote-reference" id="fr-1-3"><a href="#footnote-1">1</a></sup>.</li>
-<li>After step 4 the <code>build/</code> folder contains a valid <code>main.stl</code>. Verify the geometry using your slicer’s validation tools[^5].</li>
+<li>After step 4 the <code>build/</code> folder contains a valid <code>main.stl</code>. Verify the geometry using your slicer’s validation tools<sup class="footnote-reference" id="fr-5-1"><a href="#footnote-5">6</a></sup>.</li>
 </ul>
 <hr>
-<h2 id="quick-quiz-5"><a class="header" href="#quick-quiz-5">Quick Quiz (5)</a></h2>
+<h2 id="understanding-3d-printing-technology-the-fdm-pipeline"><a class="header" href="#understanding-3d-printing-technology-the-fdm-pipeline">Understanding 3D Printing Technology: The FDM Pipeline</a></h2>
+<p>Before you send your first print, it’s important to understand how 3D printers work and how the choices you make in the slicer affect the final result. This section builds on the workflow you learned above by explaining <em>what happens after</em> <code>3dm build</code>.</p>
+<h3 id="the-fdm-fused-deposition-modeling-process"><a class="header" href="#the-fdm-fused-deposition-modeling-process">The FDM (Fused Deposition Modeling) Process</a></h3>
+<p>FDM printing builds objects layer by layer, where each layer is a thin horizontal slice of your STL file. Here’s the complete pipeline:</p>
 <ol>
-<li>What command initializes a 3dMake project<sup class="footnote-reference" id="fr-1-4"><a href="#footnote-1">1</a></sup>?</li>
+<li><strong>STL File</strong> → Your 3dMake model exported as an STL geometry file</li>
+<li><strong>Slicer Analysis</strong> → Software like PrusaSlicer reads the STL and divides it into layers</li>
+<li><strong>G-code Generation</strong> → The slicer converts layers into machine instructions (coordinates, temperature, speed)</li>
+<li><strong>Printing</strong> → The printer reads G-code, heats the nozzle to ~200–230°C, and extrudes plastic one layer at a time</li>
+<li><strong>Cooling &amp; Solidification</strong> → Each layer cools and bonds to the layer below</li>
+</ol>
+<h3 id="critical-settings-that-affect-your-print"><a class="header" href="#critical-settings-that-affect-your-print">Critical Settings That Affect Your Print</a></h3>
+<p>When you open your STL in a slicer, you’ll encounter several parameters that directly impact quality, time, and strength:</p>
+<h4 id="layer-height"><a class="header" href="#layer-height"><strong>Layer Height</strong></a></h4>
+<ul>
+<li><strong>Definition:</strong> The thickness of each printed layer (typically 0.15–0.30 mm)</li>
+<li><strong>Effect on Time:</strong> Smaller layers = more detail but longer print time. A layer height of 0.15 mm prints slower than 0.30 mm because more layers must be printed</li>
+<li><strong>Effect on Quality:</strong> Smaller layers produce smoother surfaces; larger layers print faster but appear more “stepped”</li>
+<li><strong>Common Choice:</strong> 0.20 mm is a good balance for classroom projects</li>
+</ul>
+<h4 id="infill"><a class="header" href="#infill"><strong>Infill</strong></a></h4>
+<ul>
+<li><strong>Definition:</strong> The interior solid percentage of your model (0–100%)</li>
+<li><strong>Purpose:</strong> Infill provides internal strength without using solid material throughout (which would be wasteful and heavy)</li>
+<li><strong>Common Values for Classroom:</strong> 15–20% infill is typical; 10% for very light parts, 50% for functional parts</li>
+<li><strong>Infill Patterns:</strong> Grid, gyroid, or honeycomb patterns determine how the internal structure looks. Grid is simple and fast; gyroid is strong but more complex</li>
+<li><strong>Rule of Thumb:</strong> Higher infill = stronger, heavier, and longer print time</li>
+</ul>
+<h4 id="supports"><a class="header" href="#supports"><strong>Supports</strong></a></h4>
+<ul>
+<li><strong>Definition:</strong> Temporary structures the printer creates to hold overhanging geometry during printing</li>
+<li><strong>When Needed:</strong> Any geometry that “hangs” at a steep angle (typically &gt; 45° from vertical) requires supports</li>
+<li><strong>Post-Processing:</strong> Supports must be removed after printing (breaking them off, dissolving them, or picking them away)</li>
+<li><strong>Cost:</strong> Supports increase print time and waste material, so good STL design minimizes them</li>
+</ul>
+<h3 id="why-this-matters-for-your-design"><a class="header" href="#why-this-matters-for-your-design">Why This Matters for Your Design</a></h3>
+<p>When you wrote <code>src/main.scad</code> in the tasks above, you created a parametric model. Those parameters become <em>constraints</em> that affect how well your part prints:</p>
+<ul>
+<li>A <code>thickness</code> of 0.5 mm might be too thin for FDM (will break easily)</li>
+<li>A <code>width</code> of 300 mm will take many hours to print</li>
+<li>Sharp corners and thin walls can cause printing failures</li>
+</ul>
+<p>Understanding the FDM pipeline helps you design parts that not only look correct in OpenSCAD but will actually <em>print successfully</em>.</p>
+<h3 id="next-steps-the-slicer"><a class="header" href="#next-steps-the-slicer">Next Steps: The Slicer</a></h3>
+<p>After you create an STL with <code>3dm build</code>, you open it in a slicer to:</p>
+<ol>
+<li>Verify geometry (check for thin walls or non-manifold faces)</li>
+<li>Set layer height, infill, and supports</li>
+<li>Preview the layers to see what the printer will do</li>
+<li>Export as G-code to send to the printer</li>
+</ol>
+<p>You’ll practice this workflow in Lesson 2, where you’ll iterate on a simple part and resolve common printing issues.</p>
+<hr>
+<h2 id="getting-started-guided-projects--extension-resources"><a class="header" href="#getting-started-guided-projects--extension-resources">Getting Started: Guided Projects &amp; Extension Resources</a></h2>
+<p>Once you’ve completed this lesson, you’re ready to work on hands-on projects. The curriculum includes several guided projects and extension resources:</p>
+<h3 id="extension-projects-beginner-to-advanced"><a class="header" href="#extension-projects-beginner-to-advanced">Extension Projects (Beginner to Advanced)</a></h3>
+<p>These projects are located in the Lesson 1 assets folder and are designed to reinforce your skills in practical contexts:</p>
+<ul>
+<li>
+<p><strong>Your First Print</strong> (<a href="../../assets/3dMake_Foundation/Lessons_3dMake_1/Your_First_Print/your-first-print.html">Lesson 1 Assets — Your First Print</a>)</p>
+<ul>
+<li>Goal: Low-friction introduction to the complete printing workflow</li>
+<li>Skills: Setup, basic slicing, first-time print validation</li>
+<li>Best for: After completing Lesson 1</li>
+<li>Asset folder: <a href="../../assets/3dMake_Foundation/Lessons_3dMake_1/Your_First_Print/">assets/Lessons_3dMake_1/Your_First_Print/</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Basic Project Scaffold Template</strong> (<a href="../../assets/3dMake_Foundation/Lessons_3dMake_1/basic_project_scaffold.scad">Lesson 1 Assets — SCAD Template</a>)</p>
+<ul>
+<li>A starter template for your own 3D printing projects</li>
+<li>Includes parameter configuration and TODO sections</li>
+</ul>
+</li>
+</ul>
+<h3 id="learning-series-sample-projects"><a class="header" href="#learning-series-sample-projects">Learning Series Sample Projects</a></h3>
+<p>The <code>3dmake_learning_series/</code> folder contains worked examples aligned with this curriculum:</p>
+<ul>
+<li><strong>01_cube_keycap</strong> (Beginner) - Text embossing basics</li>
+<li><strong>02_parametric_phone_stand</strong> (Intermediate) - Transforms and Minkowski fillets</li>
+<li><strong>03_stackable_bins</strong> (Advanced) - Tolerance and assemblies</li>
+</ul>
+<h3 id="reference-materials"><a class="header" href="#reference-materials">Reference Materials</a></h3>
+<p>Quick-reference guides are available in <code>Reference_Materials/</code>:</p>
+<ul>
+<li><strong>3dmake-setup-guide.md</strong> - Complete setup walkthrough and command reference</li>
+<li><strong>openscad-cheat-sheet.md</strong> - Keyboard shortcuts, syntax, and common functions</li>
+<li><strong>filament-comparison-table.md</strong> - Material properties for different print scenarios</li>
+<li><strong>master-rubric.md</strong> - Assessment criteria for evaluating student work</li>
+<li><strong>markdown-starter-guide.md</strong> - Documentation best practices</li>
+</ul>
+<hr>
+<h2 id="quiz--lesson-3dmake1-10-questions"><a class="header" href="#quiz--lesson-3dmake1-10-questions">Quiz — Lesson 3dMake.1 (10 questions)</a></h2>
+<ol>
+<li>What command initializes a 3dMake project?</li>
 <li>What folder holds generated STLs?</li>
 <li>How do you open the main model editor from the CLI?</li>
-<li>Why is it useful to run <code>3dm build</code> frequently during development<sup class="footnote-reference" id="fr-7-1"><a href="#footnote-7">6</a></sup>?</li>
+<li>Why is it useful to run <code>3dm build</code> frequently during development?</li>
 <li>Give one reason to prefer an external editor over editing inline.</li>
+<li>True or False: 3dMake requires a graphical user interface to use effectively.</li>
+<li>Explain what the <code>3dmake.toml</code> file does in your project.</li>
+<li>Describe what the <code>src/</code>, <code>build/</code>, and other project scaffold folders are used for.</li>
+<li>How would you compare the 3dMake build workflow to traditional OpenSCAD workflows?</li>
+<li>What validation steps should you perform after running <code>3dm build</code> and before sending a file to print?</li>
 </ol>
-<h2 id="extension-problems-5"><a class="header" href="#extension-problems-5">Extension Problems (5)</a></h2>
+<h2 id="extension-problems-10"><a class="header" href="#extension-problems-10">Extension Problems (10)</a></h2>
 <ol>
 <li>Add a README entry explaining your top-level parameters and expected units. Reference best practices from the OpenSCAD documentation<sup class="footnote-reference" id="fr-2-3"><a href="#footnote-2">2</a></sup>.</li>
 <li>Create a parameter variant by changing <code>width</code> by 20% and build both variants; compare dimensions with calipers. This demonstrates the power of parametric design discussed in programming resources<sup class="footnote-reference" id="fr-3-3"><a href="#footnote-3">3</a></sup>.</li>
-<li>Script a <code>3dm</code> command sequence that automates new → edit → build for the scaffold. Review the 3dMake test suite for inspiration<sup class="footnote-reference" id="fr-7-2"><a href="#footnote-7">6</a></sup>.</li>
-<li>Intentionally create a thin-wall error and document the steps you took to find and fix it. Consult slicing guides<sup class="footnote-reference" id="fr-8-2"><a href="#footnote-8">5</a></sup> for identifying common geometry issues.</li>
+<li>Script a <code>3dm</code> command sequence that automates new → edit → build for the scaffold. Review the 3dMake test suite for inspiration<sup class="footnote-reference" id="fr-6-1"><a href="#footnote-6">7</a></sup>.</li>
+<li>Intentionally create a thin-wall error and document the steps you took to find and fix it. Consult slicing guides<sup class="footnote-reference" id="fr-7-1"><a href="#footnote-7">8</a></sup> for identifying common geometry issues.</li>
 <li>Prepare a short instructor sign-off checklist describing safety checks before printing.</li>
+<li>Build a variant testing suite: create 5+ parameter combinations, export STLs, and compare file sizes and estimated print times.</li>
+<li>Create a 3dMake project template with best-practice structure, documentation, and reusable modules for future projects.</li>
+<li>Develop a screen-reader accessibility guide for 3dMake CLI commands and parameter syntax.</li>
+<li>Design a parametric part library in 3dMake format; document all parameters, units, and example usage.</li>
+<li>Write a comprehensive troubleshooting guide for common 3dMake build errors, with solutions and prevention tips.</li>
 </ol>
-<h2 id="works-cited"><a class="header" href="#works-cited"><strong>Works cited</strong></a></h2>
+<h2 id="supplemental-resources"><a class="header" href="#supplemental-resources">Supplemental Resources</a></h2>
+<p>For deeper exploration of OpenSCAD and parametric design, consult these resources:</p>
+<ul>
+<li><strong><a href="../../assets/Programming_with_OpenSCAD.epub">Programming with OpenSCAD EPUB Textbook</a></strong> — Comprehensive reference with examples of parametric design, transformations, and modules</li>
+<li><strong><a href="https://github.com/ProgrammingWithOpenSCAD/CodeSolutions">CodeSolutions Repository</a></strong> — Working OpenSCAD code organized by topic, including 3D primitives and parametric examples relevant to Lesson 1</li>
+<li><strong><a href="https://programmingwithopenscad.github.io/quick-reference.html">OpenSCAD Quick Reference</a></strong> — Visual syntax guide and command reference</li>
+</ul>
 <hr>
 <ol class="footnote-definition">
 <li id="footnote-1">
-<p>tdeck/3dmake: Non-visual 3D design and 3D printing tool - GitHub, accessed February 18, 2026, https://github.com/tdeck/3dmake <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a> <a href="#fr-1-3">↩3</a> <a href="#fr-1-4">↩4</a></p>
+<p>3DMake GitHub Repository - https://github.com/tdeck/3dmake <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a> <a href="#fr-1-3">↩3</a></p>
 </li>
 <li id="footnote-2">
-<p>Books - OpenSCAD, accessed February 18, 2026, https://openscad.org/documentation-books.html <a href="#fr-2-1">↩</a> <a href="#fr-2-2">↩2</a> <a href="#fr-2-3">↩3</a></p>
+<p>OpenSCAD Manual - https://en.wikibooks.org/wiki/OpenSCAD_User_Manual <a href="#fr-2-1">↩</a> <a href="#fr-2-2">↩2</a> <a href="#fr-2-3">↩3</a></p>
 </li>
 <li id="footnote-3">
-<p>Programming with OpenSCAD, accessed February 18, 2026, https://programmingwithopenscad.github.io/ <a href="#fr-3-1">↩</a> <a href="#fr-3-2">↩2</a> <a href="#fr-3-3">↩3</a></p>
+<p>OpenSCAD Parametric Design - https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Variables <a href="#fr-3-1">↩</a> <a href="#fr-3-2">↩2</a> <a href="#fr-3-3">↩3</a></p>
 </li>
 <li id="footnote-4">
 <p>OpenSCAD Review - Worth learning? - CadHub, accessed February 18, 2026, https://learn.cadhub.xyz/blog/openscad-review/ <a href="#fr-4-1">↩</a></p>
 </li>
 <li id="footnote-8">
-<p>OpenSCAD Prompt Creation - DocsBot AI, accessed February 18, 2026, https://docsbot.ai/prompts/technical/openscad-prompt-creation <a href="#fr-8-1">↩</a> <a href="#fr-8-2">↩2</a></p>
+<p>OpenSCAD Prompt Creation - DocsBot AI, accessed February 18, 2026, https://docsbot.ai/prompts/technical/openscad-prompt-creation <a href="#fr-8-1">↩</a></p>
+</li>
+<li id="footnote-5">
+<p>Slicer Validation Tools - PrusaSlicer Documentation - https://docs.prusa3d.com/en/guide/39012-validation-tools/ <a href="#fr-5-1">↩</a></p>
+</li>
+<li id="footnote-6">
+<p>3dmake/e2e_test.py at main - GitHub, accessed February 18, 2026, https://github.com/tdeck/3dmake/blob/main/e2e_test.py <a href="#fr-6-1">↩</a></p>
 </li>
 <li id="footnote-7">
-<p>3dmake/e2e_test.py at main - GitHub, accessed February 18, 2026, https://github.com/tdeck/3dmake/blob/main/e2e_test.py <a href="#fr-7-1">↩</a> <a href="#fr-7-2">↩2</a></p>
+<p>Slicing Guides and Common Geometry Issues - PrusaSlicer Documentation, accessed February 18, 2026, https://docs.prusa3d.com/en/ <a href="#fr-7-1">↩</a></p>
 </li>
 </ol>
 
@@ -292,11 +428,11 @@
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../3dMake_Foundation/3dMake_Tutorial/3dMake_Tutorial.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../PowerShell_Foundation/PS_Unit_Test/PS_Unit_Test.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_2/Lessons_3dMake_2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_1/3dmake-setup-guide.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -306,11 +442,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../3dMake_Foundation/3dMake_Tutorial/3dMake_Tutorial.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../PowerShell_Foundation/PS_Unit_Test/PS_Unit_Test.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_2/Lessons_3dMake_2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_1/3dmake-setup-guide.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>

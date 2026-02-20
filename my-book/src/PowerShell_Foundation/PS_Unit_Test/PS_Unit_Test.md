@@ -2,9 +2,24 @@
 
 Estimated time: 60–90 minutes
 
-**Target Audience:** Users who have completed PS-0 through PS-5 and need to demonstrate mastery of PowerShell fundamentals.
+## Key Learning Outcomes Assessed
 
-**Instructions:** Complete all sections below. For multiple choice, select the best answer. For short answers, write one to two sentences. For hands-on tasks, capture evidence (screenshots or output files) and submit alongside your answers.
+By completing this unit test, you will demonstrate:
+
+1. Understanding of file system navigation and path concepts
+2. Proficiency with file and folder manipulation commands
+3. Ability to redirect and pipe command output
+4. Knowledge of environment variables and aliases
+5. Screen-reader accessibility best practices in terminal environments
+6. Problem-solving and command chaining skills
+
+## Target Audience:
+
+Users who have completed PS-0 through PS-5 and need to demonstrate mastery of PowerShell fundamentals.
+
+## Instructions:
+
+Complete all sections below. For multiple choice, select the best answer. For short answers, write one to two sentences. For hands-on tasks, capture evidence (screenshots or output files) and submit alongside your answers.
 
 ---
 
@@ -223,13 +238,3 @@ Complete each task and capture evidence (screenshots, output files, or command t
 
 ---
 
-## Key Learning Outcomes Assessed
-
-By completing this unit test, you will demonstrate:
-
-1. Understanding of file system navigation and path concepts
-2. Proficiency with file and folder manipulation commands
-3. Ability to redirect and pipe command output
-4. Knowledge of environment variables and aliases
-5. Screen-reader accessibility best practices in terminal environments
-6. Problem-solving and command chaining skills

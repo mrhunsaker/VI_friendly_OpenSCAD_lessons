@@ -1,117 +1,121 @@
-# Summary (Self-Paced Accesible 3D Printing with OpenSCAD and 3DMake Course)
-
-
+# Summary (Accesible 3D Printing with OpenSCAD and 3DMake Course)
 
 - [Syllabus](Syllabus.md)
 - [Introduction](README.md)
 
 # Getting Started
 
-- [How to Navigate This Book](Reference_Materials/mdbook-navigation-guide.md)
-- [VSCode Setup Guide](Reference_Materials/vscode-setup-guide.md)
-- [Screen Reader Coding Tips (NVDA & JAWS)](Reference_Materials/nvda-jaws-coding-tips.md)
-- [Terminology](Reference_Materials/terminology.md)
-
-# Foundations of Powershell
- - [Introduction to Command Line Interfaces](PowerShell_Foundation/Powershell_Introduction/Powershell_Introduction.md)
- - [Overview & Full Guide](PowerShell_Foundation/Powershell_Tutorial/Powershell_Tutorial.md)
- - [Intro Lesson: Layout and Paths](PowerShell_Foundation/PS_0_getting_started_layout_paths/PS_0_getting_started_layout_paths.md)
- - [Lesson PS.1: Navigation](PowerShell_Foundation/PS_1_navigation/PS_1_navigation.md)
- - [Lesson PS.2: File and Folder Manipulation](PowerShell_Foundation/PS_2_file_folder_manipulation_modification/PS_2_file_folder_manipulation_modification.md)
- - [Lesson PS.3: Input, Output, and Piping](PowerShell_Foundation/PS_3_input_output_piping/PS_3_input_output_piping.md)
- - [Lesson PS.4: Environment Variables and Aliases](PowerShell_Foundation/PS_4_environment_variables_aliases/PS_4_environment_variables_aliases.md)
- - [Lesson PS.5: Filling in the Gaps](PowerShell_Foundation/PS_5_filling_in_the_gaps/PS_5_filling_in_the_gaps.md)
- - [PowerShell Unit Test — Comprehensive Assessment](PowerShell_Foundation/PS_Unit_Test/PS_Unit_Test.md)
-
-# Foundations of 3D Make
-
 - [3D Make Intro](3dMake_Foundation/3dMake_Intro/3dMake_Intro.md)
 - [3D Make Tutorial](3dMake_Foundation/3dMake_Tutorial/3dMake_Tutorial.md)
-- [Lesson 1: Environmental Configuration and the Developer Workflow](3dMake_Foundation/Lessons_3dMake_1/Lessons_3dMake_1.md)
-- [Lesson 2: Geometric Primitives and the Mathematics of Constructive Solid Geometry](3dMake_Foundation/Lessons_3dMake_2/Lessons_3dMake_2.md)
-- [Lesson 3: Parametric Architecture and Modular Libraries](3dMake_Foundation/Lessons_3dMake_3/Lessons_3dMake_3.md)
-- [Lesson 4: AI-Enhanced Verification and Multimodal Feedback](3dMake_Foundation/Lessons_3dMake_4/Lessons_3dMake_4.md)
-- [Lesson 5: Safety Protocols and the Physical Fabrication Interface](3dMake_Foundation/Lessons_3dMake_5/Lessons_3dMake_5.md)
 
-# Foundations of 3D Printing
+# Foundations of PowerShell — Terminal & Screen Reader Accessibility
 
-- [Foundations of 3D Printing Overview](Units/Unit_0_Foundations/unit-0-overview.md)
-- [Lesson 0.1: Safety  6 Printer Orientation](Units/Unit_0_Foundations/Lesson_0_1_Safety/lesson-0-1-safety.md)
-- [Safety Checklist](Units/Unit_0_Foundations/Lesson_0_1_Safety/safety-checklist.md)
-- [Lesson 0.2: How 3D Printing Works](Units/Unit_0_Foundations/Lesson_0_2_How_3D_Printing_Works/lesson-0-2-how-fdm-works.md)
-- [Lesson 0.3: Introduction to Calipers](Units/Unit_0_Foundations/Lesson_0_3_Intro_to_Calipers/lesson-0-3-calipers.md)
-- [Caliper Practice Worksheet](Units/Unit_0_Foundations/Lesson_0_3_Intro_to_Calipers/caliper-practice-worksheet.md)
-- [Lesson 0.4: OpenSCAD Part 1  6 Primitives & Variables](Units/Unit_0_Foundations/Lesson_0_4_OpenSCAD_Part1/lesson-0-4-openscad-part1.md)
-- [Lesson 0.5: OpenSCAD Part 2  6 Transforms & Booleans](Units/Unit_0_Foundations/Lesson_0_5_OpenSCAD_Part2/lesson-0-5-openscad-part2.md)
-- [Lesson 0.6: Introduction to Slicing](Units/Unit_0_Foundations/Lesson_0_6_Intro_to_Slicing/lesson-0-6-slicing.md)
-  - [Lesson 0.6a: Slicing with PrusaSlicer](Units/Unit_0_Foundations/Lesson_0_6_Intro_to_Slicing/lesson-0-6-slicing-prusa.md)
-  - [Lesson 0.6b: Slicing with OrcaSlicer](Units/Unit_0_Foundations/Lesson_0_6_Intro_to_Slicing/lesson-0-6-slicing-orca.md)
-  - [Lesson 0.6c: Slicing with Bambu Studio](Units/Unit_0_Foundations/Lesson_0_6_Intro_to_Slicing/lesson-0-6-slicing-bambu.md)
-  - [Lesson 0.6d: Slicing with Simplify3D](Units/Unit_0_Foundations/Lesson_0_6_Intro_to_Slicing/lesson-0-6-slicing-simplify3d.md)
-  - [Lesson 0.6e: Slicing with Slic3r](Units/Unit_0_Foundations/Lesson_0_6_Intro_to_Slicing/lesson-0-6-slicing-slic3r.md)
-  - [Lesson 0.6f: Slicing with OctoPrint](Units/Unit_0_Foundations/Lesson_0_6_Intro_to_Slicing/lesson-0-6-slicing-octoprint.md)
-  - [Lesson 0.6g: Slicing with 3DMake](Units/Unit_0_Foundations/Lesson_0_6_Intro_to_Slicing/lesson-0-6-slicing-3dmake.md)
-- [Unit 0 Quiz](Units/Unit_0_Foundations/quiz-unit-0.md)
-- [First Print Project](Extension_Projects/Your_First_Print/your-first-print.md)
-- [Practice Resizing](Extension_Projects/Bonus_Print/bonus-print.md)
+# Curriculum Overview & Getting Started
+- [PowerShell Curriculum Overview](PowerShell_Foundation/PowerShell_Curriculum_Overview/PowerShell_Curriculum_Overview.md)
+- [Screen Reader Accessibility Guide](PowerShell_Foundation/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.md)
 
-# 3D Printing Projects
+# Beginner Level — Starting from Zero
+- [PS-Pre: Your First Terminal](PowerShell_Foundation/PS_Pre_Your_First_Terminal/PS_Pre_Your_First_Terminal.md) — **START HERE if new to terminals**
+- [PS-0: Getting Started — Layout, Paths, and the Shell](PowerShell_Foundation/PS_0_getting_started_layout_paths/PS_0_getting_started_layout_paths.md)
+- [PS-1: Navigation — Moving Around Your File System](PowerShell_Foundation/PS_1_navigation/PS_1_navigation.md)
 
-- [3D Printing Basics Overview](Units/Unit_1_Guided_Projects/unit-1-overview.md)
- - [Lesson 1.0: OpenSCAD Basics](Units/Unit_1_Guided_Projects/Lesson_1_0_OpenSCAD_Basics/lesson_1_0.md)  
- - [Lesson 1.1: Primitives](Units/Unit_1_Guided_Projects/Lesson_1_1_Primitives/lesson_1_1.md)  
- - [Project 0: Your First 3D Print](Units/Unit_1_Guided_Projects/Project_0_Your_First_3D_Print/Project_0.md)  
- - [Lesson 1.2: Translations](Units/Unit_1_Guided_Projects/Lesson_1_2_Translations/lesson_1_2.md)  
- - [Lesson 1.3: Debugging & Resolution](Units/Unit_1_Guided_Projects/Lesson_1_3_Debugging/lesson_1_3.md)  
- - [Project 1: Tactile Floor Markers](Units/Unit_1_Guided_Projects/Project_1_Tactile_Floor_Markers/Project_1.md)  
-- [Extension: Dice-Dice-Dice](Extension_Projects/Dice_Dice_Dice/Dice_Dice_Dice.md)
+# Intermediate Level — File & Command Mastery
+- [PS-2: File and Folder Manipulation](PowerShell_Foundation/PS_2_file_folder_manipulation_modification/PS_2_file_folder_manipulation_modification.md)
+- [PS-3: Input, Output, and Piping](PowerShell_Foundation/PS_3_input_output_piping/PS_3_input_output_piping.md)
+- [PS-4: Environment Variables and Aliases](PowerShell_Foundation/PS_4_environment_variables_aliases/PS_4_environment_variables_aliases.md)
+- [PS-5: Filling in the Gaps — Control Flow, Profiles, and Useful Tricks](PowerShell_Foundation/PS_5_filling_in_the_gaps/PS_5_filling_in_the_gaps.md)
 
-# Intermediate 3D Printing Skills
+# Advanced Level — Professional Workflows
+- [PS-6: Advanced Terminal Techniques — Scripts, Functions & Professional Workflows](PowerShell_Foundation/PS_6_Advanced_Techniques/PS_6_Advanced_Techniques.md)
 
-- [Intermediate Skills Outline](Units/Unit_2_Intermediate_Skills/Lesson_2_1_Parametric_Design/lesson_2_outline.md)
-- [Lesson 2.1: Parametric Design & Modules](Units/Unit_2_Intermediate_Skills/Lesson_2_1_Parametric_Design/lesson-2-1-parametric-modules.md)
-- [Lesson 2.2: Tolerances & Fit](Units/Unit_2_Intermediate_Skills/Lesson_2_2_Tolerances_and_Fit/lesson-2-2-tolerances.md)
-- [Tolerance Test Design Sheet](Units/Unit_2_Intermediate_Skills/Lesson_2_2_Tolerances_and_Fit/tolerance-test-design.md)
-- [Lesson 2.3: Advanced Slicing](Units/Unit_2_Intermediate_Skills/Lesson_2_3_Advanced_Slicing/lesson-2-3-advanced-slicing.md)
-- [Lesson 2.4: Material Properties](Units/Unit_2_Intermediate_Skills/Lesson_2_4_Material_Properties/lesson-2-4-materials.md)
+# Reference & Tutorial
+- [Introduction to Command Line Interfaces](PowerShell_Foundation/Powershell_Introduction/Powershell_Introduction.md)
+- [PowerShell Overview & Full Guide](PowerShell_Foundation/Powershell_Tutorial/Powershell_Tutorial.md)
 
-# Open-Ended Application of 3D Printing Skills
+# Assessment
+- [PowerShell Unit Test & Practice](PowerShell_Foundation/PS_Unit_Test/PS_Unit_Test.md)
 
-- [Lesson 3.1: Stakeholder Interviews & Functional Requirements](Units/Unit_3_Open_Ended_Projects/Lesson_3_1_Stakeholder_Interviews/lesson-3-1-stakeholder-interviews.md)
-- [Stakeholder Interview Worksheet](Units/Unit_3_Open_Ended_Projects/Lesson_3_1_Stakeholder_Interviews/stakeholder-interview-worksheet.md)
-- [Use 3D Print to Solve Real-Life Problems](Extension_Projects/Your_Second_Print/your-second-print.md)
+# Foundations of 3D Make
+- [Lesson 1](3dMake_Foundation/Lessons_3dMake_1/Lessons_3dMake_1.md)
+- [Setup Guide: 3dMake](3dMake_Foundation/Lessons_3dMake_1/3dmake-setup-guide.md)
+- [Setup Guide: VSCode](3dMake_Foundation/Lessons_3dMake_1/vscode-setup-guide.md)
+- [Navigation Guide](3dMake_Foundation/Lessons_3dMake_1/mdbook-navigation-guide.md)
+- [Terminology & Vocabulary](3dMake_Foundation/Lessons_3dMake_1/terminology.md)
+- [Vocabulary Glossary](3dMake_Foundation/Lessons_3dMake_1/vocabulary-glossary.md)
+- [Screen Reader Tips (NVDA & JAWS)](3dMake_Foundation/Lessons_3dMake_1/nvda-jaws-coding-tips.md)
+- [Your First Print Project](assets/3dMake_Foundation/Lessons_3dMake_1/Your_First_Print/your-first-print.md)
+- [Basic Project Scaffold](assets/3dMake_Foundation/Lessons_3dMake_1/basic_project_scaffold.scad)
 
-# Project Templates
+# Lesson 2: Geometric Primitives and the Mathematics of Constructive Solid Geometry
+- [Lesson 2](3dMake_Foundation/Lessons_3dMake_2/Lessons_3dMake_2.md)
+- [OpenSCAD Cheat Sheet](3dMake_Foundation/Lessons_3dMake_2/openscad-cheat-sheet.md)
+- [Your Second Print Project](assets/3dMake_Foundation/Lessons_3dMake_2/Your_Second_Print/your-second-print.md)
+- [Bonus Print Project](assets/3dMake_Foundation/Lessons_3dMake_2/Bonus_Print/bonus-print.md)
 
-- [Extension Projects Index](Extension_Projects/EXTENSION_PROJECTS_INDEX.md)
+# Lesson 3: Parametric Architecture and Modular Libraries
+- [Lesson 3](3dMake_Foundation/Lessons_3dMake_3/Lessons_3dMake_3.md)
+- [Parametric Design Template](assets/3dMake_Foundation/Lessons_3dMake_3/parametric_template.scad)
+- [Module Design Pattern Template](assets/3dMake_Foundation/Lessons_3dMake_3/module_template.scad)
 
-- [Project 1 Documentation Template](Templates/project-1-documentation-template.md)  
-- [Project 2 Documentation Template](Templates/project-2-documentation-template.md)  
-- [Project 3 Documentation Template](Templates/project-3-documentation-template.md)  
-- [Project 4 Documentation Template](Templates/project-4-documentation-template.md)  
+# Lesson 4: AI-Enhanced Verification and Multimodal Feedback
+- [Lesson 4](3dMake_Foundation/Lessons_3dMake_4/Lessons_3dMake_4.md)
+- [Dice-Dice-Dice Project](assets/3dMake_Foundation/Lessons_3dMake_4/Dice_Dice_Dice/Dice_Dice_Dice.md)
 
-# Reference Materials and Cheat Sheets
+# Lesson 5: Safety Protocols and the Physical Fabrication Interface
+- [Lesson 5](3dMake_Foundation/Lessons_3dMake_5/Lessons_3dMake_5.md)
+- [Safety Checklist](3dMake_Foundation/Lessons_3dMake_5/safety_checklist.md)
+- [Maintenance Log](3dMake_Foundation/Lessons_3dMake_5/maintenance_log.md)
+- [Material Properties Reference](3dMake_Foundation/Lessons_3dMake_5/material_properties_quick_reference.md)
+- [Filament Comparison Table](3dMake_Foundation/Lessons_3dMake_5/filament-comparison-table.md)
 
-## Setup Guides
+# Lesson 6: Practical 3dm Commands and Text Embossing
+- [Lesson 6](3dMake_Foundation/Lessons_3dMake_6/Lessons_3dMake_6.md)
+- [Slicing Settings Reference](3dMake_Foundation/Lessons_3dMake_6/slicing-settings-reference.md)
+- [Slicing Settings — PrusaSlicer](3dMake_Foundation/Lessons_3dMake_6/slicing-settings-reference-prusa.md)
+- [Slicing Settings — Bambu Lab](3dMake_Foundation/Lessons_3dMake_6/slicing-settings-reference-bambu.md)
+- [Slicing Settings — Anycubic](3dMake_Foundation/Lessons_3dMake_6/slicing-settings-reference-anycubic.md)
+- [Cube Keycap Example](assets/3dMake_Foundation/Lessons_3dMake_6/cube_keycap.scad)
+- [Parametric Keychain Project](assets/3dMake_Foundation/Lessons_3dMake_6/Parametric_Keychain/parametric-keychain.md)
 
-- [Course Setup Guide — Folder Organization with PowerShell & Screen Reader](Reference_Materials/course-setup-guide.md)
-- [3dMake Setup & Workflow Guide — Installation to Advanced Usage](Reference_Materials/3dmake-setup-guide.md)
-- [Getting Started with Markdown — Easy Formatted Text Without Office Suites](Reference_Materials/markdown-starter-guide.md)
+# Lesson 7: Parametric Transforms and the Phone Stand Project
+- [Lesson 7](3dMake_Foundation/Lessons_3dMake_7/Lessons_3dMake_7.md)
+- [Parametric Phone Stand Example](assets/3dMake_Foundation/Lessons_3dMake_7/phone_stand.scad)
 
-## Quick References
+# Lesson 8: Advanced Parametric Design and Interlocking Features
+- [Lesson 8](3dMake_Foundation/Lessons_3dMake_8/Lessons_3dMake_8.md)
+- [Stackable Bins Example](assets/3dMake_Foundation/Lessons_3dMake_8/stackable_bins.scad)
+- [Snap-Fit Clip Project](assets/3dMake_Foundation/Lessons_3dMake_8/Snap_Fit_Clip/snap-fit-clip.md)
 
-- [OpenSCAD Cheat Sheet](Reference_Materials/openscad-cheat-sheet.md)
+# Lesson 9: Automation and 3dm Workflows
+- [Lesson 9](3dMake_Foundation/Lessons_3dMake_9/Lessons_3dMake_9.md)
+- [Batch Build Script (Bash)](assets/3dMake_Foundation/Lessons_3dMake_9/build_all.sh)
+- [Test Variants Script (Bash)](assets/3dMake_Foundation/Lessons_3dMake_9/test_variants.sh)
+- [Batch Export Script (PowerShell)](assets/3dMake_Foundation/Lessons_3dMake_9/export_batch.ps1)
 
-## Slicing Settings by Printer
+# Lesson 10: Hands-On Practice Exercises and Troubleshooting
+- [Lesson 10](3dMake_Foundation/Lessons_3dMake_10/Lessons_3dMake_10.md)
+- [Common Issues and Solutions](3dMake_Foundation/Lessons_3dMake_10/common_issues_and_solutions.md)
+- [Measurement Calibration Guide](3dMake_Foundation/Lessons_3dMake_10/measurement_calibration_guide.md)
+- [Diagnostic Checklist](3dMake_Foundation/Lessons_3dMake_10/diagnostic_checklist.md)
+- [Measurement Worksheet](3dMake_Foundation/Lessons_3dMake_10/measurement-worksheet.md)
+- [Accessibility Audit Project](assets/3dMake_Foundation/Lessons_3dMake_10/Accessibility_Audit/accessibility-audit.md)
 
-- [PrusaSlicer — Prusa Printers](Reference_Materials/slicing-settings-reference-prusa.md)
-- [Cura — Anycubic i3 Mega](Reference_Materials/slicing-settings-reference-anycubic.md)
-- [Bambu Studio — Bambu X1 Series](Reference_Materials/slicing-settings-reference-bambu.md)
+# Lesson 11: Stakeholder-Centric Design and the Beaded Jewelry Project
+- [Lesson 11](3dMake_Foundation/Lessons_3dMake_11/Lessons_3dMake_11.md)
+- [Stakeholder Interview Template](3dMake_Foundation/Lessons_3dMake_11/stakeholder_interview_template.md)
+- [Functional Requirements Template](3dMake_Foundation/Lessons_3dMake_11/functional_requirements_template.md)
+- [Design Specification Template](3dMake_Foundation/Lessons_3dMake_11/design_specification_template.md)
+- [Feedback Collection Template](3dMake_Foundation/Lessons_3dMake_11/feedback_collection_template.md)
+- [Evaluation Rubric](3dMake_Foundation/Lessons_3dMake_11/master-rubric.md)
+- [Beaded Jewelry Project](assets/3dMake_Foundation/Lessons_3dMake_11/Beaded_Jewelry_Unit/beaded-jewelry.md)
 
-## Reference Tables
+# 3D Make Foundation Final Assessment
 
-- [Filament Comparison Table](Reference_Materials/filament-comparison-table.md)
-- [Measurement Worksheet](Reference_Materials/measurement-worksheet.md)
-- [Vocabulary Glossary](Reference_Materials/vocabulary-glossary.md)
-- [Master Rubric (0 69 Scale)](Reference_Materials/master-rubric.md)
-- [VSCode tasks.json Template](Reference_Materials/vscode-tasks.json)
+- [Final Exam — 25 Problems](3dMake_Foundation/3dMake_Final_Exam.md)
+
+# 3D Make Foundation Appendices
+
+- [Appendix A: Comprehensive Slicing Guide — All Major Slicers](3dMake_Foundation/Appendix_A_Comprehensive_Slicing_Guide.md)
+- [Appendix B: Material Properties & Selection Guide](3dMake_Foundation/Appendix_B_Material_Properties.md)
+- [Appendix C: Tolerance Testing & Quality Assurance Matrix](3dMake_Foundation/Appendix_C_Tolerance_QA.md)
+- [Appendix D: PowerShell Integration for SCAD Workflows](3dMake_Foundation/Appendix_D_PowerShell_Integration.md)

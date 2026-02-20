@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Lesson PS.4: Environment Variables and Aliases - 3D Printing Course for Blind and Visually Impaired Learners</title>
+        <title>PS-4: Environment Variables and Aliases - 3D Printing Course for Blind and Visually Impaired Learners</title>
 
 
         <!-- Custom HTML head -->
@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-4bc6e054.js";
+            window.path_to_searchindex_js = "../../searchindex-9554f408.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-90c12225.js"></script>
+        <script src="../../toc-13636583.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -244,22 +244,48 @@
 <ul>
 <li>After step 3 you can determine whether a program will be found by <code>PATH</code>.</li>
 </ul>
-<p>Quick Quiz</p>
+<h2 id="quiz--lesson-ps4"><a class="header" href="#quiz--lesson-ps4">Quiz — Lesson PS.4</a></h2>
 <ol>
 <li>How do you print an environment variable?</li>
 <li>What is the purpose of <code>PATH</code>?</li>
 <li>How do you check whether <code>openscad</code> is available?</li>
 <li>How do you create a temporary alias?</li>
 <li>Where would you make an alias permanent?</li>
+<li>True or False: Environment variables are case-sensitive on all platforms.</li>
+<li>Explain why having a program in your PATH is useful compared to always using its full file path.</li>
+<li>Write a command that would create an alias called <code>slicer</code> for the OpenSCAD executable.</li>
+<li>What file would you edit to make an alias persist across PowerShell sessions?</li>
+<li>Describe a practical benefit of using the <code>$env:TEMP</code> directory for temporary files in a 3D printing workflow.</li>
+<li>You have a custom script at <code>C:\Scripts\backup_models.ps1</code> that you want to run from anywhere as <code>backup-now</code>. What steps would you take to make this work?</li>
+<li>Explain the difference between setting an environment variable in the current session vs. adding it to your profile for permanence.</li>
+<li>Design a profile strategy for managing multiple 3D printing projects, each with different tool paths and directories; show how to structure environment variables for each.</li>
+<li>If a program is not found by <code>Get-Command</code>, what are the possible reasons, and how would you troubleshoot?</li>
+<li>Describe how you would verify that your PowerShell profile is loading correctly and how to debug issues if aliases or environment variables don’t appear after restarting PowerShell.</li>
 </ol>
-<p>Extension Problems</p>
+<h2 id="extension-problems"><a class="header" href="#extension-problems">Extension Problems</a></h2>
 <ol>
 <li>Add a folder to PATH for a test program (describe steps; do not change system PATH without admin).</li>
 <li>Create a short profile snippet that sets two aliases and test re-opening PowerShell.</li>
 <li>Use <code>Get-Command</code> to list the path for several common programs.</li>
 <li>Explore <code>$env:TEMP</code> and create a file there.</li>
 <li>Save a copy of your current PATH to a text file and examine it in your editor.</li>
+<li>Create a PowerShell profile script that loads custom aliases and environment variables for your 3D printing workflow; test it in a new session.</li>
+<li>Build a “project profile” that sets environment variables for CAD, slicing, and print directories; switch between profiles for different projects.</li>
+<li>Write a script that audits your current environment variables and creates a summary report of what’s set and why.</li>
+<li>Design a custom alias system for common 3D printing commands; document the aliases and their purposes.</li>
+<li>Create a profile migration guide: document how to export and import your PowerShell profile across machines for consistent workflows.</li>
+<li>Implement a safe PATH modification script: create a utility that allows you to add/remove directories from PATH for the current session only; show how to make it permanent in your profile.</li>
+<li>Build a comprehensive profile framework with modules: create separate .ps1 files for aliases, environment variables, and functions; have your main profile load all of them dynamically.</li>
+<li>Develop an environment validation tool: write a script that checks whether all required programs (OpenSCAD, slicers, etc.) are accessible via PATH; report findings and suggest fixes.</li>
+<li>Create a project-switching alias system: design a function that changes all environment variables and aliases based on the current project; test switching between multiple projects.</li>
+<li>Build a profile troubleshooting guide: create a script that exports your current environment state (variables, aliases, PATH) to a timestamped file, allowing you to compare states before and after changes and identify what broke.</li>
 </ol>
+<h2 id="references"><a class="header" href="#references">References</a></h2>
+<ul>
+<li>Microsoft. (2024). <em>Environment variables in PowerShell</em>. https://learn.microsoft.com/powershell/scripting/learn/shell/using-environment-variables</li>
+<li>Microsoft. (2024). <em>Set-Alias cmdlet reference</em>. https://learn.microsoft.com/powershell/module/microsoft.powershell.utility/set-alias</li>
+<li>Microsoft. (2024). <em>Creating and using PowerShell profiles</em>. https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_profiles</li>
+</ul>
 <h2 id="helpful-resources"><a class="header" href="#helpful-resources">Helpful Resources</a></h2>
 <ul>
 <li><a href="https://learn.microsoft.com/powershell/scripting/learn/shell/using-environment-variables">Environment Variables in PowerShell</a></li>

@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Lesson PS.5: Filling in the Gaps - 3D Printing Course for Blind and Visually Impaired Learners</title>
+        <title>PS-5: Filling in the Gaps — Control Flow, Profiles, and Useful Tricks - 3D Printing Course for Blind and Visually Impaired Learners</title>
 
 
         <!-- Custom HTML head -->
@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-4bc6e054.js";
+            window.path_to_searchindex_js = "../../searchindex-9554f408.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-90c12225.js"></script>
+        <script src="../../toc-13636583.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -246,22 +246,48 @@
 <li>After step 2 you can re-run a recent command by history number.</li>
 <li>After step 5 your alias should persist across sessions.</li>
 </ul>
-<p>Quick Quiz (5)</p>
+<h2 id="quiz--lesson-ps5"><a class="header" href="#quiz--lesson-ps5">Quiz — Lesson PS.5</a></h2>
 <ol>
 <li>How do you view the command history?</li>
 <li>Which key combination aborts a running command?</li>
 <li>What does <code>echo $PROFILE</code> show?</li>
 <li>How does the <code>&amp;</code> operator help run executables?</li>
 <li>What is one strategy if terminal output stops being announced by your screen reader?</li>
+<li>True or False: Using <code>Ctrl+C</code> permanently deletes any files created by the command you abort.</li>
+<li>Explain the difference between <code>history</code> and <code>Get-History</code> in PowerShell.</li>
+<li>If you place code in your profile but it doesn’t take effect after opening a new PowerShell window, what should you verify?</li>
+<li>Write a command that would run a program at the path <code>C:\Program Files\OpenSCAD\openscad.exe</code> directly.</li>
+<li>Describe a practical workflow scenario where having keyboard shortcuts (aliases) in your profile would save time.</li>
+<li>Explain how to re-run the 5th command from your history, and what would happen if that command had file operations (creates/deletes).</li>
+<li>Design a profile initialization strategy that separates utilities for different projects; explain how you would switch between them.</li>
+<li>Walk through a troubleshooting workflow: your screen reader stops announcing output after running a long command. What steps would you take to diagnose and resolve the issue?</li>
+<li>Create a safety checkpoint system: before any destructive operation (mass delete, overwrite), how would you use profile functions and history to verify the command is correct?</li>
+<li>Develop a comprehensive capstone scenario: integrate everything from PS-0 through PS-5 (navigation, file operations, piping, environment setup, history) to design an automated 3D printing project workflow with error handling and logging.</li>
 </ol>
-<p>Extension Problems (5)</p>
+<h2 id="extension-problems"><a class="header" href="#extension-problems">Extension Problems</a></h2>
 <ol>
 <li>Add an alias and an environment variable change to your profile and document the behavior after reopening PowerShell.</li>
 <li>Create a short script that automates creating a project folder and an initial .scad file.</li>
 <li>Experiment with running OpenSCAD by full path using <code>&amp;</code> and by placing it in PATH; compare results.</li>
 <li>Practice redirecting <code>Get-Help</code> output to a file and reading it in Notepad for screen reader clarity.</li>
 <li>Document three screen reader troubleshooting steps you used and when they helped.</li>
+<li>Build a comprehensive PowerShell profile that includes aliases, environment variables, and helper functions for your 3D printing workflow.</li>
+<li>Create a script that troubleshoots common PowerShell issues (module loading, permission errors, command not found); test at least three scenarios.</li>
+<li>Write a PowerShell function that coordinates multiple tasks: creates a project folder, starts OpenSCAD, and opens slicing software.</li>
+<li>Design a screen-reader accessibility guide for PowerShell: document commands, outputs, and accessible navigation patterns.</li>
+<li>Develop an advanced PowerShell workflow: implement error handling, logging, and confirmation prompts for risky operations.</li>
+<li>Implement a “undo” system using history: create a function that logs destructive commands (rm, mv, cp -Force) and allows you to review/rollback the last operation.</li>
+<li>Build a profile debugger: create a script that compares two PowerShell sessions’ environment states (variables, aliases, functions) to identify what loaded/failed to load.</li>
+<li>Develop a multi-project profile manager: design a system where you can switch entire environments (paths, aliases, variables) for different 3D printing projects by running a single command.</li>
+<li>Create a comprehensive accessibility analyzer: write a script that tests whether key PowerShell commands produce screen-reader-friendly output; document workarounds for commands that don’t.</li>
+<li>Design a complete capstone project: build an integrated automation suite that manages a 3D printing workflow (project setup, file organization, CAD/slicing tool automation, output logging, error recovery, and audit trails) with full error handling and documentation.</li>
 </ol>
+<h2 id="references"><a class="header" href="#references">References</a></h2>
+<ul>
+<li>Microsoft. (2024). <em>PowerShell history and recall functionality</em>. https://learn.microsoft.com/powershell/scripting/learn/shell/using-history</li>
+<li>Microsoft. (2024). <em>Understanding and creating PowerShell profiles</em>. https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_profiles</li>
+<li>Microsoft. (2024). <em>The call operator (&amp;) for running executables</em>. https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_operators#call-operator-</li>
+</ul>
 <h2 id="helpful-resources"><a class="header" href="#helpful-resources">Helpful Resources</a></h2>
 <ul>
 <li><a href="https://learn.microsoft.com/powershell/scripting/learn/shell/using-history">PowerShell History and Recall</a></li>
@@ -279,7 +305,7 @@
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="../../PowerShell_Foundation/PS_Unit_Test/PS_Unit_Test.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../PowerShell_Foundation/PS_6_Advanced_Techniques/PS_6_Advanced_Techniques.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -293,7 +319,7 @@
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="../../PowerShell_Foundation/PS_Unit_Test/PS_Unit_Test.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../PowerShell_Foundation/PS_6_Advanced_Techniques/PS_6_Advanced_Techniques.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>

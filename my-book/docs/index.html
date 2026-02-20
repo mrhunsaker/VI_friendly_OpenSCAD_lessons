@@ -81,10 +81,10 @@
             const path_to_root = "";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-4bc6e054.js";
+            window.path_to_searchindex_js = "searchindex-9554f408.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-90c12225.js"></script>
+        <script src="toc-13636583.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -220,17 +220,145 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
-<h2 id="introduction-to-the-online-course"><a class="header" href="#introduction-to-the-online-course">Introduction to the Online Course</a></h2>
-<p>This online course offers a purpose-built pathway for students who are blind or visually impaired to learn 3D design and FDM printing using OpenSCAD. It combines clear, text-driven CAD workflows with tactile practices and measurement-based exercises so that learners can develop spatial understanding without relying on visual previews.</p>
-<p>The course favors explicit instruction before open-ended work: each technical skill is introduced, practiced, and assessed before it is required in a project. That scaffolding helps reduce cognitive load and gives students predictable steps to follow when they move into guided and then independent projects.</p>
-<p>Because accessibility is central to the design, the curriculum emphasizes non-visual toolchains and workflows — for example, textual parametric modeling, command-line slicer integrations, and methods for producing tactile proofs and prototypes. Where visual tools help, the materials provide alternate descriptions and processes that work with screen readers and keyboard navigation.</p>
-<p>OpenSCAD is chosen intentionally: its programmatic, textual interface plays well with assistive technology and encourages a precise, repeatable design approach. Students learn to express geometry as code, to parameterize designs for fit and function, and to produce artifacts that can be tested and iterated without visual inspection.</p>
-<p>Projects are arranged as a progression: foundational lessons teach core concepts and safety, guided projects let students practice skills with structured feedback, and open-ended projects — including a stakeholder-driven assistive-technology capstone — require students to apply design thinking, documentation, and user testing.</p>
-<p>Iteration is baked into the process. Every major project asks for at least two prototyping cycles, stakeholder interviews, and documented revisions, so learners gain experience with real-world design feedback and the discipline of improving a solution over time.</p>
-<p>Assessment blends technical criteria and process skills: rubrics measure stakeholder engagement, the quality of iteration, and how well final prints meet the agreed functional requirements. Documentation and reflective practice are graded as part of the learning outcomes.</p>
-<p>The course also connects students to community resources, open repositories, and continuing practice: e-NABLE, Makers Making Change, NIH 3D Print Exchange, Printables, and Thingiverse are included as research starting points. These sources provide examples, remixable designs, and inspiration for real-world assistive solutions.</p>
-<p>Practical outcomes are central: beyond CAD and printing skills, students develop communication, collaboration, and project documentation abilities that translate to employment and community engagement. The online format and downloadable assets make the materials easy to host with mdBook and share with students and instructors.</p>
+                        <h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
+<p>This course teaches 3D design and digital fabrication using a fully accessible, command-line–driven toolchain centered on <strong>OpenSCAD</strong> (text-based CAD), <strong>3DMake</strong> (non-visual build automation), and accessible editors (VS Code, Notepad++, command-line editors) with screen reader support.</p>
+<p>The curriculum is explicitly designed for blind and visually impaired learners who use screen readers (NVDA, JAWS, VoiceOver). It eliminates GUI navigation and visual feedback in favor of keyboard-driven, text-based workflows that screen readers can fully access. <strong>Accessibility is not an add-on. It is the foundation of every tool, workflow, and lesson in this curriculum.</strong></p>
+<hr>
+<h2 id="curriculum-structure"><a class="header" href="#curriculum-structure">Curriculum Structure</a></h2>
+<h3 id="part-1-powershell-foundation-6-lessons--4-guides"><a class="header" href="#part-1-powershell-foundation-6-lessons--4-guides">Part 1: PowerShell Foundation (6 lessons + 4 guides)</a></h3>
+<p><strong>Where to Start:</strong> <a href="PowerShell_Foundation/Powershell_Introduction/Powershell_Introduction.html">PowerShell Introduction</a></p>
+<p>Before learning 3D design, students master terminal/command-line fundamentals:</p>
+<ul>
+<li><strong>PS Introduction</strong> — What is a terminal and why learn it (pre-terminal intro for absolute beginners)</li>
+<li><strong>PS.0 through PS.5</strong> — 6 progressive lessons covering command-line basics through error handling</li>
+<li><strong>Screen Reader Accessibility Guide</strong> — NVDA &amp; JAWS reference for terminal navigation</li>
+<li><strong>PowerShell Curriculum Overview</strong> — Complete guide with learning paths</li>
+</ul>
+<p><strong>Time commitment:</strong> ~6 hours<br><strong>Skills gained:</strong> Terminal navigation, file operations, basic scripting, keyboard-only workflow mastery</p>
+<h3 id="part-2-3dmake-foundation-11-lessons--4-appendices"><a class="header" href="#part-2-3dmake-foundation-11-lessons--4-appendices">Part 2: 3dMake Foundation (11 lessons + 4 appendices)</a></h3>
+<p><strong>Where to Start:</strong> <a href="3dMake_Foundation/3dMake_Intro/3dMake_Intro.html">3dMake Introduction</a></p>
+<p><strong>Main Curriculum: 11 Progressive Lessons</strong></p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Part</th><th>Lessons</th><th>Focus</th><th>Duration</th><th>Total Hours</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Foundations</strong></td><td>1–3</td><td>Environment setup, primitives, parametric design</td><td>~3 hours</td><td>3</td></tr>
+<tr><td><strong>Verification &amp; Safety</strong></td><td>4–5</td><td>AI verification, safety protocols, materials</td><td>~2 hours</td><td>5</td></tr>
+<tr><td><strong>Applied Projects</strong></td><td>6–8</td><td>Practical commands, transforms, advanced design</td><td>~4 hours</td><td>9</td></tr>
+<tr><td><strong>Advanced Topics</strong></td><td>9–10</td><td>Automation, troubleshooting, mastery</td><td>~3 hours</td><td>12</td></tr>
+<tr><td><strong>Leadership</strong></td><td>11</td><td>Stakeholder-centric design</td><td>~2 hours</td><td>14</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>Total:</strong> 14–18 hours instruction + projects</p>
+<p><strong>4 Comprehensive Reference Appendices</strong></p>
+<ul>
+<li><strong><a href="3dMake_Foundation/Appendix_A_Comprehensive_Slicing_Guide.html">Appendix A: Comprehensive Slicing Guide</a></strong> — 7 major slicers (1,500+ lines)</li>
+<li><strong><a href="3dMake_Foundation/Appendix_B_Material_Properties.html">Appendix B: Material Properties &amp; Selection</a></strong> — 6 materials (1,200+ lines)</li>
+<li><strong><a href="3dMake_Foundation/Appendix_C_Tolerance_QA.html">Appendix C: Tolerance Testing &amp; QA Matrix</a></strong> — Measurement procedures (1,200+ lines)</li>
+<li><strong><a href="3dMake_Foundation/Appendix_D_PowerShell_Integration.html">Appendix D: PowerShell Integration for SCAD Workflows</a></strong> — 5 automation scripts (1,100+ lines)</li>
+</ul>
+<hr>
+<h2 id="the-accessible-toolchain"><a class="header" href="#the-accessible-toolchain">The Accessible Toolchain</a></h2>
+<h3 id="screen-reader-compatibility-throughout"><a class="header" href="#screen-reader-compatibility-throughout">Screen Reader Compatibility Throughout</a></h3>
+<p>This course uses tools designed for screen reader access:</p>
+<ul>
+<li><strong>Terminal/Command line</strong> — Text-based, fully accessible to NVDA, JAWS, VoiceOver</li>
+<li><strong>OpenSCAD</strong> — Free, open-source text-based CAD (no visual-only GUI dependency)</li>
+<li><strong>3DMake</strong> — Command-line build tool eliminating GUI navigation</li>
+<li><strong>Accessible editors</strong> — VS Code, Notepad++, Nano, Vim (all keyboard-driven, screen reader friendly)</li>
+</ul>
+<p>See <a href="Reference_Materials/nvda-jaws-coding-tips.html">Screen Reader Coding Tips (NVDA &amp; JAWS)</a> for detailed keyboard shortcuts and configuration.</p>
+<h3 id="3dmake-non-visual-build-automation"><a class="header" href="#3dmake-non-visual-build-automation">3DMake: Non-Visual Build Automation</a></h3>
+<p><strong>3DMake</strong> makes the entire design-to-print pipeline accessible:</p>
+<pre><code class="language-bash">3dm build        → Compiles main.scad to main.stl
+3dm info         → Validates geometry and runs diagnostics
+3dm slice        → Prepares model for printing
+</code></pre>
+<ul>
+<li>No GUI navigation needed</li>
+<li>Automation eliminates repetitive manual steps</li>
+<li>Configuration files store parameters as human-readable text</li>
+<li>Error reporting is text-based (screen reader accessible)</li>
+<li>Works with command-line slicers</li>
+</ul>
+<h3 id="iterative-non-visual-design"><a class="header" href="#iterative-non-visual-design">Iterative, Non-Visual Design</a></h3>
+<p>Students learn to design through <strong>code and testing</strong>, not visual previews:</p>
+<ul>
+<li>Write parametric OpenSCAD code in accessible editors</li>
+<li>Run <code>3dm build</code> to compile to printable file</li>
+<li>Use measurement-based verification (calipers, scales, functional testing)</li>
+<li>Iterate by editing parameters and rebuilding</li>
+<li><strong>No reliance on 3D preview or visual feedback</strong></li>
+</ul>
+<hr>
+<h2 id="project-based-learning"><a class="header" href="#project-based-learning">Project-Based Learning</a></h2>
+<p>Every 3dMake lesson includes hands-on projects:</p>
+<ul>
+<li><strong>Lesson 6:</strong> Keycap with embossed text (3dm commands)</li>
+<li><strong>Lesson 7:</strong> Phone stand (parametric transforms)</li>
+<li><strong>Lesson 8:</strong> Stackable bins (interlocking features, tolerances)</li>
+<li><strong>Lesson 9:</strong> Keychain automation (PowerShell batch processing)</li>
+<li><strong>Lesson 10:</strong> QA testing + accessibility audit (measurement, troubleshooting)</li>
+<li><strong>Lesson 11:</strong> Beaded jewelry holder (stakeholder-driven design)</li>
+</ul>
+<p>Each project requires:</p>
+<ul>
+<li>Parametric OpenSCAD code (clean, well-commented)</li>
+<li>Functional prototype (tested, iterated)</li>
+<li>Complete documentation (reflections, measurements, decisions)</li>
+</ul>
+<hr>
+<h2 id="learning-support"><a class="header" href="#learning-support">Learning Support</a></h2>
+<h3 id="reference-materials"><a class="header" href="#reference-materials">Reference Materials</a></h3>
+<p>Quick navigation to common topics:</p>
+<ul>
+<li><a href="Reference_Materials/openscad-cheat-sheet.html">OpenSCAD Cheat Sheet</a> — Syntax quick-reference</li>
+<li><a href="Reference_Materials/3dmake-setup-guide.html">3dMake Setup Guide</a> — Installation walkthrough</li>
+<li><a href="Reference_Materials/vscode-setup-guide.html">VSCode Setup Guide</a> — Accessibility configuration</li>
+<li><a href="Reference_Materials/vocabulary-glossary.html">Vocabulary Glossary</a> — Course terminology</li>
+<li><a href="Reference_Materials/filament-comparison-table.html">Filament Comparison Table</a> — Material reference</li>
+<li><a href="Reference_Materials/master-rubric.html">Master Rubric</a> — Project assessment criteria</li>
+</ul>
+<h3 id="navigation"><a class="header" href="#navigation">Navigation</a></h3>
+<ul>
+<li><strong><a href="SUMMARY.html">SUMMARY.md</a></strong> — Complete table of contents</li>
+<li><strong><a href="3dMake_Foundation/3dMake_Foundation_Curriculum_Guide.html">Curriculum Guide</a></strong> — Detailed overview of all lessons and appendices</li>
+<li><strong><a href="3dMake_Foundation/3dMake_Quick_Reference.html">Quick Reference</a></strong> — At-a-glance command and syntax reference</li>
+</ul>
+<hr>
+<h2 id="supplemental-resources--textbooks"><a class="header" href="#supplemental-resources--textbooks">Supplemental Resources &amp; Textbooks</a></h2>
+<p>This course is enhanced by comprehensive textbooks and companion materials from the <em>Programming with OpenSCAD</em> project:</p>
+<h3 id="free-textbooks-epub-format"><a class="header" href="#free-textbooks-epub-format">Free Textbooks (EPUB Format)</a></h3>
+<ul>
+<li><strong><a href="assets/Programming_with_OpenSCAD.epub">Programming with OpenSCAD: A Beginner’s Guide to Coding 3D-Printable Objects</a></strong> — Comprehensive reference covering OpenSCAD syntax, geometry concepts, and design patterns. Ideal for deep dives into specific topics and as a reference guide throughout the course.</li>
+<li><strong><a href="assets/Simplifying_3D_Printing_with_OpenSCAD.epub">Simplifying 3D Printing with OpenSCAD</a></strong> — Focused on practical workflows, optimization, and real-world printing scenarios.</li>
+</ul>
+<h3 id="companion-teaching-resources"><a class="header" href="#companion-teaching-resources">Companion Teaching Resources</a></h3>
+<ul>
+<li><strong><a href="https://programmingwithopenscad.github.io/learning.html">Practice Worksheets</a></strong> — Printable worksheets for visualization practice, decomposition exercises, vocabulary building, and assessment.</li>
+<li><strong><a href="https://programmingwithopenscad.github.io/quick-reference.html">Visual Quick Reference</a></strong> — Command syntax guides and geometry reference.</li>
+<li><strong><a href="https://github.com/ProgrammingWithOpenSCAD/CodeSolutions">Code Solutions Repository</a></strong> — Working OpenSCAD examples organized by topic (3D shapes, transformations, loops, modules, if-statements, advanced techniques).</li>
+</ul>
+<hr>
+<h2 id="getting-started"><a class="header" href="#getting-started">Getting Started</a></h2>
+<p><strong>For Students:</strong></p>
+<ol>
+<li>Start with <a href="PowerShell_Foundation/Powershell_Introduction/Powershell_Introduction.html">PowerShell Introduction</a></li>
+<li>Complete PowerShell lessons (PS.0–PS.5)</li>
+<li>Begin <a href="3dMake_Foundation/3dMake_Intro/3dMake_Intro.html">3dMake Introduction</a></li>
+<li>Follow <a href="3dMake_Foundation/Lessons_3dMake_1/Lessons_3dMake_1.html">Lesson 1: Environmental Configuration</a></li>
+<li>Continue through Lesson 11</li>
+</ol>
+<p><strong>For Instructors:</strong></p>
+<ol>
+<li>Review <a href="3dMake_Foundation/3dMake_Foundation_Curriculum_Guide.html">Curriculum Guide</a></li>
+<li>Use <a href="3dMake_Foundation/Templates/Teacher/">11 Teacher Templates</a> for assessment</li>
+<li>Reference <a href="Reference_Materials/master-rubric.html">Master Rubric</a> for grading</li>
+<li>Check <a href="Syllabus.html">Syllabus</a> for course policies and learning progression</li>
+</ol>
 
                     </main>
 
@@ -240,7 +368,7 @@
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="Reference_Materials/mdbook-navigation-guide.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="3dMake_Foundation/3dMake_Intro/3dMake_Intro.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -254,7 +382,7 @@
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="Reference_Materials/mdbook-navigation-guide.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="3dMake_Foundation/3dMake_Intro/3dMake_Intro.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>

@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Lesson PS.2: File and Folder Manipulation - 3D Printing Course for Blind and Visually Impaired Learners</title>
+        <title>PS-2: File and Folder Manipulation - 3D Printing Course for Blind and Visually Impaired Learners</title>
 
 
         <!-- Custom HTML head -->
@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-4bc6e054.js";
+            window.path_to_searchindex_js = "../../searchindex-9554f408.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-90c12225.js"></script>
+        <script src="../../toc-13636583.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -245,22 +245,48 @@
 <ul>
 <li>After step 3 you should see both the original and the backup file.</li>
 </ul>
-<p>Quick Quiz</p>
+<h2 id="quiz--lesson-ps2"><a class="header" href="#quiz--lesson-ps2">Quiz — Lesson PS.2</a></h2>
 <ol>
 <li>How do you create an empty file from PowerShell?</li>
 <li>What command copies a file?</li>
 <li>How do you rename a file?</li>
 <li>What does <code>rm -r</code> do?</li>
 <li>Why is <code>rm</code> potentially dangerous?</li>
+<li>True or False: <code>cp</code> requires the <code>-r</code> flag to copy both files and folders.</li>
+<li>Explain the difference between <code>rm</code> and <code>rmdir</code>.</li>
+<li>If you delete a file with <code>rm</code>, can you recover it from PowerShell?</li>
+<li>Write a command that would copy an entire folder and all its contents to a new location.</li>
+<li>Describe a practical safety check you would perform before running <code>rm -r</code> on a folder.</li>
+<li>What happens if you <code>cp</code> a file to a destination where a file with the same name already exists? How would you handle this safely?</li>
+<li>Compare <code>mv old_name.txt new_name.txt</code> vs <code>mv old_name.txt ~/Documents/new_name.txt</code>. What is the key difference?</li>
+<li>Design a workflow to safely delete 50 files matching the pattern <code>*.bak</code> from a folder containing 500 files. What commands and verifications would you use?</li>
+<li>Explain how you could back up all <code>.scad</code> files from a project folder into a timestamped backup folder in one command.</li>
+<li>When organizing a 3D printing project, you need to move completed designs to an archive folder and delete failed prototypes. How would you structure this as a safe, auditable process?</li>
 </ol>
-<p>Extension Problems</p>
+<h2 id="extension-problems"><a class="header" href="#extension-problems">Extension Problems</a></h2>
 <ol>
 <li>Create a folder tree and copy it to a new location with <code>cp -r</code>.</li>
 <li>Write a one-line command that creates three files named <code>a b c</code> and lists them.</li>
 <li>Move a file into a new folder and confirm the move.</li>
 <li>Use wildcards to delete files matching a pattern in a safe test folder.</li>
 <li>Export a listing of the practice folder to <code>practice_listing.txt</code>.</li>
+<li>Create a backup script that copies all <code>.scad</code> files from your project folder to a backup folder with timestamp naming.</li>
+<li>Build a safe deletion workflow: list files matching a pattern, verify count, then delete with confirmation; document the steps.</li>
+<li>Write a PowerShell script that organizes files by extension into subfolders; test it on a sample folder tree.</li>
+<li>Create a file operation audit trail: log all copy, move, and delete operations to a text file for review.</li>
+<li>Develop a project template generator: a script that creates a standard folder structure for a new 3D printing project with essential subfolders.</li>
+<li>Implement a file conflict handler: write a script that handles cases where <code>cp</code> would overwrite an existing file by renaming the existing file with a timestamp before copying.</li>
+<li>Create a batch rename operation: use a script to rename all files in a folder from <code>old_prefix_*</code> to <code>new_prefix_*</code>; test with actual files and verify the results.</li>
+<li>Build a folder comparison tool: list all files in two folders and identify which files exist in one but not the other; output to a report.</li>
+<li>Write a destructive operation validator: before executing <code>rm -r</code>, create a script that lists exactly what will be deleted, shows file counts by type, and requires explicit user confirmation to proceed.</li>
+<li>Design a complete project lifecycle workflow: create folders for active projects, completed designs, and archive; include move operations between folders, backup steps, and verification that all files arrive intact.</li>
 </ol>
+<h2 id="references"><a class="header" href="#references">References</a></h2>
+<ul>
+<li>Microsoft. (2024). <em>New-Item cmdlet reference</em>. https://learn.microsoft.com/powershell/module/microsoft.powershell.management/new-item</li>
+<li>Microsoft. (2024). <em>Copy-Item and Move-Item cmdlets</em>. https://learn.microsoft.com/powershell/module/microsoft.powershell.management/copy-item</li>
+<li>Microsoft. (2024). <em>File system operations guide</em>. https://learn.microsoft.com/powershell/scripting/learn/shell/manipulating-items</li>
+</ul>
 <h2 id="helpful-resources"><a class="header" href="#helpful-resources">Helpful Resources</a></h2>
 <ul>
 <li><a href="https://learn.microsoft.com/powershell/module/microsoft.powershell.management/new-item">New-Item Cmdlet Reference</a></li>

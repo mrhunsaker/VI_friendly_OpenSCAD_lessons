@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Lesson 3: Parametric Architecture and Modular Libraries - 3D Printing Course for Blind and Visually Impaired Learners</title>
+        <title>Lesson 3 - 3D Printing Course for Blind and Visually Impaired Learners</title>
 
 
         <!-- Custom HTML head -->
@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-4bc6e054.js";
+            window.path_to_searchindex_js = "../../searchindex-9554f408.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-90c12225.js"></script>
+        <script src="../../toc-13636583.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -232,46 +232,217 @@
 <ul>
 <li>A 3dMake project scaffold with <code>src/main.scad</code></li>
 <li>Example library (e.g., BOSL) available in <code>lib/</code> or classroom assets</li>
+<li>Reference: <a href="../../assets/Reference_Materials/openscad-cheat-sheet.html">openscad-cheat-sheet.md</a> for parametric design patterns</li>
 </ul>
-<p>Step-by-step Tasks</p>
+<hr>
 <ol>
-<li>Open <code>src/main.scad</code> and add three top-level parameters (with units) at the top of the file<sup class="footnote-reference" id="fr-3-2"><a href="#footnote-3">1</a></sup>.</li>
-<li>Implement a simple <code>module bracket(width, height, thickness)</code> that composes primitives and boolean operations<sup class="footnote-reference" id="fr-2-2"><a href="#footnote-2">2</a></sup>.</li>
-<li>Include a library module (e.g., <code>include &lt;bosl/constants.scad&gt;</code>) and call a small helper from it; run <code>3dm build</code><sup class="footnote-reference" id="fr-2-3"><a href="#footnote-2">2</a></sup>.</li>
-<li>Produce a low-resolution render to confirm topology, then export an STL and inspect it in a slicer<sup class="footnote-reference" id="fr-4-1"><a href="#footnote-4">4</a></sup>.</li>
-<li>Refactor the module into <code>lib/</code> with a short README and a usage example<sup class="footnote-reference" id="fr-3-3"><a href="#footnote-3">1</a></sup>.</li>
+<li>
+<p>Open <code>src/main.scad</code> and add three top-level parameters (with units) at the top of the file<sup class="footnote-reference" id="fr-3-2"><a href="#footnote-3">1</a></sup>.</p>
+<pre><code class="language-openscad">// Top-level parameters - customize these
+part_width = 50;    // mm
+part_height = 40;   // mm
+part_thickness = 5; // mm
+</code></pre>
+</li>
+<li>
+<p>Implement a simple <code>module bracket(width, height, thickness)</code> that composes primitives and boolean operations<sup class="footnote-reference" id="fr-2-2"><a href="#footnote-2">2</a></sup>.</p>
+<pre><code class="language-openscad">// Simple bracket module - combines primitives with CSG
+module bracket(w, h, t) {
+  union(){
+    // Base plate
+    cube([w, h, t], center=false);
+    
+    // Vertical support
+    translate([0, h-5, 0])
+      cube([t, 5, 20], center=false);
+  }
+}
+
+// Use the module
+bracket(part_width, part_height, part_thickness);
+</code></pre>
+</li>
+<li>
+<p>Include a library module (e.g., <code>include &lt;bosl/constants.scad&gt;</code>) and call a small helper from it; run <code>3dm build</code><sup class="footnote-reference" id="fr-2-3"><a href="#footnote-2">2</a></sup>.</p>
+<p><strong>Alternative: Create your own simple library module:</strong></p>
+<pre><code class="language-openscad">// Create lib/helpers.scad
+module simple_fillet(size, radius) {
+  // Simple fillet using minkowski
+  minkowski(){
+    children();
+    cylinder(h=0.01, r=radius, $fn=16);
+  }
+}
+</code></pre>
+<p><strong>Then in main.scad:</strong></p>
+<pre><code class="language-openscad">include &lt;lib/helpers.scad&gt;
+
+simple_fillet(20, 2){
+  cube([20, 20, 20]);
+}
+</code></pre>
+</li>
+<li>
+<p>Produce a low-resolution render to confirm topology, then export an STL and inspect it in a slicer<sup class="footnote-reference" id="fr-4-1"><a href="#footnote-4">4</a></sup>.</p>
+<ul>
+<li>Use <code>$fn=12</code> or lower during development to speed up renders</li>
+<li>Once satisfied, increase to <code>$fn=32</code> or <code>$fn=64</code> for final prints</li>
+</ul>
+</li>
+<li>
+<p>Refactor the module into <code>lib/</code> with a short README and a usage example<sup class="footnote-reference" id="fr-3-3"><a href="#footnote-3">1</a></sup>.</p>
+</li>
+</ol>
+<h3 id="going-deeper-parametric-design-and-modular-thinking"><a class="header" href="#going-deeper-parametric-design-and-modular-thinking">Going Deeper: Parametric Design and Modular Thinking</a></h3>
+<p>Now that you’ve created simple modules, let’s explore <em>why</em> they matter for design at scale.</p>
+<h4 id="what-is-parametric-design"><a class="header" href="#what-is-parametric-design"><strong>What Is Parametric Design?</strong></a></h4>
+<p><strong>Parametric design</strong> means building your model around adjustable parameters so that a single change propagates automatically throughout your entire design. Instead of hardcoding a dimension like <code>50</code>, you store it in a variable:</p>
+<pre><code class="language-openscad">// Non-parametric (fragile):
+cube([50, 50, 50]);
+translate([50, 0, 0]) cube([50, 50, 50]);
+translate([100, 0, 0]) cube([50, 50, 50]);
+
+// Parametric (flexible):
+box_size = 50;
+cube([box_size, box_size, box_size]);
+translate([box_size, 0, 0]) cube([box_size, box_size, box_size]);
+translate([2*box_size, 0, 0]) cube([box_size, box_size, box_size]);
+</code></pre>
+<p>If you need to change the box size from 50 to 60 mm, the parametric version requires one change; the non-parametric version requires three edits.</p>
+<h4 id="modules-with-default-parameters"><a class="header" href="#modules-with-default-parameters"><strong>Modules with Default Parameters</strong></a></h4>
+<p>A module becomes even more powerful when you define <strong>default parameters</strong>:</p>
+<pre><code class="language-openscad">// Define a module with defaults
+module storage_box(length = 40, width = 30, height = 20, wall = 2) {
+    difference() {
+        // Outer shell
+        cube([length, width, height]);
+        
+        // Inner hollow (remove inside, keep walls and bottom)
+        translate([wall, wall, wall])
+            cube([length - 2*wall, width - 2*wall, height]);
+    }
+}
+
+// Call with defaults
+storage_box();
+
+// Call with one parameter changed
+storage_box(length = 60);
+
+// Call with all custom parameters
+storage_box(length = 80, width = 50, height = 30, wall = 3);
+</code></pre>
+<p>This approach creates a small, medium, and large box set:</p>
+<pre><code class="language-openscad">// Small box (all defaults)
+storage_box();
+
+// Medium box (positioned next to small)
+translate([45, 0, 0]) storage_box(length = 50, width = 40, height = 25);
+
+// Large box (positioned next to medium)
+translate([100, 0, 0]) storage_box(length = 70, width = 55, height = 35);
+</code></pre>
+<h4 id="the-dry-principle-dont-repeat-yourself"><a class="header" href="#the-dry-principle-dont-repeat-yourself"><strong>The DRY Principle: Don’t Repeat Yourself</strong></a></h4>
+<p>When you copy-paste the same shape over and over, you create maintenance risk. If you later discover a bug in the shape, you must fix it in <em>every</em> copy. Modules eliminate this:</p>
+<p><strong>Without modules (DRY violation):</strong></p>
+<pre><code class="language-openscad">// Bracket repeated 3 times (copy-paste)
+union(){ cube([10,10,10]); translate([0,20,0]) cube([2,30,10]); }
+translate([50, 0, 0]) union(){ cube([10,10,10]); translate([0,20,0]) cube([2,30,10]); }
+translate([100, 0, 0]) union(){ cube([10,10,10]); translate([0,20,0]) cube([2,30,10]); }
+</code></pre>
+<p><strong>With modules (DRY compliant):</strong></p>
+<pre><code class="language-openscad">module bracket() {
+    union(){
+        cube([10,10,10]);
+        translate([0,20,0]) cube([2,30,10]);
+    }
+}
+
+bracket();
+translate([50, 0, 0]) bracket();
+translate([100, 0, 0]) bracket();
+</code></pre>
+<h4 id="scope-and-reusability"><a class="header" href="#scope-and-reusability"><strong>Scope and Reusability</strong></a></h4>
+<p>Parameters are <strong>scoped</strong> to their module, meaning you can’t access a module’s parameters from outside it. This is intentional—it prevents naming conflicts and makes modules truly reusable:</p>
+<pre><code class="language-openscad">module box(size = 10) {
+    cube([size, size, size]);
+}
+
+// You can use 'size' in multiple contexts without conflict
+size = 100;  // Global size
+box();       // Calls box with its default size=10
+translate([size, 0, 0]) box(size = 50);  // Calls box with size=50
+</code></pre>
+<h4 id="importing-libraries-include-vs-use"><a class="header" href="#importing-libraries-include-vs-use"><strong>Importing Libraries: <code>include</code> vs <code>use</code></strong></a></h4>
+<p>Once you’ve written modules in <code>lib/helpers.scad</code>, you can share them with other projects:</p>
+<pre><code class="language-openscad">// Option 1: include (gives you all functions and modules)
+include &lt;lib/helpers.scad&gt;
+
+// Option 2: use (brings in functions but hides module definitions)
+use &lt;lib/helpers.scad&gt;
+
+// Now you can call any module from helpers.scad
+simple_fillet(20, 2) {
+    cube([20, 20, 20]);
+}
+</code></pre>
+<p>For most classroom use, <code>include</code> is simpler to understand. For larger projects, <code>use</code> provides cleaner namespace isolation.</p>
+<h4 id="testing-your-modules"><a class="header" href="#testing-your-modules"><strong>Testing Your Modules</strong></a></h4>
+<p>Before committing a module to your library, test it with:</p>
+<ol>
+<li><strong>Different parameter values:</strong> Call the module with minimum, maximum, and mid-range values</li>
+<li><strong>Default values:</strong> Verify that calling it with no parameters produces a reasonable result</li>
+<li><strong>Rendered output:</strong> Use <code>$fn = 32</code> to render the module and visually inspect for geometry issues</li>
+<li><strong>STL export:</strong> Export to STL and open in your slicer to check for non-manifold warnings</li>
 </ol>
 <p>Checkpoints</p>
 <ul>
 <li>After step 2 you have a parametric module you can call with different arguments<sup class="footnote-reference" id="fr-3-4"><a href="#footnote-3">1</a></sup>.</li>
+<li>After this section, you should understand how to create modules with default parameters and why that matters for reusability.</li>
 </ul>
-<p>Quick Quiz (5)</p>
+<h2 id="quiz--lesson-3dmake3-10-questions"><a class="header" href="#quiz--lesson-3dmake3-10-questions">Quiz — Lesson 3dMake.3 (10 questions)</a></h2>
 <ol>
 <li>What is a parametric module and why is it useful<sup class="footnote-reference" id="fr-3-5"><a href="#footnote-3">1</a></sup>?</li>
 <li>How do you include an external library in OpenSCAD<sup class="footnote-reference" id="fr-2-4"><a href="#footnote-2">2</a></sup>?</li>
 <li>What is one advantage of moving code into <code>lib/</code><sup class="footnote-reference" id="fr-3-6"><a href="#footnote-3">1</a></sup>?</li>
 <li>How can you test a module quickly without a full high-resolution render<sup class="footnote-reference" id="fr-4-2"><a href="#footnote-4">4</a></sup>?</li>
 <li>Name one safety or documentation step to include when producing a reusable module<sup class="footnote-reference" id="fr-3-7"><a href="#footnote-3">1</a></sup>.</li>
+<li>True or False: Parametric modules can only accept one parameter.</li>
+<li>Describe what “Don’t Repeat Yourself” (DRY) means in the context of 3D model code.</li>
+<li>Explain how you would create a module with three parameters and use it in your main file.</li>
+<li>What testing strategies should you use to validate a new module before using it in production prints?</li>
+<li>How would you document a reusable module so that future users (including yourself) understand its parameters and limitations?</li>
 </ol>
-<p>Extension Problems (5)</p>
+<p>Extension Problems (10)</p>
 <ol>
 <li>Create a module for a mounting bracket with parameters for hole size and spacing; publish a usage example<sup class="footnote-reference" id="fr-3-8"><a href="#footnote-3">1</a></sup>.</li>
 <li>Use a library module to add a fillet and compare the final STL before and after<sup class="footnote-reference" id="fr-2-5"><a href="#footnote-2">2</a></sup>.</li>
 <li>Produce three variants by changing a parameter and record estimated print times<sup class="footnote-reference" id="fr-3-9"><a href="#footnote-3">1</a></sup>.</li>
 <li>Move a working module into <code>lib/</code> and commit with a clear commit message<sup class="footnote-reference" id="fr-1-2"><a href="#footnote-1">3</a></sup>.</li>
 <li>Write a short README for your module describing parameter ranges and expected units<sup class="footnote-reference" id="fr-3-10"><a href="#footnote-3">1</a></sup>.</li>
+<li>Build a complete module library with 5+ reusable parts; create comprehensive documentation and usage examples for each.</li>
+<li>Design a module versioning and compatibility system; document how to manage parameter changes over time.</li>
+<li>Create a module testing suite: write validation tests for parameter ranges, edge cases, and output consistency.</li>
+<li>Develop an accessibility guide for module parameters: explain how to use and understand module options without visual feedback.</li>
+<li>Write a module library contribution guide: standards for code style, documentation, testing, and review for collaborative development.</li>
 </ol>
-<h2 id="works-cited"><a class="header" href="#works-cited"><strong>Works cited</strong></a></h2>
+<h2 id="supplemental-resources"><a class="header" href="#supplemental-resources">Supplemental Resources</a></h2>
+<p>For deeper exploration of parametric design and module creation, explore these resources:</p>
+<ul>
+<li><strong><a href="../../assets/Programming_with_OpenSCAD.epub">Programming with OpenSCAD EPUB Textbook</a></strong> — Comprehensive guide to modules, parametric design, and library creation</li>
+<li><strong><a href="https://github.com/ProgrammingWithOpenSCAD/CodeSolutions/tree/main/5_Modules">CodeSolutions: Modules</a></strong> — Working examples of module definition, parameter passing, and reusable components</li>
+<li><strong><a href="https://github.com/BelfrySCAD/BOSL2">BOSL2 Library</a></strong> — Professional OpenSCAD library with hundreds of reusable modules for common operations</li>
+</ul>
 <hr>
 <ol class="footnote-definition">
 <li id="footnote-3">
-<p>Programming with OpenSCAD, accessed February 18, 2026, https://programmingwithopenscad.github.io/ <a href="#fr-3-1">↩</a> <a href="#fr-3-2">↩2</a> <a href="#fr-3-3">↩3</a> <a href="#fr-3-4">↩4</a> <a href="#fr-3-5">↩5</a> <a href="#fr-3-6">↩6</a> <a href="#fr-3-7">↩7</a> <a href="#fr-3-8">↩8</a> <a href="#fr-3-9">↩9</a> <a href="#fr-3-10">↩10</a></p>
+<p>OpenSCAD Modules - https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Modules <a href="#fr-3-1">↩</a> <a href="#fr-3-2">↩2</a> <a href="#fr-3-3">↩3</a> <a href="#fr-3-4">↩4</a> <a href="#fr-3-5">↩5</a> <a href="#fr-3-6">↩6</a> <a href="#fr-3-7">↩7</a> <a href="#fr-3-8">↩8</a> <a href="#fr-3-9">↩9</a> <a href="#fr-3-10">↩10</a></p>
 </li>
 <li id="footnote-2">
-<p>Books - OpenSCAD, accessed February 18, 2026, https://openscad.org/documentation-books.html <a href="#fr-2-1">↩</a> <a href="#fr-2-2">↩2</a> <a href="#fr-2-3">↩3</a> <a href="#fr-2-4">↩4</a> <a href="#fr-2-5">↩5</a></p>
+<p>BOSL - OpenSCAD Standard Library - https://github.com/BelfrySCAD/BOSL2 <a href="#fr-2-1">↩</a> <a href="#fr-2-2">↩2</a> <a href="#fr-2-3">↩3</a> <a href="#fr-2-4">↩4</a> <a href="#fr-2-5">↩5</a></p>
 </li>
 <li id="footnote-1">
-<p>tdeck/3dmake: Non-visual 3D design and 3D printing tool - GitHub, accessed February 18, 2026, https://github.com/tdeck/3dmake <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a></p>
+<p>3DMake GitHub - https://github.com/tdeck/3dmake <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a></p>
 </li>
 <li id="footnote-4">
 <p>OpenSCAD Review - Worth learning? - CadHub, accessed February 18, 2026, https://learn.cadhub.xyz/blog/openscad-review/ <a href="#fr-4-1">↩</a> <a href="#fr-4-2">↩2</a></p>
@@ -282,11 +453,11 @@
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../3dMake_Foundation/Lessons_3dMake_2/Lessons_3dMake_2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../assets/3dMake_Foundation/Lessons_3dMake_2/Bonus_Print/bonus-print.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_4/Lessons_3dMake_4.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../assets/3dMake_Foundation/Lessons_3dMake_3/parametric_template.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -296,11 +467,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../3dMake_Foundation/Lessons_3dMake_2/Lessons_3dMake_2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../assets/3dMake_Foundation/Lessons_3dMake_2/Bonus_Print/bonus-print.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_4/Lessons_3dMake_4.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../assets/3dMake_Foundation/Lessons_3dMake_3/parametric_template.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>

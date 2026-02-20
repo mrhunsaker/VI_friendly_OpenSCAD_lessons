@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Lesson 4: AI-Enhanced Verification and Multimodal Feedback - 3D Printing Course for Blind and Visually Impaired Learners</title>
+        <title>Lesson 4 - 3D Printing Course for Blind and Visually Impaired Learners</title>
 
 
         <!-- Custom HTML head -->
@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-4bc6e054.js";
+            window.path_to_searchindex_js = "../../searchindex-9554f408.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-90c12225.js"></script>
+        <script src="../../toc-13636583.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -245,33 +245,42 @@
 <ul>
 <li>After step 2 you have stored render images and the AI report in <code>build/</code><sup class="footnote-reference" id="fr-1-4"><a href="#footnote-1">1</a></sup>.</li>
 </ul>
-<p>Quick Quiz (5)</p>
+<h2 id="quiz--lesson-3dmake4-10-questions"><a class="header" href="#quiz--lesson-3dmake4-10-questions">Quiz — Lesson 3dMake.4 (10 questions)</a></h2>
 <ol>
 <li>What command generates AI diagnostics and model renders<sup class="footnote-reference" id="fr-1-5"><a href="#footnote-1">1</a></sup>?</li>
 <li>Why must AI outputs be validated against renderer/slicer results<sup class="footnote-reference" id="fr-8-6"><a href="#footnote-8">3</a></sup> <sup class="footnote-reference" id="fr-10-3"><a href="#footnote-10">2</a></sup>?</li>
 <li>Name one privacy or governance concern when sending models/images to an API<sup class="footnote-reference" id="fr-8-7"><a href="#footnote-8">3</a></sup>.</li>
 <li>What is an example of a technical primitive to include in a prompt<sup class="footnote-reference" id="fr-8-8"><a href="#footnote-8">3</a></sup>?</li>
 <li>Where should you record prompts and AI outputs in the project<sup class="footnote-reference" id="fr-8-9"><a href="#footnote-8">3</a></sup>?</li>
+<li>True or False: AI-generated suggestions should always be implemented without verification.</li>
+<li>Describe what “deterministic validation” means in the context of AI-assisted 3D design.</li>
+<li>Explain how you would use <code>3dm info</code> to validate AI suggestions against your actual model.</li>
+<li>What steps would you take if the AI suggests a design change that conflicts with your requirements?</li>
+<li>How would you document AI-assisted decisions in your project for reproducibility and transparency?</li>
 </ol>
-<p>Extension Problems (5)</p>
+<p>Extension Problems (10)</p>
 <ol>
 <li>Create an <code>AI-notes.md</code> documenting three prompts and the AI’s responses; indicate which suggestions you acted on<sup class="footnote-reference" id="fr-8-10"><a href="#footnote-8">3</a></sup>.</li>
 <li>Simulate a false-positive AI warning: describe how you validated and rejected it using deterministic checks<sup class="footnote-reference" id="fr-10-4"><a href="#footnote-10">2</a></sup>.</li>
 <li>Generate a short prompt that requests the top three structural risks and record the results<sup class="footnote-reference" id="fr-8-11"><a href="#footnote-8">3</a></sup>.</li>
 <li>Create a short checklist for sanitizing uploads before sending to an API<sup class="footnote-reference" id="fr-8-12"><a href="#footnote-8">3</a></sup>.</li>
 <li>Re-run <code>3dm info</code> after a code fix and compare the differences in the AI report<sup class="footnote-reference" id="fr-1-6"><a href="#footnote-1">1</a></sup>.</li>
+<li>Design a verification workflow: use AI suggestions + manual validation + physical testing to validate design decisions.</li>
+<li>Create a transparency log for AI-assisted features: document all AI interactions, suggestions adopted, and decisions made.</li>
+<li>Build an AI-assisted design case study: from initial prompt through final print; document the entire decision process.</li>
+<li>Develop guidelines for trustworthy AI use in 3D printing: when to trust AI, when to verify, and how to validate recommendations.</li>
+<li>Write an accessibility guide for using AI features in 3DMake: how to interpret AI suggestions non-visually and understand confidence levels.</li>
 </ol>
-<h2 id="works-cited"><a class="header" href="#works-cited"><strong>Works cited</strong></a></h2>
 <hr>
 <ol class="footnote-definition">
 <li id="footnote-1">
-<p>tdeck/3dmake: Non-visual 3D design and 3D printing tool - GitHub, accessed February 18, 2026, https://github.com/tdeck/3dmake <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a> <a href="#fr-1-3">↩3</a> <a href="#fr-1-4">↩4</a> <a href="#fr-1-5">↩5</a> <a href="#fr-1-6">↩6</a></p>
+<p>3DMake GitHub - https://github.com/tdeck/3dmake <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a> <a href="#fr-1-3">↩3</a> <a href="#fr-1-4">↩4</a> <a href="#fr-1-5">↩5</a> <a href="#fr-1-6">↩6</a></p>
 </li>
 <li id="footnote-10">
-<p>Build Great AI: LLM-Powered 3D Model Generation for 3D Printing - ZenML LLMOps Database, accessed February 18, 2026, https://www.zenml.io/llmops-database/llm-powered-3d-model-generation-for-3d-printing <a href="#fr-10-1">↩</a> <a href="#fr-10-2">↩2</a> <a href="#fr-10-3">↩3</a> <a href="#fr-10-4">↩4</a></p>
+<p>Deterministic Validation in Design - https://www.nist.gov/publications <a href="#fr-10-1">↩</a> <a href="#fr-10-2">↩2</a> <a href="#fr-10-3">↩3</a> <a href="#fr-10-4">↩4</a></p>
 </li>
 <li id="footnote-8">
-<p>OpenSCAD Prompt Creation - DocsBot AI, accessed February 18, 2026, https://docsbot.ai/prompts/technical/openscad-prompt-creation <a href="#fr-8-1">↩</a> <a href="#fr-8-2">↩2</a> <a href="#fr-8-3">↩3</a> <a href="#fr-8-4">↩4</a> <a href="#fr-8-5">↩5</a> <a href="#fr-8-6">↩6</a> <a href="#fr-8-7">↩7</a> <a href="#fr-8-8">↩8</a> <a href="#fr-8-9">↩9</a> <a href="#fr-8-10">↩10</a> <a href="#fr-8-11">↩11</a> <a href="#fr-8-12">↩12</a></p>
+<p>AI Output Validation - Best Practices for Prompt Engineering - https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language <a href="#fr-8-1">↩</a> <a href="#fr-8-2">↩2</a> <a href="#fr-8-3">↩3</a> <a href="#fr-8-4">↩4</a> <a href="#fr-8-5">↩5</a> <a href="#fr-8-6">↩6</a> <a href="#fr-8-7">↩7</a> <a href="#fr-8-8">↩8</a> <a href="#fr-8-9">↩9</a> <a href="#fr-8-10">↩10</a> <a href="#fr-8-11">↩11</a> <a href="#fr-8-12">↩12</a></p>
 </li>
 </ol>
 
@@ -279,11 +288,11 @@
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../3dMake_Foundation/Lessons_3dMake_3/Lessons_3dMake_3.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../assets/3dMake_Foundation/Lessons_3dMake_3/module_template.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_5/Lessons_3dMake_5.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../assets/3dMake_Foundation/Lessons_3dMake_4/Dice_Dice_Dice/Dice_Dice_Dice.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -293,11 +302,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../3dMake_Foundation/Lessons_3dMake_3/Lessons_3dMake_3.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../assets/3dMake_Foundation/Lessons_3dMake_3/module_template.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_5/Lessons_3dMake_5.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../assets/3dMake_Foundation/Lessons_3dMake_4/Dice_Dice_Dice/Dice_Dice_Dice.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>

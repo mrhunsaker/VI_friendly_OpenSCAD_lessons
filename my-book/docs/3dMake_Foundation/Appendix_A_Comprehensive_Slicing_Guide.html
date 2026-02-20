@@ -1,0 +1,955 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Appendix A: Comprehensive Slicing Guide — All Major Slicers - 3D Printing Course for Blind and Visually Impaired Learners</title>
+
+
+        <!-- Custom HTML head -->
+        <script>
+          (function(){
+            // Load Atkinson Hyperlegible fonts from the book assets (injected at runtime so paths are correct on GitHub Pages)
+            try {
+              const link = Array.from(document.getElementsByTagName('link')).find(l => l.href && l.href.match(/\/css\/variables-.*\.css$/));
+              const base = (function(){
+                if (!link) return (window.location.origin||'') + '/';
+                const u = new URL(link.href, window.location.href);
+                const basePath = u.pathname.replace(/\/css\/.*$/,'');
+                return u.origin + basePath + (basePath.endsWith('/') ? '' : '/');
+              })();
+        
+              const css = `\
+        @font-face {\
+          font-family: 'Atkinson Hyperlegible Next';\
+          src: url('${base}assets/fonts/AtkinsonHyperlegibleNext-Regular.ttf') format('truetype');\
+          font-weight: 400; font-style: normal; font-display: swap;\
+        }\
+        @font-face {\
+          font-family: 'Atkinson Hyperlegible Mono';\
+          src: url('${base}assets/fonts/AtkinsonHyperlegibleMono-SemiBold.ttf') format('truetype');\
+          font-weight: 600; font-style: normal; font-display: swap;\
+        }\
+        @font-face {\
+          font-family: 'Atkinson Hyperlegible Mono';\
+          src: url('${base}assets/fonts/AtkinsonHyperlegibleMono-Regular.otf') format('opentype');\
+          font-weight: 400; font-style: normal; font-display: swap;\
+        }\
+        pre, code, .hljs, .leftbar { font-family: 'Atkinson Hyperlegible Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", "Courier New", monospace !important; }\
+        body { font-family: 'Atkinson Hyperlegible Next', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }\
+        `;
+        
+              const style = document.createElement('style');
+              style.appendChild(document.createTextNode(css));
+              document.head.appendChild(style);
+            } catch (e) { console.warn('Font injection failed', e); }
+          })();
+        </script>
+        
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            mermaid.initialize({ startOnLoad: true });
+          });
+        </script>
+
+        <meta name="description" content="An introduction to 3D printing for blind and visually impaired learners, using OpenSCAD and 3DMake to create accessible 3D models.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../css/general-2459343d.css">
+        <link rel="stylesheet" href="../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../src/assets/custom-e98d0106.css">
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../searchindex-9554f408.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc-13636583.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">3D Printing Course for Blind and Visually Impaired Learners</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="appendix-a-comprehensive-slicing-guide--all-major-slicers"><a class="header" href="#appendix-a-comprehensive-slicing-guide--all-major-slicers">Appendix A: Comprehensive Slicing Guide — All Major Slicers</a></h1>
+<p>This appendix covers settings, workflows, and troubleshooting for <strong>7 major 3D printer slicers</strong>. Each slicer is represented with:</p>
+<ul>
+<li>Recommended settings for beginners</li>
+<li>Screen-reader-accessible settings explanation</li>
+<li>Common troubleshooting</li>
+<li>Accessibility features built-in</li>
+<li>Command-line usage (for PowerShell integration)</li>
+</ul>
+<p><strong>Referenced in:</strong> Lessons 5 (Safety), 8 (Design), 10 (Verification)</p>
+<hr>
+<h2 id="overview-what-is-slicing"><a class="header" href="#overview-what-is-slicing">Overview: What is Slicing?</a></h2>
+<p><strong>Slicing</strong> converts a 3D model into printer instructions:</p>
+<pre><code>SCAD Design (bracelet_holder.scad)
+   ↓
+Export to STL (3D shape file)
+   ↓
+Load into Slicer
+   ↓
+Apply settings (temperature, speed, supports, etc.)
+   ↓
+Generate G-code (printer instructions)
+   ↓
+Send to Printer
+   ↓
+Physical part
+</code></pre>
+<h3 id="core-slicing-parameters-all-slicers-share-these"><a class="header" href="#core-slicing-parameters-all-slicers-share-these">Core Slicing Parameters (All Slicers Share These)</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Parameter</th><th>What It Does</th><th>Typical Range</th><th>Impact</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Nozzle Temp</strong></td><td>Filament melting heat</td><td>200–250°C</td><td>Too cold → weak; too hot → oozing</td></tr>
+<tr><td><strong>Bed Temp</strong></td><td>Build plate heat</td><td>50–110°C</td><td>Helps adhesion; prevents warping</td></tr>
+<tr><td><strong>Layer Height</strong></td><td>Z-axis precision</td><td>0.1–0.4mm</td><td>Finer = slower, better detail</td></tr>
+<tr><td><strong>Print Speed</strong></td><td>Movement velocity</td><td>30–150 mm/s</td><td>Faster = worse quality; slower = stronger</td></tr>
+<tr><td><strong>Infill %</strong></td><td>Interior density</td><td>10–100%</td><td>Higher = stronger + heavier</td></tr>
+<tr><td><strong>Support</strong></td><td>Temporary scaffolding</td><td>On/Off</td><td>Required for overhangs &gt;45°</td></tr>
+<tr><td><strong>Bed Adhesion</strong></td><td>First layer stickiness</td><td>Brim/Raft/Skirt</td><td>Prevents parts lifting mid-print</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="1-prusaslicer-prusa"><a class="header" href="#1-prusaslicer-prusa">1. PrusaSlicer (Prusa)</a></h2>
+<h3 id="overview"><a class="header" href="#overview">Overview</a></h3>
+<ul>
+<li><strong>Developer:</strong> Prusa Research (Czech company)</li>
+<li><strong>Platforms:</strong> Windows, Mac, Linux (open-source)</li>
+<li><strong>Best For:</strong> Beginner-friendly, excellent support, strong community</li>
+<li><strong>Download:</strong> https://www.prusa3d.com/page/prusaslicer_410/</li>
+<li><strong>Accessibility:</strong> Good font sizes, text-based profiles</li>
+</ul>
+<h3 id="quick-setup-for-beginners"><a class="header" href="#quick-setup-for-beginners">Quick Setup for Beginners</a></h3>
+<p><strong>Step 1: Install &amp; Select Your Printer</strong></p>
+<pre><code>1. Open PrusaSlicer
+2. Go to "Help" → "Check for Updates"
+3. When prompted, select your printer model
+4. Choose default profile (matches printer exactly)
+</code></pre>
+<p><strong>Step 2: Load Your STL</strong></p>
+<pre><code>1. Click "File" → "Open STL Model"
+2. Select your bracelet_holder.stl
+3. Model appears in 3D view
+</code></pre>
+<p><strong>Step 3: Essential Settings</strong></p>
+<p>These are the most important adjustments:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Setting</th><th>Location</th><th>Beginner Value</th><th>Why</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Layer Height</strong></td><td>Print Settings</td><td>0.15mm</td><td>Balance speed &amp; quality</td></tr>
+<tr><td><strong>Infill</strong></td><td>Print Settings</td><td>20%</td><td>Enough strength; fast print</td></tr>
+<tr><td><strong>Support</strong></td><td>Print Settings</td><td>Yes (if needed)</td><td>For overhangs &gt;45°</td></tr>
+<tr><td><strong>Nozzle Temp</strong></td><td>Filament Settings</td><td>210°C</td><td>Default for PLA</td></tr>
+<tr><td><strong>Bed Temp</strong></td><td>Filament Settings</td><td>60°C</td><td>Standard PLA adhesion</td></tr>
+<tr><td><strong>Print Speed</strong></td><td>Print Settings</td><td>150 mm/s</td><td>Balanced quality</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>Step 4: Preview &amp; Export</strong></p>
+<pre><code>1. Click "Slice now" (or G-code icon)
+2. Left panel shows preview of each layer
+3. Look for issues:
+   - Supports covering entire model? (OK)
+   - Model floating in air? (Not OK—likely error)
+   - Top surface quality acceptable?
+4. If satisfied, click "Export G-code"
+5. Save to USB or send to printer
+</code></pre>
+<h3 id="accessible-parameter-explanations"><a class="header" href="#accessible-parameter-explanations">Accessible Parameter Explanations</a></h3>
+<p>When adjusting settings, use these descriptions to understand what each does:</p>
+<p><strong>Layer Height (0.1–0.4mm)</strong></p>
+<ul>
+<li><strong>Lower (0.1mm):</strong> Smoother surface, more layers, slower (best for detail)</li>
+<li><strong>Higher (0.4mm):</strong> Faster, rougher surface (best for speed)</li>
+<li><strong>Recommendation:</strong> 0.15mm for balanced quality</li>
+</ul>
+<p><strong>Infill Percentage (10–100%)</strong></p>
+<ul>
+<li><strong>10%:</strong> Fast, uses less filament, weaker (good for prototypes)</li>
+<li><strong>20%:</strong> Good balance (recommended for most prints)</li>
+<li><strong>50%:</strong> Stronger, slower, heavier</li>
+<li><strong>100%:</strong> Solid interior, strongest, slowest (waste of plastic)</li>
+</ul>
+<p><strong>Support Type</strong></p>
+<ul>
+<li><strong>None:</strong> Fast, good surface finish, but risky if overhangs exist</li>
+<li><strong>Linear (Default):</strong> Good balance—easy to remove, provides support</li>
+<li><strong>Grid:</strong> Extra strong support, takes longer to remove</li>
+</ul>
+<p><strong>First Layer</strong></p>
+<ul>
+<li><strong>Brim:</strong> Adds border to help adhesion (recommended for beginners)</li>
+<li><strong>Raft:</strong> Sacrificial platform (good if bed isn’t level)</li>
+<li><strong>Skirt:</strong> Just outline, doesn’t help adhesion (fastest)</li>
+</ul>
+<h3 id="command-line-usage-powershell-integration"><a class="header" href="#command-line-usage-powershell-integration">Command-Line Usage (PowerShell Integration)</a></h3>
+<pre><code class="language-powershell"># Slice a model automatically with PrusaSlicer
+$model = "C:\Models\bracelet_holder.stl"
+$output = "C:\GCode\bracelet_holder.gcode"
+$config = "default"  # Use default printer profile
+
+# Run PrusaSlicer in batch mode
+&amp; "C:\Program Files\Prusa3D\PrusaSlicer\prusa-slicer.exe" `
+    --load-config-file "$config" `
+    --export-gcode "$output" `
+    "$model"
+
+Write-Host "Slicing complete: $output"
+</code></pre>
+<h3 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Problem</th><th>Cause</th><th>Solution</th></tr>
+</thead>
+<tbody>
+<tr><td>First layer not sticking</td><td>Bed not level</td><td>Bed leveling procedure in printer manual</td></tr>
+<tr><td>Supports everywhere</td><td>No support type selected</td><td>Change to “Linear” or “Grid”</td></tr>
+<tr><td>Nozzle drags through model</td><td>Z-offset too low</td><td>Raise Z-offset +0.1mm</td></tr>
+<tr><td>Oozing strings between parts</td><td>Temp too high</td><td>Lower nozzle temp 5–10°C</td></tr>
+<tr><td>Print breaks mid-way</td><td>Adhesion problem</td><td>Add brim; check bed level</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="2-bambu-studio-bambu-lab"><a class="header" href="#2-bambu-studio-bambu-lab">2. Bambu Studio (Bambu Lab)</a></h2>
+<h3 id="overview-1"><a class="header" href="#overview-1">Overview</a></h3>
+<ul>
+<li><strong>Developer:</strong> Bambu Lab (printer manufacturer)</li>
+<li><strong>Platforms:</strong> Windows, Mac, Linux</li>
+<li><strong>Best For:</strong> Modern X1-series printers, excellent speed, AMS support</li>
+<li><strong>Download:</strong> https://bambulab.com/en/download/studio</li>
+<li><strong>Accessibility:</strong> Good contrast, keyboard navigation</li>
+</ul>
+<h3 id="quick-setup"><a class="header" href="#quick-setup">Quick Setup</a></h3>
+<p><strong>Step 1: Create Account &amp; Connect Printer</strong></p>
+<pre><code>1. Launch Bambu Studio
+2. Sign in with Bambu Lab account
+3. Select printer from network
+4. Studio auto-detects printer settings
+</code></pre>
+<p><strong>Step 2: Load Model &amp; Configure</strong></p>
+<pre><code>1. Drag STL into workspace
+2. Auto-arranges on bed plate
+3. Default profile applied automatically
+</code></pre>
+<p><strong>Step 3: Key Settings (Bambu-Specific)</strong></p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Setting</th><th>Default</th><th>Adjustment</th><th>Why</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>AMS Multi-Color</strong></td><td>Off</td><td>On (if AMS attached)</td><td>Auto-switch filament</td></tr>
+<tr><td><strong>Auto-Leveling</strong></td><td>Enabled</td><td>Keep On</td><td>Bambu feature—very reliable</td></tr>
+<tr><td><strong>Nozzle Temp</strong></td><td>220°C</td><td>Keep unless specified</td><td>Bambu-optimized</td></tr>
+<tr><td><strong>Layer Height</strong></td><td>0.2mm</td><td>0.15mm for detail</td><td>Balance speed/quality</td></tr>
+<tr><td><strong>Bed Temp</strong></td><td>65°C</td><td>60°C for PLA</td><td>Standard adhesion</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>Step 4: Send to Printer</strong></p>
+<pre><code>1. Click "Prepare" (bottom right)
+2. Review preview
+3. Click "Send to Device"
+4. Printer receives over WiFi
+5. Start print from printer screen
+</code></pre>
+<h3 id="accessible-parameter-explanations-1"><a class="header" href="#accessible-parameter-explanations-1">Accessible Parameter Explanations</a></h3>
+<p><strong>Auto-Leveling</strong></p>
+<ul>
+<li>Bambu printers automatically level the nozzle before every print</li>
+<li>Explanation: Saves manual calibration; extremely reliable</li>
+<li>For VI users: Provides confidence that bed is properly prepared</li>
+</ul>
+<p><strong>Filament Calibration</strong></p>
+<ul>
+<li>Before first use of new filament color, run “Filament Calibration”</li>
+<li>This optimizes temperature and speed for that specific filament</li>
+<li>Explanation: Ensures consistent color and strength</li>
+</ul>
+<p><strong>Multi-Material (AMS)</strong></p>
+<ul>
+<li>If you have Auto Material System (AMS):
+<ul>
+<li>Load up to 4 filament colors</li>
+<li>Studio auto-switches during print</li>
+<li>Explanation: Multi-color prints without manual intervention</li>
+</ul>
+</li>
+</ul>
+<h3 id="command-line-usage-powershell"><a class="header" href="#command-line-usage-powershell">Command-Line Usage (PowerShell)</a></h3>
+<pre><code class="language-powershell"># Slice with Bambu Studio (command-line interface)
+$model = "C:\Models\bracelet_holder.stl"
+$output = "C:\GCode\bracelet_holder.3mf"  # Bambu uses .3mf format
+
+# Bambu Studio CLI
+&amp; "C:\Program Files\BambuStudio\bambu-studio.exe" `
+    --output "$output" `
+    "$model"
+
+Write-Host "Slice saved: $output"
+
+# Send to printer directly
+# (Requires API key—see Bambu documentation)
+</code></pre>
+<h3 id="troubleshooting-1"><a class="header" href="#troubleshooting-1">Troubleshooting</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Problem</th><th>Cause</th><th>Solution</th></tr>
+</thead>
+<tbody>
+<tr><td>WiFi not connecting</td><td>Network issue</td><td>Restart printer WiFi; check SSID</td></tr>
+<tr><td>AMS not switching</td><td>Filament not detected</td><td>Load filament into AMS; recalibrate</td></tr>
+<tr><td>Print quality inconsistent</td><td>Wrong filament type</td><td>Run filament calibration</td></tr>
+<tr><td>Nozzle crashes on first layer</td><td>Auto-level failed</td><td>Manually check nozzle height</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="3-cura-ultimaker"><a class="header" href="#3-cura-ultimaker">3. Cura (Ultimaker)</a></h2>
+<h3 id="overview-2"><a class="header" href="#overview-2">Overview</a></h3>
+<ul>
+<li><strong>Developer:</strong> Ultimaker (Dutch company, open-source)</li>
+<li><strong>Platforms:</strong> Windows, Mac, Linux</li>
+<li><strong>Best For:</strong> Broad printer support, user-friendly, good documentation</li>
+<li><strong>Download:</strong> https://ultimaker.com/software/ultimaker-cura</li>
+<li><strong>Accessibility:</strong> Clear UI, good contrast</li>
+</ul>
+<h3 id="quick-setup-1"><a class="header" href="#quick-setup-1">Quick Setup</a></h3>
+<p><strong>Step 1: Add Your Printer</strong></p>
+<pre><code>1. Launch Cura
+2. Go to "Settings" (top-right)
+3. Click "Printers" → "Add Printer"
+4. Select your printer model from list
+5. Confirm network connection
+</code></pre>
+<p><strong>Step 2: Load &amp; Prepare Model</strong></p>
+<pre><code>1. Drag STL into workspace
+2. Model auto-scales if needed (confirm size)
+3. Right-click → "Support" (if overhangs need support)
+</code></pre>
+<p><strong>Step 3: Recommended Settings</strong></p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Setting</th><th>Value</th><th>Notes</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Profile</strong></td><td>Standard</td><td>Good balance for most prints</td></tr>
+<tr><td><strong>Layer Height</strong></td><td>0.2mm</td><td>Default; change to 0.15mm for detail</td></tr>
+<tr><td><strong>Infill</strong></td><td>20%</td><td>100% waste for solid parts</td></tr>
+<tr><td><strong>Support Angle</strong></td><td>50°</td><td>Auto-generates support for overhangs</td></tr>
+<tr><td><strong>Build Plate Adhesion</strong></td><td>Brim</td><td>Helps first layer stick</td></tr>
+<tr><td><strong>Nozzle Temp</strong></td><td>200°C</td><td>Standard PLA</td></tr>
+<tr><td><strong>Bed Temp</strong></td><td>60°C</td><td>Standard PLA</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>Step 4: Print</strong></p>
+<pre><code>1. Click "Slice" (bottom right)
+2. Review layer-by-layer preview
+3. Click "Print Over Network" or "Print to File"
+4. Model sends to printer or saves as .gcode
+</code></pre>
+<h3 id="accessible-settings-explanation"><a class="header" href="#accessible-settings-explanation">Accessible Settings Explanation</a></h3>
+<p><strong>Combing Mode</strong></p>
+<ul>
+<li><strong>Off:</strong> Nozzle retracts on every travel (quality)</li>
+<li><strong>All:</strong> Never retracts (faster, possible stringing)</li>
+<li><strong>Not in Skin:</strong> Smart compromise</li>
+<li>For VI users: Retraction prevents nozzle oozing on visible surfaces</li>
+</ul>
+<p><strong>Z-Offset (Z Clearance)</strong></p>
+<ul>
+<li>Adjusts first-layer distance</li>
+<li>Too low → nozzle scrapes bed (bad)</li>
+<li>Too high → filament doesn’t stick (bad)</li>
+<li>Correct → thin line of plastic sticks to bed</li>
+</ul>
+<p><strong>Gradual Infill</strong></p>
+<ul>
+<li>Automatically reduces infill strength away from surface</li>
+<li>Saves filament while maintaining strength</li>
+<li>Explanation: The core doesn’t need to be solid</li>
+</ul>
+<h3 id="command-line-usage-powershell-1"><a class="header" href="#command-line-usage-powershell-1">Command-Line Usage (PowerShell)</a></h3>
+<pre><code class="language-powershell"># Cura engine CLI (CuraEngine)
+$model = "C:\Models\bracelet_holder.stl"
+$output = "C:\GCode\bracelet_holder.gcode"
+$config = "default.cfg"
+
+# Requires Cura to be installed; command-line slicing
+&amp; "C:\Program Files\Ultimaker Cura\CuraEngine.exe" `
+    -c "$config" `
+    -o "$output" `
+    "$model"
+
+Write-Host "Sliced: $output"
+</code></pre>
+<h3 id="troubleshooting-2"><a class="header" href="#troubleshooting-2">Troubleshooting</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Problem</th><th>Cause</th><th>Solution</th></tr>
+</thead>
+<tbody>
+<tr><td>Model appears too small on bed</td><td>Scale wrong</td><td>Right-click → Scale to fit</td></tr>
+<tr><td>Stringing between parts</td><td>Retraction disabled</td><td>Enable retraction in settings</td></tr>
+<tr><td>Support doesn’t generate</td><td>Auto-support off</td><td>Enable “Generate Support”</td></tr>
+<tr><td>Printer not found</td><td>Network/USB issue</td><td>Check connection; restart Cura</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="4-superslicer-modification-of-prusa"><a class="header" href="#4-superslicer-modification-of-prusa">4. SuperSlicer (Modification of Prusa)</a></h2>
+<h3 id="overview-3"><a class="header" href="#overview-3">Overview</a></h3>
+<ul>
+<li><strong>Developer:</strong> Community fork of PrusaSlicer</li>
+<li><strong>Platforms:</strong> Windows, Mac, Linux</li>
+<li><strong>Best For:</strong> Advanced users wanting more control than Prusa offers</li>
+<li><strong>Download:</strong> https://github.com/supermerill/SuperSlicer</li>
+<li><strong>Accessibility:</strong> Similar to Prusa, more advanced options</li>
+</ul>
+<h3 id="key-differences-from-prusa"><a class="header" href="#key-differences-from-prusa">Key Differences from Prusa</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Feature</th><th>PrusaSlicer</th><th>SuperSlicer</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Arachne Engine</strong></td><td>No</td><td>Yes—better edges</td></tr>
+<tr><td><strong>Seam Position</strong></td><td>Limited options</td><td>Full control</td></tr>
+<tr><td><strong>Pressure Equalization</strong></td><td>No</td><td>Yes—better bridging</td></tr>
+<tr><td><strong>Stealth Mode</strong></td><td>No</td><td>Yes—quieter/higher quality</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="when-to-use-superslicer"><a class="header" href="#when-to-use-superslicer">When to Use SuperSlicer</a></h3>
+<ul>
+<li>Printing challenging geometries with tight tolerances</li>
+<li>Need advanced surface finish control</li>
+<li>Familiar with PrusaSlicer already and want more power</li>
+</ul>
+<h3 id="quick-start"><a class="header" href="#quick-start">Quick Start</a></h3>
+<pre><code>1. Download SuperSlicer from GitHub
+2. Export profile from PrusaSlicer (if you have it)
+3. Import into SuperSlicer
+4. All settings are compatible with PrusaSlicer
+</code></pre>
+<h3 id="advanced-settings-for-superslicer"><a class="header" href="#advanced-settings-for-superslicer">Advanced Settings for SuperSlicer</a></h3>
+<p><strong>Arachne Engine</strong></p>
+<ul>
+<li>Enables finer edges on walls</li>
+<li>Results in cleaner, more accurate prints</li>
+<li>Takes slightly longer to slice but worth it</li>
+</ul>
+<p><strong>Seam Positioning</strong></p>
+<ul>
+<li><strong>Random:</strong> Hides seams (good for aesthetic)</li>
+<li><strong>Aligned:</strong> Consistent location (good for debugging)</li>
+<li><strong>Rear:</strong> Always at back (recommended)</li>
+</ul>
+<p><strong>Pressure Equalization</strong></p>
+<ul>
+<li>Helps with bridging (printing across gaps)</li>
+<li>Reduces sagging on overhangs</li>
+<li>Recommended: Enable for complex designs</li>
+</ul>
+<hr>
+<h2 id="5-orcaslicer-modern-bamboo-alternative"><a class="header" href="#5-orcaslicer-modern-bamboo-alternative">5. OrcaSlicer (Modern Bamboo Alternative)</a></h2>
+<h3 id="overview-4"><a class="header" href="#overview-4">Overview</a></h3>
+<ul>
+<li><strong>Developer:</strong> Community (independent open-source)</li>
+<li><strong>Platforms:</strong> Windows, Mac, Linux</li>
+<li><strong>Best For:</strong> Users who want Bambu features without Bambu printer</li>
+<li><strong>Download:</strong> https://github.com/SoftFever/OrcaSlicer</li>
+<li><strong>Accessibility:</strong> Modern UI, good keyboard support</li>
+</ul>
+<h3 id="why-orca"><a class="header" href="#why-orca">Why Orca?</a></h3>
+<p>OrcaSlicer brings Bambu Studio’s best features to <strong>any printer</strong>:</p>
+<ul>
+<li>Excellent defaults</li>
+<li>Fast slicing</li>
+<li>Good preview</li>
+<li>Modern interface</li>
+</ul>
+<h3 id="quick-setup-2"><a class="header" href="#quick-setup-2">Quick Setup</a></h3>
+<pre><code>1. Download OrcaSlicer
+2. Select your printer (not just Bambu models)
+3. Load STL
+4. Uses good defaults—usually ready to print
+</code></pre>
+<h3 id="key-settings"><a class="header" href="#key-settings">Key Settings</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Setting</th><th>Value</th><th>Why</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Wall Loops</strong></td><td>2</td><td>Strong walls, visible detail</td></tr>
+<tr><td><strong>Internal Solid Layer</strong></td><td>4</td><td>Strength for brackets/connectors</td></tr>
+<tr><td><strong>Infill Pattern</strong></td><td>Grid</td><td>Balanced strength</td></tr>
+<tr><td><strong>Line Width</strong></td><td>Auto</td><td>Matches nozzle diameter</td></tr>
+<tr><td><strong>Speed</strong></td><td>80 mm/s</td><td>Balanced quality/speed</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="accessible-features"><a class="header" href="#accessible-features">Accessible Features</a></h3>
+<p><strong>Filament Manager</strong></p>
+<ul>
+<li>Track filament type, color, weight used</li>
+<li>Explanation: Know when to buy new filament</li>
+</ul>
+<p><strong>Print Time Estimation</strong></p>
+<ul>
+<li>Accurate prediction of print duration</li>
+<li>Updates during slicing</li>
+</ul>
+<p><strong>Material Presets</strong></p>
+<ul>
+<li>Pre-configured settings for common filaments</li>
+<li>Just select material type; settings auto-apply</li>
+</ul>
+<hr>
+<h2 id="6-ideamaker-raise3d"><a class="header" href="#6-ideamaker-raise3d">6. IdeaMaker (Raise3D)</a></h2>
+<h3 id="overview-5"><a class="header" href="#overview-5">Overview</a></h3>
+<ul>
+<li><strong>Developer:</strong> Raise3D</li>
+<li><strong>Platforms:</strong> Windows, Mac, Linux</li>
+<li><strong>Best For:</strong> Raise3D printer users; advanced features</li>
+<li><strong>Download:</strong> https://www.raise3d.com/ideamaker</li>
+<li><strong>Accessibility:</strong> Professional UI, detailed settings</li>
+</ul>
+<h3 id="when-to-use"><a class="header" href="#when-to-use">When to Use</a></h3>
+<ul>
+<li>Using a Raise3D printer (excellent multi-nozzle support)</li>
+<li>Need industrial-strength slicing</li>
+<li>Want dual-extrusion (2-color) printing</li>
+</ul>
+<h3 id="quick-start-1"><a class="header" href="#quick-start-1">Quick Start</a></h3>
+<pre><code>1. Launch IdeaMaker
+2. Add printer (Raise3D models have built-in profiles)
+3. Load STL
+4. Adjust layer height and infill
+5. Slice and send to printer
+</code></pre>
+<h3 id="key-features"><a class="header" href="#key-features">Key Features</a></h3>
+<p><strong>Dual Extrusion</strong></p>
+<ul>
+<li>Two nozzles = two colors in one print</li>
+<li>Useful for: Bracelets (core + colored rim)</li>
+<li>Requires: Coordinating two materials</li>
+</ul>
+<p><strong>Advanced Support</strong></p>
+<ul>
+<li>Tree support (uses less material)</li>
+<li>Grid support (stronger for larger parts)</li>
+</ul>
+<p><strong>Print Balancing</strong></p>
+<ul>
+<li>Optimizes nozzle movement for efficiency</li>
+<li>Reduces print time without sacrificing quality</li>
+</ul>
+<hr>
+<h2 id="7-fusion-360-cad--slicer"><a class="header" href="#7-fusion-360-cad--slicer">7. Fusion 360 (CAD + Slicer)</a></h2>
+<h3 id="overview-6"><a class="header" href="#overview-6">Overview</a></h3>
+<ul>
+<li><strong>Developer:</strong> Autodesk</li>
+<li><strong>Platforms:</strong> Windows, Mac</li>
+<li><strong>Best For:</strong> If you already use Fusion 360 for CAD</li>
+<li><strong>Download:</strong> https://www.autodesk.com/products/fusion-360</li>
+<li><strong>Accessibility:</strong> Integrated environment; good for learning CAD+Slicing together</li>
+</ul>
+<h3 id="why-integrate-cad--slicing"><a class="header" href="#why-integrate-cad--slicing">Why Integrate CAD + Slicing?</a></h3>
+<p>Traditional workflow:</p>
+<pre><code>Design in CAD → Export to STL → Open in Slicer → Slice → Print
+</code></pre>
+<p>Fusion 360 workflow:</p>
+<pre><code>Design in Fusion → Run Print Preparation → Slice → Print
+</code></pre>
+<p><strong>Advantage:</strong> Stay in one program; no format conversion</p>
+<h3 id="quick-start-2"><a class="header" href="#quick-start-2">Quick Start</a></h3>
+<pre><code>1. Design in Fusion 360 (or import STL)
+2. Select part
+3. Go to "3D Print" tab
+4. Click "Print Preparation"
+5. View auto-generated support and alignment
+6. Adjust layer height, infill, etc.
+7. Slice and export G-code
+</code></pre>
+<h3 id="integration-with-3dmake"><a class="header" href="#integration-with-3dmake">Integration with 3dMake</a></h3>
+<p>If using Fusion 360 for CAD:</p>
+<pre><code># Export SCAD design to STL
+3dm export-stl src/main.scad output/main.stl
+
+# Then import into Fusion 360
+# For more complex designs that need refinement
+</code></pre>
+<hr>
+<h2 id="universal-troubleshooting-guide"><a class="header" href="#universal-troubleshooting-guide">Universal Troubleshooting Guide</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Problem</th><th>Diagnosis</th><th>Solution</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Print won’t stick to bed</strong></td><td>Bed temperature too low</td><td>Raise bed temp +5°C; check bed level</td></tr>
+<tr><td></td><td>Bed not level</td><td>Manual leveling procedure (printer manual)</td></tr>
+<tr><td></td><td>Build plate dirty</td><td>Clean with isopropyl alcohol</td></tr>
+<tr><td><strong>Nozzle hits model mid-print</strong></td><td>Z-offset wrong</td><td>Adjust Z-offset; re-level bed</td></tr>
+<tr><td></td><td>Model placed too low on bed</td><td>Use “Arrange on Bed” tool in slicer</td></tr>
+<tr><td><strong>Supports won’t remove</strong></td><td>Too much support generated</td><td>Reduce support density or angle</td></tr>
+<tr><td></td><td>Support too strong</td><td>Reduce support material percentage</td></tr>
+<tr><td><strong>Stringy/Oozing</strong></td><td>Nozzle too hot</td><td>Reduce temp by 5–10°C</td></tr>
+<tr><td></td><td>Retraction disabled</td><td>Enable retraction in settings</td></tr>
+<tr><td></td><td>Travel speed too fast</td><td>Reduce travel speed</td></tr>
+<tr><td><strong>Layer shifting (X/Y)</strong></td><td>Belt tension off</td><td>Check belt tension (printer manual)</td></tr>
+<tr><td></td><td>Stepper motor power issue</td><td>Firmware issue—check printer logs</td></tr>
+<tr><td><strong>Model prints poorly but slices look good</strong></td><td>Filament quality issue</td><td>Try different filament batch</td></tr>
+<tr><td></td><td>Nozzle clogged</td><td>Unclog nozzle (heat → purge → clean)</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="recommended-slicer-for-each-situation"><a class="header" href="#recommended-slicer-for-each-situation">Recommended Slicer for Each Situation</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Scenario</th><th>Best Slicer</th><th>Why</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>I’m a beginner</strong></td><td>PrusaSlicer</td><td>Clear defaults, excellent UI</td></tr>
+<tr><td><strong>I have a Bambu printer</strong></td><td>Bambu Studio</td><td>Native, best features</td></tr>
+<tr><td><strong>I have an Ultimaker</strong></td><td>Cura</td><td>Official support, broad compatibility</td></tr>
+<tr><td><strong>I have a Raise3D</strong></td><td>IdeaMaker</td><td>Official, dual-extrusion support</td></tr>
+<tr><td><strong>I want advanced control</strong></td><td>SuperSlicer</td><td>Maximum customization</td></tr>
+<tr><td><strong>I want modern/fast slicing</strong></td><td>OrcaSlicer</td><td>Great defaults, any printer</td></tr>
+<tr><td><strong>I use Fusion 360 for CAD</strong></td><td>Fusion 360 Print Prep</td><td>Integrated workflow</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="powershell-integration-batch-slicing"><a class="header" href="#powershell-integration-batch-slicing">PowerShell Integration: Batch Slicing</a></h2>
+<h3 id="slice-multiple-files-automatically"><a class="header" href="#slice-multiple-files-automatically">Slice Multiple Files Automatically</a></h3>
+<pre><code class="language-powershell"># Batch slice all SCAD designs in a project
+
+$scadDir = "C:\Projects\3dMake\src"
+$slicerConfig = "default.cfg"
+$outputDir = "C:\Projects\3dMake\gcode"
+
+# Find all SCAD files
+$scadFiles = Get-ChildItem -Path $scadDir -Filter "*.scad" -Recurse
+
+foreach ($scadFile in $scadFiles) {
+    $stlFile = $scadFile.FullName -replace ".scad$", ".stl"
+    $gcodeFile = Join-Path $outputDir ($scadFile.BaseName + ".gcode")
+    
+    # Export SCAD to STL
+    Write-Host "Exporting: $($scadFile.Name)"
+    &amp; "C:\Program Files\OpenSCAD\openscad.exe" -o "$stlFile" "$($scadFile.FullName)"
+    
+    # Slice STL
+    Write-Host "Slicing: $($scadFile.Name)"
+    &amp; "C:\Program Files\Prusa3D\PrusaSlicer\prusa-slicer.exe" `
+        --load-config-file "$slicerConfig" `
+        --export-gcode "$gcodeFile" `
+        "$stlFile"
+    
+    Write-Host "Complete: $gcodeFile"
+}
+
+Write-Host "Batch slicing finished."
+</code></pre>
+<h3 id="monitor-printing-progress"><a class="header" href="#monitor-printing-progress">Monitor Printing Progress</a></h3>
+<pre><code class="language-powershell"># Connect to printer API and monitor print status
+# (Requires printer to support API—check documentation)
+
+$printerIP = "192.168.1.100"  # Your printer's IP
+$printerPort = 8080            # Typical API port
+
+# Get current print status
+$status = Invoke-WebRequest -Uri "http://$printerIP:$printerPort/api/printer" `
+    -UseBasicParsing | ConvertFrom-Json
+
+Write-Host "State: $($status.state.text)"
+Write-Host "Progress: $($status.progress.completion)%"
+Write-Host "Time remaining: $($status.progress.printTimeLeft) seconds"
+</code></pre>
+<hr>
+<h2 id="accessibility-best-practices-for-slicing"><a class="header" href="#accessibility-best-practices-for-slicing">Accessibility Best Practices for Slicing</a></h2>
+<h3 id="describing-sliced-models"><a class="header" href="#describing-sliced-models">Describing Sliced Models</a></h3>
+<pre><code class="language-bash"># Use 3dm describe to understand the slicer's output
+# (Best practice: describe after slicing to verify settings)
+
+3dm describe output/bracelet_holder.stl
+
+# Output includes:
+# - Number of parts
+# - Dimensions
+# - Surface area
+# - Volume
+</code></pre>
+<h3 id="testing-sliced-parts"><a class="header" href="#testing-sliced-parts">Testing Sliced Parts</a></h3>
+<ol>
+<li>
+<p><strong>Weight Check:</strong></p>
+<ul>
+<li>Calculate expected weight from volume + material density</li>
+<li>Compare to actual printed weight</li>
+<li>Indicates if infill is correct</li>
+</ul>
+</li>
+<li>
+<p><strong>Dimensional Check:</strong></p>
+<ul>
+<li>Use calipers to verify critical dimensions</li>
+<li>Compare to SCAD parameters</li>
+<li>Check tolerance stack-up</li>
+</ul>
+</li>
+<li>
+<p><strong>Functional Test:</strong></p>
+<ul>
+<li>Assemble with other parts</li>
+<li>Test strength by loading with known weight</li>
+<li>Verify support removal didn’t damage part</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
+<p>This appendix provides:</p>
+<ul>
+<li>✅ 7 slicer workflows, settings, and troubleshooting</li>
+<li>✅ Accessible parameter explanations</li>
+<li>✅ Command-line integration for PowerShell</li>
+<li>✅ Comparison table for choosing a slicer</li>
+<li>✅ Batch processing automation examples</li>
+<li>✅ Accessibility best practices</li>
+</ul>
+<p><strong>Use this guide whenever you:</strong></p>
+<ul>
+<li>Start a new print</li>
+<li>Switch slicers</li>
+<li>Encounter quality issues</li>
+<li>Want to automate slicing workflows</li>
+<li>Need troubleshooting help</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../3dMake_Foundation/3dMake_Final_Exam.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../3dMake_Foundation/Appendix_B_Material_Properties.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../3dMake_Foundation/3dMake_Final_Exam.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../3dMake_Foundation/Appendix_B_Material_Properties.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../mark-09e88c2c.min.js"></script>
+        <script src="../searcher-c2a407aa.js"></script>
+
+        <script src="../clipboard-1626706a.min.js"></script>
+        <script src="../highlight-abc7f01d.js"></script>
+        <script src="../book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Intro Lesson: Layout and Paths - 3D Printing Course for Blind and Visually Impaired Learners</title>
+        <title>PS-0: Getting Started — Layout, Paths, and the Shell - 3D Printing Course for Blind and Visually Impaired Learners</title>
 
 
         <!-- Custom HTML head -->
@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-4bc6e054.js";
+            window.path_to_searchindex_js = "../../searchindex-9554f408.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-90c12225.js"></script>
+        <script src="../../toc-13636583.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -245,30 +245,48 @@
 <ul>
 <li>Confirm you can state your current path and move to <code>Documents</code>.</li>
 </ul>
-<p>Quick Quiz</p>
+<h2 id="quiz--lesson-ps0"><a class="header" href="#quiz--lesson-ps0">Quiz — Lesson PS.0</a></h2>
 <ol>
 <li>What is a path?</li>
 <li>What does <code>~</code> mean?</li>
 <li>How do you autocomplete a path?</li>
 <li>How do you go up one directory?</li>
 <li>What command lists only names (<code>ls</code> flag)?</li>
+<li>True or False: On Windows, PowerShell uses backslashes () in paths, but forward slashes (/) are also accepted.</li>
+<li>Explain the difference between an absolute path and a relative path.</li>
+<li>If you are in <code>C:\Users\YourName\Documents</code> and you type <code>cd ../</code>, where do you end up?</li>
+<li>What happens when you press Tab while typing a folder name in PowerShell?</li>
+<li>Describe a practical reason why understanding paths is important for a 3D printing workflow.</li>
+<li>What does <code>./</code> mean in a path, and when would you use it?</li>
+<li>If a folder path contains spaces (e.g., <code>Program Files</code>), how do you navigate to it with <code>cd</code>?</li>
+<li>Explain what the prompt <code>PS C:\Users\YourName&gt;</code> tells you about your current state.</li>
+<li>How would you navigate to your home directory from any location using a single command?</li>
+<li>What is the advantage of using relative paths (like <code>../</code>) versus absolute paths in automation scripts?</li>
 </ol>
-<p>Extension Problems</p>
+<h2 id="extension-problems"><a class="header" href="#extension-problems">Extension Problems</a></h2>
 <ol>
 <li>Create a nested folder and practice <code>cd</code> into it by typing partial names and using Tab.</li>
 <li>Use <code>ls -n -af</code> to list only files in a folder.</li>
 <li>Save <code>pwd</code> output to a file and open it in Notepad.</li>
 <li>Try <code>cd</code> into a folder whose name contains spaces; observe how quotes are handled.</li>
 <li>Create a short note file and open it from PowerShell.</li>
+<li>Build a folder structure that mirrors your project organization; navigate to each level and document the path.</li>
+<li>Create a script that prints your current path and the total number of files in it; run it from different locations.</li>
+<li>Investigate the special paths (e.g., <code>$HOME</code>, <code>$PSScriptRoot</code>); write down what each contains and when you’d use them.</li>
+<li>Compare absolute vs. relative paths by navigating to the same folder using each method; explain which is easier for automation.</li>
+<li>Create a PowerShell function that changes to a frequently-used folder and lists its contents in one command; test it from different starting locations.</li>
+<li>Navigate to three different locations and at each one note the prompt, the path from <code>pwd</code>, and verify you understand what each shows.</li>
+<li>Create a complex folder tree (at least 5 levels deep) and navigate it using only relative paths; verify your location at each step.</li>
+<li>Document all shortcuts you know (<code>~</code>, <code>./</code>, <code>../</code>, <code>$HOME</code>) and demonstrate each one works as expected.</li>
+<li>Write a guide for a peer on how to understand the PowerShell prompt and path notation without using GUI file explorer.</li>
+<li>Create a troubleshooting flowchart: if someone says “I don’t know where I am,” what commands do you give them to find out?</li>
 </ol>
-<h2 id="check-for-understanding"><a class="header" href="#check-for-understanding">Check for Understanding</a></h2>
-<p>Answer these before moving on:</p>
-<ol>
-<li>What is a path?</li>
-<li>What does <code>~</code> represent?</li>
-<li>What key do you press to autocomplete a path?</li>
-<li>If you are in <code>C:\Users\YourName\Documents</code> and you type <code>cd ../</code>, where do you end up?</li>
-</ol>
+<h2 id="references"><a class="header" href="#references">References</a></h2>
+<ul>
+<li>Microsoft. (2024). <em>PowerShell scripting overview and documentation</em>. https://learn.microsoft.com/powershell/scripting/overview</li>
+<li>Microsoft. (2024). <em>Filesystem navigation in PowerShell</em>. https://learn.microsoft.com/powershell/scripting/learn/shell/navigate-the-filesystem</li>
+<li>Microsoft. (2024). <em>Accessibility features in PowerShell ISE</em>. https://learn.microsoft.com/powershell/scripting/windows-powershell/ise/accessibility-in-windows-powershell-ise</li>
+</ul>
 <h2 id="helpful-resources"><a class="header" href="#helpful-resources">Helpful Resources</a></h2>
 <ul>
 <li><a href="https://learn.microsoft.com/powershell/scripting/overview">PowerShell Basics - Microsoft Learn</a></li>
@@ -282,7 +300,7 @@
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../PowerShell_Foundation/Powershell_Tutorial/Powershell_Tutorial.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../PowerShell_Foundation/PS_Pre_Your_First_Terminal/PS_Pre_Your_First_Terminal.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
@@ -296,7 +314,7 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../PowerShell_Foundation/Powershell_Tutorial/Powershell_Tutorial.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../PowerShell_Foundation/PS_Pre_Your_First_Terminal/PS_Pre_Your_First_Terminal.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 

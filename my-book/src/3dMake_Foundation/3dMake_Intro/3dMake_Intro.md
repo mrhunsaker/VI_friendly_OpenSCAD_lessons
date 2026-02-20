@@ -17,7 +17,7 @@ When a student executes 3dm info, the system initiates a rendering pipeline. It 
 While this feature is powerful, there is a fundamental disconnect in how current LLMs process 3D data. Most models are trained on 2D images and text; they do not possess a true "3D world model".[^10] This leads to several common failures:
 
 * **Detached Geometry:** The AI might describe a "table" even if the legs are hovering below the tabletop—a common error in OpenSCAD translation.[^10]  
-* **Scale Misinterpretation:** Without a reference object in the render, the AI may misjudge the scale of the model, leading to inappropriate feedback on wall thickness.[^1] 
+* **Scale Misinterpretation:** Without a reference object in the render, the AI may misjudge the scale of the model, leading to inappropriate feedback on wall thickness.[^1]
 * **Hallucination of Detail:** The AI may describe features (like "engraved text") that it expects to see based on the prompt, even if the student’s code failed to render them.[^10]
 
 For the high school student, the takeaway is that AI is a **verification assistant**, not a source of truth. The deterministic rendering of OpenSCAD remains the final authority on the model's geometry. The AI is most useful as a "sanity check" to catch obvious mistakes before wasting filament on a failed print.[^1]
@@ -128,7 +128,18 @@ Washington State Department of Health. (2026). *3D printer and filament selectio
 
 ## **Works cited**
 
-[1]: tdeck/3dmake: Non-visual 3D design and 3D printing tool \- GitHub, accessed February 18, 2026, [https://github.com/tdeck/3dmake](https://github.com/tdeck/3dmake)  
+## Supplemental Learning Resources
+
+This introduction is complemented by comprehensive textbooks and code examples:
+
+- **[Programming with OpenSCAD: A Beginner's Guide to Coding 3D-Printable Objects](../../assets/Programming_with_OpenSCAD.epub)** — Complete reference covering OpenSCAD syntax, geometry concepts, design patterns, and best practices
+- **[Simplifying 3D Printing with OpenSCAD](../../assets/Simplifying_3D_Printing_with_OpenSCAD.epub)** — Focused guide to practical workflows, optimization techniques, and real-world printing applications
+- **[CodeSolutions Repository](https://github.com/ProgrammingWithOpenSCAD/CodeSolutions)** — Working OpenSCAD examples organized by topic and difficulty level, demonstrating all concepts covered in this curriculum
+- **[Practice Worksheets and Guides](https://programmingwithopenscad.github.io/learning.html)** — Printable materials for visualization practice, decomposition exercises, and conceptual assessment
+
+---
+
+  
 [2]: Books \- OpenSCAD, accessed February 18, 2026, [https://openscad.org/documentation-books.html](https://openscad.org/documentation-books.html)  
 [3]: Programming with OpenSCAD, accessed February 18, 2026, [https://programmingwithopenscad.github.io/](https://programmingwithopenscad.github.io/)  
 [4]: OpenSCAD Review \- Worth learning? \- CadHub, accessed February 18, 2026, [https://learn.cadhub.xyz/blog/openscad-review/](https://learn.cadhub.xyz/blog/openscad-review/)  

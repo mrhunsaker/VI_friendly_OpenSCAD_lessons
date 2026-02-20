@@ -1,0 +1,449 @@
+# Lesson 11: Stakeholder-Centric Design and the Beaded Jewelry Project
+
+Estimated time: 90–120 minutes | **Level:** Advanced
+
+**Learning Objectives**
+
+- Conduct stakeholder interviews to identify needs, wants, and constraints[^1]
+- Extract functional requirements from interview data[^1]
+- Design a product that meets explicit requirements (not assumptions)[^2]
+- Iterate design based on stakeholder feedback[^2]
+- Document design decisions for reproducibility and accessibility[^3]
+
+**Materials**
+
+- Interview worksheet (provided below)
+- Notebook/laptop for notes
+- Access to stakeholder (or use provided scenario)
+- 3dMake project scaffold
+- Calipers for measurement
+- Reference: [master-rubric.md](../../assets/Reference_Materials/master-rubric.md) for design documentation standards
+
+**Extension Project**: Complete [Beaded_Jewelry_Unit](../../Extension_Projects/Beaded_Jewelry_Unit/Beaded_Jewelry_Unit.md) to apply stakeholder-centric design principles in a real project context.
+
+---
+
+## Why This Matters: The Design Thinking Process
+
+Most design failures start before CAD. They happen because:
+- **Assumption Problem:** Designer assumes what users need without asking
+- **Specification Problem:** Unclear requirements lead to wasted iterations
+- **Accessibility Problem:** Features designed without considering all users
+
+This lesson flips the process: **Listen First, Design Second**[^1].
+
+### The Design Thinking Pipeline
+
+```
+1. Empathize (Listen to stakeholder)
+   ↓
+2. Define (Extract functional requirements)
+   ↓
+3. Ideate (Sketch/prototype solutions)
+   ↓
+4. Prototype (Build in CAD)
+   ↓
+5. Test (Get feedback)
+   ↓
+6. Iterate (Refine based on feedback)
+```
+
+---
+
+## Part 1: Stakeholder Interviews (20–30 minutes)
+
+### What is a Stakeholder?
+
+A stakeholder is anyone who will use, interact with, or be affected by your design. Examples:
+- **End User:** Person who directly uses the product
+- **Maintenance Person:** Someone who repairs/replaces parts
+- **Budget Holder:** Person responsible for cost
+- **Safety Officer:** Person ensuring regulatory compliance
+
+### Open-Ended Interview Questions
+
+Good interview questions:
+- ✅ Start with "What," "How," "Why"
+- ✅ Don't suggest answers
+- ✅ Follow up with "Tell me more..."
+- ✅ Listen for numbers, specific stories, pain points
+
+Bad interview questions:
+- ❌ "Do you like...?" (Yes/No — no detail)
+- ❌ "Would you prefer A or B?" (Forced choice)
+- ❌ "Don't you think...?" (Leading question)
+
+### Sample Interview Script (Beaded Jewelry)
+
+You're designing a custom beaded bracelet holder. Here's how to interview a stakeholder:
+
+```
+Opening:
+"Hi [name], I'm designing a way to store and display beaded 
+bracelets. I'd love to understand how YOU currently use bracelets 
+so I can design something that works for you. Is now a good time?"
+
+Question 1: "Tell me about your current bracelet collection. 
+How many do you have? What are they made of?"
+
+Question 2: "How do you currently store or display them? 
+What works well? What's frustrating?"
+
+Question 3: "If you could design the perfect bracelet holder, 
+what would it look like? What would it do?"
+
+Question 4: "Are there any constraints I should know about? 
+(Size of your space, colors, budget, etc.)"
+
+Question 5: "Who else might use this? How would their needs 
+differ from yours?"
+
+Closing:
+"Thank you for your time. I'll design based on what you've told me 
+and come back with a prototype for feedback."
+```
+
+### Step-by-Step Interview Task
+
+**Duration:** 15 minutes total
+
+1. **Prepare (5 min):**
+   - Choose your stakeholder or use the scenario below
+   - Write 4–6 questions using the template above
+   - Explain the project and get permission to take notes
+
+2. **Conduct (10 min):**
+   - Ask your prepared questions
+   - Write down specific details (numbers, names, quotes)
+   - Listen more than you talk
+   - Ask "Why?" when you hear interesting responses
+
+3. **Document (Immediately after):**
+   - Write a 2–3 sentence summary
+   - Extract 3–5 key needs/constraints
+   - Identify any questions that still need answers
+
+### Scenario: If You Don't Have a Real Stakeholder
+
+**Scenario: Meet Sarah, a jewelry enthusiast**
+
+Sarah has 15+ beaded bracelets but they're tangled in a drawer. She wants to:
+- Display them where she can see them
+- Keep them organized by color/style
+- Protect them from tangling
+- Fit in a small space on her desk
+
+Constraints:
+- Budget: $15 materials cost
+- Space: 6" × 6" footprint maximum
+- Aesthetic: Minimalist, natural wood preferred
+- Timeline: Needs it within 2 weeks
+
+---
+
+## Part 2: Extract Functional Requirements (20–30 minutes)
+
+### From Interview to Requirements
+
+A functional requirement is specific, measurable, and testable:
+
+| Interview Data | ❌ Bad Requirement | ✅ Good Requirement |
+|---|---|---|
+| "I have 15 bracelets" | Lots of storage | Hold 15–20 bracelets without damage |
+| "They're tangled in my drawer" | Keep organized | Vertical hanging system to prevent tangling |
+| "I want to see them" | Display feature | Visible from above (no lid) |
+| "Minimalist, natural wood" | Nice looking | Wood construction, ≤ 2 colors, clean lines |
+
+### Functional Requirements Template
+
+For your beaded jewelry holder, extract 5–8 requirements:
+
+```
+Functional Requirements:
+1. Capacity: Hold _____ bracelets
+2. Organization: Arrange by _____ (color/size/style)
+3. Protection: Prevent _____ (tangling/damage)
+4. Display: Visible from _____ (above/front/sides)
+5. Dimensions: _____ mm wide, _____ mm deep, _____ mm tall
+6. Material: _____ (wood/plastic/metal)
+7. Accessibility: _____ (non-visual inspection method)
+8. Durability: Withstand _____ (weight/use/time)
+```
+
+### Measurable Acceptance Criteria
+
+For each requirement, define how you'll TEST it:
+
+| Requirement | Measurement Method |
+|---|---|
+| Hold 15 bracelets | Count actual bracelets loaded; verify no deformation |
+| Prevent tangling | Manual inspection: no twisting/knotting after 1 week storage |
+| Dimensions | Measure with calipers; compare to design parameters |
+| Wood material | Visual inspection; material weight check |
+| Withstand weight | Load test: 2kg weight for 1 hour; check for deformation |
+
+---
+
+## Part 3: Design the Bracelet Holder (30–40 minutes)
+
+### Design Strategy
+
+Based on functional requirements, create a parametric SCAD model:
+
+```openscad
+// Parametric Beaded Bracelet Holder
+// Designed for: [Stakeholder name]
+// Requirements: [List 3-5 key requirements]
+
+// === PARAMETERS (from stakeholder requirements) ===
+holder_width = 150;      // mm - width for 15+ bracelets
+holder_depth = 80;       // mm - depth for stability
+holder_height = 120;     // mm - height for display
+num_pegs = 16;           // Number of hanging pegs
+peg_diameter = 6;        // mm - bracelet hang diameter
+peg_spacing = holder_width / (num_pegs + 1);
+
+// === DESIGN ===
+
+module base() {
+  // Wooden-look base plate
+  cube([holder_width, holder_depth, 10]);
+}
+
+module back_wall() {
+  // Back support for stability
+  translate([0, 0, 10])
+    cube([holder_width, 5, holder_height]);
+}
+
+module hanging_pegs() {
+  // Pegs for bracelets to hang
+  for (i = [1 : num_pegs]) {
+    x_pos = peg_spacing * i;
+    translate([x_pos, holder_depth/2, holder_height - 20])
+      cylinder(r=peg_diameter/2, h=30, $fn=16);
+  }
+}
+
+module bracelet_holder() {
+  // Combine all components
+  union() {
+    base();
+    back_wall();
+    hanging_pegs();
+  }
+}
+
+// Main
+bracelet_holder();
+```
+
+### Customization Based on Stakeholder Feedback
+
+Before printing, modify parameters:
+
+```
+Interview revealed:
+- "15 bracelets is about right"
+- "I like minimal spacing"
+- "Natural wood color"
+- "Small desk space - maybe 5 inches wide?"
+
+Updated parameters:
+num_pegs = 15;           // Exact count for their collection
+holder_width = 127;      // 5 inches in mm
+peg_spacing = holder_width / (num_pegs + 1);
+```
+
+### Testing Non-Visually
+
+```bash
+# Describe the model to verify it matches requirements
+3dm describe src/main.scad
+
+# Expected output should mention:
+# - 15 hanging pegs arranged horizontally
+# - Base plate for stability
+# - Back wall for support
+# - Dimensions approximately 127mm × 80mm × 120mm
+
+# Generate preview for tactile inspection
+3dm preview src/main.scad
+```
+
+---
+
+## Part 4: Iterate Based on Feedback (20–30 minutes)
+
+### Feedback Loop
+
+After printing a test version:
+
+1. **Measure physical parts:**
+   ```bash
+   # Use calipers to verify
+   - Actual width: _____ mm (design: 127mm)
+   - Actual peg diameter: _____ mm (design: 6mm)
+   - Actual spacing: _____ mm
+   ```
+
+2. **Test with actual bracelets:**
+   - Can 15 bracelets actually hang?
+   - Do they tangle?
+   - Do pegs support the weight?
+   - Is it stable on the desk?
+
+3. **Document feedback:**
+   ```markdown
+   Test Results:
+   - ✅ Holds 15 bracelets comfortably
+   - ⚠️ Pegs slightly too thin (bracelets slip)
+   - ✅ No tangling observed
+   - ⚠️ Wobbles slightly - needs wider base
+   
+   Adjustments for v2:
+   - Increase peg_diameter: 6mm → 8mm
+   - Increase base_depth: 80mm → 100mm
+   ```
+
+4. **Iterate:**
+   ```openscad
+   // Modified parameters for v2
+   peg_diameter = 8;        // Thicker pegs (8mm instead of 6mm)
+   holder_depth = 100;      // Wider base (100mm instead of 80mm)
+   ```
+
+5. **Reprint and test:**
+   - Does v2 address the issues?
+   - Any new problems?
+   - Is it ready for final design?
+
+### Accessible Iteration Tracking
+
+Document all iterations in a spreadsheet or text file:
+
+```
+Version | Peg Size | Base Depth | Fits Bracelets | Stable | Notes
+--------|----------|------------|----------------|--------|------
+v1      | 6mm      | 80mm       | ✅ (14/15)     | ⚠️     | Wobbles, pegs thin
+v2      | 8mm      | 100mm      | ✅ (15/15)     | ✅     | Perfect fit, stable
+v3      | 8mm      | 100mm      | ✅ (15/15)     | ✅     | With wood stain
+```
+
+---
+
+## Complete Project: Beaded Jewelry Bracelet Holder
+
+### Project Requirements
+
+**Objective:** Design a customized bracelet holder based on an actual stakeholder's needs.
+
+**Deliverables:**
+
+1. **Interview Documentation** (1–2 pages)
+   - 4–6 interview questions asked
+   - Stakeholder's 3–5 key needs
+   - Extracted functional requirements
+   - Acceptance criteria for each requirement
+
+2. **Design SCAD File** (`bracelet_holder.scad`)
+   - Parametric design with all requirements
+   - Clear parameters at top (easily customizable)
+   - Well-commented modules
+   - Matches stakeholder dimensions
+
+3. **Iteration Log** (2–3 pages)
+   - Version 1 test results
+   - Feedback from stakeholder
+   - Changes made for v2
+   - Final design specifications
+
+4. **Printed Prototype** (physical)
+   - Demonstrates final design
+   - Holds actual bracelets from stakeholder
+   - Passes all acceptance criteria
+
+5. **Final Documentation** (1–2 pages)
+   - Design process summary
+   - Stakeholder feedback quotes
+   - Design decisions justified
+   - Lessons learned
+
+### Assessment Rubric (0–9 scale)
+
+**Problem & Solution (0–3 points)**
+- Stakeholder clearly identified and interviewed
+- Requirements extracted from interview (not assumptions)
+- Functional requirements are specific and measurable
+
+**Design & Code Quality (0–3 points)**
+- SCAD code is parametric and well-organized
+- Design meets all extracted requirements
+- Iterations show thoughtful refinement based on feedback
+
+**Documentation (0–3 points)**
+- Interview process clearly documented
+- Design decisions justified with stakeholder feedback
+- Iteration log shows testing methodology
+- Accessible description of design (3dm describe output)
+
+---
+
+## Quiz — Lesson 3dMake.11 (10 questions)
+
+1. What is the primary purpose of conducting stakeholder interviews before design[^1]?
+2. Give one example of an open-ended interview question and one bad (leading) question[^1].
+3. What is the difference between a "need" and a "want" in the design context[^1]?
+4. How do you convert interview data into functional requirements[^1]?
+5. What is an acceptance criterion and why is it important[^2]?
+6. Describe how you would test a bracelet holder's capacity non-visually using measurements[^2].
+7. True or False: You can design a good product without talking to the person who will use it.
+8. Explain why iteration based on real feedback is better than guessing[^2].
+9. How would you document design changes in a way that's accessible to non-visual users[^3]?
+10. What should you do if your prototype fails a stakeholder's test[^2]?
+
+## Extension Problems (10)
+
+1. Conduct interviews with 3 different stakeholders for the bracelet holder; compare their requirements[^1].
+2. Design 3 different bracelet holder variants for different stakeholder types (minimalist, maximalist, travel-focused)[^1].
+3. Create a complete functional requirements document with measurable acceptance criteria[^1].
+4. Build and test 2 iterations of the bracelet holder; document all changes[^2].
+5. Develop a design specification document that someone else could follow to recreate your design[^3].
+6. Conduct a "design review" with your stakeholder; document their feedback and your responses[^1].
+7. Create a manufacturing specification: tolerances, materials, assembly instructions, quality checks[^2].
+8. Build a customer feedback tracking system; document what works and what could be improved[^1].
+9. Design an accessibility checklist for the bracelet holder: non-visual inspection, measurement-based testing, assembly ease[^3].
+10. Write a comprehensive design case study: from initial interview through final product, including all iterations, feedback, and lessons learned[^1][^2][^3].
+
+---
+
+## Summary: From Interview to Design
+
+The 11 lessons have taken you from beginner to advanced designer. This final lesson shows you that **the best designs start with listening, not assuming**.
+
+### The Full Journey
+
+1. **Lessons 1–3:** Foundation (setup, primitives, parametric code)
+2. **Lessons 4–5:** Verification & Safety (AI checking, physical safety)
+3. **Lessons 6–7:** Applied Projects (keycap, phone stand)
+4. **Lesson 8:** Advanced Design (tolerance, interlocking, complex assemblies)
+5. **Lesson 9:** Automation (batch processing, scripting)
+6. **Lesson 10:** Mastery (troubleshooting, QA, testing)
+7. **Lesson 11:** Leadership (listening to stakeholders, designing for real users)
+
+### Next Steps After This Lesson
+
+You're now ready for:
+- ✅ Professional product design workflows
+- ✅ Customer-driven development
+- ✅ Small-batch manufacturing
+- ✅ Open-source design contributions
+- ✅ Teaching others these skills
+
+---
+
+**References**
+
+[^1]: Design Thinking Process - IDEO - https://www.ideo.com/perspectives/design-thinking
+[^2]: Functional Requirements in Product Design - https://www.productschool.com/blog/requirements/
+[^3]: Accessible Design Documentation - https://www.a11y-101.com/design/inclusive-documentation

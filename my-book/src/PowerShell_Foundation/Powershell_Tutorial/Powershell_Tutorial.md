@@ -138,12 +138,17 @@ PowerShell provides aliases (`ls`, `cp`, `mv`) mapping to cmdlets (`Get-ChildIte
 - After step 3 you should be able to state your current directory.
 - After step 5 you should be able to create and open a text file from PowerShell.
 
-## Quick Quiz (5 questions)
+## Quick Quiz (10 questions)
 1. What command prints your current directory?
 2. What does `~` represent?
 3. How do you list only names with `ls`?
 4. How do you go up one directory level?
 5. How would you open `notes.txt` in Notepad from PowerShell?
+6. True or False: The pipe operator `|` sends output to a file.
+7. Explain why running commands with elevated privileges (as Administrator) might be necessary.
+8. What is the difference between running a script with `./script.ps1` versus `& './script.ps1'`?
+9. Describe how you would handle a very long command output when using a screen reader.
+10. What does the `PATH` environment variable do, and why is it important when running programs like OpenSCAD?
 
 ## Extension Problems
 1. Create a folder `OpenSCAD_Projects` in Documents and verify its contents.
@@ -151,6 +156,16 @@ PowerShell provides aliases (`ls`, `cp`, `mv`) mapping to cmdlets (`Get-ChildIte
 3. Save `ls -n ~/Documents` output to `doc_list.txt` and open it.
 4. Try tab-completion in a deeply nested folder and note behavior.
 5. Capture `pwd` output into a file and open it: `pwd > cwd.txt ; notepad.exe cwd.txt`.
+6. Build an automated setup script that creates a complete project directory structure, initializes placeholder files, and generates a README.
+7. Create a PowerShell cheat sheet for your most-used commands; organize by category (navigation, files, scripting, troubleshooting).
+8. Write a non-visual tutorial for PowerShell basics; use audio descriptions and keyboard-only navigation as the primary learning method.
+9. Develop a workflow automation script: combines multiple PowerShell concepts (folders, aliases, piping) to solve a real 3D printing task.
+10. Create a PowerShell proficiency self-assessment: list all concepts covered, provide test commands for each, and reflect on what you learned.
+
+## References
+- Microsoft. (2024). *Accessibility in PowerShell ISE*. https://learn.microsoft.com/powershell/scripting/windows-powershell/ise/accessibility-in-windows-powershell-ise
+- Microsoft. (2024). *Learn PowerShell scripting language*. https://learn.microsoft.com/powershell/scripting/overview
+- Microsoft. (2024). *Environment variables and PATH configuration*. https://learn.microsoft.com/powershell/scripting/learn/shell/using-aliases
 
 ## Helpful Resources
 - Accessibility in PowerShell ISE (Microsoft): https://learn.microsoft.com/powershell/scripting/windows-powershell/ise/accessibility-in-windows-powershell-ise

@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Lesson PS.1: Navigation - 3D Printing Course for Blind and Visually Impaired Learners</title>
+        <title>PS-1: Navigation — Moving Around Your File System - 3D Printing Course for Blind and Visually Impaired Learners</title>
 
 
         <!-- Custom HTML head -->
@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-4bc6e054.js";
+            window.path_to_searchindex_js = "../../searchindex-9554f408.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-90c12225.js"></script>
+        <script src="../../toc-13636583.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -221,17 +221,21 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="ps-1-navigation--moving-around-your-file-system"><a class="header" href="#ps-1-navigation--moving-around-your-file-system">PS-1: Navigation — Moving Around Your File System</a></h1>
-<p><strong>Duration:</strong> 1 class period
-<strong>Prerequisite:</strong> PS-0 (Getting Started)</p>
-<hr>
-<h2 id="learning-objectives"><a class="header" href="#learning-objectives">Learning Objectives</a></h2>
-<p>By the end of this lesson, you will be able to:</p>
+<p><strong>Duration:</strong> 1 class period<br><strong>Prerequisite:</strong> PS-0 (Getting Started)</p>
+<p><strong>Learning Objectives</strong>
+By the end of this lesson, you will be able to:</p>
 <ul>
 <li>Use <code>pwd</code> to print your current location</li>
 <li>Use <code>cd</code> to move between directories</li>
 <li>Use <code>ls</code> (and its flags) to list files and folders</li>
 <li>Use wildcards <code>*</code> and <code>?</code> to filter listings</li>
 <li>Navigate relative vs. absolute paths</li>
+<li>Search for files by name and extension</li>
+</ul>
+<p><strong>Materials</strong></p>
+<ul>
+<li>PowerShell</li>
+<li>Text editor (Notepad or VS Code)</li>
 </ul>
 <hr>
 <h2 id="commands-covered-in-this-lesson"><a class="header" href="#commands-covered-in-this-lesson">Commands Covered in This Lesson</a></h2>
@@ -247,6 +251,7 @@
 <tr><td><code>ls -n</code></td><td>List names only (screen reader friendly)</td></tr>
 <tr><td><code>ls -n -af</code></td><td>List names of files only</td></tr>
 <tr><td><code>ls -n -ad</code></td><td>List names of directories only</td></tr>
+<tr><td><code>ls *.extension</code></td><td>List files matching a pattern</td></tr>
 </tbody>
 </table>
 </div>
@@ -256,55 +261,122 @@
 <pre><code class="language-powershell">pwd
 # Output: C:\Users\YourName
 </code></pre>
-<p>Use this whenever you are unsure where you are.</p>
+<p><strong>When to use:</strong> Always run this if you’re unsure of your current location.</p>
 <hr>
 <h2 id="cd--changing-directories"><a class="header" href="#cd--changing-directories"><code>cd</code> — Changing Directories</a></h2>
 <p><code>cd</code> stands for “change directory.”</p>
-<pre><code class="language-powershell"># PS-1: Navigation — Moving Around Your File System 
+<pre><code class="language-powershell"># Go to Documents
+cd Documents
 
-Estimated time: 25–40 minutes
+# Go up one level to parent directory
+cd ..
 
-**Learning Objectives**
-- Use `pwd` to confirm location
-- Use `cd` to move through relative and absolute paths
-- Use `ls -n` and wildcards to find files
+# Go to home directory
+cd ~
 
-**Materials**
-- PowerShell
-- Editor
-
-Step-by-step Tasks
-1. Run `pwd` and read the returned path aloud.
-2. Move to `Documents` with `cd Documents`, confirm with `pwd`.
-3. Use `ls -n` and `ls -n -af` to list files only and directories only.
-4. Practice using `*` and `?` wildcards to list matching files.
-5. Return home with `cd ~`.
-
-Checkpoints
-- After task 2 you can state the path printed by `pwd`.
-
-Quick Quiz
-1. What does `pwd` show?
-2. How do you list directories only with `ls`?
-3. What wildcard matches any number of characters?
-4. How do you list files with the `.scad` extension?
-5. Give an example of an absolute path and a relative path.
-
-Extension Problems
-1. Write a one-line script that lists `.scad` files and saves to `scad_list.txt`.
-2. Use `ls -n ~/Documents | more` to page through long listings.
-3. Combine `ls` with `Select-String` to search for a filename pattern.
-4. Create a shortcut alias in the session for a long path and test it.
-5. Practice tab-completion in a directory with many similarly named files.
-
-## Helpful Resources
-
-- [Get-ChildItem Cmdlet Reference](https://learn.microsoft.com/powershell/module/microsoft.powershell.management/get-childitem)
-- [PowerShell Wildcards and Filtering](https://learn.microsoft.com/powershell/scripting/learn/shell/using-wildcards)
-- [Navigation Best Practices](https://learn.microsoft.com/powershell/scripting/learn/shell/navigate-the-filesystem)
-- [Relative and Absolute Paths](https://poshcode.gitbook.io/powershell-faq/src/getting-started/filesystem-navigation)
-- [Screen Reader Tips for PowerShell](https://learn.microsoft.com/powershell/scripting/windows-powershell/ise/accessibility-in-windows-powershell-ise)
+# Go to a specific path
+cd C:\Users\YourName\Documents\3D_Projects
 </code></pre>
+<hr>
+<h2 id="ls--listing-files-and-folders"><a class="header" href="#ls--listing-files-and-folders"><code>ls</code> — Listing Files and Folders</a></h2>
+<p>Use <code>ls -n</code> for screen reader compatibility.</p>
+<pre><code class="language-powershell"># List all files and folders (names only)
+ls -n
+
+# List only files (no folders)
+ls -n -af
+
+# List only folders (no files)
+ls -n -ad
+</code></pre>
+<hr>
+<h2 id="wildcards--finding-files-by-pattern"><a class="header" href="#wildcards--finding-files-by-pattern">Wildcards — Finding Files by Pattern</a></h2>
+<p>Wildcards help you find files without typing the full name.</p>
+<p><strong><code>*</code> (asterisk)</strong> matches any number of characters:</p>
+<pre><code class="language-powershell"># List all .scad files
+ls -n *.scad
+
+# List all files starting with "part"
+ls -n part*
+
+# List all files ending with "_final"
+ls -n *_final*
+</code></pre>
+<p><strong><code>?</code> (question mark)</strong> matches exactly one character:</p>
+<pre><code class="language-powershell"># Find files like model1.scad, model2.scad (but not model12.scad)
+ls -n model?.scad
+</code></pre>
+<hr>
+<h2 id="step-by-step-practice"><a class="header" href="#step-by-step-practice">Step-by-step Practice</a></h2>
+<ol>
+<li>Run <code>pwd</code> and confirm your location</li>
+<li>Move to <code>Documents</code>: <code>cd Documents</code></li>
+<li>Confirm you moved: <code>pwd</code></li>
+<li>List files and folders: <code>ls -n</code></li>
+<li>List only files: <code>ls -n -af</code></li>
+<li>Go back up: <code>cd ..</code></li>
+<li>Search for files: <code>ls -n *.txt</code></li>
+</ol>
+<hr>
+<h2 id="checkpoints"><a class="header" href="#checkpoints">Checkpoints</a></h2>
+<p>After this lesson, you should be able to:</p>
+<ul>
+<li><input disabled="" type="checkbox"> Navigate to any folder using <code>cd</code></li>
+<li><input disabled="" type="checkbox"> Confirm your location with <code>pwd</code></li>
+<li><input disabled="" type="checkbox"> List files and folders with <code>ls -n</code></li>
+<li><input disabled="" type="checkbox"> Use wildcards to find files by pattern</li>
+<li><input disabled="" type="checkbox"> Move between absolute and relative paths confidently</li>
+</ul>
+<h2 id="quiz--lesson-ps1"><a class="header" href="#quiz--lesson-ps1">Quiz — Lesson PS.1</a></h2>
+<ol>
+<li>What does <code>pwd</code> show?</li>
+<li>How do you list directories only with <code>ls</code>?</li>
+<li>What wildcard matches any number of characters?</li>
+<li>How do you list files with the <code>.scad</code> extension?</li>
+<li>Give an example of an absolute path and a relative path.</li>
+<li>True or False: The <code>*</code> wildcard matches exactly one character.</li>
+<li>Explain the difference between <code>ls -n</code> and <code>ls -n -ad</code>.</li>
+<li>Write a command that would list all <code>.txt</code> files in your Documents folder using a wildcard.</li>
+<li>How would you search for files containing “part” in their name across multiple files?</li>
+<li>Describe a practical scenario where using wildcards saves time in a 3D printing workflow.</li>
+<li>What happens when you use <code>ls -n part?.scad</code> versus <code>ls -n part*.scad</code>?</li>
+<li>How would you navigate to a folder whose name contains both spaces and special characters?</li>
+<li>If you’re in <code>/Documents/Projects/3D</code> and you want to go to <code>/Documents/Resources</code>, what command would you use?</li>
+<li>Write a command sequence that navigates to the Downloads folder, lists only files, then returns to home.</li>
+<li>Explain the purpose of using <code>ls -n -af</code> specifically in a screen reader context.</li>
+</ol>
+<h2 id="extension-problems"><a class="header" href="#extension-problems">Extension Problems</a></h2>
+<ol>
+<li>Write a one-line script that lists <code>.scad</code> files and saves to <code>scad_list.txt</code>.</li>
+<li>Use <code>ls -n ~/Documents | more</code> to page through long listings.</li>
+<li>Combine <code>ls</code> with <code>Select-String</code> to search for a filename pattern.</li>
+<li>Create a shortcut alias in the session for a long path and test it.</li>
+<li>Practice tab-completion in a directory with many similarly named files.</li>
+<li>Build a PowerShell script that recursively lists all <code>.scad</code> and <code>.stl</code> files in a directory tree; save the results to a file.</li>
+<li>Compare the output of <code>ls</code>, <code>Get-ChildItem</code>, and <code>gci</code> to understand PowerShell aliasing; document what each command does.</li>
+<li>Create a filtering command that displays only files modified in the last 7 days; test it on your documents folder.</li>
+<li>Write a non-visual guide to PowerShell navigation; include descriptions of common patterns and how to verify directory contents audibly.</li>
+<li>Develop a navigation workflow for a typical 3D printing project: move between CAD, slicing, and print-log folders efficiently; document the commands.</li>
+<li>Create a complex wildcard search: find all files in a folder and subfolders that match multiple patterns (e.g., <code>*_v1.* OR *_final.*</code>).</li>
+<li>Build a script that navigates through a folder tree, counts files at each level, and reports the structure.</li>
+<li>Document the output differences between <code>ls -n</code>, <code>ls -n -af</code>, <code>ls -n -ad</code>, and <code>Get-ChildItem</code>; explain when to use each.</li>
+<li>Create a navigation “cheat sheet” as a PowerShell script that prints common paths and how to navigate to them.</li>
+<li>Design a project folder structure on your computer, document each path, then create a script that validates all folders exist.</li>
+</ol>
+<h2 id="references"><a class="header" href="#references">References</a></h2>
+<ul>
+<li>Microsoft. (2024). <em>Get-ChildItem cmdlet reference</em>. https://learn.microsoft.com/powershell/module/microsoft.powershell.management/get-childitem</li>
+<li>Microsoft. (2024). <em>PowerShell wildcards and filtering</em>. https://learn.microsoft.com/powershell/scripting/learn/shell/using-wildcards</li>
+<li>Microsoft. (2024). <em>Navigation best practices in PowerShell</em>. https://learn.microsoft.com/powershell/scripting/learn/shell/navigate-the-filesystem</li>
+</ul>
+<h2 id="helpful-resources"><a class="header" href="#helpful-resources">Helpful Resources</a></h2>
+<ul>
+<li><a href="https://learn.microsoft.com/powershell/module/microsoft.powershell.management/get-childitem">Get-ChildItem Cmdlet Reference</a></li>
+<li><a href="https://learn.microsoft.com/powershell/scripting/learn/shell/using-wildcards">PowerShell Wildcards and Filtering</a></li>
+<li><a href="https://learn.microsoft.com/powershell/scripting/learn/shell/navigate-the-filesystem">Navigation Best Practices</a></li>
+<li><a href="https://poshcode.gitbook.io/powershell-faq/src/getting-started/filesystem-navigation">Relative and Absolute Paths</a></li>
+<li><a href="https://learn.microsoft.com/powershell/scripting/windows-powershell/ise/accessibility-in-windows-powershell-ise">Screen Reader Tips for PowerShell</a></li>
+</ul>
 
                     </main>
 

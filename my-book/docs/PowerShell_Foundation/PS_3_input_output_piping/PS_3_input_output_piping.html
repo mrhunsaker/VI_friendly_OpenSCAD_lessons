@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Lesson PS.3: Input, Output, and Piping - 3D Printing Course for Blind and Visually Impaired Learners</title>
+        <title>PS-3: Input, Output, and Piping - 3D Printing Course for Blind and Visually Impaired Learners</title>
 
 
         <!-- Custom HTML head -->
@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-4bc6e054.js";
+            window.path_to_searchindex_js = "../../searchindex-9554f408.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-90c12225.js"></script>
+        <script src="../../toc-13636583.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -339,19 +339,46 @@ Step-by-step Tasks
 Checkpoints
 - After step 3 you should be able to find a keyword using piping.
 
-Quick Quiz
+## Quiz — Lesson PS.3
+
 1. What is the difference between `&gt;` and `&gt;&gt;`?
 2. What does the pipe `|` do?
 3. How do you copy output to the clipboard?
 4. How would you page through long output?
 5. How do you suppress output to nowhere?
+6. True or False: The pipe operator `|` connects the output of one command to the input of another.
+7. Explain why redirecting output to a file is useful for screen reader users.
+8. Write a command that would search for the word "sphere" in all `.scad` files in a directory.
+9. How would you count the number of lines in a file using PowerShell piping?
+10. Describe a practical scenario in 3D printing where you would pipe or redirect command output.
+11. What would be the difference in output between `echo "test" &gt; file.txt` (run twice) vs `echo "test" &gt;&gt; file.txt` (run twice)? Show the expected file contents.
+12. Design a three-step piping chain: read a file, filter for specific content, and save the results; explain what each pipe does.
+13. You have a 500-line `.scad` file and need to find all instances of `sphere()` and count them. Write the command.
+14. Explain how `clip` is particularly valuable for screen reader users when working with file paths or long output strings.
+15. Describe how you would use pipes and redirection to create a timestamped backup report of all `.stl` files in a 3D printing project folder.
 
-Extension Problems
+## Extension Problems
 1. Use piping to count lines in a file (hint: `Select-String -Pattern '.' | Measure-Object`).
 2. Save a long `ls -n` output and search it with `Select-String`.
 3. Chain multiple pipes to filter and then save results.
 4. Practice copying different command outputs to clipboard and pasting.
 5. Create a small script that generates a report (counts of files by extension).
+6. Build a data processing pipeline: read a CSV file, filter rows, and export results; document each step.
+7. Write a script that pipes directory listing to Count occurrences of each file extension; create a summary report.
+8. Create a log analysis command: read a log file, filter for errors, and save matching lines to a separate error log.
+9. Design a piping workflow for 3D printing file management: find `.stl` files, extract their sizes, and generate a report.
+10. Develop a reusable piping function library: create functions for common filtering, sorting, and reporting patterns; test each function with different inputs.
+11. Build a complex filter pipeline: read a `.scad` file, extract lines containing specific geometry commands, count each type, and output a summary to both screen and file.
+12. Create an interactive piping tool: build a script that accepts user input for a search term, pipes through multiple filters, and displays paginated results.
+13. Develop a performance analysis tool: use piping to combine file listing, metadata extraction, and statistical reporting; export results to a dated report file.
+14. Implement a comprehensive error-handling pipeline: read output, catch errors, log them separately, and generate a summary of successes vs failures.
+15. Design and execute a real-world project backup workflow: use piping to verify file integrity, count files by type, generate a backup manifest, and create audit logs—all in one integrated command pipeline.
+
+## References
+
+- Microsoft. (2024). *Out-File cmdlet for redirection*. https://learn.microsoft.com/powershell/module/microsoft.powershell.utility/out-file
+- Microsoft. (2024). *Select-String piping reference*. https://learn.microsoft.com/powershell/module/microsoft.powershell.utility/select-string
+- Microsoft. (2024). *PowerShell pipeline concepts*. https://learn.microsoft.com/powershell/scripting/learn/shell/using-the-pipeline
 
 ## Helpful Resources
 
