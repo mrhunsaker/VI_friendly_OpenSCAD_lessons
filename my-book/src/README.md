@@ -8,7 +8,7 @@ The curriculum is explicitly designed for blind and visually impaired learners w
 
 ## Curriculum Structure
 
-### Part 1: PowerShell Foundation (6 lessons + 4 guides)
+### Part 1: PowerShell Foundation (6 lessons + 2 appendices + 2 guides)
 
 **Where to Start:** [PowerShell Introduction](PowerShell_Foundation/Powershell_Introduction/Powershell_Introduction.md)
 
@@ -16,8 +16,13 @@ Before learning 3D design, students master terminal/command-line fundamentals:
 
 - **PS Introduction** - What is a terminal and why learn it (pre-terminal intro for absolute beginners)
 - **PS.0 through PS.5** - 6 progressive lessons covering command-line basics through error handling
+- **PS-6: Advanced Techniques** - Professional workflows, scripts, and functions
 - **Screen Reader Accessibility Guide** - NVDA & JAWS reference for terminal navigation
 - **PowerShell Curriculum Overview** - Complete guide with learning paths
+
+**Appendices:**
+- **[Appendix A: Screen Reader Accessibility Guide](Appendices/Appendices.md)** - Complete NVDA and JAWS configuration
+- **[Appendix B: PowerShell Curriculum Overview](Appendices/Appendices.md)** - Learning paths and progression strategies
 
 **Time commitment:** ~10 hours  
 **Skills gained:** Terminal navigation, file operations, basic scripting, keyboard-only workflow mastery
@@ -40,10 +45,10 @@ Before learning 3D design, students master terminal/command-line fundamentals:
 
 **4 Comprehensive Reference Appendices**
 
-- **[Appendix A: Comprehensive Slicing Guide](3dMake_Foundation/Appendix_A_Comprehensive_Slicing_Guide.md)** 
-- **[Appendix B: Material Properties & Selection](3dMake_Foundation/Appendix_B_Material_Properties.md)** 
-- **[Appendix C: Tolerance Testing & QA Matrix](3dMake_Foundation/Appendix_C_Tolerance_QA.md)** 
-- **[Appendix D: PowerShell Integration for SCAD Workflows](3dMake_Foundation/Appendix_D_PowerShell_Integration.md)** 
+- **[Appendix A: Comprehensive Slicing Guide](3dMake_Foundation/Appendix_A_Comprehensive_Slicing_Guide.md)** - All major slicers (PrusaSlicer, Bambu Studio, Cura, OrcaSlicer)
+- **[Appendix B: Material Properties & Selection](3dMake_Foundation/Appendix_B_Material_Properties.md)** - Material reference with shrinkage data
+- **[Appendix C: Tolerance Testing & QA Matrix](3dMake_Foundation/Appendix_C_Tolerance_QA.md)** - Quality assurance procedures
+- **[Appendix D: PowerShell Integration for SCAD Workflows](3dMake_Foundation/Appendix_D_PowerShell_Integration.md)** - Automation and batch processing 
 
 ---
 
@@ -125,6 +130,7 @@ Quick navigation to common topics:
 - **[SUMMARY.md](SUMMARY.md)** - Complete table of contents
 - **[Curriculum Guide](3dMake_Foundation/3dMake_Foundation_Curriculum_Guide.md)** - Detailed overview of all lessons and appendices
 - **[Quick Reference](3dMake_Foundation/3dMake_Quick_Reference.md)** - At-a-glance command and syntax reference
+- **[Appendices](Appendices/Appendices.md)** - PowerShell and 3dMake reference materials
 
 ---
 
