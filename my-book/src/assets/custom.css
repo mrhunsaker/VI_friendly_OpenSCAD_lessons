@@ -1,51 +1,124 @@
 /* General Box Styling */
-.solution, .activity, .definition, .theorem, .example, .exercise, .generality, .property, .remark, .hint {
-    margin: 1.5em 0;
-    padding: 1em;
-    border-left: 5px solid;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.solution,
+.activity,
+.definition,
+.theorem,
+.example,
+.exercise,
+.generality,
+.property,
+.remark,
+.hint {
+  margin: 1.5em 0;
+  padding: 1em;
+  border-left: 5px solid;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-@font-face{
-  font-family: 'Atkinson Hyperlegible Next';
-  src: url("../../assets/fonts/AtkinsonHyperlegibleNext-Regular.ttf") format("truetype");
-  font-weight: 400; font-style: normal; font-display: swap;
+@font-face {
+  font-family: "Atkinson Hyperlegible Next";
+  src: url("../../assets/fonts/AtkinsonHyperlegibleNext-Regular.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
-@font-face{
-  font-family: 'Atkinson Hyperlegible Next';
-  src: url("../../assets/fonts/AtkinsonHyperlegibleNext-Bold.ttf") format("truetype");
-  font-weight: 700; font-style: normal; font-display: swap;
+@font-face {
+  font-family: "Atkinson Hyperlegible Next";
+  src: url("../../assets/fonts/AtkinsonHyperlegibleNext-Bold.ttf")
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
-@font-face{
-  font-family: 'Atkinson Hyperlegible Mono';
-  src: url("../../assets/fonts/AtkinsonHyperlegibleMono-Regular.otf") format("opentype");
-  font-weight: 400; font-style: normal; font-display: swap;
+@font-face {
+  font-family: "Atkinson Hyperlegible Mono";
+  src: url("../../assets/fonts/AtkinsonHyperlegibleMono-Regular.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  font-size: 20px;
 }
 
 :root {
-  --fg-font: "Atkinson Hyperlegible Next", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --mono-font: "Atkinson Hyperlegible Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, "Courier New", monospace;
+  --fg-font:
+    "Atkinson Hyperlegible Next", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --mono-font:
+    "Atkinson Hyperlegible Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
+    "Courier New", monospace;
 }
 
 /* Apply fonts */
-body, p, li, h1, h2, h3, h4, h5 {
-  font-family: "Atkinson Hyperlegible Next", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+body,
+p,
+li,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family:
+    "Atkinson Hyperlegible Next",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
   line-height: 1.5;
 }
 
+body,
+p,
+li {
+  font-size: 1.125rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1.5rem;
+}
+
 /* Code blocks, inline code, blockquotes use the mono font */
-code, pre, blockquote {
-  font-family: "Atkinson Hyperlegible Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, "Courier New", monospace;
+code,
+pre {
+  font-family:
+    "Atkinson Hyperlegible Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
+    "Courier New", monospace;
   font-size: 0.95em;
 }
 
+blockquote {
+  font-family:
+    "Atkinson Hyperlegible Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
+    "Courier New", monospace;
+  font-size: 1rem;
+}
+
 pre {
-  white-space: pre-wrap;       /* improve wrapping if desired */
+  white-space: pre-wrap; /* improve wrapping if desired */
   word-break: break-word;
 }
 
 blockquote {
   padding-left: 1rem;
-  border-left: 4px solid rgba(0,0,0,0.08);
+  border-left: 4px solid rgba(0, 0, 0, 0.08);
   margin-left: 0;
+  font-size: 1rem;
 }
