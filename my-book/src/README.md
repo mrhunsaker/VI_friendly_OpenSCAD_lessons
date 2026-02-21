@@ -8,24 +8,64 @@ The curriculum is explicitly designed for blind and visually impaired learners w
 
 ## Curriculum Structure
 
-### Part 1: PowerShell Foundation (6 lessons + 2 appendices + 2 guides)
+### Part 1: Command-Line Foundation (Choose Your Path)
+
+Students master terminal/command-line fundamentals before learning 3D design. **You choose between three equivalent pathways:**
+
+#### **📊 Compare All Three Pathways**
+
+**→ [Command Line Interface Selection Guide](Command_Line_Interface_Selection.md)**
+
+This page provides a comprehensive comparison including:
+- Feature matrix comparing all three shells
+- Command comparison table (navigation, file operations, scripting)
+- Learner profiles to help you choose
+- Goal-based recommendations
+- FAQ addressing common questions
+
+**Use this guide to select your preferred pathway.**
+
+---
+
+#### **Pathway A: PowerShell Foundation (Recommended)**
 
 **Where to Start:** [PowerShell Introduction](PowerShell_Foundation/Powershell_Introduction/Powershell_Introduction.md)
 
-Before learning 3D design, students master terminal/command-line fundamentals:
-
-- **PS Introduction** - What is a terminal and why learn it (pre-terminal intro for absolute beginners)
+- **PS Introduction** - What is a terminal and why learn it
 - **PS.0 through PS.5** - 6 progressive lessons covering command-line basics through error handling
 - **PS-6: Advanced Techniques** - Professional workflows, scripts, and functions
 - **Screen Reader Accessibility Guide** - NVDA & JAWS reference for terminal navigation
 - **PowerShell Curriculum Overview** - Complete guide with learning paths
 
-**Appendices:**
-- **[Appendix A: Screen Reader Accessibility Guide](Appendices/Appendices.md)** - Complete NVDA and JAWS configuration
-- **[Appendix B: PowerShell Curriculum Overview](Appendices/Appendices.md)** - Learning paths and progression strategies
+**Time commitment:** ~10 hours  
+**Best for:** Users who want more power and advanced features  
+**Skills:** Terminal navigation, piping, advanced scripting, professional automation
+
+#### **Pathway B: Windows Command Prompt Foundation (Simplified Alternative)**
+
+**Where to Start:** [CMD Curriculum Overview](CMD_Foundation/CMD_Curriculum_Overview/CMD_Curriculum_Overview.md)
+
+- **CMD-Pre through CMD-5** - 6 progressive lessons covering command-line basics
+- **CMD-6: Advanced Techniques** - Batch files, automation, professional workflows
+- **CMD Unit Test** - Comprehensive practice and self-assessment
 
 **Time commitment:** ~10 hours  
-**Skills gained:** Terminal navigation, file operations, basic scripting, keyboard-only workflow mastery
+**Best for:** Absolute beginners or users who prefer simplicity  
+**Skills:** Terminal navigation, file operations, batch scripting, basic automation
+
+#### **Pathway C: Git Bash Foundation (Unix/Linux Skills)**
+
+**Where to Start:** [GitBash Curriculum Overview](GitBash_Foundation/GitBash_Curriculum_Overview/GitBash_Curriculum_Overview.md)
+
+- **GitBash-Pre through GitBash-5** - 6 progressive lessons covering terminal basics
+- **GitBash-6: Advanced Techniques** - Bash scripting, automation, professional workflows
+- **GitBash Unit Test** - Comprehensive practice and self-assessment
+
+**Time commitment:** ~8-10 hours  
+**Best for:** Users who want cross-platform skills (works on Windows, macOS, Linux)  
+**Skills:** Unix/bash commands, shell scripting, cross-platform automation
+
+**Why three pathways?** All teach identical fundamental concepts using different tools. PowerShell is most powerful on Windows; Command Prompt is simplest; Git Bash provides cross-platform skills. Choose based on your learning style and goals. All integrate fully with 3D design workflows.
 
 ### Part 2: 3dMake Foundation (11 lessons + 4 appendices)
 
