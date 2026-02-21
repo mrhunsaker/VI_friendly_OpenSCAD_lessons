@@ -17,9 +17,9 @@ Estimated time: 90-120 minutes | **Level:** Advanced
 - Access to stakeholder (or use provided scenario)
 - 3dMake project scaffold
 - Calipers for measurement
-- Reference: [master-rubric.md](../../assets/Reference_Materials/master-rubric.md) for design documentation standards
+- Reference: [master-rubric.md](master-rubric.md) for design documentation standards
 
-**Extension Project**: Complete [Beaded_Jewelry_Unit](../../Extension_Projects/Beaded_Jewelry_Unit/Beaded_Jewelry_Unit.md) to apply stakeholder-centric design principles in a real project context.
+**Extension Project**: Complete [Beaded_Jewelry_Unit](beaded-jewelry.md) to apply stakeholder-centric design principles in a real project context.
 
 ---
 
@@ -147,12 +147,12 @@ Constraints:
 
 A functional requirement is specific, measurable, and testable:
 
-| Interview Data | [NO] Bad Requirement | [YES] Good Requirement |
-|---|---|---|
-| "I have 15 bracelets" | Lots of storage | Hold 15-20 bracelets without damage |
-| "They're tangled in my drawer" | Keep organized | Vertical hanging system to prevent tangling |
-| "I want to see them" | Display feature | Visible from above (no lid) |
-| "Minimalist, natural wood" | Nice looking | Wood construction,  2 colors, clean lines |
+| Interview Data                 | [NO] Bad Requirement | [YES] Good Requirement                      |
+|--------------------------------|----------------------|---------------------------------------------|
+| "I have 15 bracelets"          | Lots of storage      | Hold 15-20 bracelets without damage         |
+| "They're tangled in my drawer" | Keep organized       | Vertical hanging system to prevent tangling |
+| "I want to see them"           | Display feature      | Visible from above (no lid)                 |
+| "Minimalist, natural wood"     | Nice looking         | Wood construction,  2 colors, clean lines   |
 
 ### Functional Requirements Template
 
@@ -174,13 +174,13 @@ Functional Requirements:
 
 For each requirement, define how you'll TEST it:
 
-| Requirement | Measurement Method |
-|---|---|
-| Hold 15 bracelets | Count actual bracelets loaded; verify no deformation |
-| Prevent tangling | Manual inspection: no twisting/knotting after 1 week storage |
-| Dimensions | Measure with calipers; compare to design parameters |
-| Wood material | Visual inspection; material weight check |
-| Withstand weight | Load test: 2kg weight for 1 hour; check for deformation |
+| Requirement       | Measurement Method                                           |
+|-------------------|--------------------------------------------------------------|
+| Hold 15 bracelets | Count actual bracelets loaded; verify no deformation         |
+| Prevent tangling  | Manual inspection: no twisting/knotting after 1 week storage |
+| Dimensions        | Measure with calipers; compare to design parameters          |
+| Wood material     | Visual inspection; material weight check                     |
+| Withstand weight  | Load test: 2kg weight for 1 hour; check for deformation      |
 
 ---
 
@@ -324,10 +324,10 @@ Document all iterations in a spreadsheet or text file:
 
 ```
 Version | Peg Size | Base Depth | Fits Bracelets | Stable | Notes
---------|----------|------------|----------------|--------|------
-v1      | 6mm      | 80mm       | [YES] (14/15)     |      | Wobbles, pegs thin
-v2      | 8mm      | 100mm      | [YES] (15/15)     | [YES]     | Perfect fit, stable
-v3      | 8mm      | 100mm      | [YES] (15/15)     | [YES]     | With wood stain
+--------|----------|------------|----------------|--------|--------------------
+v1      | 6mm      | 80mm       | [YES] (14/15)  |        | Wobbles, pegs thin
+v2      | 8mm      | 100mm      | [YES] (15/15)  | [YES]  | Perfect fit, stable
+v3      | 8mm      | 100mm      | [YES] (15/15)  | [YES]  | With wood stain
 ```
 
 ---

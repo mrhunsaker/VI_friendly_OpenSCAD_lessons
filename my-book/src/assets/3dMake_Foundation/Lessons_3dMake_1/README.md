@@ -18,9 +18,9 @@ This folder contains supporting materials for Lesson 1:
 
 ## Key Materials
 
-- [Lesson 1 Main Content](../../3dMake_Foundation/Lessons_3dMake_1/Lessons_3dMake_1.md)
-- [3dMake Setup Guide](../../../Reference_Materials/3dmake-setup-guide.md)
-- [VSCode Setup Guide](../../../Reference_Materials/vscode-setup-guide.md)
+- [Lesson 1 Main Content](../../../3dMake_Foundation/Lessons_3dMake_1/Lessons_3dMake_1.md)
+- [3dMake Setup Guide](../../../3dMake_Foundation/Lessons_3dMake_1/3dmake-setup-guide.md)
+- [VSCode Setup Guide](../../../3dMake_Foundation/Lessons_3dMake_1/vscode-setup-guide.md)
 
 ## Extension Projects in This Folder
 

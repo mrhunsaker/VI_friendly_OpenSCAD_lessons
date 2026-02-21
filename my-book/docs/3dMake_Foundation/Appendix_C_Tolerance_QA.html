@@ -1,0 +1,804 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Appendix C: Tolerance Testing &amp; Quality Assurance Matrix - 3D Printing Course for Blind and Visually Impaired Learners</title>
+
+
+        <!-- Custom HTML head -->
+        <script>
+          (function(){
+            // Load Atkinson Hyperlegible fonts from the book assets (injected at runtime so paths are correct on GitHub Pages)
+            try {
+              const link = Array.from(document.getElementsByTagName('link')).find(l => l.href && l.href.match(/\/css\/variables-.*\.css$/));
+              const base = (function(){
+                if (!link) return (window.location.origin||'') + '/';
+                const u = new URL(link.href, window.location.href);
+                const basePath = u.pathname.replace(/\/css\/.*$/,'');
+                return u.origin + basePath + (basePath.endsWith('/') ? '' : '/');
+              })();
+        
+              const css = `\
+        @font-face {\
+          font-family: 'Atkinson Hyperlegible Next';\
+          src: url('${base}assets/fonts/AtkinsonHyperlegibleNext-Regular.ttf') format('truetype');\
+          font-weight: 400; font-style: normal; font-display: swap;\
+        }\
+        @font-face {\
+          font-family: 'Atkinson Hyperlegible Mono';\
+          src: url('${base}assets/fonts/AtkinsonHyperlegibleMono-SemiBold.ttf') format('truetype');\
+          font-weight: 600; font-style: normal; font-display: swap;\
+        }\
+        @font-face {\
+          font-family: 'Atkinson Hyperlegible Mono';\
+          src: url('${base}assets/fonts/AtkinsonHyperlegibleMono-Regular.otf') format('opentype');\
+          font-weight: 400; font-style: normal; font-display: swap;\
+        }\
+        pre, code, .hljs, .leftbar { font-family: 'Atkinson Hyperlegible Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", "Courier New", monospace !important; }\
+        body { font-family: 'Atkinson Hyperlegible Next', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }\
+        `;
+        
+              const style = document.createElement('style');
+              style.appendChild(document.createTextNode(css));
+              document.head.appendChild(style);
+            } catch (e) { console.warn('Font injection failed', e); }
+          })();
+        </script>
+        
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            mermaid.initialize({ startOnLoad: true });
+          });
+        </script>
+
+        <meta name="description" content="An introduction to 3D printing for blind and visually impaired learners, using OpenSCAD and 3DMake to create accessible 3D models.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../css/general-2459343d.css">
+        <link rel="stylesheet" href="../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../src/assets/custom-e98d0106.css">
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../searchindex-c8a45cbd.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc-fbcfb3de.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">3D Printing Course for Blind and Visually Impaired Learners</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="appendix-c-tolerance-testing--quality-assurance-matrix"><a class="header" href="#appendix-c-tolerance-testing--quality-assurance-matrix">Appendix C: Tolerance Testing &amp; Quality Assurance Matrix</a></h1>
+<p>This appendix provides <strong>measurement-based testing methodology</strong> for verifying that 3D-printed parts meet design specifications. It’s designed to be used <strong>non-visually</strong>-focusing on calipers, scales, and functional tests rather than visual inspection.</p>
+<p><strong>Referenced in:</strong> Lessons 8-10 (Complex Design, Troubleshooting, Mastery)</p>
+<hr>
+<h2 id="overview-what-is-tolerance"><a class="header" href="#overview-what-is-tolerance">Overview: What is Tolerance?</a></h2>
+<p><strong>Tolerance</strong> is the acceptable range of variation in dimensions:</p>
+<pre><code>Design spec:  Hole diameter = 6mm
+Tolerance:    +/-0.5mm
+Acceptable range:  5.5mm to 6.5mm
+Actual print:  5.8mm [YES] (within tolerance)
+or            7.2mm [NO] (exceeds tolerance)
+</code></pre>
+<h3 id="why-tolerance-matters"><a class="header" href="#why-tolerance-matters">Why Tolerance Matters</a></h3>
+<ol>
+<li><strong>Assembly:</strong> Parts must fit together</li>
+<li><strong>Function:</strong> Fit too tight = stuck; too loose = falls apart</li>
+<li><strong>Safety:</strong> Wrong tolerance = part failure</li>
+<li><strong>Cost:</strong> Tight tolerance = slower, more waste</li>
+</ol>
+<hr>
+<h2 id="essential-measurement-tools"><a class="header" href="#essential-measurement-tools">Essential Measurement Tools</a></h2>
+<h3 id="1-digital-calipers"><a class="header" href="#1-digital-calipers">1. Digital Calipers</a></h3>
+<p><strong>What they measure:</strong></p>
+<ul>
+<li>Outside diameter (part width)</li>
+<li>Inside diameter (hole width)</li>
+<li>Depth</li>
+</ul>
+<p><strong>How to use non-visually:</strong></p>
+<pre><code>1. Gently close calipers until they barely touch the part
+2. Feel the resistance (should be light, not forced)
+3. Read digital display with audio feedback or manually
+4. Record three measurements at different locations
+5. Average the three measurements
+</code></pre>
+<p><strong>Accuracy:</strong> +/-0.05mm (very precise for 3D printing)</p>
+<h3 id="2-digital-scale-kitchen-scale"><a class="header" href="#2-digital-scale-kitchen-scale">2. Digital Scale (Kitchen Scale)</a></h3>
+<p><strong>What it measures:</strong></p>
+<ul>
+<li>Part weight (indicates infill, material type)</li>
+</ul>
+<p><strong>How to use non-visually:</strong></p>
+<pre><code>1. Place part on scale
+2. Wait for reading to stabilize (1-2 seconds)
+3. Read digital display (in grams)
+4. Compare to expected weight
+</code></pre>
+<p><strong>Accuracy:</strong> +/-1g (good enough for verification)</p>
+<p><strong>Why it matters:</strong></p>
+<ul>
+<li>Too light = infill too low or void inside part</li>
+<li>Expected weight = indicates proper slicing</li>
+</ul>
+<h3 id="3-test-jig--gono-go-gauge"><a class="header" href="#3-test-jig--gono-go-gauge">3. Test Jig / Go/No-Go Gauge</a></h3>
+<p><strong>What it measures:</strong></p>
+<ul>
+<li>Pass/fail tolerance testing without calipers</li>
+</ul>
+<p><strong>How to make:</strong></p>
+<pre><code class="language-openscad">// Go/No-Go gauge for bracelet peg holes
+// Tests if hole is within acceptable range
+
+peg_diameter = 6;        // Design spec
+tolerance = 0.5;         // Tolerance
+go_diameter = peg_diameter - tolerance;     // Min acceptable (5.5)
+no_go_diameter = peg_diameter + tolerance;  // Max acceptable (6.5)
+
+module go_gauge() {
+  // Part should fit through this easily
+  cylinder(h=10, r=go_diameter/2);
+}
+
+module no_go_gauge() {
+  // Part should NOT fit through this
+  cylinder(h=10, r=no_go_diameter/2);
+}
+
+// Test jig with both gauges
+union() {
+  translate([0, 0, 0]) go_gauge();
+  translate([0, 15, 0]) no_go_gauge();
+}
+</code></pre>
+<p><strong>Use non-visually:</strong></p>
+<ul>
+<li>Try inserting peg into go-gauge -&gt; Should slide easily</li>
+<li>Try inserting peg into no-go-gauge -&gt; Should NOT fit</li>
+<li>If both tests pass = tolerance correct</li>
+</ul>
+<hr>
+<h2 id="quality-assurance-testing-matrix"><a class="header" href="#quality-assurance-testing-matrix">Quality Assurance Testing Matrix</a></h2>
+<h3 id="critical-dimensions-to-test"><a class="header" href="#critical-dimensions-to-test">Critical Dimensions to Test</a></h3>
+<p>Create a <strong>Test Plan</strong> before printing:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Part</th><th>Dimension</th><th>Spec</th><th>Tolerance</th><th>How to Test</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Bracelet Holder</strong></td><td>Base width</td><td>127mm</td><td>+/-2mm</td><td>Measure with calipers (multiple points)</td></tr>
+<tr><td></td><td>Peg diameter</td><td>6mm</td><td>+/-0.5mm</td><td>Test fit with go/no-go gauge</td></tr>
+<tr><td></td><td>Peg spacing</td><td>8mm</td><td>+/-1mm</td><td>Measure distance between pegs</td></tr>
+<tr><td></td><td>Back wall height</td><td>120mm</td><td>+/-2mm</td><td>Measure with calipers</td></tr>
+<tr><td><strong>Phone Stand</strong></td><td>Slope angle</td><td>20</td><td>+/-3</td><td>Calculate from height/depth ratio</td></tr>
+<tr><td></td><td>Weight capacity</td><td>200g</td><td>150-250g</td><td>Load test (see below)</td></tr>
+<tr><td></td><td>Stability</td><td>N/A</td><td>Pass/fail</td><td>1-hour load test without tipping</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="pre-print-planning"><a class="header" href="#pre-print-planning">Pre-Print Planning</a></h3>
+<p>Before slicing, define:</p>
+<ol>
+<li><strong>Critical dimensions:</strong> Which measurements matter most?</li>
+<li><strong>Acceptable range:</strong> What tolerance is realistic?</li>
+<li><strong>Test method:</strong> How will you verify?</li>
+<li><strong>Pass/fail criteria:</strong> What does “success” look like?</li>
+</ol>
+<p><strong>Example Plan for Phone Stand:</strong></p>
+<pre><code class="language-markdown"># Phone Stand - Quality Assurance Plan
+
+## Critical Dimensions
+1. Slope angle: 20 +/-3
+2. Base width: 80mm +/-1mm
+3. Stand height: 60mm +/-2mm
+
+## Functional Tests
+1. Stability: Hold 200g for 1 hour without tipping
+2. Grip: Phone doesn't slide during tilt
+3. Assembly: Back brace attaches without force
+
+## Pass/Fail Criteria
+[YES] PASS if:
+- All dimensions within tolerance
+- Phone holds weight for 1 hour
+- No cracks or layer separation
+
+[NO] FAIL if:
+- Any dimension &gt;2mm off spec
+- Phone slides or part tips
+- Visible cracks
+</code></pre>
+<hr>
+<h2 id="measurement-procedures"><a class="header" href="#measurement-procedures">Measurement Procedures</a></h2>
+<h3 id="procedure-1-linear-dimension-width-height-depth"><a class="header" href="#procedure-1-linear-dimension-width-height-depth">Procedure 1: Linear Dimension (Width, Height, Depth)</a></h3>
+<p><strong>Equipment needed:</strong> Digital calipers</p>
+<p><strong>Steps:</strong></p>
+<pre><code>1. Place part on flat surface
+2. Position caliper jaws perpendicular to surface
+3. Gently close jaws until they just touch part
+4. Feel for light resistance (not forced)
+5. Read digital display
+6. Record measurement
+7. Repeat at 3 different locations
+8. Average the three readings
+9. Compare to design spec +/- tolerance
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>Design spec: 127mm (bracelet holder width)
+Tolerance:   +/-2mm (acceptable: 125-129mm)
+
+Measurements:
+  Location 1: 126.8mm
+  Location 2: 127.1mm
+  Location 3: 126.5mm
+  Average: 126.8mm [YES] (within tolerance)
+</code></pre>
+<h3 id="procedure-2-hole-or-peg-diameter"><a class="header" href="#procedure-2-hole-or-peg-diameter">Procedure 2: Hole or Peg Diameter</a></h3>
+<p><strong>Equipment needed:</strong> Digital calipers, Go/No-Go gauges (optional)</p>
+<p><strong>Method A: Direct Measurement</strong></p>
+<pre><code>1. Insert caliper jaws into hole/around peg
+2. Adjust jaws to gently touch surfaces
+3. Feel for light resistance on both sides
+4. Read digital display (inside measurement mode)
+5. Record three measurements
+6. Average the readings
+</code></pre>
+<p><strong>Method B: Go/No-Go Gauge</strong></p>
+<pre><code>1. Print test jigs (go &amp; no-go gauges)
+2. Attempt to insert peg/hole into go-gauge
+   -&gt; Should slide through easily with light resistance
+3. Attempt to insert peg/hole into no-go-gauge
+   -&gt; Should NOT fit or fit with visible resistance
+4. If both pass -&gt; dimension is acceptable
+</code></pre>
+<p><strong>Example: Peg Diameter</strong></p>
+<pre><code>Design spec: 6.0mm
+Tolerance:   +/-0.5mm (acceptable: 5.5-6.5mm)
+
+Method A (Direct):
+  Measurement 1: 5.9mm
+  Measurement 2: 6.0mm
+  Measurement 3: 5.8mm
+  Average: 5.9mm [YES]
+
+Method B (Go/No-Go):
+  Slides through go-gauge (5.5mm) -&gt; [YES]
+  Doesn't fit no-go-gauge (6.5mm) -&gt; [YES]
+  Result: PASS
+</code></pre>
+<h3 id="procedure-3-surface-finish--layer-quality"><a class="header" href="#procedure-3-surface-finish--layer-quality">Procedure 3: Surface Finish / Layer Quality</a></h3>
+<p><strong>Equipment needed:</strong> Caliper, ruler, touch/texture assessment</p>
+<p><strong>Step 1: Surface Texture</strong></p>
+<pre><code>Run fingers/hand over surface:
+  [YES] Smooth -&gt; Good quality
+   Slightly rough -&gt; Acceptable
+  [NO] Very rough/bumpy -&gt; Quality issue
+</code></pre>
+<p><strong>Step 2: Layer Line Visibility</strong></p>
+<pre><code>Feel horizontal ridges (layer lines):
+  [YES] Barely perceptible -&gt; Good (0.2mm layers)
+   Noticeable but even -&gt; OK (0.25mm layers)
+  [NO] Very pronounced -&gt; Quality issue
+</code></pre>
+<p><strong>Step 3: Dimensional Consistency</strong></p>
+<pre><code>Measure thickness at multiple points:
+  Design spec: 3mm wall thickness
+  Measure at 5 locations
+  Record all measurements
+  All should be within +/-0.2mm of each other
+  
+  Example:
+    Pt 1: 3.0mm
+    Pt 2: 3.1mm
+    Pt 3: 3.0mm
+    Pt 4: 2.9mm
+    Pt 5: 3.1mm
+  Std Dev: 0.08mm [YES] (very consistent)
+</code></pre>
+<h3 id="procedure-4-weight-verification-confirms-infill"><a class="header" href="#procedure-4-weight-verification-confirms-infill">Procedure 4: Weight Verification (Confirms Infill)</a></h3>
+<p><strong>Equipment needed:</strong> Digital scale</p>
+<p><strong>Step 1: Calculate Expected Weight</strong></p>
+<pre><code>Expected weight = Volume x Density x Infill%
+
+For bracelet holder (PLA):
+Volume = 127mm x 80mm x 120mm = 1,219,200 mm
+       = 1,219.2 cm
+PLA density = 1.24 g/cm
+Infill = 20%
+
+Expected weight = 1,219.2 x 1.24 x 0.20 = 302.4g
+
+Acceptable range: 290-315g (+/-5%)
+</code></pre>
+<p><strong>Step 2: Measure Actual Weight</strong></p>
+<pre><code>1. Place part on digital scale
+2. Wait for reading to stabilize (1-2 seconds)
+3. Read display in grams
+4. Compare to expected weight
+</code></pre>
+<p><strong>Step 3: Interpret Result</strong></p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Actual Weight</th><th>Interpretation</th></tr>
+</thead>
+<tbody>
+<tr><td>290-315g</td><td>[YES] Correct infill, no internal voids</td></tr>
+<tr><td>&lt;280g</td><td>Infill too low or significant voids</td></tr>
+<tr><td>&gt;320g</td><td>Infill too high (was it supposed to be 20%?)</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="functional-testing"><a class="header" href="#functional-testing">Functional Testing</a></h2>
+<h3 id="test-1-load-testing-strength"><a class="header" href="#test-1-load-testing-strength">Test 1: Load Testing (Strength)</a></h3>
+<p><strong>Purpose:</strong> Verify part can hold weight without failure</p>
+<p><strong>Equipment needed:</strong></p>
+<ul>
+<li>Digital scale</li>
+<li>Test weights (or books, water jugs)</li>
+<li>Calipers (to check for deflection)</li>
+</ul>
+<p><strong>Procedure:</strong></p>
+<pre><code>1. Measure baseline dimensions (part unloaded)
+   Baseline height: 60mm
+
+2. Place test weight on part
+   Added weight: 200g
+
+3. Wait 5 minutes (allow part to settle)
+
+4. Measure dimensions again
+   New height: 59.8mm
+   Deflection: 0.2mm (acceptable)
+
+5. Observe for cracks (visual or tactile)
+   No cracks: [YES]
+
+6. Remove weight and wait 5 minutes
+
+7. Measure dimensions again (should return to baseline)
+   Height after unload: 60.0mm
+   Recovery: Complete [YES]
+
+Result: PASS (part handles load without permanent deformation)
+</code></pre>
+<p><strong>Acceptance Criteria for Phone Stand:</strong></p>
+<pre><code>[YES] PASS if:
+  - Deflection &lt;0.5mm under 200g load
+  - No cracks visible/felt
+  - Full recovery after load removed
+
+[NO] FAIL if:
+  - Deflection &gt;1mm
+  - Visible cracks
+  - Permanent deformation after unload
+</code></pre>
+<h3 id="test-2-assembly-testing"><a class="header" href="#test-2-assembly-testing">Test 2: Assembly Testing</a></h3>
+<p><strong>Purpose:</strong> Verify parts fit together as designed</p>
+<p><strong>Equipment needed:</strong></p>
+<ul>
+<li>Calipers</li>
+<li>Go/No-Go gauges</li>
+</ul>
+<p><strong>Procedure for Multi-Part Assembly (e.g., Stackable Bins):</strong></p>
+<pre><code>Part A (Bin body) dimensions:
+  - Top opening: 50mm x 50mm +/-1mm
+  - Wall thickness: 2mm +/-0.2mm
+
+Part B (Stacking rim) dimensions:
+  - Base diameter: 50mm +/-0.5mm
+  - Should nest inside Part A
+
+Test procedure:
+1. Measure Part A opening: 50.1mm [YES]
+2. Measure Part B base: 49.8mm [YES]
+3. Attempt to nest Part B into Part A
+   -&gt; Should fit with light resistance
+   -&gt; Feel for smooth insertion (no catching)
+4. Check for rocking (part should sit stable)
+5. Apply 500g load (simulate stacking)
+   -&gt; Should hold without slipping
+</code></pre>
+<h3 id="test-3-durability-testing-repeated-use"><a class="header" href="#test-3-durability-testing-repeated-use">Test 3: Durability Testing (Repeated Use)</a></h3>
+<p><strong>Purpose:</strong> Verify part doesn’t fail after repeated cycles</p>
+<p><strong>Example: Phone Stand Tilt Cycles</strong></p>
+<pre><code>1. Record baseline dimensions
+2. Cycle 1: Place phone, tilt to max angle, remove
+3. Inspect for cracks or damage
+4. Repeat cycle 10 times
+5. Measure dimensions again
+6. Compare to baseline: Should be &lt;0.1mm change
+
+If no damage after 10 cycles -&gt; Durable [YES]
+</code></pre>
+<hr>
+<h2 id="tolerance-stack-up-multi-part-designs"><a class="header" href="#tolerance-stack-up-multi-part-designs">Tolerance Stack-Up (Multi-Part Designs)</a></h2>
+<p>When multiple parts are assembled, tolerances add:</p>
+<pre><code>Design:
+  Part A opening: 50mm +/-0.5mm
+  Part B base: 50mm +/-0.5mm
+
+Worst-case fit:
+  Part A minimum: 49.5mm
+  Part B maximum: 50.5mm
+  Difference: 1.0mm (VERY TIGHT or won't fit!)
+
+Solution: Increase tolerance on Part B to +/-0.3mm
+  Part B minimum: 49.7mm
+  Part B maximum: 50.3mm
+  Now fits inside Part A: 49.5-50.5mm [YES]
+</code></pre>
+<h3 id="tolerance-stack-up-calculation"><a class="header" href="#tolerance-stack-up-calculation">Tolerance Stack-Up Calculation</a></h3>
+<p>For N parts in assembly:</p>
+<pre><code>Total tolerance = (tolerance + tolerance + ... + tolerance)
+
+Example with 3 parts (each +/-0.5mm):
+Total = (0.5 + 0.5 + 0.5)
+      = 0.75
+      = 0.87mm
+</code></pre>
+<hr>
+<h2 id="common-dimensional-problems--fixes"><a class="header" href="#common-dimensional-problems--fixes">Common Dimensional Problems &amp; Fixes</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Problem</th><th>Typical Cause</th><th>How to Fix</th><th>Prevent Next Time</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Part too small (all dimensions off)</strong></td><td>Scale wrong in slicer</td><td>Scale STL up in CAD or slicer</td><td>Verify scale before slicing</td></tr>
+<tr><td><strong>Holes too small</strong></td><td>Compensation shrinkage</td><td>Increase hole diameter +0.5mm</td><td>Add shrinkage factor to design</td></tr>
+<tr><td><strong>Walls too thin</strong></td><td>Layer squishing</td><td>Check first layer height; may need recalibration</td><td>Measure first layer thickness</td></tr>
+<tr><td><strong>Infill showing through (loose fill)</strong></td><td>Infill too low</td><td>Increase infill % to 25-30%</td><td>Recalculate for part type</td></tr>
+<tr><td><strong>Inconsistent across print</strong></td><td>Nozzle clogging mid-print</td><td>Clean nozzle; check filament quality</td><td>Use quality filament; monitor print</td></tr>
+<tr><td>**Z-axis dimensions off</td><td>Z-axis uncalibrated</td><td>Run Z-calibration procedure</td><td>Calibrate before critical prints</td></tr>
+<tr><td><strong>Dimensions change between prints</strong></td><td>Thermal drift</td><td>Print in stable temperature</td><td>Use enclosed printer if possible</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="testing-checklist-template"><a class="header" href="#testing-checklist-template">Testing Checklist Template</a></h2>
+<p>Print this checklist <strong>before starting a new project</strong>:</p>
+<pre><code class="language-markdown"># Quality Assurance Checklist: [Project Name]
+
+## Design Specs
+- [ ] Part A width: ___ mm +/- ___ mm
+- [ ] Part B height: ___ mm +/- ___ mm
+- [ ] Hole diameter: ___ mm +/- ___ mm
+- [ ] Assembly fit tolerance: ___ mm
+
+## Pre-Print
+- [ ] STL exported correctly
+- [ ] Scale verified
+- [ ] Supports configured
+- [ ] Slice file reviewed
+
+## Post-Print (Dimensional)
+- [ ] Part A width measured (3 points): ___mm, ___mm, ___mm
+  - [ ] Within tolerance? YES/NO
+- [ ] Part B height measured (3 points): ___mm, ___mm, ___mm
+  - [ ] Within tolerance? YES/NO
+- [ ] Hole diameter measured (go/no-go): PASS/FAIL
+- [ ] Part weight measured: ___g (expected: ___g +/-___g)
+  - [ ] Within expected weight? YES/NO
+
+## Post-Print (Functional)
+- [ ] Load test (if applicable): PASS/FAIL
+- [ ] Assembly test: PASS/FAIL
+- [ ] Surface quality acceptable: YES/NO
+- [ ] No cracks or voids: YES/NO
+
+## Result
+- [ ] ACCEPT (all tests pass)
+- [ ] REWORK (minor issue, can fix)
+- [ ] REJECT (major issue, reprint)
+
+## Notes
+[Space for observations]
+</code></pre>
+<hr>
+<h2 id="powershell-integration-track-quality-metrics"><a class="header" href="#powershell-integration-track-quality-metrics">PowerShell Integration: Track Quality Metrics</a></h2>
+<pre><code class="language-powershell"># Track print quality across multiple projects
+
+$qualityLog = @"
+ProjectName,Date,Material,PartCount,DimensionsPass,FunctionalPass,Weight(g),Notes
+"@
+
+# Log entries
+$qualityLog += "`nBraceletHolder,2024-01-15,PLA,1,PASS,PASS,302.1,Perfect fit"
+$qualityLog += "`nPhoneStand,2024-01-16,PETG,2,PASS,PASS,487.3,Strong joints"
+$qualityLog += "`nStackableBins,2024-01-17,PLA,3,FAIL,N/A,N/A,Holes too small reprint"
+
+# Save to CSV
+$qualityLog | Out-File "C:\Projects\quality-log.csv"
+
+# Analyze pass/fail rate
+$log = Import-Csv "C:\Projects\quality-log.csv"
+$passCount = ($log | Where-Object { $_.DimensionsPass -eq "PASS" }).Count
+$totalCount = $log.Count
+$passRate = ($passCount / $totalCount) * 100
+
+Write-Host "Print success rate: $passRate%"
+
+# Show recent failures
+Write-Host "`nRecent issues:"
+$log | Where-Object { $_.DimensionsPass -eq "FAIL" } | Select-Object ProjectName, Notes
+</code></pre>
+<hr>
+<h2 id="accessibility-focused-qa-best-practices"><a class="header" href="#accessibility-focused-qa-best-practices">Accessibility-Focused QA Best Practices</a></h2>
+<h3 id="why-measurement-based-testing-matters"><a class="header" href="#why-measurement-based-testing-matters">Why Measurement-Based Testing Matters</a></h3>
+<p>Traditional visual QA (looking at surface finish, checking dimensions by eye) is inherently inaccessible. This appendix prioritizes:</p>
+<ol>
+<li><strong>Caliper measurements:</strong> Objective, quantifiable</li>
+<li><strong>Weight verification:</strong> Numerical result</li>
+<li><strong>Functional testing:</strong> Pass/fail criteria</li>
+<li><strong>Go/No-Go gauges:</strong> Tactile pass/fail</li>
+<li><strong>Test jigs:</strong> Can be shared/standardized</li>
+</ol>
+<h3 id="screen-reader-integration"><a class="header" href="#screen-reader-integration">Screen Reader Integration</a></h3>
+<p>When documenting QA results:</p>
+<pre><code>[YES] GOOD: "Bracket width measured 49.8mm (spec 50+/-1mm)"
+[NO] AVOID: "Bracket looks good" (not measurable)
+
+[YES] GOOD: "Part weighs 298g (spec 300+/-10g)"
+[NO] AVOID: "Feels about right" (subjective)
+
+[YES] GOOD: "Slides through go-gauge, blocks no-go-gauge"
+[NO] AVOID: "Hole looks the right size" (visual only)
+</code></pre>
+<h3 id="documentation-template-accessible"><a class="header" href="#documentation-template-accessible">Documentation Template (Accessible)</a></h3>
+<pre><code class="language-markdown">## Part: Bracelet Holder Peg (Test Date: Jan 15, 2024)
+
+### Dimensional Verification
+| Dimension | Specification | Measurement 1 | Measurement 2 | Measurement 3 | Average | Result |
+|-----------|---|---|---|---|---|---|
+| Peg Diameter | 6.0 +/- 0.5mm | 5.9mm | 6.0mm | 5.8mm | 5.9mm | [YES] PASS |
+| Peg Length | 25.0 +/- 0.5mm | 25.1mm | 25.0mm | 25.0mm | 25.03mm | [YES] PASS |
+
+### Functional Test
+- [x] Slides into bracelet loop easily (no forcing)
+- [x] No cracks visible or felt
+- [x] Survives 1-hour load test with 20 bracelets
+- [x] No permanent deformation after load removed
+
+### Overall Result
+[YES] **PASS** - All dimensions within tolerance; functionally sound
+</code></pre>
+<hr>
+<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
+<p><strong>Key Principles:</strong></p>
+<ol>
+<li><strong>Plan before printing:</strong> Define tolerances and test methods</li>
+<li><strong>Measure precisely:</strong> Use calibrated tools (digital calipers, scale)</li>
+<li><strong>Test functionally:</strong> Will parts assemble and work?</li>
+<li><strong>Document quantitatively:</strong> Use numbers, not adjectives</li>
+<li><strong>Iterate based on data:</strong> If test fails, adjust design or process</li>
+</ol>
+<p><strong>When to Use Each Test:</strong></p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Situation</th><th>Recommended Test</th></tr>
+</thead>
+<tbody>
+<tr><td>Prototype/mockup</td><td>Linear dimensions only</td></tr>
+<tr><td>Assembly with other parts</td><td>Tolerance stack-up analysis</td></tr>
+<tr><td>Load-bearing part</td><td>Functional load test</td></tr>
+<tr><td>Repeated-use item</td><td>Durability cycling test</td></tr>
+<tr><td>Multi-part design</td><td>Assembly fit test</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>Accessibility Reminder:</strong></p>
+<p>All QA testing in this appendix is <strong>measurement-based and non-visual</strong>, making it equally accessible to all users. The goal is objective, quantifiable verification-not subjective assessment.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../3dMake_Foundation/Appendix_B_Material_Properties.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../3dMake_Foundation/Appendix_D_PowerShell_Integration.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../3dMake_Foundation/Appendix_B_Material_Properties.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../3dMake_Foundation/Appendix_D_PowerShell_Integration.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../mark-09e88c2c.min.js"></script>
+        <script src="../searcher-c2a407aa.js"></script>
+
+        <script src="../clipboard-1626706a.min.js"></script>
+        <script src="../highlight-abc7f01d.js"></script>
+        <script src="../book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

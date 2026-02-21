@@ -40,5 +40,5 @@
 ## Related Files
 
 - See Lesson 6: [Lesson 6 Markdown](../../../3dMake_Foundation/Lessons_3dMake_6/Lessons_3dMake_6.md) for full tutorial
-- See Lesson 6: [Parametric Keychain Project](../../../Extension_Projects/Parametric_Keychain/Parametric_Keychain.md) for more text embossing exercises
-- Reference: [OpenSCAD Cheat Sheet](../../../Reference_Materials/openscad-cheat-sheet.md) for `text()` and `linear_extrude()` syntax
+- See Project: [Parametric Keychain Project](../../../3dMake_Foundation/Lessons_3dMake_6/parametric-keychain.md) for more text embossing exercises
+- Reference: [OpenSCAD Cheat Sheet](../../../3dMake_Foundation/Lessons_3dMake_2/openscad-cheat-sheet.md) for `text()` and `linear_extrude()` syntax

@@ -10,7 +10,7 @@ Estimated time: 60 minutes
 **Materials**
 - 3dMake project scaffold with `src/main.scad`
 - Example primitive snippets (provided in assets)
-- Reference: [openscad-cheat-sheet.md](../../assets/Reference_Materials/openscad-cheat-sheet.md) for syntax quick-reference
+- Reference: [openscad-cheat-sheet.md](openscad-cheat-sheet.md) for syntax quick-reference
 
 ---
 1. Open `src/main.scad`; identify and run simple examples using `cube()`, `sphere()`, and `cylinder()`[^2].

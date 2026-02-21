@@ -10,7 +10,7 @@ Estimated time: 60 minutes
 **Materials**
 - A 3dMake project scaffold with `src/main.scad`
 - Example library (e.g., BOSL) available in `lib/` or classroom assets
-- Reference: [openscad-cheat-sheet.md](../../assets/Reference_Materials/openscad-cheat-sheet.md) for parametric design patterns
+- Reference: [openscad-cheat-sheet.md](../Lessons_3dMake_2/openscad-cheat-sheet.md) for parametric design patterns
 
 ---
 1. Open `src/main.scad` and add three top-level parameters (with units) at the top of the file[^3].

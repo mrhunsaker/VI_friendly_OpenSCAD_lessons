@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Parametric Phone Stand Example - 3D Printing Course for Blind and Visually Impaired Learners</title>
+        <title>3D Make Tutorial - 3D Printing Course for Blind and Visually Impaired Learners</title>
 
 
         <!-- Custom HTML head -->
@@ -57,34 +57,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../../../favicon-de23e50b.svg">
-        <link rel="shortcut icon" href="../../../favicon-8114d1fc.png">
-        <link rel="stylesheet" href="../../../css/variables-8adf115d.css">
-        <link rel="stylesheet" href="../../../css/general-2459343d.css">
-        <link rel="stylesheet" href="../../../css/chrome-ae938929.css">
-        <link rel="stylesheet" href="../../../css/print-9e4910d8.css" media="print">
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-2459343d.css">
+        <link rel="stylesheet" href="../../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../../../fonts/fonts-9644e21d.css">
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../../../highlight-493f70e1.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../../tomorrow-night-4c0ae647.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../../ayu-highlight-3fdfc3ac.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../../src/assets/custom-e98d0106.css">
+        <link rel="stylesheet" href="../../src/assets/custom-e98d0106.css">
 
 
         <!-- Provide site root and default themes to javascript -->
         <script>
-            const path_to_root = "../../../";
+            const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../searchindex-68796fe3.js";
+            window.path_to_searchindex_js = "../../searchindex-c8a45cbd.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../../toc-6e538537.js"></script>
+        <script src="../../toc-fbcfb3de.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -151,7 +151,7 @@
             <!-- populated by js -->
             <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
             <noscript>
-                <iframe class="sidebar-iframe-outer" src="../../../toc.html"></iframe>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
             </noscript>
             <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -186,7 +186,7 @@
                     <h1 class="menu-title">3D Printing Course for Blind and Visually Impaired Learners</h1>
 
                     <div class="right-buttons">
-                        <a href="../../../print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
                             <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
                         </a>
 
@@ -220,54 +220,84 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <p>// 02_parametric_phone_stand.scad
-// Intermediate: Parametric phone stand
-// Parameters
-thickness = 4;        // mm
-width = 70;           // mm
-depth = 90;           // mm
-angle = 65;           // degrees
-lip_height = 12;      // mm
-fillet_r = 6;         // mm (mock fillet by minkowski)</p>
-<p>module plate(w, d, t){
-cube([w, d, t], center=false);
-}</p>
-<p>module fillet(shape, r){
-minkowski(){
-children();
-cylinder(h=0.01, r=r, $fn=40);
-}
-}</p>
-<p>// Back plate
-module back(){
-rotate([angle,0,0])
-fillet(){ plate(width, depth, thickness); }
-}</p>
-<p>// Base
-module base(){
-translate([0,0,0])
-fillet(){ plate(width, depth, thickness); }
-}</p>
-<p>// Lip
-module lip(){
-translate([0, depth-8, thickness])
-cube([width, 8, lip_height], center=false);
-}</p>
-<p>union(){
-base();
-back();
-lip();
-}</p>
+                        <h1 id="3dmake-non-visual-3d-printing-tutorial"><a class="header" href="#3dmake-non-visual-3d-printing-tutorial">3dmake: Non-Visual 3D Printing Tutorial</a></h1>
+<h2 id="estimated-time-45-75-minutes"><a class="header" href="#estimated-time-45-75-minutes">Estimated time: 45-75 minutes</a></h2>
+<h3 id="learning-objectives"><a class="header" href="#learning-objectives"><strong>Learning Objectives</strong></a></h3>
+<ul>
+<li>Describe the 3dMake command-line workflow and project structure</li>
+<li>Create a new 3dMake project, edit <code>src/main.scad</code>, and run <code>3dm build</code></li>
+<li>Slice a model and produce a tactile preview or full G-code</li>
+</ul>
+<h3 id="materials"><a class="header" href="#materials"><strong>Materials</strong></a></h3>
+<ul>
+<li>Computer with 3dMake installed</li>
+<li>Screen reader (NVDA, JAWS, Orca) configured</li>
+<li>Example project files in <code>assets/</code> or classroom repo</li>
+</ul>
+<hr>
+<h3 id="step-by-step-tasks"><a class="header" href="#step-by-step-tasks">Step-by-step Tasks</a></h3>
+<ol>
+<li>Verify prerequisites: confirm <code>3dm</code>, <code>openscad</code>, and your slicer are discoverable in the terminal (<code>which 3dm</code>, <code>which openscad</code>).</li>
+<li>Create a new project: <code>3dm new</code> -&gt; open <code>src/main.scad</code> with <code>3dm edit-model</code> and add a simple cube: <code>cube([20,20,20]);</code>.</li>
+<li>Build the project: <code>3dm build</code> and confirm <code>build/main.stl</code> exists.</li>
+<li>Slice a preview: <code>3dm preview slice</code> then <code>3dm preview print</code> (or export preview STL) to test tactile output.</li>
+<li>Slice for full print: <code>3dm build slice</code> -&gt; inspect <code>build/main.gcode</code> with a layer-preview option in your slicer.</li>
+</ol>
+<h3 id="checkpoints"><a class="header" href="#checkpoints">Checkpoints</a></h3>
+<ul>
+<li>After step 2 you can open and edit <code>src/main.scad</code> from the terminal.</li>
+<li>After step 3 the <code>build/</code> folder contains <code>main.stl</code>.</li>
+</ul>
+<hr>
+<h2 id="quick-quiz-5"><a class="header" href="#quick-quiz-5">Quick Quiz (5)</a></h2>
+<ol>
+<li>What command creates a new 3dMake project?</li>
+<li>Where does 3dMake put compiled STLs by default?</li>
+<li>How do you open the model editor from the CLI?</li>
+<li>What command slices a preview for tactile testing?</li>
+<li>Why is it useful to run a preview before a full print?</li>
+</ol>
+<h2 id="extension-problems-10"><a class="header" href="#extension-problems-10">Extension Problems (10)</a></h2>
+<ol>
+<li>Create two variants of a parameterized cube (different sizes) and export both STLs; compare their file sizes and estimated print times.</li>
+<li>Add a <code>3dmake.toml</code> overlay that changes layer height and document the visible effect on the preview.</li>
+<li>Build and slice a small object, then import the STL into a second slicer and report any differences in estimated time.</li>
+<li>Create a short shell script that automates new -&gt; edit -&gt; build for a classroom scaffold.</li>
+<li>Describe three safety checks you will perform before starting a multi-hour print.</li>
+<li>Develop an accessibility audit of 3DMake’s web interface and CLI tools; test keyboard navigation, screen-reader compatibility, and error message clarity.</li>
+<li>Build a 3DMake workflow automation script: integrates model creation, parameter validation, and batch STL generation.</li>
+<li>Create a 3DMake best practices guide for your classroom: document common patterns, troubleshooting tips, and performance optimization.</li>
+<li>Design a parametric model library in 3DMake with shared modules; test reuse across multiple student projects.</li>
+<li>Compare 3DMake vs. desktop slicers on 5+ models; create a decision matrix for when to use each tool.</li>
+</ol>
+<hr>
+<p>Notes: This lesson is intended to be hands-on. If networked AI features are not configured, skip the AI verification steps and focus on deterministic renders and slicer previews.</p>
+<hr>
+<h2 id="helpful-commands"><a class="header" href="#helpful-commands">Helpful Commands</a></h2>
+<h3 id="library-commands"><a class="header" href="#library-commands">Library commands</a></h3>
+<pre><code class="language-pwsh">3dm list-libraries
+3dm install-libraries
+</code></pre>
+<hr>
+<h3 id="help-and-version"><a class="header" href="#help-and-version">Help and version</a></h3>
+<pre><code class="language-pwsh">3dm help
+3dm version
+</code></pre>
+<hr>
+<h1 id="references-apa"><a class="header" href="#references-apa">References (APA)</a></h1>
+<p>Deck, T. (n.d.). <em>3dmake: Non-visual 3D design and 3D printing tool</em>. GitHub. Retrieved February 18, 2026, from <a href="http://github.com/tdeck/3dmake">http://github.com/tdeck/3dmake</a></p>
+<p>OpenSCAD. (n.d.). <em>The programmers solid 3D CAD modeller</em>. Retrieved February 18, 2026, from <a href="https://openscad.org">https://openscad.org</a></p>
+<pre><code></code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../../3dMake_Foundation/Lessons_3dMake_7/Lessons_3dMake_7.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../3dMake_Foundation/3dMake_Intro/3dMake_Intro.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="../../../3dMake_Foundation/Lessons_3dMake_8/Lessons_3dMake_8.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_1/Lessons_3dMake_1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -277,11 +307,11 @@ lip();
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../../3dMake_Foundation/Lessons_3dMake_7/Lessons_3dMake_7.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../3dMake_Foundation/3dMake_Intro/3dMake_Intro.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="../../../3dMake_Foundation/Lessons_3dMake_8/Lessons_3dMake_8.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_1/Lessons_3dMake_1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>
@@ -301,13 +331,13 @@ lip();
         </script>
 
 
-        <script src="../../../elasticlunr-ef4e11c1.min.js"></script>
-        <script src="../../../mark-09e88c2c.min.js"></script>
-        <script src="../../../searcher-c2a407aa.js"></script>
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-c2a407aa.js"></script>
 
-        <script src="../../../clipboard-1626706a.min.js"></script>
-        <script src="../../../highlight-abc7f01d.js"></script>
-        <script src="../../../book-a0b12cfe.js"></script>
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-abc7f01d.js"></script>
+        <script src="../../book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
 

@@ -19,9 +19,9 @@ This folder contains supporting materials for Lesson 9:
 
 ## Key Materials
 
-- [Lesson 9 Main Content](../../3dMake_Foundation/Lessons_3dMake_9/Lessons_3dMake_9.md)
-- [3dMake Setup Guide - Command Reference](../../../Reference_Materials/3dmake-setup-guide.md)
-- [Appendix D: PowerShell Integration](../../3dMake_Foundation/Appendix_D_PowerShell_Integration.md)
+- [Lesson 9 Main Content](../../../3dMake_Foundation/Lessons_3dMake_9/Lessons_3dMake_9.md)
+- [3dMake Setup Guide - Command Reference](../../../3dMake_Foundation/Lessons_3dMake_1/3dmake-setup-guide.md)
+- [Appendix D: PowerShell Integration](../../../3dMake_Foundation/Appendix_D_PowerShell_Integration.md)
 
 ## Script Templates in This Folder
 

@@ -19,7 +19,7 @@ Before learning 3D design, students master terminal/command-line fundamentals:
 - **Screen Reader Accessibility Guide** - NVDA & JAWS reference for terminal navigation
 - **PowerShell Curriculum Overview** - Complete guide with learning paths
 
-**Time commitment:** ~6 hours  
+**Time commitment:** ~10 hours  
 **Skills gained:** Terminal navigation, file operations, basic scripting, keyboard-only workflow mastery
 
 ### Part 2: 3dMake Foundation (11 lessons + 4 appendices)
@@ -28,22 +28,22 @@ Before learning 3D design, students master terminal/command-line fundamentals:
 
 **Main Curriculum: 11 Progressive Lessons**
 
-| Part | Lessons | Focus | Duration | Total Hours |
-|------|---------|-------|----------|-------------|
-| **Foundations** | 1-3 | Environment setup, primitives, parametric design | ~3 hours | 3 |
-| **Verification & Safety** | 4-5 | AI verification, safety protocols, materials | ~2 hours | 5 |
-| **Applied Projects** | 6-8 | Practical commands, transforms, advanced design | ~4 hours | 9 |
-| **Advanced Topics** | 9-10 | Automation, troubleshooting, mastery | ~3 hours | 12 |
-| **Leadership** | 11 | Stakeholder-centric design | ~2 hours | 14 |
+| Part                      | Lessons | Focus                                            | Duration | Total Hours |
+|---------------------------|---------|--------------------------------------------------|----------|-------------|
+| **Foundations**           | 1-3     | Environment setup, primitives, parametric design | ~3 hours | 3           |
+| **Verification & Safety** | 4-5     | AI verification, safety protocols, materials     | ~2 hours | 5           |
+| **Applied Projects**      | 6-8     | Practical commands, transforms, advanced design  | ~4 hours | 9           |
+| **Advanced Topics**       | 9-10    | Automation, troubleshooting, mastery             | ~3 hours | 12          |
+| **Leadership**            | 11      | Stakeholder-centric design                       | ~2 hours | 14          |
 
-**Total:** 14-18 hours instruction + projects
+**Total:** 30-40 hours instruction + projects
 
 **4 Comprehensive Reference Appendices**
 
-- **[Appendix A: Comprehensive Slicing Guide](3dMake_Foundation/Appendix_A_Comprehensive_Slicing_Guide.md)** - 7 major slicers (1,500+ lines)
-- **[Appendix B: Material Properties & Selection](3dMake_Foundation/Appendix_B_Material_Properties.md)** - 6 materials (1,200+ lines)
-- **[Appendix C: Tolerance Testing & QA Matrix](3dMake_Foundation/Appendix_C_Tolerance_QA.md)** - Measurement procedures (1,200+ lines)
-- **[Appendix D: PowerShell Integration for SCAD Workflows](3dMake_Foundation/Appendix_D_PowerShell_Integration.md)** - 5 automation scripts (1,100+ lines)
+- **[Appendix A: Comprehensive Slicing Guide](3dMake_Foundation/Appendix_A_Comprehensive_Slicing_Guide.md)** 
+- **[Appendix B: Material Properties & Selection](3dMake_Foundation/Appendix_B_Material_Properties.md)** 
+- **[Appendix C: Tolerance Testing & QA Matrix](3dMake_Foundation/Appendix_C_Tolerance_QA.md)** 
+- **[Appendix D: PowerShell Integration for SCAD Workflows](3dMake_Foundation/Appendix_D_PowerShell_Integration.md)** 
 
 ---
 
@@ -58,7 +58,7 @@ This course uses tools designed for screen reader access:
 - **3DMake** - Command-line build tool eliminating GUI navigation
 - **Accessible editors** - VS Code, Notepad++, Nano, Vim (all keyboard-driven, screen reader friendly)
 
-See [Screen Reader Coding Tips (NVDA & JAWS)](Reference_Materials/nvda-jaws-coding-tips.md) for detailed keyboard shortcuts and configuration.
+See [Screen Reader Coding Tips (NVDA & JAWS)](3dMake_Foundation/Lessons_3dMake_1/nvda-jaws-coding-tips.md) for detailed keyboard shortcuts and configuration.
 
 ### 3DMake: Non-Visual Build Automation
 
@@ -113,12 +113,12 @@ Each project requires:
 
 Quick navigation to common topics:
 
-- [OpenSCAD Cheat Sheet](Reference_Materials/openscad-cheat-sheet.md) - Syntax quick-reference
-- [3dMake Setup Guide](Reference_Materials/3dmake-setup-guide.md) - Installation walkthrough
-- [VSCode Setup Guide](Reference_Materials/vscode-setup-guide.md) - Accessibility configuration
-- [Vocabulary Glossary](Reference_Materials/vocabulary-glossary.md) - Course terminology
-- [Filament Comparison Table](Reference_Materials/filament-comparison-table.md) - Material reference
-- [Master Rubric](Reference_Materials/master-rubric.md) - Project assessment criteria
+- [OpenSCAD Cheat Sheet](3dMake_Foundation/Lessons_3dMake_2/openscad-cheat-sheet.md) - Syntax quick-reference
+- [3dMake Setup Guide](3dMake_Foundation/Lessons_3dMake_1/3dmake-setup-guide.md) - Installation walkthrough
+- [VSCode Setup Guide](3dMake_Foundation/Lessons_3dMake_1/vscode-setup-guide.md) - Accessibility configuration
+- [Vocabulary Glossary](3dMake_Foundation/Lessons_3dMake_1/vocabulary-glossary.md) - Course terminology
+- [Filament Comparison Table](3dMake_Foundation/Lessons_3dMake_5/filament-comparison-table.md) - Material reference
+- [Master Rubric](3dMake_Foundation/Lessons_3dMake_11/master-rubric.md) - Project assessment criteria
 
 ### Navigation
 
@@ -159,5 +159,5 @@ This course is enhanced by comprehensive textbooks and companion materials from 
 
 1. Review [Curriculum Guide](3dMake_Foundation/3dMake_Foundation_Curriculum_Guide.md)
 2. Use [11 Teacher Templates](3dMake_Foundation/Templates/Teacher/) for assessment
-3. Reference [Master Rubric](Reference_Materials/master-rubric.md) for grading
+3. Reference [Master Rubric](3dMake_Foundation/Lessons_3dMake_11/master-rubric.md) for grading
 4. Check [Syllabus](Syllabus.md) for course policies and learning progression

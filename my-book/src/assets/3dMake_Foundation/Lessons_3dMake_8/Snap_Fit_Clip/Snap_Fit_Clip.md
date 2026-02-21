@@ -25,7 +25,7 @@ By completing this project, you will:
 - Final clip design with recommended print settings
 
 ## Starter files
-- [starter.scad](../../assets/Extension_Projects/Snap_Fit_Clip/starter.scad) - minimal snap-fit test scaffold.
+- [starter.scad](../../../Extension_Projects/Snap_Fit_Clip/starter.scad) - minimal snap-fit test scaffold.
 
 ## Assessment Questions (Optional)
 1. What clip thickness and spacing values resulted in a reliable snap-fit for your printer?

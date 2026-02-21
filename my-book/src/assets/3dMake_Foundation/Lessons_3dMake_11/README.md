@@ -20,9 +20,9 @@ This folder contains supporting materials for Lesson 11:
 
 ## Key Materials
 
-- [Lesson 11 Main Content](../../3dMake_Foundation/Lessons_3dMake_11/Lessons_3dMake_11.md)
-- [Master Rubric](../../../Reference_Materials/master-rubric.md) - Design documentation standards
-- [Markdown Starter Guide](../../../Reference_Materials/markdown-starter-guide.md)
+- [Lesson 11 Main Content](../../../3dMake_Foundation/Lessons_3dMake_11/Lessons_3dMake_11.md)
+- [Master Rubric](../../../3dMake_Foundation/Lessons_3dMake_11/master-rubric.md) - Design documentation standards
+- [Markdown Starter Guide](../../../3dMake_Foundation/Lessons_3dMake_11/master-rubric.md)
 
 ## Extension Projects in This Folder
 

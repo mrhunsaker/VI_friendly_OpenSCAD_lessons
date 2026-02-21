@@ -23,7 +23,7 @@ By completing this project, you will:
 - A one-page audit report and a patch (diff) suggestion for the target lesson.
 
 ## Starter files
-- [starter.scad](../../assets/Extension_Projects/Accessibility_Audit/starter.scad) - small tactile marker scaffold for testing contrast and tactile cues.
+- [starter.scad](../../../Extension_Projects/Accessibility_Audit/starter.scad) - small tactile marker scaffold for testing contrast and tactile cues.
 
 ## Assessment Questions (Optional)
 1. What are three key accessibility barriers you discovered in your chosen resource?

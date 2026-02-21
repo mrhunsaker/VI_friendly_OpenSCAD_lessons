@@ -1,6 +1,6 @@
 # 3D Make Foundation: Complete Curriculum Guide
 
-**A comprehensive, hands-on introduction to programmatic 3D design using OpenSCAD and 3DMake**
+**A comprehensive, hands-on, screenreader accessible introduction to programmatic 3D design using OpenSCAD and 3DMake**
 
 ---
 
@@ -10,7 +10,7 @@ This **11-lesson curriculum + 4 reference appendices** teaches non-visual 3D mod
 
 **Target Audience:** High school and early undergraduate students, makers, and anyone interested in programmatic CAD and 3D printing
 
-**Estimated Total Time:** 18-22 hours (11 lessons + 4 appendices + projects)
+**Estimated Total Time:** 30-40 hours (11 lessons + 4 appendices + projects)
 
 **Contents:**
 - 11 progressive lessons (Foundations -> Leadership)
@@ -432,7 +432,7 @@ The final lesson teaches you to design for real users, not just yourself. You'll
 
 ### Appendix A: Comprehensive Slicing Guide - All Major Slicers
 
-A complete reference covering 7 major slicers (PrusaSlicer, Bambu Studio, Cura, SuperSlicer, OrcaSlicer, IdeaMaker, Fusion 360).
+A complete reference covering multiple major slicers (PrusaSlicer, Bambu Studio, Cura, SuperSlicer, OrcaSlicer, IdeaMaker, Fusion 360 built in slicer).
 
 **What You'll Find:**
 - Setup and workflow for each slicer

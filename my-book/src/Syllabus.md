@@ -267,7 +267,7 @@ Students may resubmit any project as many times as they need to improve their sc
 **OpenSCAD:**
 - [OpenSCAD Download](https://openscad.org/downloads.html) - Free, cross-platform CAD (all major OS)
 - [OpenSCAD Documentation](https://openscad.org/documentation.html) - Official reference
-- [OpenSCAD Cheat Sheet](Reference_Materials/openscad-cheat-sheet.md) - Quick syntax reference
+- [OpenSCAD Cheat Sheet](3dMake_Foundation/Lessons_3dMake_2/openscad-cheat-sheet.md) - Quick syntax reference
 - [OpenSCAD on GitHub](https://github.com/openscad/openscad) - Source code and issue tracking
 
 **3DMake:**
@@ -290,8 +290,8 @@ Students may resubmit any project as many times as they need to improve their sc
 - [NVDA User Guide](https://www.nvaccess.org/documentation/) - Complete NVDA documentation
 
 **Accessibility Configuration:**
-- [Screen Reader Coding Tips (NVDA & JAWS)](Reference_Materials/nvda-jaws-coding-tips.md) - Keyboard shortcuts and configuration
-- [VSCode Setup Guide](Reference_Materials/vscode-setup-guide.md) - Accessibility-focused editor configuration
+- [Screen Reader Coding Tips (NVDA & JAWS)](3dMake_Foundation/Lessons_3dMake_1/nvda-jaws-coding-tips.md) - Keyboard shortcuts and configuration
+- [VSCode Setup Guide](3dMake_Foundation/Lessons_3dMake_1/vscode-setup-guide.md) - Accessibility-focused editor configuration
 - [Accessibility in VS Code](https://code.visualstudio.com/docs/editor/accessibility) - Official VS Code accessibility guide
 - [JAWS Script Repository](https://github.com/jsa2/jaws-scripts-for-vscode) - Custom JAWS scripts for developers
 

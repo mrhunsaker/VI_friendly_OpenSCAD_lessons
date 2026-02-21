@@ -53,5 +53,5 @@
 ## Related Files
 
 - See Lesson 7: [Lesson 7 Markdown](../../../3dMake_Foundation/Lessons_3dMake_7/Lessons_3dMake_7.md) for full tutorial
-- Reference: [OpenSCAD Cheat Sheet](../../../Reference_Materials/openscad-cheat-sheet.md) for transform and Minkowski syntax
+- Reference: [OpenSCAD Cheat Sheet](../../../3dMake_Foundation/Lessons_3dMake_2/openscad-cheat-sheet.md) for transform and Minkowski syntax
 - See Appendix D: [PowerShell Integration](../../../3dMake_Foundation/Appendix_D_PowerShell_Integration.md) for scripting multiple variants

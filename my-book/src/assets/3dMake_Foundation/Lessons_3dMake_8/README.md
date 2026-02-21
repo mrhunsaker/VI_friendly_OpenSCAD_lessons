@@ -61,5 +61,5 @@
 - See Lesson 8: [Lesson 8 Markdown](../../../3dMake_Foundation/Lessons_3dMake_8/Lessons_3dMake_8.md) for full tutorial
 - See Appendix C: [Tolerance Testing & QA Matrix](../../../3dMake_Foundation/Appendix_C_Tolerance_QA.md) for complete validation procedures
 - See Appendix B: [Material Properties](../../../3dMake_Foundation/Appendix_B_Material_Properties.md) for shrinkage data by material
-- Reference: [Snap-Fit Clip Project](../../../Extension_Projects/Snap_Fit_Clip/Snap_Fit_Clip.md) for more tolerance examples
-- Reference: [Measurement Worksheet](../../../Reference_Materials/measurement-worksheet.md) for recording tolerance data
+- Reference: [Snap-Fit Clip Project](../../../3dMake_Foundation/Lessons_3dMake_8/snap-fit-clip.md) for more tolerance examples
+- Reference: [Measurement Worksheet](../../../3dMake_Foundation/Lessons_3dMake_10/measurement-worksheet.md) for recording tolerance data

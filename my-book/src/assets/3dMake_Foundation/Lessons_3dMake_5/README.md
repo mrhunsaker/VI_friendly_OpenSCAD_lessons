@@ -20,10 +20,10 @@ This folder contains supporting materials for Lesson 5:
 
 ## Key Materials
 
-- [Lesson 5 Main Content](../../3dMake_Foundation/Lessons_3dMake_5/Lessons_3dMake_5.md)
-- [Filament Comparison Table](../../../Reference_Materials/filament-comparison-table.md)
-- [Appendix B: Material Properties & Selection Guide](../../3dMake_Foundation/Appendix_B_Material_Properties.md)
-- [Measurement Worksheet](../../../Reference_Materials/measurement-worksheet.md)
+- [Lesson 5 Main Content](../../../3dMake_Foundation/Lessons_3dMake_5/Lessons_3dMake_5.md)
+- [Filament Comparison Table](../../../3dMake_Foundation/Lessons_3dMake_5/filament-comparison-table.md)
+- [Appendix B: Material Properties & Selection Guide](../../../3dMake_Foundation/Appendix_B_Material_Properties.md)
+- [Measurement Worksheet](../../../3dMake_Foundation/Lessons_3dMake_10/measurement-worksheet.md)
 
 ## Supporting Files in This Folder
 

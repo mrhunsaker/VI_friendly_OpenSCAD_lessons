@@ -19,9 +19,9 @@ This folder contains supporting materials for Lesson 2:
 
 ## Key Materials
 
-- [Lesson 2 Main Content](../../3dMake_Foundation/Lessons_3dMake_2/Lessons_3dMake_2.md)
-- [OpenSCAD Cheat Sheet](../../../Reference_Materials/openscad-cheat-sheet.md)
-- [Appendix A: Comprehensive Slicing Guide](../../3dMake_Foundation/Appendix_A_Comprehensive_Slicing_Guide.md)
+- [Lesson 2 Main Content](../../../3dMake_Foundation/Lessons_3dMake_2/Lessons_3dMake_2.md)
+- [OpenSCAD Cheat Sheet](../../../3dMake_Foundation/Lessons_3dMake_2/openscad-cheat-sheet.md)
+- [Appendix A: Comprehensive Slicing Guide](../../../3dMake_Foundation/Appendix_A_Comprehensive_Slicing_Guide.md)
 
 ## Extension Projects in This Folder
 

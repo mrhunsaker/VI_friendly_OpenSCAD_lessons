@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Batch Export Script (PowerShell) - 3D Printing Course for Blind and Visually Impaired Learners</title>
+        <title>Part 1: Foundations of PowerShell - Terminal &amp; Screen Reader Accessibility - 3D Printing Course for Blind and Visually Impaired Learners</title>
 
 
         <!-- Custom HTML head -->
@@ -57,34 +57,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../../../favicon-de23e50b.svg">
-        <link rel="shortcut icon" href="../../../favicon-8114d1fc.png">
-        <link rel="stylesheet" href="../../../css/variables-8adf115d.css">
-        <link rel="stylesheet" href="../../../css/general-2459343d.css">
-        <link rel="stylesheet" href="../../../css/chrome-ae938929.css">
-        <link rel="stylesheet" href="../../../css/print-9e4910d8.css" media="print">
+        <link rel="icon" href="../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../css/general-2459343d.css">
+        <link rel="stylesheet" href="../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../../../fonts/fonts-9644e21d.css">
+        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../../../highlight-493f70e1.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../../tomorrow-night-4c0ae647.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../../ayu-highlight-3fdfc3ac.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../../src/assets/custom-e98d0106.css">
+        <link rel="stylesheet" href="../src/assets/custom-e98d0106.css">
 
 
         <!-- Provide site root and default themes to javascript -->
         <script>
-            const path_to_root = "../../../";
+            const path_to_root = "../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../../searchindex-68796fe3.js";
+            window.path_to_searchindex_js = "../searchindex-c8a45cbd.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../../toc-6e538537.js"></script>
+        <script src="../toc-fbcfb3de.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -151,7 +151,7 @@
             <!-- populated by js -->
             <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
             <noscript>
-                <iframe class="sidebar-iframe-outer" src="../../../toc.html"></iframe>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
             </noscript>
             <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -186,7 +186,7 @@
                     <h1 class="menu-title">3D Printing Course for Blind and Visually Impaired Learners</h1>
 
                     <div class="right-buttons">
-                        <a href="../../../print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
                         </a>
 
@@ -220,69 +220,19 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="batch-export-script-for-openscad"><a class="header" href="#batch-export-script-for-openscad">Batch Export Script for OpenSCAD</a></h1>
-<h1 id="exports-multiple-stl-files-with-optimized-settings"><a class="header" href="#exports-multiple-stl-files-with-optimized-settings">Exports multiple STL files with optimized settings</a></h1>
-<h1 id="for-use-with-prusaslicer-cura-or-other-slicers"><a class="header" href="#for-use-with-prusaslicer-cura-or-other-slicers">For use with PrusaSlicer, Cura, or other slicers</a></h1>
-<h1 id="configuration"><a class="header" href="#configuration">Configuration</a></h1>
-<p>$ProjectName = “3D Print Batch”
-$ScadDirectory = Get-Location
-$OutputDirectory = Join-Path $ScadDirectory “_exports”
-$OpenSCADPath = “C:\Program Files\OpenSCAD\openscad.exe”</p>
-<h1 id="ensure-openscad-exists"><a class="header" href="#ensure-openscad-exists">Ensure OpenSCAD exists</a></h1>
-<p>if (-Not (Test-Path $OpenSCADPath)) {
-Write-Host “Error: OpenSCAD not found at $OpenSCADPath” -ForegroundColor Red
-exit 1
-}</p>
-<h1 id="create-output-directory"><a class="header" href="#create-output-directory">Create output directory</a></h1>
-<p>New-Item -ItemType Directory -Path $OutputDirectory -Force | Out-Null
-Write-Host “Output directory: $OutputDirectory” -ForegroundColor Green</p>
-<h1 id="find-all-scad-files"><a class="header" href="#find-all-scad-files">Find all SCAD files</a></h1>
-<p>$ScadFiles = Get-ChildItem -Path $ScadDirectory -Filter “*.scad” -File | Sort-Object Name
-Write-Host “Found $($ScadFiles.Count) SCAD files`n” -ForegroundColor Green</p>
-<p>$SuccessCount = 0
-$FailCount = 0</p>
-<h1 id="process-each-scad-file"><a class="header" href="#process-each-scad-file">Process each SCAD file</a></h1>
-<p>foreach ($ScadFile in $ScadFiles) {
-$OutputFile = Join-Path $OutputDirectory “$($ScadFile.BaseName).stl”
-$ScadPath = $ScadFile.FullName</p>
-<pre><code>Write-Host -NoNewline "Exporting: $($ScadFile.Name) ... "
-
-try {
-    # Call OpenSCAD with headless rendering
-    &amp; $OpenSCADPath -o $OutputFile $ScadPath 2&gt;$null
-    
-    if (Test-Path $OutputFile) {
-        $Size = (Get-Item $OutputFile).Length / 1MB
-        Write-Host "✓ Success ($([Math]::Round($Size, 2)) MB)" -ForegroundColor Green
-        $SuccessCount++
-    } else {
-        Write-Host "✗ Failed" -ForegroundColor Red
-        $FailCount++
-    }
-}
-catch {
-    Write-Host "✗ Error: $_" -ForegroundColor Red
-    $FailCount++
-}
-</code></pre>
-<p>}</p>
-<h1 id="summary"><a class="header" href="#summary">Summary</a></h1>
-<p>Write-Host “<code>n==========================================" Write-Host "Export Summary:" -ForegroundColor Cyan Write-Host "  Successful: $SuccessCount" -ForegroundColor Green if ($FailCount -gt 0) {     Write-Host "  Failed: $FailCount" -ForegroundColor Red } Write-Host "</code>nFiles ready in: $OutputDirectory” -ForegroundColor Yellow</p>
-<h1 id="optional-open-output-directory-in-windows-explorer"><a class="header" href="#optional-open-output-directory-in-windows-explorer">Optional: Open output directory in Windows Explorer</a></h1>
-<p>$Choice = Read-Host “Open output folder? (Y/n)”
-if ($Choice -ne ‘n’ -and $Choice -ne ‘N’) {
-explorer.exe $OutputDirectory
-}</p>
+                        <h1 id="part-1-foundations-of-powershell---terminal--screen-reader-accessibility"><a class="header" href="#part-1-foundations-of-powershell---terminal--screen-reader-accessibility">Part 1: Foundations of PowerShell - Terminal &amp; Screen Reader Accessibility</a></h1>
+<p>This section covers terminal fundamentals, screen reader accessibility, and command-line basics needed before diving into 3D design with OpenSCAD.</p>
+<p><strong>Time commitment:</strong> ~10 hours<br><strong>Skills gained:</strong> Terminal navigation, file operations, basic scripting, keyboard-only workflow mastery</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../../assets/3dMake_Foundation/Lessons_3dMake_9/test_variants.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../PowerShell_Foundation/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="../../../3dMake_Foundation/Lessons_3dMake_10/Lessons_3dMake_10.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../PowerShell_Foundation/PS_Pre_Your_First_Terminal/PS_Pre_Your_First_Terminal.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -292,11 +242,11 @@ explorer.exe $OutputDirectory
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../../assets/3dMake_Foundation/Lessons_3dMake_9/test_variants.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../PowerShell_Foundation/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="../../../3dMake_Foundation/Lessons_3dMake_10/Lessons_3dMake_10.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../PowerShell_Foundation/PS_Pre_Your_First_Terminal/PS_Pre_Your_First_Terminal.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>
@@ -316,13 +266,13 @@ explorer.exe $OutputDirectory
         </script>
 
 
-        <script src="../../../elasticlunr-ef4e11c1.min.js"></script>
-        <script src="../../../mark-09e88c2c.min.js"></script>
-        <script src="../../../searcher-c2a407aa.js"></script>
+        <script src="../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../mark-09e88c2c.min.js"></script>
+        <script src="../searcher-c2a407aa.js"></script>
 
-        <script src="../../../clipboard-1626706a.min.js"></script>
-        <script src="../../../highlight-abc7f01d.js"></script>
-        <script src="../../../book-a0b12cfe.js"></script>
+        <script src="../clipboard-1626706a.min.js"></script>
+        <script src="../highlight-abc7f01d.js"></script>
+        <script src="../book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
 

@@ -532,13 +532,13 @@ ________________________________________________________________
 
 ## Scoring Rubric
 
-| Points per Problem | Criteria |
-|---|---|
-| **4** | Correct answer with clear, complete explanation; demonstrates deep understanding |
-| **3** | Mostly correct answer; minor gaps in explanation or reasoning |
-| **2** | Partially correct; shows some understanding but has significant gaps |
-| **1** | Minimal effort; shows limited understanding |
-| **0** | No answer or completely incorrect |
+| Points per Problem | Criteria                                                                         |
+|--------------------|----------------------------------------------------------------------------------|
+| **4**              | Correct answer with clear, complete explanation; demonstrates deep understanding |
+| **3**              | Mostly correct answer; minor gaps in explanation or reasoning                    |
+| **2**              | Partially correct; shows some understanding but has significant gaps             |
+| **1**              | Minimal effort; shows limited understanding                                      |
+| **0**              | No answer or completely incorrect                                                |
 
 **Total Possible:** 100 + 5 bonus = 105 points
 
@@ -547,7 +547,7 @@ ________________________________________________________________
 ## References You May Use
 
 - [3dMake Quick Reference](3dMake_Quick_Reference.md)
-- [OpenSCAD Cheat Sheet](../Reference_Materials/openscad-cheat-sheet.md)
+- [OpenSCAD Cheat Sheet](Lessons_3dMake_2/openscad-cheat-sheet.md)
 - [Appendix A: Comprehensive Slicing Guide](Appendix_A_Comprehensive_Slicing_Guide.md)
 - [Appendix C: Tolerance Testing & QA Matrix](Appendix_C_Tolerance_QA.md)
 - [Appendix D: PowerShell Integration](Appendix_D_PowerShell_Integration.md)

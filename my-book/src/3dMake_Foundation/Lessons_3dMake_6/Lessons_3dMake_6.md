@@ -13,7 +13,7 @@ Estimated time: 60-90 minutes
 - 3dMake project scaffold with `src/main.scad`
 - Access to a slicer (PrusaSlicer, Cura, or Bambu Studio)
 - Optional: printer for test print
-- Reference: [3dmake-setup-guide.md](../../assets/Reference_Materials/3dmake-setup-guide.md) for command reference
+- Reference: [3dmake-setup-guide.md](../Lessons_3dMake_1/3dmake-setup-guide.md) for command reference
 
 **Related Project**: See [cube_keycap.scad](../../assets/3dMake_Foundation/Lessons_3dMake_6/cube_keycap.scad) for a worked example combining text embossing and the 3dm commands.
 

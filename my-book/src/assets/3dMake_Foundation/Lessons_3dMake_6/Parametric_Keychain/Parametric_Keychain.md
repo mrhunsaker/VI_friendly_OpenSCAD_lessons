@@ -25,7 +25,7 @@ By completing this project, you will:
 - Print settings log and fit-test report for key ring attachment
 
 ## Starter files
-- [starter.scad](../../assets/Extension_Projects/Parametric_Keychain/starter.scad) - minimal parametric scaffold to begin.
+- [starter.scad](../../../Extension_Projects/Parametric_Keychain/starter.scad) - minimal parametric scaffold to begin.
 
 ## Assessment Questions (Optional)
 1. How did you use OpenSCAD parameters to enable users to customize the keychain without editing code?

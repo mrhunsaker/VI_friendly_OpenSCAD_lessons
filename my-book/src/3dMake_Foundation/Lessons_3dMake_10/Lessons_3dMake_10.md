@@ -15,10 +15,10 @@ Estimated time: 120-150 minutes (multiple activities)
 - Printer for test prints (recommended)
 - Measuring tools (calipers, protractor)
 - Access to 3dm commands
-- Reference: [master-rubric.md](../../assets/Reference_Materials/master-rubric.md) for assessment criteria
-- Reference: [filament-comparison-table.md](../../assets/Reference_Materials/filament-comparison-table.md) for material properties
+- Reference: [master-rubric.md](../Lessons_3dMake_11/master-rubric.md) for assessment criteria
+- Reference: [filament-comparison-table.md](../Lessons_3dMake_5/filament-comparison-table.md) for material properties
 
-**Extension Projects**: Complete [Dice_Dice_Dice](../../Extension_Projects/Dice_Dice_Dice/Dice_Dice_Dice.md) or [Snap_Fit_Clip](../../Extension_Projects/Snap_Fit_Clip/Snap_Fit_Clip.md) to practice integrated validation workflows.
+**Extension Projects**: Complete [Dice_Dice_Dice](../Lessons_3dMake_4/Dice_Dice_Dice.md) or [Snap_Fit_Clip](../Lessons_3dMake_8/snap-fit-clip.md) to practice integrated validation workflows.
 
 ---
 
@@ -30,11 +30,11 @@ Before you can validate that your designs print correctly, you need to measure a
 
 A **digital caliper** is a precision tool with three measurement modes:
 
-| Mode | Use | Example |
-|------|-----|---------|
-| **Outside jaws** | Measure outer dimensions | Diameter of a cylinder, width of a part |
-| **Inside jaws** | Measure inner dimensions | Hole diameter, inside width of a box |
-| **Depth rod** | Measure depth or thickness | Depth of a recess, thickness of a part |
+| Mode             | Use                        | Example                                 |
+|------------------|----------------------------|-----------------------------------------|
+| **Outside jaws** | Measure outer dimensions   | Diameter of a cylinder, width of a part |
+| **Inside jaws**  | Measure inner dimensions   | Hole diameter, inside width of a box    |
+| **Depth rod**    | Measure depth or thickness | Depth of a recess, thickness of a part  |
 
 ### Measurement Best Practices
 
@@ -362,12 +362,12 @@ union() {
 
 **Common Causes and Fixes:**
 
-| Issue | Cause | Fix |
-|-------|-------|-----|
-| Coincident faces | Shapes touching exactly | Add 0.001 offset: `translate([0, 0, 0.001])` |
-| Zero-thickness walls | Wall too thin to render | Increase wall: `wall = 2.0` instead of `wall = 0.5` |
-| Incomplete shape | Missing face in difference | Check boolean operations have complete shells |
-| Self-intersecting faces | Shape overlaps itself | Simplify geometry, use `hull()` instead of union |
+| Issue                   | Cause                      | Fix                                                 |
+|-------------------------|----------------------------|-----------------------------------------------------|
+| Coincident faces        | Shapes touching exactly    | Add 0.001 offset: `translate([0, 0, 0.001])`        |
+| Zero-thickness walls    | Wall too thin to render    | Increase wall: `wall = 2.0` instead of `wall = 0.5` |
+| Incomplete shape        | Missing face in difference | Check boolean operations have complete shells       |
+| Self-intersecting faces | Shape overlaps itself      | Simplify geometry, use `hull()` instead of union    |
 
 **Fix Example:**
 ```openscad
@@ -402,13 +402,13 @@ difference(){
 
 **Common Causes:**
 
-| Symptom | Cause | Prevention |
-|---------|-------|-----------|
-| Nozzle clogs after 10 min | Too fast extrusion speed | Reduce speed in slicer |
-| Parts separate from bed | Poor first layer adhesion | Check bed level, clean bed |
-| Melted plastic strands | Retraction not working | Verify retraction in slicer |
-| Model warping | Thermal stress, no cooling | Cool model, improve ventilation |
-| Supports fail to remove | Too thin or fused to model | Thicken supports, adjust angle |
+| Symptom                   | Cause                      | Prevention                      |
+|---------------------------|----------------------------|---------------------------------|
+| Nozzle clogs after 10 min | Too fast extrusion speed   | Reduce speed in slicer          |
+| Parts separate from bed   | Poor first layer adhesion  | Check bed level, clean bed      |
+| Melted plastic strands    | Retraction not working     | Verify retraction in slicer     |
+| Model warping             | Thermal stress, no cooling | Cool model, improve ventilation |
+| Supports fail to remove   | Too thin or fused to model | Thicken supports, adjust angle  |
 
 **Validation Checklist Before Printing:**
 

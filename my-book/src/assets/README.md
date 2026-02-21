@@ -3,6 +3,6 @@ that should be available for download from the generated mdBook site.
 
 Guidelines:
 
-- Place project files under subfolders - for example, `assets/Unit_0_Foundations/`.
-- Link from markdown with relative paths, e.g. `[Download SCAD](Units/Unit_0_Foundations/project_0.scad)`.
+- Place project files under subfolders - for example, `assets/3dMake_Foundation/`.
+- Link from markdown with relative paths, e.g. `[Download SCAD](3dMake_Foundation/Lessons_3dMake_1/basic_project_scaffold.scad)`.
 - Files in `src/assets` will be copied verbatim into the built `book/` output.

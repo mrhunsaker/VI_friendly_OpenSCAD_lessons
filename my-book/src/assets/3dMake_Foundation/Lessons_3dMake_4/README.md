@@ -19,8 +19,8 @@ This folder contains supporting materials for Lesson 4:
 
 ## Key Materials
 
-- [Lesson 4 Main Content](../../3dMake_Foundation/Lessons_3dMake_4/Lessons_3dMake_4.md)
-- [Master Rubric](../../../Reference_Materials/master-rubric.md) - Design quality evaluation criteria
+- [Lesson 4 Main Content](../../../3dMake_Foundation/Lessons_3dMake_4/Lessons_3dMake_4.md)
+- [Master Rubric](../../../3dMake_Foundation/Lessons_3dMake_11/master-rubric.md) - Design quality evaluation criteria
 
 ## Extension Projects in This Folder
 

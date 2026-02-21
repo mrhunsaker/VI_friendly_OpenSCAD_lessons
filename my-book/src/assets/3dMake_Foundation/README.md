@@ -199,11 +199,11 @@ After learning each pattern:
 
 ## Reference Links
 
-- **Lesson 6**: [Practical 3dm Commands and Text Embossing](../../../3dMake_Foundation/Lessons_3dMake_6/Lessons_3dMake_6.md)
-- **Lesson 7**: [Parametric Transforms and the Phone Stand](../../../3dMake_Foundation/Lessons_3dMake_7/Lessons_3dMake_7.md)
-- **Lesson 8**: [Advanced Parametric Design](../../../3dMake_Foundation/Lessons_3dMake_8/Lessons_3dMake_8.md)
-- **OpenSCAD Cheat Sheet**: [Syntax Quick Reference](../../../Reference_Materials/openscad-cheat-sheet.md)
-- **3dMake Setup Guide**: [Commands & Workflow](../../../Reference_Materials/3dmake-setup-guide.md)
+- **Lesson 6**: [Practical 3dm Commands and Text Embossing](../../3dMake_Foundation/Lessons_3dMake_6/Lessons_3dMake_6.md)
+- **Lesson 7**: [Parametric Transforms and the Phone Stand](../../3dMake_Foundation/Lessons_3dMake_7/Lessons_3dMake_7.md)
+- **Lesson 8**: [Advanced Parametric Design](../../3dMake_Foundation/Lessons_3dMake_8/Lessons_3dMake_8.md)
+- **OpenSCAD Cheat Sheet**: [Syntax Quick Reference](../../3dMake_Foundation/Lessons_3dMake_2/openscad-cheat-sheet.md)
+- **3dMake Setup Guide**: [Commands & Workflow](../../3dMake_Foundation/Lessons_3dMake_1/3dmake-setup-guide.md)
 
 ## Troubleshooting
 

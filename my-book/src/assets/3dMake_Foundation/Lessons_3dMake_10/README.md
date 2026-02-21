@@ -20,11 +20,11 @@ This folder contains supporting materials for Lesson 10:
 
 ## Key Materials
 
-- [Lesson 10 Main Content](../../3dMake_Foundation/Lessons_3dMake_10/Lessons_3dMake_10.md)
-- [Master Rubric](../../../Reference_Materials/master-rubric.md)
-- [Measurement Worksheet](../../../Reference_Materials/measurement-worksheet.md)
-- [Filament Comparison Table](../../../Reference_Materials/filament-comparison-table.md)
-- [Appendix C: Tolerance Testing & QA Matrix](../../3dMake_Foundation/Appendix_C_Tolerance_QA.md)
+- [Lesson 10 Main Content](../../../3dMake_Foundation/Lessons_3dMake_10/Lessons_3dMake_10.md)
+- [Master Rubric](../../../3dMake_Foundation/Lessons_3dMake_11/master-rubric.md)
+- [Measurement Worksheet](../../../3dMake_Foundation/Lessons_3dMake_10/measurement-worksheet.md)
+- [Filament Comparison Table](../../../3dMake_Foundation/Lessons_3dMake_5/filament-comparison-table.md)
+- [Appendix C: Tolerance Testing & QA Matrix](../../../3dMake_Foundation/Appendix_C_Tolerance_QA.md)
 
 ## Extension Projects in This Folder
 

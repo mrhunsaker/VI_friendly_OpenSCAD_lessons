@@ -19,9 +19,9 @@ This folder contains supporting materials for Lesson 3:
 
 ## Key Materials
 
-- [Lesson 3 Main Content](../../3dMake_Foundation/Lessons_3dMake_3/Lessons_3dMake_3.md)
-- [OpenSCAD Cheat Sheet - Modules & Functions](../../../Reference_Materials/openscad-cheat-sheet.md)
-- [Appendix D: PowerShell Integration](../../3dMake_Foundation/Appendix_D_PowerShell_Integration.md)
+- [Lesson 3 Main Content](../../../3dMake_Foundation/Lessons_3dMake_3/Lessons_3dMake_3.md)
+- [OpenSCAD Cheat Sheet - Modules & Functions](../../../3dMake_Foundation/Lessons_3dMake_2/openscad-cheat-sheet.md)
+- [Appendix D: PowerShell Integration](../../../3dMake_Foundation/Appendix_D_PowerShell_Integration.md)
 
 ## Starter Templates in This Folder
 
