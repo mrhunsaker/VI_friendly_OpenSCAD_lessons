@@ -1,6 +1,6 @@
 # CMD-5: Filling in the Gaps - Batch Files & Advanced Techniques
 
-**Duration:** 45 minutes  
+**Duration:** 2 hours (for screen reader users)  
 **Prerequisites:** CMD-Pre through CMD-4
 
 **Learning Objectives:**

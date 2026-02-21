@@ -1,6 +1,6 @@
 # CMD Unit Test & Practice - Comprehensive Assessment
 
-**Duration:** 60-90 minutes  
+**Duration:** 2.5-4 hours (for screen reader users)  
 **Prerequisites:** All CMD lessons (CMD-Pre through CMD-6)
 
 **Purpose:** Comprehensive practice and self-assessment of all Command Prompt skills

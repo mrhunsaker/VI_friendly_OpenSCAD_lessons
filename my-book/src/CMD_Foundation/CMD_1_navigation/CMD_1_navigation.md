@@ -1,6 +1,6 @@
 # CMD-1: Navigation - Moving Around Your File System
 
-**Duration:** 30-45 minutes  
+**Duration:** 1.5-2 hours (for screen reader users)  
 **Prerequisites:** CMD-Pre and CMD-0  
 **Learning Objectives:**
 - Navigate confidently to any folder location

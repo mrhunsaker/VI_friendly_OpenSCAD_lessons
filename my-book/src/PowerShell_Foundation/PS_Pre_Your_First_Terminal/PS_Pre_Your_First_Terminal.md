@@ -1,6 +1,6 @@
 # PS-Pre: Your First Terminal - Screen Reader Navigation Fundamentals
 
-**Duration:** 30-45 minutes  
+**Duration:** 1.5-2 hours (for screen reader users)  
 **Prerequisites:** None - this is the starting point  
 **Accessibility Note:** This lesson is designed specifically for screen reader users (NVDA, JAWS)
 
@@ -224,14 +224,14 @@ This opens the file in Notepad where you can edit it with your screen reader.
 
 These work in PowerShell and are crucial for screen reader users:
 
-| Key Combination | What It Does |
-|---|---|
-| **Up Arrow** | Shows your previous command (press again to go further back) |
-| **Down Arrow** | Shows your next command (if you went back) |
-| **Tab** | Auto-completes folder/file names |
-| **Ctrl+C** | Stops a running command |
-| **Ctrl+L** | Clears the screen |
-| **Enter** | Runs the command |
+| Key Combination | What It Does                                                 |
+|-----------------|--------------------------------------------------------------|
+| **Up Arrow**    | Shows your previous command (press again to go further back) |
+| **Down Arrow**  | Shows your next command (if you went back)                   |
+| **Tab**         | Auto-completes folder/file names                             |
+| **Ctrl+C**      | Stops a running command                                      |
+| **Ctrl+L**      | Clears the screen                                            |
+| **Enter**       | Runs the command                                             |
 
 **Screen reader tip:** These all work perfectly with your screen reader. Try them!
 
@@ -378,12 +378,12 @@ Once you're comfortable with these basics:
 
 ## Troubleshooting
 
-| Issue | Solution |
-|---|---|
-| PowerShell won't open | Try searching Windows, or right-click a folder and select "Open PowerShell here" |
-| Can't hear the output | Try redirecting to a file: `command > output.txt` |
-| Tab completion not working | Make sure you typed at least one character before pressing Tab |
-| Command not found | Make sure you spelled it correctly; try `Get-Command` to see available commands |
-| Stuck in a command | Press **Ctrl+C** to stop it |
+| Issue                      | Solution                                                                         |
+|----------------------------|----------------------------------------------------------------------------------|
+| PowerShell won't open      | Try searching Windows, or right-click a folder and select "Open PowerShell here" |
+| Can't hear the output      | Try redirecting to a file: `command > output.txt`                                |
+| Tab completion not working | Make sure you typed at least one character before pressing Tab                   |
+| Command not found          | Make sure you spelled it correctly; try `Get-Command` to see available commands  |
+| Stuck in a command         | Press **Ctrl+C** to stop it                                                      |
 
 **Still stuck?** The checkpoint questions and exercises are your best teacher. Work through them multiple times until comfortable.

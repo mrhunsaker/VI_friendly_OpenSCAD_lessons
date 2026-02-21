@@ -23,7 +23,7 @@ This **11-lesson curriculum + 4 reference appendices** teaches non-visual 3D mod
 ## Lesson Structure
 
 ### Lesson 1: Environmental Configuration and the Developer Workflow
-**Duration:** 60-90 minutes | **Level:** Beginner
+**Duration:** 2.5-3.5 hours | **Level:** Beginner
 
 Learn to install and configure 3dMake, create a project scaffold, and run your first build. This lesson establishes the foundation for all subsequent work.
 
@@ -63,7 +63,7 @@ Discover how to combine basic shapes (cube, sphere, cylinder) using boolean oper
 ---
 
 ### Lesson 3: Parametric Architecture and Modular Libraries
-**Duration:** 60 minutes | **Level:** Beginner+
+**Duration:** 2.5 hours | **Level:** Beginner+
 
 Learn to create reusable modules and organize code into libraries. This lesson introduces the "don't repeat yourself" (DRY) principle for code reuse.
 
@@ -84,7 +84,7 @@ Learn to create reusable modules and organize code into libraries. This lesson i
 ---
 
 ### Lesson 4: AI-Enhanced Verification and Multimodal Feedback
-**Duration:** 45-60 minutes | **Level:** Intermediate
+**Duration:** 2-2.5 hours | **Level:** Intermediate
 
 Use `3dm info` to generate AI diagnostics and validate designs. This lesson covers verification workflows and the strengths/limitations of AI in design.
 
@@ -105,7 +105,7 @@ Use `3dm info` to generate AI diagnostics and validate designs. This lesson cove
 ---
 
 ### Lesson 5: Safety Protocols and the Physical Fabrication Interface
-**Duration:** 60-90 minutes | **Level:** Intermediate
+**Duration:** 2.5-3.5 hours | **Level:** Intermediate
 
 Transition from digital design to physical printing. Learn safety procedures, environmental controls, and the complete print workflow.
 
@@ -127,7 +127,7 @@ Transition from digital design to physical printing. Learn safety procedures, en
 ---
 
 ### Lesson 6: Practical 3dm Commands and Text Embossing
-**Duration:** 60-90 minutes | **Level:** Intermediate
+**Duration:** 2.5-3.5 hours | **Level:** Intermediate
 
 Master the key 3dm commands by building a practical project-a customizable keycap with embossed text. This lesson ties together design and verification.
 
@@ -148,7 +148,7 @@ Master the key 3dm commands by building a practical project-a customizable keyca
 ---
 
 ### Lesson 7: Parametric Transforms and the Phone Stand Project
-**Duration:** 75-90 minutes | **Level:** Intermediate+
+**Duration:** 3-3.5 hours | **Level:** Intermediate+
 
 Apply transforms (translate, rotate, scale) to build a multi-part assembly. This lesson covers spatial positioning and practical product design.
 
@@ -193,7 +193,7 @@ Design tolerance-critical assemblies where parts snap together. This lesson cove
 ---
 
 ### Lesson 9: Automation and 3dm Workflows
-**Duration:** 60-90 minutes | **Level:** Advanced
+**Duration:** 2.5-3.5 hours | **Level:** Advanced
 
 Automate design workflows using shell scripts. This lesson teaches batch processing and continuous integration concepts.
 
@@ -215,7 +215,7 @@ Automate design workflows using shell scripts. This lesson teaches batch process
 ---
 
 ### Lesson 10: Hands-On Practice Exercises and Troubleshooting
-**Duration:** 120-150 minutes | **Level:** Advanced
+**Duration:** 5-6 hours | **Level:** Advanced
 
 Complete integrated projects and learn to diagnose and fix common issues. This capstone lesson synthesizes all prior learning.
 
@@ -405,7 +405,7 @@ Upon completing this curriculum, you're ready for:
 
 ## Lesson 11: Stakeholder-Centric Design and the Beaded Jewelry Project
 
-**Duration:** 90-120 minutes | **Level:** Advanced/Leadership
+**Duration:** 3.5-4.5 hours | **Level:** Advanced/Leadership
 
 The final lesson teaches you to design for real users, not just yourself. You'll learn to conduct stakeholder interviews, extract functional requirements, and iterate based on real feedback. This bridges the gap between maker and design professional.
 

@@ -1,8 +1,10 @@
 # Git Bash Curriculum Overview
 
-**Total Duration:** 8-10 hours  
+**Total Duration:** 20-25 hours (for screen reader users)  
 **Target Audience:** Screen reader users, accessibility-first learners  
 **Prerequisites:** Basic Windows computer familiarity
+
+*Note: Time estimates reflect the additional time needed for screen reader navigation, text-to-speech processing, and careful keyboard-based workflows.*
 
 ---
 
@@ -37,7 +39,7 @@ The main curriculum teaches you to use Git Bash for real work.
 
 ### Foundation Level (Lessons Pre - 1)
 
-#### **GitBash-Pre: Your First Terminal** (30-45 min)
+#### **GitBash-Pre: Your First Terminal** (1.5-2.5 hours)
 **What you'll learn:**
 - How to open and close Git Bash
 - Understanding the prompt and what it tells you
@@ -61,7 +63,7 @@ The main curriculum teaches you to use Git Bash for real work.
 
 ---
 
-#### **GitBash-0: Getting Started - Layout, Paths, and the Shell** (20-30 min)
+#### **GitBash-0: Getting Started - Layout, Paths, and the Shell** (1-1.5 hours)
 **What you'll learn:**
 - Unix-style paths vs Windows paths
 - Absolute vs relative paths
@@ -83,7 +85,7 @@ The main curriculum teaches you to use Git Bash for real work.
 
 ---
 
-#### **GitBash-1: Navigation - Moving Around Your File System** (30-45 min)
+#### **GitBash-1: Navigation - Moving Around Your File System** (1.5-2.5 hours)
 **What you'll learn:**
 - Mastering `cd` for folder navigation
 - Tab completion strategies
@@ -107,7 +109,7 @@ The main curriculum teaches you to use Git Bash for real work.
 
 ### Intermediate Level (Lessons 2 - 4)
 
-#### **GitBash-2: File and Folder Manipulation** (45-60 min)
+#### **GitBash-2: File and Folder Manipulation** (2-2.5 hours)
 **What you'll learn:**
 - Creating files and folders: `mkdir`, `touch`, `echo > file`
 - Copying files: `cp`
@@ -132,7 +134,7 @@ The main curriculum teaches you to use Git Bash for real work.
 
 ---
 
-#### **GitBash-3: Input, Output & Piping** (45-60 min)
+#### **GitBash-3: Input, Output & Piping** (2-2.5 hours)
 **What you'll learn:**
 - Redirecting output: `>`, `>>`
 - Reading files: `cat`, `less`
@@ -158,7 +160,7 @@ The main curriculum teaches you to use Git Bash for real work.
 
 ---
 
-#### **GitBash-4: Environment Variables & Aliases** (30-45 min)
+#### **GitBash-4: Environment Variables & Aliases** (1.5-2 hours)
 **What you'll learn:**
 - Understanding environment variables: `echo $PATH`, `echo $HOME`
 - Setting variables: `export MYVAR="value"`
@@ -183,7 +185,7 @@ The main curriculum teaches you to use Git Bash for real work.
 
 ### Advanced Level (Lessons 5 - 6)
 
-#### **GitBash-5: Filling in the Gaps - Shell Profiles, History, and Debugging** (45-60 min)
+#### **GitBash-5: Filling in the Gaps - Shell Profiles, History, and Debugging** (2-2.5 hours)
 **What you'll learn:**
 - Using command history: `history`, `!`, reverse search
 - Debugging commands with `set -x`
@@ -206,7 +208,7 @@ The main curriculum teaches you to use Git Bash for real work.
 
 ---
 
-#### **GitBash-6: Advanced Terminal Techniques - Scripts, Functions & Professional Workflows** (60-90 min)
+#### **GitBash-6: Advanced Terminal Techniques - Scripts, Functions & Professional Workflows** (2.5-3.5 hours)
 **What you'll learn:**
 - Writing bash scripts (`.sh` files)
 - Creating functions for reuse
@@ -231,7 +233,7 @@ The main curriculum teaches you to use Git Bash for real work.
 
 ---
 
-### Comprehensive Assessment (1-2 hours)
+### Comprehensive Assessment (2.5-5 hours)
 
 #### **GitBash Unit Test & Practice**
 **What you'll do:**
@@ -352,18 +354,18 @@ Every lesson includes:
 
 ## Time Breakdown
 
-| Component   | Time           |
-|-------------|----------------|
-| GitBash-Pre | 30-45 min      |
-| GitBash-0   | 20-30 min      |
-| GitBash-1   | 30-45 min      |
-| GitBash-2   | 45-60 min      |
-| GitBash-3   | 45-60 min      |
-| GitBash-4   | 30-45 min      |
-| GitBash-5   | 45-60 min      |
-| GitBash-6   | 60-90 min      |
-| Unit Test   | 60-120 min     |
-| **Total**   | **8-10 hours** |
+| Component   | Time            |
+|-------------|-----------------|
+| GitBash-Pre | 1.5-2.5 hours   |
+| GitBash-0   | 1-1.5 hours     |
+| GitBash-1   | 1.5-2.5 hours   |
+| GitBash-2   | 2-2.5 hours     |
+| GitBash-3   | 2-2.5 hours     |
+| GitBash-4   | 1.5-2 hours     |
+| GitBash-5   | 2-2.5 hours     |
+| GitBash-6   | 2.5-3.5 hours   |
+| Unit Test   | 2.5-5 hours     |
+| **Total**   | **20-25 hours** |
 
 ---
 
@@ -378,8 +380,8 @@ Every lesson includes:
 
 ### Recommended Pace
 
-- **Fast track:** Complete in 1-2 weeks (1-2 hours daily)
-- **Standard pace:** Complete in 4-6 weeks (1-2 hours, 3x per week)
+- **Fast track:** Complete in 2-3 weeks (2-3 hours daily)
+- **Standard pace:** Complete in 8-12 weeks (2-3 hours, 3x per week)
 - **Self-paced:** Work at your own speed with breaks
 
 ### Best Practices

@@ -1,6 +1,6 @@
 # CMD-6: Advanced Terminal Techniques - Scripts & Professional Workflows
 
-**Duration:** 60 minutes  
+**Duration:** 2.5-3 hours (for screen reader users)  
 **Prerequisites:** CMD-Pre through CMD-5
 
 **Learning Objectives:**

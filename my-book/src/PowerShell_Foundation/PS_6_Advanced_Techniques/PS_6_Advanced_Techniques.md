@@ -1,6 +1,6 @@
 # PS-6: Advanced Terminal Techniques - Scripts, Functions & Professional Workflows
 
-**Duration:** 90 minutes  
+**Duration:** 4-4.5 hours (for screen reader users)  
 **Prerequisites:** Complete PS-0 through PS-5  
 **Skill Level:** Advanced intermediate
 

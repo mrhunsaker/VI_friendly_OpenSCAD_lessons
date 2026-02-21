@@ -1,6 +1,6 @@
 # CMD-Pre: Your First Terminal - Screen Reader Navigation Fundamentals
 
-**Duration:** 30-45 minutes  
+**Duration:** 1.5-2 hours (for screen reader users)  
 **Prerequisites:** None - this is the starting point  
 **Accessibility Note:** This lesson is designed specifically for screen reader users (NVDA, JAWS)
 

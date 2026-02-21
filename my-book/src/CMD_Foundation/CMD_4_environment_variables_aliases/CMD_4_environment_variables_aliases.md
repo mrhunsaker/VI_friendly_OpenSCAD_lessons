@@ -1,6 +1,6 @@
 # CMD-4: Environment Variables & Aliases
 
-**Duration:** 45 minutes  
+**Duration:** 2 hours (for screen reader users)  
 **Prerequisites:** CMD-Pre through CMD-3
 
 **Learning Objectives:**

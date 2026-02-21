@@ -1,6 +1,6 @@
 # CMD-2: File and Folder Manipulation
 
-**Duration:** 45-60 minutes  
+**Duration:** 2-2.5 hours (for screen reader users)  
 **Prerequisites:** CMD-Pre, CMD-0, CMD-1
 
 **Learning Objectives:**

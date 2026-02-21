@@ -1,6 +1,6 @@
 # CMD-3: Input, Output & Redirection
 
-**Duration:** 45-60 minutes  
+**Duration:** 2-2.5 hours (for screen reader users)  
 **Prerequisites:** CMD-Pre through CMD-2
 
 **Learning Objectives:**

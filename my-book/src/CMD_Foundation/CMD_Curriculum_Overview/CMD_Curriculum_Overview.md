@@ -3,8 +3,10 @@
 **Welcome!** This curriculum teaches you how to use Windows Command Prompt (CMD) as a screen reader user, starting from zero experience and building to practical skill levels.
 
 **Last Updated:** February 2026  
-**Total Duration:** 12-15 hours of instruction + practice  
-**Target Users:** Anyone with a screen reader (NVDA, JAWS, or other)  
+**Total Duration:** 30-45 hours of instruction + practice (for screen reader users)  
+**Target Users:** Anyone with a screen reader (NVDA, JAWS, or other)
+
+*Note: Time estimates reflect the additional time needed for screen reader navigation, text-to-speech processing, and careful keyboard-based workflows.*  
 **Alternate to:** PowerShell curriculum (same concepts, simpler commands)
 
 ---
@@ -36,22 +38,22 @@
 
 ### Phase 1: Absolute Beginner -> Comfortable User
 
-| Lesson                           | Duration | What You'll Learn                             |
-|----------------------------------|----------|-----------------------------------------------|
-| **CMD-Pre: Your First Terminal** | 45 min   | Opening CMD, first commands, basic navigation |
-| **CMD-0: Getting Started**       | 30 min   | Paths, shortcuts, command basics              |
-| **CMD-1: Navigation**            | 45 min   | Moving around the file system confidently     |
+| Lesson                           | Duration    | What You'll Learn                             |
+|----------------------------------|-------------|-----------------------------------------------|
+| **CMD-Pre: Your First Terminal** | 2-2.5 hours | Opening CMD, first commands, basic navigation |
+| **CMD-0: Getting Started**       | 1.5 hours   | Paths, shortcuts, command basics              |
+| **CMD-1: Navigation**            | 2-2.5 hours | Moving around the file system confidently     |
 
 **Goal:** You can navigate to any folder and see what's in it with your screen reader.
 
 ### Phase 2: Intermediate User -> Power User
 
-| Lesson                                       | Duration | What You'll Learn                        |
-|----------------------------------------------|----------|------------------------------------------|
-| **CMD-2: File & Folder Manipulation**        | 60 min   | Create, copy, move, delete files/folders |
-| **CMD-3: Input, Output & Redirection**       | 60 min   | Redirect output, pipe commands           |
-| **CMD-4: Environment Variables & Shortcuts** | 45 min   | Automate settings, create shortcuts      |
-| **CMD-5: Filling in the Gaps**               | 45 min   | Batch files, history, debugging          |
+| Lesson                                       | Duration    | What You'll Learn                        |
+|----------------------------------------------|-------------|------------------------------------------|
+| **CMD-2: File & Folder Manipulation**        | 2.5-3 hours | Create, copy, move, delete files/folders |
+| **CMD-3: Input, Output & Redirection**       | 2.5-3 hours | Redirect output, pipe commands           |
+| **CMD-4: Environment Variables & Shortcuts** | 2-2.5 hours | Automate settings, create shortcuts      |
+| **CMD-5: Filling in the Gaps**               | 2-2.5 hours | Batch files, history, debugging          |
 
 **Goal:** You can create folders, manage files, and combine commands to accomplish complex tasks.
 
@@ -116,7 +118,7 @@ These topics extend beyond this curriculum but are natural next steps:
 5. **Try** extension problems if you have time
 6. **Move to next lesson** when quiz is solid
 
-**Estimated time:** 30-60 minutes per lesson (depends on practice time)
+**Estimated time:** 2-3 hours per lesson for screen reader users (depends on practice time)
 
 ---
 
@@ -131,9 +133,9 @@ These topics extend beyond this curriculum but are natural next steps:
 
 ---
 
-## Quick Start Guide (First 15 Minutes)
+## Quick Start Guide (First 45-60 Minutes)
 
-### If You Have 15 Minutes Right Now:
+### If You Have 45-60 Minutes Right Now:
 
 1. **Open Command Prompt** (Windows key -> type cmd -> Enter)
 2. **Run these commands:**
@@ -180,9 +182,9 @@ Most screen readers have these features.
 ### Q: How long will this take?
 
 **A:** Realistically:
-- Minimum (just lessons, no exercises): 5-6 hours
-- Normal (lessons + exercises): 12-15 hours
-- With extension problems: 18-20+ hours
+- Minimum (just lessons, no exercises): 15-18 hours
+- Normal (lessons + exercises): 30-45 hours
+- With extension problems: 45-60+ hours
 
 Spread it over weeks or months. Go at your pace.
 
