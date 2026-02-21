@@ -2,9 +2,9 @@
 
 [Accessible 3D Printing with OpenSCAD and 3DMake](README.md)
 [Syllabus](Syllabus.md)
-[PowerShell Curriculum Overview](PowerShell_Foundation/PowerShell_Curriculum_Overview/PowerShell_Curriculum_Overview.md)
 [Screen Reader Accessibility Guide](PowerShell_Foundation/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.md)
 - [Part 1: Foundations of PowerShell - Terminal & Screen Reader Accessibility](PowerShell_Foundation/Part_1.md)
+    - [PowerShell Curriculum Overview](PowerShell_Foundation/PowerShell_Curriculum_Overview/PowerShell_Curriculum_Overview.md)
     - [PS-Pre: Your First Terminal](PowerShell_Foundation/PS_Pre_Your_First_Terminal/PS_Pre_Your_First_Terminal.md)
     - [PS-0: Getting Started - Layout, Paths, and the Shell](PowerShell_Foundation/PS_0_getting_started_layout_paths/PS_0_getting_started_layout_paths.md)
     - [PS-1: Navigation - Moving Around Your File System](PowerShell_Foundation/PS_1_navigation/PS_1_navigation.md)
