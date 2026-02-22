@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-4e955f1e.js";
+            window.path_to_searchindex_js = "../../searchindex-591a66c4.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-454d3383.js"></script>
+        <script src="../../toc-824d9d90.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -220,24 +220,44 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="screen-reader-accessibility-guide-for-powershell"><a class="header" href="#screen-reader-accessibility-guide-for-powershell">Screen Reader Accessibility Guide for PowerShell</a></h1>
-<p><strong>Target Users:</strong> NVDA, JAWS, and other screen reader users<br><strong>Last Updated:</strong> 2026</p>
-<p>This guide is used throughout the PowerShell Foundation curriculum to help screen reader users navigate and work efficiently with the terminal.</p>
+                        <h1 id="screen-reader-accessibility-guide-for-command-line-terminals"><a class="header" href="#screen-reader-accessibility-guide-for-command-line-terminals">Screen Reader Accessibility Guide for Command-Line Terminals</a></h1>
+<p><strong>Target Users:</strong> NVDA, JAWS, and other screen reader users using PowerShell, CMD, or Git Bash<br><strong>Last Updated:</strong> 2026</p>
+<p>This guide is used throughout the Command-Line Foundation curriculum (PowerShell, CMD, and Git Bash pathways) to help screen reader users navigate and work efficiently with the terminal.</p>
 <hr>
 <h2 id="table-of-contents"><a class="header" href="#table-of-contents">Table of Contents</a></h2>
 <ol>
+<li><a href="#which-terminal">Which Terminal Should I Use?</a></li>
 <li><a href="#getting-started">Getting Started with Screen Readers</a></li>
 <li><a href="#nvda-tips">NVDA-Specific Tips</a></li>
 <li><a href="#jaws-tips">JAWS-Specific Tips</a></li>
 <li><a href="#general-terminal">General Terminal Accessibility</a></li>
 <li><a href="#long-output">Working with Long Output</a></li>
 <li><a href="#shortcuts">Keyboard Shortcuts Reference</a></li>
+<li><a href="#shell-differences">Shell-Specific Differences</a></li>
 <li><a href="#troubleshooting">Troubleshooting</a></li>
 </ol>
 <hr>
+<h2 id="which-terminal"><a class="header" href="#which-terminal">Which Terminal Should I Use?</a></h2>
+<p>All three command-line shells (PowerShell, CMD, Git Bash) work equally well with screen readers. Choose the one that best fits your setup:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Feature</th><th>PowerShell</th><th>CMD</th><th>Git Bash</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Platform</strong></td><td>Windows only</td><td>Windows only</td><td>Windows, macOS, Linux</td></tr>
+<tr><td><strong>Screen Reader Support</strong></td><td>Excellent</td><td>Excellent</td><td>Excellent</td></tr>
+<tr><td><strong>Learning Curve</strong></td><td>Moderate</td><td>Gentle</td><td>Moderate-Steep</td></tr>
+<tr><td><strong>Use Case</strong></td><td>Modern automation</td><td>Familiar simplicity</td><td>Cross-platform/Git workflows</td></tr>
+<tr><td><strong>Recommended For</strong></td><td>3D design automation</td><td>Getting started easily</td><td>Software developers</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>Key Point:</strong> Choose one pathway and complete it fully. All three teach the same skills and prepare you equally well for 3dMake work. Don’t switch mid-curriculum.</p>
+<hr>
 <h2 id="getting-started"><a class="header" href="#getting-started">Getting Started with Screen Readers</a></h2>
 <h3 id="which-screen-reader-should-i-use"><a class="header" href="#which-screen-reader-should-i-use">Which Screen Reader Should I Use?</a></h3>
-<p>Both NVDA and JAWS work well with PowerShell, but they have different strengths:</p>
+<p>Both NVDA and JAWS work equally well with all three shells (PowerShell, CMD, and Git Bash):</p>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -246,24 +266,25 @@
 <tbody>
 <tr><td><strong>Cost</strong></td><td>Free</td><td>Commercial (paid)</td></tr>
 <tr><td><strong>Installation</strong></td><td>Simple</td><td>Complex but thorough</td></tr>
-<tr><td><strong>PowerShell Support</strong></td><td>Excellent</td><td>Excellent</td></tr>
+<tr><td><strong>Terminal Support</strong></td><td>Excellent (all shells)</td><td>Excellent (all shells)</td></tr>
 <tr><td><strong>Learning Curve</strong></td><td>Gentle</td><td>Steeper</td></tr>
 <tr><td><strong>Customization</strong></td><td>Good</td><td>Extensive</td></tr>
 </tbody>
 </table>
 </div>
-<p><strong>Recommendation:</strong> Start with NVDA if you’re new to screen readers. Both will work for this curriculum.</p>
+<p><strong>Recommendation:</strong> Start with NVDA if you’re new to screen readers. Both will work perfectly for this curriculum.</p>
 <h3 id="before-you-start"><a class="header" href="#before-you-start">Before You Start</a></h3>
 <ol>
-<li>Make sure your screen reader is running before opening PowerShell</li>
-<li>Open PowerShell and let your screen reader read the title and prompt</li>
-<li>If you don’t hear anything, press <strong>Alt+Tab</strong> to cycle windows and find PowerShell</li>
+<li>Make sure your screen reader is running before opening your terminal</li>
+<li>Open your terminal (PowerShell, CMD, or Git Bash) and let your screen reader read the title and prompt</li>
+<li>If you don’t hear anything, press <strong>Alt+Tab</strong> to cycle windows and find your terminal</li>
 <li>Use your screen reader’s screen review features to understand the layout</li>
 </ol>
 <hr>
 <h2 id="nvda-tips"><a class="header" href="#nvda-tips">NVDA-Specific Tips</a></h2>
 <p>NVDA is free and available from https://www.nvaccess.org/</p>
-<h3 id="key-commands-for-powershell"><a class="header" href="#key-commands-for-powershell">Key Commands for PowerShell</a></h3>
+<p>These tips work across all shells: PowerShell, CMD, and Git Bash.</p>
+<h3 id="key-commands-for-terminals"><a class="header" href="#key-commands-for-terminals">Key Commands for Terminals</a></h3>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -284,14 +305,14 @@
 </table>
 </div>
 <h3 id="example-reading-long-output"><a class="header" href="#example-reading-long-output">Example: Reading Long Output</a></h3>
-<p><strong>Scenario:</strong> You ran <code>ls -n</code> and it listed 50 files. You can’t hear them all.</p>
+<p><strong>Scenario:</strong> You ran a command and it listed 50 files. You can’t hear them all.</p>
 <p><strong>Solution with NVDA:</strong></p>
 <ol>
 <li>After the command finishes, press <strong>NVDA+Home</strong> to read the current line</li>
 <li>Press <strong>NVDA+Down Arrow</strong> repeatedly to read all output</li>
 <li>Or press <strong>NVDA+F7</strong> to open Review Mode and use arrow keys to scroll</li>
 </ol>
-<h3 id="nvda-settings-for-powershell"><a class="header" href="#nvda-settings-for-powershell">NVDA Settings for PowerShell</a></h3>
+<h3 id="nvda-settings-for-terminals"><a class="header" href="#nvda-settings-for-terminals">NVDA Settings for Terminals</a></h3>
 <p><strong>Enable verbosity for better feedback:</strong></p>
 <ol>
 <li>Press <strong>NVDA+Ctrl+V</strong> to open NVDA menu</li>
@@ -302,7 +323,8 @@
 <hr>
 <h2 id="jaws-tips"><a class="header" href="#jaws-tips">JAWS-Specific Tips</a></h2>
 <p>JAWS is a commercial screen reader available from https://www.freedomscientific.com/</p>
-<h3 id="key-commands-for-powershell-1"><a class="header" href="#key-commands-for-powershell-1">Key Commands for PowerShell</a></h3>
+<p>These tips work across all shells: PowerShell, CMD, and Git Bash.</p>
+<h3 id="key-commands-for-terminals-1"><a class="header" href="#key-commands-for-terminals-1">Key Commands for Terminals</a></h3>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -323,14 +345,14 @@
 </table>
 </div>
 <h3 id="example-reading-long-output-1"><a class="header" href="#example-reading-long-output-1">Example: Reading Long Output</a></h3>
-<p><strong>Scenario:</strong> You ran <code>ls -n | Out-File list.txt</code> and saved output to a file.</p>
+<p><strong>Scenario:</strong> You ran a command and saved output to a file.</p>
 <p><strong>Solution with JAWS:</strong></p>
 <ol>
-<li>Open the file: <code>notepad.exe list.txt</code></li>
-<li>In Notepad, press <strong>Insert+Ctrl+Down</strong> to hear all content</li>
+<li>Open the file with your text editor (e.g., <code>notepad file.txt</code> in PowerShell, <code>notepad file.txt</code> in CMD)</li>
+<li>In the editor, press <strong>Insert+Ctrl+Down</strong> to hear all content</li>
 <li>Use <strong>Insert+Down Arrow</strong> to read line by line at your own pace</li>
 </ol>
-<h3 id="jaws-settings-for-powershell"><a class="header" href="#jaws-settings-for-powershell">JAWS Settings for PowerShell</a></h3>
+<h3 id="jaws-settings-for-terminals"><a class="header" href="#jaws-settings-for-terminals">JAWS Settings for Terminals</a></h3>
 <p><strong>Enable specific settings for terminals:</strong></p>
 <ol>
 <li>Press <strong>Insert+F3</strong> to open JAWS menu</li>
@@ -340,16 +362,16 @@
 </ol>
 <hr>
 <h2 id="general-terminal"><a class="header" href="#general-terminal">General Terminal Accessibility</a></h2>
-<h3 id="understanding-the-powershell-layout"><a class="header" href="#understanding-the-powershell-layout">Understanding the PowerShell Layout</a></h3>
-<p>The PowerShell window contains:</p>
+<h3 id="understanding-the-terminal-layout"><a class="header" href="#understanding-the-terminal-layout">Understanding the Terminal Layout</a></h3>
+<p>All terminals (PowerShell, CMD, Git Bash) follow the same basic layout:</p>
 <ol>
-<li><strong>Title bar:</strong> Window name (e.g., “Windows PowerShell”)</li>
+<li><strong>Title bar:</strong> Window name (e.g., “Windows PowerShell”, “Command Prompt”, “Git Bash”)</li>
 <li><strong>Content area:</strong> Command history and output</li>
-<li><strong>Prompt:</strong> The <code>PS&gt;</code> area where you type</li>
+<li><strong>Prompt:</strong> The area where you type (e.g., <code>PS&gt;</code>, <code>C:\&gt;</code>, <code>$</code>)</li>
 </ol>
 <p><strong>Your screen reader reads from top to bottom, but focus is at the prompt (bottom).</strong></p>
 <h3 id="navigation-sequence"><a class="header" href="#navigation-sequence">Navigation Sequence</a></h3>
-<p><strong>When you open PowerShell:</strong></p>
+<p><strong>When you open any terminal:</strong></p>
 <ol>
 <li>Your screen reader announces the window title</li>
 <li>Then it announces the prompt line</li>
@@ -366,16 +388,15 @@
 <p><strong>Strategy 2: Large Output (Many Lines)</strong></p>
 <ul>
 <li>Redirect to a file: <code>command &gt; output.txt</code></li>
-<li>Open the file: <code>notepad.exe output.txt</code></li>
+<li>Open the file: <code>notepad output.txt</code> (works in all shells)</li>
 <li>Read in Notepad (easier for long text)</li>
 </ul>
 <p><strong>Strategy 3: Searching Output</strong></p>
 <ul>
-<li>Use <code>findstr</code> (find string) to filter:
-<pre><code class="language-powershell">ls -n | findstr "pattern"
-</code></pre>
-</li>
-<li>Only results matching “pattern” are shown</li>
+<li>Use filtering commands to reduce output</li>
+<li>PowerShell: <code>command | findstr "pattern"</code> or <code>command | Select-String "pattern"</code></li>
+<li>CMD: <code>command | find "pattern"</code></li>
+<li>Git Bash: <code>command | grep "pattern"</code></li>
 </ul>
 <hr>
 <h2 id="long-output"><a class="header" href="#long-output">Working with Long Output</a></h2>
@@ -463,6 +484,55 @@
 </table>
 </div>
 <hr>
+<h2 id="shell-differences"><a class="header" href="#shell-differences">Shell-Specific Differences</a></h2>
+<p>While all three shells work equally well with screen readers, there are some differences in commands and syntax:</p>
+<h3 id="file-listing--navigation"><a class="header" href="#file-listing--navigation">File Listing &amp; Navigation</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Task</th><th>PowerShell</th><th>CMD</th><th>Git Bash</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>List files</strong></td><td><code>ls -n</code> or <code>dir</code></td><td><code>dir</code></td><td><code>ls -la</code></td></tr>
+<tr><td><strong>Change directory</strong></td><td><code>cd path</code></td><td><code>cd path</code></td><td><code>cd path</code></td></tr>
+<tr><td><strong>Current location</strong></td><td><code>pwd</code></td><td><code>cd</code> (no args)</td><td><code>pwd</code></td></tr>
+<tr><td><strong>Create folder</strong></td><td><code>mkdir foldername</code></td><td><code>mkdir foldername</code></td><td><code>mkdir foldername</code></td></tr>
+<tr><td><strong>Delete file</strong></td><td><code>Remove-Item file.txt</code> or <code>rm file.txt</code></td><td><code>del file.txt</code></td><td><code>rm file.txt</code></td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="output-redirection"><a class="header" href="#output-redirection">Output Redirection</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Task</th><th>PowerShell</th><th>CMD</th><th>Git Bash</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Save to file</strong></td><td><code>command &gt; file.txt</code></td><td><code>command &gt; file.txt</code></td><td><code>command &gt; file.txt</code></td></tr>
+<tr><td><strong>Append to file</strong></td><td><code>command &gt;&gt; file.txt</code></td><td><code>command &gt;&gt; file.txt</code></td><td><code>command &gt;&gt; file.txt</code></td></tr>
+<tr><td><strong>Filter output</strong></td><td><code>command | findstr "text"</code> or <code>| Select-String</code></td><td><code>command | find "text"</code></td><td><code>command | grep "text"</code></td></tr>
+<tr><td><strong>Open file</strong></td><td><code>notepad file.txt</code></td><td><code>notepad file.txt</code></td><td><code>notepad file.txt</code> (Windows) or <code>nano file.txt</code> (macOS/Linux)</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="scripting--automation"><a class="header" href="#scripting--automation">Scripting &amp; Automation</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Feature</th><th>PowerShell</th><th>CMD</th><th>Git Bash</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>File extension</strong></td><td><code>.ps1</code></td><td><code>.bat</code></td><td><code>.sh</code></td></tr>
+<tr><td><strong>Comment</strong></td><td><code>#</code></td><td><code>REM</code></td><td><code>#</code></td></tr>
+<tr><td><strong>Variable</strong></td><td><code>$var = value</code></td><td><code>set var=value</code></td><td><code>var=value</code></td></tr>
+<tr><td><strong>Echo text</strong></td><td><code>echo text</code> or <code>Write-Host</code></td><td><code>echo text</code></td><td><code>echo text</code></td></tr>
+<tr><td><strong>Conditional</strong></td><td><code>if</code> statement</td><td><code>if</code> statement</td><td><code>if</code> statement</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="key-point-for-learners"><a class="header" href="#key-point-for-learners">Key Point for Learners</a></h3>
+<p><strong>Choose ONE pathway and stick with it.</strong> Each curriculum (PowerShell, CMD, Git Bash) teaches you the concepts using that specific shell’s syntax. The accessibility experience is virtually identical—only the command syntax differs. By the end of your chosen curriculum, you’ll understand the principles well enough to adapt to another shell if needed.</p>
+<hr>
 <h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
 <h3 id="problem-1-i-cant-hear-the-output-after-running-a-command"><a class="header" href="#problem-1-i-cant-hear-the-output-after-running-a-command">Problem 1: “I Can’t Hear the Output After Running a Command”</a></h3>
 <p><strong>Causes &amp; Solutions:</strong></p>
@@ -478,7 +548,7 @@
 <p><strong>Output scrolled off-screen</strong></p>
 <ul>
 <li>Solution: Redirect to file: <code>command &gt; output.txt</code></li>
-<li>Then read file: <code>notepad.exe output.txt</code></li>
+<li>Then read file: <code>notepad output.txt</code></li>
 </ul>
 </li>
 <li>
@@ -491,8 +561,10 @@
 <li>
 <p><strong>Large amount of output overwhelming screen reader</strong></p>
 <ul>
-<li>Solution: Use filtering: <code>ls -n | findstr "pattern"</code></li>
-<li>Or save to file for paced reading</li>
+<li>Solution: Use filtering to reduce output</li>
+<li>PowerShell: <code>ls -n | findstr "pattern"</code></li>
+<li>CMD: <code>dir | find "pattern"</code></li>
+<li>Git Bash: <code>ls -la | grep "pattern"</code></li>
 </ul>
 </li>
 </ol>
@@ -516,7 +588,9 @@
 <li>
 <p><strong>Check if item exists</strong></p>
 <ul>
-<li>Use <code>ls -n</code> first to see available items</li>
+<li>PowerShell: Use <code>ls -n</code> to see available items</li>
+<li>CMD: Use <code>dir</code> to see available items</li>
+<li>Git Bash: Use <code>ls -la</code> to see available items</li>
 <li>Then Tab-complete to them</li>
 </ul>
 </li>
@@ -525,10 +599,10 @@
 <p><strong>Causes &amp; Solutions:</strong></p>
 <ol>
 <li>
-<p><strong>Need admin rights</strong></p>
+<p><strong>Need admin rights (Windows)</strong></p>
 <ul>
-<li>Close PowerShell</li>
-<li>Right-click PowerShell -&gt; Run as administrator</li>
+<li>Close your terminal</li>
+<li>Right-click the terminal app -&gt; Run as administrator</li>
 <li>Confirm the UAC prompt</li>
 </ul>
 </li>
@@ -572,7 +646,7 @@
 <li>Type <code>s</code> to make it <code>cd Documents</code></li>
 <li>Press Enter to run it</li>
 </ul>
-<h3 id="problem-6-my-screen-reader-keeps-interrupting-each-other"><a class="header" href="#problem-6-my-screen-reader-keeps-interrupting-each-other">Problem 6: “My Screen Reader Keeps Interrupting Each Other”</a></h3>
+<h3 id="problem-6-my-screen-reader-keeps-interrupting"><a class="header" href="#problem-6-my-screen-reader-keeps-interrupting">Problem 6: “My Screen Reader Keeps Interrupting”</a></h3>
 <p><strong>Causes &amp; Solutions:</strong></p>
 <ol>
 <li>
@@ -586,52 +660,58 @@
 <li>
 <p><strong>Multiple applications speaking</strong></p>
 <ul>
-<li>Use <strong>Alt+Tab</strong> to make PowerShell active window</li>
+<li>Use <strong>Alt+Tab</strong> to make your terminal the active window</li>
 <li>Minimize other programs</li>
 </ul>
 </li>
 <li>
 <p><strong>JAWS reading too fast</strong></p>
 <ul>
-<li>Press <strong>Insert+Down Arrow</strong> in settings</li>
-<li>Look for speech rate and slow it down</li>
+<li>Press <strong>Insert+F3</strong> to open JAWS menu</li>
+<li>Look for “Verbosity” or “Speech Rate” settings</li>
+<li>Slow down the speech rate</li>
 </ul>
 </li>
 </ol>
 <hr>
 <h2 id="pro-tips-for-efficiency"><a class="header" href="#pro-tips-for-efficiency">Pro Tips for Efficiency</a></h2>
-<h3 id="1-create-aliases-for-frequently-used-commands"><a class="header" href="#1-create-aliases-for-frequently-used-commands">1. Create Aliases for Frequently Used Commands</a></h3>
-<p><strong>Example in PowerShell:</strong></p>
+<h3 id="1-create-shortcuts-aliases-for-frequently-used-commands"><a class="header" href="#1-create-shortcuts-aliases-for-frequently-used-commands">1. Create Shortcuts (Aliases) for Frequently Used Commands</a></h3>
+<p><strong>PowerShell:</strong></p>
 <pre><code class="language-powershell">Set-Alias -Name la -Value "ls -n -ad"
 </code></pre>
-<p>Now you can type just <code>la</code> instead of <code>ls -n -ad</code>.</p>
+<p><strong>CMD:</strong> (Create a batch file instead)</p>
+<pre><code class="language-batch">@echo off
+echo "Your command here"
+</code></pre>
+<p><strong>Git Bash:</strong></p>
+<pre><code class="language-bash">alias la='ls -la'
+</code></pre>
+<p>Now you can type just <code>la</code> instead of the full command.</p>
 <h3 id="2-use-command-history-effectively"><a class="header" href="#2-use-command-history-effectively">2. Use Command History Effectively</a></h3>
-<p><strong>See all recent commands:</strong></p>
+<p><strong>All shells support Up/Down arrow keys to navigate history.</strong></p>
+<p>PowerShell specific:</p>
 <pre><code class="language-powershell">history
+Invoke-History 5  # Runs the 5th command
 </code></pre>
-<p><strong>Run a previous command by number:</strong></p>
-<pre><code class="language-powershell">Invoke-History 5
-</code></pre>
-<p>(Runs the 5th command in history)</p>
 <h3 id="3-redirect-everything-to-files-for-accessibility"><a class="header" href="#3-redirect-everything-to-files-for-accessibility">3. Redirect Everything to Files for Accessibility</a></h3>
 <p><strong>If a command produces output, save it:</strong></p>
-<pre><code class="language-powershell">command-name &gt; results.txt
-notepad.exe results.txt
+<pre><code>command-name &gt; results.txt
+notepad results.txt  # Works in all shells
 </code></pre>
 <p>This is always more accessible than reading from terminal.</p>
 <h3 id="4-create-a-readme-for-yourself"><a class="header" href="#4-create-a-readme-for-yourself">4. Create a README for Yourself</a></h3>
-<p><strong>Create a simple help file:</strong></p>
-<pre><code class="language-powershell">echo "ls -n means list names only (screen reader friendly)" &gt; my-notes.txt
-echo "cd means change directory" &gt;&gt; my-notes.txt
-notepad.exe my-notes.txt
+<p><strong>Create a simple help file (works in all shells):</strong></p>
+<pre><code>echo "cd means change directory" &gt; my-notes.txt
+echo "ls lists files" &gt;&gt; my-notes.txt
+notepad my-notes.txt
 </code></pre>
 <p>Come back to it whenever you forget something.</p>
 <hr>
 <h2 id="recommended-workflow"><a class="header" href="#recommended-workflow">Recommended Workflow</a></h2>
 <p><strong>For every new task:</strong></p>
 <ol>
-<li><strong>Know where you are:</strong> <code>pwd</code></li>
-<li><strong>See what’s around:</strong> <code>ls -n</code></li>
+<li><strong>Know where you are:</strong> <code>pwd</code> (or <code>cd</code> with no args in CMD)</li>
+<li><strong>See what’s around:</strong> <code>ls -n</code> (PowerShell), <code>dir</code> (CMD), or <code>ls -la</code> (Git Bash)</li>
 <li><strong>Plan your next step:</strong> Think before typing</li>
 <li><strong>Run the command:</strong> Type and press Enter</li>
 <li><strong>Check the output:</strong> Use screen reader or redirect to file</li>
@@ -641,24 +721,26 @@ notepad.exe my-notes.txt
 <hr>
 <h2 id="quick-reference-card"><a class="header" href="#quick-reference-card">Quick Reference Card</a></h2>
 <p><strong>Print or save this:</strong></p>
-<pre><code>EVERY COMMAND STARTS WITH:
+<pre><code>EVERY SESSION STARTS WITH:
 1. pwd (where am I?)
-2. ls -n (what's here?)
+2. dir/ls (what's here?)
 3. cd path (go there)
 
 LONG OUTPUT?
 -&gt; command &gt; file.txt
--&gt; notepad.exe file.txt
+-&gt; notepad file.txt
 
 STUCK?
 -&gt; Ctrl+C
 
 WANT TO REPEAT?
 -&gt; Up Arrow
--&gt; History
+-&gt; Command history
 
 NEED HELP?
--&gt; Get-Help command-name
+-&gt; PowerShell: Get-Help command-name
+-&gt; CMD: help command-name
+-&gt; Bash: man command-name
 </code></pre>
 <hr>
 <h2 id="additional-resources"><a class="header" href="#additional-resources">Additional Resources</a></h2>
@@ -666,6 +748,8 @@ NEED HELP?
 <li><strong>NVDA Documentation:</strong> https://www.nvaccess.org/documentation/</li>
 <li><strong>JAWS Documentation:</strong> https://www.freedomscientific.com/support/</li>
 <li><strong>PowerShell Docs:</strong> https://docs.microsoft.com/powershell/</li>
+<li><strong>CMD Documentation:</strong> https://docs.microsoft.com/windows-server/administration/windows-commands/windows-commands-glossary</li>
+<li><strong>Git Bash Guide:</strong> https://git-scm.com/</li>
 <li><strong>Accessibility Best Practices:</strong> https://www.w3.org/WAI/</li>
 </ul>
 <hr>
@@ -686,7 +770,7 @@ NEED HELP?
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="../../PowerShell_Foundation/Part_1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../Command_Line_Interface_Selection.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -700,7 +784,7 @@ NEED HELP?
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="../../PowerShell_Foundation/Part_1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../Command_Line_Interface_Selection.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>

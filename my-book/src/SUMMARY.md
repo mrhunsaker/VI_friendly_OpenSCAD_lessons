@@ -91,3 +91,7 @@
     - [Part 2 Appendix B: Material Properties & Selection Guide](3dMake_Foundation/Appendix_B_Material_Properties.md)
     - [Part 2 Appendix C: Tolerance Testing & Quality Assurance Matrix](3dMake_Foundation/Appendix_C_Tolerance_QA.md)
     - [Part 2 Appendix D: PowerShell Integration for SCAD Workflows](3dMake_Foundation/Appendix_D_PowerShell_Integration.md)
+
+---
+
+[About the Author](Contributors.md)
