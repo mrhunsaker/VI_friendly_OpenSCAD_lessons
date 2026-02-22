@@ -8,15 +8,18 @@
 
 A command-line interface is a text-based way to control your computer by typing commands instead of clicking buttons. It's like sending written instructions to your computer.
 
-**Why learn it?**
+### Why learn it?
+
 - **Speed:** Text commands are often faster than clicking through menus
 - **Precision:** Exact control over what your computer does
 - **Accessibility:** Perfect for screen readers - text is naturally readable
 - **Automation:** Repeat tasks automatically
 - **3D Printing:** Essential for batch processing models and integrating tools
 
-**Real-world example:**
+### Real-world example
+
 Instead of:
+
 1. Opening File Explorer (click)
 2. Navigating folders (click, click, click)
 3. Right-clicking a file (click)
@@ -40,6 +43,7 @@ Windows offers three ways to use the command line. All are accessible with scree
 **Best for:** Absolute beginners, maximum simplicity
 
 **Pros:**
+
 - Simple commands and syntax
 - Minimal learning curve
 - Easy to understand error messages
@@ -47,12 +51,14 @@ Windows offers three ways to use the command line. All are accessible with scree
 - Perfect entry point to command-line world
 
 **Cons:**
+
 - Limited advanced features
 - Less powerful than alternatives
 - No built-in piping (but available)
 - Smaller ecosystem
 
 **Typical command:**
+
 ```cmd
 copy myfile.txt backup\
 ```
@@ -66,6 +72,7 @@ copy myfile.txt backup\
 **Best for:** Intermediate users, advanced automation
 
 **Pros:**
+
 - Very powerful for scripting
 - Modern syntax and features
 - Excellent for 3D printing automation
@@ -73,12 +80,14 @@ copy myfile.txt backup\
 - Large community
 
 **Cons:**
+
 - Steeper learning curve than CMD
 - More complex syntax
 - More "wordy" commands
 - Overkill for simple tasks
 
 **Typical command:**
+
 ```powershell
 Copy-Item -Path myfile.txt -Destination backup/
 ```
@@ -92,6 +101,7 @@ Copy-Item -Path myfile.txt -Destination backup/
 **Best for:** Programmers, users familiar with Linux, advanced users
 
 **Pros:**
+
 - Familiar if you know Linux/Unix
 - Powerful piping and text processing
 - Consistent with other platforms (macOS, Linux)
@@ -99,6 +109,7 @@ Copy-Item -Path myfile.txt -Destination backup/
 - Industry-standard for developers
 
 **Cons:**
+
 - Requires Git installation
 - Steeper learning curve
 - Path syntax is different from native Windows
@@ -106,6 +117,7 @@ Copy-Item -Path myfile.txt -Destination backup/
 - May be "too much" for beginners
 
 **Typical command:**
+
 ```bash
 cp myfile.txt backup/
 ```
@@ -140,18 +152,18 @@ Here's how common tasks compare across the three options:
 
 ## Feature Comparison Table
 
-| Feature                      | CMD            | PowerShell      | Git Bash         |
-|------------------------------|----------------|-----------------|------------------|
-| **Simplicity**               | ⭐⭐⭐ Easiest    | ⭐⭐ Moderate     | ⭐ Hardest        |
-| **Beginner-Friendly**        | ⭐⭐⭐ Best       | ⭐⭐ Good         | ⭐ Challenging    |
-| **Power/Capability**         | ⭐ Basic        | ⭐⭐⭐ Excellent   | ⭐⭐⭐ Excellent    |
-| **Screen Reader Compatible** | ⭐⭐⭐ Perfect    | ⭐⭐⭐ Perfect     | ⭐⭐⭐ Perfect      |
-| **Linux/macOS Skills**       | ⭐ Windows-only | ⭐⭐ Some overlap | ⭐⭐⭐ Full overlap |
-| **3D Printing Automation**   | ⭐⭐ Adequate    | ⭐⭐⭐ Excellent   | ⭐⭐ Adequate      |
-| **Learning Curve**           | ⭐⭐⭐ Gentle     | ⭐⭐ Moderate     | ⭐ Steep          |
-| **Community Support**        | ⭐⭐ Moderate    | ⭐⭐⭐ Excellent   | ⭐⭐⭐ Excellent    |
-| **Windows Integration**      | ⭐⭐⭐ Perfect    | ⭐⭐⭐ Perfect     | ⭐⭐ Good          |
-| **Installation Difficulty**  | ✓ Built-in     | ✓ Built-in      | ⚠️ Requires Git  |
+| Feature                      | CMD          | PowerShell   | Git Bash     |
+|------------------------------|--------------|--------------|--------------|
+| **Simplicity**               | Easiest      | Moderate     | Hardest      |
+| **Beginner-Friendly**        | Best         | Good         | Challenging  |
+| **Power/Capability**         | Basic        | Excellent    | Excellent    |
+| **Screen Reader Compatible** | Perfect      | Perfect      | Perfect      |
+| **Linux/macOS Skills**       | Windows-only | Some overlap | Full overlap |
+| **3D Printing Automation**   | Adequate     | Excellent    | Adequate     |
+| **Learning Curve**           | Gentle       | Moderate     | Steep        |
+| **Community Support**        | Moderate     | Excellent    | Excellent    |
+| **Windows Integration**      | Perfect      | Perfect      | Good         |
+| **Installation Difficulty**  | Built-in     | Built-in     | Requires Git |
 
 ---
 
@@ -160,21 +172,25 @@ Here's how common tasks compare across the three options:
 Answer these questions to find your best match:
 
 ### Question 1: Experience Level
+
 - **A:** I've never used a command line → **Easier paths better (CMD or PowerShell)**
 - **B:** I've used terminals before → **Any path works**
 - **C:** I use macOS or Linux → **Git Bash most natural**
 
 ### Question 2: What matters most?
+
 - **A:** Simplicity and quick learning → **Choose CMD**
 - **B:** Power and advanced features → **Choose PowerShell**
 - **C:** Consistency across Windows/Mac/Linux → **Choose Git Bash**
 
 ### Question 3: Future goals
+
 - **A:** Just need to manage files for 3D printing → **CMD is fine**
 - **B:** Advanced automation and scripting → **PowerShell recommended**
 - **C:** Professional development workflows → **Git Bash best**
 
 ### Question 4: Your main concern
+
 - **A:** Don't want steep learning curve → **CMD**
 - **B:** Want industry-standard skills → **Git Bash**
 - **C:** Want Microsoft's modern tool → **PowerShell**
@@ -184,41 +200,48 @@ Answer these questions to find your best match:
 ## Recommendation by Goal
 
 ### Goal: "I want to learn the basics and get to 3D printing quickly"
-**→ Start with CMD (Command Prompt)**
+
+#### → Start with CMD (Command Prompt)
+
 - Simplest syntax
 - Fastest to get productive
 - All core concepts transfer to others
 - Can switch later if needed
 
-[Start CMD Foundation](../CMD_Foundation/CMD_Curriculum_Overview/CMD_Curriculum_Overview.md)
+[Start CMD Foundation](../CMDFoundation/CMDCurriculumOverview/CMDCurriculumOverview.md)
 
 ---
 
 ### Goal: "I want power and professional automation"
-**→ Start with PowerShell**
+
+#### → Start with PowerShell
+
 - Microsoft's modern, recommended tool
 - Professional-grade capabilities
 - Better for complex 3D printing workflows
 - Skills are in-demand
 
-[Start PowerShell Foundation](../PowerShell_Foundation/PowerShell_Curriculum_Overview/PowerShell_Curriculum_Overview.md)
+[Start PowerShell Foundation](../PowerShellFoundation/PowerShellCurriculumOverview/PowerShellCurriculumOverview.md)
 
 ---
 
 ### Goal: "I want skills that work on Windows, Mac, and Linux"
-**→ Start with Git Bash**
+
+#### → Start with Git Bash
+
 - Unix/bash skills transfer everywhere
 - Great preparation for professional development
 - Consistent across all platforms
 - Growing standard in 3D printing tools
 
-[Start Git Bash Foundation](../GitBash_Foundation/GitBash_Curriculum_Overview/GitBash_Curriculum_Overview.md)
+[Start Git Bash Foundation](../GitBashFoundation/GitBashCurriculumOverview/GitBashCurriculumOverview.md)
 
 ---
 
 ## Can I Switch Paths Later?
 
 **Yes, absolutely!** All three teach the same fundamental concepts:
+
 - File navigation and organization
 - Creating and managing files/folders
 - Combining commands for powerful workflows
@@ -232,7 +255,8 @@ Once you learn one, switching to another is quick. The concepts are identical; o
 
 ## Important: All Are Equally Accessible
 
-✓ **Screen readers work perfectly with all three**
+### Screen readers work perfectly with all three
+
 - Text-based by nature (perfect for NVDA, JAWS)
 - No mouse required
 - Output is naturally readable
@@ -246,8 +270,9 @@ Don't let accessibility concerns influence your choice. All are fully accessible
 
 Take a moment and choose:
 
-### 1️⃣ **I want the simplest path**
-→ [Command Prompt Foundation](../CMD_Foundation/Part_1.md)
+### 1️ **I want the simplest path**
+
+→ [Command Prompt Foundation](../CMDFoundation/Part1.md)
 
 - **Time to first success:** ~30 minutes
 - **Learning curve:** Gentlest
@@ -255,8 +280,9 @@ Take a moment and choose:
 
 ---
 
-### 2️⃣ **I want modern, powerful Windows tools**
-→ [PowerShell Foundation](../PowerShell_Foundation/Part_1.md)
+### 2️ **I want modern, powerful Windows tools**
+
+→ [PowerShell Foundation](../PowerShellFoundation/Part1.md)
 
 - **Time to first success:** ~45 minutes
 - **Learning curve:** Moderate
@@ -264,8 +290,9 @@ Take a moment and choose:
 
 ---
 
-### 3️⃣ **I want Unix/Linux skills that work everywhere**
-→ [Git Bash Foundation](../GitBash_Foundation/Part_1.md)
+### 3️ **I want Unix/Linux skills that work everywhere**
+
+→ [Git Bash Foundation](../GitBashFoundation/Part1.md)
 
 - **Time to first success:** ~1 hour
 - **Learning curve:** Steeper but rewarding
@@ -280,6 +307,7 @@ Take a moment and choose:
 > **Start with Command Prompt (CMD).** It's the gentlest introduction. You'll be productive quickly and can always switch to PowerShell or Git Bash later. The skills transfer completely.
 
 After completing CMD:
+
 - Want more power? → PowerShell is next
 - Want Linux skills? → Git Bash is next
 - Want to stick with CMD? → You have all the skills you need
@@ -308,10 +336,10 @@ A: Mix of all three, but Git Bash/Linux is most common in cross-platform teams.
 ## Ready to Begin?
 
 Choose your path above and click to start. Remember:
+
 - Each lesson includes practice exercises
 - You can't break anything
 - Mistakes are learning opportunities
 - Ask for help if stuck
 
 **Let's get you comfortable with the command line!**
-

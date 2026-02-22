@@ -159,19 +159,19 @@ After completing all assessments, check off what you can do:
 You encounter these situations. How would you solve each?
 
 1. "I can't remember what folder I'm in"
-   - **Solution:** ____________________________
+   - **Solution:** 
 
 2. "I accidentally started deleting files with a wildcard"
-   - **Solution:** ____________________________
+   - **Solution:** 
 
 3. "The output scrolled by too fast to read"
-   - **Solution:** ____________________________
+   - **Solution:** 
 
 4. "Tab completion isn't working for a folder"
-   - **Solution:** ____________________________
+   - **Solution:** 
 
 5. "My batch file created an extra folder I didn't want"
-   - **Solution:** ____________________________
+   - **Solution:** 
 
 ---
 

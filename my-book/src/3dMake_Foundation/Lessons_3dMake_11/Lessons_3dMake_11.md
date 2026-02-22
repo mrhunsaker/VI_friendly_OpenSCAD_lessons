@@ -19,13 +19,14 @@ Estimated time: 90-120 minutes | **Level:** Advanced
 - Calipers for measurement
 - Reference: [master-rubric.md](master-rubric.md) for design documentation standards
 
-**Extension Project**: Complete [Beaded_Jewelry_Unit](beaded-jewelry.md) to apply stakeholder-centric design principles in a real project context.
+**Extension Project**: Complete [BeadedJewelryUnit](beaded-jewelry.md) to apply stakeholder-centric design principles in a real project context.
 
 ---
 
 ## Why This Matters: The Design Thinking Process
 
 Most design failures start before CAD. They happen because:
+
 - **Assumption Problem:** Designer assumes what users need without asking
 - **Specification Problem:** Unclear requirements lead to wasted iterations
 - **Accessibility Problem:** Features designed without considering all users
@@ -34,7 +35,7 @@ This lesson flips the process: **Listen First, Design Second**[^1].
 
 ### The Design Thinking Pipeline
 
-```
+```plaintext
 1. Empathize (Listen to stakeholder)
    v
 2. Define (Extract functional requirements)
@@ -55,6 +56,7 @@ This lesson flips the process: **Listen First, Design Second**[^1].
 ### What is a Stakeholder?
 
 A stakeholder is anyone who will use, interact with, or be affected by your design. Examples:
+
 - **End User:** Person who directly uses the product
 - **Maintenance Person:** Someone who repairs/replaces parts
 - **Budget Holder:** Person responsible for cost
@@ -63,12 +65,14 @@ A stakeholder is anyone who will use, interact with, or be affected by your desi
 ### Open-Ended Interview Questions
 
 Good interview questions:
+
 - [YES] Start with "What," "How," "Why"
 - [YES] Don't suggest answers
 - [YES] Follow up with "Tell me more..."
 - [YES] Listen for numbers, specific stories, pain points
 
 Bad interview questions:
+
 - [NO] "Do you like...?" (Yes/No - no detail)
 - [NO] "Would you prefer A or B?" (Forced choice)
 - [NO] "Don't you think...?" (Leading question)
@@ -77,7 +81,7 @@ Bad interview questions:
 
 You're designing a custom beaded bracelet holder. Here's how to interview a stakeholder:
 
-```
+```plaintext
 Opening:
 "Hi [name], I'm designing a way to store and display beaded 
 bracelets. I'd love to understand how YOU currently use bracelets 
@@ -128,12 +132,14 @@ and come back with a prototype for feedback."
 **Scenario: Meet Sarah, a jewelry enthusiast**
 
 Sarah has 15+ beaded bracelets but they're tangled in a drawer. She wants to:
+
 - Display them where she can see them
 - Keep them organized by color/style
 - Protect them from tangling
 - Fit in a small space on her desk
 
 Constraints:
+
 - Budget: $15 materials cost
 - Space: 6" x 6" footprint maximum
 - Aesthetic: Minimalist, natural wood preferred
@@ -160,14 +166,14 @@ For your beaded jewelry holder, extract 5-8 requirements:
 
 ```
 Functional Requirements:
-1. Capacity: Hold _____ bracelets
-2. Organization: Arrange by _____ (color/size/style)
-3. Protection: Prevent _____ (tangling/damage)
-4. Display: Visible from _____ (above/front/sides)
-5. Dimensions: _____ mm wide, _____ mm deep, _____ mm tall
-6. Material: _____ (wood/plastic/metal)
-7. Accessibility: _____ (non-visual inspection method)
-8. Durability: Withstand _____ (weight/use/time)
+1. Capacity: Hold  bracelets
+2. Organization: Arrange by  (color/size/style)
+3. Protection: Prevent  (tangling/damage)
+4. Display: Visible from  (above/front/sides)
+5. Dimensions:  mm wide,  mm deep,  mm tall
+6. Material:  (wood/plastic/metal)
+7. Accessibility:  (non-visual inspection method)
+8. Durability: Withstand  (weight/use/time)
 ```
 
 ### Measurable Acceptance Criteria
@@ -196,46 +202,46 @@ Based on functional requirements, create a parametric SCAD model:
 // Requirements: [List 3-5 key requirements]
 
 // === PARAMETERS (from stakeholder requirements) ===
-holder_width = 150;      // mm - width for 15+ bracelets
-holder_depth = 80;       // mm - depth for stability
-holder_height = 120;     // mm - height for display
-num_pegs = 16;           // Number of hanging pegs
-peg_diameter = 6;        // mm - bracelet hang diameter
-peg_spacing = holder_width / (num_pegs + 1);
+holderwidth = 150;      // mm - width for 15+ bracelets
+holderdepth = 80;       // mm - depth for stability
+holderheight = 120;     // mm - height for display
+numpegs = 16;           // Number of hanging pegs
+pegdiameter = 6;        // mm - bracelet hang diameter
+pegspacing = holderwidth / (numpegs + 1);
 
 // === DESIGN ===
 
 module base() {
   // Wooden-look base plate
-  cube([holder_width, holder_depth, 10]);
+  cube([holderwidth, holderdepth, 10]);
 }
 
-module back_wall() {
+module backwall() {
   // Back support for stability
   translate([0, 0, 10])
-    cube([holder_width, 5, holder_height]);
+    cube([holderwidth, 5, holderheight]);
 }
 
-module hanging_pegs() {
+module hangingpegs() {
   // Pegs for bracelets to hang
-  for (i = [1 : num_pegs]) {
-    x_pos = peg_spacing * i;
-    translate([x_pos, holder_depth/2, holder_height - 20])
-      cylinder(r=peg_diameter/2, h=30, $fn=16);
+  for (i = [1 : numpegs]) {
+    xpos = pegspacing * i;
+    translate([xpos, holderdepth/2, holderheight - 20])
+      cylinder(r=pegdiameter/2, h=30, $fn=16);
   }
 }
 
-module bracelet_holder() {
+module braceletholder() {
   // Combine all components
   union() {
     base();
-    back_wall();
-    hanging_pegs();
+    backwall();
+    hangingpegs();
   }
 }
 
 // Main
-bracelet_holder();
+braceletholder();
 ```
 
 ### Customization Based on Stakeholder Feedback
@@ -250,9 +256,9 @@ Interview revealed:
 - "Small desk space - maybe 5 inches wide?"
 
 Updated parameters:
-num_pegs = 15;           // Exact count for their collection
-holder_width = 127;      // 5 inches in mm
-peg_spacing = holder_width / (num_pegs + 1);
+numpegs = 15;           // Exact count for their collection
+holderwidth = 127;      // 5 inches in mm
+pegspacing = holderwidth / (numpegs + 1);
 ```
 
 ### Testing Non-Visually
@@ -280,11 +286,12 @@ peg_spacing = holder_width / (num_pegs + 1);
 After printing a test version:
 
 1. **Measure physical parts:**
+
    ```bash
    # Use calipers to verify
-   - Actual width: _____ mm (design: 127mm)
-   - Actual peg diameter: _____ mm (design: 6mm)
-   - Actual spacing: _____ mm
+   - Actual width:  mm (design: 127mm)
+   - Actual peg diameter:  mm (design: 6mm)
+   - Actual spacing:  mm
    ```
 
 2. **Test with actual bracelets:**
@@ -294,6 +301,7 @@ After printing a test version:
    - Is it stable on the desk?
 
 3. **Document feedback:**
+
    ```markdown
    Test Results:
    - [YES] Holds 15 bracelets comfortably
@@ -302,15 +310,16 @@ After printing a test version:
    -  Wobbles slightly - needs wider base
    
    Adjustments for v2:
-   - Increase peg_diameter: 6mm -> 8mm
-   - Increase base_depth: 80mm -> 100mm
+   - Increase pegdiameter: 6mm -> 8mm
+   - Increase basedepth: 80mm -> 100mm
    ```
 
 4. **Iterate:**
+
    ```openscad
    // Modified parameters for v2
-   peg_diameter = 8;        // Thicker pegs (8mm instead of 6mm)
-   holder_depth = 100;      // Wider base (100mm instead of 80mm)
+   pegdiameter = 8;        // Thicker pegs (8mm instead of 6mm)
+   holderdepth = 100;      // Wider base (100mm instead of 80mm)
    ```
 
 5. **Reprint and test:**
@@ -322,7 +331,7 @@ After printing a test version:
 
 Document all iterations in a spreadsheet or text file:
 
-```
+```plaintext
 Version | Peg Size | Base Depth | Fits Bracelets | Stable | Notes
 --------|----------|------------|----------------|--------|--------------------
 v1      | 6mm      | 80mm       | [YES] (14/15)  |        | Wobbles, pegs thin
@@ -346,7 +355,7 @@ v3      | 8mm      | 100mm      | [YES] (15/15)  | [YES]  | With wood stain
    - Extracted functional requirements
    - Acceptance criteria for each requirement
 
-2. **Design SCAD File** (`bracelet_holder.scad`)
+2. **Design SCAD File** (`braceletholder.scad`)
    - Parametric design with all requirements
    - Clear parameters at top (easily customizable)
    - Well-commented modules
@@ -372,16 +381,19 @@ v3      | 8mm      | 100mm      | [YES] (15/15)  | [YES]  | With wood stain
 ### Assessment Rubric (0-9 scale)
 
 **Problem & Solution (0-3 points)**
+
 - Stakeholder clearly identified and interviewed
 - Requirements extracted from interview (not assumptions)
 - Functional requirements are specific and measurable
 
 **Design & Code Quality (0-3 points)**
+
 - SCAD code is parametric and well-organized
 - Design meets all extracted requirements
 - Iterations show thoughtful refinement based on feedback
 
 **Documentation (0-3 points)**
+
 - Interview process clearly documented
 - Design decisions justified with stakeholder feedback
 - Iteration log shows testing methodology
@@ -434,6 +446,7 @@ The 11 lessons have taken you from beginner to advanced designer. This final les
 ### Next Steps After This Lesson
 
 You're now ready for:
+
 - [YES] Professional product design workflows
 - [YES] Customer-driven development
 - [YES] Small-batch manufacturing
@@ -444,6 +457,6 @@ You're now ready for:
 
 **References**
 
-[^1]: Design Thinking Process - IDEO - https://www.ideo.com/perspectives/design-thinking
-[^2]: Functional Requirements in Product Design - https://www.productschool.com/blog/requirements/
-[^3]: Accessible Design Documentation - https://www.a11y-101.com/design/inclusive-documentation
+[^1]: Design Thinking Process - IDEO - <https://www.ideo.com/perspectives/design-thinking>
+[^2]: Functional Requirements in Product Design - <https://www.productschool.com/blog/requirements/>
+[^3]: Accessible Design Documentation - <https://www.a11y-101.com/design/inclusive-documentation>

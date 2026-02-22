@@ -1,27 +1,27 @@
 
-// 01_cube_keycap.scad
+// 01cubekeycap.scad
 // Beginner: A simple 20mm cube keycap with an embossed letter
 // Parameters
-key_size = 18;     // mm
-key_height = 12;   // mm
+keysize = 18;     // mm
+keyheight = 12;   // mm
 wall = 1.2;        // mm
 letter = "R";      // change to your preferred letter
-letter_size = 10;  // mm
-letter_raise = 0.8;// mm
+lettersize = 10;  // mm
+letterraise = 0.8;// mm
 
 module shell(){
   difference(){
-    cube([key_size, key_size, key_height], center=false);
+    cube([keysize, keysize, keyheight], center=false);
     translate([wall, wall, wall])
-      cube([key_size-2*wall, key_size-2*wall, key_height], center=false);
+      cube([keysize-2*wall, keysize-2*wall, keyheight], center=false);
   }
 }
 
 module emboss(){
   // Emboss letter on top face
-  translate([key_size/2, key_size/2, key_height-0.01])
-    linear_extrude(height=letter_raise)
-      text(letter, size=letter_size, halign="center", valign="center");
+  translate([keysize/2, keysize/2, keyheight-0.01])
+    linearextrude(height=letterraise)
+      text(letter, size=lettersize, halign="center", valign="center");
 }
 
 union(){

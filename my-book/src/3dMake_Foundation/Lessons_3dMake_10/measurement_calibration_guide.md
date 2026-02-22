@@ -153,13 +153,13 @@ Example:
 
 ### Critical Measurements to Track
 
-| Measurement | Method | Tolerance | Frequency |
-|------------|--------|-----------|-----------|
-| Wall thickness | Calipers (multiple spots) | +/-0.1mm | Every print |
-| Hole diameter | Calipers or gauge | +/-0.1-0.2mm | Every print |
-| Overall dimensions | Ruler/calipers | +/-0.2mm | Monthly |
-| Layer height | Stack on calipers | +/-0.02mm | Monthly |
-| Vertical dimensions | Measure sides | +/-0.1mm | Every print |
+| Measurement         | Method                    | Tolerance    | Frequency   |
+|---------------------|---------------------------|--------------|-------------|
+| Wall thickness      | Calipers (multiple spots) | +/-0.1mm     | Every print |
+| Hole diameter       | Calipers or gauge         | +/-0.1-0.2mm | Every print |
+| Overall dimensions  | Ruler/calipers            | +/-0.2mm     | Monthly     |
+| Layer height        | Stack on calipers         | +/-0.02mm    | Monthly     |
+| Vertical dimensions | Measure sides             | +/-0.1mm     | Every print |
 
 ---
 
@@ -169,12 +169,12 @@ Example:
 
 Different materials shrink differently after cooling:
 
-| Material | Typical Shrinkage | Compensation |
-|----------|------------------|--------------|
-| PLA | 0.3-0.5% | Usually acceptable, no action |
-| PETG | 0.5-1% | Scale design up by 0.5-1% if critical |
-| ABS | 0.8-1.5% | Scale design up by 1% minimum |
-| TPU | 1-2% | Significant - scale up 1-2% for critical dimensions |
+| Material | Typical Shrinkage | Compensation                                        |
+|----------|-------------------|-----------------------------------------------------|
+| PLA      | 0.3-0.5%          | Usually acceptable, no action                       |
+| PETG     | 0.5-1%            | Scale design up by 0.5-1% if critical               |
+| ABS      | 0.8-1.5%          | Scale design up by 1% minimum                       |
+| TPU      | 1-2%              | Significant - scale up 1-2% for critical dimensions |
 
 **How to apply in design:**
 ```
@@ -197,12 +197,12 @@ Different bed temperatures affect final dimensions:
 
 ### Environmental Factors
 
-| Factor | Effect | Mitigation |
-|--------|--------|-----------|
-| Room temperature | Affects cooling rate | Maintain 20-22C |
-| Humidity | Affects material properties | Keep 40-60% RH |
-| Air flow | Inconsistent cooling | Avoid drafts near printer |
-| Time of day | Material temperature varies | Print at consistent times |
+| Factor           | Effect                      | Mitigation                |
+|------------------|-----------------------------|---------------------------|
+| Room temperature | Affects cooling rate        | Maintain 20-22C           |
+| Humidity         | Affects material properties | Keep 40-60% RH            |
+| Air flow         | Inconsistent cooling        | Avoid drafts near printer |
+| Time of day      | Material temperature varies | Print at consistent times |
 
 ---
 
@@ -237,13 +237,13 @@ Different bed temperatures affect final dimensions:
 
 ## Measurement Tools Needed
 
-| Tool | Cost | Accuracy | Use |
-|------|------|----------|-----|
-| Digital Calipers | $5-15 | +/-0.05mm | Primary measurements |
-| Steel Ruler | $3-10 | +/-1mm | Quick rough checks |
-| Vernier Calipers | $10-30 | +/-0.05mm | Precision work |
-| Micrometer | $20-50 | +/-0.01mm | Critical tolerances |
-| Layer Height Gauge | DIY or $5-10 | +/-0.05mm | Layer verification |
+| Tool               | Cost         | Accuracy  | Use                  |
+|--------------------|--------------|-----------|----------------------|
+| Digital Calipers   | $5-15        | +/-0.05mm | Primary measurements |
+| Steel Ruler        | $3-10        | +/-1mm    | Quick rough checks   |
+| Vernier Calipers   | $10-30       | +/-0.05mm | Precision work       |
+| Micrometer         | $20-50       | +/-0.01mm | Critical tolerances  |
+| Layer Height Gauge | DIY or $5-10 | +/-0.05mm | Layer verification   |
 
 **Recommendation:** Start with digital calipers (most versatile and affordable)
 
@@ -282,8 +282,8 @@ These models are helpful for calibration:
 
 ---
 
-**Last Calibration Date:** _______________  
-**Printer Model:** _______________  
-**Current E-Steps:** _______________  
-**Current Flow Rate:** _______________  
-**Materials Calibrated For:** _______________
+**Last Calibration Date:** _  
+**Printer Model:** _  
+**Current E-Steps:** _  
+**Current Flow Rate:** _  
+**Materials Calibrated For:** _

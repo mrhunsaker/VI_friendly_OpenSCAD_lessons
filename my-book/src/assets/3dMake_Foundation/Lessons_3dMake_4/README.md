@@ -6,7 +6,7 @@
 
 This folder contains supporting materials for Lesson 4:
 
-- **Extension Projects:** Dice_Dice_Dice for practical testing and validation
+- **Extension Projects:** DiceDiceDice for practical testing and validation
 - **Reference Materials:** Master Rubric for design assessment
 - **Templates:** Design validation worksheets and feedback forms
 
@@ -19,12 +19,12 @@ This folder contains supporting materials for Lesson 4:
 
 ## Key Materials
 
-- [Lesson 4 Main Content](../../../3dMake_Foundation/Lessons_3dMake_4/Lessons_3dMake_4.md)
-- [Master Rubric](../../../3dMake_Foundation/Lessons_3dMake_11/master-rubric.md) - Design quality evaluation criteria
+- [Lesson 4 Main Content](../../../3dMakeFoundation/Lessons3dMake4/Lessons3dMake4.md)
+- [Master Rubric](../../../3dMakeFoundation/Lessons3dMake11/master-rubric.md) - Design quality evaluation criteria
 
 ## Extension Projects in This Folder
 
-### Dice_Dice_Dice
+### DiceDiceDice
 
 **Purpose:** Parametric design with testing and validation; introduces experimental methodology
 
@@ -46,10 +46,10 @@ This folder contains supporting materials for Lesson 4:
 ## Quick Start
 
 1. Complete Lesson 4 with AI verification concepts
-2. Work through Dice_Dice_Dice to practice testing and validation
+2. Work through DiceDiceDice to practice testing and validation
 3. Reference Master Rubric for quality assessment
 4. Document all design decisions and test results
 
 ---
 
-**For navigation:** See [3dMake_Foundation Asset Index](../README.md)
+**For navigation:** See [3dMakeFoundation Asset Index](../README.md)

@@ -68,7 +68,7 @@ Create a `.bat` file for complex shortcuts:
 **File: go-to-project.bat**
 ```batch
 @echo off
-cd C:\Users\%USERNAME%\Documents\3D_Projects
+cd C:\Users\%USERNAME%\Documents\3DProjects
 dir /B
 ```
 

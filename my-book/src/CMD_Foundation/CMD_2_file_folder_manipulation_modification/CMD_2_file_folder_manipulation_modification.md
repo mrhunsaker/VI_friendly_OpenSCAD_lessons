@@ -109,8 +109,8 @@ copy model?.scad models/   :: Copy model1.scad, model2.scad, etc.
 ### Example 1: Create a Project Structure
 
 ```cmd
-mkdir 3D_Projects
-cd 3D_Projects
+mkdir 3DProjects
+cd 3DProjects
 mkdir Models
 mkdir Prints
 mkdir Documentation

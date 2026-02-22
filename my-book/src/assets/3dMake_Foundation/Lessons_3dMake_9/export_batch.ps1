@@ -5,7 +5,7 @@
 # Configuration
 $ProjectName = "3D Print Batch"
 $ScadDirectory = Get-Location
-$OutputDirectory = Join-Path $ScadDirectory "_exports"
+$OutputDirectory = Join-Path $ScadDirectory "exports"
 $OpenSCADPath = "C:\Program Files\OpenSCAD\openscad.exe"
 
 # Ensure OpenSCAD exists
@@ -38,7 +38,7 @@ foreach ($ScadFile in $ScadFiles) {
         
         if (Test-Path $OutputFile) {
             $Size = (Get-Item $OutputFile).Length / 1MB
-            Write-Host "✓ Success ($([Math]::Round($Size, 2)) MB)" -ForegroundColor Green
+            Write-Host " Success ($([Math]::Round($Size, 2)) MB)" -ForegroundColor Green
             $SuccessCount++
         } else {
             Write-Host "✗ Failed" -ForegroundColor Red
@@ -46,7 +46,7 @@ foreach ($ScadFile in $ScadFiles) {
         }
     }
     catch {
-        Write-Host "✗ Error: $_" -ForegroundColor Red
+        Write-Host "✗ Error: $" -ForegroundColor Red
         $FailCount++
     }
 }

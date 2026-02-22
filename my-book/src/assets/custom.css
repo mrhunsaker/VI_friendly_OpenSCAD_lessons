@@ -24,7 +24,7 @@
 }
 
 html {
-  font-size: 1.00rem;
+  font-size: 1rem;
 }
 
 :root {
@@ -64,7 +64,7 @@ li {
 }
 
 h1 {
-  font-size: 5.00rem;
+  font-size: 5rem;
 }
 
 h2 {
@@ -78,18 +78,11 @@ h6 {
   font-size: 1.88rem;
 }
 
-/* Code blocks, inline code, blockquotes use the mono font */
-  font-family:
-    "Atkinson Hyperlegible Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
-    "Courier New", monospace;
-  font-size: 1.34rem;
-}
-
 blockquote {
   font-family:
     "Atkinson Hyperlegible Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
     "Courier New", monospace;
-  font-size: 1.25rem;
+  font-size: 1.34rem;
 }
 
 pre {

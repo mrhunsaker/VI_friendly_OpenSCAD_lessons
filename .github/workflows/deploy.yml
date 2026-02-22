@@ -1,9 +1,8 @@
-
 name: Deploy mdBook to GitHub Pages
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
 permissions:
   contents: read
@@ -18,8 +17,8 @@ jobs:
 
       - name: Install mdBook
         run: |
-          wget https://github.com/rust-lang/mdBook/releases/download/v0.5.2/mdbook-v0.5.2-x86_64-unknown-linux-gnu.tar.gz
-          tar xzf mdbook-v0.5.2-x86_64-unknown-linux-gnu.tar.gz
+          wget https://github.com/rust-lang/mdBook/releases/download/v0.5.2/mdbook-v0.5.2-x8664-unknown-linux-gnu.tar.gz
+          tar xzf mdbook-v0.5.2-x8664-unknown-linux-gnu.tar.gz
 
       - name: Install Rust toolchain
         uses: actions-rs/toolchain@v1
@@ -29,7 +28,7 @@ jobs:
           override: true
 
       - name: Add cargo bin to PATH
-        run: echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+        run: echo "$HOME/.cargo/bin" >> $GITHUBPATH
 
       - name: "CI: debug versions and check bibliography"
         run: |
@@ -40,10 +39,10 @@ jobs:
           cargo --version || true
           python3 --version || true
           echo "--- Show suspect bib ranges ---"
-          sed -n '1018,1030p' my-book/src/global_bibliography.bib || true
-          sed -n '1433,1441p' my-book/src/global_bibliography.bib || true
+          sed -n '1018,1030p' my-book/src/globalbibliography.bib || true
+          sed -n '1433,1441p' my-book/src/globalbibliography.bib || true
           echo "--- Run bib linter ---"
-          python3 scripts/check_bib.py || true
+          python3 scripts/checkbib.py || true
 
       - name: Build book
         run: |
@@ -71,4 +70,3 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
-

@@ -4,9 +4,9 @@
 set -e
 
 # Define directories relative to script location
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-BOOK_DIR="$SCRIPT_DIR/my-book"
-BUILD_OUTPUT="$BOOK_DIR/docs"
+SCRIPTDIR="$(cd "$(dirname "${BASHSOURCE[0]}")" && pwd)"
+BOOKDIR="$SCRIPTDIR/my-book"
+BUILDOUTPUT="$BOOKDIR/docs"
 
 # Check if mdbook is installed
 if ! command -v mdbook &> /dev/null; then
@@ -19,23 +19,23 @@ if ! command -v mdbook &> /dev/null; then
 fi
 
 # Check if book.toml exists
-if [ ! -f "$BOOK_DIR/book.toml" ]; then
-    echo "Error: book.toml not found at $BOOK_DIR/book.toml"
+if [ ! -f "$BOOKDIR/book.toml" ]; then
+    echo "Error: book.toml not found at $BOOKDIR/book.toml"
     exit 1
 fi
 
 # Create output directory if it doesn't exist
-mkdir -p "$BUILD_OUTPUT"
+mkdir -p "$BUILDOUTPUT"
 
 # Build the book
 echo "Building mdbook..."
-echo "  Source: $BOOK_DIR/src/"
-echo "  Output: $BUILD_OUTPUT"
+echo "  Source: $BOOKDIR/src/"
+echo "  Output: $BUILDOUTPUT"
 echo ""
 
-cd "$BOOK_DIR"
-mdbook build --dest-dir "$BUILD_OUTPUT"
+cd "$BOOKDIR"
+mdbook build --dest-dir "$BUILDOUTPUT"
 
 echo ""
-echo "✓ Build complete!"
-echo "HTML output is available at: $BUILD_OUTPUT"
+echo " Build complete!"
+echo "HTML output is available at: $BUILDOUTPUT"

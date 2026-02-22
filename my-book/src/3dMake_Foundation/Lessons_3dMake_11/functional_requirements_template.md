@@ -4,12 +4,12 @@ Document and organize functional requirements derived from stakeholder interview
 
 ## Project Information
 
-- **Project Name:** _________________________
-- **Version:** _________________________
-- **Date Created:** _________________________
-- **Last Updated:** _________________________
-- **Prepared By:** _________________________
-- **Approved By:** _________________________
+- **Project Name:** _
+- **Version:** _
+- **Date Created:** _
+- **Last Updated:** _
+- **Prepared By:** _
+- **Approved By:** _
 
 ---
 
@@ -17,17 +17,17 @@ Document and organize functional requirements derived from stakeholder interview
 
 **Project Description:**
 (One paragraph overview of what this project is about)
-___________________________________________________________
-___________________________________________________________
+_
+_
 
 **Business/User Need:**
 (Why is this project important?)
-___________________________________________________________
+_
 
 **Stakeholders:**
-- Primary user: _____________________________________________________
-- Secondary users: __________________________________________________
-- Decision makers: __________________________________________________
+- Primary user: _
+- Secondary users: 
+- Decision makers: 
 
 ---
 
@@ -39,7 +39,7 @@ Requirements organized by:
 - [ ] User role/perspective
 - [ ] Feature/component
 - [ ] Priority level
-- [ ] Other: _______________
+- [ ] Other: _
 
 ---
 
@@ -52,21 +52,21 @@ Requirements organized by:
 
 **Description:**
 What the product must do:
-___________________________________________________________
+_
 
 **User Stories:**
 - "As a [user type], I want to [action] so that [benefit]"
-  - _______________________________________________________
+  - _
   
 - "As a [user type], I want to [action] so that [benefit]"
-  - _______________________________________________________
+  - _
 
 **Acceptance Criteria:**
-- [ ] _________________________________________________________________
-- [ ] _________________________________________________________________
-- [ ] _________________________________________________________________
+- [ ] 
+- [ ] 
+- [ ] 
 
-**Related Requirements:** ____________________________________
+**Related Requirements:** 
 
 ---
 
@@ -74,17 +74,17 @@ ___________________________________________________________
 **Priority:** [ ] Critical  [ ] High  [ ] Medium  [ ] Low
 
 **Description:**
-___________________________________________________________
+_
 
 **User Stories:**
-- _________________________________________________________________
-- _________________________________________________________________
+- 
+- 
 
 **Acceptance Criteria:**
-- [ ] _________________________________________________________________
-- [ ] _________________________________________________________________
+- [ ] 
+- [ ] 
 
-**Related Requirements:** ____________________________________
+**Related Requirements:** 
 
 ---
 
@@ -101,11 +101,11 @@ ___________________________________________________________
 **Priority:** [ ] High  [ ] Medium  [ ] Low
 
 **Description:**
-___________________________________________________________
+_
 
 **Acceptance Criteria:**
-- [ ] _________________________________________________________________
-- [ ] _________________________________________________________________
+- [ ] 
+- [ ] 
 
 ---
 
@@ -119,34 +119,34 @@ ___________________________________________________________
 *Performance, reliability, and design properties*
 
 ### Performance Requirements
-- Response time: ___________________________________________________
-- Throughput: _______________________________________________________
-- Resource usage: ___________________________________________________
+- Response time: _
+- Throughput: _
+- Resource usage: _
 
 ### Reliability Requirements
-- Failure rate acceptable: _____________________________________________
-- Recovery capability: _________________________________________________
-- Data persistence: ___________________________________________________
+- Failure rate acceptable: _
+- Recovery capability: _
+- Data persistence: _
 
 ### Physical Requirements (for 3D printed objects)
-- Dimensions: ________________________________________________________
-- Weight capacity: ____________________________________________________
-- Material properties: __________________________________________________
-- Temperature range: __________________________________________________
-- Durability: ________________________________________________________
+- Dimensions: 
+- Weight capacity: 
+- Material properties: 
+- Temperature range: 
+- Durability: 
 
 ### Accessibility Requirements
 - [ ] Usable by people with visual impairment
-  - How: __________________________________________________________
+  - How: 
   
 - [ ] Usable by people with motor impairment
-  - How: __________________________________________________________
+  - How: 
   
 - [ ] Usable by people with hearing impairment
-  - How: __________________________________________________________
+  - How: 
   
 - [ ] Usable by people with cognitive differences
-  - How: __________________________________________________________
+  - How: 
 
 ---
 
@@ -155,38 +155,38 @@ ___________________________________________________________
 *Limitations on design and implementation*
 
 ### Technical Constraints
-- Must work with: ____________________________________________________
-- Must not require: __________________________________________________
-- Must be compatible with: ____________________________________________
+- Must work with: 
+- Must not require: 
+- Must be compatible with: 
 
 ### Physical Constraints
-- Cannot exceed (size/weight/cost): _____________________________________
-- Must fit in/with: ___________________________________________________
-- Must be available by (date): _________________________________________
+- Cannot exceed (size/weight/cost): _
+- Must fit in/with: _
+- Must be available by (date): _
 
 ### Regulatory/Safety Constraints
-- Must comply with: __________________________________________________
-- Must not: __________________________________________________________
-- Safety considerations: _______________________________________________
+- Must comply with: 
+- Must not: 
+- Safety considerations: _
 
 ### Cost Constraints
-- Maximum budget: ____________________________________________________
-- Target unit cost: ___________________________________________________
+- Maximum budget: 
+- Target unit cost: _
 
 ---
 
 ## Environmental Context
 
 ### Use Environment
-- Location(s): _______________________________________________________
-- Climate conditions: _________________________________________________
-- Physical surroundings: _______________________________________________
-- Typical usage pattern: _______________________________________________
+- Location(s): _
+- Climate conditions: _
+- Physical surroundings: _
+- Typical usage pattern: _
 
 ### Maintenance & Lifecycle
-- Expected lifespan: __________________________________________________
-- Maintenance needed: ________________________________________________
-- End-of-life handling: ________________________________________________
+- Expected lifespan: 
+- Maintenance needed: 
+- End-of-life handling: 
 
 ---
 
@@ -194,31 +194,31 @@ ___________________________________________________________
 
 **Requirements that depend on other requirements:**
 
-| Requirement | Depends On | Notes |
-|------------|-----------|-------|
-| FR1 | | |
-| FR2 | FR1 | Cannot implement without FR1 |
-| FR3 | | |
+| Requirement | Depends On | Notes                        |
+|-------------|------------|------------------------------|
+| FR1         |            |                              |
+| FR2         | FR1        | Cannot implement without FR1 |
+| FR3         |            |                              |
 
 **External dependencies:**
-- Third-party components needed: ________________________________________
-- Integration points: __________________________________________________
+- Third-party components needed: 
+- Integration points: 
 
 ---
 
 ## Scope Definition
 
 ### What IS In Scope
-- _________________________________________________________________
-- _________________________________________________________________
-- _________________________________________________________________
+- 
+- 
+- 
 
 ### What IS NOT In Scope
-- _________________________________________________________________
-- _________________________________________________________________
+- 
+- 
 
 ### Future Considerations (Out of Scope but noted)
-- _________________________________________________________________
+- 
 
 ---
 
@@ -227,9 +227,9 @@ ___________________________________________________________
 **Requirements Changes:**
 
 | Change Request | Date | Reason | Status |
-|---|---|---|---|
-| | | | |
-| | | | |
+|----------------|------|--------|--------|
+|                |      |        |        |
+|                |      |        |        |
 
 ---
 
@@ -237,10 +237,10 @@ ___________________________________________________________
 
 **How will we verify each requirement is met?**
 
-| Requirement | Verification Method | Test Case | Status |
-|---|---|---|---|
-| FR1 | [Inspection/Test/Demo] | | |
-| FR2 | [Inspection/Test/Demo] | | |
+| Requirement | Verification Method    | Test Case | Status |
+|-------------|------------------------|-----------|--------|
+| FR1         | [Inspection/Test/Demo] |           |        |
+| FR2         | [Inspection/Test/Demo] |           |        |
 
 ---
 
@@ -249,27 +249,27 @@ ___________________________________________________________
 **Stakeholder Approval:**
 
 | Stakeholder | Title | Signature | Date |
-|---|---|---|---|
-| | | | |
-| | | | |
+|-------------|-------|-----------|------|
+|             |       |           |      |
+|             |       |           |      |
 
 **Requirements Baseline Approved:**
-Date: ____________  Status:  Approved /  Pending /  Rejected
+Date:   Status:  Approved /  Pending /  Rejected
 
 ---
 
 ## Reference Documents
 
-- Interview notes: ____________________________________________________
-- Design sketches: ____________________________________________________
-- Related specifications: _______________________________________________
-- Standards/guidelines: ________________________________________________
+- Interview notes: 
+- Design sketches: 
+- Related specifications: _
+- Standards/guidelines: 
 
 ---
 
 **Document Version History:**
 
-| Version | Date | Author | Changes |
-|---|---|---|---|
-| 1.0 | | | Initial draft |
-| | | | |
+| Version | Date | Author | Changes       |
+|---------|------|--------|---------------|
+| 1.0     |      |        | Initial draft |
+|         |      |        |               |

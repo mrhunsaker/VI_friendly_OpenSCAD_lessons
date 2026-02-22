@@ -18,10 +18,12 @@ Before installing 3dMake, ensure you have:
 ### Platform Support
 
 **Supported:**
+
 - **Windows** (32-bit and 64-bit)
 - **Linux** (x86-64 architecture)
 
 **Not Supported:**
+
 - **macOS** - Currently no macOS version is available
 
 ### Step-by-Step Installation
@@ -31,15 +33,17 @@ Before installing 3dMake, ensure you have:
 Visit the 3dMake releases page and download the appropriate version:
 
 **Windows:**
-1. Go to [3dMake Windows Download](https://github.com/tdeck/3dmake/releases/latest/download/3dmake_windows.zip)
-2. This downloads `3dmake_windows.zip` to your computer
+
+1. Go to [3dMake Windows Download](https://github.com/tdeck/3dmake/releases/latest/download/3dmakewindows.zip)
+2. This downloads `3dmakewindows.zip` to your computer
 3. Right-click the file and select "Extract All..." (or use your preferred extraction tool)
 4. Remember where you extracted it (e.g., `C:\Users\YourName\3dmake` or `C:\Program Files\3dmake`)
 
 **Linux:**
-1. Go to [3dMake Linux Download](https://github.com/tdeck/3dmake/releases/latest/download/3dmake_linux.tar.gz)
-2. This downloads `3dmake_linux.tar.gz` to your computer
-3. Extract it using: `tar -xzf 3dmake_linux.tar.gz`
+
+1. Go to [3dMake Linux Download](https://github.com/tdeck/3dmake/releases/latest/download/3dmakelinux.tar.gz)
+2. This downloads `3dmakelinux.tar.gz` to your computer
+3. Extract it using: `tar -xzf 3dmakelinux.tar.gz`
 4. Remember where you extracted it (e.g., `~/3dmake` or `/opt/3dmake`)
 
 #### Step 2: Open Your Terminal
@@ -88,6 +92,7 @@ From inside the 3dMake directory, run:
 ```
 
 Follow the prompts to configure:
+
 - Your default printer profile (e.g., Prusa MK4, Bambu Lab)
 - OctoPrint connection (if you use OctoPrint)
 - AI integration (optional - for model descriptions)
@@ -106,6 +111,7 @@ After setup finishes, 3dMake will be available from any directory. You can now u
 ```
 
 You should see the installed version number. If you see an error, verify:
+
 - You're in the 3dMake directory
 - The extraction completed successfully
 - Your terminal has access to the extracted files
@@ -138,12 +144,14 @@ A 3dMake project is a folder structure that organizes:
 Decide where you want your project. Examples:
 
 **Windows:**
+
 ```powershell
 C:\Users\YourName\Documents\3d-projects\
 C:\Users\YourName\Desktop\MyProject\
 ```
 
 **Linux:**
+
 ```bash
 ~/3d-projects/
 ~/Documents/3d-projects/
@@ -240,6 +248,7 @@ This opens `src/mymodel.scad`.
 **Manual File Creation:**
 
 You can also create `.scad` files directly in the `src/` folder using your preferred text editor:
+
 - Visual Studio Code
 - Notepad++ (Windows)
 - Gedit (Linux)
@@ -272,6 +281,7 @@ To see statistics about your model:
 ```
 
 Output includes:
+
 - **Bounding box** - dimensions (X, Y, Z in millimeters)
 - **Volume** - cubic millimeters of material
 - **Face count** - total triangles in the mesh
@@ -303,6 +313,7 @@ To print the preview directly:
 ```
 
 Available preview types:
+
 - `3sil` - Three silhouettes (front, left, top) - **default**
 - `frontsil` - Front-facing silhouette only
 - `topsil` - Top-down silhouette only
@@ -322,6 +333,7 @@ To slice your model (convert STL to GCODE for your printer):
 ```
 
 This creates both:
+
 - `build/main.stl` - the 3D model
 - `build/main.gcode` - sliced for your printer
 
@@ -401,7 +413,7 @@ Create a `README.md` in your `3d-projects/` folder to track all projects:
 3. **ThirdProject** - Functional brackets for printing
    - Location: `./ThirdProject/src/`
    - Status: In progress
-   - Latest model: `bracket_assembly.scad`
+   - Latest model: `bracketassembly.scad`
 ```
 
 ### Building from All Projects
@@ -412,7 +424,7 @@ To build models from all projects:
 
 ```powershell
 Get-ChildItem -Directory | ForEach-Object {
-    cd $_.FullName
+    cd $.FullName
     3dm build
     cd ..
 }
@@ -438,16 +450,16 @@ Use clear, descriptive names for your `.scad` files:
 
 **Good:**
 
-- `cube_5cm.scad`
-- `parametric_box_v2.scad`
-- `bracket_for_motor.scad`
+- `cube5cm.scad`
+- `parametricboxv2.scad`
+- `bracketformotor.scad`
 - `main.scad` (default project model)
 
 **Avoid:**
 
 - `test.scad`
 - `model1.scad`
-- `final_final_FINAL.scad`
+- `finalfinalFINAL.scad`
 
 ### Understanding TOML Configuration Files
 
@@ -458,29 +470,34 @@ TOML (Tom's Obvious, Minimal Language) is a human-readable configuration file fo
 **Basic TOML Formatting Rules:**
 
 1. **Key-value pairs** - Each setting has a name and value separated by an equals sign:
+
    ```toml
-   project_name = "My Project"
+   projectname = "My Project"
    ```
 
 2. **Strings use quotes** - Text values must be wrapped in double quotes:
+
    ```toml
    editor = "code"
-   printer_profile = "prusa_MK4"
+   printerprofile = "prusaMK4"
    ```
 
 3. **Numbers don't need quotes** - Numeric values stand alone:
+
    ```toml
    scale = 1.05
    copies = 3
    ```
 
 4. **Boolean values are true or false** - Lowercase, no quotes:
+
    ```toml
-   auto_start_prints = true
-   edit_in_background = false
+   autostartprints = true
+   editinbackground = false
    ```
 
 5. **Arrays use square brackets** - Lists of values separated by commas:
+
    ```toml
    overlays = ["supports", "PETG"]
    libraries = ["bosl", "braille-chars"]
@@ -488,27 +505,29 @@ TOML (Tom's Obvious, Minimal Language) is a human-readable configuration file fo
 
 6. **One setting per line** - Each configuration on its own line
 7. **Comments start with #** - Use for notes (not processed):
+
    ```toml
    # This is my default printer
-   printer_profile = "prusa_MK4"
+   printerprofile = "prusaMK4"
    ```
 
 **How 3dMake Uses TOML:**
 
 3dMake has two TOML configuration files:
+
 - **Global config** (`defaults.toml`) - Settings for all your projects (run `3dm edit-global-config` to edit)
 - **Project config** (`3dmake.toml`) - Settings specific to one project (located in your project root)
 
-Project settings override global settings. For example, if your global config says `printer_profile = "prusa_MK4"` but your project's `3dmake.toml` says `printer_profile = "bambu"`, the project setting wins.
+Project settings override global settings. For example, if your global config says `printerprofile = "prusaMK4"` but your project's `3dmake.toml` says `printerprofile = "bambu"`, the project setting wins.
 
 ### Project Configuration (3dmake.toml)
 
 The `3dmake.toml` file in your project root contains project-specific settings:
 
 ```toml
-project_name = "My Project"
-model_name = "main"
-printer_profile = "prusa_MK4"
+projectname = "My Project"
+modelname = "main"
+printerprofile = "prusaMK4"
 overlays = []
 editor = "code"
 ```
@@ -532,8 +551,8 @@ build/
 *.stl
 *.gcode
 *.png
-.DS_Store
-__pycache__/
+.DSStore
+pycache/
 ```
 
 Then initialize Git:
@@ -551,13 +570,13 @@ Regularly backup your `src/` folder:
 **Windows:**
 
 ```powershell
-Copy-Item -Path "src" -Destination "backups/src_$(Get-Date -Format 'yyyy-MM-dd')" -Recurse
+Copy-Item -Path "src" -Destination "backups/src$(Get-Date -Format 'yyyy-MM-dd')" -Recurse
 ```
 
 **Linux:**
 
 ```bash
-cp -r src backups/src_$(date +%Y-%m-%d)
+cp -r src backups/src$(date +%Y-%m-%d)
 ```
 
 ### Documentation
@@ -575,7 +594,7 @@ Keep a `src/README.md` describing each model:
 
 ## alternate.scad
 - **Purpose:** Alternative design variant
-- **Parameters:** width, height, depth, wall_thickness
+- **Parameters:** width, height, depth, wallthickness
 - **Last modified:** 2026-02-15
 - **Notes:** Experimental version with snap-fit features
 ```
@@ -583,6 +602,7 @@ Keep a `src/README.md` describing each model:
 ### Configuring Your Text Editor
 
 By default, 3dMake uses:
+
 - **Windows:** Notepad
 - **Linux:** Nano (or your EDITOR environment variable)
 
@@ -595,21 +615,25 @@ To use a different editor, edit your global configuration:
 Add or modify the `editor` line. Examples:
 
 **Windows (Visual Studio Code):**
+
 ```toml
 editor = "code"
 ```
 
 **Windows (Notepad++):**
+
 ```toml
 editor = '''C:\Program Files (x86)\Notepad++\notepad++.exe'''
 ```
 
 **Linux (Visual Studio Code):**
+
 ```toml
 editor = "code"
 ```
 
 **Linux (Gedit):**
+
 ```toml
 editor = "gedit"
 ```
@@ -635,7 +659,7 @@ editor = "gedit"
 
 **Cause:** You're not in a valid 3dMake project directory.
 
-**Solution:** 
+**Solution:**
 
 Verify you're in the project directory:
 
@@ -708,9 +732,9 @@ chmod +x 3dm
 1. Verify printer is running and connected to network
 2. Edit configuration: `3dm edit-global-config`
 3. Check these settings:
-   - `octoprint_host` - correct IP/URL
-   - `octoprint_key` - valid API key
-   - `print_mode` - set to "octoprint" or "bambu_lan"
+   - `octoprinthost` - correct IP/URL
+   - `octoprintkey` - valid API key
+   - `printmode` - set to "octoprint" or "bambulan"
 4. Test connection: `3dm build print` (without actually printing first)
 
 ---
@@ -719,23 +743,23 @@ chmod +x 3dm
 
 ### Essential Commands
 
-| Command | Purpose |
-|---------|---------|
-| `3dm --version` | Show installed version |
-| `3dm help` | Display all available commands |
-| `3dm setup` | Initial setup (run in extracted directory) |
-| `3dm new` | Initialize a new project |
-| `3dm build` | Build OpenSCAD model to STL |
-| `3dm build slice` | Build and slice to GCODE |
-| `3dm build print` | Build, slice, and send to printer |
-| `3dm edit-model` | Open main.scad in text editor |
-| `3dm edit-model -m name` | Open a specific model file |
-| `3dm info` | Show model statistics |
-| `3dm preview print` | Create and print a tactile preview |
-| `3dm list-profiles` | Show available printer profiles |
-| `3dm list-overlays` | Show available slicer overlays |
-| `3dm edit-global-config` | Edit global settings |
-| `3dm orient print` | Auto-orient and print model |
+| Command                  | Purpose                                    |
+|--------------------------|--------------------------------------------|
+| `3dm --version`          | Show installed version                     |
+| `3dm help`               | Display all available commands             |
+| `3dm setup`              | Initial setup (run in extracted directory) |
+| `3dm new`                | Initialize a new project                   |
+| `3dm build`              | Build OpenSCAD model to STL                |
+| `3dm build slice`        | Build and slice to GCODE                   |
+| `3dm build print`        | Build, slice, and send to printer          |
+| `3dm edit-model`         | Open main.scad in text editor              |
+| `3dm edit-model -m name` | Open a specific model file                 |
+| `3dm info`               | Show model statistics                      |
+| `3dm preview print`      | Create and print a tactile preview         |
+| `3dm list-profiles`      | Show available printer profiles            |
+| `3dm list-overlays`      | Show available slicer overlays             |
+| `3dm edit-global-config` | Edit global settings                       |
+| `3dm orient print`       | Auto-orient and print model                |
 
 ### Directory Structure Reference
 
@@ -752,14 +776,14 @@ YourProject/
 Common settings you can modify:
 
 ```toml
-project_name = "My Project"
-model_name = "main"              # Default model to build
-printer_profile = "prusa_MK4"    # Your printer
+projectname = "My Project"
+modelname = "main"              # Default model to build
+printerprofile = "prusaMK4"    # Your printer
 overlays = ["supports"]          # Default slicing overlays
 editor = "code"                  # Text editor to use
 ```
 
-For full configuration options, see the GitHub repository: https://github.com/tdeck/3dmake
+For full configuration options, see the GitHub repository: <https://github.com/tdeck/3dmake>
 
 ---
 
@@ -776,7 +800,7 @@ Once you're comfortable with basic projects:
 
 For advanced topics, see:
 
-- [OpenSCAD Manual](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual)
+- [OpenSCAD Manual](https://en.wikibooks.org/wiki/OpenSCADUserManual)
 - [3dMake GitHub Documentation](https://github.com/tdeck/3dmake)
 - [BOSL Library Documentation](https://github.com/revarbat/BOSL/wiki)
 
@@ -784,10 +808,10 @@ For advanced topics, see:
 
 ## Sources
 
-3dMake GitHub Repository. (2026). *3dMake - Non-visual 3D design and printing*. Retrieved from https://github.com/tdeck/3dmake
+3dMake GitHub Repository. (2026). *3dMake - Non-visual 3D design and printing*. Retrieved from <https://github.com/tdeck/3dmake>
 
-3dMake Documentation. (2026). *Terminal quick start guide*. Retrieved from https://github.com/tdeck/3dmake/blob/main/docs/terminal_quick_start.md
+3dMake Documentation. (2026). *Terminal quick start guide*. Retrieved from <https://github.com/tdeck/3dmake/blob/main/docs/terminalquickstart.md>
 
-OpenSCAD Community. (2025). *OpenSCAD user manual*. Retrieved from https://en.wikibooks.org/wiki/OpenSCAD_User_Manual
+OpenSCAD Community. (2025). *OpenSCAD user manual*. Retrieved from <https://en.wikibooks.org/wiki/OpenSCADUserManual>
 
-Revarbat (Ed.). (2024). *BOSL - Belfry OpenSCAD Library*. Retrieved from https://github.com/revarbat/BOSL/wiki
+Revarbat (Ed.). (2024). *BOSL - Belfry OpenSCAD Library*. Retrieved from <https://github.com/revarbat/BOSL/wiki>

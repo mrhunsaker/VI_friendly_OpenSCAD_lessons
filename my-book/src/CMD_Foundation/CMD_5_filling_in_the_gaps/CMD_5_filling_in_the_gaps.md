@@ -46,9 +46,9 @@ pause               :: Wait for user to press a key
 
 ```batch
 @echo off
-set folder=%USERPROFILE%\Documents\3D_Models
+set folder=%USERPROFILE%\Documents\3DModels
 cd %folder%
-dir /B > file_list.txt
+dir /B > filelist.txt
 echo Done
 ```
 
@@ -81,7 +81,7 @@ pause
 ```batch
 @echo off
 set source=%USERPROFILE%\Downloads
-set dest=%USERPROFILE%\Documents\Downloaded_Files
+set dest=%USERPROFILE%\Documents\DownloadedFiles
 echo Moving files from %source% to %dest%...
 mkdir %dest%
 move %source%\* %dest%\
@@ -141,5 +141,5 @@ assoc .scad               :: Show program associated with .scad
 
 - Complete all exercises
 - Review all previous lessons
-- Move to **CMD_Unit_Test: Comprehensive Practice**
+- Move to **CMDUnitTest: Comprehensive Practice**
 

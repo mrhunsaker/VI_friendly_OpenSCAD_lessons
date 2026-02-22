@@ -7,15 +7,15 @@
 // ============================================
 
 // TODO: Set your project name
-project_name = "My First Project";
+projectname = "My First Project";
 
 // TODO: Define overall dimensions (mm)
-object_width = 50;
-object_depth = 50;
-object_height = 20;
+objectwidth = 50;
+objectdepth = 50;
+objectheight = 20;
 
 // Wall thickness for strength (2-3mm recommended)
-wall_thickness = 2;
+wallthickness = 2;
 
 // ============================================
 // MATERIAL PROPERTIES
@@ -28,21 +28,21 @@ $fn = 30;  // Fragment quality (higher = smoother curves, slower rendering)
 // MAIN DESIGN
 // ============================================
 
-module base_shape() {
+module baseshape() {
     // TODO: Replace this cube with your design
-    cube([object_width, object_depth, object_height], center = true);
+    cube([objectwidth, objectdepth, objectheight], center = true);
 }
 
-module hollow_version() {
+module hollowversion() {
     // Creates a hollow version by subtracting an inner cube
     difference() {
-        base_shape();
+        baseshape();
         
         // Inner void (adjust padding as needed)
         translate([0, 0, 0.5])
-            cube([object_width - 2*wall_thickness, 
-                  object_depth - 2*wall_thickness, 
-                  object_height - 2*wall_thickness], 
+            cube([objectwidth - 2*wallthickness, 
+                  objectdepth - 2*wallthickness, 
+                  objectheight - 2*wallthickness], 
                  center = true);
     }
 }
@@ -54,16 +54,16 @@ module hollow_version() {
 // TODO: Uncomment one of these to see different versions:
 
 // Solid version
-base_shape();
+baseshape();
 
 // Hollow version (useful for reducing material)
-// hollow_version();
+// hollowversion();
 
 // ============================================
 // CUSTOMIZATION TIPS
 // ============================================
 // 1. Test print at small scale first
 // 2. Add support structures if needed
-// 3. Use wall_thickness variable for quick adjustments
+// 3. Use wallthickness variable for quick adjustments
 // 4. Check dimensions match your design intent
 // 5. Consider printing orientation for strength

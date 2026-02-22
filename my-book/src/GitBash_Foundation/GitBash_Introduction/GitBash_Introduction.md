@@ -63,7 +63,7 @@ cat notes.txt
 ## Help and Discovery
 
 - `command --help` shows help: `ls --help` or `grep --help`
-- `man command` shows the manual page (pipe it to a file for easy reading): `man ls > ls_help.txt && notepad ls_help.txt`
+- `man command` shows the manual page (pipe it to a file for easy reading): `man ls > lshelp.txt && notepad lshelp.txt`
 - `which <name>` locates a program: `which openscad`
 
 ---
@@ -86,15 +86,15 @@ cat notes.txt
 
 ## Git Bash vs Windows Command Prompt
 
-| Task | Git Bash | Command Prompt |
-|---|---|---|
-| List files | `ls -1` | `dir` |
-| Show current path | `pwd` | `cd` |
-| Read a file | `cat file.txt` | `type file.txt` |
-| Create file | `touch file.txt` | `type nul > file.txt` |
-| Copy file | `cp src dest` | `copy src dest` |
-| Move/rename | `mv old new` | `move old new` |
-| Delete file | `rm file.txt` | `del file.txt` |
+| Task              | Git Bash         | Command Prompt        |
+|-------------------|------------------|-----------------------|
+| List files        | `ls -1`          | `dir`                 |
+| Show current path | `pwd`            | `cd`                  |
+| Read a file       | `cat file.txt`   | `type file.txt`       |
+| Create file       | `touch file.txt` | `type nul > file.txt` |
+| Copy file         | `cp src dest`    | `copy src dest`       |
+| Move/rename       | `mv old new`     | `move old new`        |
+| Delete file       | `rm file.txt`    | `del file.txt`        |
 
 Git Bash uses Unix commands that also work on Linux and macOS.
 
@@ -112,7 +112,7 @@ Git Bash uses Unix commands that also work on Linux and macOS.
 
 1. Run `pwd` and speak or note the output.
 2. Run `ls -1` in your home directory. If the list is long, save it: `ls -1 > listing.txt && notepad listing.txt`
-3. Create a folder and file: `mkdir GB_Practice && cd GB_Practice && touch notes.txt`
+3. Create a folder and file: `mkdir GBPractice && cd GBPractice && touch notes.txt`
 4. Add a line: `echo "My first note" > notes.txt && cat notes.txt`
 
 ---

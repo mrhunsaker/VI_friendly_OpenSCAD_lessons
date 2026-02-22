@@ -4,20 +4,20 @@ Essential material information for 3D printing with FDM/FFF printers.
 
 ## Common Filament Types Comparison
 
-| Property | PLA | PETG | ABS | TPU |
-|----------|-----|------|-----|-----|
-| **Nozzle Temp (C)** | 200-220 | 235-250 | 240-260 | 220-240 |
-| **Bed Temp (C)** | 20-60 | 70-90 | 100-110 | 20-60 |
-| **Strength** | Moderate | High | Very High | Low (Flexible) |
-| **Flexibility** | None | Slight | Slight | High |
-| **Ease of Print** | Very Easy | Easy | Hard | Moderate |
-| **Cost ($/kg)** | $15-25 | $20-30 | $18-28 | $30-50 |
-| **Print Speed** | 40-60 mm/s | 30-50 mm/s | 20-40 mm/s | 10-30 mm/s |
-| **Supports Needed** | Usually Yes | Usually Yes | Always Yes | Yes |
-| **Bed Adhesion** | Easy | Moderate | Requires prep | Easy |
-| **Durability** | 2-3 years | 5+ years | 5+ years | 3+ years |
-| **UV Resistance** | Low | Moderate | High | Low |
-| **Chemical Resistant** | No | Moderate | Yes | No |
+| Property               | PLA         | PETG        | ABS           | TPU            |
+|------------------------|-------------|-------------|---------------|----------------|
+| **Nozzle Temp (C)**    | 200-220     | 235-250     | 240-260       | 220-240        |
+| **Bed Temp (C)**       | 20-60       | 70-90       | 100-110       | 20-60          |
+| **Strength**           | Moderate    | High        | Very High     | Low (Flexible) |
+| **Flexibility**        | None        | Slight      | Slight        | High           |
+| **Ease of Print**      | Very Easy   | Easy        | Hard          | Moderate       |
+| **Cost ($/kg)**        | $15-25      | $20-30      | $18-28        | $30-50         |
+| **Print Speed**        | 40-60 mm/s  | 30-50 mm/s  | 20-40 mm/s    | 10-30 mm/s     |
+| **Supports Needed**    | Usually Yes | Usually Yes | Always Yes    | Yes            |
+| **Bed Adhesion**       | Easy        | Moderate    | Requires prep | Easy           |
+| **Durability**         | 2-3 years   | 5+ years    | 5+ years      | 3+ years       |
+| **UV Resistance**      | Low         | Moderate    | High          | Low            |
+| **Chemical Resistant** | No          | Moderate    | Yes           | No             |
 
 ## Detailed Material Properties
 
@@ -111,11 +111,11 @@ Essential material information for 3D printing with FDM/FFF printers.
 - Slow down first layer speed to 50% of normal
 
 ### Print Speed vs. Temperature
-| Temperature Range | Print Speed | Quality | Support Needed |
-|------------------|-------------|---------|----------------|
-| Low | 40-50 mm/s | Moderate | Usually |
-| Medium | 50-70 mm/s | High | Usually |
-| High | 70-100+ mm/s | Lower | Maybe |
+| Temperature Range | Print Speed  | Quality  | Support Needed |
+|-------------------|--------------|----------|----------------|
+| Low               | 40-50 mm/s   | Moderate | Usually        |
+| Medium            | 50-70 mm/s   | High     | Usually        |
+| High              | 70-100+ mm/s | Lower    | Maybe          |
 
 ## Post-Processing Properties
 
@@ -131,12 +131,12 @@ Essential material information for 3D printing with FDM/FFF printers.
 
 ### Chemical Resistance
 
-| Material | Water | Alcohol | Acetone | Oils | Acids |
-|----------|-------|---------|---------|------|-------|
-| PLA | Low | Low | Dissolves | Low | Low |
-| PETG | High | Moderate | Moderate | High | Moderate |
-| ABS | High | Moderate | Dissolves | High | Moderate |
-| TPU | Moderate | Low | Low | Moderate | Low |
+| Material | Water    | Alcohol  | Acetone   | Oils     | Acids    |
+|----------|----------|----------|-----------|----------|----------|
+| PLA      | Low      | Low      | Dissolves | Low      | Low      |
+| PETG     | High     | Moderate | Moderate  | High     | Moderate |
+| ABS      | High     | Moderate | Dissolves | High     | Moderate |
+| TPU      | Moderate | Low      | Low       | Moderate | Low      |
 
 **Acetone Notes:** Can be used to smooth ABS and PETG (vapor or liquid)
 
@@ -156,23 +156,23 @@ Essential material information for 3D printing with FDM/FFF printers.
 
 ### Temperature Resistance (After Printing)
 
-| Material | Safe to ~C | Softens at ~C | Notes |
-|----------|-----------|---------------|-------|
-| PLA | 50-60 | 60-70 | Not suitable for hot items |
-| PETG | 80-100 | 100-110 | Can handle warm environments |
-| ABS | 90-110 | 110-120 | Good heat resistance |
-| TPU | 60-80 | 80-100 | Limited heat resistance |
+| Material | Safe to ~C | Softens at ~C | Notes                        |
+|----------|------------|---------------|------------------------------|
+| PLA      | 50-60      | 60-70         | Not suitable for hot items   |
+| PETG     | 80-100     | 100-110       | Can handle warm environments |
+| ABS      | 90-110     | 110-120       | Good heat resistance         |
+| TPU      | 60-80      | 80-100        | Limited heat resistance      |
 
 ## Cost & Availability
 
 ### Material Cost per Print (for typical small project)
 
 | Material | Typical Print Weight | Material Cost | Total Cost |
-|----------|-------------------|---------------|------------|
-| PLA | 50g | $0.50 | $0.50 |
-| PETG | 50g | $1.00 | $1.00 |
-| ABS | 50g | $0.90 | $0.90 |
-| TPU | 50g | $1.50 | $1.50 |
+|----------|----------------------|---------------|------------|
+| PLA      | 50g                  | $0.50         | $0.50      |
+| PETG     | 50g                  | $1.00         | $1.00      |
+| ABS      | 50g                  | $0.90         | $0.90      |
+| TPU      | 50g                  | $1.50         | $1.50      |
 
 **Including electricity (~$0.25 per print) and wear on equipment (~$0.50)**
 
@@ -191,5 +191,5 @@ Essential material information for 3D printing with FDM/FFF printers.
 
 ---
 
-**Reference Last Updated:** _______________  
-**Verified By:** _______________
+**Reference Last Updated:** _  
+**Verified By:** _

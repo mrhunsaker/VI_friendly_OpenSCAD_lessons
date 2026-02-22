@@ -5,16 +5,16 @@ Structured interview guide for gathering requirements directly from end-users an
 ## Pre-Interview Preparation
 
 **Interview Details:**
-- **Date:** _________________________
-- **Time:** _________________________
-- **Location:** _________________________
-- **Stakeholder Name:** _________________________
-- **Role/Title:** _________________________
-- **Contact:** _________________________
+- **Date:** _
+- **Time:** _
+- **Location:** _
+- **Stakeholder Name:** _
+- **Role/Title:** _
+- **Contact:** _
 
 **Interview Objective:**
 (What do you specifically want to learn?)
-___________________________________________________________
+_
 
 **Estimated Duration:** 45-60 minutes
 
@@ -26,52 +26,52 @@ ___________________________________________________________
 
 **Opening Questions:**
 1. "Tell me about your role in this project."
-   - _______________________________________________________
+   - _
 
 2. "What problem are we trying to solve?"
-   - _______________________________________________________
+   - _
 
 3. "Who else will be affected by this design?"
-   - _______________________________________________________
+   - _
 
 ### Section 2: Current Situation (10 minutes)
 
 **Current Process:**
 1. "How do you currently solve this problem?"
-   - _______________________________________________________
+   - _
 
 2. "What works well about the current approach?"
-   - _______________________________________________________
+   - _
 
 3. "What frustrates you most about the current process?"
-   - _______________________________________________________
+   - _
 
 **Pain Points:**
-- Primary issue: _______________________________________________________
-- Secondary issues: ___________________________________________________
+- Primary issue: _
+- Secondary issues: _
 
 ### Section 3: Ideal Solution (15 minutes)
 
 **Requirements (Ask open-ended):**
 1. "Ideally, what would this solution do?"
-   - _______________________________________________________
+   - _
 
 2. "How would you use it?"
-   - _______________________________________________________
+   - _
 
 3. "Where would it be used?"
-   - _______________________________________________________
+   - _
 
 4. "When would it be needed?"
-   - _______________________________________________________
+   - _
 
 **Specific Constraints:**
-- Size requirements: _____________________________________________________
-- Weight constraints: ____________________________________________________
-- Temperature tolerance: _________________________________________________
-- Durability needs: ______________________________________________________
-- Cost budget: __________________________________________________________
-- Timeline: _____________________________________________________________
+- Size requirements: _
+- Weight constraints: 
+- Temperature tolerance: _
+- Durability needs: 
+- Cost budget: 
+- Timeline: _
 
 ### Section 4: Usage Patterns (10 minutes)
 
@@ -80,46 +80,46 @@ ___________________________________________________________
    - [ ] Daily  [ ] Weekly  [ ] Monthly  [ ] Occasionally
    
 2. "How many people need this?"
-   - _____________________________________________________
+   - _
 
 3. "For how long each use?"
-   - _____________________________________________________
+   - _
 
 **User Profile:**
-- Physical capabilities: _______________________________________________
-- Technical expertise: _________________________________________________
-- Accessibility needs: _________________________________________________
+- Physical capabilities: _
+- Technical expertise: _
+- Accessibility needs: _
 
 ### Section 5: Success Criteria (10 minutes)
 
 **What defines success?**
-1. _________________________________________________________________
-2. _________________________________________________________________
-3. _________________________________________________________________
+1. 
+2. 
+3. 
 
 **How will you measure if this works?**
-- Metric 1: __________________________________________________________
-- Metric 2: __________________________________________________________
+- Metric 1: 
+- Metric 2: 
 
 **What would be a failure?**
-- _________________________________________________________________
+- 
 
 ### Section 6: Preferences & Priorities (10 minutes)
 
 **Priority Ranking** (Ask: "If you could only have 3 features, which would they be?")
-1. _________________________________________________________________ (Priority: __ /10)
-2. _________________________________________________________________ (Priority: __ /10)
-3. _________________________________________________________________ (Priority: __ /10)
+1.  (Priority:  /10)
+2.  (Priority:  /10)
+3.  (Priority:  /10)
 
 **Style/Aesthetic:**
-- Preferred look: ____________________________________________________
-- Must fit with existing: _______________________________________________
-- Any visual requirements: _____________________________________________
+- Preferred look: 
+- Must fit with existing: _
+- Any visual requirements: _
 
 **Material/Finish:**
-- Preferred materials: ________________________________________________
-- Texture preference: ___________________________________________________
-- Color preferences: ____________________________________________________
+- Preferred materials: 
+- Texture preference: _
+- Color preferences: 
 
 ---
 
@@ -143,33 +143,33 @@ ___________________________________________________________
 - "What assistive devices might be used with this?"
 
 **Document:**
-- Visual considerations: _______________________________________________
-- Motor/dexterity needs: ________________________________________________
-- Hearing/audio considerations: _________________________________________
-- Cognitive/learning preferences: _______________________________________
+- Visual considerations: _
+- Motor/dexterity needs: 
+- Hearing/audio considerations: _
+- Cognitive/learning preferences: 
 
 ---
 
 ## Post-Interview Notes
 
 **Key Takeaways:**
-1. _________________________________________________________________
-2. _________________________________________________________________
-3. _________________________________________________________________
+1. 
+2. 
+3. 
 
 **Action Items:**
-- [ ] _________________________________________________________________
-- [ ] _________________________________________________________________
+- [ ] 
+- [ ] 
 
 **Questions to Follow Up On:**
-1. _________________________________________________________________
-2. _________________________________________________________________
+1. 
+2. 
 
 **Conflicts/Concerns:**
-- _________________________________________________________________
+- 
 
 **Next Steps:**
-- _________________________________________________________________
+- 
 
 ---
 
@@ -179,23 +179,23 @@ ___________________________________________________________
 
 ### Common Themes
 (What requirements appeared in multiple interviews?)
-1. _________________________________________________________________
-2. _________________________________________________________________
-3. _________________________________________________________________
+1. 
+2. 
+3. 
 
 ### Conflicting Requirements
 (What requirements contradicted each other?)
-- Stakeholder 1 wants: _______________________________________________
-- Stakeholder 2 wants: _______________________________________________
-- Resolution: __________________________________________________________
+- Stakeholder 1 wants: _
+- Stakeholder 2 wants: _
+- Resolution: 
 
 ### Risk Areas
 (What might be difficult or risky about this project?)
-- _________________________________________________________________
-- _________________________________________________________________
+- 
+- 
 
 ---
 
-**Interview Conducted By:** _____________________
-**Date Documented:** _____________________
-**Approved By Stakeholder:** _____ (signature/name)
+**Interview Conducted By:** _
+**Date Documented:** _
+**Approved By Stakeholder:** _ (signature/name)

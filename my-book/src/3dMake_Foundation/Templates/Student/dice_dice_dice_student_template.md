@@ -16,13 +16,13 @@
 
 ## Design Specifications
 
-| Parameter | Value |
-| ----------- | ------- |
-| Die size   |  |
-| Infill %   |  |
-| Material   |  |
-| Pip depth  |  |
-| Pit/pip count per face |  |
+| Parameter              | Value |
+|------------------------|-------|
+| Die size               |       |
+| Infill %               |       |
+| Material               |       |
+| Pip depth              |       |
+| Pit/pip count per face |       |
 
 ---
 
@@ -35,14 +35,14 @@
 
 ### Roll Results
 
-| Face | Frequency (out of ___ rolls) | Percentage | Expected % |
-| ------ | ------------------------------ | ------------ | ------------ |
-| 1      |                                |              | 16.67%       |
-| 2      |                                |              | 16.67%       |
-| 3      |                                |              | 16.67%       |
-| 4      |                                |              | 16.67%       |
-| 5      |                                |              | 16.67%       |
-| 6      |                                |              | 16.67%       |
+| Face | Frequency (out of _ rolls) | Percentage | Expected % |
+|------|----------------------------|------------|------------|
+| 1    |                            |            | 16.67%     |
+| 2    |                            |            | 16.67%     |
+| 3    |                            |            | 16.67%     |
+| 4    |                            |            | 16.67%     |
+| 5    |                            |            | 16.67%     |
+| 6    |                            |            | 16.67%     |
 
 ### Statistical Analysis
 
@@ -73,9 +73,9 @@
 
 ## Teacher Feedback
 
-| Category | Score | Notes |
-| ---------- | ------- | ------- |
-| Problem & Solution (0-3) |   |       |
-| Design & Code Quality (0-3) |   |       |
-| Documentation (0-3) |   |       |
-| **Total (0-9)** | **  **  |       |
+| Category                    | Score  | Notes |
+|-----------------------------|--------|-------|
+| Problem & Solution (0-3)    |        |       |
+| Design & Code Quality (0-3) |        |       |
+| Documentation (0-3)         |        |       |
+| **Total (0-9)**             | **  ** |       |

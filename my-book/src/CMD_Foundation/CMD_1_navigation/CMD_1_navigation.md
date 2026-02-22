@@ -49,7 +49,7 @@ cd                     :: Shows current path
 An absolute path starts from the root and shows the complete location:
 
 ```
-C:\Users\YourName\Documents\3D_Printing
+C:\Users\YourName\Documents\3DPrinting
 ```
 
 **Breaking it down:**
@@ -57,11 +57,11 @@ C:\Users\YourName\Documents\3D_Printing
 - `Users` = First folder
 - `YourName` = Your user folder
 - `Documents` = Documents folder
-- `3D_Printing` = Your 3D printing folder
+- `3DPrinting` = Your 3D printing folder
 
 **To navigate to it:**
 ```cmd
-cd C:\Users\YourName\Documents\3D_Printing
+cd C:\Users\YourName\Documents\3DPrinting
 ```
 
 ### Relative Paths (Short Directions)
@@ -69,7 +69,7 @@ cd C:\Users\YourName\Documents\3D_Printing
 A relative path is like giving directions from where you are now:
 
 ```
-cd Documents\3D_Printing
+cd Documents\3DPrinting
 cd ..
 cd ..\..
 ```
@@ -144,7 +144,7 @@ C:\                      :: Root of C: drive
 ### Using These Shortcuts
 
 ```cmd
-cd %USERPROFILE%\Documents\3D_Models
+cd %USERPROFILE%\Documents\3DModels
 cd %USERPROFILE%\Desktop
 ```
 
@@ -252,8 +252,8 @@ cd                        :: Run this to verify
 
 1. Create a folder structure:
    ```cmd
-   mkdir 3D_Practice
-   cd 3D_Practice
+   mkdir 3DPractice
+   cd 3DPractice
    mkdir Models
    cd Models
    mkdir OpenSCAD
@@ -295,7 +295,7 @@ After this lesson, you should be able to answer:
 5. Build a complex folder tree and practice navigating it using only relative paths
 6. Create a "favorites" list: document the full paths to folders you use often
 7. Time yourself: navigate to 10 different locations using the fastest method possible
-8. Create folders named with numbers (01_Folder, 02_Folder, etc.) and practice Tab completion
+8. Create folders named with numbers (01Folder, 02Folder, etc.) and practice Tab completion
 9. Navigate to a folder, save the path, navigate away, then navigate back using the saved path
 10. Challenge: Navigate to a destination using only relative paths without using `cd` alone to check location (navigate "blind")
 

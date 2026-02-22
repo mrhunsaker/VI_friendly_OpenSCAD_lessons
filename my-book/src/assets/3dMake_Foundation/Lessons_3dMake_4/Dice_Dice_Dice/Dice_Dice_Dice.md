@@ -1,17 +1,20 @@
-# Dice Design Workshop - Guided Extension 
+# Dice Design Workshop - Guided Extension
 
 Estimated time: 3-6 hours
 
 ## Learning Objectives
+
 - Design parametric dice in OpenSCAD with controlled mass distribution
 - Test durability and randomness for small, thrown objects
 - Document design decisions and measure physical outcomes
 
 ## Materials
+
 - Computer with OpenSCAD and slicer
 - Printer and filament, small testing surface
 
 ## Step-by-step Tasks
+
 1. Create three distinct die designs in OpenSCAD using parameters (size, face style, internal cavities).
 2. For each die, explain which parameters you changed and why (one short paragraph each).
 3. Print one sample of each die and perform a basic durability test (five throws onto a soft surface).
@@ -19,22 +22,25 @@ Estimated time: 3-6 hours
 5. Measure mass and critical dimensions; document any deformation or failure modes.
 
 ## Probing Questions
+
 - How does internal infill or cavity affect mass distribution and roll randomness?
 - Which parameter had the largest effect on durability and why?
 
 ## Quick Quiz (10 questions)
+
 1. What parameter controls wall thickness in your `.scad` file? (short answer)
 2. Name one method to increase a part's impact resistance. (short answer)
 3. How would you test randomness in a die? (short answer)
 4. Why might a hollow die behave differently than a solid one? (one sentence)
 5. What is a simple sign of print-layer delamination? (one sentence)
 6. True/False: A perfectly fair die must have uniform weight distribution throughout, including the internal structure. (Answer: True)
-7. Short answer: Describe two design approaches to a die that could be parametrically scaled - one using `cube()` with `difference()` for texture, one using `linear_extrude()` for embossed numbers.
+7. Short answer: Describe two design approaches to a die that could be parametrically scaled - one using `cube()` with `difference()` for texture, one using `linearextrude()` for embossed numbers.
 8. Practical scenario: Your first die printed, but when tested with 100 rolls, it landed on face #1 significantly more often than other faces. What are two possible causes and how would you diagnose the problem?
 9. Multiple choice: If you increase infill from 15% to 50%, what happens? (A) Dramatically longer print time and higher weight (B) Slightly longer print time, much higher weight (C) Same weight, different durability - Answer: B
 10. Reflection: Explain why a fair die is an excellent test of design precision and iterative improvement. How does this project teach you about manufacturability, quality assurance, and design validation?
 
 ## Extension Problems (10)
+
 1. Create a parametric script that produces dice with adjustable center-of-mass offsets and show results of roll tests.
 2. Design a bead-style die that assembles from two printed halves and document assembly steps.
 3. Compare two infill patterns for the same die and report on mass and durability differences.
@@ -45,4 +51,3 @@ Estimated time: 3-6 hours
 8. Create a parametric die library: build a system that generates dice of different sizes, materials, and properties on command.
 9. Develop a comprehensive quality assurance protocol: define tolerances, measurement methods, and acceptance criteria for fair dice.
 10. Write a die design guide for future students: explain the physics of fair dice, how to test for bias, and how to iterate on designs.
-

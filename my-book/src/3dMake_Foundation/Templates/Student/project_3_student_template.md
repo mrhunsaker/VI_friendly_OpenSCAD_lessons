@@ -34,22 +34,22 @@
 
 ### Bead Specifications
 
-| Parameter | Value |
-| ----------- | ------- |
-| Bead A - size parameter |  |
-| Bead A - hole diameter |  |
-| Bead A - detail level |  |
-| Bead B - size parameter |  |
-| Bead B - hole diameter |  |
-| Bead B - detail level |  |
-| Stringing material diameter |  |
+| Parameter                   | Value |
+|-----------------------------|-------|
+| Bead A - size parameter     |       |
+| Bead A - hole diameter      |       |
+| Bead A - detail level       |       |
+| Bead B - size parameter     |       |
+| Bead B - hole diameter      |       |
+| Bead B - detail level       |       |
+| Stringing material diameter |       |
 
 ### Assembly Specifications
 
-- Number of Bead A: _____
-- Number of Bead B: _____
-- Total beads: _____ (must be  8)
-- Stringing method: _____ (e.g., cord, wire, fishing line)
+- Number of Bead A: _
+- Number of Bead B: _
+- Total beads: _ (must be  8)
+- Stringing method: _ (e.g., cord, wire, fishing line)
 - Clasp or closure method:
 
 ---
@@ -71,10 +71,10 @@
 ### Print Log
 
 | Bead Type | Print Date | Temperature | Print Time | Material | Issues |
-| ----------- | ------------ | ------------ | ------------ | --------- | ------- |
-| A           |              |              |              |           |         |
-| B           |              |              |              |           |         |
-| Assembly    |              |              |              |           |         |
+|-----------|------------|-------------|------------|----------|--------|
+| A         |            |             |            |          |        |
+| B         |            |             |            |          |        |
+| Assembly  |            |             |            |          |        |
 
 ### Assembly and Use Notes
 
@@ -94,9 +94,9 @@
 ### Iteration Results
 
 | Iteration | What Changed | Result | Next Action |
-| ----------- | ------------- | ------- | ------------- |
-| Design v1   |               |         |               |
-| Design v2   |               |         |               |
+|-----------|--------------|--------|-------------|
+| Design v1 |              |        |             |
+| Design v2 |              |        |             |
 
 ### Challenges and Solutions
 - What was the hardest part of this project?
@@ -128,12 +128,12 @@
 
 ## Teacher Feedback
 
-| Category | Score | Notes |
-| ---------- | ------- | ------- |
-| Problem & Solution (0-3) |   |       |
-| Design & Code Quality (0-3) |   |       |
-| Documentation (0-3) |   |       |
-| **Total (0-9)** | **  **  |       |
+| Category                    | Score  | Notes |
+|-----------------------------|--------|-------|
+| Problem & Solution (0-3)    |        |       |
+| Design & Code Quality (0-3) |        |       |
+| Documentation (0-3)         |        |       |
+| **Total (0-9)**             | **  ** |       |
 
 **Feedback:**
 
@@ -146,9 +146,9 @@
 
 ### Revised Score
 
-| Category | Revised Score | Notes |
-| ---------- | --------------- | ------- |
-| Problem & Solution (0-3) |   |       |
-| Design & Code Quality (0-3) |   |       |
-| Documentation (0-3) |   |       |
-| **Total (0-9)** | **  **  |       |
+| Category                    | Revised Score | Notes |
+|-----------------------------|---------------|-------|
+| Problem & Solution (0-3)    |               |       |
+| Design & Code Quality (0-3) |               |       |
+| Documentation (0-3)         |               |       |
+| **Total (0-9)**             | **  **        |       |

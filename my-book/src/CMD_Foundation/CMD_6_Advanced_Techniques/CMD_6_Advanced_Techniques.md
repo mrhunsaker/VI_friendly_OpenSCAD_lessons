@@ -40,11 +40,11 @@ for %%i in (*.txt) do (
 ```batch
 @echo off
 REM Batch process OpenSCAD files
-set input_folder=%USERPROFILE%\Documents\Models
-set output_folder=%USERPROFILE%\Documents\STLs
+set inputfolder=%USERPROFILE%\Documents\Models
+set outputfolder=%USERPROFILE%\Documents\STLs
 
 echo Processing 3D models...
-cd %input_folder%
+cd %inputfolder%
 
 for %%f in (*.scad) do (
     echo Converting %%f...
@@ -64,14 +64,14 @@ Create a script that sets up a new project:
 
 ```batch
 @echo off
-set /p project_name=Enter project name: 
-mkdir %project_name%
-cd %project_name%
+set /p projectname=Enter project name: 
+mkdir %projectname%
+cd %projectname%
 mkdir models
 mkdir prints
 mkdir documentation
 mkdir backups
-echo Project %project_name% created!
+echo Project %projectname% created!
 dir /B
 ```
 
@@ -158,5 +158,5 @@ dir /B /A:D
 
 - Complete all exercises
 - Review all CMD lessons
-- Take the **CMD_Unit_Test: Comprehensive Practice & Assessment**
+- Take the **CMDUnitTest: Comprehensive Practice & Assessment**
 

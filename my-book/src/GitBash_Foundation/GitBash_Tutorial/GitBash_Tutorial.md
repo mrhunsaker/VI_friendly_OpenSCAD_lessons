@@ -146,7 +146,7 @@ To extract ZIP archives in Git Bash:
 
 ```bash
 # Unzip a file
-unzip file.zip -d destination_folder
+unzip file.zip -d destinationfolder
 
 # Or use Windows' built-in tool (from Git Bash):
 powershell.exe Expand-Archive -Path file.zip -DestinationPath folder
@@ -196,9 +196,9 @@ alias ...='cd ../..'
 ---
 
 ## Extension Problems
-1. Create a folder `OpenSCAD_Projects` in Documents and verify its contents.
+1. Create a folder `OpenSCADProjects` in Documents and verify its contents.
 2. Create three files named `a.scad`, `b.scad`, `c.scad` and list them with a wildcard.
-3. Save `ls -1 ~/Documents` output to `doc_list.txt` and open it.
+3. Save `ls -1 ~/Documents` output to `doclist.txt` and open it.
 4. Try tab-completion in a deeply nested folder and note behavior.
 5. Capture `pwd` output into a file and open it: `pwd > cwd.txt && notepad cwd.txt`.
 6. Build an automated setup script that creates a complete project directory structure, initializes placeholder files, and generates a README.

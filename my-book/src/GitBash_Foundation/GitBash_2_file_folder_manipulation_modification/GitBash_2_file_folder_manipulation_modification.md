@@ -11,7 +11,7 @@
 - GitBash-4: Environment Variables & Aliases (`export`, `alias`, `.bashrc`)
 - GitBash-5: Filling in the Gaps (Shell profiles, history, debugging)
 - GitBash-6: Advanced Terminal Techniques (Shell scripts `.sh`, functions, loops)
-- GitBash_Unit_Test: Comprehensive Practice & Assessment
+- GitBashUnitTest: Comprehensive Practice & Assessment
 
 Each should follow the same structure as PowerShell/CMD equivalents but using bash commands.
 

@@ -302,8 +302,8 @@ Complete these in order. Take your time with each one:
 **Goal:** You understand relative navigation with `..`
 
 ### Exercise 5: Redirecting Output
-1. Create a list: `dir /B > directory_list.txt`
-2. Open it: `notepad.exe directory_list.txt`
+1. Create a list: `dir /B > directorylist.txt`
+2. Open it: `notepad.exe directorylist.txt`
 3. Read it with your screen reader
 4. Close Notepad
 5. Verify the file exists: `dir /B | find "directory"`

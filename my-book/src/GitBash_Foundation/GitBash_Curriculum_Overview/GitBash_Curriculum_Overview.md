@@ -27,7 +27,7 @@ Git Bash is a Unix/bash shell that runs natively on Windows. It provides the sam
 ### Part 1 (Intro): Comparing Command Line Interfaces
 
 Start here if you're new to terminals:
-- **[Command Line Interface Selection Guide](../Command_Line_Interface_Selection.md)** - Decision guide comparing PowerShell, CMD, and Git Bash
+- **[Command Line Interface Selection Guide](../CommandLineInterfaceSelection.md)** - Decision guide comparing PowerShell, CMD, and Git Bash
 - Learn which option fits your learning style
 - Understand when to use each tool
 
@@ -189,7 +189,7 @@ The main curriculum teaches you to use Git Bash for real work.
 **What you'll learn:**
 - Using command history: `history`, `!`, reverse search
 - Debugging commands with `set -x`
-- Understanding `.bashrc` vs `.bash_profile`
+- Understanding `.bashrc` vs `.bashprofile`
 - Viewing and modifying history
 - Finding and fixing mistakes
 
@@ -328,7 +328,7 @@ Unit Test & Practice (comprehensive)
 - `!CommandNumber` - Rerun command
 - `Ctrl+R` - Search history
 - `set -x` - Debug mode
-- `.bashrc` vs `.bash_profile` - Config files
+- `.bashrc` vs `.bashprofile` - Config files
 
 ### GitBash-6
 - `#!/bin/bash` - Script header
@@ -513,7 +513,7 @@ This curriculum is built on:
 
 ## Ready to Begin?
 
-Start with the **[Command Line Interface Selection Guide](../Command_Line_Interface_Selection.md)** to see why Git Bash might be the right choice for you.
+Start with the **[Command Line Interface Selection Guide](../CommandLineInterfaceSelection.md)** to see why Git Bash might be the right choice for you.
 
 Then proceed to **GitBash-Pre: Your First Terminal** to begin your journey!
 
@@ -656,7 +656,7 @@ START HERE ↓
 +---- GB-3: Input, Output & Piping (chain commands)
 +---- GB-4: Environment Variables & Aliases (automation)
 +---- GB-5: Filling in the Gaps (profiles & history)
-+---- GB_Unit_Test (comprehensive practice & assessment)
++---- GBUnitTest (comprehensive practice & assessment)
         ↓
     NEXT: 3D Printing Integration Lessons
         ↓

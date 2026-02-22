@@ -74,8 +74,8 @@ Estimated time: 20-30 minutes
 
 ## Helpful Resources
 
-- [Bash Manual - Navigation](https://www.gnu.org/software/bash/manual/html_node/Bourne-Shell-Builtins.html)
+- [Bash Manual - Navigation](https://www.gnu.org/software/bash/manual/htmlnode/Bourne-Shell-Builtins.html)
 - [Git Bash Basics](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository)
-- [Linux Path Guide](https://linuxcommand.org/lc3_lts0020.php)
-- [Understanding Bash Prompts](https://www.gnu.org/software/bash/manual/html_node/Controlling-the-Prompt.html)
+- [Linux Path Guide](https://linuxcommand.org/lc3lts0020.php)
+- [Understanding Bash Prompts](https://www.gnu.org/software/bash/manual/htmlnode/Controlling-the-Prompt.html)
 

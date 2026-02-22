@@ -4,7 +4,7 @@ Use this comprehensive checklist to systematically diagnose and troubleshoot pri
 
 ## Quick Diagnosis Flowchart
 
-```
+```plaintext
 Print Problem?
 |
 +---- [Before Print] Issues?
@@ -35,6 +35,7 @@ Print Problem?
 ### Category A: Power & Connectivity
 
 **Checklist:**
+
 - [ ] Printer powered on
 - [ ] LED indicators showing normal status
 - [ ] USB cable connected (if applicable)
@@ -42,6 +43,7 @@ Print Problem?
 - [ ] Display/interface responding to input
 
 **If failed:**
+
 1. Check power outlet and cable
 2. Verify power supply specifications (voltage, current)
 3. Test with different power outlet
@@ -53,13 +55,15 @@ Print Problem?
 ### Category B: Temperature System
 
 **Heating Element Status:**
+
 - [ ] Hot end temperature rises when heating commanded
 - [ ] Bed temperature rises when heating commanded
 - [ ] Temperature readings stable (not fluctuating 5C+)
 - [ ] No error messages during heating
 
 **Measurement Method:**
-```
+
+```plaintext
 1. Set hot end to 200C, observe rise
    - Expected time to reach: 2-4 minutes
    - Steady rise without plateau:  Good
@@ -71,6 +75,7 @@ Print Problem?
 ```
 
 **If heating slow/incomplete:**
+
 - [ ] Verify target temperature was set
 - [ ] Check heating element firmware settings
 - [ ] Test thermal sensor connectivity
@@ -78,7 +83,8 @@ Print Problem?
 - [ ] Measure electrical resistance of heaters
 
 **Temperature Stability Test:**
-```
+
+```plaintext
 1. Heat to target temperature
 2. Wait 10 minutes for stabilization
 3. Record temperature every minute
@@ -98,18 +104,20 @@ Results:
 **Movement Diagnostics:**
 
 **Manual Axis Movement:**
-```
+
+```plaintext
 1. Disable motors (if possible)
 2. Manually move each axis
 3. Record observations:
-   - X-axis: _____ (smooth/rough/stuck)
-   - Y-axis: _____ (smooth/rough/stuck)
-   - Z-axis: _____ (smooth/rough/stuck)
+   - X-axis:  (smooth/rough/stuck)
+   - Y-axis:  (smooth/rough/stuck)
+   - Z-axis:  (smooth/rough/stuck)
 ```
 
 **Expected results:** Smooth, no grinding sounds
 
 **If rough/stuck:**
+
 - [ ] Check for visible obstructions
 - [ ] Inspect rails for debris
 - [ ] Verify pulleys turn freely
@@ -117,7 +125,8 @@ Results:
 - [ ] Lubricate dry joints
 
 **Powered Movement Test:**
-```
+
+```plaintext
 1. Position nozzle at center
 2. Command X+10mm movement
 3. Verify nozzle moved ~10mm
@@ -132,7 +141,8 @@ Results:
 **Build Plate Leveling Test:**
 
 **Paper Method (Most Common):**
-```
+
+```plaintext
 1. Heat bed to printing temperature
 2. Heat nozzle to printing temperature  
 3. Position nozzle at first corner
@@ -145,8 +155,9 @@ Target: Consistent slight paper drag all points
 ```
 
 **Leveling Validation:**
-- [ ] Level at 4 corners 
-- [ ] Level at bed center 
+
+- [ ] Level at 4 corners
+- [ ] Level at bed center
 - [ ] No high/low points
 - [ ] Nozzle doesn't hit bed at any point
 - [ ] Consistent first-layer appearance across bed
@@ -156,6 +167,7 @@ Target: Consistent slight paper drag all points
 ### Category E: Filament & Extruder
 
 **Filament Quality Check:**
+
 - [ ] Filament diameter consistent (visually inspect ~50cm)
 - [ ] No visible cracks or damage
 - [ ] Spool rotates freely without binding
@@ -163,7 +175,8 @@ Target: Consistent slight paper drag all points
 - [ ] No tangles in filament path
 
 **Extruder Test:**
-```
+
+```plaintext
 1. Heat to printing temperature
 2. Remove print head (if removable)
 3. Push 10-20mm of filament through manually
@@ -178,7 +191,8 @@ Expected: Smooth push, consistent extrusion
 ## Filament Loading Test
 
 **Test Sequence:**
-```
+
+```plaintext
 1. Heat extruder to material temp
 2. Load filament into extruder
 3. Watch for material at nozzle tip
@@ -201,13 +215,13 @@ If fails:
 
 **After printing first 5-10 layer heights, evaluate:**
 
-| Appearance | Issue | Action |
-|-----------|-------|--------|
-| Wavy/embossed | Bed not level or too close | Relevel bed |
-| Gaps between lines | Nozzle too high | Lower Z-offset |
-| Completely squished | Nozzle too low | Raise Z-offset |
-| Partial adhesion | Bed too cool or dirty | Clean bed, increase temp |
-| Consistent squish/lines |  Correct | Continue print |
+| Appearance              | Issue                      | Action                   |
+|-------------------------|----------------------------|--------------------------|
+| Wavy/embossed           | Bed not level or too close | Relevel bed              |
+| Gaps between lines      | Nozzle too high            | Lower Z-offset           |
+| Completely squished     | Nozzle too low             | Raise Z-offset           |
+| Partial adhesion        | Bed too cool or dirty      | Clean bed, increase temp |
+| Consistent squish/lines | Correct                    | Continue print           |
 
 ---
 
@@ -218,6 +232,7 @@ If fails:
 **When extrusion stops during print:**
 
 **Immediate Actions:**
+
 - [ ] Pause print (don't stop)
 - [ ] Listen for extruder sounds (grinding = jam)
 - [ ] Feel nozzle carefully (if cooled slightly)
@@ -225,10 +240,10 @@ If fails:
 
 **Diagnostic Decision:**
 
-```
+```plaintext
 Is filament stuck in extruder?
 +---- YES -> Nozzle clog likely
-|        -> See Nozzle Clog section (common_issues_and_solutions.md)
+|        -> See Nozzle Clog section (commonissuesandsolutions.md)
 |        -> Try: Cold pull, retract, clean
 |
 +---- NO -> Filament loading issue
@@ -244,13 +259,15 @@ Is filament stuck in extruder?
 **When movement sounds wrong:**
 
 **Listen for:**
+
 - Grinding/grating: Bearing issue or obstruction
 - Clicking/skipping: Lost steps or over-torque
 - Squealing: Lubrication needed
 - Silence (but no movement): Stalled motor
 
 **Diagnosis Method:**
-```
+
+```plaintext
 1. Pause print
 2. Manually move suspected axis
 3. Record resistance type:
@@ -268,7 +285,7 @@ Is filament stuck in extruder?
 
 **Every 30 minutes of printing, check:**
 
-```
+```plaintext
 [ ] Layer alignment (no X/Y shifting)
 [ ] Material flow (consistent lines, not thin or thick)
 [ ] Surface appearance (smooth, not rough)
@@ -286,12 +303,14 @@ Is filament stuck in extruder?
 ### Precision Measurement
 
 **Materials Needed:**
+
 - Digital calipers (+/-0.05mm accuracy)
 - Ruler (for larger dimensions)
 - Notepad for recording
 
 **Measurement Protocol:**
-```
+
+```plaintext
 1. Measure each dimension 3 times at different locations
 2. Calculate average
 3. Compare to design dimension
@@ -308,11 +327,11 @@ Example:
 
 ### Tolerance Evaluation
 
-| Tolerance | Pass/Fail | Action |
-|-----------|-----------|--------|
-| +/-0.5mm or better | PASS | No adjustment needed |
-| +/-0.5-1mm | MARGINAL | Document and monitor |
-| >+/-1mm | FAIL | Adjust flow/calibration |
+| Tolerance          | Pass/Fail | Action                  |
+|--------------------|-----------|-------------------------|
+| +/-0.5mm or better | PASS      | No adjustment needed    |
+| +/-0.5-1mm         | MARGINAL  | Document and monitor    |
+| >+/-1mm            | FAIL      | Adjust flow/calibration |
 
 ---
 
@@ -321,6 +340,7 @@ Example:
 **When quality varies between prints:**
 
 **Check Conditions:**
+
 - [ ] Room temperature stable (+/-5C?)
 - [ ] Humidity reasonable (30-60%?)
 - [ ] No drafts from windows/AC near printer
@@ -329,10 +349,11 @@ Example:
 - [ ] Same slicer settings applied
 
 **Environmental Log:**
-```
-Date: _____    Time: _____    Temp: ___C    Humidity: ___%
-Print Duration: ______    Result Quality: Poor/Fair/Good/Excellent
-Notes: ________________________________________________________
+
+```plaintext
+Date:     Time:     Temp: C    Humidity: %
+Print Duration:     Result Quality: Poor/Fair/Good/Excellent
+Notes: 
 ```
 
 ---
@@ -341,7 +362,7 @@ Notes: ________________________________________________________
 
 **Start here for systematic diagnosis:**
 
-```
+```plaintextv
 +---- Printer won't start?
 |  +---- Check: Power, connections, firmware
 |
@@ -378,14 +399,14 @@ Notes: ________________________________________________________
 
 **Use when seeking help:**
 
-```
+```plaintext
 DIAGNOSTIC REPORT
 ================
 
-Printer Model: _________________________
-Problem Description: ___________________
-When it occurs: (always/sometimes/first 5 layers, etc) ____
-Recent changes: _______________________
+Printer Model: 
+Problem Description: 
+When it occurs: (always/sometimes/first 5 layers, etc) 
+Recent changes: 
 
 DIAGNOSTICS PERFORMED:
 [ ] Power/connectivity verified
@@ -397,19 +418,19 @@ DIAGNOSTICS PERFORMED:
 [ ] Print quality evaluated
 
 Key Findings:
-1. ___________________________________
-2. ___________________________________
-3. ___________________________________
+1. 
+2. 
+3. 
 
 Attempted Solutions:
-1. ___________________________________
-2. ___________________________________
+1. 
+2. 
 
-Result: (Solved/Partial/Ongoing) ________
+Result: (Solved/Partial/Ongoing) 
 ```
 
 ---
 
-**Last Diagnostic Date:** _______________  
-**Issue Resolved:** _______________  
-**Diagnostic Performed By:** _______________
+**Last Diagnostic Date:**
+**Issue Resolved:**  
+**Diagnostic Performed By:**

@@ -53,7 +53,7 @@ pwd                    # Shows current location
 An absolute path starts from the root and shows the complete location:
 
 ```
-/c/Users/YourName/Documents/3D_Printing
+/c/Users/YourName/Documents/3DPrinting
 ```
 
 **Breaking it down:**
@@ -61,11 +61,11 @@ An absolute path starts from the root and shows the complete location:
 - `Users` = First folder
 - `YourName` = Your user folder
 - `Documents` = Documents folder
-- `3D_Printing` = Your 3D printing folder
+- `3DPrinting` = Your 3D printing folder
 
 **To navigate to it:**
 ```bash
-cd /c/Users/YourName/Documents/3D_Printing
+cd /c/Users/YourName/Documents/3DPrinting
 ```
 
 ### Relative Paths (Short Directions)
@@ -73,7 +73,7 @@ cd /c/Users/YourName/Documents/3D_Printing
 A relative path is like giving directions from where you are now:
 
 ```
-cd Documents/3D_Printing
+cd Documents/3DPrinting
 cd ..
 cd ../..
 ```
@@ -98,8 +98,8 @@ cd ../..
 
 ```bash
 /c/Users/YourName>cd Documents
-/c/Users/YourName/Documents>cd 3D_Models
-/c/Users/YourName/Documents/3D_Models>
+/c/Users/YourName/Documents>cd 3DModels
+/c/Users/YourName/Documents/3DModels>
 ```
 
 Each `cd FolderName` goes into that folder.
@@ -107,7 +107,7 @@ Each `cd FolderName` goes into that folder.
 ### Pattern 2: Navigating Up (Out of Folders)
 
 ```bash
-/c/Users/YourName/Documents/3D_Models>cd ..
+/c/Users/YourName/Documents/3DModels>cd ..
 /c/Users/YourName/Documents>cd ..
 /c/Users/YourName>cd ..
 /c/Users>
@@ -149,7 +149,7 @@ cd                     # Also goes to home directory
 ### Using These Shortcuts
 
 ```bash
-cd ~/Documents/3D_Models
+cd ~/Documents/3DModels
 cd ~/Desktop
 cd /c/Program Files
 ```
@@ -258,8 +258,8 @@ pwd                    # Run this to verify
 
 1. Create a folder structure:
    ```bash
-   mkdir 3D_Practice
-   cd 3D_Practice
+   mkdir 3DPractice
+   cd 3DPractice
    mkdir Models
    cd Models
    mkdir OpenSCAD
@@ -301,7 +301,7 @@ After this lesson, you should be able to answer:
 5. Build a complex folder tree and practice navigating it using only relative paths
 6. Create a "favorites" list: document the full paths to folders you use often
 7. Time yourself: navigate to 10 different locations using the fastest method possible
-8. Create folders named with numbers (01_Folder, 02_Folder, etc.) and practice Tab completion
+8. Create folders named with numbers (01Folder, 02Folder, etc.) and practice Tab completion
 9. Navigate to a destination, save the path, navigate away, then navigate back using the saved path
 10. Challenge: Navigate to a destination using only relative paths without using `pwd` to check location (navigate "blind")
 

@@ -2,7 +2,7 @@
 
 ## Files
 
-- **phone_stand.scad** - Intermediate-level example of transforms and Minkowski operations in a multi-part assembly
+- **phonestand.scad** - Intermediate-level example of transforms and Minkowski operations in a multi-part assembly
 
 ## Learning Objectives
 
@@ -13,14 +13,14 @@
 
 ## How to Use This Code
 
-1. Copy `phone_stand.scad` into your 3dMake project's `src/` folder
-2. Open in OpenSCAD (or use `3dm edit-model phone_stand.scad`)
+1. Copy `phonestand.scad` into your 3dMake project's `src/` folder
+2. Open in OpenSCAD (or use `3dm edit-model phonestand.scad`)
 3. Press F5 to preview; F6 for full render
 4. Modify the top-level parameters:
    - `angle` - Adjust stand tilt (degrees)
    - `width` / `depth` - Change platform size
-   - `fillet_r` - Adjust edge rounding radius
-   - `lip_height` - Control phone lip height
+   - `filletr` - Adjust edge rounding radius
+   - `lipheight` - Control phone lip height
 5. Run `3dm build` to generate STL
 6. Test print to ensure phone fits securely
 
@@ -45,13 +45,13 @@
 **Solution**: Check `translate()` coordinates; ensure they sum correctly
 
 **Problem**: Edges are sharp instead of rounded  
-**Solution**: Verify `fillet_r` value is positive; increase `$fn` for smoother curves
+**Solution**: Verify `filletr` value is positive; increase `$fn` for smoother curves
 
 **Problem**: Phone doesn't fit in stand  
-**Solution**: Reduce `lip_height` or adjust `width`/`depth` parameters
+**Solution**: Reduce `lipheight` or adjust `width`/`depth` parameters
 
 ## Related Files
 
-- See Lesson 7: [Lesson 7 Markdown](../../../3dMake_Foundation/Lessons_3dMake_7/Lessons_3dMake_7.md) for full tutorial
-- Reference: [OpenSCAD Cheat Sheet](../../../3dMake_Foundation/Lessons_3dMake_2/openscad-cheat-sheet.md) for transform and Minkowski syntax
-- See Appendix D: [PowerShell Integration](../../../3dMake_Foundation/Appendix_D_PowerShell_Integration.md) for scripting multiple variants
+- See Lesson 7: [Lesson 7 Markdown](../../../3dMakeFoundation/Lessons3dMake7/Lessons3dMake7.md) for full tutorial
+- Reference: [OpenSCAD Cheat Sheet](../../../3dMakeFoundation/Lessons3dMake2/openscad-cheat-sheet.md) for transform and Minkowski syntax
+- See Appendix D: [PowerShell Integration](../../../3dMakeFoundation/AppendixDPowerShellIntegration.md) for scripting multiple variants

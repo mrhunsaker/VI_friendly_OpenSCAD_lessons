@@ -24,19 +24,19 @@
 ### Physical Object (Original)
 
 | Feature | Measurement 1 | Measurement 2 | Measurement 3 | Average |
-| --------- | -------------- | -------------- | -------------- | --------- |
-| Length    |                |                |                |           |
-| Width     |                |                |                |           |
-| Height    |                |                |                |           |
-| (Other)   |                |                |                |           |
+|---------|---------------|---------------|---------------|---------|
+| Length  |               |               |               |         |
+| Width   |               |               |               |         |
+| Height  |               |               |               |         |
+| (Other) |               |               |               |         |
 
 ### Slicer Configuration
 
-- Layer Height: _____ mm
-- Infill: _____ %
+- Layer Height: _ mm
+- Infill: _ %
 - Supports: Yes / No
-- Estimated Print Time: _____ hours
-- Estimated Filament: _____ grams
+- Estimated Print Time: _ hours
+- Estimated Filament: _ grams
 
 ---
 
@@ -50,11 +50,11 @@
 ### Printed Part Measurements (After Cooling)
 
 | Feature | Intended (mm) | Printed (mm) | Deviation | Notes |
-| --------- | --------------- | ------------- | ----------- | ------- |
-| Length    |                 |               |             |         |
-| Width     |                 |               |             |         |
-| Height    |                 |               |             |         |
-| (Other)   |                 |               |             |         |
+|---------|---------------|--------------|-----------|-------|
+| Length  |               |              |           |       |
+| Width   |               |              |           |       |
+| Height  |               |              |           |       |
+| (Other) |               |              |           |       |
 
 ### Assembly / Installation / Use Notes
 - How does the printed part fit/function compared to your original object?
@@ -95,12 +95,12 @@
 
 ## Teacher Feedback
 
-| Category | Score | Notes |
-| ---------- | ------- | ------- |
-| Problem & Solution (0-3) |   |       |
-| Design & Code Quality (0-3) |   |       |
-| Documentation (0-3) |   |       |
-| **Total (0-9)** | **  **  |       |
+| Category                    | Score  | Notes |
+|-----------------------------|--------|-------|
+| Problem & Solution (0-3)    |        |       |
+| Design & Code Quality (0-3) |        |       |
+| Documentation (0-3)         |        |       |
+| **Total (0-9)**             | **  ** |       |
 
 **Feedback:**
 
@@ -113,9 +113,9 @@
 
 ### Revised Score
 
-| Category | Revised Score | Notes |
-| ---------- | --------------- | ------- |
-| Problem & Solution (0-3) |   |       |
-| Design & Code Quality (0-3) |   |       |
-| Documentation (0-3) |   |       |
-| **Total (0-9)** | **  **  |       |
+| Category                    | Revised Score | Notes |
+|-----------------------------|---------------|-------|
+| Problem & Solution (0-3)    |               |       |
+| Design & Code Quality (0-3) |               |       |
+| Documentation (0-3)         |               |       |
+| **Total (0-9)**             | **  **        |       |

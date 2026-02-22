@@ -4,11 +4,11 @@ Technical design document specifying how requirements will be implemented.
 
 ## Design Document Information
 
-- **Project:** _________________________
-- **Design Version:** _________________________
-- **Date:** _________________________
-- **Designed By:** _________________________
-- **Reviewed By:** _________________________
+- **Project:** _
+- **Design Version:** _
+- **Date:** _
+- **Designed By:** _
+- **Reviewed By:** _
 
 ---
 
@@ -16,16 +16,16 @@ Technical design document specifying how requirements will be implemented.
 
 **Problem Statement:**
 (What are we solving?)
-___________________________________________________________
+_
 
 **Solution Approach:**
 (High-level how we'll solve it)
-___________________________________________________________
+_
 
 **Key Design Decisions:**
-1. _________________________________________________________________
-2. _________________________________________________________________
-3. _________________________________________________________________
+1. 
+2. 
+3. 
 
 ---
 
@@ -34,25 +34,25 @@ ___________________________________________________________
 ### Component 1: [Component Name]
 
 **Purpose:**
-___________________________________________________________
+_
 
 **Specifications:**
-- Dimensions: ________________________________________________________
-- Material: __________________________________________________________
-- Quantity: __________________________________________________________
+- Dimensions: 
+- Material: 
+- Quantity: 
 
 **Design Rationale:**
 (Why this approach?)
-___________________________________________________________
+_
 
 **Related Components:**
-- Connects to: _______________________________________________________
-- Interfaces with: ____________________________________________________
+- Connects to: _
+- Interfaces with: 
 
 **Manufacturing Considerations:**
-- Support structures needed: ___________________________________________
-- Orientation for print: _______________________________________________
-- Estimated print time: _______________________________________________
+- Support structures needed: _
+- Orientation for print: _
+- Estimated print time: _
 
 ---
 
@@ -65,49 +65,49 @@ ___________________________________________________________
 
 **Overall Assembly Structure:**
 (How components fit together)
-___________________________________________________________
+_
 
 **Assembly Sequence:**
-1. _________________________________________________________________
-2. _________________________________________________________________
-3. _________________________________________________________________
+1. 
+2. 
+3. 
 
 **Fastening Methods:**
-- [ ] Snap fits (location: ___________________________________)
-- [ ] Threaded inserts (quantity: ______)
-- [ ] Glue/adhesive (type: ________________)
-- [ ] Other: _______________________________________________________
+- [ ] Snap fits (location: _)
+- [ ] Threaded inserts (quantity: )
+- [ ] Glue/adhesive (type: )
+- [ ] Other: _
 
 **Assembly Challenges & Solutions:**
-- Challenge: _________________________________________________________
-  Solution: __________________________________________________________
+- Challenge: _
+  Solution: 
 
 ---
 
 ## Material Selection
 
-**Primary Material:** ______________________________________________
+**Primary Material:** 
 
 **Why this material?**
-| Property | Requirement | Selected Material | Alternative |
-|----------|-------------|-------------------|-------------|
-| Strength | | | |
-| Flexibility | | | |
-| Temperature | | | |
-| Cost | | | |
-| Availability | | | |
+| Property     | Requirement | Selected Material | Alternative |
+|--------------|-------------|-------------------|-------------|
+| Strength     |             |                   |             |
+| Flexibility  |             |                   |             |
+| Temperature  |             |                   |             |
+| Cost         |             |                   |             |
+| Availability |             |                   |             |
 
 **Material Properties:**
-- Nozzle temperature: ______________________________________________
-- Bed temperature: __________________________________________________
-- Print speed: _______________________________________________________
-- Support required: __________________________________________________
-- Post-processing: __________________________________________________
+- Nozzle temperature: 
+- Bed temperature: 
+- Print speed: _
+- Support required: 
+- Post-processing: 
 
 **Material Alternatives & Trade-offs:**
-- Option 1: _________________________________________________________
-- Option 2: _________________________________________________________
-- Selected option rationale: ___________________________________________
+- Option 1: _
+- Option 2: _
+- Selected option rationale: _
 
 ---
 
@@ -116,20 +116,20 @@ ___________________________________________________________
 ### Feature 1: [Feature Name]
 
 **Purpose:**
-___________________________________________________________
+_
 
 **Design Details:**
-- Dimensions: ________________________________________________________
-- Placement: _________________________________________________________
-- Tolerances: ________________________________________________________
+- Dimensions: 
+- Placement: _
+- Tolerances: 
 
 **Rationale:**
 (Why designed this way?)
-___________________________________________________________
+_
 
 **Related Requirement:**
 (Which requirement does this fulfill?)
-___________________________________________________________
+_
 
 ---
 
@@ -144,12 +144,12 @@ ___________________________________________________________
 
 | Dimension | Tolerance | Rationale | Risk |
 |-----------|-----------|-----------|------|
-| | +/-_mm | | |
-| | +/-_mm | | |
+|           | +/-_mm    |           |      |
+|           | +/-_mm    |           |      |
 
 **Fit Relationships:**
-- Part A to Part B: _____________________________________________________
-- Part B to Part C: _____________________________________________________
+- Part A to Part B: _
+- Part B to Part C: _
 
 **Validation Plan:**
 - [ ] Print test version before production
@@ -164,41 +164,41 @@ ___________________________________________________________
 ### Print Parameters
 
 **Slicer Settings:**
-- Layer height: ______________________________________________________
-- Infill: ____________________________________________________________
-- Support material: __________________________________________________
-- Raft/brim: _________________________________________________________
+- Layer height: 
+- Infill: 
+- Support material: 
+- Raft/brim: _
 
 **Print Time & Material:**
-- Estimated time: ____________________________________________________
-- Material weight: ___________________________________________________
-- Cost estimate: _____________________________________________________
+- Estimated time: 
+- Material weight: _
+- Cost estimate: _
 
 **Orientation Strategy:**
 (How will this be oriented during printing?)
-- Rationale: _________________________________________________________
-- Risks: _____________________________________________________________
-- Mitigation: ________________________________________________________
+- Rationale: _
+- Risks: _
+- Mitigation: 
 
 ### Post-Processing
 
 **Cleanup:**
-- [ ] Remove supports (method: ______________________________________)
-- [ ] Remove raft/brim (method: _____________________________________)
-- [ ] Sand edges (grit: _____________)
-- [ ] Smooth surfaces (method: _______________________________________)
+- [ ] Remove supports (method: )
+- [ ] Remove raft/brim (method: _)
+- [ ] Sand edges (grit: _)
+- [ ] Smooth surfaces (method: )
 
 **Finishing:**
-- [ ] Paint/coat (type: ____________________________________________)
-- [ ] Treat for durability: __________________________________________
-- [ ] Inspect quality: ________________________________________________
+- [ ] Paint/coat (type: )
+- [ ] Treat for durability: 
+- [ ] Inspect quality: 
 
 **Assembly Work:**
 - [ ] Insert threaded nuts/inserts
 - [ ] Assemble components
 - [ ] Test functionality
 
-**Estimated Total Time:** ____________ hours
+**Estimated Total Time:**  hours
 
 ---
 
@@ -208,13 +208,13 @@ ___________________________________________________________
 
 | Test | Method | Pass Criteria | Status |
 |------|--------|---------------|--------|
-| | | | |
-| | | | |
+|      |        |               |        |
+|      |        |               |        |
 
 **Durability Tests:**
-- Stress test: _______________________________________________________
-- Environmental exposure: ____________________________________________
-- Lifecycle test: _____________________________________________________
+- Stress test: _
+- Environmental exposure: 
+- Lifecycle test: _
 
 **Tolerance Verification:**
 - Measure key dimensions
@@ -226,11 +226,11 @@ ___________________________________________________________
 ## Design Risks & Mitigation
 
 **Risk 1:**
-- Description: _______________________________________________________
+- Description: _
 - Probability: [ ] High  [ ] Medium  [ ] Low
 - Impact: [ ] Critical  [ ] Major  [ ] Minor
-- Mitigation: ________________________________________________________
-- Contingency: _______________________________________________________
+- Mitigation: 
+- Contingency: _
 
 **Risk 2:**
 (Continue for identified risks)
@@ -240,10 +240,10 @@ ___________________________________________________________
 ## Design Alternatives Considered
 
 **Alternative 1:**
-- Approach: _________________________________________________________
-- Pros: ______________________________________________________________
-- Cons: ______________________________________________________________
-- Why not selected: __________________________________________________
+- Approach: _
+- Pros: 
+- Cons: 
+- Why not selected: 
 
 **Alternative 2:**
 (Continue for each alternative considered)
@@ -254,26 +254,26 @@ ___________________________________________________________
 
 ### Dimensional Drawing Reference
 (Attach or describe detailed drawings/models)
-- CAD file: __________________________________________________________
-- Drawing revision: __________________________________________________
+- CAD file: 
+- Drawing revision: 
 
 ### Performance Specifications
-- Load capacity: _____________________________________________________
-- Temperature range: _________________________________________________
-- Lifespan: __________________________________________________________
-- Accuracy/precision: ________________________________________________
+- Load capacity: _
+- Temperature range: _
+- Lifespan: 
+- Accuracy/precision: 
 
 ---
 
 ## Bill of Materials (BOM)
 
-| Item | Part # | Quantity | Unit Cost | Notes |
-|------|--------|----------|-----------|-------|
-| 3D Printed Main Body | - | 1 | $0.XX | PLA |
-| | | | | |
-| | | | | |
+| Item                 | Part # | Quantity | Unit Cost | Notes |
+|----------------------|--------|----------|-----------|-------|
+| 3D Printed Main Body | -      | 1        | $0.XX     | PLA   |
+|                      |        |          |           |       |
+|                      |        |          |           |       |
 
-**Total Material Cost:** $__________
+**Total Material Cost:** $
 
 ---
 
@@ -297,7 +297,7 @@ Before manufacturing:
 
 | Change # | Date | Description | Reason | Impact |
 |----------|------|-------------|--------|--------|
-| | | | | |
+|          |      |             |        |        |
 
 ---
 
@@ -305,16 +305,16 @@ Before manufacturing:
 
 **Design Approval:**
 
-| Role | Name | Signature | Date |
-|------|------|-----------|------|
-| Designer | | | |
-| Reviewer | | | |
-| Stakeholder | | | |
+| Role        | Name | Signature | Date |
+|-------------|------|-----------|------|
+| Designer    |      |           |      |
+| Reviewer    |      |           |      |
+| Stakeholder |      |           |      |
 
 **Status:**
 - [ ]  Approved - Ready for manufacturing
-- [ ]  Approved with conditions: ________________________________
-- [ ]  Not approved - Revisions needed: ____________________________
+- [ ]  Approved with conditions: 
+- [ ]  Not approved - Revisions needed: 
 
 ---
 

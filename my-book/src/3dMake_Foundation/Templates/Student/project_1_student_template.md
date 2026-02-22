@@ -15,12 +15,12 @@
 ### Functional Requirements (Define Five)
 
 | Requirement | Acceptance Test (How will you measure success?) |
-| ------------- | ------------------------------------------------- |
-| 1.            |                                                   |
-| 2.            |                                                   |
-| 3.            |                                                   |
-| 4.            |                                                   |
-| 5.            |                                                   |
+|-------------|-------------------------------------------------|
+| 1.          |                                                 |
+| 2.          |                                                 |
+| 3.          |                                                 |
+| 4.          |                                                 |
+| 5.          |                                                 |
 
 ### Design Approach
 - What marker shapes or patterns will you test?
@@ -32,18 +32,18 @@
 
 ### Target Surface
 
-- Surface material: _____
-- Surface dimensions: _____ x _____ mm
+- Surface material: _
+- Surface dimensions: _ x _ mm
 - Access constraints (e.g., edges, obstacles):
 
 ### Marker Dimensions
 
-| Parameter | Value |
-| ----------- | ------- |
-| Height      |         |
-| Width       |         |
-| Depth       |         |
-| Hole Diameter (if applicable) |  |
+| Parameter                     | Value |
+|-------------------------------|-------|
+| Height                        |       |
+| Width                         |       |
+| Depth                         |       |
+| Hole Diameter (if applicable) |       |
 
 ---
 
@@ -67,9 +67,9 @@
 - Why did you make this change?
 
 | Parameter | Prototype 1 | Prototype 2 | Reason for Change |
-| ----------- | ------------- | ------------- | ------------------- |
-|             |               |               |                     |
-|             |               |               |                     |
+|-----------|-------------|-------------|-------------------|
+|           |             |             |                   |
+|           |             |             |                   |
 
 ### Prototype 2 Testing
 
@@ -125,12 +125,12 @@
 
 ## Teacher Feedback
 
-| Category | Score | Notes |
-| ---------- | ------- | ------- |
-| Problem & Solution (0-3) |   |       |
-| Design & Code Quality (0-3) |   |       |
-| Documentation (0-3) |   |       |
-| **Total (0-9)** | **  **  |       |
+| Category                    | Score  | Notes |
+|-----------------------------|--------|-------|
+| Problem & Solution (0-3)    |        |       |
+| Design & Code Quality (0-3) |        |       |
+| Documentation (0-3)         |        |       |
+| **Total (0-9)**             | **  ** |       |
 
 **Feedback:**
 
@@ -143,9 +143,9 @@
 
 ### Revised Score
 
-| Category | Revised Score | Notes |
-| ---------- | --------------- | ------- |
-| Problem & Solution (0-3) |   |       |
-| Design & Code Quality (0-3) |   |       |
-| Documentation (0-3) |   |       |
-| **Total (0-9)** | **  **  |       |
+| Category                    | Revised Score | Notes |
+|-----------------------------|---------------|-------|
+| Problem & Solution (0-3)    |               |       |
+| Design & Code Quality (0-3) |               |       |
+| Documentation (0-3)         |               |       |
+| **Total (0-9)**             | **  **        |       |

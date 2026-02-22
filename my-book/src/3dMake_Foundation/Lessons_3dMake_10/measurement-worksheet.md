@@ -1,8 +1,8 @@
 # Measurement Worksheet
 
-**Student Name:** ___________________________________
-**Date:** ___________________________________
-**Project / Assignment:** ___________________________________
+**Student Name:** _
+**Date:** _
+**Project / Assignment:** _
 
 ---
 
@@ -19,15 +19,15 @@
 
 ## Object 1
 
-**Object description:** ___________________________________
+**Object description:** _
 
-| Feature | What You're Measuring | M1 (mm) | M2 (mm) | M3 (mm) | Average (mm) |
-| --------- | ---------------------- | --------- | --------- | --------- | ------------- |
-| Length (X) | | | | | |
-| Width (Y) | | | | | |
-| Height (Z) | | | | | |
-| Feature 4 | | | | | |
-| Feature 5 | | | | | |
+| Feature    | What You're Measuring | M1 (mm) | M2 (mm) | M3 (mm) | Average (mm) |
+|------------|-----------------------|---------|---------|---------|--------------|
+| Length (X) |                       |         |         |         |              |
+| Width (Y)  |                       |         |         |         |              |
+| Height (Z) |                       |         |         |         |              |
+| Feature 4  |                       |         |         |         |              |
+| Feature 5  |                       |         |         |         |              |
 
 **Notes / sketches:**
 
@@ -43,15 +43,15 @@
 
 ## Object 2
 
-**Object description:** ___________________________________
+**Object description:** _
 
-| Feature | What You're Measuring | M1 (mm) | M2 (mm) | M3 (mm) | Average (mm) |
-| --------- | ---------------------- | --------- | --------- | --------- | ------------- |
-| Length (X) | | | | | |
-| Width (Y) | | | | | |
-| Height (Z) | | | | | |
-| Feature 4 | | | | | |
-| Feature 5 | | | | | |
+| Feature    | What You're Measuring | M1 (mm) | M2 (mm) | M3 (mm) | Average (mm) |
+|------------|-----------------------|---------|---------|---------|--------------|
+| Length (X) |                       |         |         |         |              |
+| Width (Y)  |                       |         |         |         |              |
+| Height (Z) |                       |         |         |         |              |
+| Feature 4  |                       |         |         |         |              |
+| Feature 5  |                       |         |         |         |              |
 
 **Notes / sketches:**
 
@@ -67,15 +67,15 @@
 
 ## Object 3
 
-**Object description:** ___________________________________
+**Object description:** _
 
-| Feature | What You're Measuring | M1 (mm) | M2 (mm) | M3 (mm) | Average (mm) |
-| --------- | ---------------------- | --------- | --------- | --------- | ------------- |
-| Length (X) | | | | | |
-| Width (Y) | | | | | |
-| Height (Z) | | | | | |
-| Feature 4 | | | | | |
-| Feature 5 | | | | | |
+| Feature    | What You're Measuring | M1 (mm) | M2 (mm) | M3 (mm) | Average (mm) |
+|------------|-----------------------|---------|---------|---------|--------------|
+| Length (X) |                       |         |         |         |              |
+| Width (Y)  |                       |         |         |         |              |
+| Height (Z) |                       |         |         |         |              |
+| Feature 4  |                       |         |         |         |              |
+| Feature 5  |                       |         |         |         |              |
 
 **Notes / sketches:**
 
@@ -91,15 +91,15 @@
 
 ## Object 4
 
-**Object description:** ___________________________________
+**Object description:** _
 
-| Feature | What You're Measuring | M1 (mm) | M2 (mm) | M3 (mm) | Average (mm) |
-| --------- | ---------------------- | --------- | --------- | --------- | ------------- |
-| Length (X) | | | | | |
-| Width (Y) | | | | | |
-| Height (Z) | | | | | |
-| Feature 4 | | | | | |
-| Feature 5 | | | | | |
+| Feature    | What You're Measuring | M1 (mm) | M2 (mm) | M3 (mm) | Average (mm) |
+|------------|-----------------------|---------|---------|---------|--------------|
+| Length (X) |                       |         |         |         |              |
+| Width (Y)  |                       |         |         |         |              |
+| Height (Z) |                       |         |         |         |              |
+| Feature 4  |                       |         |         |         |              |
+| Feature 5  |                       |         |         |         |              |
 
 **Notes / sketches:**
 
@@ -115,15 +115,15 @@
 
 ## Object 5
 
-**Object description:** ___________________________________
+**Object description:** _
 
-| Feature | What You're Measuring | M1 (mm) | M2 (mm) | M3 (mm) | Average (mm) |
-| --------- | ---------------------- | --------- | --------- | --------- | ------------- |
-| Length (X) | | | | | |
-| Width (Y) | | | | | |
-| Height (Z) | | | | | |
-| Feature 4 | | | | | |
-| Feature 5 | | | | | |
+| Feature    | What You're Measuring | M1 (mm) | M2 (mm) | M3 (mm) | Average (mm) |
+|------------|-----------------------|---------|---------|---------|--------------|
+| Length (X) |                       |         |         |         |              |
+| Width (Y)  |                       |         |         |         |              |
+| Height (Z) |                       |         |         |         |              |
+| Feature 4  |                       |         |         |         |              |
+| Feature 5  |                       |         |         |         |              |
 
 **Notes / sketches:**
 
@@ -142,12 +142,12 @@
 After completing all measurements, compare your averages with a partner who measured the same objects.
 
 | Object | My Average (mm) | Partner's Average (mm) | Difference (mm) | Within 1 mm? |
-| -------- | ---------------- | ---------------------- | ---------------- | ------------- |
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
-| 5 | | | | |
+|--------|-----------------|------------------------|-----------------|--------------|
+| 1      |                 |                        |                 |              |
+| 2      |                 |                        |                 |              |
+| 3      |                 |                        |                 |              |
+| 4      |                 |                        |                 |              |
+| 5      |                 |                        |                 |              |
 
 If any difference is greater than 1 mm, remeasure together and find the source of the discrepancy.
 
@@ -160,9 +160,9 @@ If your instructor provides the "true" dimension of an object (measured with a r
 **Formula:** `% error = (|your average  true value| / true value) x 100`
 
 | Object | Your Average | True Value | Difference | % Error |
-| -------- | ------------- | ----------- | ----------- | --------- |
-| | | | | |
-| | | | | |
+|--------|--------------|------------|------------|---------|
+|        |              |            |            |         |
+|        |              |            |            |         |
 
 A percent error under 2% is excellent for caliper work at this level.
 

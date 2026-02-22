@@ -114,6 +114,6 @@ Complete this checklist before each printing session to maintain a safe workspac
 
 ---
 
-**Last Reviewed:** _______________  
-**Reviewed By:** _______________  
-**Notes:** ________________________________________________
+**Last Reviewed:** _  
+**Reviewed By:** _  
+**Notes:** 

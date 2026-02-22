@@ -5,68 +5,71 @@ This directory contains all OpenSCAD code examples and supporting materials for 
 ## Folder Structure
 
 ```
-assets/3dMake_Foundation/
+assets/3dMakeFoundation/
 +------ README.md (this file)
-+------ Lessons_3dMake_6/
++------ Lessons3dMake6/
 |   +------ README.md
-|   +------ cube_keycap.scad
-+------ Lessons_3dMake_7/
+|   +------ cubekeycap.scad
++------ Lessons3dMake7/
 |   +------ README.md
-|   +------ phone_stand.scad
-+------ Lessons_3dMake_8/
+|   +------ phonestand.scad
++------ Lessons3dMake8/
     +------ README.md
-    +------ stackable_bins.scad
+    +------ stackablebins.scad
 ```
 
 ## Code Examples by Lesson
 
 ### Lesson 6: Practical 3dm Commands and Text Embossing
 
-**Folder**: `Lessons_3dMake_6/`  
-**File**: `cube_keycap.scad`  
+**Folder**: `Lessons3dMake6/`  
+**File**: `cubekeycap.scad`  
 **Level**: Beginner  
 **Skills**: Text embossing, boolean operations, parametric design
 
 A simple keycap with embossed text. Great for learning:
-- How to use `linear_extrude()` and `text()`
+
+- How to use `linearextrude()` and `text()`
 - Creating hollow structures with `difference()`
 - Running 3dm commands (`describe`, `preview`, `orient`, `slice`)
 
-See `Lessons_3dMake_6/README.md` for detailed learning guide.
+See `Lessons3dMake6/README.md` for detailed learning guide.
 
 ---
 
 ### Lesson 7: Parametric Transforms and the Phone Stand Project
 
-**Folder**: `Lessons_3dMake_7/`  
-**File**: `phone_stand.scad`  
+**Folder**: `Lessons3dMake7/`  
+**File**: `phonestand.scad`  
 **Level**: Intermediate  
 **Skills**: Transforms, Minkowski operations, multi-part assemblies
 
 A functional phone stand combining:
+
 - `rotate()`, `translate()`, and `scale()` transforms
 - Minkowski operations for rounded edges
 - Multi-part assembly with `union()`
 - Parametric customization for different phone sizes
 
-See `Lessons_3dMake_7/README.md` for detailed learning guide.
+See `Lessons3dMake7/README.md` for detailed learning guide.
 
 ---
 
 ### Lesson 8: Advanced Parametric Design and Interlocking Features
 
-**Folder**: `Lessons_3dMake_8/`  
-**File**: `stackable_bins.scad`  
+**Folder**: `Lessons3dMake8/`  
+**File**: `stackablebins.scad`  
 **Level**: Advanced  
 **Skills**: Tolerance design, interlocking features, multi-part validation
 
 Stackable storage bins demonstrating:
+
 - Precise clearance design (tolerance stack-up)
 - Interlocking rims for assembly without fasteners
 - Chamfered edges for print quality
 - Parametric variation for different sizes
 
-See `Lessons_3dMake_8/README.md` for detailed learning guide.
+See `Lessons3dMake8/README.md` for detailed learning guide.
 
 ---
 
@@ -102,7 +105,7 @@ See `Lessons_3dMake_8/README.md` for detailed learning guide.
 
 ```openscad
 // Top-level parameters (easy to customize)
-parameter_name = value;  // unit description
+parametername = value;  // unit description
 
 // Modules for organization
 module feature() {
@@ -141,34 +144,34 @@ union() {
 
 ```openscad
 // Critical parameters for tolerance
-outer_dim = 100;
-wall_thickness = 2;
+outerdim = 100;
+wallthickness = 2;
 clearance = 0.6;  // Small gap for fit
 
-inner_dim = outer_dim - 2*wall_thickness - 2*clearance;
+innerdim = outerdim - 2*wallthickness - 2*clearance;
 
-module outer_shell() { cube([outer_dim, outer_dim, height]); }
-module inner_cavity() { cube([inner_dim, inner_dim, height]); }
+module outershell() { cube([outerdim, outerdim, height]); }
+module innercavity() { cube([innerdim, innerdim, height]); }
 
 difference() {
-  outer_shell();
-  inner_cavity();
+  outershell();
+  innercavity();
 }
 ```
 
 ## Learning Progression
 
-1. **Start with Lesson 6** (cube_keycap.scad)
+1. **Start with Lesson 6** (cubekeycap.scad)
    - Learn text embossing
    - Understand module organization
    - Apply basic 3dm commands
 
-2. **Move to Lesson 7** (phone_stand.scad)
+2. **Move to Lesson 7** (phonestand.scad)
    - Practice with transforms
    - Combine multiple parts
    - Use Minkowski for rounded edges
 
-3. **Progress to Lesson 8** (stackable_bins.scad)
+3. **Progress to Lesson 8** (stackablebins.scad)
    - Design with tolerances
    - Test and iterate
    - Validate with measurements
@@ -179,6 +182,7 @@ difference() {
 ### Exercise Set A: Modify Individual Parameters
 
 For each code example, try changing:
+
 - Dimensions (size, height, width)
 - Visual properties (letter, number of parts)
 - Assembly properties (angle, spacing)
@@ -186,6 +190,7 @@ For each code example, try changing:
 ### Exercise Set B: Create Variants
 
 Extend each design:
+
 - Add new features alongside the main design
 - Create smaller/larger versions
 - Change decorative elements
@@ -193,31 +198,35 @@ Extend each design:
 ### Exercise Set C: Combine Patterns
 
 After learning each pattern:
+
 - Mix text embossing with transforms
 - Add tolerance design to assembled parts
 - Create a complex multi-part design
 
 ## Reference Links
 
-- **Lesson 6**: [Practical 3dm Commands and Text Embossing](../../3dMake_Foundation/Lessons_3dMake_6/Lessons_3dMake_6.md)
-- **Lesson 7**: [Parametric Transforms and the Phone Stand](../../3dMake_Foundation/Lessons_3dMake_7/Lessons_3dMake_7.md)
-- **Lesson 8**: [Advanced Parametric Design](../../3dMake_Foundation/Lessons_3dMake_8/Lessons_3dMake_8.md)
-- **OpenSCAD Cheat Sheet**: [Syntax Quick Reference](../../3dMake_Foundation/Lessons_3dMake_2/openscad-cheat-sheet.md)
-- **3dMake Setup Guide**: [Commands & Workflow](../../3dMake_Foundation/Lessons_3dMake_1/3dmake-setup-guide.md)
+- **Lesson 6**: [Practical 3dm Commands and Text Embossing](../../3dMakeFoundation/Lessons3dMake6/Lessons3dMake6.md)
+- **Lesson 7**: [Parametric Transforms and the Phone Stand](../../3dMakeFoundation/Lessons3dMake7/Lessons3dMake7.md)
+- **Lesson 8**: [Advanced Parametric Design](../../3dMakeFoundation/Lessons3dMake8/Lessons3dMake8.md)
+- **OpenSCAD Cheat Sheet**: [Syntax Quick Reference](../../3dMakeFoundation/Lessons3dMake2/openscad-cheat-sheet.md)
+- **3dMake Setup Guide**: [Commands & Workflow](../../3dMakeFoundation/Lessons3dMake1/3dmake-setup-guide.md)
 
 ## Troubleshooting
 
 **File not found when opening in OpenSCAD**
+
 - Ensure file paths are correct
 - Use absolute paths or place files in current working directory
 - Check that `.scad` extension is present
 
 **Model doesn't preview or renders incorrectly**
+
 - Check for syntax errors (mismatched brackets, missing semicolons)
 - Verify all module definitions are complete
 - Use OpenSCAD's "Show Errors" to debug
 
 **Parameters don't change the design**
+
 - Ensure you modified top-level parameters (not inside comments)
 - Save the file and re-preview (F5)
 - Check that parameter names are spelled correctly throughout code

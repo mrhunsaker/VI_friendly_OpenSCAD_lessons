@@ -1,10 +1,11 @@
 # 3dMake Foundation Final Exam
 
-**Name:** _________________________ | **Date:** ____________
+**Name:**  | **Date:**
 
 **Total Points:** 100 (4 points per problem)
 
 **Instructions:**
+
 - Answer all 25 questions
 - For code errors, identify the specific problem and explain why it's wrong
 - For behavioral questions, show your reasoning
@@ -30,9 +31,7 @@ cylinder(h=20, r=8);
 
 **Question:** Is there an error in this code? If yes, identify it. If no, explain what this code renders.
 
-**Answer:** ________________________________________________________________
-
-________________________________________________________________
+**Answer:**
 
 ---
 
@@ -46,9 +45,7 @@ translate([5, 5, 0])
 
 **Question:** Does this code have a syntax error? Explain what this code does.
 
-**Answer:** ________________________________________________________________
-
-________________________________________________________________
+**Answer:**
 
 ---
 
@@ -64,9 +61,7 @@ difference() {
 
 **Question:** What is wrong with this CSG operation? Explain the fix.
 
-**Answer:** ________________________________________________________________
-
-________________________________________________________________
+**Answer:**
 
 ---
 
@@ -84,32 +79,28 @@ bracket(20, 15, 10);
 
 **Question:** Is there an error in this module definition or call? Why or why not?
 
-**Answer:** ________________________________________________________________
-
-________________________________________________________________
+**Answer:**
 
 ---
 
 ### Problem 5: Parameter & Variable Scoping Error
 
 ```openscad
-wall_thickness = 2;
+wallthickness = 2;
 
-module hollow_cube(size) {
+module hollowcube(size) {
   difference() {
     cube([size, size, size], center=true);
-    cube([size - wall_thickness, size - wall_thickness, size - wall_thickness], center=true);
+    cube([size - wallthickness, size - wallthickness, size - wallthickness], center=true);
   }
 }
 
-hollow_cube(20);
+hollowcube(20);
 ```
 
 **Question:** Will this code work correctly? If not, what is the problem and how would you fix it?
 
-**Answer:** ________________________________________________________________
-
-________________________________________________________________
+**Answer:**
 
 ---
 
@@ -124,9 +115,7 @@ for (i = [0:5:20]) {
 
 **Question:** Will this code produce 5 cubes? Show the positions and explain why or why not.
 
-**Answer:** ________________________________________________________________
-
-________________________________________________________________
+**Answer:**
 
 ---
 
@@ -139,9 +128,7 @@ sphere(r=5);
 
 **Question:** What is the relationship between these two shapes? Where would the sphere appear relative to the cube?
 
-**Answer:** ________________________________________________________________
-
-________________________________________________________________
+**Answer:**
 
 ---
 
@@ -156,9 +143,7 @@ intersection() {
 
 **Question:** Is there an error? What will this code render?
 
-**Answer:** ________________________________________________________________
-
-________________________________________________________________
+**Answer:**
 
 ---
 
@@ -173,9 +158,7 @@ translate([10, 0, 0])
 
 **Question:** Are the transforms applied in the correct order? Trace the final position of the cube.
 
-**Answer:** ________________________________________________________________
-
-________________________________________________________________
+**Answer:**
 
 ---
 
@@ -189,9 +172,7 @@ cube([10, 10, 10]);
 
 **Question:** Identify the problem(s) with resolution in this code. What will happen when rendered?
 
-**Answer:** ________________________________________________________________
-
-________________________________________________________________
+**Answer:**
 
 ---
 
@@ -207,41 +188,39 @@ For each question, show your reasoning. You may draw diagrams if helpful.
 
 a) List the XYZ coordinates of all 8 vertices.
 
-**Answer:** 
-- Vertex 1: _______________
-- Vertex 2: _______________
-- Vertex 3: _______________
-- Vertex 4: _______________
-- Vertex 5: _______________
-- Vertex 6: _______________
-- Vertex 7: _______________
-- Vertex 8: _______________
+**Answer:**
+
+- Vertex 1: 
+- Vertex 2: 
+- Vertex 3: 
+- Vertex 4: 
+- Vertex 5: 
+- Vertex 6: 
+- Vertex 7: 
+- Vertex 8: 
 
 b) Now define the SAME cube with `center=true`. List the NEW coordinates of all 8 vertices.
 
-**Answer:** 
-- Vertex 1: _______________
-- Vertex 2: _______________
-- Vertex 3: _______________
-- Vertex 4: _______________
-- Vertex 5: _______________
-- Vertex 6: _______________
-- Vertex 7: _______________
-- Vertex 8: _______________
+**Answer:**
+
+- Vertex 1: 
+- Vertex 2: 
+- Vertex 3: 
+- Vertex 4: 
+- Vertex 5: 
+- Vertex 6: 
+- Vertex 7: 
+- Vertex 8: 
 
 ---
 
 ### Problem 12: Sphere Geometry
 
-**Question:** Explain the difference between `sphere(r=10, $fn=8)` and `sphere(r=10, $fn=128)`. 
+**Question:** Explain the difference between `sphere(r=10, $fn=8)` and `sphere(r=10, $fn=128)`.
 
 Which would you use for a prototype and which for final printing? Why?
 
-**Answer:** ________________________________________________________________
-
-________________________________________________________________
-
-________________________________________________________________
+**Answer:**
 
 ---
 
@@ -257,25 +236,17 @@ translate([10, 0, 0])
 
 Does the order matter? What if you swap translate and rotate? Show both final positions.
 
-**Answer:** ________________________________________________________________
-
-________________________________________________________________
-
-________________________________________________________________
+**Answer:**
 
 ---
 
 ### Problem 14: Boolean Operation Behavior
 
-**Question:** You have a solid cube and you want to create a hole through it. Which CSG operation would you use: `union()`, `difference()`, or `intersection()`? 
+**Question:** You have a solid cube and you want to create a hole through it. Which CSG operation would you use: `union()`, `difference()`, or `intersection()`?
 
 Explain your choice and write pseudocode showing how you'd accomplish this.
 
-**Answer:** ________________________________________________________________
-
-________________________________________________________________
-
-________________________________________________________________
+**Answer:**
 
 ---
 
@@ -284,26 +255,24 @@ ________________________________________________________________
 **Question:** Compare these two approaches:
 
 **Approach A:** Hard-coded cube with fixed dimensions
+
 ```openscad
 cube([10, 10, 20]);
 ```
 
 **Approach B:** Parametric cube
+
 ```openscad
-module parametric_box(width, height, depth) {
+module parametricbox(width, height, depth) {
   cube([width, height, depth], center=true);
 }
 
-parametric_box(10, 10, 20);
+parametricbox(10, 10, 20);
 ```
 
 Why is Approach B better for design iteration? Give an example of how you'd use it.
 
-**Answer:** ________________________________________________________________
-
-________________________________________________________________
-
-________________________________________________________________
+**Answer:**
 
 ---
 
@@ -311,30 +280,23 @@ ________________________________________________________________
 
 **Question:** If you apply `scale([2, 1, 0.5])` to a `cube([10, 10, 10], center=true)`, what are the NEW dimensions of the cube?
 
-**Answer:** New dimensions: _______________
+**Answer:** New dimensions: 
 
 Show your calculation:
-
-________________________________________________________________
-
-________________________________________________________________
 
 ---
 
 ### Problem 17: Library Organization
 
 **Question:** You've created three useful modules:
+
 - `bracket(width, height, depth)`
-- `hollow_cube(size, wall_thickness)`
-- `connector_pin(diameter, height)`
+- `hollowcube(size, wallthickness)`
+- `connectorpin(diameter, height)`
 
 How would you organize these into a reusable library? What file structure would you create and why?
 
-**Answer:** ________________________________________________________________
-
-________________________________________________________________
-
-________________________________________________________________
+**Answer:**
 
 ---
 
@@ -356,30 +318,22 @@ d) 2.5mm wide
 
 Explain your choice and the design thinking behind it.
 
-**Answer:** ________________________________________________________________
-
-________________________________________________________________
-
-________________________________________________________________
+**Answer:**
 
 ---
 
 ### Problem 19: Design Iteration Problem
 
-**Question:** You print a keycap with `key_size=12` and the text embossing is too shallow to feel. Your code uses:
+**Question:** You print a keycap with `keysize=12` and the text embossing is too shallow to feel. Your code uses:
 
 ```openscad
-linear_extrude(height=1)
+linearextrude(height=1)
   text("A", size=8);
 ```
 
 What parameter(s) would you adjust to make the embossing deeper? Show your new code.
 
-**Answer:** ________________________________________________________________
-
-________________________________________________________________
-
-________________________________________________________________
+**Answer:**
 
 ---
 
@@ -396,11 +350,7 @@ difference() {
 
 Why might this fail? What's the common fix for non-manifold geometry?
 
-**Answer:** ________________________________________________________________
-
-________________________________________________________________
-
-________________________________________________________________
+**Answer:**
 
 ---
 
@@ -441,17 +391,14 @@ cube([20, 20, 20]);
 
 Which parameter(s) would you reduce to speed up rendering while maintaining acceptable quality for a prototype? Explain your choices.
 
-**Answer:** ________________________________________________________________
-
-________________________________________________________________
-
-________________________________________________________________
+**Answer:**
 
 ---
 
 ### Problem 23: Real-World Constraint Problem
 
 **Question:** A stakeholder requests a custom handle for a tool. They specify:
+
 - Must fit a hand (approximately 80mm long)
 - Must accommodate fingers 60mm long inside
 - Wall thickness must be at least 3mm for durability
@@ -459,13 +406,7 @@ ________________________________________________________________
 
 Sketch or describe a parametric design for this handle. What parameters would you expose to allow customization?
 
-**Answer:** ________________________________________________________________
-
-________________________________________________________________
-
-________________________________________________________________
-
-________________________________________________________________
+**Answer:**
 
 ---
 
@@ -478,7 +419,7 @@ Write code using a loop that creates 5 keycaps with letters A-E, properly spaced
 **Answer:**
 
 ```openscad
-module keycap(letter, key_size=10) {
+module keycap(letter, keysize=10) {
   // Keycap code here (you can assume this exists)
 }
 
@@ -494,13 +435,7 @@ module keycap(letter, key_size=10) {
 
 For Iteration 3, what thickness would you try and why? How would you make this decision more scientific/data-driven?
 
-**Answer:** ________________________________________________________________
-
-________________________________________________________________
-
-________________________________________________________________
-
-________________________________________________________________
+**Answer:**
 
 ---
 
@@ -520,13 +455,11 @@ ________________________________________________________________
 
 ```
 
-**User Need:** _________________________________________________________________
+**User Need:**
 
-**Parameters:** _________________________________________________________________
+**Parameters:**
 
-**Testing Plan:** ________________________________________________________________
-
-________________________________________________________________
+**Testing Plan:**
 
 ---
 
@@ -546,17 +479,18 @@ ________________________________________________________________
 
 ## References You May Use
 
-- [3dMake Quick Reference](3dMake_Quick_Reference.md)
-- [OpenSCAD Cheat Sheet](Lessons_3dMake_2/openscad-cheat-sheet.md)
-- [Appendix A: Comprehensive Slicing Guide](Appendix_A_Comprehensive_Slicing_Guide.md)
-- [Appendix C: Tolerance Testing & QA Matrix](Appendix_C_Tolerance_QA.md)
-- [Appendix D: PowerShell Integration](Appendix_D_PowerShell_Integration.md)
+- [3dMake Quick Reference](3dMakeQuickReference.md)
+- [OpenSCAD Cheat Sheet](Lessons3dMake2/openscad-cheat-sheet.md)
+- [Appendix A: Comprehensive Slicing Guide](AppendixAComprehensiveSlicingGuide.md)
+- [Appendix C: Tolerance Testing & QA Matrix](AppendixCToleranceQA.md)
+- [Appendix D: PowerShell Integration](AppendixDPowerShellIntegration.md)
 
 ---
 
 **End of Final Exam**
 
 **Submission Instructions:**
+
 1. Answer all 25 questions completely
 2. Show your work for calculations and reasoning
 3. Include code samples where requested

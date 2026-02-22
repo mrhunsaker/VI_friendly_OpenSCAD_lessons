@@ -9,9 +9,9 @@
 ## Audit Scope
 
 Tools/workflows to audit:
-1. _____
-2. _____
-3. _____
+1. _
+2. _
+3. _
 
 Testing methodology (screen reader, keyboard-only, other):
 
@@ -19,7 +19,7 @@ Testing methodology (screen reader, keyboard-only, other):
 
 ## Detailed Findings
 
-### Tool 1: _____
+### Tool 1: _
 
 #### Automated Accessibility Checks
 - (Screenshots/results of testing)
@@ -37,18 +37,18 @@ Testing methodology (screen reader, keyboard-only, other):
 
 #### Recommendations for Tool 1
 | Recommendation | Priority | Feasibility | Impact |
-| --------------- | --------- | ----------- | ------- |
-|                 |           |             |         |
-|                 |           |             |         |
+|----------------|----------|-------------|--------|
+|                |          |             |        |
+|                |          |             |        |
 
 ---
 
-### Tool 2: _____
+### Tool 2: _
 (Repeat structure above)
 
 ---
 
-### Tool 3: _____
+### Tool 3: _
 (Repeat structure above)
 
 ---
@@ -56,19 +56,19 @@ Testing methodology (screen reader, keyboard-only, other):
 ## Summary of Barriers
 
 | Barrier | Frequency | Severity | Tools Affected |
-| -------- | ---------- | --------- | --------------- |
-|          |            |           |                 |
-|          |            |           |                 |
+|---------|-----------|----------|----------------|
+|         |           |          |                |
+|         |           |          |                |
 
 ---
 
 ## Recommendations Matrix
 
 | Priority | Feasibility | Impact | Recommendation | Implementation Steps |
-| --------- | ----------- | ------- | --------------- | -------------------- |
-| High     | Easy        | High    |                 |                      |
-| High     | Moderate    | High    |                 |                      |
-| Moderate | Easy        | Medium  |                 |                      |
+|----------|-------------|--------|----------------|----------------------|
+| High     | Easy        | High   |                |                      |
+| High     | Moderate    | High   |                |                      |
+| Moderate | Easy        | Medium |                |                      |
 
 ---
 
@@ -103,11 +103,11 @@ If implementing improvements, describe your plan:
 
 ## Teacher Feedback
 
-| Category | Score | Notes |
-| ---------- | ------- | ------- |
-| Problem & Solution (0-3) |   |       |
-| Design & Code Quality (0-3) |   |       |
-| Documentation (0-3) |   |       |
-| **Total (0-9)** | **  **  |       |
+| Category                    | Score  | Notes |
+|-----------------------------|--------|-------|
+| Problem & Solution (0-3)    |        |       |
+| Design & Code Quality (0-3) |        |       |
+| Documentation (0-3)         |        |       |
+| **Total (0-9)**             | **  ** |       |
 
 **Feedback:**

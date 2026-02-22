@@ -14,9 +14,10 @@ Students master terminal/command-line fundamentals before learning 3D design. **
 
 #### **📊 Compare All Three Pathways**
 
-**→ [Command Line Interface Selection Guide](Command_Line_Interface_Selection.md)**
+**→ [Command Line Interface Selection Guide](CommandLineInterfaceSelection.md)**
 
 This page provides a comprehensive comparison including:
+
 - Feature matrix comparing all three shells
 - Command comparison table (navigation, file operations, scripting)
 - Learner profiles to help you choose
@@ -29,7 +30,7 @@ This page provides a comprehensive comparison including:
 
 #### **Pathway A: PowerShell Foundation (Recommended)**
 
-**Where to Start:** [PowerShell Introduction](PowerShell_Foundation/Powershell_Introduction/Powershell_Introduction.md)
+**Where to Start:** [PowerShell Introduction](PowerShellFoundation/PowershellIntroduction/PowershellIntroduction.md)
 
 - **PS Introduction** - What is a terminal and why learn it
 - **PS.0 through PS.5** - 6 progressive lessons covering command-line basics through error handling
@@ -43,7 +44,7 @@ This page provides a comprehensive comparison including:
 
 #### **Pathway B: Windows Command Prompt Foundation (Simplified Alternative)**
 
-**Where to Start:** [CMD Curriculum Overview](CMD_Foundation/CMD_Curriculum_Overview/CMD_Curriculum_Overview.md)
+**Where to Start:** [CMD Curriculum Overview](CMDFoundation/CMDCurriculumOverview/CMDCurriculumOverview.md)
 
 - **CMD-Pre through CMD-5** - 6 progressive lessons covering command-line basics
 - **CMD-6: Advanced Techniques** - Batch files, automation, professional workflows
@@ -55,7 +56,7 @@ This page provides a comprehensive comparison including:
 
 #### **Pathway C: Git Bash Foundation (Unix/Linux Skills)**
 
-**Where to Start:** [GitBash Curriculum Overview](GitBash_Foundation/GitBash_Curriculum_Overview/GitBash_Curriculum_Overview.md)
+**Where to Start:** [GitBash Curriculum Overview](GitBashFoundation/GitBashCurriculumOverview/GitBashCurriculumOverview.md)
 
 - **GitBash-Pre through GitBash-5** - 6 progressive lessons covering terminal basics
 - **GitBash-6: Advanced Techniques** - Bash scripting, automation, professional workflows
@@ -69,9 +70,9 @@ This page provides a comprehensive comparison including:
 
 ### Part 2: 3dMake Foundation (11 lessons + 4 appendices)
 
-**Where to Start:** [3dMake Introduction](3dMake_Foundation/3dMake_Intro/3dMake_Intro.md)
+**Where to Start:** [3dMake Introduction](3dMakeFoundation/3dMakeIntro/3dMakeIntro.md)
 
-**Main Curriculum: 11 Progressive Lessons**
+#### Main Curriculum: 11 Progressive Lessons
 
 | Part                      | Lessons | Focus                                            | Duration | Total Hours |
 |---------------------------|---------|--------------------------------------------------|----------|-------------|
@@ -83,12 +84,12 @@ This page provides a comprehensive comparison including:
 
 **Total:** 30-40 hours instruction + projects
 
-**4 Comprehensive Reference Appendices**
+#### 4 Comprehensive Reference Appendices
 
-- **[Appendix A: Comprehensive Slicing Guide](3dMake_Foundation/Appendix_A_Comprehensive_Slicing_Guide.md)** - All major slicers (PrusaSlicer, Bambu Studio, Cura, OrcaSlicer)
-- **[Appendix B: Material Properties & Selection](3dMake_Foundation/Appendix_B_Material_Properties.md)** - Material reference with shrinkage data
-- **[Appendix C: Tolerance Testing & QA Matrix](3dMake_Foundation/Appendix_C_Tolerance_QA.md)** - Quality assurance procedures
-- **[Appendix D: PowerShell Integration for SCAD Workflows](3dMake_Foundation/Appendix_D_PowerShell_Integration.md)** - Automation and batch processing 
+- **[Appendix A: Comprehensive Slicing Guide](3dMakeFoundation/AppendixAComprehensiveSlicingGuide.md)** - All major slicers (PrusaSlicer, Bambu Studio, Cura, OrcaSlicer)
+- **[Appendix B: Material Properties & Selection](3dMakeFoundation/AppendixBMaterialProperties.md)** - Material reference with shrinkage data
+- **[Appendix C: Tolerance Testing & QA Matrix](3dMakeFoundation/AppendixCToleranceQA.md)** - Quality assurance procedures
+- **[Appendix D: PowerShell Integration for SCAD Workflows](3dMakeFoundation/AppendixDPowerShellIntegration.md)** - Automation and batch processing
 
 ---
 
@@ -103,7 +104,7 @@ This course uses tools designed for screen reader access:
 - **3DMake** - Command-line build tool eliminating GUI navigation
 - **Accessible editors** - VS Code, Notepad++, Nano, Vim (all keyboard-driven, screen reader friendly)
 
-See [Screen Reader Coding Tips (NVDA & JAWS)](3dMake_Foundation/Lessons_3dMake_1/nvda-jaws-coding-tips.md) for detailed keyboard shortcuts and configuration.
+See [Screen Reader Coding Tips (NVDA & JAWS)](3dMakeFoundation/Lessons3dMake1/nvda-jaws-coding-tips.md) for detailed keyboard shortcuts and configuration.
 
 ### 3DMake: Non-Visual Build Automation
 
@@ -158,18 +159,18 @@ Each project requires:
 
 Quick navigation to common topics:
 
-- [OpenSCAD Cheat Sheet](3dMake_Foundation/Lessons_3dMake_2/openscad-cheat-sheet.md) - Syntax quick-reference
-- [3dMake Setup Guide](3dMake_Foundation/Lessons_3dMake_1/3dmake-setup-guide.md) - Installation walkthrough
-- [VSCode Setup Guide](3dMake_Foundation/Lessons_3dMake_1/vscode-setup-guide.md) - Accessibility configuration
-- [Vocabulary Glossary](3dMake_Foundation/Lessons_3dMake_1/vocabulary-glossary.md) - Course terminology
-- [Filament Comparison Table](3dMake_Foundation/Lessons_3dMake_5/filament-comparison-table.md) - Material reference
-- [Master Rubric](3dMake_Foundation/Lessons_3dMake_11/master-rubric.md) - Project assessment criteria
+- [OpenSCAD Cheat Sheet](3dMakeFoundation/Lessons3dMake2/openscad-cheat-sheet.md) - Syntax quick-reference
+- [3dMake Setup Guide](3dMakeFoundation/Lessons3dMake1/3dmake-setup-guide.md) - Installation walkthrough
+- [VSCode Setup Guide](3dMakeFoundation/Lessons3dMake1/vscode-setup-guide.md) - Accessibility configuration
+- [Vocabulary Glossary](3dMakeFoundation/Lessons3dMake1/vocabulary-glossary.md) - Course terminology
+- [Filament Comparison Table](3dMakeFoundation/Lessons3dMake5/filament-comparison-table.md) - Material reference
+- [Master Rubric](3dMakeFoundation/Lessons3dMake11/master-rubric.md) - Project assessment criteria
 
 ### Navigation
 
 - **[SUMMARY.md](SUMMARY.md)** - Complete table of contents
-- **[Curriculum Guide](3dMake_Foundation/3dMake_Foundation_Curriculum_Guide.md)** - Detailed overview of all lessons and appendices
-- **[Quick Reference](3dMake_Foundation/3dMake_Quick_Reference.md)** - At-a-glance command and syntax reference
+- **[Curriculum Guide](3dMakeFoundation/3dMakeFoundationCurriculumGuide.md)** - Detailed overview of all lessons and appendices
+- **[Quick Reference](3dMakeFoundation/3dMakeQuickReference.md)** - At-a-glance command and syntax reference
 - **[Appendices](Appendices/Appendices.md)** - PowerShell and 3dMake reference materials
 
 ---
@@ -180,8 +181,8 @@ This course is enhanced by comprehensive textbooks and companion materials from 
 
 ### Free Textbooks (EPUB Format)
 
-- **[Programming with OpenSCAD: A Beginner's Guide to Coding 3D-Printable Objects](assets/Programming_with_OpenSCAD.epub)** - Comprehensive reference covering OpenSCAD syntax, geometry concepts, and design patterns. Ideal for deep dives into specific topics and as a reference guide throughout the course.
-- **[Simplifying 3D Printing with OpenSCAD](assets/Simplifying_3D_Printing_with_OpenSCAD.epub)** - Focused on practical workflows, optimization, and real-world printing scenarios.
+- **[Programming with OpenSCAD: A Beginner's Guide to Coding 3D-Printable Objects](assets/ProgrammingwithOpenSCAD.epub)** - Comprehensive reference covering OpenSCAD syntax, geometry concepts, and design patterns. Ideal for deep dives into specific topics and as a reference guide throughout the course.
+- **[Simplifying 3D Printing with OpenSCAD](assets/Simplifying3DPrintingwithOpenSCAD.epub)** - Focused on practical workflows, optimization, and real-world printing scenarios.
 
 ### Companion Teaching Resources
 
@@ -195,15 +196,15 @@ This course is enhanced by comprehensive textbooks and companion materials from 
 
 **For Students:**
 
-1. Start with [PowerShell Introduction](PowerShell_Foundation/Powershell_Introduction/Powershell_Introduction.md)
+1. Start with [PowerShell Introduction](PowerShellFoundation/PowershellIntroduction/PowershellIntroduction.md)
 2. Complete PowerShell lessons (PS.0-PS.5)
-3. Begin [3dMake Introduction](3dMake_Foundation/3dMake_Intro/3dMake_Intro.md)
-4. Follow [Lesson 1: Environmental Configuration](3dMake_Foundation/Lessons_3dMake_1/Lessons_3dMake_1.md)
+3. Begin [3dMake Introduction](3dMakeFoundation/3dMakeIntro/3dMakeIntro.md)
+4. Follow [Lesson 1: Environmental Configuration](3dMakeFoundation/Lessons3dMake1/Lessons3dMake1.md)
 5. Continue through Lesson 11
 
 **For Instructors:**
 
-1. Review [Curriculum Guide](3dMake_Foundation/3dMake_Foundation_Curriculum_Guide.md)
-2. Use [11 Teacher Templates](3dMake_Foundation/Templates/Teacher/) for assessment
-3. Reference [Master Rubric](3dMake_Foundation/Lessons_3dMake_11/master-rubric.md) for grading
+1. Review [Curriculum Guide](3dMakeFoundation/3dMakeFoundationCurriculumGuide.md)
+2. Use [11 Teacher Templates](3dMakeFoundation/Templates/Teacher/) for assessment
+3. Reference [Master Rubric](3dMakeFoundation/Lessons3dMake11/master-rubric.md) for grading
 4. Check [Syllabus](Syllabus.md) for course policies and learning progression

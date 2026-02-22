@@ -9,7 +9,7 @@
 ## Design Concept
 
 - Assembly description (what does it do?):
-- Number of distinct parts: _____
+- Number of distinct parts: _
 - Assembly purpose or theme:
 
 ---
@@ -17,36 +17,36 @@
 ## Part Specifications
 
 | Part | Count | Function | Critical Tolerances |
-| ------ | ------ | --------- | -------------------- |
-| 1      |        |           |                      |
-| 2      |        |           |                      |
-| 3      |        |           |                      |
-| 4      |        |           |                      |
-| 5      |        |           |                      |
+|------|-------|----------|---------------------|
+| 1    |       |          |                     |
+| 2    |       |          |                     |
+| 3    |       |          |                     |
+| 4    |       |          |                     |
+| 5    |       |          |                     |
 
 ---
 
 ## Assembly Sequence
 
 1. Part preparation:
-2. Step 1 - Assemble _____:
-3. Step 2 - Join _____:
-4. Step 3 - Connect _____:
+2. Step 1 - Assemble _:
+3. Step 2 - Join _:
+4. Step 3 - Connect _:
 5. Final assembly:
 
 ### Tolerance Management at Interfaces
 
 | Interface | Nominal Gaps | Tolerance | Rationale |
-| ----------- | ------------- | ----------- | --------- |
-|             |               |             |           |
-|             |               |             |           |
+|-----------|--------------|-----------|-----------|
+|           |              |           |           |
+|           |              |           |           |
 
 ---
 
 ## Assembly Results
 
 - All parts assembled successfully: Yes / No
-- Assembly time: _____ minutes
+- Assembly time: _ minutes
 - Any challenges during assembly?
 - Quality of final assembly:
 
@@ -74,9 +74,9 @@
 
 ## Teacher Feedback
 
-| Category | Score | Notes |
-| ---------- | ------- | ------- |
-| Problem & Solution (0-3) |   |       |
-| Design & Code Quality (0-3) |   |       |
-| Documentation (0-3) |   |       |
-| **Total (0-9)** | **  **  |       |
+| Category                    | Score  | Notes |
+|-----------------------------|--------|-------|
+| Problem & Solution (0-3)    |        |       |
+| Design & Code Quality (0-3) |        |       |
+| Documentation (0-3)         |        |       |
+| **Total (0-9)**             | **  ** |       |

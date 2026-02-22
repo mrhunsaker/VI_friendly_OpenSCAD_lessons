@@ -10,7 +10,7 @@ This appendix provides **measurement-based testing methodology** for verifying t
 
 **Tolerance** is the acceptable range of variation in dimensions:
 
-```
+```plaintext
 Design spec:  Hole diameter = 6mm
 Tolerance:    +/-0.5mm
 Acceptable range:  5.5mm to 6.5mm
@@ -38,7 +38,7 @@ or            7.2mm [NO] (exceeds tolerance)
 
 **How to use non-visually:**
 
-```
+```plaintext
 1. Gently close calipers until they barely touch the part
 2. Feel the resistance (should be light, not forced)
 3. Read digital display with audio feedback or manually
@@ -55,7 +55,7 @@ or            7.2mm [NO] (exceeds tolerance)
 
 **How to use non-visually:**
 
-```
+```plaintext
 1. Place part on scale
 2. Wait for reading to stabilize (1-2 seconds)
 3. Read digital display (in grams)
@@ -79,25 +79,25 @@ or            7.2mm [NO] (exceeds tolerance)
 // Go/No-Go gauge for bracelet peg holes
 // Tests if hole is within acceptable range
 
-peg_diameter = 6;        // Design spec
+pegdiameter = 6;        // Design spec
 tolerance = 0.5;         // Tolerance
-go_diameter = peg_diameter - tolerance;     // Min acceptable (5.5)
-no_go_diameter = peg_diameter + tolerance;  // Max acceptable (6.5)
+godiameter = pegdiameter - tolerance;     // Min acceptable (5.5)
+nogodiameter = pegdiameter + tolerance;  // Max acceptable (6.5)
 
-module go_gauge() {
+module gogauge() {
   // Part should fit through this easily
-  cylinder(h=10, r=go_diameter/2);
+  cylinder(h=10, r=godiameter/2);
 }
 
-module no_go_gauge() {
+module nogogauge() {
   // Part should NOT fit through this
-  cylinder(h=10, r=no_go_diameter/2);
+  cylinder(h=10, r=nogodiameter/2);
 }
 
 // Test jig with both gauges
 union() {
-  translate([0, 0, 0]) go_gauge();
-  translate([0, 15, 0]) no_go_gauge();
+  translate([0, 0, 0]) gogauge();
+  translate([0, 15, 0]) nogogauge();
 }
 ```
 
@@ -114,15 +114,15 @@ union() {
 
 Create a **Test Plan** before printing:
 
-| Part | Dimension | Spec | Tolerance | How to Test |
-|---|---|---|---|---|
-| **Bracelet Holder** | Base width | 127mm | +/-2mm | Measure with calipers (multiple points) |
-| | Peg diameter | 6mm | +/-0.5mm | Test fit with go/no-go gauge |
-| | Peg spacing | 8mm | +/-1mm | Measure distance between pegs |
-| | Back wall height | 120mm | +/-2mm | Measure with calipers |
-| **Phone Stand** | Slope angle | 20 | +/-3 | Calculate from height/depth ratio |
-| | Weight capacity | 200g | 150-250g | Load test (see below) |
-| | Stability | N/A | Pass/fail | 1-hour load test without tipping |
+| Part                | Dimension        | Spec  | Tolerance | How to Test                             |
+|---------------------|------------------|-------|-----------|-----------------------------------------|
+| **Bracelet Holder** | Base width       | 127mm | +/-2mm    | Measure with calipers (multiple points) |
+|                     | Peg diameter     | 6mm   | +/-0.5mm  | Test fit with go/no-go gauge            |
+|                     | Peg spacing      | 8mm   | +/-1mm    | Measure distance between pegs           |
+|                     | Back wall height | 120mm | +/-2mm    | Measure with calipers                   |
+| **Phone Stand**     | Slope angle      | 20    | +/-3      | Calculate from height/depth ratio       |
+|                     | Weight capacity  | 200g  | 150-250g  | Load test (see below)                   |
+|                     | Stability        | N/A   | Pass/fail | 1-hour load test without tipping        |
 
 ### Pre-Print Planning
 
@@ -170,7 +170,7 @@ Before slicing, define:
 
 **Steps:**
 
-```
+```plaintext
 1. Place part on flat surface
 2. Position caliper jaws perpendicular to surface
 3. Gently close jaws until they just touch part
@@ -184,7 +184,7 @@ Before slicing, define:
 
 **Example:**
 
-```
+```plaintext
 Design spec: 127mm (bracelet holder width)
 Tolerance:   +/-2mm (acceptable: 125-129mm)
 
@@ -201,7 +201,7 @@ Measurements:
 
 **Method A: Direct Measurement**
 
-```
+```plaintext
 1. Insert caliper jaws into hole/around peg
 2. Adjust jaws to gently touch surfaces
 3. Feel for light resistance on both sides
@@ -212,7 +212,7 @@ Measurements:
 
 **Method B: Go/No-Go Gauge**
 
-```
+```plaintext
 1. Print test jigs (go & no-go gauges)
 2. Attempt to insert peg/hole into go-gauge
    -> Should slide through easily with light resistance
@@ -223,7 +223,7 @@ Measurements:
 
 **Example: Peg Diameter**
 
-```
+```plaintext
 Design spec: 6.0mm
 Tolerance:   +/-0.5mm (acceptable: 5.5-6.5mm)
 
@@ -245,7 +245,7 @@ Method B (Go/No-Go):
 
 **Step 1: Surface Texture**
 
-```
+```plaintext
 Run fingers/hand over surface:
   [YES] Smooth -> Good quality
    Slightly rough -> Acceptable
@@ -254,7 +254,7 @@ Run fingers/hand over surface:
 
 **Step 2: Layer Line Visibility**
 
-```
+```plaintext
 Feel horizontal ridges (layer lines):
   [YES] Barely perceptible -> Good (0.2mm layers)
    Noticeable but even -> OK (0.25mm layers)
@@ -263,7 +263,7 @@ Feel horizontal ridges (layer lines):
 
 **Step 3: Dimensional Consistency**
 
-```
+```plaintext
 Measure thickness at multiple points:
   Design spec: 3mm wall thickness
   Measure at 5 locations
@@ -285,7 +285,7 @@ Measure thickness at multiple points:
 
 **Step 1: Calculate Expected Weight**
 
-```
+```plaintext
 Expected weight = Volume x Density x Infill%
 
 For bracelet holder (PLA):
@@ -301,7 +301,7 @@ Acceptable range: 290-315g (+/-5%)
 
 **Step 2: Measure Actual Weight**
 
-```
+```plaintext
 1. Place part on digital scale
 2. Wait for reading to stabilize (1-2 seconds)
 3. Read display in grams
@@ -310,11 +310,11 @@ Acceptable range: 290-315g (+/-5%)
 
 **Step 3: Interpret Result**
 
-| Actual Weight | Interpretation |
-|---|---|
-| 290-315g | [YES] Correct infill, no internal voids |
-| <280g |  Infill too low or significant voids |
-| >320g |  Infill too high (was it supposed to be 20%?) |
+| Actual Weight | Interpretation                               |
+|---------------|----------------------------------------------|
+| 290-315g      | [YES] Correct infill, no internal voids      |
+| <280g         | Infill too low or significant voids          |
+| >320g         | Infill too high (was it supposed to be 20%?) |
 
 ---
 
@@ -331,7 +331,7 @@ Acceptable range: 290-315g (+/-5%)
 
 **Procedure:**
 
-```
+```plaintext
 1. Measure baseline dimensions (part unloaded)
    Baseline height: 60mm
 
@@ -358,7 +358,7 @@ Result: PASS (part handles load without permanent deformation)
 
 **Acceptance Criteria for Phone Stand:**
 
-```
+```plaintext
 [YES] PASS if:
   - Deflection <0.5mm under 200g load
   - No cracks visible/felt
@@ -380,7 +380,7 @@ Result: PASS (part handles load without permanent deformation)
 
 **Procedure for Multi-Part Assembly (e.g., Stackable Bins):**
 
-```
+```plaintext
 Part A (Bin body) dimensions:
   - Top opening: 50mm x 50mm +/-1mm
   - Wall thickness: 2mm +/-0.2mm
@@ -406,7 +406,7 @@ Test procedure:
 
 **Example: Phone Stand Tilt Cycles**
 
-```
+```plaintext
 1. Record baseline dimensions
 2. Cycle 1: Place phone, tilt to max angle, remove
 3. Inspect for cracks or damage
@@ -423,7 +423,7 @@ If no damage after 10 cycles -> Durable [YES]
 
 When multiple parts are assembled, tolerances add:
 
-```
+```plaintext
 Design:
   Part A opening: 50mm +/-0.5mm
   Part B base: 50mm +/-0.5mm
@@ -443,7 +443,7 @@ Solution: Increase tolerance on Part B to +/-0.3mm
 
 For N parts in assembly:
 
-```
+```plaintext
 Total tolerance = (tolerance + tolerance + ... + tolerance)
 
 Example with 3 parts (each +/-0.5mm):
@@ -456,15 +456,15 @@ Total = (0.5 + 0.5 + 0.5)
 
 ## Common Dimensional Problems & Fixes
 
-| Problem | Typical Cause | How to Fix | Prevent Next Time |
-|---|---|---|---|
-| **Part too small (all dimensions off)** | Scale wrong in slicer | Scale STL up in CAD or slicer | Verify scale before slicing |
-| **Holes too small** | Compensation shrinkage | Increase hole diameter +0.5mm | Add shrinkage factor to design |
-| **Walls too thin** | Layer squishing | Check first layer height; may need recalibration | Measure first layer thickness |
-| **Infill showing through (loose fill)** | Infill too low | Increase infill % to 25-30% | Recalculate for part type |
-| **Inconsistent across print** | Nozzle clogging mid-print | Clean nozzle; check filament quality | Use quality filament; monitor print |
-| **Z-axis dimensions off | Z-axis uncalibrated | Run Z-calibration procedure | Calibrate before critical prints |
-| **Dimensions change between prints** | Thermal drift | Print in stable temperature | Use enclosed printer if possible |
+| Problem                                 | Typical Cause             | How to Fix                                       | Prevent Next Time                   |
+|-----------------------------------------|---------------------------|--------------------------------------------------|-------------------------------------|
+| **Part too small (all dimensions off)** | Scale wrong in slicer     | Scale STL up in CAD or slicer                    | Verify scale before slicing         |
+| **Holes too small**                     | Compensation shrinkage    | Increase hole diameter +0.5mm                    | Add shrinkage factor to design      |
+| **Walls too thin**                      | Layer squishing           | Check first layer height; may need recalibration | Measure first layer thickness       |
+| **Infill showing through (loose fill)** | Infill too low            | Increase infill % to 25-30%                      | Recalculate for part type           |
+| **Inconsistent across print**           | Nozzle clogging mid-print | Clean nozzle; check filament quality             | Use quality filament; monitor print |
+| **Z-axis dimensions off                 | Z-axis uncalibrated       | Run Z-calibration procedure                      | Calibrate before critical prints    |
+| **Dimensions change between prints**    | Thermal drift             | Print in stable temperature                      | Use enclosed printer if possible    |
 
 ---
 
@@ -476,10 +476,10 @@ Print this checklist **before starting a new project**:
 # Quality Assurance Checklist: [Project Name]
 
 ## Design Specs
-- [ ] Part A width: ___ mm +/- ___ mm
-- [ ] Part B height: ___ mm +/- ___ mm
-- [ ] Hole diameter: ___ mm +/- ___ mm
-- [ ] Assembly fit tolerance: ___ mm
+- [ ] Part A width:  mm +/-  mm
+- [ ] Part B height:  mm +/-  mm
+- [ ] Hole diameter:  mm +/-  mm
+- [ ] Assembly fit tolerance:  mm
 
 ## Pre-Print
 - [ ] STL exported correctly
@@ -488,12 +488,12 @@ Print this checklist **before starting a new project**:
 - [ ] Slice file reviewed
 
 ## Post-Print (Dimensional)
-- [ ] Part A width measured (3 points): ___mm, ___mm, ___mm
+- [ ] Part A width measured (3 points): mm, mm, mm
   - [ ] Within tolerance? YES/NO
-- [ ] Part B height measured (3 points): ___mm, ___mm, ___mm
+- [ ] Part B height measured (3 points): mm, mm, mm
   - [ ] Within tolerance? YES/NO
 - [ ] Hole diameter measured (go/no-go): PASS/FAIL
-- [ ] Part weight measured: ___g (expected: ___g +/-___g)
+- [ ] Part weight measured: g (expected: g +/-g)
   - [ ] Within expected weight? YES/NO
 
 ## Post-Print (Functional)
@@ -532,7 +532,7 @@ $qualityLog | Out-File "C:\Projects\quality-log.csv"
 
 # Analyze pass/fail rate
 $log = Import-Csv "C:\Projects\quality-log.csv"
-$passCount = ($log | Where-Object { $_.DimensionsPass -eq "PASS" }).Count
+$passCount = ($log | Where-Object { $.DimensionsPass -eq "PASS" }).Count
 $totalCount = $log.Count
 $passRate = ($passCount / $totalCount) * 100
 
@@ -540,7 +540,7 @@ Write-Host "Print success rate: $passRate%"
 
 # Show recent failures
 Write-Host "`nRecent issues:"
-$log | Where-Object { $_.DimensionsPass -eq "FAIL" } | Select-Object ProjectName, Notes
+$log | Where-Object { $.DimensionsPass -eq "FAIL" } | Select-Object ProjectName, Notes
 ```
 
 ---
@@ -561,7 +561,7 @@ Traditional visual QA (looking at surface finish, checking dimensions by eye) is
 
 When documenting QA results:
 
-```
+```plaintext
 [YES] GOOD: "Bracket width measured 49.8mm (spec 50+/-1mm)"
 [NO] AVOID: "Bracket looks good" (not measurable)
 
@@ -578,10 +578,10 @@ When documenting QA results:
 ## Part: Bracelet Holder Peg (Test Date: Jan 15, 2024)
 
 ### Dimensional Verification
-| Dimension | Specification | Measurement 1 | Measurement 2 | Measurement 3 | Average | Result |
-|-----------|---|---|---|---|---|---|
-| Peg Diameter | 6.0 +/- 0.5mm | 5.9mm | 6.0mm | 5.8mm | 5.9mm | [YES] PASS |
-| Peg Length | 25.0 +/- 0.5mm | 25.1mm | 25.0mm | 25.0mm | 25.03mm | [YES] PASS |
+| Dimension    | Specification  | Measurement 1 | Measurement 2 | Measurement 3 | Average | Result     |
+|--------------|----------------|---------------|---------------|---------------|---------|------------|
+| Peg Diameter | 6.0 +/- 0.5mm  | 5.9mm         | 6.0mm         | 5.8mm         | 5.9mm   | [YES] PASS |
+| Peg Length   | 25.0 +/- 0.5mm | 25.1mm        | 25.0mm        | 25.0mm        | 25.03mm | [YES] PASS |
 
 ### Functional Test
 - [x] Slides into bracelet loop easily (no forcing)
@@ -607,13 +607,13 @@ When documenting QA results:
 
 **When to Use Each Test:**
 
-| Situation | Recommended Test |
-|---|---|
-| Prototype/mockup | Linear dimensions only |
+| Situation                 | Recommended Test            |
+|---------------------------|-----------------------------|
+| Prototype/mockup          | Linear dimensions only      |
 | Assembly with other parts | Tolerance stack-up analysis |
-| Load-bearing part | Functional load test |
-| Repeated-use item | Durability cycling test |
-| Multi-part design | Assembly fit test |
+| Load-bearing part         | Functional load test        |
+| Repeated-use item         | Durability cycling test     |
+| Multi-part design         | Assembly fit test           |
 
 **Accessibility Reminder:**
 

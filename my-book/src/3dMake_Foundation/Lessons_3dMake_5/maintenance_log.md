@@ -4,10 +4,10 @@ Track routine maintenance, repairs, and operational issues to keep your printer 
 
 ## Printer Information
 
-- **Model:** _________________________
-- **Serial Number:** _________________________
-- **Purchase Date:** _________________________
-- **Last Service Date:** _________________________
+- **Model:** _
+- **Serial Number:** _
+- **Purchase Date:** _
+- **Last Service Date:** _
 
 ## Maintenance Schedule
 
@@ -40,15 +40,15 @@ Track routine maintenance, repairs, and operational issues to keep your printer 
 ## Maintenance Log
 
 | Date | Maintenance Type | Description | Time Spent | Issues Found | Resolution | Performed By |
-|------|-----------------|-------------|-----------|--------------|-----------|--------------|
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
-| | | | | | | |
+|------|------------------|-------------|------------|--------------|------------|--------------|
+|      |                  |             |            |              |            |              |
+|      |                  |             |            |              |            |              |
+|      |                  |             |            |              |            |              |
+|      |                  |             |            |              |            |              |
+|      |                  |             |            |              |            |              |
+|      |                  |             |            |              |            |              |
+|      |                  |             |            |              |            |              |
+|      |                  |             |            |              |            |              |
 
 ---
 
@@ -56,11 +56,11 @@ Track routine maintenance, repairs, and operational issues to keep your printer 
 
 | Date | Symptom | Diagnosis | Action Taken | Status | Notes |
 |------|---------|-----------|--------------|--------|-------|
-| | | | | | |
-| | | | | | |
-| | | | | | |
-| | | | | | |
-| | | | | | |
+|      |         |           |              |        |       |
+|      |         |           |              |        |       |
+|      |         |           |              |        |       |
+|      |         |           |              |        |       |
+|      |         |           |              |        |       |
 
 ---
 
@@ -68,10 +68,10 @@ Track routine maintenance, repairs, and operational issues to keep your printer 
 
 | Date | Part | Reason | Supplier | Cost | Notes |
 |------|------|--------|----------|------|-------|
-| | | | | | |
-| | | | | | |
-| | | | | | |
-| | | | | | |
+|      |      |        |          |      |       |
+|      |      |        |          |      |       |
+|      |      |        |          |      |       |
+|      |      |        |          |      |       |
 
 ---
 
@@ -80,12 +80,12 @@ Track routine maintenance, repairs, and operational issues to keep your printer 
 Test results for different filament types used with this printer:
 
 | Filament Type | Brand | Nozzle Temp | Bed Temp | Print Speed | Success Rate | Notes |
-|---------------|-------|------------|----------|------------|--------------|-------|
-| PLA | | | | | | |
-| PETG | | | | | | |
-| ABS | | | | | | |
-| TPU | | | | | | |
-| Other: | | | | | | |
+|---------------|-------|-------------|----------|-------------|--------------|-------|
+| PLA           |       |             |          |             |              |       |
+| PETG          |       |             |          |             |              |       |
+| ABS           |       |             |          |             |              |       |
+| TPU           |       |             |          |             |              |       |
+| Other:        |       |             |          |             |              |       |
 
 ---
 
@@ -94,24 +94,24 @@ Test results for different filament types used with this printer:
 ### Common Issues and Solutions
 
 **Nozzle Clogs:**
-- Date First Noticed: _____________
-- Attempts to Clear: _____________
-- Successful Solution: _____________
+- Date First Noticed: _
+- Attempts to Clear: _
+- Successful Solution: _
 
 **Bed Adhesion Problems:**
-- Suspected Cause: _____________
-- Solution Applied: _____________
-- Result: _____________
+- Suspected Cause: _
+- Solution Applied: _
+- Result: _
 
 **Layer Shifting:**
-- Frequency: _____________
-- Likely Causes: _____________
-- Actions Taken: _____________
+- Frequency: _
+- Likely Causes: _
+- Actions Taken: _
 
 **Extrusion Issues:**
-- Symptoms: _____________
-- Diagnosed Problem: _____________
-- Fix Applied: _____________
+- Symptoms: _
+- Diagnosed Problem: _
+- Fix Applied: _
 
 ---
 
@@ -120,20 +120,20 @@ Test results for different filament types used with this printer:
 Track overall printer health over time:
 
 | Month | Print Success Rate | Avg Print Time | Common Issues | Overall Assessment |
-|-------|-------------------|-----------------|---------------|-------------------|
-| | | | | |
-| | | | | |
-| | | | | |
-| | | | | |
+|-------|--------------------|----------------|---------------|--------------------|
+|       |                    |                |               |                    |
+|       |                    |                |               |                    |
+|       |                    |                |               |                    |
+|       |                    |                |               |                    |
 
 ---
 
 ## Warranty & Support Information
 
-- **Warranty Expires:** _________________________
-- **Manufacturer Support:** _________________________
-- **Local Technician:** _________________________
-- **Emergency Contact:** _________________________
+- **Warranty Expires:** _
+- **Manufacturer Support:** _
+- **Local Technician:** _
+- **Emergency Contact:** _
 
-**Last Log Entry:** _______________  
-**Logged By:** _______________
+**Last Log Entry:** _  
+**Logged By:** _

@@ -9,19 +9,19 @@
 $fn = 32;
 
 // Component dimensions
-connector_diameter = 8;
-connector_length = 15;
-connector_wall = 1.5;
+connectordiameter = 8;
+connectorlength = 15;
+connectorwall = 1.5;
 
-base_size = 50;
-base_height = 5;
+basesize = 50;
+baseheight = 5;
 
 // ============================================
 // UTILITY MODULES (General Purpose)
 // ============================================
 
 // Create a hollow cylinder (tube/connector)
-module hollow_cylinder(od, id, height) {
+module hollowcylinder(od, id, height) {
     difference() {
         cylinder(h = height, d = od, center = true);
         cylinder(h = height + 1, d = id, center = true);
@@ -29,13 +29,13 @@ module hollow_cylinder(od, id, height) {
 }
 
 // Create a flat base/mounting plate
-module flat_base(size, thickness) {
+module flatbase(size, thickness) {
     cube([size, size, thickness], center = true);
 }
 
 // Create corner supports for strengthening
-module corner_support(size, height) {
-    linear_extrude(height = height, center = true)
+module cornersupport(size, height) {
+    linearextrude(height = height, center = true)
         polygon(points = [[0, 0], [size, 0], [0, size]]);
 }
 
@@ -44,7 +44,7 @@ module corner_support(size, height) {
 // ============================================
 
 // Connector with internal thread pattern (for joining parts)
-module connector_with_threads(od, id, length, threads) {
+module connectorwiththreads(od, id, length, threads) {
     difference() {
         // Main connector body
         cylinder(h = length, d = od, center = true);
@@ -62,21 +62,21 @@ module connector_with_threads(od, id, length, threads) {
 }
 
 // Joint/coupling to connect two parts
-module coupling_joint(connector_od, connector_id, couple_length) {
-    cylinder(h = couple_length, d = connector_od, center = true);
+module couplingjoint(connectorod, connectorid, couplelength) {
+    cylinder(h = couplelength, d = connectorod, center = true);
 }
 
 // Base with mounting holes
-module base_with_holes(size, thickness, hole_diameter, hole_spacing) {
+module basewithholes(size, thickness, holediameter, holespacing) {
     difference() {
         // Solid base
-        flat_base(size, thickness);
+        flatbase(size, thickness);
         
         // Subtract mounting holes
-        for (x = [-hole_spacing/2, hole_spacing/2]) {
-            for (y = [-hole_spacing/2, hole_spacing/2]) {
+        for (x = [-holespacing/2, holespacing/2]) {
+            for (y = [-holespacing/2, holespacing/2]) {
                 translate([x, y, 0])
-                    cylinder(h = thickness + 1, d = hole_diameter, center = true);
+                    cylinder(h = thickness + 1, d = holediameter, center = true);
             }
         }
     }
@@ -87,27 +87,27 @@ module base_with_holes(size, thickness, hole_diameter, hole_spacing) {
 // ============================================
 
 // Basic assembly: base + connector
-module simple_connector_assembly(base_sz, base_h, conn_od, conn_id, conn_len) {
+module simpleconnectorassembly(basesz, baseh, connod, connid, connlen) {
     // Base plate
-    flat_base(base_sz, base_h);
+    flatbase(basesz, baseh);
     
     // Connector mounted vertically
-    translate([0, 0, base_h/2 + conn_len/2])
-        hollow_cylinder(conn_od, conn_id, conn_len);
+    translate([0, 0, baseh/2 + connlen/2])
+        hollowcylinder(connod, connid, connlen);
 }
 
 // Complex assembly with multiple connectors
-module multi_connector_assembly(base_sz, base_h, spacing) {
+module multiconnectorassembly(basesz, baseh, spacing) {
     // Central base
-    base_with_holes(base_sz, base_h, 2, spacing * 0.8);
+    basewithholes(basesz, baseh, 2, spacing * 0.8);
     
     // Mounted connectors at four corners
     for (x = [-spacing/2, spacing/2]) {
         for (y = [-spacing/2, spacing/2]) {
-            translate([x, y, base_h/2 + connector_length/2])
-                connector_with_threads(connector_diameter, 
-                                      connector_diameter - 2*connector_wall, 
-                                      connector_length, 
+            translate([x, y, baseh/2 + connectorlength/2])
+                connectorwiththreads(connectordiameter, 
+                                      connectordiameter - 2*connectorwall, 
+                                      connectorlength, 
                                       6);
         }
     }
@@ -120,13 +120,13 @@ module multi_connector_assembly(base_sz, base_h, spacing) {
 // Choose which assembly to render:
 
 // Option 1: Simple assembly
-// simple_connector_assembly(base_size, base_height, 
-//                          connector_diameter, 
-//                          connector_diameter - 2*connector_wall, 
-//                          connector_length);
+// simpleconnectorassembly(basesize, baseheight, 
+//                          connectordiameter, 
+//                          connectordiameter - 2*connectorwall, 
+//                          connectorlength);
 
 // Option 2: Multi-connector assembly
-multi_connector_assembly(base_size, base_height, base_size * 0.7);
+multiconnectorassembly(basesize, baseheight, basesize * 0.7);
 
 // ============================================
 // MODULE DESIGN BEST PRACTICES
@@ -144,8 +144,8 @@ multi_connector_assembly(base_size, base_height, base_size * 0.7);
 //    - Organize parts spatially
 //
 // 4. Naming Conventions:
-//    - Use descriptive names (hollow_cylinder, not hc)
-//    - Prefix related modules (base_*, connector_*)
+//    - Use descriptive names (hollowcylinder, not hc)
+//    - Prefix related modules (base*, connector*)
 //
 // 5. Parameter Guidelines:
 //    - Put adjustable values at top

@@ -9,9 +9,9 @@
 ## Audit Scope
 
 Tools/workflows to audit:
-1. _____
-2. _____
-3. _____
+1.
+2.
+3.
 
 Testing methodology (screen reader, keyboard-only, other):
 
@@ -19,36 +19,42 @@ Testing methodology (screen reader, keyboard-only, other):
 
 ## Detailed Findings
 
-### Tool 1: _____
+### Tool 1
 
 #### Automated Accessibility Checks
+
 - (Screenshots/results of testing)
 
 #### Screen Reader Testing
+
 - Navigation: (clear/unclear/broken)
 - Output readability: (readable/partially readable/unreadable)
 - Error messages: (helpful/unclear/missing)
 - Specific barriers found:
 
 #### Keyboard Navigation
+
 - All functions accessible via keyboard: Yes / No
 - Tab order logical: Yes / No
 - Specific barriers:
 
 #### Recommendations for Tool 1
+
 | Recommendation | Priority | Feasibility | Impact |
-| --------------- | --------- | ----------- | ------- |
-|                 |           |             |         |
-|                 |           |             |         |
+|----------------|----------|-------------|--------|
+|                |          |             |        |
+|                |          |             |        |
 
 ---
 
-### Tool 2: _____
+### Tool 2
+
 (Repeat structure above)
 
 ---
 
-### Tool 3: _____
+### Tool 3
+
 (Repeat structure above)
 
 ---
@@ -56,19 +62,19 @@ Testing methodology (screen reader, keyboard-only, other):
 ## Summary of Barriers
 
 | Barrier | Frequency | Severity | Tools Affected |
-| -------- | ---------- | --------- | --------------- |
-|          |            |           |                 |
-|          |            |           |                 |
+|---------|-----------|----------|----------------|
+|         |           |          |                |
+|         |           |          |                |
 
 ---
 
 ## Recommendations Matrix
 
 | Priority | Feasibility | Impact | Recommendation | Implementation Steps |
-| --------- | ----------- | ------- | --------------- | -------------------- |
-| High     | Easy        | High    |                 |                      |
-| High     | Moderate    | High    |                 |                      |
-| Moderate | Easy        | Medium  |                 |                      |
+|----------|-------------|--------|----------------|----------------------|
+| High     | Easy        | High   |                |                      |
+| High     | Moderate    | High   |                |                      |
+| Moderate | Easy        | Medium |                |                      |
 
 ---
 
@@ -84,6 +90,7 @@ Testing methodology (screen reader, keyboard-only, other):
 ## Action Plan
 
 If implementing improvements, describe your plan:
+
 - Which improvements will you tackle first?
 - How will you measure success?
 - Timeline for implementation:
@@ -103,11 +110,11 @@ If implementing improvements, describe your plan:
 
 ## Teacher Feedback
 
-| Category | Score | Notes |
-| ---------- | ------- | ------- |
-| Problem & Solution (0-3) |   |       |
-| Design & Code Quality (0-3) |   |       |
-| Documentation (0-3) |   |       |
-| **Total (0-9)** | **  **  |       |
+| Category                    | Score  | Notes |
+| ----------------------------- | -------- | ------- |
+| Problem & Solution (0-3)    |        |       |
+| Design & Code Quality (0-3) |        |       |
+| Documentation (0-3)         |        |       |
+| **Total (0-9)**             | **** |       |
 
 **Feedback:**

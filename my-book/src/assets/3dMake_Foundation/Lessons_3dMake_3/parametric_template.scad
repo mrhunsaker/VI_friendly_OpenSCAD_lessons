@@ -7,18 +7,18 @@
 // ============================================
 
 // Box dimensions (change these to regenerate different sizes)
-box_width = 40;
-box_depth = 40;
-box_height = 30;
+boxwidth = 40;
+boxdepth = 40;
+boxheight = 30;
 
 // Feature sizing (scales with box size)
-corner_radius = 3;
-wall_thickness = 2;
+cornerradius = 3;
+wallthickness = 2;
 
 // Boolean flags for feature toggling
-include_lid = true;
-include_feet = true;
-hollow_interior = true;
+includelid = true;
+includefeet = true;
+hollowinterior = true;
 
 // ============================================
 // QUALITY SETTINGS
@@ -30,7 +30,7 @@ $fn = 30;  // Fragment quality
 // ============================================
 
 // Simple box with rounded corners
-module rounded_box(width, depth, height, radius) {
+module roundedbox(width, depth, height, radius) {
     hull() {
         // Create 8 corner spheres to define the shape
         translate([radius, radius, radius])
@@ -53,41 +53,41 @@ module rounded_box(width, depth, height, radius) {
 }
 
 // Box with optional hollow interior
-module box_body(width, depth, height, wall, hollow) {
+module boxbody(width, depth, height, wall, hollow) {
     if (hollow) {
         difference() {
-            rounded_box(width, depth, height, corner_radius);
+            roundedbox(width, depth, height, cornerradius);
             
             translate([wall, wall, wall])
-                rounded_box(width - 2*wall, 
+                roundedbox(width - 2*wall, 
                            depth - 2*wall, 
                            height - 2*wall, 
-                           corner_radius);
+                           cornerradius);
         }
     } else {
-        rounded_box(width, depth, height, corner_radius);
+        roundedbox(width, depth, height, cornerradius);
     }
 }
 
 // Optional feet/standoff supports
-module feet(width, depth, foot_height, foot_radius) {
-    foot_spacing_x = width * 0.8;
-    foot_spacing_y = depth * 0.8;
+module feet(width, depth, footheight, footradius) {
+    footspacingx = width * 0.8;
+    footspacingy = depth * 0.8;
     
-    translate([width/2 - foot_spacing_x/2, depth/2 - foot_spacing_y/2, 0])
-        cylinder(h = foot_height, r = foot_radius, $fn = 16);
-    translate([width/2 + foot_spacing_x/2, depth/2 - foot_spacing_y/2, 0])
-        cylinder(h = foot_height, r = foot_radius, $fn = 16);
-    translate([width/2 - foot_spacing_x/2, depth/2 + foot_spacing_y/2, 0])
-        cylinder(h = foot_height, r = foot_radius, $fn = 16);
-    translate([width/2 + foot_spacing_x/2, depth/2 + foot_spacing_y/2, 0])
-        cylinder(h = foot_height, r = foot_radius, $fn = 16);
+    translate([width/2 - footspacingx/2, depth/2 - footspacingy/2, 0])
+        cylinder(h = footheight, r = footradius, $fn = 16);
+    translate([width/2 + footspacingx/2, depth/2 - footspacingy/2, 0])
+        cylinder(h = footheight, r = footradius, $fn = 16);
+    translate([width/2 - footspacingx/2, depth/2 + footspacingy/2, 0])
+        cylinder(h = footheight, r = footradius, $fn = 16);
+    translate([width/2 + footspacingx/2, depth/2 + footspacingy/2, 0])
+        cylinder(h = footheight, r = footradius, $fn = 16);
 }
 
 // Optional lid/cover that fits on top
-module lid(width, depth, lid_thickness, clearance) {
-    translate([0, 0, -lid_thickness])
-        cube([width + 2*clearance, depth + 2*clearance, lid_thickness], center = true);
+module lid(width, depth, lidthickness, clearance) {
+    translate([0, 0, -lidthickness])
+        cube([width + 2*clearance, depth + 2*clearance, lidthickness], center = true);
 }
 
 // ============================================
@@ -95,24 +95,24 @@ module lid(width, depth, lid_thickness, clearance) {
 // ============================================
 
 // Render the main body
-box_body(box_width, box_depth, box_height, wall_thickness, hollow_interior);
+boxbody(boxwidth, boxdepth, boxheight, wallthickness, hollowinterior);
 
 // Add feet if enabled
-if (include_feet) {
-    feet(box_width, box_depth, 2, 1.5);
+if (includefeet) {
+    feet(boxwidth, boxdepth, 2, 1.5);
 }
 
 // Add lid if enabled (displayed above for clarity)
-if (include_lid) {
-    translate([0, 0, box_height + 3])
-        lid(box_width, box_depth, wall_thickness, 0.5);
+if (includelid) {
+    translate([0, 0, boxheight + 3])
+        lid(boxwidth, boxdepth, wallthickness, 0.5);
 }
 
 // ============================================
 // USAGE TIPS
 // ============================================
 // 1. Change top-level parameters to regenerate designs quickly
-// 2. Toggle include_lid and include_feet to test variations
-// 3. Adjust corner_radius for different aesthetic styles
+// 2. Toggle includelid and includefeet to test variations
+// 3. Adjust cornerradius for different aesthetic styles
 // 4. Export at different scales for prototyping
 // 5. Combine multiple parametric modules for complex designs

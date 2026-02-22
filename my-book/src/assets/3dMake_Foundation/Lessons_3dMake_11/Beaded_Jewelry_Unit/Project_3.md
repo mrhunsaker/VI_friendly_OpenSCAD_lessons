@@ -1,4 +1,4 @@
-# Project 3: Beaded Jewelry - OpenSCAD Design 
+# Project 3: Beaded Jewelry - OpenSCAD Design
 
 **Accessibility:** When including images or diagrams, add short alt-text and provide a comment-based walkthrough for any `.scad` examples so screen-reader users can follow the design steps.
 
@@ -30,19 +30,26 @@ Design and produce a wearable beaded jewelry piece that includes at least eight 
 
 ---
 
-## StepbyStep Milestones 
+## StepbyStep Milestones
 
 1. Project setup (Day 1)
-  - Read this briefing and the Unit 3 lessons.
-  - Create a folder for your project and initialize a short Design Notes document.
-2. Bead module development (Days 1-2)
-  - Implement `bead_A(size, detail)` and `bead_B(size, detail)` parametric modules.
-  - Test-print a single bead from each module; record optimal print temperature/bed settings.
-3. Assembly and iteration (Days 3-4)
-  - Create an assembly script that arranges at least 8 beads and tests fit/tolerances.
-  - Iterate bead hole diameter and test-strung spacing until beads slide but do not fall off.
-4. Final prototype & documentation (Day 5)
-  - Print final beads, assemble the piece, photograph the result, and prepare the deliverables.
+
+- Read this briefing and the Unit 3 lessons.
+- Create a folder for your project and initialize a short Design Notes document.
+
+1. Bead module development (Days 1-2)
+
+- Implement `beadA(size, detail)` and `beadB(size, detail)` parametric modules.
+- Test-print a single bead from each module; record optimal print temperature/bed settings.
+
+1. Assembly and iteration (Days 3-4)
+
+- Create an assembly script that arranges at least 8 beads and tests fit/tolerances.
+- Iterate bead hole diameter and test-strung spacing until beads slide but do not fall off.
+
+1. Final prototype & documentation (Day 5)
+
+- Print final beads, assemble the piece, photograph the result, and prepare the deliverables.
 
 ---
 
@@ -92,6 +99,7 @@ Submit both digitally and physically as instructed:
 10. Reflection: Describe how the iterative design process (design -> print -> test -> modify) applies specifically to creating a functional wearable. Why is rapid testing and documentation critical for jewelry design?
 
 Answer key (instructor use):
+
 1. To allow repeatable, adjustable geometry and quick global changes.
 2. Print a small tolerance test piece and measure fit; record results.
 3. `for()` loops, `module` parameters, `translate()` and `rotate()`; `scale()`.
@@ -129,4 +137,4 @@ Provide alt-text for photos and a short written walkthrough of how your `.scad` 
 
 ## Notes
 
-The attached asset `project_3_briefing.txt` was used as the source. If you want me to also copy the original `.txt` into a `.bak` in the same folder, I can do that - tell me and I'll create an adjacent `.bak` file.
+The attached asset `project3briefing.txt` was used as the source. If you want me to also copy the original `.txt` into a `.bak` in the same folder, I can do that - tell me and I'll create an adjacent `.bak` file.
