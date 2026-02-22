@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="80" viewBox="0 0 360 80" role="img" aria-labelledby="title desc">
+  <title id="title">Creative Commons CC BY-SA-ND license</title>
+  <desc id="desc">A simple badge reading CC BY-SA-ND</desc>
+  <rect width="100%" height="100%" fill="none" />
+  <g transform="translate(12,12)">
+    <circle cx="28" cy="28" r="26" fill="#111" />
+    <text x="28" y="34" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#fff" text-anchor="middle">CC</text>
+    <text x="74" y="28" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#111" font-weight="700">BY-SA-ND</text>
+  </g>
+</svg>

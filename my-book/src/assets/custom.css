@@ -24,7 +24,7 @@
 }
 
 html {
-  font-size: 20px;
+  font-size: 1.00rem;
 }
 
 :root {
@@ -60,38 +60,36 @@ h5 {
 body,
 p,
 li {
-  font-size: 22.5px;
+  font-size: 1.41rem;
 }
 
 h1 {
-  font-size: 80px;
+  font-size: 5.00rem;
 }
 
 h2 {
-  font-size: 45px;
+  font-size: 2.81rem;
 }
 
 h3,
 h4,
 h5,
 h6 {
-  font-size: 30px;
+  font-size: 1.88rem;
 }
 
 /* Code blocks, inline code, blockquotes use the mono font */
-code,
-pre {
   font-family:
     "Atkinson Hyperlegible Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
     "Courier New", monospace;
-  font-size: 21.375px;
+  font-size: 1.34rem;
 }
 
 blockquote {
   font-family:
     "Atkinson Hyperlegible Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
     "Courier New", monospace;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 pre {
@@ -103,5 +101,11 @@ blockquote {
   padding-left: 1rem;
   border-left: 4px solid rgba(0, 0, 0, 0.08);
   margin-left: 0;
-  font-size: 1rem;
+  font-size: 1.25rem;
+}
+
+/* Center mdBook footer */
+.mdbook-footer,
+.mdbook-footer .mdbook-footer-inner {
+  text-align: center;
 }
