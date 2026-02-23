@@ -1,0 +1,563 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Part 2: Command-Line Foundation (Choose Your Path) - 3D Printing Course for Blind and Visually Impaired Learners</title>
+
+
+        <!-- Custom HTML head -->
+        <script>
+          (function(){
+            // Load Atkinson Hyperlegible fonts from the book assets (injected at runtime so paths are correct on GitHub Pages)
+            try {
+              const link = Array.from(document.getElementsByTagName('link')).find(l => l.href && l.href.match(/\/css\/variables-.*\.css$/));
+              const base = (function(){
+                if (!link) return (window.location.origin||'') + '/';
+                const u = new URL(link.href, window.location.href);
+                const basePath = u.pathname.replace(/\/css\/.*$/,'');
+                return u.origin + basePath + (basePath.endsWith('/') ? '' : '/');
+              })();
+        
+              const css = `\
+        @font-face {\
+          font-family: 'Atkinson Hyperlegible Next';\
+          src: url('${base}assets/fonts/AtkinsonHyperlegibleNext-Regular.ttf') format('truetype');\
+          font-weight: 400; font-style: normal; font-display: swap;\
+        }\
+        @font-face {\
+          font-family: 'Atkinson Hyperlegible Mono';\
+          src: url('${base}assets/fonts/AtkinsonHyperlegibleMono-SemiBold.ttf') format('truetype');\
+          font-weight: 600; font-style: normal; font-display: swap;\
+        }\
+        @font-face {\
+          font-family: 'Atkinson Hyperlegible Mono';\
+          src: url('${base}assets/fonts/AtkinsonHyperlegibleMono-Regular.otf') format('opentype');\
+          font-weight: 400; font-style: normal; font-display: swap;\
+        }\
+        pre, code, .hljs, .leftbar { font-family: 'Atkinson Hyperlegible Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", "Courier New", monospace !important; }\
+        body { font-family: 'Atkinson Hyperlegible Next', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }\
+        `;
+        
+              const style = document.createElement('style');
+              style.appendChild(document.createTextNode(css));
+              document.head.appendChild(style);
+            } catch (e) { console.warn('Font injection failed', e); }
+          })();
+        </script>
+        
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            mermaid.initialize({ startOnLoad: true });
+          });
+        </script>
+
+        <meta name="description" content="An introduction to 3D printing for blind and visually impaired learners, using OpenSCAD and 3DMake to create accessible 3D models.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../css/general-2459343d.css">
+        <link rel="stylesheet" href="../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../src/assets/custom-8d04802b.css">
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../searchindex-c9b9a984.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc-9182b28d.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">3D Printing Course for Blind and Visually Impaired Learners</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="part-1-command-line-fundamentals---choose-your-path"><a class="header" href="#part-1-command-line-fundamentals---choose-your-path">Part 1: Command-Line Fundamentals - Choose Your Path</a></h1>
+<p><strong>Welcome!</strong> Before diving into 3D design with OpenSCAD, you’ll master command-line fundamentals. This page will help you understand what command-line interfaces are and choose the best path for you.</p>
+<hr>
+<h2 id="what-is-a-command-line-interface-cli"><a class="header" href="#what-is-a-command-line-interface-cli">What is a Command-Line Interface (CLI)?</a></h2>
+<p>A command-line interface is a text-based way to control your computer by typing commands instead of clicking buttons. It’s like sending written instructions to your computer.</p>
+<h3 id="why-learn-it"><a class="header" href="#why-learn-it">Why learn it?</a></h3>
+<ul>
+<li><strong>Speed:</strong> Text commands are often faster than clicking through menus</li>
+<li><strong>Precision:</strong> Exact control over what your computer does</li>
+<li><strong>Accessibility:</strong> Perfect for screen readers - text is naturally readable</li>
+<li><strong>Automation:</strong> Repeat tasks automatically</li>
+<li><strong>3D Printing:</strong> Essential for batch processing models and integrating tools</li>
+</ul>
+<h3 id="real-world-example"><a class="header" href="#real-world-example">Real-world example</a></h3>
+<p>Instead of:</p>
+<ol>
+<li>Opening File Explorer (click)</li>
+<li>Navigating folders (click, click, click)</li>
+<li>Right-clicking a file (click)</li>
+<li>Selecting “Copy” (click)</li>
+<li>Navigating to destination (click, click)</li>
+<li>Right-clicking (click)</li>
+<li>Selecting “Paste” (click)</li>
+</ol>
+<p>You type: <code>cp myfile.txt backup/</code> and press Enter. Done.</p>
+<hr>
+<h2 id="three-command-line-options-on-windows"><a class="header" href="#three-command-line-options-on-windows">Three Command-Line Options on Windows</a></h2>
+<p>Windows offers three ways to use the command line. All are accessible with screen readers. Here’s how they compare:</p>
+<h3 id="option-1-windows-command-prompt-cmd"><a class="header" href="#option-1-windows-command-prompt-cmd">Option 1: Windows Command Prompt (CMD)</a></h3>
+<p><strong>What it is:</strong> The original Windows command-line (1981-present)</p>
+<p><strong>Best for:</strong> Absolute beginners, maximum simplicity</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Simple commands and syntax</li>
+<li>Minimal learning curve</li>
+<li>Easy to understand error messages</li>
+<li>Great for basic file operations</li>
+<li>Perfect entry point to command-line world</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>Limited advanced features</li>
+<li>Less powerful than alternatives</li>
+<li>No built-in piping (but available)</li>
+<li>Smaller ecosystem</li>
+</ul>
+<p><strong>Typical command:</strong></p>
+<pre><code class="language-cmd">copy myfile.txt backup\
+</code></pre>
+<hr>
+<h3 id="option-2-powershell"><a class="header" href="#option-2-powershell">Option 2: PowerShell</a></h3>
+<p><strong>What it is:</strong> Microsoft’s modern, powerful shell (2006-present)</p>
+<p><strong>Best for:</strong> Intermediate users, advanced automation</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Very powerful for scripting</li>
+<li>Modern syntax and features</li>
+<li>Excellent for 3D printing automation</li>
+<li>Professional workflows</li>
+<li>Large community</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>Steeper learning curve than CMD</li>
+<li>More complex syntax</li>
+<li>More “wordy” commands</li>
+<li>Overkill for simple tasks</li>
+</ul>
+<p><strong>Typical command:</strong></p>
+<pre><code class="language-powershell">Copy-Item -Path myfile.txt -Destination backup/
+</code></pre>
+<hr>
+<h3 id="option-3-git-bash"><a class="header" href="#option-3-git-bash">Option 3: Git Bash</a></h3>
+<p><strong>What it is:</strong> A Unix/Linux shell on Windows (runs bash inside Git for Windows)</p>
+<p><strong>Best for:</strong> Programmers, users familiar with Linux, advanced users</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Familiar if you know Linux/Unix</li>
+<li>Powerful piping and text processing</li>
+<li>Consistent with other platforms (macOS, Linux)</li>
+<li>Excellent for advanced workflows</li>
+<li>Industry-standard for developers</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>Requires Git installation</li>
+<li>Steeper learning curve</li>
+<li>Path syntax is different from native Windows</li>
+<li>Less integrated with Windows system tools</li>
+<li>May be “too much” for beginners</li>
+</ul>
+<p><strong>Typical command:</strong></p>
+<pre><code class="language-bash">cp myfile.txt backup/
+</code></pre>
+<hr>
+<h2 id="command-comparison-table"><a class="header" href="#command-comparison-table">Command Comparison Table</a></h2>
+<p>Here’s how common tasks compare across the three options:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Task</th><th>Command Prompt</th><th>PowerShell</th><th>Git Bash</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Show current location</strong></td><td><code>cd</code></td><td><code>pwd</code></td><td><code>pwd</code></td></tr>
+<tr><td><strong>List files</strong></td><td><code>dir /B</code></td><td><code>ls -n</code></td><td><code>ls</code></td></tr>
+<tr><td><strong>Go to folder</strong></td><td><code>cd Documents</code></td><td><code>cd Documents</code></td><td><code>cd Documents</code></td></tr>
+<tr><td><strong>Go up one level</strong></td><td><code>cd ..</code></td><td><code>cd ..</code></td><td><code>cd ..</code></td></tr>
+<tr><td><strong>Go home</strong></td><td><code>cd %USERPROFILE%</code></td><td><code>cd ~</code></td><td><code>cd ~</code></td></tr>
+<tr><td><strong>Create folder</strong></td><td><code>mkdir Projects</code></td><td><code>mkdir Projects</code></td><td><code>mkdir Projects</code></td></tr>
+<tr><td><strong>Create file</strong></td><td><code>echo text &gt; file.txt</code></td><td><code>echo "text" &gt; file.txt</code></td><td><code>echo "text" &gt; file.txt</code></td></tr>
+<tr><td><strong>Copy file</strong></td><td><code>copy old.txt new.txt</code></td><td><code>Copy-Item old.txt new.txt</code></td><td><code>cp old.txt new.txt</code></td></tr>
+<tr><td><strong>Move file</strong></td><td><code>move old.txt folder/</code></td><td><code>Move-Item old.txt folder/</code></td><td><code>mv old.txt folder/</code></td></tr>
+<tr><td><strong>Delete file</strong></td><td><code>del file.txt</code></td><td><code>Remove-Item file.txt</code></td><td><code>rm file.txt</code></td></tr>
+<tr><td><strong>List with filter</strong></td><td><code>dir /B *.txt</code></td><td><code>ls *.txt</code></td><td><code>ls *.txt</code></td></tr>
+<tr><td><strong>Save output to file</strong></td><td><code>dir &gt; list.txt</code></td><td><code>ls &gt; list.txt</code></td><td><code>ls &gt; list.txt</code></td></tr>
+<tr><td><strong>Page through output</strong></td><td><code>dir | more</code></td><td><code>ls | more</code></td><td><code>ls | less</code></td></tr>
+<tr><td><strong>Search in files</strong></td><td><code>findstr "text" file.txt</code></td><td><code>Select-String "text" file.txt</code></td><td><code>grep "text" file.txt</code></td></tr>
+<tr><td><strong>Show file contents</strong></td><td><code>type file.txt</code></td><td><code>cat file.txt</code> or <code>Get-Content</code></td><td><code>cat file.txt</code></td></tr>
+<tr><td><strong>Create script</strong></td><td><code>.bat</code> files</td><td><code>.ps1</code> files</td><td><code>.sh</code> files</td></tr>
+<tr><td><strong>Run script</strong></td><td><code>script.bat</code></td><td><code>.\script.ps1</code></td><td><code>./script.sh</code></td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="feature-comparison-table"><a class="header" href="#feature-comparison-table">Feature Comparison Table</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Feature</th><th>CMD</th><th>PowerShell</th><th>Git Bash</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Simplicity</strong></td><td>Easiest</td><td>Moderate</td><td>Hardest</td></tr>
+<tr><td><strong>Beginner-Friendly</strong></td><td>Best</td><td>Good</td><td>Challenging</td></tr>
+<tr><td><strong>Power/Capability</strong></td><td>Basic</td><td>Excellent</td><td>Excellent</td></tr>
+<tr><td><strong>Screen Reader Compatible</strong></td><td>Perfect</td><td>Perfect</td><td>Perfect</td></tr>
+<tr><td><strong>Linux/macOS Skills</strong></td><td>Windows-only</td><td>Some overlap</td><td>Full overlap</td></tr>
+<tr><td><strong>3D Printing Automation</strong></td><td>Adequate</td><td>Excellent</td><td>Adequate</td></tr>
+<tr><td><strong>Learning Curve</strong></td><td>Gentle</td><td>Moderate</td><td>Steep</td></tr>
+<tr><td><strong>Community Support</strong></td><td>Moderate</td><td>Excellent</td><td>Excellent</td></tr>
+<tr><td><strong>Windows Integration</strong></td><td>Perfect</td><td>Perfect</td><td>Good</td></tr>
+<tr><td><strong>Installation Difficulty</strong></td><td>Built-in</td><td>Built-in</td><td>Requires Git</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="quick-learner-profile-test"><a class="header" href="#quick-learner-profile-test">Quick Learner Profile Test</a></h2>
+<p>Answer these questions to find your best match:</p>
+<h3 id="question-1-experience-level"><a class="header" href="#question-1-experience-level">Question 1: Experience Level</a></h3>
+<ul>
+<li><strong>A:</strong> I’ve never used a command line → <strong>Easier paths better (CMD or PowerShell)</strong></li>
+<li><strong>B:</strong> I’ve used terminals before → <strong>Any path works</strong></li>
+<li><strong>C:</strong> I use macOS or Linux → <strong>Git Bash most natural</strong></li>
+</ul>
+<h3 id="question-2-what-matters-most"><a class="header" href="#question-2-what-matters-most">Question 2: What matters most?</a></h3>
+<ul>
+<li><strong>A:</strong> Simplicity and quick learning → <strong>Choose CMD</strong></li>
+<li><strong>B:</strong> Power and advanced features → <strong>Choose PowerShell</strong></li>
+<li><strong>C:</strong> Consistency across Windows/Mac/Linux → <strong>Choose Git Bash</strong></li>
+</ul>
+<h3 id="question-3-future-goals"><a class="header" href="#question-3-future-goals">Question 3: Future goals</a></h3>
+<ul>
+<li><strong>A:</strong> Just need to manage files for 3D printing → <strong>CMD is fine</strong></li>
+<li><strong>B:</strong> Advanced automation and scripting → <strong>PowerShell recommended</strong></li>
+<li><strong>C:</strong> Professional development workflows → <strong>Git Bash best</strong></li>
+</ul>
+<h3 id="question-4-your-main-concern"><a class="header" href="#question-4-your-main-concern">Question 4: Your main concern</a></h3>
+<ul>
+<li><strong>A:</strong> Don’t want steep learning curve → <strong>CMD</strong></li>
+<li><strong>B:</strong> Want industry-standard skills → <strong>Git Bash</strong></li>
+<li><strong>C:</strong> Want Microsoft’s modern tool → <strong>PowerShell</strong></li>
+</ul>
+<hr>
+<h2 id="recommendation-by-goal"><a class="header" href="#recommendation-by-goal">Recommendation by Goal</a></h2>
+<h3 id="goal-i-want-to-learn-the-basics-and-get-to-3d-printing-quickly"><a class="header" href="#goal-i-want-to-learn-the-basics-and-get-to-3d-printing-quickly">Goal: “I want to learn the basics and get to 3D printing quickly”</a></h3>
+<h4 id="-start-with-cmd-command-prompt"><a class="header" href="#-start-with-cmd-command-prompt">→ Start with CMD (Command Prompt)</a></h4>
+<ul>
+<li>Simplest syntax</li>
+<li>Fastest to get productive</li>
+<li>All core concepts transfer to others</li>
+<li>Can switch later if needed</li>
+</ul>
+<p><a href="../CMDFoundation/CMDCurriculumOverview/CMDCurriculumOverview.html">Start CMD Foundation</a></p>
+<hr>
+<h3 id="goal-i-want-power-and-professional-automation"><a class="header" href="#goal-i-want-power-and-professional-automation">Goal: “I want power and professional automation”</a></h3>
+<h4 id="-start-with-powershell"><a class="header" href="#-start-with-powershell">→ Start with PowerShell</a></h4>
+<ul>
+<li>Microsoft’s modern, recommended tool</li>
+<li>Professional-grade capabilities</li>
+<li>Better for complex 3D printing workflows</li>
+<li>Skills are in-demand</li>
+</ul>
+<p><a href="../PowerShellFoundation/PowerShellCurriculumOverview/PowerShellCurriculumOverview.html">Start PowerShell Foundation</a></p>
+<hr>
+<h3 id="goal-i-want-skills-that-work-on-windows-mac-and-linux"><a class="header" href="#goal-i-want-skills-that-work-on-windows-mac-and-linux">Goal: “I want skills that work on Windows, Mac, and Linux”</a></h3>
+<h4 id="-start-with-git-bash"><a class="header" href="#-start-with-git-bash">→ Start with Git Bash</a></h4>
+<ul>
+<li>Unix/bash skills transfer everywhere</li>
+<li>Great preparation for professional development</li>
+<li>Consistent across all platforms</li>
+<li>Growing standard in 3D printing tools</li>
+</ul>
+<p><a href="../GitBashFoundation/GitBashCurriculumOverview/GitBashCurriculumOverview.html">Start Git Bash Foundation</a></p>
+<hr>
+<h2 id="can-i-switch-paths-later"><a class="header" href="#can-i-switch-paths-later">Can I Switch Paths Later?</a></h2>
+<p><strong>Yes, absolutely!</strong> All three teach the same fundamental concepts:</p>
+<ul>
+<li>File navigation and organization</li>
+<li>Creating and managing files/folders</li>
+<li>Combining commands for powerful workflows</li>
+<li>Scripting and automation basics</li>
+</ul>
+<p>Once you learn one, switching to another is quick. The concepts are identical; only the syntax changes.</p>
+<p><strong>Example:</strong> If you learn CMD first, then later want PowerShell’s power, you’ll find it easy. The command <code>cd Documents</code> works the same way in all three.</p>
+<hr>
+<h2 id="important-all-are-equally-accessible"><a class="header" href="#important-all-are-equally-accessible">Important: All Are Equally Accessible</a></h2>
+<h3 id="screen-readers-work-perfectly-with-all-three"><a class="header" href="#screen-readers-work-perfectly-with-all-three">Screen readers work perfectly with all three</a></h3>
+<ul>
+<li>Text-based by nature (perfect for NVDA, JAWS)</li>
+<li>No mouse required</li>
+<li>Output is naturally readable</li>
+<li>Keyboard-only workflows</li>
+</ul>
+<p>Don’t let accessibility concerns influence your choice. All are fully accessible.</p>
+<hr>
+<h2 id="getting-started-your-decision"><a class="header" href="#getting-started-your-decision">Getting Started: Your Decision</a></h2>
+<p>Take a moment and choose:</p>
+<h3 id="1-i-want-the-simplest-path"><a class="header" href="#1-i-want-the-simplest-path">1️ <strong>I want the simplest path</strong></a></h3>
+<p>→ <a href="../CMDFoundation/Part1.html">Command Prompt Foundation</a></p>
+<ul>
+<li><strong>Time to first success:</strong> ~30 minutes</li>
+<li><strong>Learning curve:</strong> Gentlest</li>
+<li><strong>When to upgrade:</strong> Once you’re comfortable and want power</li>
+</ul>
+<hr>
+<h3 id="2-i-want-modern-powerful-windows-tools"><a class="header" href="#2-i-want-modern-powerful-windows-tools">2️ <strong>I want modern, powerful Windows tools</strong></a></h3>
+<p>→ <a href="../PowerShellFoundation/Part1.html">PowerShell Foundation</a></p>
+<ul>
+<li><strong>Time to first success:</strong> ~45 minutes</li>
+<li><strong>Learning curve:</strong> Moderate</li>
+<li><strong>Best for:</strong> Professional automation, 3D printing workflows</li>
+</ul>
+<hr>
+<h3 id="3-i-want-unixlinux-skills-that-work-everywhere"><a class="header" href="#3-i-want-unixlinux-skills-that-work-everywhere">3️ <strong>I want Unix/Linux skills that work everywhere</strong></a></h3>
+<p>→ <a href="../GitBashFoundation/Part1.html">Git Bash Foundation</a></p>
+<ul>
+<li><strong>Time to first success:</strong> ~1 hour</li>
+<li><strong>Learning curve:</strong> Steeper but rewarding</li>
+<li><strong>Best for:</strong> Professional development, cross-platform work</li>
+</ul>
+<hr>
+<h2 id="not-sure-heres-what-most-people-do"><a class="header" href="#not-sure-heres-what-most-people-do">Not Sure? Here’s What Most People Do</a></h2>
+<p><strong>If you’re reading this and unsure:</strong></p>
+<blockquote>
+<p><strong>Start with Command Prompt (CMD).</strong> It’s the gentlest introduction. You’ll be productive quickly and can always switch to PowerShell or Git Bash later. The skills transfer completely.</p>
+</blockquote>
+<p>After completing CMD:</p>
+<ul>
+<li>Want more power? → PowerShell is next</li>
+<li>Want Linux skills? → Git Bash is next</li>
+<li>Want to stick with CMD? → You have all the skills you need</li>
+</ul>
+<hr>
+<h2 id="faq"><a class="header" href="#faq">FAQ</a></h2>
+<p><strong>Q: Do I need to pick now and stick with it forever?</strong>
+A: No. Start with one, try another, switch between them. They’re tools. Use what works.</p>
+<p><strong>Q: Will my 3D printing skills work in all three?</strong>
+A: Yes. Once you understand the concepts (file organization, automation, piping), they apply everywhere.</p>
+<p><strong>Q: If I pick CMD, can I learn PowerShell later?</strong>
+A: Absolutely. Many learners do exactly this. CMD gets you productive; PowerShell adds power.</p>
+<p><strong>Q: Is Git Bash harder?</strong>
+A: Slightly, due to path syntax and Unix conventions. But not dramatically. If you take time with it, you’ll learn it.</p>
+<p><strong>Q: Which do professional 3D printing developers use?</strong>
+A: Mix of all three, but Git Bash/Linux is most common in cross-platform teams.</p>
+<hr>
+<h2 id="ready-to-begin"><a class="header" href="#ready-to-begin">Ready to Begin?</a></h2>
+<p>Choose your path above and click to start. Remember:</p>
+<ul>
+<li>Each lesson includes practice exercises</li>
+<li>You can’t break anything</li>
+<li>Mistakes are learning opportunities</li>
+<li>Ask for help if stuck</li>
+</ul>
+<p><strong>Let’s get you comfortable with the command line!</strong></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../Setup/Editor_Selection_Setup/Editor_Selection_Setup.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../PowerShell_Foundation/Part_1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../Setup/Editor_Selection_Setup/Editor_Selection_Setup.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../PowerShell_Foundation/Part_1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../mark-09e88c2c.min.js"></script>
+        <script src="../searcher-c2a407aa.js"></script>
+
+        <script src="../clipboard-1626706a.min.js"></script>
+        <script src="../highlight-4a3ec6df.js"></script>
+        <script src="../book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

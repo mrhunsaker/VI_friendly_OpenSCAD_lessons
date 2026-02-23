@@ -82,10 +82,10 @@
             const path_to_root = "";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-31b439ad.js";
+            window.path_to_searchindex_js = "searchindex-c9b9a984.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-e71cc795.js"></script>
+        <script src="toc-9182b28d.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -238,16 +238,16 @@
 <p>Before choosing a command-line pathway, students learn to optimize their screen reader setup for terminal work and understand accessibility options.</p>
 <p><strong>What’s Included:</strong></p>
 <ul>
-<li><a href="#screen-reader-accessibility-guide-for-command-line-terminals">Screen Reader Accessibility Guide</a> - Comprehensive NVDA &amp; JAWS reference with terminal tips</li>
-<li><a href="#choosing-a-screen-reader-for-windows-command-line-work">Screen Reader Choice: Windows CLI</a> - Help choosing between NVDA and JAWS</li>
-<li><a href="#using-a-braille-display-with-the-curriculum">Braille Display &amp; Terminal Mode</a> - Advanced accessibility setup with refreshable braille displays</li>
+<li><a href="PowerShell_Foundation/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.html">Screen Reader Accessibility Guide</a> - Comprehensive NVDA &amp; JAWS reference with terminal tips</li>
+<li><a href="ScreenReaderChoice.html">Screen Reader Choice: Windows CLI</a> - Help choosing between NVDA and JAWS</li>
+<li><a href="BrailleDisplays.html">Braille Display &amp; Terminal Mode</a> - Advanced accessibility setup with refreshable braille displays</li>
 </ul>
 <p><strong>Why start here?</strong> Screen reader optimization is the foundation for all command-line work. Students learn keyboard shortcuts, navigation techniques, and terminal-specific accessibility before diving into any CLI pathway.</p>
 <hr>
 <h3 id="part-2-command-line-foundation-choose-your-path"><a class="header" href="#part-2-command-line-foundation-choose-your-path">Part 2: Command-Line Foundation (Choose Your Path)</a></h3>
 <p>Students master terminal/command-line fundamentals before learning 3D design. <strong>You choose between three equivalent pathways</strong> based on your operating system and learning preferences.</p>
 <h4 id="compare-all-three-pathways"><a class="header" href="#compare-all-three-pathways"><strong>Compare All Three Pathways</strong></a></h4>
-<p><strong>→ <a href="#part-1-command-line-fundamentals---choose-your-path">Command Line Interface Selection Guide</a></strong></p>
+<p><strong>→ <a href="Command_Line_Interface_Selection.html">Command Line Interface Selection Guide</a></strong></p>
 <p>This guide provides a comprehensive comparison including:</p>
 <ul>
 <li>Feature matrix comparing all three shells</li>
@@ -1713,6 +1713,681 @@ NEED HELP?
 <li><strong>Cost:</strong> Multiline displays are typically more expensive than single-line displays. Factor budget and how much multiline reading will speed up your workflow when deciding.</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
+<h1 id="editor-selection-and-accessibility-setup-guide"><a class="header" href="#editor-selection-and-accessibility-setup-guide">Editor Selection and Accessibility Setup Guide</a></h1>
+<h2 id="table-of-contents-1"><a class="header" href="#table-of-contents-1">Table of Contents</a></h2>
+<ol>
+<li><a href="#editor-comparison">Editor Comparison</a></li>
+<li><a href="#editor-setup-for-3dmake">Editor Setup for 3dMake</a></li>
+<li><a href="#screen-reader-indent-announcement-configuration">Screen Reader Indent Announcement Configuration</a></li>
+<li><a href="#curriculum-specific-editor-recommendations">Curriculum-Specific Editor Recommendations</a></li>
+</ol>
+<hr>
+<h2 id="editor-comparison"><a class="header" href="#editor-comparison">Editor Comparison</a></h2>
+<h3 id="overview-table"><a class="header" href="#overview-table">Overview Table</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Feature</th><th>Notepad</th><th>Notepad++</th><th>Visual Studio Code</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Cost</strong></td><td>Free (built-in)</td><td>Free</td><td>Free</td></tr>
+<tr><td><strong>Learning Curve</strong></td><td>Minimal</td><td>Low</td><td>Moderate</td></tr>
+<tr><td><strong>Screen Reader Support</strong></td><td>Good (basic)</td><td>Good (syntax features)</td><td>Excellent (built-in accessibility)</td></tr>
+<tr><td><strong>Extension/Plugin System</strong></td><td>None</td><td>Limited</td><td>Extensive</td></tr>
+<tr><td><strong>Keyboard Navigation</strong></td><td>Good</td><td>Good</td><td>Excellent</td></tr>
+<tr><td><strong>Customization</strong></td><td>None</td><td>Moderate</td><td>Very high</td></tr>
+<tr><td><strong>Performance</strong></td><td>Excellent</td><td>Very good</td><td>Good</td></tr>
+<tr><td><strong>Syntax Highlighting</strong></td><td>None</td><td>Yes (OpenSCAD available)</td><td>Yes (OpenSCAD available)</td></tr>
+<tr><td><strong>Terminal Integration</strong></td><td>None</td><td>None</td><td>Built-in</td></tr>
+<tr><td><strong>Real-time Feedback</strong></td><td>None</td><td>None</td><td>Yes (with extensions)</td></tr>
+<tr><td><strong>Hot Key Customization</strong></td><td>Limited</td><td>Good</td><td>Excellent</td></tr>
+<tr><td><strong>File Size Handling</strong></td><td>Good</td><td>Good</td><td>Excellent</td></tr>
+<tr><td><strong>Built-in Debugging</strong></td><td>None</td><td>None</td><td>Limited</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="detailed-comparison"><a class="header" href="#detailed-comparison">Detailed Comparison</a></h3>
+<h4 id="notepad"><a class="header" href="#notepad">Notepad</a></h4>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Minimal interface with no distractions—excellent for absolute beginners</li>
+<li>Very predictable behavior for screen reader users</li>
+<li>Extremely fast file operations</li>
+<li>No configuration required; works immediately</li>
+<li>Pure text editing with no formatting surprises</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>No syntax highlighting (OpenSCAD code appears as plain text)</li>
+<li>No keyboard shortcuts for common editing tasks</li>
+<li>Limited undo/redo capabilities compared to modern editors</li>
+<li>No integrated terminal (requires separate command prompt window)</li>
+<li>No way to run 3dm commands directly</li>
+</ul>
+<p><strong>Best For:</strong> Users who prefer absolute simplicity and want minimal cognitive load during learning phase</p>
+<p><strong>Screen Reader Experience:</strong> Windows Narrator reads all content clearly; JAWS and NVDA work well with standard keyboard navigation</p>
+<hr>
+<h4 id="notepad-1"><a class="header" href="#notepad-1">Notepad++</a></h4>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Lightweight and fast</li>
+<li>Good syntax highlighting for OpenSCAD code</li>
+<li>Customizable interface with configurable keyboard shortcuts</li>
+<li>Tab management for multiple files</li>
+<li>Better organization than Notepad for managing projects</li>
+<li>Good screen reader support for basic operations</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>No built-in terminal (requires external command prompt)</li>
+<li>Plugin system is limited compared to VSCode</li>
+<li>Screen reader experience with syntax highlighting features can be inconsistent</li>
+<li>Less extensive keyboard customization than VSCode</li>
+<li>No integrated development environment features</li>
+</ul>
+<p><strong>Best For:</strong> Users who want a lightweight editor with syntax highlighting but prefer not to use a full IDE</p>
+<p><strong>Screen Reader Experience:</strong> JAWS and NVDA handle navigation well; Windows Narrator works but may struggle with complex UI elements</p>
+<hr>
+<h4 id="visual-studio-code"><a class="header" href="#visual-studio-code">Visual Studio Code</a></h4>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Extensive built-in accessibility features (accessibility inspector, keyboard navigation shortcuts)</li>
+<li>Excellent OpenSCAD extension available (scad-preview)</li>
+<li>Integrated terminal allows running 3dm commands without context switching</li>
+<li>Powerful keyboard shortcut customization</li>
+<li>Rich extension ecosystem for workflow enhancement</li>
+<li>Remote development capabilities</li>
+<li>Native support for multiple projects and workspaces</li>
+<li>Excellent search and find/replace functionality</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li>Steeper learning curve than Notepad or Notepad++</li>
+<li>Requires initial configuration for accessibility</li>
+<li>More resource-intensive than lighter editors</li>
+<li>Built-in terminal can be distracting for some users (alternative: Alt-Tab to standalone terminal)</li>
+</ul>
+<p><strong>Best For:</strong> Users building comprehensive accessibility workflow and wanting integrated development environment</p>
+<p><strong>Screen Reader Experience:</strong> Excellent; built specifically with accessibility in mind. NVDA, JAWS, Windows Narrator, and Dolphin all receive high-quality support.</p>
+<hr>
+<h2 id="editor-setup-for-3dmake"><a class="header" href="#editor-setup-for-3dmake">Editor Setup for 3dMake</a></h2>
+<h3 id="setting-default-editor-in-3dmake"><a class="header" href="#setting-default-editor-in-3dmake">Setting Default Editor in 3dMake</a></h3>
+<p>The 3dMake tool uses your system default text editor. Configure it through:</p>
+<h4 id="windows-registry-most-reliable-method"><a class="header" href="#windows-registry-most-reliable-method">Windows Registry (Most Reliable Method)</a></h4>
+<p><strong>For Notepad:</strong></p>
+<pre><code>reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.scad\UserChoice" /v "ProgId" /d "txtfile" /f
+</code></pre>
+<p><strong>For Notepad++:</strong></p>
+<pre><code>reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.scad\UserChoice" /v "ProgId" /d "Notepad++_file" /f
+</code></pre>
+<p><strong>For VSCode:</strong></p>
+<pre><code>reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.scad\UserChoice" /v "ProgId" /d "VSCode.scad" /f
+</code></pre>
+<h4 id="through-file-properties-graphical-method"><a class="header" href="#through-file-properties-graphical-method">Through File Properties (Graphical Method)</a></h4>
+<ol>
+<li>Right-click any <code>.scad</code> file (create a test file if needed)</li>
+<li>Select “Open with” → “Choose another app”</li>
+<li>Browse to your editor executable (e.g., <code>C:\Program Files\Notepad++\notepad++.exe</code>)</li>
+<li>Check “Always use this app to open .scad files”</li>
+<li>Click “OK”</li>
+</ol>
+<h4 id="environment-variable-command-line-method"><a class="header" href="#environment-variable-command-line-method">Environment Variable (Command Line Method)</a></h4>
+<p>For <strong>PowerShell</strong>:</p>
+<pre><code class="language-powershell">$env:EDITOR = "C:\Program Files\Notepad++\notepad++.exe"
+[Environment]::SetEnvironmentVariable("EDITOR", "C:\Program Files\Notepad++\notepad++.exe", "User")
+</code></pre>
+<p>For <strong>Command Prompt</strong>:</p>
+<pre><code class="language-batch">setx EDITOR "C:\Program Files\Notepad++\notepad++.exe"
+</code></pre>
+<hr>
+<h3 id="notepad-setup"><a class="header" href="#notepad-setup">Notepad Setup</a></h3>
+<p><strong>Configuration Steps:</strong></p>
+<ol>
+<li>
+<p><strong>Open 3dMake-generated .scad files directly:</strong></p>
+<ul>
+<li>Navigate to your project folder in File Explorer</li>
+<li>Right-click the <code>.scad</code> file → “Open with” → “Notepad”</li>
+<li>File opens immediately for editing</li>
+</ul>
+</li>
+<li>
+<p><strong>Edit and Save:</strong></p>
+<ul>
+<li>Make changes to your code</li>
+<li>Press <code>Ctrl+S</code> to save</li>
+<li>File updates automatically if 3dMake renders in background</li>
+</ul>
+</li>
+<li>
+<p><strong>Run 3dMake Commands:</strong></p>
+<ul>
+<li>Save your edits (Ctrl+S)</li>
+<li>Alt-Tab to Command Prompt or PowerShell window</li>
+<li>Navigate to project directory: <code>cd C:\path\to\project</code></li>
+<li>Run 3dMake command: <code>3dMake render project.scad</code></li>
+</ul>
+</li>
+</ol>
+<p><strong>Keyboard Shortcuts:</strong></p>
+<ul>
+<li><code>Ctrl+H</code>: Find and Replace</li>
+<li><code>Ctrl+G</code>: Go to Line (newer versions)</li>
+<li><code>Ctrl+Z</code>: Undo</li>
+<li><code>Ctrl+Y</code>: Redo</li>
+</ul>
+<hr>
+<h3 id="notepad-setup-1"><a class="header" href="#notepad-setup-1">Notepad++ Setup</a></h3>
+<p><strong>Installation and Configuration:</strong></p>
+<ol>
+<li>
+<p><strong>Download from:</strong> https://notepad-plus-plus.org/downloads/</p>
+</li>
+<li>
+<p><strong>Choose:</strong> Standard Installer (for automatic system integration)</p>
+</li>
+<li>
+<p><strong>Configure OpenSCAD Language Support:</strong></p>
+<ul>
+<li>Open Notepad++</li>
+<li>Language → User Defined Language → Import… (if OpenSCAD UDL available)</li>
+<li>Or manually set syntax highlighting:
+<ul>
+<li>Language → OpenSCAD (if available in language menu)</li>
+<li>Otherwise Language → C++ (provides similar highlighting)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Customize for Accessibility:</strong></p>
+<ul>
+<li>Settings → Preferences → General</li>
+<li>Check: “Minimize to system tray” (optional)</li>
+<li>Settings → Preferences → MISC.</li>
+<li>Ensure Word Wrap is set to preference</li>
+<li>Settings → Preferences → Backup</li>
+<li>Enable regular backups of your work</li>
+</ul>
+</li>
+<li>
+<p><strong>Set as Default Editor (see registry method above)</strong></p>
+</li>
+</ol>
+<p><strong>Recommended Keyboard Shortcuts (User-Defined):</strong></p>
+<p>Create custom shortcuts by:</p>
+<ul>
+<li>Settings → Shortcut Mapper</li>
+<li>Add shortcuts for frequently used actions:
+<ul>
+<li>Save and Switch to Terminal: Alt+T</li>
+<li>Copy File Path: Ctrl+Shift+C</li>
+</ul>
+</li>
+</ul>
+<p><strong>Tab Management:</strong></p>
+<ul>
+<li>Open multiple files: Each opens in a separate tab</li>
+<li>Switch between tabs: Ctrl+Tab (next) / Ctrl+Shift+Tab (previous)</li>
+<li>Close tab: Ctrl+W</li>
+</ul>
+<p><strong>Running 3dMake Commands:</strong></p>
+<ul>
+<li>Save file with Ctrl+S</li>
+<li>Alt-Tab to standalone terminal or command prompt</li>
+<li>Run: <code>3dMake render filename.scad</code></li>
+</ul>
+<hr>
+<h3 id="visual-studio-code-setup"><a class="header" href="#visual-studio-code-setup">Visual Studio Code Setup</a></h3>
+<p><strong>Installation:</strong></p>
+<ol>
+<li><strong>Download from:</strong> https://code.visualstudio.com/</li>
+<li><strong>Install:</strong> Run installer and follow prompts</li>
+<li><strong>Launch:</strong> Open VSCode</li>
+</ol>
+<p><strong>Enable OpenSCAD Support:</strong></p>
+<ol>
+<li>Open Extensions (Ctrl+Shift+X)</li>
+<li>Search: “OpenSCAD”</li>
+<li>Install: “scad-preview” by Antyos</li>
+<li>Install: “OpenSCAD Syntax Highlighter” (optional, for better syntax highlighting)</li>
+</ol>
+<p><strong>Initial Accessibility Configuration:</strong></p>
+<ol>
+<li>
+<p><strong>Open Settings:</strong> Ctrl+,</p>
+</li>
+<li>
+<p><strong>Search:</strong> “accessibility”</p>
+</li>
+<li>
+<p><strong>Enable Key Settings:</strong></p>
+<ul>
+<li><strong>Accessible View:</strong> Toggle ON</li>
+<li><strong>Screen Reader:</strong> Select your screen reader (NVDA, JAWS, Narrator, Dolphin)</li>
+<li><strong>Keyboard Navigation:</strong> Ensure enabled</li>
+<li><strong>Bracket Pair Guides:</strong> Can help with code structure understanding</li>
+</ul>
+</li>
+<li>
+<p><strong>Configure Editor Font:</strong></p>
+<ul>
+<li>Search: “editor.fontSize”</li>
+<li>Set to comfortable size (recommend 14-16 for better readability)</li>
+<li>Search: “editor.fontFamily”</li>
+<li>Select monospace font (e.g., “Consolas” or “Courier New”)</li>
+</ul>
+</li>
+</ol>
+<p><strong>Set as Default Editor (see registry method above)</strong></p>
+<p><strong>VSCode Terminal Options:</strong></p>
+<h4 id="option-1-using-built-in-terminal-less-accessible"><a class="header" href="#option-1-using-built-in-terminal-less-accessible">Option 1: Using Built-in Terminal (Less Accessible)</a></h4>
+<ol>
+<li>View → Terminal (or Ctrl+`)</li>
+<li>Terminal opens at bottom of VSCode window</li>
+<li>Run commands: <code>3dMake render filename.scad</code></li>
+<li><strong>Note:</strong> Switching focus between editor and terminal requires Tab navigation, which can be cumbersome for screen reader users</li>
+</ol>
+<p><strong>Keyboard Navigation:</strong></p>
+<ul>
+<li>Ctrl+` : Toggle terminal visibility</li>
+<li>Ctrl+Shift+` : Create new terminal</li>
+<li>Alt+↑/↓ : Switch between terminals</li>
+</ul>
+<h4 id="option-2-alt-tab-to-standalone-terminal-recommended-for-accessibility"><a class="header" href="#option-2-alt-tab-to-standalone-terminal-recommended-for-accessibility">Option 2: Alt-Tab to Standalone Terminal (RECOMMENDED for Accessibility)</a></h4>
+<ol>
+<li>
+<p><strong>Keep Command Prompt/PowerShell open:</strong></p>
+<ul>
+<li>Open Command Prompt (Win+R, type “cmd”, Enter)</li>
+<li>Position window or minimize to taskbar</li>
+<li>Navigate to project directory: <code>cd C:\path\to\project</code></li>
+</ul>
+</li>
+<li>
+<p><strong>From VSCode, switch terminals:</strong></p>
+<ul>
+<li>Alt+Tab to Command Prompt</li>
+<li>Run command: <code>3dMake render filename.scad</code></li>
+<li>Alt+Tab back to VSCode</li>
+<li>Continue editing</li>
+</ul>
+</li>
+</ol>
+<p><strong>Why This Is More Accessible:</strong></p>
+<ul>
+<li>Screen reader focus switches clearly between two applications</li>
+<li>Terminal output is read without VSCode context interference</li>
+<li>Cleaner context switching for command-line workflows</li>
+<li>Easier to diagnose issues when editor and terminal are separate</li>
+</ul>
+<p><strong>Keyboard Shortcuts for Common Tasks:</strong></p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Action</th><th>Shortcut</th></tr>
+</thead>
+<tbody>
+<tr><td>Save</td><td>Ctrl+S</td></tr>
+<tr><td>Find</td><td>Ctrl+F</td></tr>
+<tr><td>Find and Replace</td><td>Ctrl+H</td></tr>
+<tr><td>Go to Line</td><td>Ctrl+G</td></tr>
+<tr><td>Open File</td><td>Ctrl+O</td></tr>
+<tr><td>Open Folder</td><td>Ctrl+K, Ctrl+O</td></tr>
+<tr><td>Open Terminal</td><td>Ctrl+`</td></tr>
+<tr><td>Alt-Tab to Another Window</td><td>Alt+Tab</td></tr>
+<tr><td>Command Palette</td><td>Ctrl+Shift+P</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>Project Organization in VSCode:</strong></p>
+<ol>
+<li>
+<p><strong>Open Project Folder:</strong></p>
+<ul>
+<li>File → Open Folder (Ctrl+K, Ctrl+O)</li>
+<li>Select your project directory</li>
+<li>All project files appear in Explorer sidebar</li>
+</ul>
+</li>
+<li>
+<p><strong>File Navigation:</strong></p>
+<ul>
+<li>Press Ctrl+P for Quick Open</li>
+<li>Type filename to search and jump to file</li>
+<li>Press Enter to open</li>
+</ul>
+</li>
+<li>
+<p><strong>Quick Switch Between Files:</strong></p>
+<ul>
+<li>Ctrl+Tab : Open recent files list</li>
+<li>Arrow keys to select</li>
+<li>Enter to open</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="screen-reader-indent-announcement-configuration"><a class="header" href="#screen-reader-indent-announcement-configuration">Screen Reader Indent Announcement Configuration</a></h2>
+<p>Proper indent announcement is critical for OpenSCAD development, as indentation indicates code nesting and structure.</p>
+<h3 id="nvda-nonvisual-desktop-access"><a class="header" href="#nvda-nonvisual-desktop-access">NVDA (NonVisual Desktop Access)</a></h3>
+<p><strong>Enable Indent Announcement:</strong></p>
+<ol>
+<li><strong>Open NVDA Menu:</strong> Alt+N or right-click NVDA icon</li>
+<li><strong>Preferences → Settings (Ctrl+Comma)</strong></li>
+<li><strong>Document Formatting:</strong> Tab to it</li>
+<li><strong>Check:</strong> “Report indentation”</li>
+<li><strong>In the “Indentation reporting” dropdown:</strong> Select “Tones and speech”</li>
+<li><strong>Tone Description:</strong> NVDA will announce indent level as progressively higher tones (or speaking indent amount)</li>
+<li><strong>Apply:</strong> Click OK</li>
+</ol>
+<p><strong>Additional Tab Stop Configuration:</strong></p>
+<ol>
+<li><strong>Preferences → Settings → Document Formatting</strong></li>
+<li><strong>Check:</strong> “Report line indentation”</li>
+<li><strong>This will announce:</strong> “Indent level 4” or similar as you navigate code</li>
+</ol>
+<p><strong>Testing:</strong></p>
+<ul>
+<li>Open a <code>.scad</code> file with nested code (e.g., difference() { cube(); sphere(); })</li>
+<li>Press Down Arrow to move line by line</li>
+<li>NVDA announces indentation level on each new indented line</li>
+</ul>
+<p><strong>Keyboard Control:</strong></p>
+<ul>
+<li>NVDA+3 on Numpad: Cycles indent/outline level reporting</li>
+</ul>
+<hr>
+<h3 id="jaws-freedom-scientific"><a class="header" href="#jaws-freedom-scientific">JAWS (Freedom Scientific)</a></h3>
+<p><strong>Enable Indent Announcement:</strong></p>
+<ol>
+<li><strong>Open JAWS Manager:</strong> Press JAWSKey+F2 (or right-click JAWS icon)</li>
+<li><strong>Utilities → Settings Manager</strong></li>
+<li><strong>Search:</strong> “Indent”</li>
+<li><strong>Look for setting:</strong> “Announce Indentation” or “Report Indentation”</li>
+<li><strong>Enable:</strong> Set to “Tones” or “Tones and Speech”</li>
+<li><strong>Speech Indent Announcement:</strong> Speak indent level</li>
+<li><strong>Tone Indent Announcement:</strong> Pitch increases with indent level</li>
+</ol>
+<p><strong>Advanced Configuration (Custom Scripts):</strong></p>
+<p>If built-in settings don’t work:</p>
+<ol>
+<li><strong>JAWSKey+F2 → Utilities → Settings Manager</strong></li>
+<li><strong>Search:</strong> “Line Breaks” or “Formatting”</li>
+<li><strong>Ensure:</strong> “Report line indentation” is enabled</li>
+<li><strong>Set tone adjustment:</strong> Higher pitch for deeper indents</li>
+</ol>
+<p><strong>Testing:</strong></p>
+<ul>
+<li>Open <code>.scad</code> file with nested code</li>
+<li>Navigate with arrow keys</li>
+<li>JAWS announces indent changes with tones or speech</li>
+</ul>
+<p><strong>Keyboard Shortcuts:</strong></p>
+<ul>
+<li>JAWSKey+Alt+I: Toggle indent reporting</li>
+<li>JAWSKey+Alt+Shift+I: Cycle between indent reporting modes (speech/tones/off)</li>
+</ul>
+<hr>
+<h3 id="windows-narrator"><a class="header" href="#windows-narrator">Windows Narrator</a></h3>
+<p><strong>Enable Indent Announcement:</strong></p>
+<ol>
+<li><strong>Open Settings:</strong> Win+I</li>
+<li><strong>Ease of Access → Narrator</strong></li>
+<li><strong>Advanced Options: Scroll down</strong></li>
+<li><strong>Check:</strong> “Report indentation”</li>
+<li><strong>Indentation Reporting:</strong> Select “Tones” (less intrusive) or “Speech” (explicit)</li>
+<li><strong>Apply settings</strong></li>
+</ol>
+<p><strong>Narrator Keyboard Shortcuts:</strong></p>
+<ul>
+<li>Narrator+Page Down: Read from current position to end of window</li>
+<li>Narrator+Alt+Arrow Keys: Navigate text</li>
+<li>Narrator+V, I: Customize indentation reporting (in Narrator settings)</li>
+</ul>
+<p><strong>Testing:</strong></p>
+<ul>
+<li>Open <code>.scad</code> file</li>
+<li>Use Narrator+Page Down to read through code</li>
+<li>Listen for indent tone changes or announcements</li>
+</ul>
+<p><strong>Note:</strong> Windows Narrator has fewer customization options than JAWS/NVDA; consider NVDA or JAWS for deeper indent control</p>
+<hr>
+<h3 id="dolphin-easyconverter-dolphin-screen-reader"><a class="header" href="#dolphin-easyconverter-dolphin-screen-reader">Dolphin EasyConverter (Dolphin Screen Reader)</a></h3>
+<p><strong>Enable Indent Announcement:</strong></p>
+<ol>
+<li><strong>Open Dolphin Central:</strong> Right-click Dolphin icon or click Dolphin icon in taskbar</li>
+<li><strong>Utilities → Settings → Text Processing</strong></li>
+<li><strong>Look for:</strong> “Indentation” section</li>
+<li><strong>Enable:</strong> “Announce indentation”</li>
+<li><strong>Mode:</strong> Select “Tones”, “Speech”, or “Tones and Speech”</li>
+<li><strong>Tone Pitch:</strong> Configure pitch increase for deeper indents</li>
+<li><strong>Apply</strong></li>
+</ol>
+<p><strong>ECO (Ease of Cursor Operation) Customization:</strong></p>
+<ol>
+<li><strong>Dolphin Central → Utilities → ECO Settings</strong></li>
+<li><strong>Text Options → Indentation Reporting</strong></li>
+<li><strong>Set preferred announcement style</strong></li>
+</ol>
+<p><strong>Testing:</strong></p>
+<ul>
+<li>Open <code>.scad</code> file with indented code</li>
+<li>Navigate with arrows</li>
+<li>Dolphin announces indent changes</li>
+</ul>
+<p><strong>Keyboard Shortcuts:</strong></p>
+<ul>
+<li>Ctrl+Dolphin+I: Toggle indent reporting on/off</li>
+<li>Ctrl+Dolphin+Shift+I: Cycle indent reporting mode</li>
+</ul>
+<hr>
+<h2 id="curriculum-specific-editor-recommendations"><a class="header" href="#curriculum-specific-editor-recommendations">Curriculum-Specific Editor Recommendations</a></h2>
+<h3 id="for-absolute-beginners-lesson-1-2"><a class="header" href="#for-absolute-beginners-lesson-1-2">For Absolute Beginners (Lesson 1-2)</a></h3>
+<p><strong>Recommended: Notepad or Notepad++</strong></p>
+<p><strong>Rationale:</strong></p>
+<ul>
+<li>Minimal interface reduces cognitive load</li>
+<li>Focus stays on learning OpenSCAD syntax, not editor features</li>
+<li>Keyboard navigation is straightforward</li>
+<li>Screen reader experience is predictable</li>
+</ul>
+<p><strong>Setup:</strong></p>
+<ol>
+<li>Use Notepad or Notepad++ as default editor</li>
+<li>Configure screen reader indent announcement</li>
+<li>Keep separate Command Prompt window open for 3dMake commands</li>
+<li>Alt-Tab workflow between editor and terminal</li>
+</ol>
+<p><strong>Workflow Example:</strong></p>
+<pre><code>1. Open Command Prompt → Navigate to project folder
+2. Run: 3dMake new myproject
+3. Alt+Tab to file explorer, open myproject.scad
+4. Notepad++ opens file
+5. Edit code
+6. Ctrl+S to save
+7. Alt+Tab to Command Prompt
+8. Run: 3dMake render myproject.scad
+9. Check output, return to Notepad++ to refine code
+</code></pre>
+<hr>
+<h3 id="for-intermediate-users-lesson-3-6"><a class="header" href="#for-intermediate-users-lesson-3-6">For Intermediate Users (Lesson 3-6)</a></h3>
+<p><strong>Recommended: Notepad++ or VSCode</strong></p>
+<p><strong>Notepad++:</strong></p>
+<ul>
+<li>Adds project organization without overwhelming complexity</li>
+<li>Tab support for managing multiple files</li>
+<li>Syntax highlighting improves code understanding</li>
+<li>Still lightweight and predictable</li>
+</ul>
+<p><strong>VSCode:</strong></p>
+<ul>
+<li>Opens doors to more sophisticated workflows</li>
+<li>Extension system enables advanced features (OpenSCAD preview)</li>
+<li>Keyboard customization becomes valuable</li>
+<li>Terminal integration useful but use Alt-Tab method</li>
+</ul>
+<p><strong>Setup Decision Tree:</strong></p>
+<ul>
+<li><strong>Choose Notepad++ if:</strong> You prefer simplicity and want to focus on code logic</li>
+<li><strong>Choose VSCode if:</strong> You’re ready to invest time learning editor features for long-term benefit</li>
+</ul>
+<p><strong>Workflow Example with VSCode:</strong></p>
+<pre><code>1. Open VSCode (folder view of project)
+2. Press Ctrl+P to open file search
+3. Type filename and press Enter to open
+4. Edit code with autocomplete
+5. Ctrl+H for find/replace across project
+6. Ctrl+S to save
+7. Alt+Tab to Command Prompt
+8. Run: 3dMake render filename.scad
+9. Alt+Tab back to VSCode to refine code
+</code></pre>
+<hr>
+<h3 id="for-advanced-users-lesson-7-11"><a class="header" href="#for-advanced-users-lesson-7-11">For Advanced Users (Lesson 7-11)</a></h3>
+<p><strong>Recommended: Visual Studio Code</strong></p>
+<p><strong>Rationale:</strong></p>
+<ul>
+<li>Powerful search/replace across large projects</li>
+<li>Extension system enables specialized workflows</li>
+<li>Keyboard customization reaches full potential</li>
+<li>Workspace management for complex projects</li>
+<li>Debugging capabilities aid troubleshooting</li>
+</ul>
+<p><strong>Advanced Setup:</strong></p>
+<ol>
+<li>
+<p><strong>Create custom keyboard shortcuts:</strong></p>
+<ul>
+<li>Ctrl+Alt+R: Save and render current file</li>
+<li>Ctrl+Alt+P: Preview (if using scad-preview extension)</li>
+</ul>
+</li>
+<li>
+<p><strong>Install Additional Extensions:</strong></p>
+<ul>
+<li>“scad-preview”: Real-time 3D preview</li>
+<li>“Better Comments”: Categorize comments with colors/tones</li>
+<li>“Bracket Pair Colorizer”: Visual/tonal bracket matching</li>
+<li>“GitLens”: Track code changes over time</li>
+</ul>
+</li>
+<li>
+<p><strong>Create Task Runner for Common Commands:</strong></p>
+<ul>
+<li>Ctrl+Shift+B: Configure build task to run 3dMake</li>
+<li>Create separate tasks for render, export, etc.</li>
+</ul>
+</li>
+<li>
+<p><strong>Use Workspaces:</strong></p>
+<ul>
+<li>File → Save Workspace As…</li>
+<li>Save project-specific workspace with all settings</li>
+<li>Reopen same workspace configuration automatically</li>
+</ul>
+</li>
+</ol>
+<p><strong>Advanced Workflow Example:</strong></p>
+<pre><code>1. Open VSCode with project workspace
+2. Ctrl+Shift+P → Run Task → "3dMake Render Current"
+3. Renders file and shows output
+4. Use scad-preview extension for real-time 3D view
+5. Edit code with advanced search/replace
+6. Ctrl+Alt+R saves and renders automatically
+7. Use version control (Git) for tracking changes
+</code></pre>
+<hr>
+<h2 id="quick-reference-editor-comparison-for-curriculum"><a class="header" href="#quick-reference-editor-comparison-for-curriculum">Quick Reference: Editor Comparison for Curriculum</a></h2>
+<h3 id="part-1-foundations-lessons-1-2"><a class="header" href="#part-1-foundations-lessons-1-2">Part 1: Foundations (Lessons 1-2)</a></h3>
+<ul>
+<li><strong>Primary:</strong> Notepad or Notepad++</li>
+<li><strong>Focus:</strong> Learn syntax and basic concepts</li>
+<li><strong>Terminal:</strong> Standalone Command Prompt (Alt-Tab)</li>
+</ul>
+<h3 id="part-2-core-skills-lessons-3-6"><a class="header" href="#part-2-core-skills-lessons-3-6">Part 2: Core Skills (Lessons 3-6)</a></h3>
+<ul>
+<li><strong>Primary:</strong> Notepad++ or VSCode</li>
+<li><strong>New Features:</strong> Begin using editor syntax highlighting</li>
+<li><strong>Terminal:</strong> Standalone (continue Alt-Tab method)</li>
+<li><strong>Skills:</strong> File organization, search/replace basics</li>
+</ul>
+<h3 id="part-3-advanced-projects-lessons-7-11"><a class="header" href="#part-3-advanced-projects-lessons-7-11">Part 3: Advanced Projects (Lessons 7-11)</a></h3>
+<ul>
+<li><strong>Primary:</strong> VSCode (strongly recommended)</li>
+<li><strong>Advanced:</strong> Use extensions, real-time preview, complex project management</li>
+<li><strong>Terminal:</strong> Choose Alt-Tab or built-in based on preference</li>
+<li><strong>Skills:</strong> Workspaces, task automation, version control</li>
+</ul>
+<hr>
+<h2 id="troubleshooting-common-issues"><a class="header" href="#troubleshooting-common-issues">Troubleshooting Common Issues</a></h2>
+<h3 id="problem-screen-reader-not-announcing-indent"><a class="header" href="#problem-screen-reader-not-announcing-indent">Problem: Screen Reader Not Announcing Indent</a></h3>
+<p><strong>Solution:</strong></p>
+<ol>
+<li>Verify indent announcement is enabled in screen reader settings (see above)</li>
+<li>Test with existing <code>.scad</code> file with clear indentation</li>
+<li>Try different announcement modes (tones vs. speech)</li>
+<li>Restart screen reader: Alt+Ctrl+N (NVDA) or app restart (JAWS)</li>
+</ol>
+<h3 id="problem-3dmake-commands-not-running-from-vscode-terminal"><a class="header" href="#problem-3dmake-commands-not-running-from-vscode-terminal">Problem: 3dMake Commands Not Running from VSCode Terminal</a></h3>
+<p><strong>Solution:</strong></p>
+<ol>
+<li>Ensure 3dMake is in your system PATH</li>
+<li>Use standalone terminal instead (Alt-Tab method) - more reliable</li>
+<li>In VSCode terminal, manually navigate to correct directory first</li>
+<li>Verify command syntax: <code>3dMake render filename.scad</code></li>
+</ol>
+<h3 id="problem-file-not-saving-in-editor"><a class="header" href="#problem-file-not-saving-in-editor">Problem: File Not Saving in Editor</a></h3>
+<p><strong>Solution:</strong></p>
+<ol>
+<li>Verify you pressed Ctrl+S</li>
+<li>Check file permissions on project folder</li>
+<li>Try “Save As” instead</li>
+<li>Ensure filename includes <code>.scad</code> extension</li>
+</ol>
+<h3 id="problem-syntax-highlighting-not-working"><a class="header" href="#problem-syntax-highlighting-not-working">Problem: Syntax Highlighting Not Working</a></h3>
+<p><strong>Solution:</strong></p>
+<ol>
+<li>Verify file has <code>.scad</code> extension</li>
+<li>In Notepad++: Language menu → select OpenSCAD or C++</li>
+<li>In VSCode: Install OpenSCAD extension (search Extensions)</li>
+<li>Restart editor</li>
+</ol>
+<h3 id="problem-alt-tab-not-switching-between-windows"><a class="header" href="#problem-alt-tab-not-switching-between-windows">Problem: Alt-Tab Not Switching Between Windows</a></h3>
+<p><strong>Solution:</strong></p>
+<ol>
+<li>Ensure Command Prompt is open and minimized (not closed)</li>
+<li>Press Alt+Tab and hold briefly to see window switcher</li>
+<li>Use Alt+Tab multiple times if more than 2 windows open</li>
+<li>Alternatively, click taskbar directly (Alt+Tab usually more accessible)</li>
+</ol>
+<hr>
+<h2 id="next-steps"><a class="header" href="#next-steps">Next Steps</a></h2>
+<p>After completing this setup guide:</p>
+<ol>
+<li><strong>Choose your editor</strong> based on the recommendations for your skill level</li>
+<li><strong>Configure screen reader indent announcement</strong> immediately (critical for code structure understanding)</li>
+<li><strong>Set editor as default</strong> for <code>.scad</code> files</li>
+<li><strong>Test with a simple file:</strong> Create a test project and edit it</li>
+<li><strong>Practice Alt-Tab workflow</strong> before moving to Lesson 1</li>
+<li><strong>Document your setup</strong> in a personal note for reference</li>
+</ol>
+<p><strong>You are now ready to begin Lesson 1: Environmental Configuration and Developer Workflow</strong></p>
+<hr>
+<h2 id="additional-resources-1"><a class="header" href="#additional-resources-1">Additional Resources</a></h2>
+<ul>
+<li><strong>NVDA Documentation:</strong> https://www.nvaccess.org/documentation/</li>
+<li><strong>JAWS Documentation:</strong> https://www.freedomscientific.com/products/software/jaws/</li>
+<li><strong>VSCode Accessibility:</strong> https://code.visualstudio.com/docs/editor/accessibility</li>
+<li><strong>Windows Narrator Guide:</strong> https://support.microsoft.com/en-us/help/22798/windows-11-narrator-get-started</li>
+<li><strong>Notepad++ Documentation:</strong> https://notepad-plus-plus.org/online-help/</li>
+</ul>
+<hr>
+<p><strong>Document Version:</strong> 2.1 (Updated for v2.1 Curriculum)
+<strong>Last Updated:</strong> February 2026
+<strong>Accessibility Level:</strong> Full WCAG 2.1 AA Compliance
+<strong>Screen Reader Tested:</strong> NVDA, JAWS, Windows Narrator, Dolphin</p>
+<div style="break-before: page; page-break-before: always;"></div>
 <h1 id="part-1-command-line-fundamentals---choose-your-path"><a class="header" href="#part-1-command-line-fundamentals---choose-your-path">Part 1: Command-Line Fundamentals - Choose Your Path</a></h1>
 <p><strong>Welcome!</strong> Before diving into 3D design with OpenSCAD, you’ll master command-line fundamentals. This page will help you understand what command-line interfaces are and choose the best path for you.</p>
 <hr>
@@ -1894,7 +2569,7 @@ NEED HELP?
 <li>All core concepts transfer to others</li>
 <li>Can switch later if needed</li>
 </ul>
-<p><a href="../CMDFoundation/CMDCurriculumOverview/CMDCurriculumOverview.html">Start CMD Foundation</a></p>
+<p><a href="CMDFoundation/CMDCurriculumOverview/CMDCurriculumOverview.html">Start CMD Foundation</a></p>
 <hr>
 <h3 id="goal-i-want-power-and-professional-automation"><a class="header" href="#goal-i-want-power-and-professional-automation">Goal: “I want power and professional automation”</a></h3>
 <h4 id="-start-with-powershell"><a class="header" href="#-start-with-powershell">→ Start with PowerShell</a></h4>
@@ -1904,7 +2579,7 @@ NEED HELP?
 <li>Better for complex 3D printing workflows</li>
 <li>Skills are in-demand</li>
 </ul>
-<p><a href="../PowerShellFoundation/PowerShellCurriculumOverview/PowerShellCurriculumOverview.html">Start PowerShell Foundation</a></p>
+<p><a href="PowerShellFoundation/PowerShellCurriculumOverview/PowerShellCurriculumOverview.html">Start PowerShell Foundation</a></p>
 <hr>
 <h3 id="goal-i-want-skills-that-work-on-windows-mac-and-linux"><a class="header" href="#goal-i-want-skills-that-work-on-windows-mac-and-linux">Goal: “I want skills that work on Windows, Mac, and Linux”</a></h3>
 <h4 id="-start-with-git-bash"><a class="header" href="#-start-with-git-bash">→ Start with Git Bash</a></h4>
@@ -1914,7 +2589,7 @@ NEED HELP?
 <li>Consistent across all platforms</li>
 <li>Growing standard in 3D printing tools</li>
 </ul>
-<p><a href="../GitBashFoundation/GitBashCurriculumOverview/GitBashCurriculumOverview.html">Start Git Bash Foundation</a></p>
+<p><a href="GitBashFoundation/GitBashCurriculumOverview/GitBashCurriculumOverview.html">Start Git Bash Foundation</a></p>
 <hr>
 <h2 id="can-i-switch-paths-later"><a class="header" href="#can-i-switch-paths-later">Can I Switch Paths Later?</a></h2>
 <p><strong>Yes, absolutely!</strong> All three teach the same fundamental concepts:</p>
@@ -1940,7 +2615,7 @@ NEED HELP?
 <h2 id="getting-started-your-decision"><a class="header" href="#getting-started-your-decision">Getting Started: Your Decision</a></h2>
 <p>Take a moment and choose:</p>
 <h3 id="1-i-want-the-simplest-path"><a class="header" href="#1-i-want-the-simplest-path">1️ <strong>I want the simplest path</strong></a></h3>
-<p>→ <a href="../CMDFoundation/Part1.html">Command Prompt Foundation</a></p>
+<p>→ <a href="CMDFoundation/Part1.html">Command Prompt Foundation</a></p>
 <ul>
 <li><strong>Time to first success:</strong> ~30 minutes</li>
 <li><strong>Learning curve:</strong> Gentlest</li>
@@ -1948,7 +2623,7 @@ NEED HELP?
 </ul>
 <hr>
 <h3 id="2-i-want-modern-powerful-windows-tools"><a class="header" href="#2-i-want-modern-powerful-windows-tools">2️ <strong>I want modern, powerful Windows tools</strong></a></h3>
-<p>→ <a href="../PowerShellFoundation/Part1.html">PowerShell Foundation</a></p>
+<p>→ <a href="PowerShellFoundation/Part1.html">PowerShell Foundation</a></p>
 <ul>
 <li><strong>Time to first success:</strong> ~45 minutes</li>
 <li><strong>Learning curve:</strong> Moderate</li>
@@ -1956,7 +2631,7 @@ NEED HELP?
 </ul>
 <hr>
 <h3 id="3-i-want-unixlinux-skills-that-work-everywhere"><a class="header" href="#3-i-want-unixlinux-skills-that-work-everywhere">3️ <strong>I want Unix/Linux skills that work everywhere</strong></a></h3>
-<p>→ <a href="../GitBashFoundation/Part1.html">Git Bash Foundation</a></p>
+<p>→ <a href="GitBashFoundation/Part1.html">Git Bash Foundation</a></p>
 <ul>
 <li><strong>Time to first success:</strong> ~1 hour</li>
 <li><strong>Learning curve:</strong> Steeper but rewarding</li>
@@ -2401,7 +3076,7 @@ cd my-practice-folder
 <p><strong>Example:</strong> “I ran <code>cd Desktop</code> but my screen reader said ‘Cannot find path’. I expected to go to the Desktop folder.”</p>
 <p>This helps others help you quickly.</p>
 <hr>
-<h2 id="next-steps"><a class="header" href="#next-steps">Next Steps</a></h2>
+<h2 id="next-steps-1"><a class="header" href="#next-steps-1">Next Steps</a></h2>
 <ol>
 <li><strong>Right now:</strong> Read the Screen Reader Accessibility Guide completely</li>
 <li><strong>Next session:</strong> Start PS-Pre and do all exercises</li>
@@ -2743,7 +3418,7 @@ A: Type <code>Get-Help command-name</code> (we’ll cover this in PS-0)</p>
 <p><strong>Q: Can I make PowerShell more accessible?</strong>
 A: Yes! We’ll cover customization in PS-5.</p>
 <hr>
-<h2 id="next-steps-1"><a class="header" href="#next-steps-1">Next Steps</a></h2>
+<h2 id="next-steps-2"><a class="header" href="#next-steps-2">Next Steps</a></h2>
 <p>Once you’re comfortable with these basics:</p>
 <ul>
 <li>Move to <strong>PS-0: Getting Started</strong> for deeper path understanding</li>
@@ -4584,7 +5259,7 @@ cd my-practice-folder
 <p><strong>Example:</strong> “I ran <code>cd Desktop</code> but got ‘The system cannot find the path specified’. I expected to go to the Desktop folder.”</p>
 <p>This helps others help you quickly.</p>
 <hr>
-<h2 id="next-steps-2"><a class="header" href="#next-steps-2">Next Steps</a></h2>
+<h2 id="next-steps-3"><a class="header" href="#next-steps-3">Next Steps</a></h2>
 <ol>
 <li><strong>Right now:</strong> Open CMD and try the Quick Start commands</li>
 <li><strong>Next session:</strong> Start CMD-Pre and do all exercises</li>
@@ -4914,7 +5589,7 @@ A: Type <code>help command-name</code> (we’ll cover this in CMD-0)</p>
 <p><strong>Q: Can I make Command Prompt more accessible?</strong>
 A: Yes! Command Prompt works very well with screen readers as-is. Redirecting to files and using pauses helps a lot.</p>
 <hr>
-<h2 id="next-steps-3"><a class="header" href="#next-steps-3">Next Steps</a></h2>
+<h2 id="next-steps-4"><a class="header" href="#next-steps-4">Next Steps</a></h2>
 <p>Once you’re comfortable with these basics:</p>
 <ul>
 <li>Move to <strong>CMD-0: Getting Started</strong> for deeper path understanding</li>
@@ -5294,7 +5969,7 @@ dir /B /A:F                :: List only files
 <li>Always run <code>cd</code> after moving to confirm your new location</li>
 </ul>
 <hr>
-<h2 id="next-steps-4"><a class="header" href="#next-steps-4">Next Steps</a></h2>
+<h2 id="next-steps-5"><a class="header" href="#next-steps-5">Next Steps</a></h2>
 <ul>
 <li>Complete all practice exercises</li>
 <li>Pass the checkpoint questions</li>
@@ -5445,7 +6120,7 @@ del *.old                     :: Delete old files
 <li>Create a file renaming pattern (file001, file002, etc.) and move them</li>
 </ol>
 <hr>
-<h2 id="next-steps-5"><a class="header" href="#next-steps-5">Next Steps</a></h2>
+<h2 id="next-steps-6"><a class="header" href="#next-steps-6">Next Steps</a></h2>
 <ul>
 <li>Complete all exercises</li>
 <li>Pass checkpoint questions</li>
@@ -5555,7 +6230,7 @@ dir /B | more                      :: Show output one page at a time
 <li>Avoid reading terminal output directly when <code>&gt;</code> can save it</li>
 </ul>
 <hr>
-<h2 id="next-steps-6"><a class="header" href="#next-steps-6">Next Steps</a></h2>
+<h2 id="next-steps-7"><a class="header" href="#next-steps-7">Next Steps</a></h2>
 <ul>
 <li>Complete all exercises</li>
 <li>Move to <strong>CMD-4: Environment Variables &amp; Shortcuts</strong></li>
@@ -5640,7 +6315,7 @@ dir /B
 <li>Why are shortcuts useful?</li>
 </ol>
 <hr>
-<h2 id="next-steps-7"><a class="header" href="#next-steps-7">Next Steps</a></h2>
+<h2 id="next-steps-8"><a class="header" href="#next-steps-8">Next Steps</a></h2>
 <ul>
 <li>Complete exercises</li>
 <li>Move to <strong>CMD-5: Filling in the Gaps</strong></li>
@@ -5754,7 +6429,7 @@ dir /?                    :: Alternative help syntax
 assoc .scad               :: Show program associated with .scad
 </code></pre>
 <hr>
-<h2 id="next-steps-8"><a class="header" href="#next-steps-8">Next Steps</a></h2>
+<h2 id="next-steps-9"><a class="header" href="#next-steps-9">Next Steps</a></h2>
 <ul>
 <li>Complete all exercises</li>
 <li>Review all previous lessons</li>
@@ -5890,7 +6565,7 @@ dir /B /A:D
 <li>How do you add debug output?</li>
 </ol>
 <hr>
-<h2 id="next-steps-9"><a class="header" href="#next-steps-9">Next Steps</a></h2>
+<h2 id="next-steps-10"><a class="header" href="#next-steps-10">Next Steps</a></h2>
 <ul>
 <li>Complete all exercises</li>
 <li>Review all CMD lessons</li>
@@ -7065,7 +7740,7 @@ A: Git Bash uses Unix-style paths with forward slashes, not Windows backslashes.
 <li>Otherwise identical</li>
 </ul>
 <hr>
-<h2 id="next-steps-10"><a class="header" href="#next-steps-10">Next Steps</a></h2>
+<h2 id="next-steps-11"><a class="header" href="#next-steps-11">Next Steps</a></h2>
 <p>Once you’re comfortable with these basics:</p>
 <ul>
 <li>Move to <strong>GitBash-0: Getting Started</strong> for deeper path understanding</li>
@@ -7468,7 +8143,7 @@ ls -la                      # List including hidden files
 <li>Use <code>notepad.exe filename</code> to open files for editing</li>
 </ul>
 <hr>
-<h2 id="next-steps-11"><a class="header" href="#next-steps-11">Next Steps</a></h2>
+<h2 id="next-steps-12"><a class="header" href="#next-steps-12">Next Steps</a></h2>
 <ul>
 <li>Complete all practice exercises</li>
 <li>Pass the checkpoint questions</li>
@@ -8264,7 +8939,7 @@ Then: Lesson 9 (Automation)</p>
 <pre><code></code></pre>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="lesson-1-environmental-configuration-and-the-developer-workflow-1"><a class="header" href="#lesson-1-environmental-configuration-and-the-developer-workflow-1">Lesson 1: Environmental Configuration and the Developer Workflow</a></h1>
-<p>Estimated time: 60-90 minutes</p>
+<p>Estimated time: 90-120 minutes</p>
 <h2 id="learning-objectives-3"><a class="header" href="#learning-objectives-3"><strong>Learning Objectives</strong></a></h2>
 <ul>
 <li>Install and verify <code>3dm</code><sup class="footnote-reference" id="fr-1-1-1"><a href="#footnote-1-1">1</a></sup>, <code>openscad</code><sup class="footnote-reference" id="fr-2-1"><a href="#footnote-2">2</a></sup>, and a slicer are discoverable in the terminal</li>
@@ -10402,8 +11077,7 @@ baseshape();
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="lesson-2-geometric-primitives-and-constructive-solid-geometry-1"><a class="header" href="#lesson-2-geometric-primitives-and-constructive-solid-geometry-1">Lesson 2: Geometric Primitives and Constructive Solid Geometry</a></h1>
-<p>Estimated time: 60 minutes</p>
-<p><strong>Learning Objectives</strong></p>
+<p>Estimated time: 75-90 minutes</p>
 <ul>
 <li>Use OpenSCAD primitives (<code>cube()</code>, <code>sphere()</code>, <code>cylinder()</code>) and transforms (<code>translate()</code>, <code>rotate()</code>, <code>scale()</code>)<sup class="footnote-reference" id="fr-2-1-1"><a href="#footnote-2-1">1</a></sup></li>
 <li>Apply CSG operators (<code>union</code>, <code>difference</code>, <code>intersection</code>) safely and diagnose common numerical issues<sup class="footnote-reference" id="fr-3-1-2"><a href="#footnote-3-2">2</a></sup></li>
@@ -11509,8 +12183,7 @@ max(3, 5, 1)           // returns 5
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="lesson-3-parametric-architecture-and-modular-libraries-1"><a class="header" href="#lesson-3-parametric-architecture-and-modular-libraries-1">Lesson 3: Parametric Architecture and Modular Libraries</a></h1>
-<p>Estimated time: 60 minutes</p>
-<p><strong>Learning Objectives</strong></p>
+<p>Estimated time: 120-150 minutes</p>
 <ul>
 <li>Define and document top-level parameters and use them to drive model variants<sup class="footnote-reference" id="fr-3-1-3"><a href="#footnote-3-3">1</a></sup></li>
 <li>Create reusable modules and import a library module into a project<sup class="footnote-reference" id="fr-2-1-2"><a href="#footnote-2-2">2</a></sup></li>
@@ -12901,7 +13574,7 @@ union(){
 <p><strong>Last Log Entry:</strong> _<br><strong>Logged By:</strong> _</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="lesson-6-practical-3dm-commands-and-text-embossing-1"><a class="header" href="#lesson-6-practical-3dm-commands-and-text-embossing-1">Lesson 6: Practical 3dm Commands and Text Embossing</a></h1>
-<p>Estimated time: 60-90 minutes</p>
+<p>Estimated time: 90-120 minutes</p>
 <p><strong>Learning Objectives</strong></p>
 <ul>
 <li>Master key 3dMake commands: <code>3dm describe</code>, <code>3dm preview</code>, <code>3dm orient</code>, <code>3dm slice</code><sup class="footnote-reference" id="fr-1-1-6"><a href="#footnote-1-6">1</a></sup></li>
@@ -13702,7 +14375,7 @@ keychain_nameplate(name, keysize, keyheight, textsize);
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="lesson-7-parametric-transforms-and-the-phone-stand-project-1"><a class="header" href="#lesson-7-parametric-transforms-and-the-phone-stand-project-1">Lesson 7: Parametric Transforms and the Phone Stand Project</a></h1>
-<p>Estimated time: 75-90 minutes</p>
+<p>Estimated time: 105-135 minutes</p>
 <p><strong>Learning Objectives</strong></p>
 <ul>
 <li>Use parametric transforms (<code>rotate()</code>, <code>translate()</code>, <code>scale()</code>) to position and orient sub-assemblies<sup class="footnote-reference" id="fr-1-1-7"><a href="#footnote-1-7">1</a></sup></li>
@@ -14253,7 +14926,7 @@ union(){
 </ol>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="lesson-8-advanced-parametric-design-and-interlocking-features-1"><a class="header" href="#lesson-8-advanced-parametric-design-and-interlocking-features-1">Lesson 8: Advanced Parametric Design and Interlocking Features</a></h1>
-<p>Estimated time: 90-120 minutes</p>
+<p>Estimated time: 120-150 minutes</p>
 <p><strong>Learning Objectives</strong></p>
 <ul>
 <li>Design parametric walls with precise clearances for stackable assemblies<sup class="footnote-reference" id="fr-1-1-8"><a href="#footnote-1-8">1</a></sup></li>
@@ -15049,7 +15722,7 @@ union(){
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="lesson-9-automation-and-3dm-workflows-1"><a class="header" href="#lesson-9-automation-and-3dm-workflows-1">Lesson 9: Automation and 3dm Workflows</a></h1>
-<p>Estimated time: 60-90 minutes</p>
+<p>Estimated time: 90-120 minutes</p>
 <p><strong>Learning Objectives</strong></p>
 <ul>
 <li>Chain 3dm commands to automate the design-to-print pipeline<sup class="footnote-reference" id="fr-1-1-9"><a href="#footnote-1-9">1</a></sup></li>
@@ -18283,7 +18956,7 @@ _</p>
 1.
 2.</p>
 <h2 id="conflictsconcerns"><a class="header" href="#conflictsconcerns"><strong>Conflicts/Concerns:</strong></a></h2>
-<h2 id="next-steps-12"><a class="header" href="#next-steps-12"><strong>Next Steps:</strong></a></h2>
+<h2 id="next-steps-13"><a class="header" href="#next-steps-13"><strong>Next Steps:</strong></a></h2>
 <hr>
 <h2 id="interview-analysis"><a class="header" href="#interview-analysis">Interview Analysis</a></h2>
 <p><strong>After conducting multiple interviews, summarize:</strong></p>
@@ -20229,7 +20902,7 @@ done
 <hr>
 <h2 id="powershell-foundation-appendices"><a class="header" href="#powershell-foundation-appendices">PowerShell Foundation Appendices</a></h2>
 <ul>
-<li><a href="#screen-reader-accessibility-guide-for-command-line-terminals">Appendix A: Screen Reader Accessibility Guide</a> - Complete NVDA and JAWS configuration for terminal-based development</li>
+<li><a href="PowerShell_Foundation/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.html">Appendix A: Screen Reader Accessibility Guide</a> - Complete NVDA and JAWS configuration for terminal-based development</li>
 <li><a href="#powershell-for-screen-reader-users---complete-curriculum-overview">Appendix B: PowerShell Curriculum Overview</a> - Detailed learning paths and progression strategies</li>
 </ul>
 <hr>
@@ -22800,7 +23473,7 @@ $Config = @{
 <li>[YES] Repeatable (can verify steps later)</li>
 </ul>
 <hr>
-<h2 id="next-steps-13"><a class="header" href="#next-steps-13">Next Steps</a></h2>
+<h2 id="next-steps-14"><a class="header" href="#next-steps-14">Next Steps</a></h2>
 <ol>
 <li><strong>Try the basic build script</strong> (Script 1) with one of your SCAD files</li>
 <li><strong>Add logging</strong> (Script 3) to track what you create</li>

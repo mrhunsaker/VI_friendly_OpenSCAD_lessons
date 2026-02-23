@@ -4,11 +4,13 @@
 [Accessible 3D Printing with OpenSCAD and 3DMake](README.md)
 [Syllabus](Syllabus.md)
 
-- [Part 1: Screen Reader Setup & Accessibility Fundamentals](PowerShell_Foundation/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.md)
-  - [Screen Reader Choice: Windows CLI](ScreenReaderChoice.md)
-  - [Braille Display & Terminal Mode](BrailleDisplays.md)
+- [Part 1: Setup & Accessibility Fundamentals](Setup/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.md)
+  - [Screen Reader Choice: Windows CLI](Setup/Screen_Reader_Choice/Screen_Reader_Choice.md)
+  - [Braille Display & Terminal Mode](Setup/Braille_Displays/Braille_Displays.md)
+  - [Editor Selection and Setup](Setup/Editor_Selection_Setup/Editor_Selection_Setup.md)
 
-- [Part 2: Command-Line Foundation (Choose Your Path)](Command_Line_Interface_Selection.md)
+
+- [Part 2: Command-Line Foundation (Choose Your Path)](Command_Line_Interface_Selection/Command_Line_Interface_Selection.md)
   
   - [Part 2A: Foundations of PowerShell](PowerShell_Foundation/Part_1.md)
     - [PowerShell Curriculum Overview](PowerShell_Foundation/PowerShell_Curriculum_Overview/PowerShell_Curriculum_Overview.md)
