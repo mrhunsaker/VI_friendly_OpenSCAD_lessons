@@ -28,7 +28,7 @@ jobs:
           override: true
 
       - name: Add cargo bin to PATH
-        run: echo "$HOME/.cargo/bin" >> $GITHUBPATH
+        run: echo "$HOME/.cargo/bin" >> $GITHUB_PATH
 
       - name: "CI: debug versions and check bibliography"
         run: |
