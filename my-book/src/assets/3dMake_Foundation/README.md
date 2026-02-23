@@ -4,7 +4,7 @@ This directory contains all OpenSCAD code examples and supporting materials for 
 
 ## Folder Structure
 
-```
+```plaintext
 assets/3dMakeFoundation/
 +------ README.md (this file)
 +------ Lessons3dMake6/

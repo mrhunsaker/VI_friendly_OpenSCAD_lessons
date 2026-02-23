@@ -1,6 +1,4 @@
-# Reorganization Plan: ExtensionProjects -> 3dMakeFoundation Lessons
-
-## Mapping Extension Projects to Lessons
+# Mapping Extension Projects to Lessons
 
 ```
 Lesson 1: Environmental Configuration

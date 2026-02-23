@@ -8,88 +8,124 @@ The curriculum is explicitly designed for blind and visually impaired learners w
 
 ## Curriculum Structure
 
-### Part 1: Command-Line Foundation (Choose Your Path)
+### Part 1: Screen Reader Setup & Accessibility Fundamentals
 
-Students master terminal/command-line fundamentals before learning 3D design. **You choose between three equivalent pathways:**
+Before choosing a command-line pathway, students learn to optimize their screen reader setup for terminal work and understand accessibility options.
 
-#### **📊 Compare All Three Pathways**
+**What's Included:**
+- [Screen Reader Accessibility Guide](PowerShell_Foundation/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.md) - Comprehensive NVDA & JAWS reference with terminal tips
+- [Screen Reader Choice: Windows CLI](ScreenReaderChoice.md) - Help choosing between NVDA and JAWS
+- [Braille Display & Terminal Mode](BrailleDisplays.md) - Advanced accessibility setup with refreshable braille displays
 
-**→ [Command Line Interface Selection Guide](CommandLineInterfaceSelection.md)**
+**Why start here?** Screen reader optimization is the foundation for all command-line work. Students learn keyboard shortcuts, navigation techniques, and terminal-specific accessibility before diving into any CLI pathway.
 
-This page provides a comprehensive comparison including:
+---
 
+### Part 2: Command-Line Foundation (Choose Your Path)
+
+Students master terminal/command-line fundamentals before learning 3D design. **You choose between three equivalent pathways** based on your operating system and learning preferences.
+
+#### **Compare All Three Pathways**
+
+**→ [Command Line Interface Selection Guide](Command_Line_Interface_Selection.md)**
+
+This guide provides a comprehensive comparison including:
 - Feature matrix comparing all three shells
 - Command comparison table (navigation, file operations, scripting)
 - Learner profiles to help you choose
 - Goal-based recommendations
 - FAQ addressing common questions
 
-**Use this guide to select your preferred pathway.**
-
 ---
 
-#### **Pathway A: PowerShell Foundation (Recommended)**
+#### **Part 2A: PowerShell Foundation (Recommended for Windows Users)**
 
-**Where to Start:** [PowerShell Introduction](PowerShellFoundation/PowershellIntroduction/PowershellIntroduction.md)
+**Where to Start:** [PowerShell Curriculum Overview](PowerShell_Foundation/PowerShell_Curriculum_Overview/PowerShell_Curriculum_Overview.md)
 
-- **PS Introduction** - What is a terminal and why learn it
-- **PS.0 through PS.5** - 6 progressive lessons covering command-line basics through error handling
-- **PS-6: Advanced Techniques** - Professional workflows, scripts, and functions
-- **Screen Reader Accessibility Guide** - NVDA & JAWS reference for terminal navigation
-- **PowerShell Curriculum Overview** - Complete guide with learning paths
+**Lessons Included:**
+- **PS-Pre: Your First Terminal** - Opening PowerShell, first commands, screen reader tricks
+- **PS-0: Getting Started** - Paths, shortcuts, tab completion
+- **PS-1: Navigation** - Moving around the file system confidently
+- **PS-2: File and Folder Manipulation** - Creating, editing, moving files
+- **PS-3: Input, Output, and Piping** - Redirecting output, piping commands
+- **PS-4: Environment Variables and Aliases** - Setting variables, creating shortcuts
+- **PS-5: Filling in the Gaps** - Control flow, profiles, useful tricks
+- **PS-6: Advanced Terminal Techniques** - Scripts, functions, professional workflows
+- **PowerShell Unit Test & Practice** - Comprehensive self-assessment
 
-**Time commitment:** ~10 hours  
-**Best for:** Users who want more power and advanced features  
+**Time commitment:** 30-45 hours (for screen reader users)  
+**Best for:** Users who want modern features and advanced automation  
 **Skills:** Terminal navigation, piping, advanced scripting, professional automation
 
-#### **Pathway B: Windows Command Prompt Foundation (Simplified Alternative)**
+#### **Part 2B: Windows Command Prompt Foundation (Simplified Alternative)**
 
-**Where to Start:** [CMD Curriculum Overview](CMDFoundation/CMDCurriculumOverview/CMDCurriculumOverview.md)
+**Where to Start:** [CMD Curriculum Overview](CMD_Foundation/CMD_Curriculum_Overview/CMD_Curriculum_Overview.md)
 
-- **CMD-Pre through CMD-5** - 6 progressive lessons covering command-line basics
-- **CMD-6: Advanced Techniques** - Batch files, automation, professional workflows
-- **CMD Unit Test** - Comprehensive practice and self-assessment
+**Lessons Included:**
+- **CMD-Pre: Your First Terminal** - Opening CMD, first commands, screen reader tricks
+- **CMD-0: Getting Started** - Paths, shortcuts, command basics
+- **CMD-1: Navigation** - Moving around the file system confidently
+- **CMD-2: File and Folder Manipulation** - Creating, editing, moving files
+- **CMD-3: Input, Output & Redirection** - Redirecting output, piping commands
+- **CMD-4: Environment Variables & Shortcuts** - Setting variables, shortcuts
+- **CMD-5: Filling in the Gaps** - Batch files, advanced techniques
+- **CMD-6: Advanced Terminal Techniques** - Scripts, automation, professional workflows
+- **CMD Unit Test & Practice** - Comprehensive self-assessment
 
-**Time commitment:** ~10 hours  
+**Time commitment:** 30-45 hours (for screen reader users)  
 **Best for:** Absolute beginners or users who prefer simplicity  
 **Skills:** Terminal navigation, file operations, batch scripting, basic automation
 
-#### **Pathway C: Git Bash Foundation (Unix/Linux Skills)**
+#### **Part 2C: Git Bash Foundation (Cross-Platform Skills)**
 
-**Where to Start:** [GitBash Curriculum Overview](GitBashFoundation/GitBashCurriculumOverview/GitBashCurriculumOverview.md)
+**Where to Start:** [Git Bash Curriculum Overview](GitBash_Foundation/GitBash_Curriculum_Overview/GitBash_Curriculum_Overview.md)
 
-- **GitBash-Pre through GitBash-5** - 6 progressive lessons covering terminal basics
-- **GitBash-6: Advanced Techniques** - Bash scripting, automation, professional workflows
-- **GitBash Unit Test** - Comprehensive practice and self-assessment
+**Lessons Included:**
+- **GitBash-Pre: Your First Terminal** - Opening Git Bash, first commands, screen reader tricks
+- **GitBash-0: Getting Started** - Paths, shortcuts, command basics
+- **GitBash-1: Navigation** - Moving around the file system confidently
+- **GitBash-2: File and Folder Manipulation** - Creating, editing, moving files
+- **GitBash-3: Input, Output & Piping** - Redirecting output, piping commands
+- **GitBash-4: Environment Variables & Aliases** - Setting variables, shortcuts
+- **GitBash-5: Filling in the Gaps** - Shell profiles, history, debugging
+- **GitBash-6: Advanced Terminal Techniques** - Scripts, functions, professional workflows
+- **GitBash Unit Test & Practice** - Comprehensive self-assessment
 
-**Time commitment:** ~8-10 hours  
-**Best for:** Users who want cross-platform skills (works on Windows, macOS, Linux)  
+**Time commitment:** 20-25 hours (for screen reader users)  
+**Best for:** Users who want cross-platform skills (Windows, macOS, Linux)  
 **Skills:** Unix/bash commands, shell scripting, cross-platform automation
 
-**Why three pathways?** All teach identical fundamental concepts using different tools. PowerShell is most powerful on Windows; Command Prompt is simplest; Git Bash provides cross-platform skills. Choose based on your learning style and goals. All integrate fully with 3D design workflows.
+**Important:** Choose ONE pathway and complete it fully. All three teach identical fundamental concepts using different tools. Each integrates fully with 3D design workflows.
 
-### Part 2: 3dMake Foundation (11 lessons + 4 appendices)
+---
 
-**Where to Start:** [3dMake Introduction](3dMakeFoundation/3dMakeIntro/3dMakeIntro.md)
+### Part 3: 3dMake Foundation & Design (11 Lessons + 7 Appendices)
+
+**Where to Start:** [3dMake Introduction](3dMake_Foundation/3dMake_Intro/3dMake_Intro.md)
+
+Students build parametric 3D designs using OpenSCAD and automate the workflow with 3DMake.
 
 #### Main Curriculum: 11 Progressive Lessons
 
-| Part                      | Lessons | Focus                                            | Duration | Total Hours |
-|---------------------------|---------|--------------------------------------------------|----------|-------------|
-| **Foundations**           | 1-3     | Environment setup, primitives, parametric design | ~3 hours | 3           |
-| **Verification & Safety** | 4-5     | AI verification, safety protocols, materials     | ~2 hours | 5           |
-| **Applied Projects**      | 6-8     | Practical commands, transforms, advanced design  | ~4 hours | 9           |
-| **Advanced Topics**       | 9-10    | Automation, troubleshooting, mastery             | ~3 hours | 12          |
-| **Leadership**            | 11      | Stakeholder-centric design                       | ~2 hours | 14          |
+| Part                      | Lessons | Focus                                            | Duration  |
+|---------------------------|---------|--------------------------------------------------|-----------|
+| **Foundations**           | 1-3     | Environment setup, primitives, parametric design | 3-4 hours |
+| **Verification & Safety** | 4-5     | AI verification, safety protocols, materials     | 2-3 hours |
+| **Applied Projects**      | 6-8     | Practical commands, transforms, advanced design  | 4-5 hours |
+| **Advanced Topics**       | 9-10    | Automation, troubleshooting, mastery             | 3-4 hours |
+| **Leadership**            | 11      | Stakeholder-centric design                       | 2-3 hours |
 
-**Total:** 30-40 hours instruction + projects
+**Total:** 40-50 hours instruction + practice projects
 
-#### 4 Comprehensive Reference Appendices
+#### 7 Comprehensive Reference Appendices
 
-- **[Appendix A: Comprehensive Slicing Guide](3dMakeFoundation/AppendixAComprehensiveSlicingGuide.md)** - All major slicers (PrusaSlicer, Bambu Studio, Cura, OrcaSlicer)
-- **[Appendix B: Material Properties & Selection](3dMakeFoundation/AppendixBMaterialProperties.md)** - Material reference with shrinkage data
-- **[Appendix C: Tolerance Testing & QA Matrix](3dMakeFoundation/AppendixCToleranceQA.md)** - Quality assurance procedures
-- **[Appendix D: PowerShell Integration for SCAD Workflows](3dMakeFoundation/AppendixDPowerShellIntegration.md)** - Automation and batch processing
+- **Appendix A: Introduction to Command Line Interfaces** - CLI overview
+- **Appendix B: PowerShell Comprehensive Guide** - Detailed PowerShell reference
+- **Appendix C: Comprehensive Slicing Guide** - All major slicers (PrusaSlicer, Bambu Studio, Cura, OrcaSlicer)
+- **Appendix D: Material Properties & Selection** - Material reference with properties
+- **Appendix E: Tolerance Testing & Quality Assurance Matrix** - QA procedures
+- **Appendix F: PowerShell Integration for SCAD Workflows** - Automation and batch processing
+- **Appendix G: 3dMake Code Examples & Assets** - OpenSCAD code examples and reference designs
 
 ---
 
@@ -179,10 +215,10 @@ Quick navigation to common topics:
 
 This course is enhanced by comprehensive textbooks and companion materials from the *Programming with OpenSCAD* project:
 
-### Free Textbooks (EPUB Format)
+### Textbook options (EPUB Format)
 
-- **[Programming with OpenSCAD: A Beginner's Guide to Coding 3D-Printable Objects](assets/ProgrammingwithOpenSCAD.epub)** - Comprehensive reference covering OpenSCAD syntax, geometry concepts, and design patterns. Ideal for deep dives into specific topics and as a reference guide throughout the course.
-- **[Simplifying 3D Printing with OpenSCAD](assets/Simplifying3DPrintingwithOpenSCAD.epub)** - Focused on practical workflows, optimization, and real-world printing scenarios.
+- **[Programming with OpenSCAD: A Beginner's Guide to Coding 3D-Printable Objects](https://nostarch.com/programmingopenscad)** - Comprehensive reference covering OpenSCAD syntax, geometry concepts, and design patterns. Ideal for deep dives into specific topics and as a reference guide throughout the course.
+- **[Simplifying 3D Printing with OpenSCAD](https://www.packtpub.com/en-us/product/simplifying-3d-printing-with-openscad-9781801813174)** - Focused on practical workflows, optimization, and real-world printing scenarios.
 
 ### Companion Teaching Resources
 
