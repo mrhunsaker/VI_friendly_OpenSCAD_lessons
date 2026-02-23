@@ -355,7 +355,268 @@ Quality Checks:
 
 ---
 
-## Advanced: Chamfers and Surface Finish
+## Advanced Assembly Best Practices
+
+Professional assemblies require planning beyond individual parts. Consider assembly sequence, tolerance management, and accessibility.
+
+### Designing for Snap-Fit Assemblies
+
+Snap-fits eliminate fasteners, reducing assembly complexity and cost:
+
+```openscad
+// Snap-fit connector with spring arm
+module snap_fit_male(width, depth, arm_thickness, flex_distance) {
+  difference() {
+    // Main body
+    cube([width, depth, 10]);
+    
+    // Undercut for spring arm
+    translate([flex_distance, 2, 2])
+      cube([width - 2*flex_distance, depth - 4, 6]);
+  }
+  
+  // Spring arm that flexes inward
+  translate([flex_distance, 2, 2])
+    cube([arm_thickness, depth - 4, 6]);
+}
+
+// Snap-fit receiver with clip pockets
+module snap_fit_female(width, depth) {
+  cube([width, depth, 10]);
+  
+  // Clip pockets on inside
+  translate([3, 2, 5])
+    cube([width - 6, depth - 4, 4]);
+}
+
+// Usage: Position parts for assembly
+snap_fit_male(40, 30, 2, 35);
+translate([50, 0, 0])
+  snap_fit_female(40, 30);
+```
+
+**Complete Snap-Fit Housing Example:**
+
+```openscad
+// Parametric connector box with snap-fit lid
+module connector_housing(box_w, box_h, box_d, wall, snap_depth) {
+  difference() {
+    // Outer shell
+    cube([box_w, box_h, box_d]);
+    
+    // Hollow interior
+    translate([wall, wall, wall])
+      cube([box_w - 2*wall, box_h - 2*wall, box_d - wall]);
+  }
+  
+  // Snap-fit ledges on sides
+  for (z = [box_d - 5, box_d - 2])
+    for (x = [0, box_w - wall])
+      translate([x, 0, z])
+        cube([wall, box_h, 3]);
+}
+
+module connector_lid(box_w, box_h, snap_depth, tab_thickness) {
+  difference() {
+    cube([box_w, box_h, 2]);
+    
+    // Hollow underside
+    translate([tab_thickness, tab_thickness, 0])
+      cube([box_w - 2*tab_thickness, box_h - 2*tab_thickness, 2]);
+  }
+  
+  // Snap tabs underneath
+  for (x = [0, box_w - tab_thickness])
+    translate([x, tab_thickness, -2])
+      cube([tab_thickness, box_h - 2*tab_thickness, 2]);
+}
+
+// Assembly visualization
+connector_housing(60, 40, 30, 2, 3);
+translate([0, 0, 30])
+  connector_lid(60, 40, 3, 3);
+```
+
+### Thread and Screw Calculations
+
+Design for M3 and M4 fasteners commonly available in 3D printing accessories:
+
+```openscad
+// M3 bolt hole specifications
+M3_clearance_hole = 3.2;    // Loose fit, easy insertion
+M3_tight_hole = 2.8;        // Tight fit for threaded inserts
+M3_head_diameter = 5.5;     // M3 bolt head diameter
+M3_head_height = 2.8;       // M3 bolt head height
+
+// M4 bolt hole specifications
+M4_clearance_hole = 4.3;
+M4_tight_hole = 3.8;
+M4_head_diameter = 7;
+M4_head_height = 3.2;
+
+// Threaded insert pocket (wooden threaded inserts for plastic)
+module threaded_insert_pocket(bolt_type, pocket_depth) {
+  hole_diameter = bolt_type == "M3" ? 3.5 : 4.5;  // Insert body
+  head_diameter = bolt_type == "M3" ? 5.8 : 7.5;  // Install head
+  
+  difference() {
+    cylinder(r=head_diameter/2, h=pocket_depth);
+    cylinder(r=hole_diameter/2, h=pocket_depth + 2);
+  }
+}
+
+// Mounting bracket with threaded insert pockets
+module mounting_bracket(length, height, pocket_depth) {
+  difference() {
+    cube([length, 20, height]);
+    
+    // Create pockets for threaded inserts
+    for (x = [10, length - 10])
+      translate([x, 10, height - pocket_depth])
+        threaded_insert_pocket("M3", pocket_depth);
+  }
+}
+
+mounting_bracket(60, 20, 5);
+```
+
+### Alignment Features and Dowel Pins
+
+Guide parts into correct assembly positions:
+
+```openscad
+// Dowel pin socket (receives alignment pin)
+module dowel_socket(diameter, depth) {
+  difference() {
+    cylinder(r=diameter/2 + 2, h=depth);
+    cylinder(r=diameter/2 + 0.1, h=depth);
+  }
+}
+
+// Dowel pin (protrudes from part)
+module dowel_pin(diameter, height) {
+  cylinder(r=diameter/2, h=height);
+}
+
+// Part A with dowel pins
+module part_a() {
+  difference() {
+    cube([50, 50, 10]);
+    translate([10, 10, -2])
+      cylinder(r=2, h=5);  // Nut pocket
+  }
+  
+  // Alignment pins on top
+  translate([10, 10, 10])
+    dowel_pin(4, 5);
+  
+  translate([40, 10, 10])
+    dowel_pin(4, 5);
+}
+
+// Part B with dowel sockets
+module part_b() {
+  difference() {
+    cube([50, 50, 10]);
+    
+    // Socket for alignment pins from Part A
+    translate([10, 10, 10])
+      dowel_socket(4, 5);
+    
+    translate([40, 10, 10])
+      dowel_socket(4, 5);
+  }
+}
+
+// Assembly visualization
+part_a();
+translate([0, 0, 15]) color("blue", 0.5) part_b();
+```
+
+### Assembly Sequence Documentation
+
+Structure complex assemblies with clear ordering:
+
+```openscad
+// Multi-stage assembly documented in code
+module complete_assembly(config_name) {
+  echo(str("Assembling: ", config_name));
+  
+  // STAGE 1: Place base components
+  echo("STAGE 1: Install base bracket");
+  base_bracket();
+  
+  // STAGE 2: Add vertical structure
+  echo("STAGE 2: Attach vertical supports");
+  translate([0, 0, 20])
+    vertical_support();
+  
+  // STAGE 3: Install cross members
+  echo("STAGE 3: Connect cross members");
+  translate([20, 0, 30])
+    cross_member();
+  
+  // STAGE 4: Final fastening
+  echo("STAGE 4: Secure fasteners (M3 bolts)");
+  // Fasteners would be positioned here
+}
+
+complete_assembly("standard_shelf");
+```
+
+### Exploded View Generation
+
+Create exploded assembly drawings for documentation:
+
+```openscad
+// Create exploded view by offsetting parts
+module exploded_assembly() {
+  explode_factor = 30;  // mm spacing between parts
+  
+  // Base (stays at origin)
+  color("red")
+    base_component();
+  
+  // Second component (moved up and forward)
+  translate([0, explode_factor, 0])
+    color("green")
+      middle_component();
+  
+  // Third component (moved further)
+  translate([0, explode_factor*2, 0])
+    color("blue")
+      top_component();
+  
+  // Fasteners (moved separately)
+  for (i = [0:3])
+    translate([i*10, explode_factor*2, 20])
+      color("gray")
+        cylinder(r=2, h=10);
+}
+
+exploded_assembly();
+```
+
+### Testing Interference and Clearance
+
+```openscad
+// Visualization: show clearance zones (semi-transparent)
+module assembly_with_clearance_check() {
+  // Actual parts
+  part_1();
+  translate([30, 0, 0]) part_2();
+  
+  // Clearance zones (show minimum spacing)
+  % translate([25, 0, 0])  // % makes transparent
+    cube([1, 50, 50]);     // 1mm clearance zone
+}
+
+// When rendered, the % shows potential interference areas
+```
+
+---
+
+## Checkpoint
 
 Chamfers improve print quality by:
 1. Reducing stress concentration at edges

@@ -1,0 +1,893 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Lesson 8: Advanced Parametric Design and Interlocking Features - 3D Printing Course for Blind and Visually Impaired Learners</title>
+
+
+        <!-- Custom HTML head -->
+        <script>
+          (function(){
+            // Load Atkinson Hyperlegible fonts from the book assets (injected at runtime so paths are correct on GitHub Pages)
+            try {
+              const link = Array.from(document.getElementsByTagName('link')).find(l => l.href && l.href.match(/\/css\/variables-.*\.css$/));
+              const base = (function(){
+                if (!link) return (window.location.origin||'') + '/';
+                const u = new URL(link.href, window.location.href);
+                const basePath = u.pathname.replace(/\/css\/.*$/,'');
+                return u.origin + basePath + (basePath.endsWith('/') ? '' : '/');
+              })();
+        
+              const css = `\
+        @font-face {\
+          font-family: 'Atkinson Hyperlegible Next';\
+          src: url('${base}assets/fonts/AtkinsonHyperlegibleNext-Regular.ttf') format('truetype');\
+          font-weight: 400; font-style: normal; font-display: swap;\
+        }\
+        @font-face {\
+          font-family: 'Atkinson Hyperlegible Mono';\
+          src: url('${base}assets/fonts/AtkinsonHyperlegibleMono-SemiBold.ttf') format('truetype');\
+          font-weight: 600; font-style: normal; font-display: swap;\
+        }\
+        @font-face {\
+          font-family: 'Atkinson Hyperlegible Mono';\
+          src: url('${base}assets/fonts/AtkinsonHyperlegibleMono-Regular.otf') format('opentype');\
+          font-weight: 400; font-style: normal; font-display: swap;\
+        }\
+        pre, code, .hljs, .leftbar { font-family: 'Atkinson Hyperlegible Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", "Courier New", monospace !important; }\
+        body { font-family: 'Atkinson Hyperlegible Next', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }\
+        `;
+        
+              const style = document.createElement('style');
+              style.appendChild(document.createTextNode(css));
+              document.head.appendChild(style);
+            } catch (e) { console.warn('Font injection failed', e); }
+          })();
+        </script>
+        
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            mermaid.initialize({ startOnLoad: true });
+          });
+        </script>
+
+        <meta name="description" content="An introduction to 3D printing for blind and visually impaired learners, using OpenSCAD and 3DMake to create accessible 3D models.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-2459343d.css">
+        <link rel="stylesheet" href="../../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../../src/assets/custom-8d04802b.css">
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../../searchindex-31b439ad.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc-e71cc795.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">3D Printing Course for Blind and Visually Impaired Learners</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="lesson-8-advanced-parametric-design-and-interlocking-features"><a class="header" href="#lesson-8-advanced-parametric-design-and-interlocking-features">Lesson 8: Advanced Parametric Design and Interlocking Features</a></h1>
+<p>Estimated time: 90-120 minutes</p>
+<p><strong>Learning Objectives</strong></p>
+<ul>
+<li>Design parametric walls with precise clearances for stackable assemblies<sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">1</a></sup></li>
+<li>Create interlocking features (rims, tabs, snap-fits) for assembly without fasteners<sup class="footnote-reference" id="fr-2-1"><a href="#footnote-2">2</a></sup></li>
+<li>Apply chamfers for edge finishing and print quality<sup class="footnote-reference" id="fr-3-1"><a href="#footnote-3">3</a></sup></li>
+<li>Manage tolerance stack-up in complex parametric designs<sup class="footnote-reference" id="fr-1-2"><a href="#footnote-1">1</a></sup></li>
+</ul>
+<p><strong>Materials</strong></p>
+<ul>
+<li>3dMake project scaffold with <code>src/main.scad</code></li>
+<li>Calipers for measuring clearances and wall thickness</li>
+<li>Printer for test prints (recommended for validation)</li>
+</ul>
+<p><strong>Related Project</strong>: Work through <a href="../../assets/3dMake_Foundation/Lessons_3dMake_8/stackable_bins.scad">stackable_bins.scad</a> to apply tolerance design in a multi-part assembly with interlocking features.</p>
+<hr>
+<h2 id="understanding-tolerance-and-clearance"><a class="header" href="#understanding-tolerance-and-clearance">Understanding Tolerance and Clearance</a></h2>
+<p>In 3D printing, tolerance refers to the acceptable variation in printed dimensions. When designing parts that must fit together, you must account for:</p>
+<ul>
+<li><strong>Printer accuracy</strong> (~0.1-0.3 mm typical)</li>
+<li><strong>Material shrinkage</strong> (PLA: ~0.3-0.5%)</li>
+<li><strong>Cumulative tolerance</strong> when multiple parts fit together</li>
+</ul>
+<p>For stackable bins with interlocking rims:</p>
+<pre><code>bin_outer = 80 mm
+rim_clearance = 0.6 mm  (small space between stack and rim below)
+rim_inner = bin_outer - 2*wall - 2*rim_clearance
+</code></pre>
+<hr>
+<h2 id="step-by-step-tasks"><a class="header" href="#step-by-step-tasks">Step-by-step Tasks</a></h2>
+<h3 id="task-1-design-a-parametric-stackable-bin"><a class="header" href="#task-1-design-a-parametric-stackable-bin">Task 1: Design a Parametric Stackable Bin</a></h3>
+<p>Create a storage bin with walls, a removable lid, and interlocking features:</p>
+<pre><code class="language-openscad">// Stackable Storage Bin - Advanced Parametric Design
+// Features: walls, interlocking rim, chamfered edges, optional dividers
+
+// === PARAMETERS ===
+bin_w = 80;         // mm - width
+bin_d = 120;        // mm - depth
+bin_h = 60;         // mm - height
+wall = 2;           // mm - wall thickness (structural)
+rim = 3;            // mm - interlock rim height
+chamfer = 2;        // mm - edge chamfer
+stack_clear = 0.6;  // mm - clearance between stacking parts
+
+// Derived parameters
+inner_w = bin_w - 2*wall;
+inner_d = bin_d - 2*wall;
+rim_inner_w = bin_w - 2*(wall + stack_clear);
+rim_inner_d = bin_d - 2*(wall + stack_clear);
+
+// === MODULES ===
+
+// Outer shell of the bin
+module outer_shell() {
+  cube([bin_w, bin_d, bin_h]);
+}
+
+// Inner cavity (creates walls by subtracting)
+module inner_cavity() {
+  translate([wall, wall, wall])
+    cube([inner_w, inner_d, bin_h - wall]);
+}
+
+// Main bin body (hollow box)
+module body() {
+  difference() {
+    outer_shell();
+    inner_cavity();
+  }
+}
+
+// Outer rim (sits on top of bin, inside rim of bin below)
+module rim_outer() {
+  translate([0, 0, bin_h])
+    cube([bin_w, bin_d, rim]);
+}
+
+// Inner rim cutout (where the bin below's rim sits)
+module rim_inner() {
+  translate([wall + stack_clear, wall + stack_clear, bin_h])
+    cube([rim_inner_w, rim_inner_d, rim]);
+}
+
+// Rim assembly (outer + inner cutout)
+module rim_assembly() {
+  difference() {
+    rim_outer();
+    rim_inner();
+  }
+}
+
+// Chamfer edges for better print quality
+module chamfered_edges() {
+  difference() {
+    children();
+    // Top edge chamfer
+    translate([-1, -1, bin_h - chamfer])
+      cube([bin_w + 2, bin_d + 2, chamfer + 1]);
+  }
+}
+
+// === ASSEMBLE ===
+union() {
+  chamfered_edges() {
+    body();
+  }
+  rim_assembly();
+}
+</code></pre>
+<h3 id="task-2-test-stackability"><a class="header" href="#task-2-test-stackability">Task 2: Test Stackability</a></h3>
+<p>After printing the first bin:</p>
+<ol>
+<li>Print a second identical bin</li>
+<li>Stack one on top of the other and verify:
+<ul>
+<li>Does the rim insert smoothly into the rim below?</li>
+<li>Can you stack 3 bins without binding?</li>
+<li>Does the stack remain stable without tipping?</li>
+</ul>
+</li>
+</ol>
+<p>Document:</p>
+<ul>
+<li>Any friction or resistance (good for stability)</li>
+<li>Gaps or looseness (adjust <code>stack_clear</code> if needed)</li>
+</ul>
+<h3 id="task-3-design-variants-for-different-storage-needs"><a class="header" href="#task-3-design-variants-for-different-storage-needs">Task 3: Design Variants for Different Storage Needs</a></h3>
+<p>Create three different bin sizes using the same parametric code:</p>
+<pre><code class="language-openscad">// Small bin (desk organization)
+bin_w = 60;
+bin_d = 80;
+bin_h = 40;
+
+// OR
+
+// Medium bin (general storage)
+// bin_w = 80;
+// bin_d = 120;
+// bin_h = 60;
+
+// OR
+
+// Large bin (bulk storage)
+// bin_w = 120;
+// bin_d = 160;
+// bin_h = 80;
+</code></pre>
+<h3 id="task-4-add-optional-internal-dividers"><a class="header" href="#task-4-add-optional-internal-dividers">Task 4: Add Optional Internal Dividers</a></h3>
+<p>Enhance the design with parametric dividers:</p>
+<pre><code class="language-openscad">// Optional: Parametric dividers
+num_dividers = 2;        // Number of internal compartments
+divider_thickness = 1.5; // mm
+
+module dividers() {
+  for (i = [1 : num_dividers]) {
+    y_pos = wall + (i * inner_d / (num_dividers + 1));
+    translate([wall, y_pos, wall])
+      cube([inner_w, divider_thickness, bin_h - 2*wall]);
+  }
+}
+
+// Add to union:
+// dividers();
+</code></pre>
+<h3 id="task-5-document-tolerance-sensitivity"><a class="header" href="#task-5-document-tolerance-sensitivity">Task 5: Document Tolerance Sensitivity</a></h3>
+<p>Create a testing matrix to understand how variations affect fit:</p>
+<pre><code>Test Configuration Matrix:
+========================================
+Config | stack_clear | wall | Result
+========================================
+A      | 0.4 mm      | 2.0  | Tight - hard to stack
+B      | 0.6 mm      | 2.0  | Ideal - smooth fit
+C      | 0.8 mm      | 2.0  | Loose - unstable
+D      | 0.6 mm      | 2.5  | Better - stronger walls
+========================================
+</code></pre>
+<p>After printing and testing, record observations about fit quality.</p>
+<hr>
+<h2 id="advanced-topics-snap-fit-connectors-and-multi-part-assemblies"><a class="header" href="#advanced-topics-snap-fit-connectors-and-multi-part-assemblies">Advanced Topics: Snap-Fit Connectors and Multi-Part Assemblies</a></h2>
+<p>As you progress beyond simple stacking, you may want to create assemblies where parts connect without fasteners. This section covers snap-fit and interlocking designs.</p>
+<h3 id="designing-snap-fit-clips"><a class="header" href="#designing-snap-fit-clips">Designing Snap-Fit Clips</a></h3>
+<p>A snap-fit clip works by:</p>
+<ol>
+<li>Creating a flexible arm that bends outward to release</li>
+<li>Providing a catch (usually a small notch or undercut) that locks into place</li>
+<li>Balancing flexibility (easy to insert/remove) with durability (survives many cycles)</li>
+</ol>
+<p>Here’s a simple snap-fit connector:</p>
+<pre><code class="language-openscad">// Simple snap-fit clip for connecting parts
+module snap_fit_base() {
+  // Main mounting block
+  cube([20, 40, 15]);
+}
+
+module snap_fit_arm(thickness = 1.5, deflection = 0.5) {
+  // Flexible arm that bends to insert/release
+  // thickness: how thick the arm is (0.8-2.0 mm typical)
+  // deflection: how far it must bend to insert (0.3-1.0 mm typical)
+  
+  translate([0, 0, 15]) {
+    // Thin vertical arm
+    cube([thickness, 35, 12]);
+    
+    // Catch hook (small bump on end)
+    translate([-1, 30, 10])
+      cube([3, 5, 2]);  // Notch for mating part to lock onto
+  }
+}
+
+// Test the snap-fit assembly
+union() {
+  snap_fit_base();
+  translate([3, 0, 0]) snap_fit_arm();
+}
+</code></pre>
+<p><strong>Key parameters to test:</strong></p>
+<ul>
+<li><code>thickness</code> (1.0-2.0 mm): Thicker = stronger but harder to flex</li>
+<li>Arm length: Longer = more flexible but weaker</li>
+<li>Catch geometry: Size and shape determine how securely parts lock</li>
+</ul>
+<h3 id="tolerance-for-snap-fits"><a class="header" href="#tolerance-for-snap-fits">Tolerance for Snap-Fits</a></h3>
+<p>Unlike stackable bins, snap-fit parts need tighter tolerances because they must flex on insertion:</p>
+<pre><code>Recommended tolerances for snap-fit:
+- Arm thickness tolerance: +/-0.2 mm (tighter than bins)
+- Catch gap (clearance): 0.3-0.5 mm (smaller than stacking clearance)
+- Insertion force: Should be noticeable but not require tools
+
+If too loose: Parts fall apart
+If too tight: Parts won't insert or break on insertion
+</code></pre>
+<h3 id="multi-part-assemblies-coordinating-multiple-components"><a class="header" href="#multi-part-assemblies-coordinating-multiple-components">Multi-Part Assemblies: Coordinating Multiple Components</a></h3>
+<p>For more complex assemblies (like the Miniature Assembly in later projects), you need to:</p>
+<ol>
+<li><strong>Define a global coordinate system</strong> where all parts know their positions</li>
+<li><strong>Use modular design</strong> so each part can be printed, tested, and refined independently</li>
+<li><strong>Document assembly order</strong> so users know which parts fit together first</li>
+</ol>
+<p>Here’s a pattern for a multi-part assembly:</p>
+<pre><code class="language-openscad">// Multi-part assembly pattern
+
+// === ASSEMBLY PARAMETERS ===
+assembly_id = "miniature_furniture";  // Unique name for this assembly
+part_scale = 1.0;                     // Scale entire assembly if needed
+
+// === PARTS ===
+
+module part_base() {
+  cube([60, 40, 5]);
+}
+
+module part_support_left() {
+  translate([5, 0, 5])
+    cube([3, 40, 25]);
+}
+
+module part_support_right() {
+  translate([52, 0, 5])
+    cube([3, 40, 25]);
+}
+
+module part_shelf() {
+  translate([8, 5, 18])
+    cube([44, 30, 2]);
+}
+
+// === ASSEMBLY ===
+
+// Complete assembly (print individual parts separately first)
+module furniture_assembly() {
+  part_base();
+  part_support_left();
+  part_support_right();
+  part_shelf();
+}
+
+// Export individual parts by uncommenting one at a time:
+// part_base();
+// part_support_left();
+// part_support_right();
+// part_shelf();
+
+// Or export the full assembly:
+furniture_assembly();
+</code></pre>
+<p><strong>Best practices for multi-part designs:</strong></p>
+<ol>
+<li>Print and test parts individually before assembling</li>
+<li>Add small alignment features (pins, notches) to guide assembly</li>
+<li>Document which parts go together and the order</li>
+<li>Include spare parts (print 2-3 copies of small connecting pieces)</li>
+<li>Test the full assembly on a test print before final production</li>
+</ol>
+<h3 id="assembly-documentation"><a class="header" href="#assembly-documentation">Assembly Documentation</a></h3>
+<p>For any multi-part project, create a simple assembly guide:</p>
+<pre><code>Miniature Furniture Assembly Guide
+
+Parts:
+- Base (60 x 40 x 5 mm, prints in ~20 min)
+- Support Left (3 x 40 x 25 mm, prints in ~5 min)
+- Support Right (3 x 40 x 25 mm, prints in ~5 min)
+- Shelf (44 x 30 x 2 mm, prints in ~15 min)
+
+Assembly Steps:
+1. Prepare all four parts and test fit manually
+2. Glue or snap supports to base (supports on left and right edges)
+3. Slide shelf onto supports
+4. Check that shelf is level and square
+
+Quality Checks:
+- Shelf should not wobble or flex excessively
+- All parts should be free of support marks or defects
+- Shelf should hold light objects without sagging
+</code></pre>
+<hr>
+<h2 id="advanced-assembly-best-practices"><a class="header" href="#advanced-assembly-best-practices">Advanced Assembly Best Practices</a></h2>
+<p>Professional assemblies require planning beyond individual parts. Consider assembly sequence, tolerance management, and accessibility.</p>
+<h3 id="designing-for-snap-fit-assemblies"><a class="header" href="#designing-for-snap-fit-assemblies">Designing for Snap-Fit Assemblies</a></h3>
+<p>Snap-fits eliminate fasteners, reducing assembly complexity and cost:</p>
+<pre><code class="language-openscad">// Snap-fit connector with spring arm
+module snap_fit_male(width, depth, arm_thickness, flex_distance) {
+  difference() {
+    // Main body
+    cube([width, depth, 10]);
+    
+    // Undercut for spring arm
+    translate([flex_distance, 2, 2])
+      cube([width - 2*flex_distance, depth - 4, 6]);
+  }
+  
+  // Spring arm that flexes inward
+  translate([flex_distance, 2, 2])
+    cube([arm_thickness, depth - 4, 6]);
+}
+
+// Snap-fit receiver with clip pockets
+module snap_fit_female(width, depth) {
+  cube([width, depth, 10]);
+  
+  // Clip pockets on inside
+  translate([3, 2, 5])
+    cube([width - 6, depth - 4, 4]);
+}
+
+// Usage: Position parts for assembly
+snap_fit_male(40, 30, 2, 35);
+translate([50, 0, 0])
+  snap_fit_female(40, 30);
+</code></pre>
+<p><strong>Complete Snap-Fit Housing Example:</strong></p>
+<pre><code class="language-openscad">// Parametric connector box with snap-fit lid
+module connector_housing(box_w, box_h, box_d, wall, snap_depth) {
+  difference() {
+    // Outer shell
+    cube([box_w, box_h, box_d]);
+    
+    // Hollow interior
+    translate([wall, wall, wall])
+      cube([box_w - 2*wall, box_h - 2*wall, box_d - wall]);
+  }
+  
+  // Snap-fit ledges on sides
+  for (z = [box_d - 5, box_d - 2])
+    for (x = [0, box_w - wall])
+      translate([x, 0, z])
+        cube([wall, box_h, 3]);
+}
+
+module connector_lid(box_w, box_h, snap_depth, tab_thickness) {
+  difference() {
+    cube([box_w, box_h, 2]);
+    
+    // Hollow underside
+    translate([tab_thickness, tab_thickness, 0])
+      cube([box_w - 2*tab_thickness, box_h - 2*tab_thickness, 2]);
+  }
+  
+  // Snap tabs underneath
+  for (x = [0, box_w - tab_thickness])
+    translate([x, tab_thickness, -2])
+      cube([tab_thickness, box_h - 2*tab_thickness, 2]);
+}
+
+// Assembly visualization
+connector_housing(60, 40, 30, 2, 3);
+translate([0, 0, 30])
+  connector_lid(60, 40, 3, 3);
+</code></pre>
+<h3 id="thread-and-screw-calculations"><a class="header" href="#thread-and-screw-calculations">Thread and Screw Calculations</a></h3>
+<p>Design for M3 and M4 fasteners commonly available in 3D printing accessories:</p>
+<pre><code class="language-openscad">// M3 bolt hole specifications
+M3_clearance_hole = 3.2;    // Loose fit, easy insertion
+M3_tight_hole = 2.8;        // Tight fit for threaded inserts
+M3_head_diameter = 5.5;     // M3 bolt head diameter
+M3_head_height = 2.8;       // M3 bolt head height
+
+// M4 bolt hole specifications
+M4_clearance_hole = 4.3;
+M4_tight_hole = 3.8;
+M4_head_diameter = 7;
+M4_head_height = 3.2;
+
+// Threaded insert pocket (wooden threaded inserts for plastic)
+module threaded_insert_pocket(bolt_type, pocket_depth) {
+  hole_diameter = bolt_type == "M3" ? 3.5 : 4.5;  // Insert body
+  head_diameter = bolt_type == "M3" ? 5.8 : 7.5;  // Install head
+  
+  difference() {
+    cylinder(r=head_diameter/2, h=pocket_depth);
+    cylinder(r=hole_diameter/2, h=pocket_depth + 2);
+  }
+}
+
+// Mounting bracket with threaded insert pockets
+module mounting_bracket(length, height, pocket_depth) {
+  difference() {
+    cube([length, 20, height]);
+    
+    // Create pockets for threaded inserts
+    for (x = [10, length - 10])
+      translate([x, 10, height - pocket_depth])
+        threaded_insert_pocket("M3", pocket_depth);
+  }
+}
+
+mounting_bracket(60, 20, 5);
+</code></pre>
+<h3 id="alignment-features-and-dowel-pins"><a class="header" href="#alignment-features-and-dowel-pins">Alignment Features and Dowel Pins</a></h3>
+<p>Guide parts into correct assembly positions:</p>
+<pre><code class="language-openscad">// Dowel pin socket (receives alignment pin)
+module dowel_socket(diameter, depth) {
+  difference() {
+    cylinder(r=diameter/2 + 2, h=depth);
+    cylinder(r=diameter/2 + 0.1, h=depth);
+  }
+}
+
+// Dowel pin (protrudes from part)
+module dowel_pin(diameter, height) {
+  cylinder(r=diameter/2, h=height);
+}
+
+// Part A with dowel pins
+module part_a() {
+  difference() {
+    cube([50, 50, 10]);
+    translate([10, 10, -2])
+      cylinder(r=2, h=5);  // Nut pocket
+  }
+  
+  // Alignment pins on top
+  translate([10, 10, 10])
+    dowel_pin(4, 5);
+  
+  translate([40, 10, 10])
+    dowel_pin(4, 5);
+}
+
+// Part B with dowel sockets
+module part_b() {
+  difference() {
+    cube([50, 50, 10]);
+    
+    // Socket for alignment pins from Part A
+    translate([10, 10, 10])
+      dowel_socket(4, 5);
+    
+    translate([40, 10, 10])
+      dowel_socket(4, 5);
+  }
+}
+
+// Assembly visualization
+part_a();
+translate([0, 0, 15]) color("blue", 0.5) part_b();
+</code></pre>
+<h3 id="assembly-sequence-documentation"><a class="header" href="#assembly-sequence-documentation">Assembly Sequence Documentation</a></h3>
+<p>Structure complex assemblies with clear ordering:</p>
+<pre><code class="language-openscad">// Multi-stage assembly documented in code
+module complete_assembly(config_name) {
+  echo(str("Assembling: ", config_name));
+  
+  // STAGE 1: Place base components
+  echo("STAGE 1: Install base bracket");
+  base_bracket();
+  
+  // STAGE 2: Add vertical structure
+  echo("STAGE 2: Attach vertical supports");
+  translate([0, 0, 20])
+    vertical_support();
+  
+  // STAGE 3: Install cross members
+  echo("STAGE 3: Connect cross members");
+  translate([20, 0, 30])
+    cross_member();
+  
+  // STAGE 4: Final fastening
+  echo("STAGE 4: Secure fasteners (M3 bolts)");
+  // Fasteners would be positioned here
+}
+
+complete_assembly("standard_shelf");
+</code></pre>
+<h3 id="exploded-view-generation"><a class="header" href="#exploded-view-generation">Exploded View Generation</a></h3>
+<p>Create exploded assembly drawings for documentation:</p>
+<pre><code class="language-openscad">// Create exploded view by offsetting parts
+module exploded_assembly() {
+  explode_factor = 30;  // mm spacing between parts
+  
+  // Base (stays at origin)
+  color("red")
+    base_component();
+  
+  // Second component (moved up and forward)
+  translate([0, explode_factor, 0])
+    color("green")
+      middle_component();
+  
+  // Third component (moved further)
+  translate([0, explode_factor*2, 0])
+    color("blue")
+      top_component();
+  
+  // Fasteners (moved separately)
+  for (i = [0:3])
+    translate([i*10, explode_factor*2, 20])
+      color("gray")
+        cylinder(r=2, h=10);
+}
+
+exploded_assembly();
+</code></pre>
+<h3 id="testing-interference-and-clearance"><a class="header" href="#testing-interference-and-clearance">Testing Interference and Clearance</a></h3>
+<pre><code class="language-openscad">// Visualization: show clearance zones (semi-transparent)
+module assembly_with_clearance_check() {
+  // Actual parts
+  part_1();
+  translate([30, 0, 0]) part_2();
+  
+  // Clearance zones (show minimum spacing)
+  % translate([25, 0, 0])  // % makes transparent
+    cube([1, 50, 50]);     // 1mm clearance zone
+}
+
+// When rendered, the % shows potential interference areas
+</code></pre>
+<hr>
+<h2 id="checkpoint"><a class="header" href="#checkpoint">Checkpoint</a></h2>
+<p>Chamfers improve print quality by:</p>
+<ol>
+<li>Reducing stress concentration at edges</li>
+<li>Improving layer adhesion at sharp transitions</li>
+<li>Making parts easier to remove from the build platform</li>
+</ol>
+<pre><code class="language-openscad">// More sophisticated chamfer (chamfered corner)
+module chamfer_corner(size, radius) {
+  difference() {
+    children();
+    translate([size-radius, size-radius, size-radius])
+      rotate([45, 0, 0]) cube([radius*2, radius*2, radius*2]);
+  }
+}
+</code></pre>
+<hr>
+<h2 id="checkpoint-1"><a class="header" href="#checkpoint-1">Checkpoint</a></h2>
+<ul>
+<li>After task 1, you have a single parametric bin</li>
+<li>After task 2, you’ve verified stackability</li>
+<li>After task 4, you have optional dividers working</li>
+<li>After task 5, you’ve documented tolerance data</li>
+</ul>
+<hr>
+<h2 id="quiz---lesson-3dmake8-10-questions"><a class="header" href="#quiz---lesson-3dmake8-10-questions">Quiz - Lesson 3dMake.8 (10 questions)</a></h2>
+<ol>
+<li>What is the purpose of the <code>stack_clear</code> parameter in stackable bin design<sup class="footnote-reference" id="fr-1-3"><a href="#footnote-1">1</a></sup>?</li>
+<li>Why is wall thickness a critical parameter in structural parts<sup class="footnote-reference" id="fr-1-4"><a href="#footnote-1">1</a></sup>?</li>
+<li>Explain what “tolerance stack-up” means and why it matters in multi-part assemblies<sup class="footnote-reference" id="fr-1-5"><a href="#footnote-1">1</a></sup>.</li>
+<li>How does chamfering improve print quality<sup class="footnote-reference" id="fr-3-2"><a href="#footnote-3">3</a></sup>?</li>
+<li>What parameter would you adjust to make bins stack with more friction for stability<sup class="footnote-reference" id="fr-1-6"><a href="#footnote-1">1</a></sup>?</li>
+<li>True or False: Thin walls always print faster than thick walls.</li>
+<li>Describe the difference between the outer rim and inner rim in the stackable bin design<sup class="footnote-reference" id="fr-1-7"><a href="#footnote-1">1</a></sup>.</li>
+<li>Why might you use <code>num_dividers</code> as a parameter instead of hard-coding divider positions<sup class="footnote-reference" id="fr-1-8"><a href="#footnote-1">1</a></sup>?</li>
+<li>How would you measure whether your printed bin matches the designed dimensions<sup class="footnote-reference" id="fr-1-9"><a href="#footnote-1">1</a></sup>?</li>
+<li>What design considerations apply when stacking more than 3 bins vertically<sup class="footnote-reference" id="fr-1-10"><a href="#footnote-1">1</a></sup>?</li>
+</ol>
+<h2 id="extension-problems-10"><a class="header" href="#extension-problems-10">Extension Problems (10)</a></h2>
+<ol>
+<li>Create five bin variants (small, medium, large, tall, shallow) using parametric logic; print and stack them<sup class="footnote-reference" id="fr-1-11"><a href="#footnote-1">1</a></sup>.</li>
+<li>Add parametric rounded corners using <code>minkowski()</code> to improve structural integrity<sup class="footnote-reference" id="fr-3-3"><a href="#footnote-3">3</a></sup>.</li>
+<li>Design a custom divider system: parameterize number, position, and thickness; test strength<sup class="footnote-reference" id="fr-1-12"><a href="#footnote-1">1</a></sup>.</li>
+<li>Conduct a tolerance study: print bins with <code>stack_clear</code> values of 0.4, 0.6, 0.8 mm; document fit quality<sup class="footnote-reference" id="fr-1-13"><a href="#footnote-1">1</a></sup>.</li>
+<li>Create a modular stacking system with connecting clips or latches; test assembly and disassembly<sup class="footnote-reference" id="fr-2-2"><a href="#footnote-2">2</a></sup>.</li>
+<li>Build a complete storage system: design multiple bin sizes with standard stackability and create an assembly guide.</li>
+<li>Develop a manufacturing specification document: tolerance ranges, material recommendations, quality acceptance criteria.</li>
+<li>Design a labeling system: add parametric label holders or embossed areas for identifying bin contents.</li>
+<li>Create a structural analysis guide: identify stress concentration points and propose reinforcement strategies.</li>
+<li>Write comprehensive bin design documentation: parameters, variants, assembly, stackability testing, tolerance management, maintenance, and accessibility features.</li>
+</ol>
+<hr>
+<p><strong>References</strong></p>
+<hr>
+<ol class="footnote-definition">
+<li id="footnote-1">
+<p>3DMake GitHub - Stackable Bins Example - https://github.com/tdeck/3dmake/blob/main/docs/examples.md <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a> <a href="#fr-1-3">↩3</a> <a href="#fr-1-4">↩4</a> <a href="#fr-1-5">↩5</a> <a href="#fr-1-6">↩6</a> <a href="#fr-1-7">↩7</a> <a href="#fr-1-8">↩8</a> <a href="#fr-1-9">↩9</a> <a href="#fr-1-10">↩10</a> <a href="#fr-1-11">↩11</a> <a href="#fr-1-12">↩12</a> <a href="#fr-1-13">↩13</a></p>
+</li>
+<li id="footnote-2">
+<p>Engineering Tolerance in 3D Printing - https://www.sculpteo.com/en/blog/2021/06/17/tolerance-3d-printing/ <a href="#fr-2-1">↩</a> <a href="#fr-2-2">↩2</a></p>
+</li>
+<li id="footnote-3">
+<p>OpenSCAD Manual - Minkowski (chamfers/rounding) - https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#minkowski <a href="#fr-3-1">↩</a> <a href="#fr-3-2">↩2</a> <a href="#fr-3-3">↩3</a></p>
+</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../3dMake_Foundation/Lessons_3dMake_7/Lessons_3dMake_7.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_8/snap-fit-clip.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../3dMake_Foundation/Lessons_3dMake_7/Lessons_3dMake_7.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_8/snap-fit-clip.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-c2a407aa.js"></script>
+
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-4a3ec6df.js"></script>
+        <script src="../../book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

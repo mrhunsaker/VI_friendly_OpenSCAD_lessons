@@ -34,9 +34,203 @@ Estimated time: 60-90 minutes
 5. Open the STL in your slicer to check for thin walls or non-manifold geometry[^8]; if issues appear, iterate on `main.scad` and rebuild.
 6. Try modifying the parameters and running `3dm build` again to see how parametric design allows you to quickly create variants.
 
+---
+
+## Code Style and Documentation Standards
+
+Professional OpenSCAD code follows consistent documentation practices for clarity, maintainability, and accessibility. As you write more complex designs, good documentation becomes essential for both you and anyone reading your code.
+
+### Comment Types and When to Use Them
+
+**File Header Comments** - Describe the entire file's purpose:
+```openscad
+// ==============================================================
+// Parametric Phone Stand - Design v2.1
+// ==============================================================
+// Purpose: Multi-angle viewing stand for phones/tablets
+// Author: Alex Chen
+// Created: February 2026
+// Last Modified: February 23, 2026
+// 
+// Parameters: phone_width, angle, lip_height
+// Dependencies: None (standalone file)
+// Print Time Estimate: 45-60 min (PLA, 0.20mm layer height)
+// Material: ~50g PLA
+// ==============================================================
+```
+
+**Section Comments** - Organize code into logical blocks:
+```openscad
+// ============================================
+// CUSTOMIZABLE PARAMETERS
+// ============================================
+phone_width = 75;    // mm
+phone_height = 150;  // mm
+stand_angle = 60;    // degrees
+
+// ============================================
+// DERIVED CALCULATIONS (calculated from parameters)
+// ============================================
+base_width = phone_width + 20;
+lip_height = 15;
+
+// ============================================
+// MODULE DEFINITIONS
+// ============================================
+module base() { ... }
+module stand() { ... }
+```
+
+**Inline Comments** - Clarify complex logic:
+```openscad
+// Use minkowski for smooth edges (prevents sharp corners)
+module rounded_base() {
+  minkowski() {
+    cube([width - 2*radius, depth - 2*radius, height], center=true);
+    cylinder(r=radius, h=0.01, $fn=32);  // $fn=32 for smooth curve
+  }
+}
+```
+
+**Parameter Documentation** - Explain units and constraints:
+```openscad
+// Parameter ranges and units
+width = 100;         // mm - must be > 50 mm for stability
+height = 50;         // mm - can be 20-100 mm
+wall_thickness = 2;  // mm - 1.5-3 mm recommended (too thin breaks, too thick wastes material)
+angle = 45;          // degrees - 30-80 degrees typical
+$fn = 32;            // render quality - use 16-20 for preview, 32+ for export
+```
+
+### Documentation Best Practices
+
+**1. Write for Your Audience**
+- Document assumptions and constraints
+- Explain non-obvious design choices
+- Use clear parameter names (`wall_thickness` not `w`)
+
+**2. Include Module Documentation**
+```openscad
+// Create a hollow box with walls of specified thickness
+// Parameters: outer_w, outer_d, outer_h (mm), wall (mm)
+// Example: hollow_box(50, 50, 50, 2) creates 50x50x50 box with 2mm walls
+module hollow_box(outer_w, outer_d, outer_h, wall) {
+  difference() {
+    cube([outer_w, outer_d, outer_h], center=true);
+    cube([outer_w - 2*wall, outer_d - 2*wall, outer_h], center=true);
+  }
+}
+```
+
+**3. Document Known Limitations**
+```openscad
+// Phone Stand v2
+// Limitations:
+// - Not suitable for phones heavier than 200g
+// - Recommend PLA or PETG (TPU may warp at recommended angles)
+// - Print with 20%+ infill for stability
+// - Supports may be needed on underside of angle > 70 degrees
+```
+
+**4. Accessibility in Code Documentation**
+- Use plain language, not jargon (or explain jargon)
+- Explain visual concepts in text (e.g., "fillet radius of 3mm rounds sharp corners")
+- Include parameter ranges and units always
+- Describe geometry relationships (e.g., "lip height 1/3 of stand height")
+
+### Example: Well-Documented File
+
+```openscad
+// ==============================================================
+// Parametric Keycap with Embossed Letter
+// ==============================================================
+// Purpose: Customizable keyboard keycap for 3D printing
+// Applications: Custom keyboards, gaming, accessibility
+// Print Time: 3-5 min per cap (varies by size)
+// Material: ~2g PLA per cap
+//
+// PARAMETERS TO CUSTOMIZE:
+// - cap_size: 12-28 mm (small to large keycap)
+// - cap_height: 6-15 mm
+// - letter: any single character to emboss
+//
+// PRINT RECOMMENDATIONS:
+// - Layer height: 0.15 mm (better letter quality)
+// - Infill: 15% (sufficient for keyboard use)
+// - No supports needed
+// - Print with smooth base facing bed
+//
+// TESTING CHECKLIST:
+// - Measure cap_size with calipers (should match design within 0.3mm)
+// - Test embossed letter is legible (raised ~0.5mm from surface)
+// - Test fit on actual keyboard switch (should snap fit snugly)
+// ==============================================================
+
+// ============================================
+// CUSTOMIZABLE PARAMETERS
+// ============================================
+
+cap_size = 14;        // mm - key size (typical: 12-18 for alphanumeric)
+cap_height = 10;      // mm - distance from base to top
+wall_thickness = 1.2; // mm - side wall thickness (1-1.5 typical)
+letter = "A";         // Character to emboss on top
+emboss_depth = 0.8;   // mm - how deep letter is raised (0.5-1.0 recommended)
+
+// ============================================
+// DERIVED CALCULATIONS
+// ============================================
+
+inner_size = cap_size - 2 * wall_thickness;
+
+// ============================================
+// MODULE: Hollow shell
+// ============================================
+
+module keycap_shell() {
+  difference() {
+    // Outer box
+    cube([cap_size, cap_size, cap_height], center = false);
+    
+    // Hollow interior (removed part)
+    translate([wall_thickness, wall_thickness, wall_thickness])
+      cube([inner_size, inner_size, cap_height], center = false);
+  }
+}
+
+// ============================================
+// MODULE: Embossed letter on top
+// ============================================
+
+module embossed_letter() {
+  translate([cap_size / 2, cap_size / 2, cap_height - 0.01])
+    linear_extrude(height = emboss_depth)
+      text(letter, 
+           size = cap_size * 0.5,
+           halign = "center",
+           valign = "center",
+           font = "Impact:style=Regular");
+}
+
+// ============================================
+// ASSEMBLY: Combine shell + emboss
+// ============================================
+
+union() {
+  keycap_shell();
+  embossed_letter();
+}
+```
+
+This level of documentation makes your code:
+- **Reusable:** Others can use it without reading every line
+- **Maintainable:** You can modify it months later and understand why things are designed a certain way
+- **Accessible:** Non-visual users can understand the design intent and constraints
+- **Professional:** Employers and collaborators trust well-documented code
+
 ### Checkpoints
 - After step 2 you can locate `3dmake.toml` and the `build/` directory. Ensure your project scaffold matches the expected structure described in the 3dMake repository[^1].
 - After step 4 the `build/` folder contains a valid `main.stl`. Verify the geometry using your slicer's validation tools[^5].
+- After this section, your code includes file header, parameter documentation, and module descriptions following professional standards.
 
 ---
 

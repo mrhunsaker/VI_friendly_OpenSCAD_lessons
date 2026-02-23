@@ -1,0 +1,610 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>CMD Curriculum Overview - 3D Printing Course for Blind and Visually Impaired Learners</title>
+
+
+        <!-- Custom HTML head -->
+        <script>
+          (function(){
+            // Load Atkinson Hyperlegible fonts from the book assets (injected at runtime so paths are correct on GitHub Pages)
+            try {
+              const link = Array.from(document.getElementsByTagName('link')).find(l => l.href && l.href.match(/\/css\/variables-.*\.css$/));
+              const base = (function(){
+                if (!link) return (window.location.origin||'') + '/';
+                const u = new URL(link.href, window.location.href);
+                const basePath = u.pathname.replace(/\/css\/.*$/,'');
+                return u.origin + basePath + (basePath.endsWith('/') ? '' : '/');
+              })();
+        
+              const css = `\
+        @font-face {\
+          font-family: 'Atkinson Hyperlegible Next';\
+          src: url('${base}assets/fonts/AtkinsonHyperlegibleNext-Regular.ttf') format('truetype');\
+          font-weight: 400; font-style: normal; font-display: swap;\
+        }\
+        @font-face {\
+          font-family: 'Atkinson Hyperlegible Mono';\
+          src: url('${base}assets/fonts/AtkinsonHyperlegibleMono-SemiBold.ttf') format('truetype');\
+          font-weight: 600; font-style: normal; font-display: swap;\
+        }\
+        @font-face {\
+          font-family: 'Atkinson Hyperlegible Mono';\
+          src: url('${base}assets/fonts/AtkinsonHyperlegibleMono-Regular.otf') format('opentype');\
+          font-weight: 400; font-style: normal; font-display: swap;\
+        }\
+        pre, code, .hljs, .leftbar { font-family: 'Atkinson Hyperlegible Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", "Courier New", monospace !important; }\
+        body { font-family: 'Atkinson Hyperlegible Next', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }\
+        `;
+        
+              const style = document.createElement('style');
+              style.appendChild(document.createTextNode(css));
+              document.head.appendChild(style);
+            } catch (e) { console.warn('Font injection failed', e); }
+          })();
+        </script>
+        
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            mermaid.initialize({ startOnLoad: true });
+          });
+        </script>
+
+        <meta name="description" content="An introduction to 3D printing for blind and visually impaired learners, using OpenSCAD and 3DMake to create accessible 3D models.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-2459343d.css">
+        <link rel="stylesheet" href="../../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../../src/assets/custom-8d04802b.css">
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../../searchindex-31b439ad.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc-e71cc795.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">3D Printing Course for Blind and Visually Impaired Learners</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="windows-command-prompt-cmd-for-screen-reader-users---complete-curriculum-overview"><a class="header" href="#windows-command-prompt-cmd-for-screen-reader-users---complete-curriculum-overview">Windows Command Prompt (CMD) for Screen Reader Users - Complete Curriculum Overview</a></h1>
+<p><strong>Welcome!</strong> This curriculum teaches you how to use Windows Command Prompt (CMD) as a screen reader user, starting from zero experience and building to practical skill levels.</p>
+<p><strong>Last Updated:</strong> February 2026<br><strong>Total Duration:</strong> 30-45 hours of instruction + practice (for screen reader users)<br><strong>Target Users:</strong> Anyone with a screen reader (NVDA, JAWS, or other)</p>
+<p><em>Note: Time estimates reflect the additional time needed for screen reader navigation, text-to-speech processing, and careful keyboard-based workflows.</em><br><strong>Alternate to:</strong> PowerShell curriculum (same concepts, simpler commands)</p>
+<hr>
+<h2 id="why-learn-windows-command-prompt-cmd"><a class="header" href="#why-learn-windows-command-prompt-cmd">Why Learn Windows Command Prompt (CMD)?</a></h2>
+<h3 id="for-everyone"><a class="header" href="#for-everyone">For Everyone</a></h3>
+<ul>
+<li><strong>Speed:</strong> Text commands are often faster than clicking through menus</li>
+<li><strong>Simplicity:</strong> CMD has fewer commands than PowerShell but they’re straightforward</li>
+<li><strong>Accessibility:</strong> Works perfectly with screen readers</li>
+<li><strong>Precision:</strong> Exact control over what your computer does</li>
+</ul>
+<h3 id="for-3d-printing-our-focus"><a class="header" href="#for-3d-printing-our-focus">For 3D Printing (Our Focus)</a></h3>
+<ul>
+<li><strong>Batch Operations:</strong> Process multiple 3D models at once</li>
+<li><strong>Accessibility:</strong> Many 3D design tools are scriptable from CMD</li>
+<li><strong>Reproducibility:</strong> Same settings, every time</li>
+<li><strong>Integration:</strong> Connect OpenSCAD and other tools together</li>
+</ul>
+<h3 id="for-screen-reader-users-specifically"><a class="header" href="#for-screen-reader-users-specifically">For Screen Reader Users Specifically</a></h3>
+<ul>
+<li><strong>Great Accessibility:</strong> CMD works perfectly with NVDA, JAWS, and others</li>
+<li><strong>No Mouse Needed:</strong> Everything is keyboard-based</li>
+<li><strong>Text-Based:</strong> Output is naturally readable by screen readers</li>
+<li><strong>Stability:</strong> Unlike GUIs, terminal interactions are consistent</li>
+<li><strong>Simpler Syntax:</strong> CMD commands are more straightforward than PowerShell</li>
+</ul>
+<hr>
+<h2 id="curriculum-structure"><a class="header" href="#curriculum-structure">Curriculum Structure</a></h2>
+<h3 id="phase-1-absolute-beginner---comfortable-user"><a class="header" href="#phase-1-absolute-beginner---comfortable-user">Phase 1: Absolute Beginner -&gt; Comfortable User</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Lesson</th><th>Duration</th><th>What You’ll Learn</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>CMD-Pre: Your First Terminal</strong></td><td>2-2.5 hours</td><td>Opening CMD, first commands, basic navigation</td></tr>
+<tr><td><strong>CMD-0: Getting Started</strong></td><td>1.5 hours</td><td>Paths, shortcuts, command basics</td></tr>
+<tr><td><strong>CMD-1: Navigation</strong></td><td>2-2.5 hours</td><td>Moving around the file system confidently</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>Goal:</strong> You can navigate to any folder and see what’s in it with your screen reader.</p>
+<h3 id="phase-2-intermediate-user---power-user"><a class="header" href="#phase-2-intermediate-user---power-user">Phase 2: Intermediate User -&gt; Power User</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Lesson</th><th>Duration</th><th>What You’ll Learn</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>CMD-2: File &amp; Folder Manipulation</strong></td><td>2.5-3 hours</td><td>Create, copy, move, delete files/folders</td></tr>
+<tr><td><strong>CMD-3: Input, Output &amp; Redirection</strong></td><td>2.5-3 hours</td><td>Redirect output, pipe commands</td></tr>
+<tr><td><strong>CMD-4: Environment Variables &amp; Shortcuts</strong></td><td>2-2.5 hours</td><td>Automate settings, create shortcuts</td></tr>
+<tr><td><strong>CMD-5: Filling in the Gaps</strong></td><td>2-2.5 hours</td><td>Batch files, history, debugging</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>Goal:</strong> You can create folders, manage files, and combine commands to accomplish complex tasks.</p>
+<h3 id="phase-3-professional-skills-beyond-curriculum"><a class="header" href="#phase-3-professional-skills-beyond-curriculum">Phase 3: Professional Skills (Beyond Curriculum)</a></h3>
+<p>These topics extend beyond this curriculum but are natural next steps:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Topic</th><th>When to Learn</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Batch Files (.bat files)</strong></td><td>After CMD-5</td></tr>
+<tr><td><strong>Scripting &amp; Loops</strong></td><td>After CMD-5</td></tr>
+<tr><td><strong>Advanced Automation</strong></td><td>After Batch Files</td></tr>
+<tr><td><strong>3D Printing Integration</strong></td><td>After all above</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="how-to-use-this-curriculum"><a class="header" href="#how-to-use-this-curriculum">How to Use This Curriculum</a></h2>
+<h3 id="if-youve-never-used-a-terminal-before"><a class="header" href="#if-youve-never-used-a-terminal-before">If You’ve Never Used a Terminal Before</a></h3>
+<p><strong>Start here and go in order:</strong></p>
+<ol>
+<li>Do <strong>CMD-Pre: Your First Terminal</strong> exercises</li>
+<li>Continue with CMD-0, CMD-1, etc.</li>
+</ol>
+<p><strong>Don’t skip steps</strong> - each builds on the previous one.</p>
+<h3 id="if-youve-used-a-terminal-before-but-not-with-a-screen-reader"><a class="header" href="#if-youve-used-a-terminal-before-but-not-with-a-screen-reader">If You’ve Used a Terminal Before (But Not with a Screen Reader)</a></h3>
+<p><strong>Start here:</strong></p>
+<ol>
+<li>Quickly review <strong>CMD-Pre</strong> (basics with screen reader focus)</li>
+<li>Move to <strong>CMD-0</strong> for deeper learning</li>
+</ol>
+<h3 id="if-youre-experienced-with-terminal--screen-reader"><a class="header" href="#if-youre-experienced-with-terminal--screen-reader">If You’re Experienced with Terminal + Screen Reader</a></h3>
+<p><strong>You can:</strong></p>
+<ol>
+<li>Jump to specific lessons you need (CMD-2, CMD-3, etc.)</li>
+<li>Use the <strong>Quick Reference</strong> sections</li>
+<li>Skip the practice exercises, do the quizzes to verify knowledge</li>
+</ol>
+<hr>
+<h2 id="how-each-lesson-is-structured"><a class="header" href="#how-each-lesson-is-structured">How Each Lesson is Structured</a></h2>
+<h3 id="every-lesson-contains"><a class="header" href="#every-lesson-contains">Every Lesson Contains:</a></h3>
+<ol>
+<li><strong>Learning Objectives</strong> - What you’ll be able to do</li>
+<li><strong>Key Commands</strong> - The important ones to memorize</li>
+<li><strong>Step-by-Step Examples</strong> - How to actually do it</li>
+<li><strong>Practice Exercises</strong> - Hands-on work</li>
+<li><strong>Quiz Questions</strong> - Check your understanding</li>
+<li><strong>Extension Problems</strong> - Go deeper if interested</li>
+</ol>
+<h3 id="how-to-get-through-each-lesson"><a class="header" href="#how-to-get-through-each-lesson">How to Get Through Each Lesson:</a></h3>
+<ol>
+<li><strong>Read</strong> the learning objectives</li>
+<li><strong>Do</strong> the step-by-step examples alongside</li>
+<li><strong>Complete</strong> the practice exercises (critical!)</li>
+<li><strong>Take</strong> the quiz (don’t cheat)</li>
+<li><strong>Try</strong> extension problems if you have time</li>
+<li><strong>Move to next lesson</strong> when quiz is solid</li>
+</ol>
+<p><strong>Estimated time:</strong> 2-3 hours per lesson for screen reader users (depends on practice time)</p>
+<hr>
+<h2 id="screen-reader-tips-throughout-the-curriculum"><a class="header" href="#screen-reader-tips-throughout-the-curriculum">Screen Reader Tips Throughout the Curriculum</a></h2>
+<h3 id="every-lesson-includes"><a class="header" href="#every-lesson-includes">Every Lesson Includes:</a></h3>
+<ul>
+<li><strong>[SR]</strong> symbols marking screen reader-specific sections</li>
+<li>Tips for NVDA and JAWS users separately</li>
+<li>Solutions for common accessibility issues</li>
+<li>Workarounds for long outputs</li>
+</ul>
+<hr>
+<h2 id="quick-start-guide-first-45-60-minutes"><a class="header" href="#quick-start-guide-first-45-60-minutes">Quick Start Guide (First 45-60 Minutes)</a></h2>
+<h3 id="if-you-have-45-60-minutes-right-now"><a class="header" href="#if-you-have-45-60-minutes-right-now">If You Have 45-60 Minutes Right Now:</a></h3>
+<ol>
+<li><strong>Open Command Prompt</strong> (Windows key -&gt; type cmd -&gt; Enter)</li>
+<li><strong>Run these commands:</strong>
+<pre><code class="language-cmd">cd
+dir
+cd Documents
+cd
+</code></pre>
+</li>
+<li><strong>See how your screen reader reads each output</strong></li>
+<li><strong>Create a file:</strong>
+<pre><code class="language-cmd">echo I am learning CMD &gt; learning.txt
+type learning.txt
+</code></pre>
+</li>
+</ol>
+<p><strong>That’s it!</strong> You’ve done the key concepts. Now read CMD-Pre for the details.</p>
+<hr>
+<h2 id="common-questions-before-starting"><a class="header" href="#common-questions-before-starting">Common Questions Before Starting</a></h2>
+<h3 id="q-powershell-or-cmd-which-should-i-learn"><a class="header" href="#q-powershell-or-cmd-which-should-i-learn">Q: PowerShell or CMD? Which should I learn?</a></h3>
+<p><strong>A:</strong></p>
+<ul>
+<li><strong>Use CMD</strong> if: You want simplicity, you’re a beginner, or this is your first time with a terminal</li>
+<li><strong>Use PowerShell</strong> if: You want more power, you already know CMD, or you’re doing advanced automation</li>
+</ul>
+<p>Both teach the same fundamental concepts. This curriculum is CMD; there’s a PowerShell alternative.</p>
+<h3 id="q-what-if-i-use-a-different-screen-reader-not-nvda-or-jaws"><a class="header" href="#q-what-if-i-use-a-different-screen-reader-not-nvda-or-jaws">Q: What if I use a different screen reader (not NVDA or JAWS)?</a></h3>
+<p><strong>A:</strong> The fundamentals work the same. Check your screen reader’s documentation for the equivalent of these commands:</p>
+<ul>
+<li>Read current line</li>
+<li>Read to end of screen</li>
+<li>Read next/previous page</li>
+</ul>
+<p>Most screen readers have these features.</p>
+<h3 id="q-im-intimidated-is-this-really-for-me"><a class="header" href="#q-im-intimidated-is-this-really-for-me">Q: I’m intimidated. Is this really for me?</a></h3>
+<p><strong>A:</strong> YES. This curriculum is specifically designed for people with no terminal experience AND with screen readers. You’ll start with absolute basics. There’s nothing to be afraid of - we’ve written this specifically to make it accessible.</p>
+<h3 id="q-how-long-will-this-take"><a class="header" href="#q-how-long-will-this-take">Q: How long will this take?</a></h3>
+<p><strong>A:</strong> Realistically:</p>
+<ul>
+<li>Minimum (just lessons, no exercises): 15-18 hours</li>
+<li>Normal (lessons + exercises): 30-45 hours</li>
+<li>With extension problems: 45-60+ hours</li>
+</ul>
+<p>Spread it over weeks or months. Go at your pace.</p>
+<h3 id="q-what-if-i-forget-things"><a class="header" href="#q-what-if-i-forget-things">Q: What if I forget things?</a></h3>
+<p><strong>A:</strong> That’s normal and expected. Solutions:</p>
+<ol>
+<li>Come back to this page for the overview</li>
+<li>Jump back to that lesson for a quick review</li>
+<li>Use the quiz questions to self-test</li>
+<li>Check the Screen Reader Accessibility Guide for troubleshooting</li>
+</ol>
+<h3 id="q-will-this-help-me-with-3d-printing"><a class="header" href="#q-will-this-help-me-with-3d-printing">Q: Will this help me with 3D printing?</a></h3>
+<p><strong>A:</strong> Absolutely. Near the end of the 3dMake curriculum, you’ll use CMD to:</p>
+<ul>
+<li>Batch-process 3D models</li>
+<li>Automate file operations</li>
+<li>Run scripts that work with designs</li>
+<li>Integrate tools together</li>
+</ul>
+<hr>
+<h2 id="important-rules"><a class="header" href="#important-rules">Important Rules</a></h2>
+<h3 id="rule-1-always-know-where-you-are"><a class="header" href="#rule-1-always-know-where-you-are">Rule 1: Always Know Where You Are</a></h3>
+<p>Every session, first thing:</p>
+<pre><code class="language-cmd">cd
+</code></pre>
+<p>If you don’t know your path, you’ll get lost. Don’t move until you know where you are.</p>
+<h3 id="rule-2-check-before-you-delete"><a class="header" href="#rule-2-check-before-you-delete">Rule 2: Check Before You Delete</a></h3>
+<p>Before deleting anything:</p>
+<pre><code class="language-cmd">dir
+</code></pre>
+<p>Make sure you’re deleting the right thing. Once it’s gone, it’s gone.</p>
+<h3 id="rule-3-use-dir-for-listings"><a class="header" href="#rule-3-use-dir-for-listings">Rule 3: Use <code>dir</code> for Listings</a></h3>
+<p>Always:</p>
+<pre><code class="language-cmd">dir
+</code></pre>
+<p>The <code>dir</code> command shows files clearly, one per line, perfect for screen readers.</p>
+<h3 id="rule-4-when-lost-redirect-to-a-file"><a class="header" href="#rule-4-when-lost-redirect-to-a-file">Rule 4: When Lost, Redirect to a File</a></h3>
+<p>If output is confusing:</p>
+<pre><code class="language-cmd">dir &gt; output.txt
+notepad.exe output.txt
+</code></pre>
+<p>This is always clearer for screen readers than terminal output.</p>
+<h3 id="rule-5-save-everything-you-create"><a class="header" href="#rule-5-save-everything-you-create">Rule 5: Save Everything You Create</a></h3>
+<p>Every exercise, save your work:</p>
+<pre><code class="language-cmd">mkdir my-practice-folder
+cd my-practice-folder
+</code></pre>
+<p>Create a “learning” folder and keep everything there.</p>
+<hr>
+<h2 id="troubleshooting-nothing-works"><a class="header" href="#troubleshooting-nothing-works">Troubleshooting: “Nothing Works!”</a></h2>
+<p>If you’re stuck:</p>
+<ol>
+<li>
+<p><strong>Can’t hear CMD at all?</strong></p>
+<ul>
+<li>Make sure screen reader is running BEFORE opening CMD</li>
+<li>Try <strong>Alt+Tab</strong> to cycle to CMD window</li>
+<li>Restart both screen reader and CMD</li>
+</ul>
+</li>
+<li>
+<p><strong>Commands not working?</strong></p>
+<ul>
+<li>Check spelling carefully</li>
+<li>Make sure you pressed Enter</li>
+<li>Try <code>help command-name</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Can’t read the output?</strong></p>
+<ul>
+<li>Redirect to file: <code>command &gt; output.txt</code></li>
+<li>Open in Notepad: <code>notepad.exe output.txt</code></li>
+<li>This always works</li>
+</ul>
+</li>
+<li>
+<p><strong>Something ran forever?</strong></p>
+<ul>
+<li>Press <strong>Ctrl+C</strong> to stop it</li>
+</ul>
+</li>
+<li>
+<p><strong>Completely confused?</strong></p>
+<ul>
+<li>Go back to CMD-Pre and start over</li>
+<li>Work through every single exercise slowly</li>
+<li>Ask for help (ask an instructor or peer)</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="resources"><a class="header" href="#resources">Resources</a></h2>
+<h3 id="official-documentation"><a class="header" href="#official-documentation">Official Documentation</a></h3>
+<ul>
+<li><strong>Windows CMD Reference:</strong> https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands-glossary</li>
+<li><strong>Microsoft Learn:</strong> https://learn.microsoft.com/</li>
+</ul>
+<h3 id="screen-reader-guides"><a class="header" href="#screen-reader-guides">Screen Reader Guides</a></h3>
+<ul>
+<li><strong>NVDA:</strong> https://www.nvaccess.org/documentation/</li>
+<li><strong>JAWS:</strong> https://www.freedomscientific.com/support/</li>
+</ul>
+<h3 id="learning-resources"><a class="header" href="#learning-resources">Learning Resources</a></h3>
+<ul>
+<li><strong>Command Line Basics:</strong> https://learn.microsoft.com/en-us/windows/terminal/</li>
+<li><strong>Windows Terminal:</strong> https://github.com/microsoft/terminal</li>
+</ul>
+<hr>
+<h2 id="getting-help"><a class="header" href="#getting-help">Getting Help</a></h2>
+<h3 id="if-youre-stuck"><a class="header" href="#if-youre-stuck">If You’re Stuck:</a></h3>
+<ol>
+<li><strong>Check the relevant lesson section</strong></li>
+<li><strong>Try a different approach</strong> from the examples</li>
+<li><strong>Go back one lesson</strong> and strengthen those concepts</li>
+<li><strong>Ask an instructor or peer</strong> with specific questions</li>
+</ol>
+<h3 id="before-you-ask-for-help-prepare"><a class="header" href="#before-you-ask-for-help-prepare">Before You Ask for Help, Prepare:</a></h3>
+<ol>
+<li>What command are you running?</li>
+<li>What do you expect to happen?</li>
+<li>What actually happened?</li>
+<li>What error message did you hear?</li>
+</ol>
+<p><strong>Example:</strong> “I ran <code>cd Desktop</code> but got ‘The system cannot find the path specified’. I expected to go to the Desktop folder.”</p>
+<p>This helps others help you quickly.</p>
+<hr>
+<h2 id="next-steps"><a class="header" href="#next-steps">Next Steps</a></h2>
+<ol>
+<li><strong>Right now:</strong> Open CMD and try the Quick Start commands</li>
+<li><strong>Next session:</strong> Start CMD-Pre and do all exercises</li>
+<li><strong>Keep going:</strong> One lesson per day/week at your pace</li>
+<li><strong>Practice:</strong> Do exercises, not just read</li>
+<li><strong>Check yourself:</strong> Take the quizzes honestly</li>
+<li><strong>Celebrate:</strong> Each lesson completed is a real skill gained</li>
+</ol>
+<hr>
+<h2 id="final-thoughts"><a class="header" href="#final-thoughts">Final Thoughts</a></h2>
+<p>Learning to use Windows Command Prompt with a screen reader is <strong>absolutely achievable</strong>. Many people do it successfully. This curriculum was designed based on real experiences of screen reader users.</p>
+<p><strong>You’ve got this.</strong> Start with CMD-Pre, take it slow, do the exercises, and ask questions when stuck.</p>
+<p>Welcome to the Command Prompt community!</p>
+<hr>
+<h2 id="curriculum-map-for-reference"><a class="header" href="#curriculum-map-for-reference">Curriculum Map (For Reference)</a></h2>
+<pre><code>START HERE v
++---- CMD-Pre: Your First Terminal (absolute beginner entry point)
++---- CMD-0: Getting Started (paths &amp; navigation foundations)
++---- CMD-1: Navigation (comfortable moving around)
++---- CMD-2: File &amp; Folder Manipulation (create/move/delete)
++---- CMD-3: Input &amp; Output Redirection (redirect commands)
++---- CMD-4: Environment Variables &amp; Shortcuts (automation)
++---- CMD-5: Filling in the Gaps (batch files &amp; history)
++---- CMD_Unit_Test (comprehensive practice &amp; assessment)
+        v
+    NEXT: 3D Printing Integration Lessons
+        v
+    ADVANCED: Batch File Scripting
+</code></pre>
+<hr>
+<p><strong>Questions? Feedback? Stuck?</strong> Refer back to this page and try the Troubleshooting section. You’ve got everything you need.</p>
+<p><strong>Now open CMD-Pre and let’s get started!</strong></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../CMD_Foundation/Part_1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../../CMD_Foundation/CMD_Pre_Your_First_Terminal/CMD_Pre_Your_First_Terminal.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../CMD_Foundation/Part_1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../../CMD_Foundation/CMD_Pre_Your_First_Terminal/CMD_Pre_Your_First_Terminal.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-c2a407aa.js"></script>
+
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-4a3ec6df.js"></script>
+        <script src="../../book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

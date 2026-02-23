@@ -301,6 +301,246 @@ module back_tab() {
 
 ---
 
+## Mathematical Functions for Advanced Parametric Design
+
+Beyond translate and rotate, OpenSCAD includes mathematical functions for calculating positions, angles, and dimensions. These enable designs that respond dynamically to parameters.
+
+### Trigonometric Functions: sin(), cos(), atan2()
+
+Trigonometric functions calculate angles and positions in circular patterns. Essential for gears, spirals, and polar arrangements:
+
+```openscad
+// Place objects in circular pattern using sin/cos
+module circular_array(radius, count) {
+  for (i = [0:count-1]) {
+    angle = (360 / count) * i;
+    x = radius * cos(angle);
+    y = radius * sin(angle);
+    translate([x, y, 0])
+      children();
+  }
+}
+
+// Create circular array of 8 cylinders
+circular_array(30, 8)
+  cylinder(h=10, r=3);
+
+// Spiral staircase using sin/cos
+module spiral_staircase(radius, height, steps) {
+  step_height = height / steps;
+  step_angle = 360 / steps;
+  
+  for (i = [0:steps-1]) {
+    angle = i * step_angle;
+    z = i * step_height;
+    x = radius * cos(angle);
+    y = radius * sin(angle);
+    
+    translate([x, y, z])
+      cube([20, 5, step_height]);
+  }
+}
+
+spiral_staircase(40, 100, 20);
+```
+
+**Practical Example: Gear Tooth Positioning**
+
+```openscad
+// Simple gear using sin/cos for tooth placement
+module simple_gear(radius, teeth_count, tooth_depth) {
+  tooth_angle = 360 / teeth_count;
+  
+  difference() {
+    // Main gear body
+    cylinder(r=radius, h=5, $fn=128);
+    
+    // Center hole
+    cylinder(r=radius*0.3, h=10);
+  }
+  
+  // Add teeth using circular pattern
+  for (i = [0:teeth_count-1]) {
+    angle = i * tooth_angle;
+    x = (radius + tooth_depth) * cos(angle);
+    y = (radius + tooth_depth) * sin(angle);
+    z = 5/2;
+    
+    translate([x, y, z])
+      cube([5, 5, 5], center=true);
+  }
+}
+
+simple_gear(30, 12, 5);  // 30mm radius, 12 teeth, 5mm deep
+```
+
+### Rounding Functions: round(), floor(), ceil()
+
+Control precision and create integer-based parametric designs:
+
+```openscad
+// round(): Nearest integer
+echo(round(3.7));    // Prints: 4
+echo(round(3.2));    // Prints: 3
+
+// floor(): Round down
+echo(floor(3.9));    // Prints: 3
+
+// ceil(): Round up
+echo(ceil(3.1));     // Prints: 4
+
+// Practical use: Ensure grid alignment
+grid_spacing = 7.3;
+aligned_spacing = round(grid_spacing);  // 7
+```
+
+**Practical Example: Grid-Aligned Mounting Pattern**
+
+```openscad
+// Create mounting pattern aligned to 5mm grid
+module grid_mounting_pattern(width, height, pattern_spacing) {
+  // Round spacing to nearest 5mm for printability
+  aligned_spacing = round(pattern_spacing / 5) * 5;
+  
+  // Calculate how many holes fit
+  holes_x = floor(width / aligned_spacing);
+  holes_y = floor(height / aligned_spacing);
+  
+  echo(str("Creating grid: ", holes_x, " x ", holes_y, " at ", aligned_spacing, "mm spacing"));
+  
+  for (x = [0:holes_x-1])
+    for (y = [0:holes_y-1])
+      translate([x * aligned_spacing, y * aligned_spacing, -5])
+        cylinder(h=15, d=3, $fn=16);
+}
+
+// Create pattern in 100x80mm area
+grid_mounting_pattern(100, 80, 7.3);
+```
+
+### Power and Root Functions: pow(), sqrt()
+
+Calculate exponential relationships and distances:
+
+```openscad
+// pow(): Raise to power
+echo(pow(2, 3));     // 2^3 = 8
+echo(pow(10, 2));    // 10^2 = 100
+
+// sqrt(): Square root
+echo(sqrt(9));       // 3
+echo(sqrt(2));       // 1.41421...
+
+// Practical: Calculate distance between two points
+function distance_2d(p1, p2) =
+  sqrt(pow(p2[0] - p1[0], 2) + pow(p2[1] - p1[1], 2));
+
+// Distance from [0, 0] to [3, 4] is 5
+d = distance_2d([0, 0], [3, 4]);
+echo(d);  // Prints: 5
+```
+
+**Practical Example: Parametric Phone Stand Angle Calculation**
+
+```openscad
+// Calculate stand geometry based on phone height and desired viewing distance
+module calculated_stand(phone_width, phone_height, viewing_distance) {
+  // Calculate required back angle for ergonomic viewing
+  required_angle = atan(phone_height / viewing_distance);
+  
+  // Calculate back support length needed
+  base_length = phone_width + 20;  // 20mm margin
+  back_length = sqrt(pow(base_length, 2) + pow(phone_height + 30, 2));
+  
+  echo(str("Calculated angle: ", required_angle, " degrees"));
+  echo(str("Back support length: ", back_length, " mm"));
+  
+  // Create stand with calculated dimensions
+  union() {
+    // Base
+    cube([base_length, 80, 4]);
+    
+    // Back support at calculated angle
+    translate([0, -30, 4])
+      rotate([required_angle, 0, 0])
+        cube([base_length, 10, 4]);
+  }
+}
+
+calculated_stand(75, 160, 300);  // 75mm phone, 160mm tall, 300mm viewing distance
+```
+
+### Vector Math: cross(), dot(), norm()
+
+Advanced positional calculations for complex assemblies:
+
+```openscad
+// dot(): Dot product (measure alignment)
+// cross(): Cross product (calculate perpendicular)
+// norm(): Vector magnitude (length)
+
+// Example: Align two objects perpendicular
+function perpendicular_vector(v) =
+  cross(v, [0, 0, 1]);  // Perpendicular to v in Z plane
+
+// Practical: Create perpendicular support bar
+v1 = [1, 0, 0];  // Forward direction
+v_perp = perpendicular_vector(v1);
+// v_perp is now [0, 1, 0] (sideways)
+```
+
+**Practical Example: Dynamic Fixture Positioning**
+
+```openscad
+// Position fixtures based on desired alignment direction
+module fixture_on_surface(surface_direction, offset_distance) {
+  // Ensure surface_direction is normalized
+  normal = surface_direction / sqrt(pow(surface_direction[0], 2) + 
+                                   pow(surface_direction[1], 2) + 
+                                   pow(surface_direction[2], 2));
+  
+  // Position fixture along surface normal
+  translate([normal[0] * offset_distance, 
+             normal[1] * offset_distance, 
+             normal[2] * offset_distance])
+    cube([10, 10, 10]);
+}
+
+// Mount fixture 20mm away from surface
+fixture_on_surface([1, 0, 0], 20);
+```
+
+### Practical Application: Parametric Spiral Design
+
+Here's a complete example combining multiple math functions:
+
+```openscad
+// Create a parametric spiral using sin/cos and sqrt
+module spiral_generator(max_radius, height, spiral_tightness) {
+  steps = 200;
+  
+  for (i = [0:steps-1]) {
+    // Calculate angle and radius for spiral point
+    angle = (i / steps) * spiral_tightness * 360;
+    t = i / steps;  // Normalized 0-1
+    r = max_radius * t;  // Radius increases with height
+    
+    // Calculate position using trigonometry
+    x = r * cos(angle);
+    y = r * sin(angle);
+    z = (t * height);
+    
+    // Place sphere at calculated position
+    translate([x, y, z])
+      sphere(r=2, $fn=16);
+  }
+}
+
+spiral_generator(30, 50, 3);  // 30mm radius, 50mm tall, 3 complete revolutions
+```
+
+---
+
 ## Quiz - Lesson 3dMake.7 (10 questions)
 
 1. What does the `rotate()` function do, and how does it differ from physical rotation[^1]?
@@ -326,6 +566,56 @@ module back_tab() {
 8. Create a customization guide for end users: how to modify angle, width, and lip height for different devices.
 9. Design an accessibility-focused stand: include tactile angle markers and clear, non-visual assembly instructions.
 10. Write a comprehensive stand design documentation: CAD parameters, material recommendations, print settings, assembly, troubleshooting, and accessible design notes.
+
+## Starter Code
+
+Use this parametric phone stand as your starting point:
+
+```openscad
+// Parametric Phone Stand - Intermediate Example
+// Parameters
+thickness = 4;        // mm
+width = 70;           // mm
+depth = 90;           // mm
+angle = 65;           // degrees
+lipheight = 12;       // mm
+filletr = 6;          // mm (mock fillet by minkowski)
+
+module plate(w, d, t){
+  cube([w, d, t], center=false);
+}
+
+module fillet(shape, r){
+  minkowski(){
+    children();
+    cylinder(h=0.01, r=r, $fn=40);
+  }
+}
+
+// Back plate
+module back(){
+  rotate([angle,0,0])
+    fillet(){ plate(width, depth, thickness); }
+}
+
+// Base
+module base(){
+  translate([0,0,0])
+    fillet(){ plate(width, depth, thickness); }
+}
+
+// Lip
+module lip(){
+  translate([0, depth-8, thickness])
+    cube([width, 8, lipheight], center=false);
+}
+
+union(){
+  base();
+  back();
+  lip();
+}
+```
 
 ---
 

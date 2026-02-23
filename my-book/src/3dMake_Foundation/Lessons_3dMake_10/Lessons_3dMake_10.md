@@ -348,6 +348,171 @@ union() {
 
 ---
 
+## Advanced Geometry Techniques: Hull and Minkowski Operations
+
+Beyond basic primitives and boolean operations, professional designs often use hull and Minkowski operations to create smooth, rounded, and organic shapes. These are essential for creating high-quality, manufacturable designs.
+
+### Example 1: Hull Operations for Organic Shapes
+
+The `hull()` function creates the convex hull of shapes—imagine wrapping them in plastic wrap. This is perfect for creating smooth, organic forms:
+
+```openscad
+// Birdhouse using hull() - from Simplifying 3D Printing textbook
+// Demonstrates combining simple shapes into organic forms
+$fn = 100;
+
+module generate_bird_shape() {
+    hull() {
+        // Create organic shape by blending multiple spheres
+        translate([0, 0, 90])
+        resize([180, 180, 180])
+        minkowski() {
+            cube([10, 10, 10], center = true);
+            rotate([0, 0, 45])
+            cube([25, 25, 55], center = true);
+            cylinder(h = 40, d1 = 30, d2 = 2, center = true);
+        }
+        
+        // Second shape - top of birdhouse
+        translate([0, 0, 150])
+        sphere(65);
+    }
+}
+
+// Hollow out the interior
+module birdhouse_hollow() {
+    difference() {
+        generate_bird_shape();
+        
+        // Entrance hole
+        translate([0, 100, 120])
+        rotate([90, 0, 0])
+        cylinder(h = 200, d = 80, center = true, $fn = 64);
+        
+        // Hollow interior
+        translate([0, 0, -2])
+        scale([0.95, 0.95, 1])
+        generate_bird_shape();
+    }
+}
+
+birdhouse_hollow();
+```
+
+**Key insights:**
+- `hull()` automatically creates a smooth envelope around shapes
+- Blending multiple spheres creates organic, curved surfaces
+- Combining `hull()` with `minkowski()` creates sophisticated forms
+- Great for product design, containers, and artistic shapes
+
+### Example 2: Minkowski Operations for Rounded Edges
+
+The `minkowski()` function adds a shape to every point of another shape. This is perfect for creating rounded edges and fillets without complex calculations:
+
+```openscad
+// Parametric Phone Stand with Minkowski Rounding
+// Demonstrates edge rounding for professional appearance
+$fn = 100;
+
+thickness = 4;
+width = 70;
+depth = 90;
+angle = 65;
+lipheight = 12;
+filletr = 6;  // Fillet radius
+
+module plate(w, d, t) {
+    cube([w, d, t], center = false);
+}
+
+module rounded_plate(w, d, t, r) {
+    // Use minkowski to add rounded edges
+    minkowski() {
+        cube([w - 2*r, d - 2*r, t], center = false);
+        cylinder(h = 0.01, r = r, $fn = 40);
+    }
+}
+
+// Base plate with rounded edges
+module base() {
+    rounded_plate(width, depth, thickness, filletr);
+}
+
+// Back plate at angle with rounded edges
+module back() {
+    rotate([angle, 0, 0])
+    rounded_plate(width, depth, thickness, filletr);
+}
+
+// Lip to hold device
+module lip() {
+    translate([0, depth - 8, thickness])
+    cube([width, 8, lipheight], center = false);
+}
+
+// Main assembly
+union() {
+    base();
+    back();
+    lip();
+}
+```
+
+**Comparison:**
+
+| Method                    | Complexity | Speed  | Quality            | Use Case            |
+|---------------------------|------------|--------|--------------------|---------------------|
+| Sharp edges               | Simple     | Fast   | Angular, technical | Mechanical parts    |
+| `hull()` for rounding     | Medium     | Medium | Smooth, organic    | Consumer products   |
+| `minkowski()` for fillets | Medium     | Medium | Professional       | Finished goods      |
+| Manual fillet modules     | Complex    | Slow   | Precise            | Custom requirements |
+
+### Example 3: Combining Hull and Minkowski
+
+Create sophisticated shapes by combining multiple techniques:
+
+```openscad
+// Advanced technique: Hull + Minkowski for professional design
+$fn = 100;
+
+module advanced_connector() {
+    minkowski() {
+        // Base shape with hull
+        hull() {
+            cube([10, 10, 30], center = true);
+            translate([20, 0, 0])
+            cylinder(h = 30, d = 8, center = true);
+        }
+        
+        // Add small sphere for fillet
+        sphere(r = 2);
+    }
+}
+
+// Use in assembly
+union() {
+    advanced_connector();
+    translate([50, 0, 0])
+    advanced_connector();
+}
+```
+
+**When to use each technique:**
+- Use `hull()` when you need organic, flowing shapes
+- Use `minkowski()` when you need consistent rounding around edges
+- Combine them for maximum design flexibility
+- Test both approaches and choose based on render time and output quality
+
+### Design Best Practices
+
+1. **Start simple:** Create basic geometry first, then add rounding
+2. **Test early:** Render at low `$fn` during design, high `$fn` before export
+3. **Document parameters:** Make rounding radius and other values adjustable
+4. **Validate manifold:** Always run `3dm describe` after using hull/minkowski
+5. **Consider performance:** These operations can slow down preview significantly
+
+---
+
 ## Exercise Set B: Common Problems and Solutions
 
 ### B1: Non-Manifold Geometry

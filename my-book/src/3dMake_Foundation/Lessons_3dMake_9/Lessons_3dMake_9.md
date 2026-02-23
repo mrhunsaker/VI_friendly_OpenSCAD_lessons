@@ -288,6 +288,290 @@ echo "Archive: ${OUTPUT_DIR}.tar.gz"
 
 ---
 
+## File Import/Export: Working with External Assets
+
+Professional OpenSCAD projects often incorporate external files—DXF drawings, SVG logos, or shared library modules. Understanding import, include, and use is critical for managing complex projects.
+
+### import(): Loading 3D Files (DXF, STL, AMF)
+
+Import 3D geometry from external files. Useful for incorporating CAD data or third-party parts:
+
+```openscad
+// Import DXF profile and extrude it
+import("path/to/profile.dxf");  // Load 2D or 3D geometry
+
+// Practical example: Import CAD drawing and extrude
+module extruded_part() {
+  linear_extrude(height=10)
+    import("technical_drawing.dxf");
+}
+
+// Scale imported geometry (OpenSCAD units may differ from source)
+scale([1, 1, 10])  // Scale Z by 10 if DXF uses different units
+  import("part.dxf");
+```
+
+**Practical Example: Combining CAD and Parametric Design**
+
+```openscad
+// Import a technical DXF sketch and create 3D model around it
+module custom_bracket() {
+  // Import 2D profile from technical drawing
+  difference() {
+    linear_extrude(height=5)
+      scale(25.4)  // Convert from inches to mm
+        import("bracket_profile.dxf");
+    
+    // Add mounting holes (parametric)
+    for (x = [10, 40])
+      for (y = [10, 40])
+        translate([x, y, -5])
+          cylinder(h=15, d=3, $fn=16);
+  }
+}
+
+custom_bracket();
+```
+
+### include vs use: Library Management
+
+Both load external SCAD files, but with different scoping:
+
+```openscad
+// include: Imports functions and modules into current namespace
+// Use this when you want all definitions merged into current file
+include <library.scad>
+
+// Now you can use any function/module defined in library.scad
+my_shape();
+
+// ============================================
+
+// use: Imports but creates separate namespace
+// Use this when you want to avoid name conflicts
+use <library.scad>
+
+// You must prefix functions/modules with filename (no extension)
+library:my_shape();
+```
+
+**Practical Example: Multi-File Project Structure**
+
+```openscad
+// main.scad - Main project file
+
+// Load reusable components
+include <utilities.scad>        // Common helpers
+include <fasteners.scad>        // Bolt/screw definitions
+include <connectors.scad>       // Joining mechanisms
+
+// Define local modules
+module housing() {
+  difference() {
+    cube([100, 100, 50]);
+    translate([10, 10, 10])
+      cube([80, 80, 40]);
+  }
+}
+
+// Use imported components
+union() {
+  housing();
+  
+  // Position imported fasteners
+  translate([10, 10, 50])
+    bolt_m3(length=10);
+  
+  translate([90, 10, 50])
+    bolt_m3(length=10);
+}
+```
+
+**Content of utilities.scad (included file):**
+
+```openscad
+// utilities.scad - Reusable helper functions
+
+// Create repeating pattern
+module repeat_linear(count, spacing) {
+  for (i = [0:count-1])
+    translate([i * spacing, 0, 0])
+      children();
+}
+
+// Create grid of components
+module grid_pattern(cols, rows, spacing) {
+  for (x = [0:cols-1])
+    for (y = [0:rows-1])
+      translate([x * spacing, y * spacing, 0])
+        children();
+}
+
+function calculate_bolt_clearance(bolt_diameter) = bolt_diameter + 0.5;
+```
+
+### Export Formats: DXF, SVG, AMF
+
+After creating your model, export it in various formats:
+
+```bash
+# Render to STL (standard 3D printing format)
+3dm slice src/main.scad
+
+# Export specific formats using OpenSCAD command line
+openscad -o output.dxf src/main.scad      # 2D projection as DXF
+openscad -o output.svg src/main.scad      # 2D projection as SVG
+openscad -o output.amf src/main.scad      # AMF (supports color/material)
+```
+
+**Practical Example: Complete Export Workflow**
+
+```bash
+#!/bin/bash
+# export_variants.sh - Export design in multiple formats
+
+INPUT_FILE="src/main.scad"
+OUTPUT_DIR="build/exports"
+
+mkdir -p "$OUTPUT_DIR"
+
+echo "Exporting $INPUT_FILE in multiple formats..."
+
+# STL (3D printing)
+openscad -o "$OUTPUT_DIR/model.stl" "$INPUT_FILE"
+echo "✓ STL export complete"
+
+# DXF (CAD compatible)
+openscad -o "$OUTPUT_DIR/model_projection.dxf" "$INPUT_FILE"
+echo "✓ DXF export complete"
+
+# SVG (web and vector graphics)
+openscad -o "$OUTPUT_DIR/model_projection.svg" "$INPUT_FILE"
+echo "✓ SVG export complete"
+
+# Generate report
+echo ""
+echo "=== Export Summary ==="
+ls -lh "$OUTPUT_DIR"
+```
+
+### Advanced: Dynamic File Loading Based on Parameters
+
+Create designs that load different components based on configuration:
+
+```openscad
+// Dynamic library loader
+// Automatically selects component based on parameter
+
+material = "aluminum";  // or "steel", "plastic"
+component_type = "bracket";  // or "connector", "fastener"
+
+// Load appropriate component library
+include <materials/aluminum_properties.scad>
+include <components/bracket_library.scad>
+include <components/connector_library.scad>
+
+// Create part using selected material properties
+module material_part(dimensions) {
+  material_density = material_density_aluminum;  // From included file
+  material_strength = material_strength_aluminum;
+  
+  // Apply material-specific design rules
+  wall_thickness = (material_strength < 50) ? 3 : 2;
+  
+  difference() {
+    cube(dimensions);
+    translate([2, 2, 2])
+      cube([dimensions[0]-4, dimensions[1]-4, dimensions[2]-4]);
+  }
+}
+
+material_part([50, 50, 30]);
+```
+
+### File Path Handling and Organization
+
+Best practices for organizing files in larger projects:
+
+```openscad
+// Recommended project structure
+/*
+my_project/
+├── src/
+│   ├── main.scad
+│   ├── components/
+│   │   ├── fasteners.scad
+│   │   ├── connectors.scad
+│   │   └── mounting.scad
+│   └── libraries/
+│       ├── utilities.scad
+│       └── math_functions.scad
+├── assets/
+│   ├── sketches/
+│   │   ├── bracket_profile.dxf
+│   │   └── panel_layout.svg
+│   └── references/
+│       └── part_specifications.pdf
+└── build/
+    ├── main.stl
+    ├── exports/
+    │   ├── main.dxf
+    │   └── main.svg
+    └── documentation/
+*/
+
+// In main.scad, use relative paths:
+include <components/fasteners.scad>
+include <components/connectors.scad>
+
+// For assets in different directory:
+module panel_with_logo() {
+  difference() {
+    cube([100, 100, 5]);
+    
+    // Import logo if available
+    translate([50, 50, 4.5])
+      linear_extrude(0.8)
+        import("../assets/sketches/logo.svg");
+  }
+}
+```
+
+### Complete Multi-File Assembly Example
+
+```openscad
+// main.scad - Complete assembly with imports and exports
+
+include <components/housing.scad>
+include <components/internal_support.scad>
+use <utilities/positioning_helpers.scad>
+
+// Main assembly
+module complete_product() {
+  // Housing (from included file)
+  housing_shell();
+  
+  // Internal support structures
+  color("lightgray")
+    internal_reinforcement();
+  
+  // Add imported external parts
+  translate([0, 0, 20])
+    import("../assets/pcb_holder.dxf");
+}
+
+// Render the complete product
+complete_product();
+
+// Export notes:
+// - STL: Full 3D model for 3D printing
+// - DXF: 2D projection for laser cutting or CNC
+// - SVG: 2D artwork for documentation
+// - AMF: Multi-material format (if colors matter)
+```
+
+---
+
 ## Checkpoint
 
 - After task 2, you have a working batch build script
@@ -326,16 +610,16 @@ echo "Archive: ${OUTPUT_DIR}.tar.gz"
 
 ## Helpful Shell Commands Reference
 
-| Command | Purpose |
-|---------|---------|
-| `chmod +x script.sh` | Make script executable |
-| `./script.sh` | Run a shell script |
-| `for file in *.scad; do ... done` | Loop through files |
-| `basename file.scad .scad` | Remove extension |
-| `stat -c%s file` (Linux) or `stat -f%z file` (macOS) | Get file size |
-| `find dir -name "*.scad"` | Find all SCAD files |
-| `tar -czf archive.tar.gz folder/` | Create compressed archive |
-| `du -sh folder/` | Show folder size |
+| Command                                              | Purpose                   |
+|------------------------------------------------------|---------------------------|
+| `chmod +x script.sh`                                 | Make script executable    |
+| `./script.sh`                                        | Run a shell script        |
+| `for file in *.scad; do ... done`                    | Loop through files        |
+| `basename file.scad .scad`                           | Remove extension          |
+| `stat -c%s file` (Linux) or `stat -f%z file` (macOS) | Get file size             |
+| `find dir -name "*.scad"`                            | Find all SCAD files       |
+| `tar -czf archive.tar.gz folder/`                    | Create compressed archive |
+| `du -sh folder/`                                     | Show folder size          |
 
 ---
 

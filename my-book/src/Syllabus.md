@@ -118,19 +118,19 @@ Students who have never opened a terminal begin with foundational command-line s
 
 ---
 
-### Part 2: 3dMake Foundation (Main Curriculum - 14-18 hours)
+### Part 2: 3dMake Foundation (Main Curriculum - 16-20 hours)
 
 **Start here:** [3dMake Introduction](3dMakeFoundation/3dMakeIntro/3dMakeIntro.md)
 
-11 progressive lessons building from foundational concepts to leadership-level design thinking, organized in 5 parts:
+11 progressive lessons building from foundational concepts to leadership-level design thinking, organized in 5 parts. Version 2.1 adds comprehensive advanced programming and design topics throughout.
 
-#### **Part 1: Foundations** (Lessons 1-3 | ~3 hours)
+#### **Part 1: Foundations** (Lessons 1-3 | ~4-5 hours)
 
-| Lesson                                                            | Focus                                               | Duration  | Project |
-|-------------------------------------------------------------------|-----------------------------------------------------|-----------|---------|
-| **[Lesson 1](3dMakeFoundation/Lessons3dMake1/Lessons3dMake1.md)** | Environmental Configuration + How 3D Printing Works | 60-90 min | None    |
-| **[Lesson 2](3dMakeFoundation/Lessons3dMake2/Lessons3dMake2.md)** | Primitives & Boolean Operations + Debugging         | 60 min    | None    |
-| **[Lesson 3](3dMakeFoundation/Lessons3dMake3/Lessons3dMake3.md)** | Parametric Architecture & Modules                   | 60 min    | None    |
+| Lesson                                                            | Focus                                                           | Duration   | Project |
+|-------------------------------------------------------------------|-----------------------------------------------------------------|------------|---------|
+| **[Lesson 1](3dMakeFoundation/Lessons3dMake1/Lessons3dMake1.md)** | Environmental Configuration + Code Documentation Standards      | 60-90 min  | None    |
+| **[Lesson 2](3dMakeFoundation/Lessons3dMake2/Lessons3dMake2.md)** | Primitives & Boolean Operations + Modifier Characters Debugging | 75-90 min  | None    |
+| **[Lesson 3](3dMakeFoundation/Lessons3dMake3/Lessons3dMake3.md)** | Parametric Architecture + Advanced Programming Concepts         | 90-120 min | None    |
 
 #### **Part 2: Verification & Safety** (Lessons 4-5 | ~2 hours)
 
@@ -139,20 +139,20 @@ Students who have never opened a terminal begin with foundational command-line s
 | **[Lesson 4](3dMakeFoundation/Lessons3dMake4/Lessons3dMake4.md)** | AI-Enhanced Verification & Feedback      | 45-60 min | None    |
 | **[Lesson 5](3dMakeFoundation/Lessons3dMake5/Lessons3dMake5.md)** | Safety Protocols & Material Introduction | 60-90 min | None    |
 
-#### **Part 3: Applied Projects** (Lessons 6-8 | ~4 hours)
+#### **Part 3: Applied Projects** (Lessons 6-8 | ~5-6 hours)
 
-| Lesson                                                            | Focus                                     | Duration   | Project             |
-|-------------------------------------------------------------------|-------------------------------------------|------------|---------------------|
-| **[Lesson 6](3dMakeFoundation/Lessons3dMake6/Lessons3dMake6.md)** | Practical 3dm Commands & Text Embossing   | 60-90 min  | Customizable Keycap |
-| **[Lesson 7](3dMakeFoundation/Lessons3dMake7/Lessons3dMake7.md)** | Parametric Transforms & Assembly          | 75-90 min  | Phone Stand         |
-| **[Lesson 8](3dMakeFoundation/Lessons3dMake8/Lessons3dMake8.md)** | Advanced Parametric Design & Interlocking | 90-120 min | Stackable Bins      |
+| Lesson                                                            | Focus                                     | Duration    | Project             |
+|-------------------------------------------------------------------|-------------------------------------------|-------------|---------------------|
+| **[Lesson 6](3dMakeFoundation/Lessons3dMake6/Lessons3dMake6.md)** | Practical 3dm Commands + String Functions | 75-105 min  | Customizable Keycap |
+| **[Lesson 7](3dMakeFoundation/Lessons3dMake7/Lessons3dMake7.md)** | Parametric Transforms + Math Functions    | 90-120 min  | Phone Stand         |
+| **[Lesson 8](3dMakeFoundation/Lessons3dMake8/Lessons3dMake8.md)** | Advanced Design + Assembly Best Practices | 105-150 min | Stackable Bins      |
 
-#### **Part 4: Advanced Topics** (Lessons 9-10 | ~3 hours)
+#### **Part 4: Advanced Topics** (Lessons 9-10 | ~3-4 hours)
 
-| Lesson                                                               | Focus                                               | Duration    | Project                          |
-|----------------------------------------------------------------------|-----------------------------------------------------|-------------|----------------------------------|
-| **[Lesson 9](3dMakeFoundation/Lessons3dMake9/Lessons3dMake9.md)**    | Automation & 3dm Workflows (requires PS Foundation) | 60-90 min   | Batch Processing Automation      |
-| **[Lesson 10](3dMakeFoundation/Lessons3dMake10/Lessons3dMake10.md)** | Troubleshooting & Mastery with Measurement          | 120-150 min | QA Testing + Accessibility Audit |
+| Lesson                                                               | Focus                                                    | Duration    | Project                          |
+|----------------------------------------------------------------------|----------------------------------------------------------|-------------|----------------------------------|
+| **[Lesson 9](3dMakeFoundation/Lessons3dMake9/Lessons3dMake9.md)**    | Automation + File Import/Export (requires PS Foundation) | 75-105 min  | Batch Processing Automation      |
+| **[Lesson 10](3dMakeFoundation/Lessons3dMake10/Lessons3dMake10.md)** | Troubleshooting & Mastery with Measurement               | 120-150 min | QA Testing + Accessibility Audit |
 
 #### **Part 5: Leadership** (Lesson 11 | ~2 hours)
 
@@ -160,11 +160,11 @@ Students who have never opened a terminal begin with foundational command-line s
 |----------------------------------------------------------------------|----------------------------------------------|------------|-----------------------|
 | **[Lesson 11](3dMakeFoundation/Lessons3dMake11/Lessons3dMake11.md)** | Stakeholder-Centric Design & Design Thinking | 90-120 min | Beaded Jewelry Holder |
 
-**Total:** 14-18 hours of instruction + projects
+**Total:** 16-20 hours of instruction + projects
 
 ---
 
-## 4 Comprehensive Reference Appendices
+## 8 Comprehensive Reference Appendices
 
 Located in `/3dMakeFoundation/` alongside the lessons:
 
@@ -199,6 +199,17 @@ Complete automation guide for PowerShell + 3dMake:
 - 5 complete PowerShell scripts for workflow automation
 - Parametric sweeps, batch processing, print logging, printer communication
 - **Use when:** Automating tasks, testing variations, batch printing
+
+### **[Appendix E: Advanced OpenSCAD Concepts](3dMakeFoundation/Appendix_E_Advanced_OpenSCAD_Concepts.md)** (2,000+ lines)
+
+Specialized topics for experienced designers (v2.1 NEW):
+
+- **Gears and Mechanical Components**: Gear tooth geometry, servo gearboxes, belt/pulley systems
+- **Batch Processing & Statistical Analysis**: Parameter sweeps, design space exploration, data-driven selection
+- **Performance Optimization**: Render profiling, resolution strategies, caching calculations
+- **Print Orientation & Support Algorithms**: Strength analysis, support minimization, bridge calculations
+- **Recursive Function Patterns**: Fractals, nested structures, performance considerations
+- **Use when:** Building mechanical systems, optimizing complex models, exploring design variations
 
 ---
 

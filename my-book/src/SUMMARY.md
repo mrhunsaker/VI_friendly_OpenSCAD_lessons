@@ -9,7 +9,6 @@
   - [Braille Display & Terminal Mode](BrailleDisplays.md)
 
 - [Part 2: Command-Line Foundation (Choose Your Path)](Command_Line_Interface_Selection.md)
-  - [Part 2 Overview](Command_Line_Interface_Selection.md)
   
   - [Part 2A: Foundations of PowerShell](PowerShell_Foundation/Part_1.md)
     - [PowerShell Curriculum Overview](PowerShell_Foundation/PowerShell_Curriculum_Overview/PowerShell_Curriculum_Overview.md)
@@ -126,7 +125,8 @@
   - [Appendix D: Material Properties & Selection Guide](3dMake_Foundation/Appendix_B_Material_Properties.md)
   - [Appendix E: Tolerance Testing & Quality Assurance Matrix](3dMake_Foundation/Appendix_C_Tolerance_QA.md)
   - [Appendix F: PowerShell Integration for SCAD Workflows](3dMake_Foundation/Appendix_D_PowerShell_Integration.md)
-  - [Appendix G: 3dMake Code Examples & Assets](assets/3dMake_Foundation/README.md)
+  - [Appendix G: Advanced OpenSCAD Concepts](3dMake_Foundation/Appendix_E_Advanced_OpenSCAD_Concepts.md)
+  - [Appendix H: 3dMake Code Examples & Assets](assets/3dMake_Foundation/README.md)
 
 ---
 

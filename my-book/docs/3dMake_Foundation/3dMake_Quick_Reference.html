@@ -1,0 +1,658 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>3D Make Quick Reference - 3D Printing Course for Blind and Visually Impaired Learners</title>
+
+
+        <!-- Custom HTML head -->
+        <script>
+          (function(){
+            // Load Atkinson Hyperlegible fonts from the book assets (injected at runtime so paths are correct on GitHub Pages)
+            try {
+              const link = Array.from(document.getElementsByTagName('link')).find(l => l.href && l.href.match(/\/css\/variables-.*\.css$/));
+              const base = (function(){
+                if (!link) return (window.location.origin||'') + '/';
+                const u = new URL(link.href, window.location.href);
+                const basePath = u.pathname.replace(/\/css\/.*$/,'');
+                return u.origin + basePath + (basePath.endsWith('/') ? '' : '/');
+              })();
+        
+              const css = `\
+        @font-face {\
+          font-family: 'Atkinson Hyperlegible Next';\
+          src: url('${base}assets/fonts/AtkinsonHyperlegibleNext-Regular.ttf') format('truetype');\
+          font-weight: 400; font-style: normal; font-display: swap;\
+        }\
+        @font-face {\
+          font-family: 'Atkinson Hyperlegible Mono';\
+          src: url('${base}assets/fonts/AtkinsonHyperlegibleMono-SemiBold.ttf') format('truetype');\
+          font-weight: 600; font-style: normal; font-display: swap;\
+        }\
+        @font-face {\
+          font-family: 'Atkinson Hyperlegible Mono';\
+          src: url('${base}assets/fonts/AtkinsonHyperlegibleMono-Regular.otf') format('opentype');\
+          font-weight: 400; font-style: normal; font-display: swap;\
+        }\
+        pre, code, .hljs, .leftbar { font-family: 'Atkinson Hyperlegible Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", "Courier New", monospace !important; }\
+        body { font-family: 'Atkinson Hyperlegible Next', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }\
+        `;
+        
+              const style = document.createElement('style');
+              style.appendChild(document.createTextNode(css));
+              document.head.appendChild(style);
+            } catch (e) { console.warn('Font injection failed', e); }
+          })();
+        </script>
+        
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            mermaid.initialize({ startOnLoad: true });
+          });
+        </script>
+
+        <meta name="description" content="An introduction to 3D printing for blind and visually impaired learners, using OpenSCAD and 3DMake to create accessible 3D models.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../css/general-2459343d.css">
+        <link rel="stylesheet" href="../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../src/assets/custom-8d04802b.css">
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../searchindex-31b439ad.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc-e71cc795.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">3D Printing Course for Blind and Visually Impaired Learners</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="3dmake-foundation-quick-reference-guide"><a class="header" href="#3dmake-foundation-quick-reference-guide">3dMake Foundation Quick Reference Guide</a></h1>
+<p><strong>Fast lookup for lessons, projects, resources, and common tasks</strong></p>
+<hr>
+<h2 id="lesson-quick-reference"><a class="header" href="#lesson-quick-reference">Lesson Quick Reference</a></h2>
+<h3 id="all-11-lessons-at-a-glance"><a class="header" href="#all-11-lessons-at-a-glance">All 11 Lessons at a Glance</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>#</th><th>Title</th><th>Duration</th><th>Level</th><th>Main Topics</th><th>Key Project</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>Environmental Configuration</td><td>60-90m</td><td>Beginner</td><td>Setup, project structure, <code>3dm build</code></td><td>None</td></tr>
+<tr><td>2</td><td>Geometric Primitives &amp; CSG</td><td>60m</td><td>Beginner</td><td>Primitives, CSG operations, debugging</td><td>None</td></tr>
+<tr><td>3</td><td>Parametric Architecture</td><td>60m</td><td>Beginner+</td><td>Modules, libraries, parameters</td><td>None</td></tr>
+<tr><td>4</td><td>AI Verification</td><td>45-60m</td><td>Intermediate</td><td><code>3dm info</code>, validation, design documentation</td><td>None</td></tr>
+<tr><td>5</td><td>Safety &amp; Physical Interface</td><td>60-90m</td><td>Intermediate</td><td>Safety protocols, materials, pre-print checks</td><td>None</td></tr>
+<tr><td>6</td><td>3dm Commands &amp; Text</td><td>60-90m</td><td>Intermediate</td><td><code>3dm describe/preview/orient/slice</code>, embossing</td><td>Keycap</td></tr>
+<tr><td>7</td><td>Parametric Transforms</td><td>75-90m</td><td>Intermediate+</td><td>Transforms, multi-part design, assembly</td><td>Phone Stand</td></tr>
+<tr><td>8</td><td>Advanced Parametric Design</td><td>90-120m</td><td>Advanced</td><td>Tolerance, interlocking features, snap-fits</td><td>Stackable Bins</td></tr>
+<tr><td>9</td><td>Automation &amp; Workflows</td><td>60-90m</td><td>Advanced</td><td>PowerShell scripting, batch processing, CI/CD</td><td>[key] Batch Automation</td></tr>
+<tr><td>10</td><td>Troubleshooting &amp; Mastery</td><td>120-150m</td><td>Advanced</td><td>Measurement, QA testing, diagnostics</td><td>[dice] QA +  Audit</td></tr>
+<tr><td>11</td><td>Stakeholder-Centric Design</td><td>90-120m</td><td>Advanced+</td><td>Design thinking, user research, iteration</td><td>[beads] Jewelry Holder</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="4-reference-appendices"><a class="header" href="#4-reference-appendices">4 Reference Appendices</a></h2>
+<p>Quick links to comprehensive reference materials:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Appendix</th><th>Focus</th><th>Size</th><th>Use When</th></tr>
+</thead>
+<tbody>
+<tr><td><strong><a href="Appendix_A_Comprehensive_Slicing_Guide.html">A: Comprehensive Slicing Guide</a></strong></td><td>7 major slicers</td><td>1,500+ lines</td><td>Slicing questions, slicer reference</td></tr>
+<tr><td><strong><a href="Appendix_B_Material_Properties.html">B: Material Properties</a></strong></td><td>6 materials</td><td>1,200+ lines</td><td>Choosing material, troubleshooting prints</td></tr>
+<tr><td><strong><a href="Appendix_C_Tolerance_QA.html">C: Tolerance &amp; QA</a></strong></td><td>Measurement procedures</td><td>1,200+ lines</td><td>Quality verification, measurement techniques</td></tr>
+<tr><td><strong><a href="Appendix_D_PowerShell_Integration.html">D: PowerShell Integration</a></strong></td><td>5 automation scripts</td><td>1,100+ lines</td><td>Building automation, batch processing</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="learning-paths"><a class="header" href="#learning-paths">Learning Paths</a></h2>
+<h3 id="path-1-complete-mastery-18-22-hours"><a class="header" href="#path-1-complete-mastery-18-22-hours">Path 1: Complete Mastery (18-22 hours)</a></h3>
+<p>-&gt; <strong>Lessons 1-11 + All Appendices</strong></p>
+<p>Best for: Complete skill development, comprehensive understanding</p>
+<h3 id="path-2-design-focus-12-15-hours"><a class="header" href="#path-2-design-focus-12-15-hours">Path 2: Design Focus (12-15 hours)</a></h3>
+<p>-&gt; <strong>Lessons 1-3, 6-8, 11 + Appendices A, B, C</strong></p>
+<p>Best for: Experienced makers new to programmatic CAD</p>
+<h3 id="path-3-project-based-14-18-hours"><a class="header" href="#path-3-project-based-14-18-hours">Path 3: Project-Based (14-18 hours)</a></h3>
+<p>-&gt; <strong>Lessons 1-5 (Foundations) -&gt; 6 (Keycap) -&gt; 7 (Stand) -&gt; 8 (Bins) -&gt; 9 (Automation) -&gt; 10 (Troubleshooting) -&gt; 11 (Leadership)</strong></p>
+<p>Best for: Learning through building</p>
+<h3 id="path-4-safety--printing-10-12-hours"><a class="header" href="#path-4-safety--printing-10-12-hours">Path 4: Safety &amp; Printing (10-12 hours)</a></h3>
+<p>-&gt; <strong>Lessons 1, 2, 5, 6, 10 + Appendices A, B, C</strong></p>
+<p>Best for: Focus on practical printing and quality</p>
+<hr>
+<h2 id="3dm-command-reference"><a class="header" href="#3dm-command-reference">3dm Command Reference</a></h2>
+<h3 id="essential-commands"><a class="header" href="#essential-commands">Essential Commands</a></h3>
+<pre><code class="language-bash"># Setup
+./3dm setup                 # Initial configuration
+
+# Development
+3dm edit-model file.scad    # Open in editor
+3dm build src/main.scad     # Generate STL from SCAD
+
+# Inspection
+3dm describe file.scad      # Text analysis (AI if configured)
+3dm preview file.scad       # Generate 2D tactile preview
+
+# Optimization
+3dm orient file.scad        # Suggest print orientation
+
+# Production
+3dm slice file.scad         # Generate G-code
+3dm send build/main.gcode   # Send to printer
+
+# Libraries
+3dm lib list                # Show available libraries
+3dm lib install BOSL2       # Install a library
+</code></pre>
+<h3 id="command-chaining"><a class="header" href="#command-chaining">Command Chaining</a></h3>
+<pre><code class="language-bash"># Sequential with error handling
+3dm build src/main.scad &amp;&amp; 3dm slice src/main.scad &amp;&amp; echo "Ready to print"
+
+# Loop through files
+for f in src/*.scad; do 3dm build "$f" &amp;&amp; 3dm slice "$f"; done
+</code></pre>
+<hr>
+<h2 id="openscad-quick-reference"><a class="header" href="#openscad-quick-reference">OpenSCAD Quick Reference</a></h2>
+<h3 id="primitives"><a class="header" href="#primitives">Primitives</a></h3>
+<pre><code class="language-openscad">cube([width, height, depth], center=false);
+sphere(r=radius, $fn=32);
+cylinder(r=radius, h=height, $fn=32);
+</code></pre>
+<h3 id="transforms"><a class="header" href="#transforms">Transforms</a></h3>
+<pre><code class="language-openscad">translate([x, y, z]) { ... }
+rotate([x_deg, y_deg, z_deg]) { ... }
+scale([x, y, z]) { ... }
+</code></pre>
+<h3 id="boolean-operations"><a class="header" href="#boolean-operations">Boolean Operations</a></h3>
+<pre><code class="language-openscad">union() { shape1; shape2; }         // Combine
+difference() { shape1; shape2; }    // Subtract
+intersection() { shape1; shape2; }  // Keep overlap
+</code></pre>
+<h3 id="modules"><a class="header" href="#modules">Modules</a></h3>
+<pre><code class="language-openscad">module my_shape(size) {
+  cube([size, size, size]);
+}
+
+my_shape(20);   // Call module
+</code></pre>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
+<pre><code class="language-openscad">width = 50;     // mm
+height = 30;    // mm
+inner = width - 2*wall;
+</code></pre>
+<hr>
+<h2 id="projects-reference"><a class="header" href="#projects-reference">Projects Reference</a></h2>
+<h3 id="project-1-parametric-keycap-lesson-6"><a class="header" href="#project-1-parametric-keycap-lesson-6">Project 1: Parametric Keycap (Lesson 6)</a></h3>
+<p><strong>Key Parameters:</strong></p>
+<pre><code class="language-openscad">key_size = 18;      // mm
+key_height = 12;    // mm
+wall = 1.2;         // mm
+letter = "A";       // Character
+</code></pre>
+<p><strong>Variants to Try:</strong></p>
+<ul>
+<li>Small: 12mm, 10mm height</li>
+<li>Medium: 18mm, 12mm height</li>
+<li>Large: 24mm, 14mm height</li>
+</ul>
+<p><strong>Files:</strong></p>
+<ul>
+<li>Code: Lesson 6 (Keycap section)</li>
+<li>Output: keycap_<em>.scad, keycap_</em>.stl</li>
+</ul>
+<hr>
+<h3 id="project-2-phone-stand-lesson-7"><a class="header" href="#project-2-phone-stand-lesson-7">Project 2: Phone Stand (Lesson 7)</a></h3>
+<p><strong>Key Parameters:</strong></p>
+<pre><code class="language-openscad">phone_width = 75;   // mm
+base_width = 85;    // mm
+angle = 60;         // degrees
+lip_height = 15;    // mm
+</code></pre>
+<p><strong>Configurations:</strong></p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Phone</th><th>Width</th><th>Angle</th><th>Result</th></tr>
+</thead>
+<tbody>
+<tr><td>iPhone</td><td>60mm</td><td>60</td><td>Portrait viewing</td></tr>
+<tr><td>iPad</td><td>100mm</td><td>40</td><td>Landscape viewing</td></tr>
+<tr><td>Tablet</td><td>150mm</td><td>35</td><td>Document viewing</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>Files:</strong></p>
+<ul>
+<li>Code: Lesson 7 (Phone Stand section)</li>
+<li>Output: stand_<em>.stl, stand_</em>.gcode</li>
+</ul>
+<hr>
+<h3 id="project-3-stackable-bins-lesson-8"><a class="header" href="#project-3-stackable-bins-lesson-8">Project 3: Stackable Bins (Lesson 8)</a></h3>
+<p><strong>Key Parameters:</strong></p>
+<pre><code class="language-openscad">bin_w = 80;         // width (mm)
+bin_d = 120;        // depth (mm)
+bin_h = 60;         // height (mm)
+wall = 2;           // thickness (mm)
+stack_clear = 0.6;  // tolerance (mm) - CRITICAL
+</code></pre>
+<p><strong>Tolerance Testing:</strong></p>
+<pre><code>stack_clear = 0.4mm  -&gt; Too tight (hard to stack)
+stack_clear = 0.6mm  -&gt; Ideal (smooth fit)
+stack_clear = 0.8mm  -&gt; Too loose (unstable)
+</code></pre>
+<p><strong>Files:</strong></p>
+<ul>
+<li>Code: Lesson 8 (Bins section)</li>
+<li>Output: bin_*.stl, tolerance_matrix.md</li>
+</ul>
+<hr>
+<h2 id="code-template-library"><a class="header" href="#code-template-library">Code Template Library</a></h2>
+<h3 id="generic-parametric-part-template"><a class="header" href="#generic-parametric-part-template">Generic Parametric Part Template</a></h3>
+<pre><code class="language-openscad">// ====== PARAMETERS (customize here) ======
+param1 = 50;        // mm
+param2 = 30;        // mm
+param3 = 5;         // mm
+$fn = 32;           // Resolution (lower = faster)
+
+// ====== CALCULATED PARAMETERS ======
+derived_param = param1 - 2*param3;
+
+// ====== MODULES ======
+module my_part() {
+  cube([param1, param2, param3]);
+}
+
+// ====== MAIN ======
+my_part();
+</code></pre>
+<h3 id="hollow-box-template"><a class="header" href="#hollow-box-template">Hollow Box Template</a></h3>
+<pre><code class="language-openscad">outer_size = 50;
+inner_size = 40;
+wall = 5;
+
+difference() {
+  cube([outer_size, outer_size, outer_size]);
+  translate([wall, wall, wall])
+    cube([inner_size, inner_size, inner_size]);
+}
+</code></pre>
+<h3 id="batch-build-script-template"><a class="header" href="#batch-build-script-template">Batch Build Script Template</a></h3>
+<pre><code class="language-bash">#!/bin/bash
+# batch_build.sh
+
+for scad in src/*.scad; do
+  name=$(basename "$scad" .scad)
+  echo "Building: $name"
+  3dm build "$scad" || continue
+  cp "build/main.stl" "build/${name}.stl"
+done
+</code></pre>
+<hr>
+<h2 id="troubleshooting-quick-fixes"><a class="header" href="#troubleshooting-quick-fixes">Troubleshooting Quick Fixes</a></h2>
+<h3 id="problem-model-wont-build"><a class="header" href="#problem-model-wont-build">Problem: Model won’t build</a></h3>
+<p><strong>Diagnosis:</strong></p>
+<pre><code class="language-bash">3dm describe file.scad
+# Look for error messages
+</code></pre>
+<p><strong>Common Fixes:</strong></p>
+<ul>
+<li>Check syntax (missing semicolons, parentheses)</li>
+<li>Look for non-manifold geometry</li>
+<li>Use <code>$fn=12</code> for faster test renders</li>
+</ul>
+<h3 id="problem-parts-dont-fit-together"><a class="header" href="#problem-parts-dont-fit-together">Problem: Parts don’t fit together</a></h3>
+<p><strong>Diagnosis:</strong></p>
+<ul>
+<li>Print and test fit</li>
+<li>Measure with calipers</li>
+</ul>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Adjust <code>stack_clear</code> (smaller = tighter)</li>
+<li>Increase <code>wall</code> thickness</li>
+<li>Test with tolerance matrix</li>
+</ul>
+<h3 id="problem-embossed-text-looks-bad"><a class="header" href="#problem-embossed-text-looks-bad">Problem: Embossed text looks bad</a></h3>
+<p><strong>Diagnosis:</strong></p>
+<ul>
+<li>Check preview in slicer</li>
+<li>Use <code>3dm preview</code> for tactile version</li>
+</ul>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Increase <code>letter_raise</code> (deeper emboss)</li>
+<li>Use larger <code>$fn</code> in <code>text()</code></li>
+<li>Simplify character or use different size</li>
+</ul>
+<h3 id="problem-print-fails"><a class="header" href="#problem-print-fails">Problem: Print fails</a></h3>
+<p><strong>Diagnosis:</strong></p>
+<ul>
+<li>Check slicer layer preview</li>
+<li>Verify bed adhesion and temperature</li>
+</ul>
+<p><strong>Solution:</strong></p>
+<ul>
+<li>Check pre-print checklist (Lesson 5)</li>
+<li>Adjust print temperature</li>
+<li>Verify bed is level and clean</li>
+</ul>
+<hr>
+<h2 id="assessment-checklist"><a class="header" href="#assessment-checklist">Assessment Checklist</a></h2>
+<h3 id="lesson-completion-criteria"><a class="header" href="#lesson-completion-criteria">Lesson Completion Criteria</a></h3>
+<ul>
+<li><input disabled="" type="checkbox"> Watched/read entire lesson</li>
+<li><input disabled="" type="checkbox"> Completed all step-by-step tasks</li>
+<li><input disabled="" type="checkbox"> Reached all checkpoints</li>
+<li><input disabled="" type="checkbox"> Answered all quiz questions (self-assessed)</li>
+<li><input disabled="" type="checkbox"> Attempted at least 3 extension problems</li>
+<li><input disabled="" type="checkbox"> Documented findings</li>
+</ul>
+<h3 id="project-completion-criteria"><a class="header" href="#project-completion-criteria">Project Completion Criteria</a></h3>
+<ul>
+<li><input disabled="" type="checkbox"> Code builds without errors</li>
+<li><input disabled="" type="checkbox"> All parameters functional</li>
+<li><input disabled="" type="checkbox"> STL generated and inspected</li>
+<li><input disabled="" type="checkbox"> Measurements documented</li>
+<li><input disabled="" type="checkbox"> Assembly tested (if multi-part)</li>
+<li><input disabled="" type="checkbox"> README or documentation included</li>
+</ul>
+<h3 id="quality-standards"><a class="header" href="#quality-standards">Quality Standards</a></h3>
+<ul>
+<li><input disabled="" type="checkbox"> Code is well-commented</li>
+<li><input disabled="" type="checkbox"> Parameters have clear names and units</li>
+<li><input disabled="" type="checkbox"> Modules are reusable</li>
+<li><input disabled="" type="checkbox"> Design follows DRY principle</li>
+<li><input disabled="" type="checkbox"> Documentation is complete</li>
+</ul>
+<hr>
+<h2 id="resources--links"><a class="header" href="#resources--links">Resources &amp; Links</a></h2>
+<h3 id="official-docs"><a class="header" href="#official-docs">Official Docs</a></h3>
+<ul>
+<li><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual">OpenSCAD Manual</a></li>
+<li><a href="https://github.com/tdeck/3dmake">3DMake GitHub</a></li>
+<li><a href="https://github.com/revarbat/BOSL2">BOSL2 Library</a></li>
+</ul>
+<h3 id="tutorials"><a class="header" href="#tutorials">Tutorials</a></h3>
+<ul>
+<li><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language">OpenSCAD Basics</a></li>
+<li><a href="https://www.prusa3d.com/support/">3D Printing Guide</a></li>
+</ul>
+<h3 id="community"><a class="header" href="#community">Community</a></h3>
+<ul>
+<li><a href="https://forum.openscad.org/">OpenSCAD Forums</a></li>
+<li><a href="https://www.reddit.com/r/3Dprinting/">r/3Dprinting</a></li>
+</ul>
+<hr>
+<h2 id="tips--tricks"><a class="header" href="#tips--tricks">Tips &amp; Tricks</a></h2>
+<h3 id="debugging"><a class="header" href="#debugging">Debugging</a></h3>
+<ul>
+<li>Lower <code>$fn</code> to 8-12 for faster renders during development</li>
+<li>Use <code>3dm describe</code> frequently to catch issues early</li>
+<li>Test components individually before assembling</li>
+<li>Generate <code>3dm preview</code> for 2D tactile verification</li>
+</ul>
+<h3 id="design"><a class="header" href="#design">Design</a></h3>
+<ul>
+<li>Keep parameters at the top of file for easy modification</li>
+<li>Use descriptive names (not <code>w</code>, use <code>width</code>)</li>
+<li>Include units in comments</li>
+<li>Document parameter ranges (e.g., <code>// 0-100 mm</code>)</li>
+</ul>
+<h3 id="organization"><a class="header" href="#organization">Organization</a></h3>
+<ul>
+<li>Use <code>src/</code> for SCAD files, <code>lib/</code> for modules, <code>build/</code> for outputs</li>
+<li>Create variants by copying files and renaming</li>
+<li>Use bash scripts for batch operations</li>
+<li>Archive successful builds with timestamps</li>
+</ul>
+<h3 id="accessibility"><a class="header" href="#accessibility">Accessibility</a></h3>
+<ul>
+<li>Always use <code>3dm describe</code> to verify non-visual usability</li>
+<li>Generate <code>3dm preview</code> for tactile inspection</li>
+<li>Document measurements clearly</li>
+<li>Test assembly without visual guidance</li>
+</ul>
+<hr>
+<h2 id="glossary"><a class="header" href="#glossary">Glossary</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Term</th><th>Definition</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>CSG</strong></td><td>Constructive Solid Geometry - combining shapes using union/difference</td></tr>
+<tr><td><strong>Manifold</strong></td><td>Water-tight geometry with clear inside/outside</td></tr>
+<tr><td><strong>Parametric</strong></td><td>Driven by variables; changing parameters updates design</td></tr>
+<tr><td><strong>Tolerance</strong></td><td>Acceptable variation in dimensions</td></tr>
+<tr><td><strong>Stack-up</strong></td><td>Cumulative error from multiple tolerances</td></tr>
+<tr><td><strong>Module</strong></td><td>Reusable code block in OpenSCAD</td></tr>
+<tr><td><strong>$fn</strong></td><td>Resolution parameter (higher = more detail but slower)</td></tr>
+<tr><td><strong>G-code</strong></td><td>Machine instructions for 3D printer</td></tr>
+<tr><td><strong>STL</strong></td><td>3D model file format for printing</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="quick-answers"><a class="header" href="#quick-answers">Quick Answers</a></h2>
+<p><strong>Q: Where do I put my SCAD files?</strong><br>A: In the <code>src/</code> folder of your 3dMake project</p>
+<p><strong>Q: How do I test if my design will fit?</strong><br>A: Use the tolerance testing matrix; print variants with different parameters</p>
+<p><strong>Q: What should I measure after printing?</strong><br>A: Critical dimensions and compare to design specifications</p>
+<p><strong>Q: How do I fix non-manifold geometry?</strong><br>A: Use the 0.001 offset rule: <code>translate([0, 0, 0.001])</code> before subtracting</p>
+<p><strong>Q: Can I combine multiple SCAD files?</strong><br>A: Yes, use <code>include &lt;path/to/file.scad&gt;</code> or <code>use &lt;path/to/file.scad&gt;</code></p>
+<p><strong>Q: How do I make designs accessible?</strong><br>A: Use <code>3dm describe</code> and <code>3dm preview</code> and include written measurements/descriptions</p>
+<hr>
+<p><strong>Last Updated:</strong> February 2026<br><strong>Version:</strong> 1.0</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../3dMake_Foundation/3dMake_Final_Exam.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../Appendices/Appendices.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../3dMake_Foundation/3dMake_Final_Exam.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../Appendices/Appendices.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../mark-09e88c2c.min.js"></script>
+        <script src="../searcher-c2a407aa.js"></script>
+
+        <script src="../clipboard-1626706a.min.js"></script>
+        <script src="../highlight-4a3ec6df.js"></script>
+        <script src="../book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

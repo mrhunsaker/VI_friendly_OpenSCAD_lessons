@@ -18,6 +18,64 @@ Estimated time: 2-4 hours (including setup and print monitoring)
 4. Perform safety checks, start the print, and monitor the first 10 minutes for adhesion and extrusion problems.
 5. After cooling, measure three critical dimensions and compare to the models stated dimensions; record deviations.
 
+## Starter Code
+
+You can use this basic project scaffold as your starting point:
+
+```openscad
+// Basic Project Scaffold for 3D Printing
+// This template provides a starting point for beginner projects
+// Complete the TODO sections to create your own design
+
+// ============================================
+// PROJECT CONFIGURATION
+// ============================================
+
+// TODO: Set your project name
+projectname = "My First Project";
+
+// TODO: Define overall dimensions (mm)
+objectwidth = 50;
+objectdepth = 50;
+objectheight = 20;
+
+// Wall thickness for strength (2-3mm recommended)
+wallthickness = 2;
+
+// ============================================
+// MATERIAL PROPERTIES
+// ============================================
+
+// Print resolution (0.2mm layers recommended)
+$fn = 30;  // Fragment quality (higher = smoother curves, slower rendering)
+
+// ============================================
+// MAIN DESIGN
+// ============================================
+
+module baseshape() {
+    // TODO: Replace this cube with your design
+    cube([objectwidth, objectdepth, objectheight], center = true);
+}
+
+module hollowversion() {
+    // Creates a hollow version by subtracting an inner cube
+    difference() {
+        baseshape();
+        
+        // Inner void (adjust padding as needed)
+        translate([0, 0, 0.5])
+            cube([objectwidth - 2*wallthickness, 
+                  objectdepth - 2*wallthickness, 
+                  objectheight - 2*wallthickness], 
+                 center = true);
+    }
+}
+
+// Render the solid version for your first print
+baseshape();
+```
+
 ## Probing Questions
 - Why did you select this model? What risks did you anticipate and how did you mitigate them?
 - Which slicer setting most affects print time for this model and why?

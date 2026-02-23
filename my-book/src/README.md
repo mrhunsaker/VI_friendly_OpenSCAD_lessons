@@ -99,7 +99,7 @@ This guide provides a comprehensive comparison including:
 
 ---
 
-### Part 3: 3dMake Foundation & Design (11 Lessons + 7 Appendices)
+### Part 3: 3dMake Foundation & Design (11 Lessons + 8 Appendices)
 
 **Where to Start:** [3dMake Introduction](3dMake_Foundation/3dMake_Intro/3dMake_Intro.md)
 
@@ -107,17 +107,24 @@ Students build parametric 3D designs using OpenSCAD and automate the workflow wi
 
 #### Main Curriculum: 11 Progressive Lessons
 
-| Part                      | Lessons | Focus                                            | Duration  |
-|---------------------------|---------|--------------------------------------------------|-----------|
-| **Foundations**           | 1-3     | Environment setup, primitives, parametric design | 3-4 hours |
-| **Verification & Safety** | 4-5     | AI verification, safety protocols, materials     | 2-3 hours |
-| **Applied Projects**      | 6-8     | Practical commands, transforms, advanced design  | 4-5 hours |
-| **Advanced Topics**       | 9-10    | Automation, troubleshooting, mastery             | 3-4 hours |
-| **Leadership**            | 11      | Stakeholder-centric design                       | 2-3 hours |
+| Part                      | Lessons | Focus                                                                         | Duration  |
+|---------------------------|---------|-------------------------------------------------------------------------------|-----------|
+| **Foundations**           | 1-3     | Environment setup, primitives, parametric design + advanced language features | 4-5 hours |
+| **Verification & Safety** | 4-5     | AI verification, safety protocols, materials                                  | 2-3 hours |
+| **Applied Projects**      | 6-8     | Practical commands, text functions, transforms, assembly patterns             | 5-6 hours |
+| **Advanced Topics**       | 9-10    | Automation with file I/O, troubleshooting, mastery                            | 3-4 hours |
+| **Leadership**            | 11      | Stakeholder-centric design                                                    | 2-3 hours |
 
-**Total:** 40-50 hours instruction + practice projects
+**Total:** 45-55 hours instruction + practice projects
 
-#### 7 Comprehensive Reference Appendices
+**What's New (v2.1):**
+- Lesson 3: Added Advanced Programming Concepts (Conditionals, Type Testing, List Comprehensions, Special Variables, Functions)
+- Lesson 6: Added String Functions for dynamic naming and labeling
+- Lesson 7: Added Mathematical Functions (trigonometry, rounding, power/root, vector math)
+- Lesson 8: Added Assembly Best Practices (snap-fits, threading, alignment, exploded views)
+- Lesson 9: Added File Import/Export (import, include vs use, multi-file projects)
+
+#### 8 Comprehensive Reference Appendices
 
 - **Appendix A: Introduction to Command Line Interfaces** - CLI overview
 - **Appendix B: PowerShell Comprehensive Guide** - Detailed PowerShell reference
@@ -125,7 +132,8 @@ Students build parametric 3D designs using OpenSCAD and automate the workflow wi
 - **Appendix D: Material Properties & Selection** - Material reference with properties
 - **Appendix E: Tolerance Testing & Quality Assurance Matrix** - QA procedures
 - **Appendix F: PowerShell Integration for SCAD Workflows** - Automation and batch processing
-- **Appendix G: 3dMake Code Examples & Assets** - OpenSCAD code examples and reference designs
+- **Appendix G: Advanced OpenSCAD Concepts** - 5 specialized topics (Gears, Batch Processing, Performance, Print Orientation, Recursion)
+- **Appendix H: 3dMake Code Examples & Assets** - OpenSCAD code examples and reference designs
 
 ---
 

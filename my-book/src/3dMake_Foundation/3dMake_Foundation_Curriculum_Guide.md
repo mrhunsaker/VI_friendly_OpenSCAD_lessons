@@ -497,12 +497,62 @@ Shows how to automate 3D design workflows using PowerShell scripts (from PowerSh
 
 ---
 
+### Appendix E: Advanced OpenSCAD Concepts
+
+Optional topics for experienced designers tackling specialized applications. Five in-depth modules with complete working examples.
+
+**What You'll Find:**
+
+1. **Gears and Mechanical Components**
+   - Gear terminology and tooth geometry
+   - Involute gear algorithm
+   - Parametric servo gearbox design
+   - Belt and pulley systems
+
+2. **Batch Processing and Statistical Analysis**
+   - Automated parameter sweep generation
+   - Statistical summary scripts
+   - Data-driven design selection
+   - Comparison and analysis frameworks
+
+3. **Performance Optimization**
+   - Render time measurement and profiling
+   - Resolution parameter strategy
+   - Caching complex calculations
+   - Preview vs render optimization strategies
+
+4. **Print Orientation and Support Structure Algorithms**
+   - Strength orientation analysis
+   - Support material minimization
+   - Bridge span calculations
+   - Optimal slicing parameter determination
+
+5. **Recursive Function Patterns**
+   - Basic recursion with base cases
+   - Fractal generation
+   - Nested component assembly
+   - Performance considerations for deep recursion
+   - Practical cable management applications
+
+**When to Use:** 
+- When working with mechanical systems requiring gears or synchronized motion
+- When testing design variations systematically
+- When optimizing complex models for faster iteration
+- When designing for specific print orientations or minimizing support
+- When building fractal or deeply nested structures
+- For advanced library and framework development
+
+**Accessibility:** Each example includes comprehensive comments, starts with simplified versions before advanced techniques, and documents performance implications for both visual and non-visual users
+
+---
+
 ## Curriculum Revision History
 
-| Version | Date     | Changes                                                                             |
-|---------|----------|-------------------------------------------------------------------------------------|
-| 2.0     | Feb 2026 | Added Lesson 11 (Stakeholder Design) + 4 Appendices; Consolidated Units 0-3 content |
-| 1.0     | Feb 2026 | Initial comprehensive curriculum with 10 lessons + 5 projects                       |
+| Version | Date     | Changes                                                                                   |
+|---------|----------|-------------------------------------------------------------------------------------------|
+| 2.1     | Feb 2026 | Added Appendix E (Advanced OpenSCAD); Enhanced Lessons 3, 6, 7, 8, 9 with advanced topics |
+| 2.0     | Feb 2026 | Added Lesson 11 (Stakeholder Design) + 4 Appendices; Consolidated Units 0-3 content       |
+| 1.0     | Feb 2026 | Initial comprehensive curriculum with 10 lessons + 5 projects                             |
 
 ---
 
@@ -518,3 +568,4 @@ Please reach out with:
 ---
 
 **Happy designing! **
+
