@@ -1,8 +1,6 @@
 # Lesson 2: Geometric Primitives and Constructive Solid Geometry 
 
-Estimated time: 60 minutes
-
-**Learning Objectives**
+Estimated time: 75-90 minutes
 - Use OpenSCAD primitives (`cube()`, `sphere()`, `cylinder()`) and transforms (`translate()`, `rotate()`, `scale()`)[^2]
 - Apply CSG operators (`union`, `difference`, `intersection`) safely and diagnose common numerical issues[^3]
 - Use quick diagnostic renders and validate geometry in a slicer[^1]

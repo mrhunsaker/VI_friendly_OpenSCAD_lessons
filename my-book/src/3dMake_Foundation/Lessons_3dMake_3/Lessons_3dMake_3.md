@@ -1,8 +1,6 @@
 # Lesson 3: Parametric Architecture and Modular Libraries 
 
-Estimated time: 60 minutes
-
-**Learning Objectives**
+Estimated time: 120-150 minutes
 - Define and document top-level parameters and use them to drive model variants[^3]
 - Create reusable modules and import a library module into a project[^2]
 - Produce and test low-resolution renders and export a working STL[^1]

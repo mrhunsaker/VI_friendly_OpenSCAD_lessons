@@ -1,6 +1,6 @@
 # Lesson 9: Automation and 3dm Workflows
 
-Estimated time: 60-90 minutes
+Estimated time: 90-120 minutes
 
 **Learning Objectives**
 

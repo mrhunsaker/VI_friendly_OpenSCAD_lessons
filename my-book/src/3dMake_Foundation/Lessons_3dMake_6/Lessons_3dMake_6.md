@@ -1,6 +1,6 @@
 # Lesson 6: Practical 3dm Commands and Text Embossing
 
-Estimated time: 60-90 minutes
+Estimated time: 90-120 minutes
 
 **Learning Objectives**
 

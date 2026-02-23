@@ -1,6 +1,6 @@
 # Lesson 7: Parametric Transforms and the Phone Stand Project
 
-Estimated time: 75-90 minutes
+Estimated time: 105-135 minutes
 
 **Learning Objectives**
 

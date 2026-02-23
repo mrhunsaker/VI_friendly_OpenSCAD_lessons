@@ -1,6 +1,6 @@
 # Lesson 1: Environmental Configuration and the Developer Workflow 
 
-Estimated time: 60-90 minutes
+Estimated time: 90-120 minutes
 
 ## **Learning Objectives**
 - Install and verify `3dm`[^1], `openscad`[^2], and a slicer are discoverable in the terminal

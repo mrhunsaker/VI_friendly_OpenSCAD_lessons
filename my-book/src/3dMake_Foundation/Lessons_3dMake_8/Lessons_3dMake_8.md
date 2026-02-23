@@ -1,6 +1,6 @@
 # Lesson 8: Advanced Parametric Design and Interlocking Features
 
-Estimated time: 90-120 minutes
+Estimated time: 120-150 minutes
 
 **Learning Objectives**
 
