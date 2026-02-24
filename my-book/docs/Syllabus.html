@@ -74,7 +74,11 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="theme/catppuccin-be25834e.css">
+        <link rel="stylesheet" href="theme/catppuccin-mocha-9074ae6c.css">
+        <link rel="stylesheet" href="theme/catppuccin-latte-8eeddf61.css">
+        <link rel="stylesheet" href="theme/catppuccin-frappe-d9e8d159.css">
+        <link rel="stylesheet" href="theme/catppuccin-macchiato-166c5c34.css">
+        <link rel="stylesheet" href="theme/theme-77a2ca43.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -82,10 +86,10 @@
             const path_to_root = "";
             const default_light_theme = "latte";
             const default_dark_theme = "mocha";
-            window.path_to_searchindex_js = "searchindex-a4c66f4b.js";
+            window.path_to_searchindex_js = "searchindex-14e324a6.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-6a7ae851.js"></script>
+        <script src="toc-e7daac89.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -222,7 +226,7 @@
                     <main>
                         <h1 id="syllabus"><a class="header" href="#syllabus">3D Design &amp; Printing Curriculum - Non-Visual Toolchain Edition</a></h1>
 <p><strong>Author</strong>: Michael Ryan Hunsaker, M.Ed., Ph.D.
-<strong>Last Updated</strong>: 2026-02-20
+<strong>Last Updated</strong>: 2026-02-22
 <strong>Target Audience</strong>: Blind and visually impaired high school students; anyone learning 3D design and printing through screen reader-accessible workflows.</p>
 <hr>
 <h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
@@ -233,7 +237,7 @@
 <h3 id="core-philosophy"><a class="header" href="#core-philosophy">Core Philosophy</a></h3>
 <ol>
 <li>
-<p>Text-First Design: All core work happens in text editors and command-line interfaces-no graphical CAD previews, no mouse-dependent menu navigation.</p>
+<p>Text-First Design: All core work happens in text editors and command-line interfaces - no graphical CAD previews, no mouse-dependent menu navigation.</p>
 </li>
 <li>
 <p>Parametric Thinking: Students learn to express geometry as code using OpenSCAD, enabling precise, reproducible, and iterable designs without visual feedback.</p>
@@ -250,72 +254,97 @@
 </ol>
 <hr>
 <h2 id="curriculum-structure--scopesequence"><a class="header" href="#curriculum-structure--scopesequence">Curriculum Structure &amp; Scope/Sequence</a></h2>
-<h3 id="part-1-command-line-foundation-prerequisite---20-25-hours"><a class="header" href="#part-1-command-line-foundation-prerequisite---20-25-hours">Part 1: Command-Line Foundation (Prerequisite - 20-25 hours)</a></h3>
-<p>Start here: <a href="Command_Line_Interface_Selection.html">Command Line Interface Selection Guide</a></p>
-<p>Students who have never opened a terminal begin with foundational command-line skills. Choose one of three equivalent pathways based on your operating system and preferences. All three pathways teach the same concepts and prepare you equally well for 3dMake work.</p>
-<h4 id="-step-1-choose-your-pathway"><a class="header" href="#-step-1-choose-your-pathway">🔍 Step 1: Choose Your Pathway</a></h4>
-<p><a href="Command_Line_Interface_Selection.html">→ Command Line Interface Selection Guide</a> - Read this first to compare PowerShell, CMD, and Git Bash and choose which works best for you.</p>
-<hr>
-<h4 id="pathway-a-powershell-foundation-recommended-for-windows"><a class="header" href="#pathway-a-powershell-foundation-recommended-for-windows">Pathway A: PowerShell Foundation (Recommended for Windows)</a></h4>
-<p>Total Duration: 30-45 hours<br>Start here: <a href="PowerShell_Foundation/PowerShell_Curriculum_Overview/PowerShell_Curriculum_Overview.html">PowerShell Curriculum Overview</a></p>
+<h3 id="part-1-setup--accessibility-fundamentals-prerequisite---2-3-hours"><a class="header" href="#part-1-setup--accessibility-fundamentals-prerequisite---2-3-hours">Part 1: Setup &amp; Accessibility Fundamentals (Prerequisite - 2-3 hours)</a></h3>
+<p>Start here: <a href="Setup/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.html">Screen Reader Accessibility Guide</a></p>
+<p>Before choosing a command-line pathway, students optimize their screen reader setup for terminal work.</p>
 <div class="table-wrapper">
 <table>
 <thead>
 <tr><th>Component</th><th>Duration</th><th>Content</th></tr>
 </thead>
 <tbody>
-<tr><td>Screen Reader Accessibility Guide</td><td>1.5-2 hours</td><td>NVDA/JAWS reference, navigation sequences, handling output, keyboard shortcuts</td></tr>
-<tr><td>PS-Pre: Your First Terminal</td><td>2-2.5 hours</td><td>Opening PowerShell, first commands, basic navigation, screen reader tricks</td></tr>
-<tr><td>PS-0: Getting Started</td><td>1.5 hours</td><td>Paths, shortcuts, tab completion</td></tr>
-<tr><td>PS-1: Navigation</td><td>2-2.5 hours</td><td>Moving around the file system confidently</td></tr>
-<tr><td>PS-2: File &amp; Folder Manipulation</td><td>2.5-3 hours</td><td>Creating, editing, moving, copying, deleting files and directories</td></tr>
-<tr><td>PS-3: Input, Output &amp; Piping</td><td>2.5-3 hours</td><td>Redirecting output, piping commands, understanding data flow</td></tr>
-<tr><td>PS-4: Environment Variables &amp; Aliases</td><td>2-2.5 hours</td><td>Setting variables, creating shortcuts, persistent configurations</td></tr>
-<tr><td>PS-5: Filling in the Gaps</td><td>2.5-3 hours</td><td>Control flow, profiles, useful tricks, scripting fundamentals</td></tr>
-<tr><td>PS-6: Advanced Techniques</td><td>3-3.5 hours</td><td>Scripts, functions, professional workflows, automation patterns</td></tr>
-<tr><td>PS Unit Test &amp; Practice</td><td>2-3 hours</td><td>Practice exercises, assessment, reinforcement</td></tr>
+<tr><td><a href="Setup/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.html">Screen Reader Accessibility Guide</a></td><td>1-1.5 hours</td><td>NVDA/JAWS reference for PowerShell, CMD, and Git Bash; keyboard shortcuts</td></tr>
+<tr><td><a href="Setup/Screen_Reader_Choice/Screen_Reader_Choice.html">Screen Reader Choice: Windows CLI</a></td><td>30 min</td><td>Comparing NVDA, JAWS, Narrator, and Dolphin; choosing the right tool</td></tr>
+<tr><td><a href="Setup/Braille_Displays/Braille_Displays.html">Braille Display &amp; Terminal Mode</a></td><td>30 min</td><td>Optional: configuring refreshable braille displays for terminal work</td></tr>
+<tr><td><a href="Setup/Editor_Selection_Setup/Editor_Selection_Setup.html">Editor Selection and Setup</a></td><td>30 min</td><td>Choosing Notepad, Notepad++, or VS Code; configuring indent announcement</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h3 id="part-2-command-line-foundation-choose-your-path"><a class="header" href="#part-2-command-line-foundation-choose-your-path">Part 2: Command-Line Foundation (Choose Your Path)</a></h3>
+<p>Start here: <a href="Command_Line_Interface_Selection/Command_Line_Interface_Selection.html">Command Line Interface Selection Guide</a></p>
+<p>Students master terminal/command-line fundamentals before learning 3D design. Choose one of three equivalent pathways based on your operating system and preferences. All three pathways teach the same concepts and prepare you equally well for 3dMake work.</p>
+<p><strong>Important:</strong> Choose ONE pathway and complete it fully before starting 3dMake Lesson 9. Lessons 1-8 can begin without CLI foundation, but Lesson 9+ requires command-line fluency.</p>
+<hr>
+<h4 id="pathway-a-powershell-foundation-recommended-for-windows"><a class="header" href="#pathway-a-powershell-foundation-recommended-for-windows">Pathway A: PowerShell Foundation (Recommended for Windows)</a></h4>
+<p>Total Duration: 30-45 hours
+Start here: <a href="PowerShell_Foundation/PowerShell_Curriculum_Overview/PowerShell_Curriculum_Overview.html">PowerShell Curriculum Overview</a></p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Component</th><th>Duration</th><th>Content</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="PowerShell_Foundation/Powershell_Introduction/Powershell_Introduction.html">PowerShell Introduction</a></td><td>20-30 min</td><td>Screen-reader-friendly quick-start (JAWS/NVDA); essential commands overview</td></tr>
+<tr><td><a href="PowerShell_Foundation/Powershell_Tutorial/Powershell_Tutorial.html">PowerShell Tutorial</a></td><td>30-45 min</td><td>Hands-on tutorial: paths, navigation, wildcards, running scripts</td></tr>
+<tr><td><a href="PowerShell_Foundation/PS_Pre_Your_First_Terminal/PS_Pre_Your_First_Terminal.html">PS-Pre: Your First Terminal</a></td><td>2-2.5 hours</td><td>Opening PowerShell, first commands, basic navigation, screen reader tricks</td></tr>
+<tr><td><a href="PowerShell_Foundation/PS_0_getting_started_layout_paths/PS_0_getting_started_layout_paths.html">PS-0: Getting Started</a></td><td>1.5 hours</td><td>Paths, shortcuts, tab completion</td></tr>
+<tr><td><a href="PowerShell_Foundation/PS_1_navigation/PS_1_navigation.html">PS-1: Navigation</a></td><td>2-2.5 hours</td><td>Moving around the file system confidently</td></tr>
+<tr><td><a href="PowerShell_Foundation/PS_2_file_folder_manipulation_modification/PS_2_file_folder_manipulation_modification.html">PS-2: File &amp; Folder Manipulation</a></td><td>2.5-3 hours</td><td>Creating, editing, moving, copying, deleting files and directories</td></tr>
+<tr><td><a href="PowerShell_Foundation/PS_3_input_output_piping/PS_3_input_output_piping.html">PS-3: Input, Output &amp; Piping</a></td><td>2.5-3 hours</td><td>Redirecting output, piping commands, understanding data flow</td></tr>
+<tr><td><a href="PowerShell_Foundation/PS_4_environment_variables_aliases/PS_4_environment_variables_aliases.html">PS-4: Environment Variables &amp; Aliases</a></td><td>2-2.5 hours</td><td>Setting variables, creating shortcuts, persistent configurations</td></tr>
+<tr><td><a href="PowerShell_Foundation/PS_5_filling_in_the_gaps/PS_5_filling_in_the_gaps.html">PS-5: Filling in the Gaps</a></td><td>2.5-3 hours</td><td>Control flow, profiles, useful tricks, scripting fundamentals</td></tr>
+<tr><td><a href="PowerShell_Foundation/PS_6_Advanced_Techniques/PS_6_Advanced_Techniques.html">PS-6: Advanced Terminal Techniques</a></td><td>4-4.5 hours</td><td>Scripts, functions, loops, professional workflows, automation patterns</td></tr>
+<tr><td><a href="PowerShell_Foundation/PS_Unit_Test/PS_Unit_Test.html">PowerShell Unit Test &amp; Practice</a></td><td>2-3 hours</td><td>Practice exercises, assessment, reinforcement</td></tr>
 </tbody>
 </table>
 </div>
 <p>Outcomes: Terminal fluency, file system mastery, basic scripting, screen reader optimization, automation readiness</p>
 <hr>
 <h4 id="pathway-b-windows-command-prompt-cmd-simpler-alternative"><a class="header" href="#pathway-b-windows-command-prompt-cmd-simpler-alternative">Pathway B: Windows Command Prompt (CMD) (Simpler alternative)</a></h4>
-<p>Total Duration: 30-45 hours<br>Start here: <a href="CMD_Foundation/CMD_Curriculum_Overview/CMD_Curriculum_Overview.html">CMD Curriculum Overview</a></p>
+<p>Total Duration: 30-45 hours
+Start here: <a href="CMD_Foundation/CMD_Curriculum_Overview/CMD_Curriculum_Overview.html">CMD Curriculum Overview</a></p>
 <div class="table-wrapper">
 <table>
 <thead>
 <tr><th>Component</th><th>Duration</th><th>Content</th></tr>
 </thead>
 <tbody>
-<tr><td>CMD-Pre: Your First Terminal</td><td>2-2.5 hours</td><td>Opening CMD, first commands, basic navigation, screen reader tricks</td></tr>
-<tr><td>CMD-0: Getting Started</td><td>1.5 hours</td><td>Paths, shortcuts, command basics</td></tr>
-<tr><td>CMD-1: Navigation</td><td>2-2.5 hours</td><td>Moving around the file system confidently</td></tr>
-<tr><td>CMD-2: File &amp; Folder Manipulation</td><td>2.5-3 hours</td><td>Creating, editing, moving, copying, deleting files and directories</td></tr>
-<tr><td>CMD-3: Input, Output &amp; Redirection</td><td>2-2.5 hours</td><td>Redirecting output, piping commands, understanding data flow</td></tr>
-<tr><td>CMD-4: Environment Variables &amp; Shortcuts</td><td>2-2.5 hours</td><td>Setting variables, creating shortcuts, persistent configurations</td></tr>
-<tr><td>CMD-5: Filling in the Gaps</td><td>2.5-3 hours</td><td>Batch files, advanced techniques, scripting fundamentals</td></tr>
-<tr><td>CMD-6: Advanced Techniques</td><td>3-3.5 hours</td><td>Scripts, automation patterns, professional workflows</td></tr>
-<tr><td>CMD Unit Test &amp; Practice</td><td>2-3 hours</td><td>Practice exercises, assessment, reinforcement</td></tr>
+<tr><td><a href="CMD_Foundation/CMD_Pre_Your_First_Terminal/CMD_Pre_Your_First_Terminal.html">CMD-Pre: Your First Terminal</a></td><td>2-2.5 hours</td><td>Opening CMD, first commands, basic navigation, screen reader tricks</td></tr>
+<tr><td><a href="CMD_Foundation/CMD_0_getting_started_layout_paths/CMD_0_getting_started_layout_paths.html">CMD-0: Getting Started</a></td><td>1.5 hours</td><td>Paths, shortcuts, command basics</td></tr>
+<tr><td><a href="CMD_Foundation/CMD_1_navigation/CMD_1_navigation.html">CMD-1: Navigation</a></td><td>2-2.5 hours</td><td>Moving around the file system confidently</td></tr>
+<tr><td><a href="CMD_Foundation/CMD_2_file_folder_manipulation_modification/CMD_2_file_folder_manipulation_modification.html">CMD-2: File &amp; Folder Manipulation</a></td><td>2.5-3 hours</td><td>Creating, editing, moving, copying, deleting files and directories</td></tr>
+<tr><td><a href="CMD_Foundation/CMD_3_input_output_piping/CMD_3_input_output_piping.html">CMD-3: Input, Output &amp; Redirection</a></td><td>2-2.5 hours</td><td>Redirecting output, piping commands, understanding data flow</td></tr>
+<tr><td><a href="CMD_Foundation/CMD_4_environment_variables_aliases/CMD_4_environment_variables_aliases.html">CMD-4: Environment Variables &amp; Shortcuts</a></td><td>2-2.5 hours</td><td>Setting variables, creating shortcuts, persistent configurations</td></tr>
+<tr><td><a href="CMD_Foundation/CMD_5_filling_in_the_gaps/CMD_5_filling_in_the_gaps.html">CMD-5: Filling in the Gaps</a></td><td>2.5-3 hours</td><td>Batch files, advanced techniques, scripting fundamentals</td></tr>
+<tr><td><a href="CMD_Foundation/CMD_6_Advanced_Techniques/CMD_6_Advanced_Techniques.html">CMD-6: Advanced Terminal Techniques</a></td><td>3-3.5 hours</td><td>Scripts, automation patterns, professional workflows</td></tr>
+<tr><td><a href="CMD_Foundation/CMD_Unit_Test/CMD_Unit_Test.html">CMD Unit Test &amp; Practice</a></td><td>2-3 hours</td><td>Practice exercises, assessment, reinforcement</td></tr>
 </tbody>
 </table>
 </div>
 <p>Outcomes: Terminal fluency, file system mastery, batch scripting, screen reader optimization, automation readiness</p>
 <hr>
 <h4 id="pathway-c-git-bash-best-for-macoslinux-or-cross-platform-development"><a class="header" href="#pathway-c-git-bash-best-for-macoslinux-or-cross-platform-development">Pathway C: Git Bash (Best for macOS/Linux or cross-platform development)</a></h4>
-<p>Total Duration: 20-25 hours<br>Start here: <a href="GitBash_Foundation/GitBash_Curriculum_Overview/GitBash_Curriculum_Overview.html">Git Bash Curriculum Overview</a></p>
+<p>Total Duration: 20-25 hours
+Start here: <a href="GitBash_Foundation/GitBash_Curriculum_Overview/GitBash_Curriculum_Overview.html">Git Bash Curriculum Overview</a></p>
 <div class="table-wrapper">
 <table>
 <thead>
 <tr><th>Component</th><th>Duration</th><th>Content</th></tr>
 </thead>
 <tbody>
-<tr><td>GitBash-Pre: Your First Terminal</td><td>2-2.5 hours</td><td>Opening Git Bash, first commands, basic navigation, screen reader tricks</td></tr>
-<tr><td>GitBash-1: Navigation &amp; Files</td><td>2-2.5 hours</td><td>File system fundamentals, moving around, creating/editing files</td></tr>
-<tr><td>GitBash-2: Advanced Navigation</td><td>2-2.5 hours</td><td>Advanced file operations, understanding paths, symlinks</td></tr>
-<tr><td>GitBash-3: Text Processing</td><td>2-2.5 hours</td><td>grep, sed, awk, text manipulation</td></tr>
-<tr><td>GitBash-4: Scripting &amp; Automation</td><td>2.5-3 hours</td><td>Bash scripts, functions, loops, conditional logic</td></tr>
-<tr><td>GitBash-5: Professional Workflows</td><td>2-2.5 hours</td><td>Git integration, version control, collaboration patterns</td></tr>
-<tr><td>GitBash Unit Test &amp; Practice</td><td>2-2.5 hours</td><td>Practice exercises, assessment, reinforcement</td></tr>
+<tr><td><a href="GitBash_Foundation/GitBash_Introduction/GitBash_Introduction.html">Git Bash Introduction</a></td><td>20-30 min</td><td>Screen-reader-friendly quick-start (JAWS/NVDA); essential commands</td></tr>
+<tr><td><a href="GitBash_Foundation/GitBash_Tutorial/GitBash_Tutorial.html">Git Bash Tutorial</a></td><td>30-45 min</td><td>Hands-on tutorial: paths, navigation, wildcards, running scripts</td></tr>
+<tr><td><a href="GitBash_Foundation/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.html">Screen Reader Accessibility Guide for Git Bash</a></td><td>30-45 min</td><td>NVDA and JAWS configuration specific to Git Bash</td></tr>
+<tr><td><a href="GitBash_Foundation/GitBash_Pre_Your_First_Terminal/GitBash_Pre_Your_First_Terminal.html">GitBash-Pre: Your First Terminal</a></td><td>2-2.5 hours</td><td>Opening Git Bash, first commands, basic navigation, screen reader tricks</td></tr>
+<tr><td><a href="GitBash_Foundation/GitBash_0_getting_started_layout_paths/GitBash_0_getting_started_layout_paths.html">GitBash-0: Getting Started</a></td><td>1.5 hours</td><td>Unix-style paths, shortcuts, command basics, Windows path conversion</td></tr>
+<tr><td><a href="GitBash_Foundation/GitBash_1_navigation/GitBash_1_navigation.html">GitBash-1: Navigation</a></td><td>2-2.5 hours</td><td>Moving around the file system confidently</td></tr>
+<tr><td><a href="GitBash_Foundation/GitBash_2_file_folder_manipulation_modification/GitBash_2_file_folder_manipulation_modification.html">GitBash-2: File and Folder Manipulation</a></td><td>2-2.5 hours</td><td>Creating, editing, moving, copying, deleting files and directories</td></tr>
+<tr><td><a href="GitBash_Foundation/GitBash_3_input_output_piping/GitBash_3_input_output_piping.html">GitBash-3: Input, Output &amp; Piping</a></td><td>2-2.5 hours</td><td>Redirecting output, piping with grep/sort/wc, understanding data flow</td></tr>
+<tr><td><a href="GitBash_Foundation/GitBash_4_environment_variables_aliases/GitBash_4_environment_variables_aliases.html">GitBash-4: Environment Variables &amp; Aliases</a></td><td>1.5-2 hours</td><td>Setting variables, creating aliases, editing .bashrc</td></tr>
+<tr><td><a href="GitBash_Foundation/GitBash_5_filling_in_the_gaps/GitBash_5_filling_in_the_gaps.html">GitBash-5: Filling in the Gaps</a></td><td>2-2.5 hours</td><td>Shell profiles, command history, debugging</td></tr>
+<tr><td><a href="GitBash_Foundation/GitBash_6_Advanced_Techniques/GitBash_6_Advanced_Techniques.html">GitBash-6: Advanced Terminal Techniques</a></td><td>2.5-3.5 hours</td><td>Shell scripts, functions, loops, professional workflows</td></tr>
+<tr><td><a href="GitBash_Foundation/GitBash_Unit_Test/GitBash_Unit_Test.html">GitBash Unit Test &amp; Practice</a></td><td>2-2.5 hours</td><td>Practice exercises, assessment, reinforcement</td></tr>
 </tbody>
 </table>
 </div>
@@ -329,10 +358,9 @@
 <li>Screen reader optimization for terminal work</li>
 <li>Foundation for 3DMake automation tasks</li>
 </ul>
-<p>Note: Students should complete their chosen Command-Line Foundation pathway before starting 3dMake Lesson 9 (Automation). Lessons 1-8 can begin without CLI foundation, but Lesson 9+ requires command-line fluency.</p>
 <hr>
-<h3 id="part-2-3dmake-foundation-main-curriculum---16-20-hours"><a class="header" href="#part-2-3dmake-foundation-main-curriculum---16-20-hours">Part 2: 3dMake Foundation (Main Curriculum - 16-20 hours)</a></h3>
-<p>Start here: <a href="3dMake_Foundation/3dMakeIntro/3dMakeIntro.html">3dMake Introduction</a></p>
+<h3 id="part-3-3dmake-foundation-main-curriculum---16-20-hours"><a class="header" href="#part-3-3dmake-foundation-main-curriculum---16-20-hours">Part 3: 3dMake Foundation (Main Curriculum - 16-20 hours)</a></h3>
+<p>Start here: <a href="3dMake_Foundation/3dMake_Intro/3dMake_Intro.html">3dMake Introduction</a></p>
 <p>11 progressive lessons building from foundational concepts to leadership-level design thinking, organized in 5 parts. Version 2.1 adds comprehensive advanced programming and design topics throughout.</p>
 <h4 id="part-1-foundations-lessons-1-3--4-5-hours"><a class="header" href="#part-1-foundations-lessons-1-3--4-5-hours">Part 1: Foundations (Lessons 1-3 | ~4-5 hours)</a></h4>
 <div class="table-wrapper">
@@ -379,7 +407,7 @@
 <tr><th>Lesson</th><th>Focus</th><th>Duration</th><th>Project</th></tr>
 </thead>
 <tbody>
-<tr><td><a href="3dMake_Foundation/Lessons_3dMake_9/Lessons_3dMake_9.html">Lesson 9</a></td><td>Automation + File Import/Export (requires PS Foundation)</td><td>75-105 min</td><td>Batch Processing Automation</td></tr>
+<tr><td><a href="3dMake_Foundation/Lessons_3dMake_9/Lessons_3dMake_9.html">Lesson 9</a></td><td>Automation + File Import/Export (requires CLI Foundation)</td><td>75-105 min</td><td>Batch Processing Automation</td></tr>
 <tr><td><a href="3dMake_Foundation/Lessons_3dMake_10/Lessons_3dMake_10.html">Lesson 10</a></td><td>Troubleshooting &amp; Mastery with Measurement</td><td>120-150 min</td><td>QA Testing + Accessibility Audit</td></tr>
 </tbody>
 </table>
@@ -397,46 +425,23 @@
 </div>
 <p>Total: 16-20 hours of instruction + projects</p>
 <hr>
-<h2 id="8-comprehensive-reference-appendices"><a class="header" href="#8-comprehensive-reference-appendices">8 Comprehensive Reference Appendices</a></h2>
-<p>Located in <code>/3dMake_Foundation/</code> alongside the lessons:</p>
-<h3 id="appendix-a-comprehensive-slicing-guide-1500-lines"><a class="header" href="#appendix-a-comprehensive-slicing-guide-1500-lines"><a href="3dMake_Foundation/Appendix_A_Comprehensive_Slicing_Guide.html">Appendix A: Comprehensive Slicing Guide</a> (1,500+ lines)</a></h3>
-<p>Reference for 7 major slicers:</p>
-<ul>
-<li>PrusaSlicer, Bambu Studio, Cura, SuperSlicer, OrcaSlicer, IdeaMaker, Fusion 360</li>
-<li>Setup guides, parameter explanations, troubleshooting, command-line integration</li>
-<li>Use when: Slicing questions, switching slicers, quality issues</li>
-</ul>
-<h3 id="appendix-b-material-properties--selection-1200-lines"><a class="header" href="#appendix-b-material-properties--selection-1200-lines"><a href="3dMake_Foundation/Appendix_B_Material_Properties.html">Appendix B: Material Properties &amp; Selection</a> (1,200+ lines)</a></h3>
-<p>Complete material reference for 6 materials:</p>
-<ul>
-<li>PLA, PETG, ABS, TPU, Polycarbonate, Nylon</li>
-<li>Properties tables, printing parameters, quality verification, cost analysis</li>
-<li>Use when: Choosing material, troubleshooting prints, cost analysis</li>
-</ul>
-<h3 id="appendix-c-tolerance-testing--qa-matrix-1200-lines"><a class="header" href="#appendix-c-tolerance-testing--qa-matrix-1200-lines"><a href="3dMake_Foundation/Appendix_C_Tolerance_QA.html">Appendix C: Tolerance Testing &amp; QA Matrix</a> (1,200+ lines)</a></h3>
-<p>Measurement-based quality assurance procedures:</p>
-<ul>
-<li>Caliper techniques, weight verification, functional testing, tolerance stack-up</li>
-<li>Step-by-step procedures, checklist templates, CSV tracking</li>
-<li>Use when: Starting a project, verifying dimensions, quality issues</li>
-</ul>
-<h3 id="appendix-d-powershell-integration-for-scad-workflows-1100-lines"><a class="header" href="#appendix-d-powershell-integration-for-scad-workflows-1100-lines"><a href="3dMake_Foundation/Appendix_D_PowerShell_Integration.html">Appendix D: PowerShell Integration for SCAD Workflows</a> (1,100+ lines)</a></h3>
-<p>Complete automation guide for PowerShell + 3dMake:</p>
-<ul>
-<li>5 complete PowerShell scripts for workflow automation</li>
-<li>Parametric sweeps, batch processing, print logging, printer communication</li>
-<li>Use when: Automating tasks, testing variations, batch printing</li>
-</ul>
-<h3 id="appendix-e-advanced-openscad-concepts-2000-lines"><a class="header" href="#appendix-e-advanced-openscad-concepts-2000-lines"><a href="3dMake_Foundation/Appendix_E_Advanced_OpenSCAD_Concepts.html">Appendix E: Advanced OpenSCAD Concepts</a> (2,000+ lines)</a></h3>
-<p>Specialized topics for experienced designers (v2.1 NEW):</p>
-<ul>
-<li>Gears and Mechanical Components: Gear tooth geometry, servo gearboxes, belt/pulley systems</li>
-<li>Batch Processing &amp; Statistical Analysis: Parameter sweeps, design space exploration, data-driven selection</li>
-<li>Performance Optimization: Render profiling, resolution strategies, caching calculations</li>
-<li>Print Orientation &amp; Support Algorithms: Strength analysis, support minimization, bridge calculations</li>
-<li>Recursive Function Patterns: Fractals, nested structures, performance considerations</li>
-<li>Use when: Building mechanical systems, optimizing complex models, exploring design variations</li>
-</ul>
+<h3 id="reference-appendices"><a class="header" href="#reference-appendices">Reference Appendices</a></h3>
+<p>Located in <code>3dMake_Foundation/</code> alongside the lessons:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Appendix</th><th>Title</th><th>Use When</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="3dMake_Foundation/Appendix_A_Comprehensive_Slicing_Guide.html">Appendix A</a></td><td>Comprehensive Slicing Guide</td><td>Slicing questions, switching slicers, quality issues</td></tr>
+<tr><td><a href="3dMake_Foundation/Appendix_B_Material_Properties.html">Appendix B</a></td><td>Material Properties &amp; Selection Guide</td><td>Choosing material, troubleshooting prints, cost analysis</td></tr>
+<tr><td><a href="3dMake_Foundation/Appendix_C_Tolerance_QA.html">Appendix C</a></td><td>Tolerance Testing &amp; Quality Assurance Matrix</td><td>Starting a project, verifying dimensions, quality issues</td></tr>
+<tr><td><a href="3dMake_Foundation/Appendix_D_PowerShell_Integration.html">Appendix D</a></td><td>PowerShell Integration for SCAD Workflows</td><td>Automating tasks, testing variations, batch printing</td></tr>
+<tr><td><a href="3dMake_Foundation/Appendix_E_Advanced_OpenSCAD_Concepts.html">Appendix E</a></td><td>Advanced OpenSCAD Concepts</td><td>Building mechanical systems, optimizing complex models</td></tr>
+<tr><td><a href="assets/3dMake_Foundation/README.html">Appendix F</a></td><td>3dMake Code Examples &amp; Assets</td><td>Reference designs, working code examples</td></tr>
+</tbody>
+</table>
+</div>
 <hr>
 <h2 id="learning-progression-student-roles"><a class="header" href="#learning-progression-student-roles">Learning Progression: Student Roles</a></h2>
 <p>Students move through roles across the curriculum:</p>
@@ -446,7 +451,7 @@
 <tr><th>Phase</th><th>Role</th><th>Core Tools</th><th>Focus</th></tr>
 </thead>
 <tbody>
-<tr><td>PowerShell Foundation</td><td>Observer/Learner</td><td>Terminal, command line</td><td>CLI fundamentals and keyboard navigation</td></tr>
+<tr><td>CLI Foundation</td><td>Observer/Learner</td><td>Terminal, command line</td><td>CLI fundamentals and keyboard navigation</td></tr>
 <tr><td>3dMake Lessons 1-5</td><td>Observer/Learner</td><td>OpenSCAD, 3DMake, editor</td><td>Using CLI tools, safety, concepts, measurement</td></tr>
 <tr><td>3dMake Lessons 6-8</td><td>Operator</td><td>Editor, OpenSCAD, 3DMake, slicer</td><td>Hands-on practice with structured projects</td></tr>
 <tr><td>3dMake Lessons 9-10</td><td>Designer</td><td>Full toolchain</td><td>Parametric design, automation, troubleshooting</td></tr>
@@ -467,9 +472,9 @@
 </ul>
 <h3 id="3dmake---the-non-visual-build-bridge"><a class="header" href="#3dmake---the-non-visual-build-bridge">3DMake - The Non-Visual Build Bridge</a></h3>
 <p>3DMake is a command-line tool that automates the journey from OpenSCAD code to a printable file:</p>
-<pre><code class="language-bash">3dm build        
-3dm info         
-3dm slice        
+<pre><code class="language-bash">3dm build
+3dm info
+3dm slice
 </code></pre>
 <p>Why 3DMake?</p>
 <ul>
@@ -493,10 +498,11 @@
 <tr><th>Section</th><th>Prerequisites</th><th>What You’ll Learn</th></tr>
 </thead>
 <tbody>
-<tr><td>PowerShell Foundation</td><td>None - start here</td><td>Terminal basics, keyboard navigation, file operations, basic scripting</td></tr>
-<tr><td>3dMake Lessons 1-5</td><td>PowerShell Foundation</td><td>3D printing concepts, safety, measurement, OpenSCAD basics, debugging</td></tr>
+<tr><td>Part 1: Setup</td><td>None - start here</td><td>Screen reader optimization, editor selection, accessibility setup</td></tr>
+<tr><td>CLI Foundation</td><td>Part 1: Setup</td><td>Terminal basics, keyboard navigation, file operations, basic scripting</td></tr>
+<tr><td>3dMake Lessons 1-5</td><td>Part 1: Setup (CLI Foundation recommended)</td><td>3D printing concepts, safety, measurement, OpenSCAD basics, debugging</td></tr>
 <tr><td>3dMake Lessons 6-8</td><td>Lessons 1-5</td><td>Building projects, parametric design, transforms, tolerances</td></tr>
-<tr><td>3dMake Lessons 9-10</td><td>Lessons 6-8 (Lesson 9 requires PS Foundation)</td><td>Automation, troubleshooting, advanced measurement and QA</td></tr>
+<tr><td>3dMake Lessons 9-10</td><td>Lessons 6-8 + CLI Foundation required</td><td>Automation, troubleshooting, advanced measurement and QA</td></tr>
 <tr><td>3dMake Lesson 11</td><td>Lessons 9-10</td><td>Stakeholder design, real-world prototyping, leadership</td></tr>
 </tbody>
 </table>
@@ -579,267 +585,98 @@
 <hr>
 <h2 id="quick-links-to-essential-tools--setup"><a class="header" href="#quick-links-to-essential-tools--setup">Quick Links to Essential Tools &amp; Setup</a></h2>
 <h3 id="core-design-toolchain"><a class="header" href="#core-design-toolchain">Core Design Toolchain</a></h3>
-<h3 id="openscad"><a class="header" href="#openscad">OpenSCAD</a></h3>
+<p><strong>OpenSCAD</strong></p>
 <ul>
 <li><a href="https://openscad.org/downloads.html">OpenSCAD Download</a> - Free, cross-platform CAD (all major OS)</li>
 <li><a href="https://openscad.org/documentation.html">OpenSCAD Documentation</a> - Official reference</li>
 <li><a href="3dMake_Foundation/Lessons_3dMake_2/openscad-cheat-sheet.html">OpenSCAD Cheat Sheet</a> - Quick syntax reference</li>
-<li><a href="https://github.com/openscad/openscad">OpenSCAD on GitHub</a> - Source code and issue tracking</li>
 </ul>
-<h3 id="3dmake"><a class="header" href="#3dmake">3DMake</a></h3>
+<p><strong>3DMake</strong></p>
 <ul>
 <li><a href="https://github.com/tdeck/3dmake">3DMake Documentation &amp; Installation</a> - Command-line build tool for OpenSCAD</li>
 <li><a href="3dMake_Foundation/3dMake_Quick_Reference.html">3dMake Quick Reference</a> - Command and workflow reference</li>
-<li><a href="https://github.com/tdeck/3dmake/blob/main/docs/terminalquickstart.md">3DMake Terminal Quick Start</a> - CLI basics for new users</li>
 </ul>
-<h3 id="editors"><a class="header" href="#editors">Editors</a></h3>
+<p><strong>Editors</strong></p>
 <ul>
 <li><a href="https://code.visualstudio.com/">VS Code Download</a> - Free, screen-reader-accessible code editor</li>
-<li><a href="https://marketplace.visualstudio.com/items?itemName=Anio.openscad">VS Code OpenSCAD Extension</a> - Syntax highlighting for OpenSCAD</li>
-<li><a href="https://notepad-plus-plus.org/">Notepad++ Download</a> - Free, lightweight Windows editor with OpenSCAD syntax support</li>
-<li><a href="https://www.vim.org/">Vim/Neovim</a> - Terminal-based editor with full keyboard control</li>
+<li><a href="https://notepad-plus-plus.org/">Notepad++ Download</a> - Free, lightweight Windows editor</li>
+<li><a href="Setup/Editor_Selection_Setup/Editor_Selection_Setup.html">Editor Selection and Setup Guide</a> - Accessibility-focused setup guide</li>
 </ul>
 <h3 id="screen-reader--accessibility"><a class="header" href="#screen-reader--accessibility">Screen Reader &amp; Accessibility</a></h3>
-<h3 id="screen-readers"><a class="header" href="#screen-readers">Screen Readers</a></h3>
+<p><strong>Screen Readers</strong></p>
 <ul>
 <li><a href="https://www.nvaccess.org/">NVDA Download</a> - Free, open-source screen reader (Windows)</li>
 <li><a href="https://www.freedomscientific.com/products/software/jaws/">JAWS Screen Reader</a> - Commercial screen reader (Windows, macOS)</li>
-<li><a href="https://www.apple.com/accessibility/voiceover/">VoiceOver (macOS/iOS)</a> - Built-in Apple screen reader</li>
-<li><a href="https://www.nvaccess.org/documentation/">NVDA User Guide</a> - Complete NVDA documentation</li>
 </ul>
-<h3 id="accessibility-configuration"><a class="header" href="#accessibility-configuration">Accessibility Configuration</a></h3>
+<p><strong>Accessibility Configuration</strong></p>
 <ul>
+<li><a href="Setup/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.html">Screen Reader Accessibility Guide</a> - Comprehensive terminal accessibility guide</li>
 <li><a href="3dMake_Foundation/Lessons_3dMake_1/nvda-jaws-coding-tips.html">Screen Reader Coding Tips (NVDA &amp; JAWS)</a> - Keyboard shortcuts and configuration</li>
 <li><a href="3dMake_Foundation/Lessons_3dMake_1/vscode-setup-guide.html">VSCode Setup Guide</a> - Accessibility-focused editor configuration</li>
-<li><a href="https://code.visualstudio.com/docs/editor/accessibility">Accessibility in VS Code</a> - Official VS Code accessibility guide</li>
-<li><a href="https://github.com/jsa2/jaws-scripts-for-vscode">JAWS Script Repository</a> - Custom JAWS scripts for developers</li>
+<li><a href="GitBash_Foundation/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.html">Git Bash Screen Reader Guide</a> - NVDA and JAWS configuration for Git Bash</li>
 </ul>
-<h3 id="terminal--command-line"><a class="header" href="#terminal--command-line">Terminal &amp; Command Line</a></h3>
+<h3 id="slicing-software"><a class="header" href="#slicing-software">Slicing Software</a></h3>
 <ul>
-<li><a href="PowerShell_Foundation/Powershell_Introduction/Powershell_Introduction.html">PowerShell &amp; Command Line Fundamentals</a> - Terminal navigation for screen reader users</li>
-<li><a href="https://learn.microsoft.com/en-us/windows/terminal/panes">Windows Terminal Accessibility</a> - Official accessibility guide</li>
-<li><a href="https://www.linux-magazine.com/Issues/2018/214/Screen-Reader-Tips-for-Linux">Screen Reader Tips for Linux</a> - Linux-specific guidance</li>
-</ul>
-<h3 id="slicing--printing"><a class="header" href="#slicing--printing">Slicing &amp; Printing</a></h3>
-<h3 id="slicer-software--documentation"><a class="header" href="#slicer-software--documentation">Slicer Software &amp; Documentation</a></h3>
-<ul>
-<li><a href="https://help.prusa3d.com/en/category/prusaslicer424/">PrusaSlicer Documentation</a> - Official Prusa slicer</li>
-<li><a href="https://www.prusa3d.com/page/prusaslicer424/">PrusaSlicer Download</a> - Free slicer optimized for Prusa printers</li>
-<li><a href="https://ultimaker.com/en/resources/documentation">Cura Slicer Documentation</a> - Official UltiMaker Cura documentation</li>
-<li><a href="https://ultimaker.com/software/ultimaker-cura">Cura Slicer Download</a> - Free, open-source slicer for most printers</li>
-<li><a href="https://github.com/SoftFever/OrcaSlicer/wiki">OrcaSlicer Documentation</a> - Community wiki for OrcaSlicer</li>
-<li><a href="https://github.com/SoftFever/OrcaSlicer/releases">OrcaSlicer Download</a> - Free, open-source slicer fork with advanced features</li>
-<li><a href="https://wiki.bambulab.com/en/software/bambu-studio">Bambu Studio Documentation</a> - Official Bambu Lab slicer documentation</li>
-<li><a href="https://bambulab.com/en/download/studio">Bambu Studio Download</a> - Free slicer optimized for Bambu Lab printers</li>
-<li><a href="https://github.com/supermerill/SuperSlicer/wiki">SuperSlicer Documentation</a> - Community wiki for SuperSlicer</li>
-<li><a href="https://github.com/supermerill/SuperSlicer/releases">SuperSlicer Download</a> - Free, open-source advanced slicer</li>
-<li><a href="https://www.raise3d.com/ideamaker/">IdeaMaker Documentation</a> - Anycubic/Raise3D slicer documentation</li>
-<li><a href="https://www.raise3d.com/ideamaker">IdeaMaker Download</a> - Free slicer for Anycubic and other printers</li>
-<li><a href="https://slic3r.org/">Slic3r Documentation</a> - Original open-source command-line slicer</li>
-<li><a href="https://www.autodesk.com/products/fusion-360/overview">Fusion 360 Slicer</a> - Integrated slicer in Fusion 360 CAD</li>
-<li><a href="https://www.repetier.com/documentation/">Repetier-Host Documentation</a> - Host software with integrated slicing</li>
-<li><a href="3dMake_Foundation/Appendix_A_Comprehensive_Slicing_Guide.html">Appendix A: Comprehensive Slicing Guide</a> - Detailed comparison and setup guides for all major slicers</li>
-</ul>
-<h3 id="openscad-learning"><a class="header" href="#openscad-learning">OpenSCAD Learning</a></h3>
-<p>Tutorials &amp; Documentation:</p>
-<ul>
-<li><a href="https://openscad.org/documentation.html#tutorials">OpenSCAD Official Tutorials</a> - Step-by-step guides from the OpenSCAD project</li>
-<li><a href="https://en.wikibooks.org/wiki/OpenSCADUserManual">OpenSCAD User Manual</a> - Community-maintained comprehensive reference</li>
-<li><a href="https://openhome.cc/Codes/OpenSCAD/">OpenSCAD by Example</a> - Practical examples with code</li>
-<li><a href="https://learn.cadhub.xyz/blog/openscad-review/">CadHub OpenSCAD Guide</a> - Real-world applications and best practices</li>
-</ul>
-<p>Advanced Resources:</p>
-<ul>
-<li><a href="https://github.com/revarbat/BOSL2/wiki">BOSL2 Library Documentation</a> - Advanced shapes and transforms</li>
-<li><a href="https://openscad.org/libraries.html">OpenSCAD Libraries</a> - Complete library ecosystem</li>
-<li><a href="https://github.com/dotscad/dotscad">Dotscad</a> - Parametric design patterns library</li>
-<li><a href="https://github.com/openscad/openscad/wiki/Performance">OpenSCAD Performance Optimization</a> - Tips for faster rendering</li>
+<li><a href="https://www.prusa3d.com/page/prusaslicer424/">PrusaSlicer</a></li>
+<li><a href="https://bambulab.com/en/download/studio">Bambu Studio</a></li>
+<li><a href="https://ultimaker.com/software/ultimaker-cura">Cura</a></li>
+<li><a href="https://github.com/SoftFever/OrcaSlicer/releases">OrcaSlicer</a></li>
+<li><a href="3dMake_Foundation/Appendix_A_Comprehensive_Slicing_Guide.html">Appendix A: Comprehensive Slicing Guide</a> - Detailed setup guides for all major slicers</li>
 </ul>
 <h3 id="supplemental-textbooks"><a class="header" href="#supplemental-textbooks">Supplemental Textbooks</a></h3>
-<p>EPUB Textbooks:</p>
 <ul>
-<li><a href="assets/Programming_with_OpenSCAD.epub">Programming with OpenSCAD: A Beginner’s Guide to Coding 3D-Printable Objects</a> - Complete reference textbook (EPUB format)</li>
-<li><a href="assets/Simplifying_3D_Printing_with_OpenSCAD.epub">Simplifying 3D Printing with OpenSCAD</a> - Practical workflows and applications (EPUB format)</li>
-</ul>
-<p>Online Companion Resources:</p>
-<ul>
-<li><a href="https://programmingwithopenscad.github.io/learning.html">Programming with OpenSCAD Companion Resources</a> - Practice worksheets and teaching materials</li>
-<li><a href="https://programmingwithopenscad.github.io/quick-reference.html">Visual Quick Reference Guides</a> - Command syntax and geometry reference</li>
-<li><a href="https://github.com/ProgrammingWithOpenSCAD/CodeSolutions">Code Solutions Repository</a> - Working examples for all exercises</li>
-<li><a href="https://www.youtube.com/c/TeachingTech/playlists">Teaching Tech 3D Printing Guide</a> - Video tutorials and workflows</li>
-</ul>
-<h3 id="assistive-technology-design--research"><a class="header" href="#assistive-technology-design--research">Assistive Technology Design &amp; Research</a></h3>
-<p>Organizations &amp; Communities:</p>
-<ul>
-<li><a href="https://enablingthefuture.org/">e-NABLE Community Foundation</a> - 3D printed hand/arm devices</li>
-<li><a href="https://www.makersmakingchange.com/">Makers Making Change</a> - Open-source assistive designs</li>
-<li><a href="https://3dprint.nih.gov/">NIH 3D Print Exchange</a> - Medical and assistive models</li>
-<li><a href="https://www.printables.com/search/assistive">Printables - Assistive Technology</a> - Community models</li>
-<li><a href="https://www.thingiverse.com/search?q=adaptive">Thingiverse - Adaptive/Accessibility</a> - Model repository</li>
-<li><a href="https://www.youmagine.com/">YouMagine</a> - Open-source design platform</li>
-</ul>
-<p>Research &amp; Resources:</p>
-<ul>
-<li><a href="https://d-lab.mit.edu/">MIT D-Lab</a> - Design for development and assistive technology</li>
-<li><a href="https://www.designforall.org/">Design for All Institute</a> - Universal design principles</li>
-<li><a href="https://www.inclusivedesigntoolkit.org/">Inclusive Design Toolkit</a> - Design resources for disability</li>
-</ul>
-<h3 id="community--forums"><a class="header" href="#community--forums">Community &amp; Forums</a></h3>
-<p>OpenSCAD Community:</p>
-<ul>
-<li><a href="https://discord.gg/F2Nx2VxTB7">OpenSCAD Discord</a> - Real-time chat and support</li>
-<li><a href="https://www.reddit.com/r/openscad/">OpenSCAD Reddit</a> - Discussion forum for OpenSCAD users</li>
-<li><a href="https://groups.google.com/forum/#!forum/openscad">OpenSCAD Google Group</a> - Email-based discussion list</li>
-<li><a href="https://cadhub.xyz/community">CadHub Community</a> - Collaborative 3D design community</li>
-</ul>
-<p>3D Printing Community:</p>
-<ul>
-<li><a href="https://www.reddit.com/r/3Dprinting/">Reddit r/3Dprinting</a> - General 3D printing community</li>
-<li><a href="https://www.prusaprinters.org/community">Prusa Community</a> - Prusa-specific forum</li>
-<li><a href="https://forum.bambulab.com/">Bambu Lab Forum</a> - Bambu printer community</li>
-<li><a href="https://3dprinting.stackexchange.com/">3DPrinting Stack Exchange</a> - Q&amp;A platform for 3D printing</li>
-</ul>
-<h3 id="troubleshooting-resources"><a class="header" href="#troubleshooting-resources">Troubleshooting Resources</a></h3>
-<h3 id="common-issues"><a class="header" href="#common-issues">Common Issues</a></h3>
-<ul>
-<li><a href="3dMake_Foundation/Lessons_3dMake_10/common_issues_and_solutions.html">Common Issues and Solutions</a> - Course-specific troubleshooting guide</li>
-<li><a href="3dMake_Foundation/Lessons_3dMake_10/diagnostic_checklist.html">Diagnostic Checklist</a> - Step-by-step diagnostics</li>
-<li><a href="https://openscad.org/faq.html">OpenSCAD FAQ</a> - Frequently asked questions</li>
-<li><a href="https://help.prusa3d.com/en/article/troubleshooting3">PrusaSlicer Troubleshooting</a> - Prusa-specific solutions</li>
-</ul>
-<h3 id="tools-for-debugging"><a class="header" href="#tools-for-debugging">Tools for Debugging</a></h3>
-<ul>
-<li><a href="https://www.autodesk.com/products/netfabb/overview">Netfabb Online</a> - Free online mesh repair tool</li>
-<li><a href="https://www.meshmixer.com/">Meshmixer</a> - Advanced mesh editing and repair</li>
-<li><a href="https://www.meshlab.net/">MeshLab</a> - Open-source mesh processing</li>
-<li><a href="https://www.viewstl.com/">STL Viewer Online</a> - Quick STL preview without installing software</li>
-</ul>
-<h3 id="printer-specific-guides"><a class="header" href="#printer-specific-guides">Printer-Specific Guides</a></h3>
-<h3 id="prusa-printers"><a class="header" href="#prusa-printers">Prusa Printers</a></h3>
-<ul>
-<li><a href="https://help.prusa3d.com/en">Prusa Knowledge Base</a> - Official documentation and troubleshooting</li>
-<li><a href="https://www.prusa3d.com/en/print-safety-manual/">Prusa Assembly Guides</a> - Setup and calibration</li>
-</ul>
-<h3 id="bambu-lab-printers"><a class="header" href="#bambu-lab-printers">Bambu Lab Printers</a></h3>
-<ul>
-<li><a href="https://wiki.bambulab.com/en/home">Bambu Lab Wiki</a> - Complete documentation</li>
-<li><a href="https://support.bambulab.com/">Bambu Lab Support</a> - Customer support resources</li>
-</ul>
-<h3 id="anycubic-printers"><a class="header" href="#anycubic-printers">Anycubic Printers</a></h3>
-<ul>
-<li><a href="https://www.anycubic.com/pages/support-services">Anycubic Support</a> - Official support</li>
-<li><a href="https://www.anycubicforums.com/">Anycubic Community</a> - User forum</li>
-</ul>
-<h3 id="creality-printers"><a class="header" href="#creality-printers">Creality Printers</a></h3>
-<ul>
-<li><a href="https://www.creality.com/pages/download-guides">Creality Documentation</a> - Official guides</li>
-<li><a href="https://www.creality.com/pages/service">Creality Support</a> - Customer service</li>
+<li><a href="https://nostarch.com/programmingopenscad">Programming with OpenSCAD: A Beginner’s Guide</a></li>
+<li><a href="https://www.packtpub.com/en-us/product/simplifying-3d-printing-with-openscad-9781801813174">Simplifying 3D Printing with OpenSCAD</a></li>
+<li><a href="https://programmingwithopenscad.github.io/learning.html">Programming with OpenSCAD Companion Resources</a></li>
+<li><a href="https://github.com/ProgrammingWithOpenSCAD/CodeSolutions">Code Solutions Repository</a></li>
 </ul>
 <hr>
 <h2 id="local-resources-utah-makerspaces--community-printing"><a class="header" href="#local-resources-utah-makerspaces--community-printing">Local Resources: Utah Makerspaces &amp; Community Printing</a></h2>
 <h3 id="public-library-make-spaces"><a class="header" href="#public-library-make-spaces">Public Library Make Spaces</a></h3>
-<h3 id="salt-lake-city-public-library"><a class="header" href="#salt-lake-city-public-library">Salt Lake City Public Library</a></h3>
+<p><strong>Salt Lake City Public Library</strong></p>
 <ul>
 <li><a href="https://services.slcpl.org/creativelab">SLC Public Creative Lab</a> - Main Library (Level 1)
 <ul>
 <li>Hardware: Prusa i3 MK3, LulzBot Taz 5, Elegoo Mars 2 (resin)</li>
 <li>Pricing: Free for prints under 6 hours; $0.50/hr + material cost otherwise</li>
-<li>Website: <a href="https://services.slcpl.org/creativelab">https://services.slcpl.org/creativelab</a></li>
 </ul>
 </li>
 </ul>
-<h3 id="salt-lake-county-library-system"><a class="header" href="#salt-lake-county-library-system">Salt Lake County Library System</a></h3>
+<p><strong>Salt Lake County Library System</strong></p>
 <ul>
-<li><a href="https://www.slcolibrary.org/what-we-have/create">County Library “Create” Spaces</a> - Locations: Daybreak, Granite, Kearns, Syracuse, Tooele, and more
+<li><a href="https://www.slcolibrary.org/what-we-have/create">County Library “Create” Spaces</a>
 <ul>
 <li>Hardware: Flashforge Adventurer 5M Pro, LulzBot Workhorse, laser cutters</li>
 <li>Pricing: $0.06 per gram of filament used</li>
-<li>Website: <a href="https://www.slcolibrary.org/what-we-have/create">https://www.slcolibrary.org/what-we-have/create</a></li>
 </ul>
 </li>
 </ul>
 <h3 id="makerspaces--community-centers"><a class="header" href="#makerspaces--community-centers">Makerspaces &amp; Community Centers</a></h3>
-<h3 id="make-salt-lake"><a class="header" href="#make-salt-lake">Make Salt Lake</a></h3>
+<p><strong>Make Salt Lake</strong></p>
 <ul>
 <li>Location: 663 W 100 S, Salt Lake City, UT 84101</li>
 <li>Website: <a href="https://makesaltlake.org/">https://makesaltlake.org/</a></li>
 <li>Equipment: Full metal shop, CNC machines, large-scale FDM and resin printing</li>
-<li>Membership: Required; offers certification classes for advanced tools</li>
-<li>Community: Active maker community with regular workshops</li>
 </ul>
-<h3 id="university-of-utah-maker-spaces"><a class="header" href="#university-of-utah-maker-spaces">University of Utah Maker Spaces</a></h3>
+<p><strong>University of Utah Maker Spaces</strong></p>
 <ul>
-<li><a href="https://www.theblackbookofinnovation.com/lassonde-studios">Lassonde Studios</a> - Entrepreneurship and innovation hub</li>
-<li><a href="https://lib.utah.edu/protospace.php">Marriott Library ProtoSpace</a> - 3D printing and fabrication</li>
-<li><a href="https://lib.utah.edu/services/">Eccles Health Sciences Library Technology Hub</a> - Biomedical device development</li>
-</ul>
-<h3 id="utah-valley-university"><a class="header" href="#utah-valley-university">Utah Valley University</a></h3>
-<ul>
-<li><a href="https://www.uvu.edu/maker/">UVU Maker Hub</a> - Open to community members</li>
-<li>Equipment: Large format 3D printers, laser cutters, CNC machines</li>
-</ul>
-<h3 id="school--educational-programs"><a class="header" href="#school--educational-programs">School &amp; Educational Programs</a></h3>
-<h3 id="salt-lake-city-schools"><a class="header" href="#salt-lake-city-schools">Salt Lake City Schools</a></h3>
-<ul>
-<li>STEM Lab programs in select elementary and secondary schools</li>
-<li>Advanced manufacturing pathways in Career and Technical Education (CTE)</li>
-<li>Contact: Salt Lake City School District STEM Coordinator</li>
-</ul>
-<h3 id="weber-school-district"><a class="header" href="#weber-school-district">Weber School District</a></h3>
-<ul>
-<li>Advanced Manufacturing Programs</li>
-<li>3D Design and Fabrication courses in multiple high schools</li>
-</ul>
-<h3 id="online-printing-services-when-local-access-unavailable"><a class="header" href="#online-printing-services-when-local-access-unavailable">Online Printing Services (When Local Access Unavailable)</a></h3>
-<h3 id="national--international-services"><a class="header" href="#national--international-services">National &amp; International Services</a></h3>
-<ul>
-<li><a href="https://www.shapeways.com/">Shapeways</a> - Professional print service with multiple materials</li>
-<li><a href="https://www.sculpteo.com/">Sculpteo</a> - Online 3D printing platform</li>
-<li><a href="https://www.ponoko.com/">Ponoko</a> - Custom manufacturing platform</li>
-<li><a href="https://www.3dhubs.com/">3D Hubs</a> - Community-based distributed manufacturing</li>
-<li><a href="https://localmotors.com/">Local Motors</a> - Custom manufacturing and consulting</li>
-</ul>
-<h3 id="material-suppliers-utah--regional"><a class="header" href="#material-suppliers-utah--regional">Material Suppliers (Utah &amp; Regional)</a></h3>
-<p>Local Filament Suppliers:</p>
-<ul>
-<li><a href="https://www.matterhackers.com/">MatterHackers</a> - Online with local Utah roots; wide material selection</li>
-<li><a href="https://www.hatchbox3d.com/">Hatchbox</a> - Reliable filament available at local retailers</li>
-<li><a href="https://shop.prusa3d.com/en/prusament">Prusament</a> - Premium Prusa filament</li>
-</ul>
-<p>Regional Retailers:</p>
-<ul>
-<li>Local Best Buy, Micro Center, and Fry’s Electronics locations carry common filaments</li>
-<li>Amazon Prime for next-day delivery on most materials</li>
-<li>Local makerspaces often sell filament at cost</li>
-</ul>
-<h3 id="recycling--sustainability"><a class="header" href="#recycling--sustainability">Recycling &amp; Sustainability</a></h3>
-<h3 id="3d-printing-waste"><a class="header" href="#3d-printing-waste">3D Printing Waste</a></h3>
-<ul>
-<li><a href="https://www.fused3d.com/">Fused Filament Fab</a> - Filament recycling programs</li>
-<li>Salt Lake City Recycling Center: Accepts PLA and PETG at select locations</li>
-<li>Local makerspaces: Often have filament recycling programs</li>
-</ul>
-<h3 id="professional-development--certifications"><a class="header" href="#professional-development--certifications">Professional Development &amp; Certifications</a></h3>
-<h3 id="organizations-offering-training"><a class="header" href="#organizations-offering-training">Organizations Offering Training</a></h3>
-<ul>
-<li><a href="https://makesaltlake.org/classes/">Make Salt Lake Workshops</a> - Regular classes and certifications</li>
-<li><a href="https://continue.utah.edu/">University of Utah Continuing Education</a> - Professional development courses</li>
-<li><a href="https://www.weber.edu/cepe/">Weber State University</a> - Continuing education programs</li>
+<li><a href="https://www.theblackbookofinnovation.com/lassonde-studios">Lassonde Studios</a></li>
+<li><a href="https://lib.utah.edu/protospace.php">Marriott Library ProtoSpace</a></li>
 </ul>
 <hr>
 <h2 id="troubleshooting--getting-help"><a class="header" href="#troubleshooting--getting-help">Troubleshooting &amp; Getting Help</a></h2>
-<h3 id="if-youre-stuck"><a class="header" href="#if-youre-stuck">If you’re stuck</a></h3>
+<p>If you’re stuck:</p>
 <ol>
 <li>Check <a href="3dMake_Foundation/Lessons_3dMake_10/common_issues_and_solutions.html">Common Issues and Solutions</a></li>
+<li>Check <a href="3dMake_Foundation/Lessons_3dMake_10/diagnostic_checklist.html">Diagnostic Checklist</a></li>
 <li>Post in <a href="https://discord.gg/F2Nx2VxTB7">OpenSCAD Discord</a> or <a href="https://www.reddit.com/r/openscad/">Reddit</a></li>
 <li>Visit your local makerspace for hands-on support</li>
-<li>Check printer-specific forums (Prusa, Bambu Lab, Anycubic, etc.)</li>
 </ol>
-<h3 id="for-accessibility-support"><a class="header" href="#for-accessibility-support">For accessibility support</a></h3>
+<p>For accessibility support:</p>
 <ul>
 <li>Contact your NVDA/JAWS vendor directly for technical assistance</li>
-<li>Post accessibility-specific questions in <a href="https://www.reddit.com/r/openscad/">OpenSCAD community</a></li>
-<li>This course’s GitHub Issues page for curriculum-specific questions</li>
+<li>Refer to the <a href="Setup/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.html">Screen Reader Accessibility Guide</a></li>
+<li>Check the <a href="GitBash_Foundation/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.html">Git Bash Screen Reader Guide</a> if using Git Bash</li>
 </ul>
 
                     </main>
@@ -889,6 +726,7 @@
         <script src="book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
+        <script src="theme/theme-05ece643.js"></script>
 
 
 

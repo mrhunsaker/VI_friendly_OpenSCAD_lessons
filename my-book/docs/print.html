@@ -75,7 +75,11 @@
         <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="theme/catppuccin-be25834e.css">
+        <link rel="stylesheet" href="theme/catppuccin-mocha-9074ae6c.css">
+        <link rel="stylesheet" href="theme/catppuccin-latte-8eeddf61.css">
+        <link rel="stylesheet" href="theme/catppuccin-frappe-d9e8d159.css">
+        <link rel="stylesheet" href="theme/catppuccin-macchiato-166c5c34.css">
+        <link rel="stylesheet" href="theme/theme-77a2ca43.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -83,10 +87,10 @@
             const path_to_root = "";
             const default_light_theme = "latte";
             const default_dark_theme = "mocha";
-            window.path_to_searchindex_js = "searchindex-a4c66f4b.js";
+            window.path_to_searchindex_js = "searchindex-14e324a6.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-6a7ae851.js"></script>
+        <script src="toc-e7daac89.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -238,9 +242,10 @@
 <p>Before choosing a command-line pathway, students learn to optimize their screen reader setup for terminal work and understand accessibility options.</p>
 <p>What’s Included:</p>
 <ul>
-<li><a href="#setup_screen_reader_accessibility_guide-screen_reader_accessibility_guide">Screen Reader Accessibility Guide</a> - Comprehensive NVDA &amp; JAWS reference with terminal tips</li>
+<li><a href="#setup_screen_reader_accessibility_guide-screen_reader_accessibility_guide">Screen Reader Accessibility Guide</a> - Comprehensive NVDA &amp; JAWS reference with terminal tips for PowerShell, CMD, and Git Bash</li>
 <li><a href="#setup_screen_reader_choice-screen_reader_choice">Screen Reader Choice: Windows CLI</a> - Help choosing between NVDA and JAWS</li>
 <li><a href="#setup_braille_displays-braille_displays">Braille Display &amp; Terminal Mode</a> - Advanced accessibility setup with refreshable braille displays</li>
+<li><a href="#setup_editor_selection_setup-editor_selection_setup">Editor Selection and Setup</a> - Choosing and configuring an accessible text editor</li>
 </ul>
 <p>Why start here? Screen reader optimization is the foundation for all command-line work. Students learn keyboard shortcuts, navigation techniques, and terminal-specific accessibility before diving into any CLI pathway.</p>
 <hr>
@@ -259,6 +264,11 @@
 <hr>
 <h4 id="part-2a-powershell-foundation-recommended-for-windows-users"><a class="header" href="#part-2a-powershell-foundation-recommended-for-windows-users">Part 2A: PowerShell Foundation (Recommended for Windows Users)</a></h4>
 <p>Where to Start: <a href="#powershell_foundation_powershell_curriculum_overview-powershell_curriculum_overview">PowerShell Curriculum Overview</a></p>
+<p>Introductory &amp; Reference Materials:</p>
+<ul>
+<li><a href="#powershell_foundation_powershell_introduction-powershell_introduction">PowerShell Introduction</a> - Screen-reader-friendly quick-start guide (JAWS/NVDA)</li>
+<li><a href="PowerShell_Foundation/Powershell_Tutorial/Powershell_Tutorial.html">PowerShell Tutorial</a> - Hands-on tutorial covering paths, navigation, and common operations</li>
+</ul>
 <p>Lessons Included:</p>
 <ul>
 <li>PS-Pre: Your First Terminal - Opening PowerShell, first commands, screen reader tricks</li>
@@ -271,7 +281,9 @@
 <li>PS-6: Advanced Terminal Techniques - Scripts, functions, professional workflows</li>
 <li>PowerShell Unit Test &amp; Practice - Comprehensive self-assessment</li>
 </ul>
-<p>Time commitment: 30-45 hours (for screen reader users)<br>Best for: Users who want modern features and advanced automation<br>Skills: Terminal navigation, piping, advanced scripting, professional automation</p>
+<p>Time commitment: 30-45 hours (for screen reader users)
+Best for: Users who want modern Windows features and advanced automation
+Skills: Terminal navigation, piping, advanced scripting, professional automation</p>
 <h4 id="part-2b-windows-command-prompt-foundation-simplified-alternative"><a class="header" href="#part-2b-windows-command-prompt-foundation-simplified-alternative">Part 2B: Windows Command Prompt Foundation (Simplified Alternative)</a></h4>
 <p>Where to Start: <a href="#cmd_foundation_cmd_curriculum_overview-cmd_curriculum_overview">CMD Curriculum Overview</a></p>
 <p>Lessons Included:</p>
@@ -286,25 +298,35 @@
 <li>CMD-6: Advanced Terminal Techniques - Scripts, automation, professional workflows</li>
 <li>CMD Unit Test &amp; Practice - Comprehensive self-assessment</li>
 </ul>
-<p>Time commitment: 30-45 hours (for screen reader users)<br>Best for: Absolute beginners or users who prefer simplicity<br>Skills: Terminal navigation, file operations, batch scripting, basic automation</p>
+<p>Time commitment: 30-45 hours (for screen reader users)
+Best for: Absolute beginners or users who prefer simplicity
+Skills: Terminal navigation, file operations, batch scripting, basic automation</p>
 <h4 id="part-2c-git-bash-foundation-cross-platform-skills"><a class="header" href="#part-2c-git-bash-foundation-cross-platform-skills">Part 2C: Git Bash Foundation (Cross-Platform Skills)</a></h4>
 <p>Where to Start: <a href="#gitbash_foundation_gitbash_curriculum_overview-gitbash_curriculum_overview">Git Bash Curriculum Overview</a></p>
+<p>Introductory &amp; Reference Materials:</p>
+<ul>
+<li><a href="#gitbash_foundation_gitbash_introduction-gitbash_introduction">Git Bash Introduction</a> - Screen-reader-friendly quick-start guide (JAWS/NVDA)</li>
+<li><a href="#gitbash_foundation_gitbash_tutorial-gitbash_tutorial">Git Bash Tutorial</a> - Hands-on tutorial covering paths, navigation, and common operations</li>
+<li><a href="#gitbash_foundation_screen_reader_accessibility_guide-screen_reader_accessibility_guide">Screen Reader Accessibility Guide for Git Bash</a> - NVDA and JAWS configuration for Git Bash</li>
+</ul>
 <p>Lessons Included:</p>
 <ul>
 <li>GitBash-Pre: Your First Terminal - Opening Git Bash, first commands, screen reader tricks</li>
-<li>GitBash-0: Getting Started - Paths, shortcuts, command basics</li>
+<li>GitBash-0: Getting Started - Paths, shortcuts, Unix path notation</li>
 <li>GitBash-1: Navigation - Moving around the file system confidently</li>
 <li>GitBash-2: File and Folder Manipulation - Creating, editing, moving files</li>
 <li>GitBash-3: Input, Output &amp; Piping - Redirecting output, piping commands</li>
-<li>GitBash-4: Environment Variables &amp; Aliases - Setting variables, shortcuts</li>
+<li>GitBash-4: Environment Variables &amp; Aliases - Setting variables, creating shortcuts</li>
 <li>GitBash-5: Filling in the Gaps - Shell profiles, history, debugging</li>
 <li>GitBash-6: Advanced Terminal Techniques - Scripts, functions, professional workflows</li>
 <li>GitBash Unit Test &amp; Practice - Comprehensive self-assessment</li>
 </ul>
-<p>Time commitment: 20-25 hours (for screen reader users)<br>Best for: Users who want cross-platform skills (Windows, macOS, Linux)<br>Skills: Unix/bash commands, shell scripting, cross-platform automation</p>
-<p>Important: Choose ONE pathway and complete it fully. All three teach identical fundamental concepts using different tools. Each integrates fully with 3D design workflows.</p>
+<p>Time commitment: 20-25 hours (for screen reader users)
+Best for: Users who want cross-platform skills (Windows, macOS, Linux)
+Skills: Unix/bash commands, shell scripting, cross-platform automation</p>
+<p><strong>Important:</strong> Choose ONE pathway and complete it fully. All three teach identical fundamental concepts using different tools. Each integrates fully with 3D design workflows.</p>
 <hr>
-<h3 id="part-3-3dmake-foundation--design-11-lessons--8-appendices"><a class="header" href="#part-3-3dmake-foundation--design-11-lessons--8-appendices">Part 3: 3dMake Foundation &amp; Design (11 Lessons + 8 Appendices)</a></h3>
+<h3 id="part-3-3dmake-foundation--design-11-lessons--6-appendices"><a class="header" href="#part-3-3dmake-foundation--design-11-lessons--6-appendices">Part 3: 3dMake Foundation &amp; Design (11 Lessons + 6 Appendices)</a></h3>
 <p>Where to Start: <a href="#3dmake_foundation_3dmake_intro-3dmake_intro">3dMake Introduction</a></p>
 <p>Students build parametric 3D designs using OpenSCAD and automate the workflow with 3DMake.</p>
 <h4 id="main-curriculum-11-progressive-lessons"><a class="header" href="#main-curriculum-11-progressive-lessons">Main Curriculum: 11 Progressive Lessons</a></h4>
@@ -331,16 +353,14 @@
 <li>Lesson 8: Added Assembly Best Practices (snap-fits, threading, alignment, exploded views)</li>
 <li>Lesson 9: Added File Import/Export (import, include vs use, multi-file projects)</li>
 </ul>
-<h4 id="8-comprehensive-reference-appendices"><a class="header" href="#8-comprehensive-reference-appendices">8 Comprehensive Reference Appendices</a></h4>
+<h4 id="6-comprehensive-reference-appendices"><a class="header" href="#6-comprehensive-reference-appendices">6 Comprehensive Reference Appendices</a></h4>
 <ul>
-<li>Appendix A: Introduction to Command Line Interfaces - CLI overview</li>
-<li>Appendix B: PowerShell Comprehensive Guide - Detailed PowerShell reference</li>
-<li>Appendix C: Comprehensive Slicing Guide - All major slicers (PrusaSlicer, Bambu Studio, Cura, OrcaSlicer)</li>
-<li>Appendix D: Material Properties &amp; Selection - Material reference with properties</li>
-<li>Appendix E: Tolerance Testing &amp; Quality Assurance Matrix - QA procedures</li>
-<li>Appendix F: PowerShell Integration for SCAD Workflows - Automation and batch processing</li>
-<li>Appendix G: Advanced OpenSCAD Concepts - 5 specialized topics (Gears, Batch Processing, Performance, Print Orientation, Recursion)</li>
-<li>Appendix H: 3dMake Code Examples &amp; Assets - OpenSCAD code examples and reference designs</li>
+<li><a href="#3dmake_foundation-appendix_a_comprehensive_slicing_guide">Appendix A: Comprehensive Slicing Guide</a> - Complete reference for PrusaSlicer, Bambu Studio, Cura, and OrcaSlicer configuration</li>
+<li><a href="#3dmake_foundation-appendix_b_material_properties">Appendix B: Material Properties &amp; Selection Guide</a> - Detailed material reference including shrinkage data, print settings, and properties</li>
+<li><a href="#3dmake_foundation-appendix_c_tolerance_qa">Appendix C: Tolerance Testing &amp; Quality Assurance Matrix</a> - Comprehensive QA procedures and tolerance validation methods</li>
+<li><a href="#3dmake_foundation-appendix_d_powershell_integration">Appendix D: PowerShell Integration for SCAD Workflows</a> - Batch processing, automation scripts, and advanced workflow integration</li>
+<li><a href="#3dmake_foundation-appendix_e_advanced_openscad_concepts">Appendix E: Advanced OpenSCAD Concepts</a> - Specialized topics including gears, batch processing, performance, print orientation, and recursion</li>
+<li><a href="assets/3dMake_Foundation/README.html">Appendix F: 3dMake Code Examples &amp; Assets</a> - OpenSCAD code examples and reference designs</li>
 </ul>
 <hr>
 <h2 id="the-accessible-toolchain"><a class="header" href="#the-accessible-toolchain">The Accessible Toolchain</a></h2>
@@ -396,9 +416,17 @@
 <h2 id="learning-support"><a class="header" href="#learning-support">Learning Support</a></h2>
 <h3 id="reference-materials"><a class="header" href="#reference-materials">Reference Materials</a></h3>
 <p>Quick navigation to common topics:</p>
-<p><a href="#3dmake_foundation_lessons_3dmake_2-openscad-cheat-sheet">OpenSCAD Cheat Sheet</a> - Syntax quick-reference<br><a href="#3dmake_foundation_lessons_3dmake_1-3dmake-setup-guide">3dMake Setup Guide</a> - Installation walkthrough<br><a href="#3dmake_foundation_lessons_3dmake_1-vscode-setup-guide">VSCode Setup Guide</a> - Accessibility configuration<br><a href="#3dmake_foundation_lessons_3dmake_1-vocabulary-glossary">Vocabulary Glossary</a> - Course terminology<br><a href="3dMake_Foundation/Lessons_3dMake_5/filament-comparison-table.html">Filament Comparison Table</a> - Material reference<br><a href="#3dmake_foundation_lessons_3dmake_11-master-rubric">Master Rubric</a> - Project assessment criteria</p>
+<p><a href="#3dmake_foundation_lessons_3dmake_2-openscad-cheat-sheet">OpenSCAD Cheat Sheet</a> - Syntax quick-reference
+<a href="#3dmake_foundation_lessons_3dmake_1-3dmake-setup-guide">3dMake Setup Guide</a> - Installation walkthrough
+<a href="#3dmake_foundation_lessons_3dmake_1-vscode-setup-guide">VSCode Setup Guide</a> - Accessibility configuration
+<a href="#3dmake_foundation_lessons_3dmake_1-vocabulary-glossary">Vocabulary Glossary</a> - Course terminology
+<a href="3dMake_Foundation/Lessons_3dMake_5/filament-comparison-table.html">Filament Comparison Table</a> - Material reference
+<a href="#3dmake_foundation_lessons_3dmake_11-master-rubric">Master Rubric</a> - Project assessment criteria</p>
 <h3 id="navigation"><a class="header" href="#navigation">Navigation</a></h3>
-<p><a href="SUMMARY.html">SUMMARY.md</a> - Complete table of contents<br><a href="#3dmake_foundation-3dmake_foundation_curriculum_guide">Curriculum Guide</a> - Detailed overview of all lessons and appendices<br><a href="#3dmake_foundation-3dmake_quick_reference">Quick Reference</a> - At-a-glance command and syntax reference<br><a href="#appendices-appendices">Appendices</a> - PowerShell and 3dMake reference materials</p>
+<p><a href="SUMMARY.html">SUMMARY.md</a> - Complete table of contents
+<a href="#3dmake_foundation-3dmake_foundation_curriculum_guide">Curriculum Guide</a> - Detailed overview of all lessons and appendices
+<a href="#3dmake_foundation-3dmake_quick_reference">Quick Reference</a> - At-a-glance command and syntax reference
+<a href="#appendices-appendices">Appendices</a> - 3dMake reference materials</p>
 <hr>
 <h2 id="supplemental-resources--textbooks"><a class="header" href="#supplemental-resources--textbooks">Supplemental Resources &amp; Textbooks</a></h2>
 <p>This course is enhanced by comprehensive textbooks and companion materials from the <em>Programming with OpenSCAD</em> project:</p>
@@ -408,13 +436,16 @@
 <li><a href="https://www.packtpub.com/en-us/product/simplifying-3d-printing-with-openscad-9781801813174">Simplifying 3D Printing with OpenSCAD</a> - Focused on practical workflows, optimization, and real-world printing scenarios.</li>
 </ul>
 <h3 id="companion-teaching-resources"><a class="header" href="#companion-teaching-resources">Companion Teaching Resources</a></h3>
-<p><a href="https://programmingwithopenscad.github.io/learning.html">Practice Worksheets</a> - Printable worksheets for visualization practice, decomposition exercises, vocabulary building, and assessment.<br><a href="https://programmingwithopenscad.github.io/quick-reference.html">Visual Quick Reference</a> - Command syntax guides and geometry reference.<br><a href="https://github.com/ProgrammingWithOpenSCAD/CodeSolutions">Code Solutions Repository</a> - Working OpenSCAD examples organized by topic (3D shapes, transformations, loops, modules, if-statements, advanced techniques).</p>
+<p><a href="https://programmingwithopenscad.github.io/learning.html">Practice Worksheets</a> - Printable worksheets for visualization practice, decomposition exercises, vocabulary building, and assessment.
+<a href="https://programmingwithopenscad.github.io/quick-reference.html">Visual Quick Reference</a> - Command syntax guides and geometry reference.
+<a href="https://github.com/ProgrammingWithOpenSCAD/CodeSolutions">Code Solutions Repository</a> - Working OpenSCAD examples organized by topic (3D shapes, transformations, loops, modules, if-statements, advanced techniques).</p>
 <hr>
 <h2 id="getting-started"><a class="header" href="#getting-started">Getting Started</a></h2>
 <p>For Students:</p>
 <ol>
-<li>Start with <a href="PowerShell_Foundation/Powershell_Introduction/Powershell_Introduction.html">PowerShell Introduction</a></li>
-<li>Complete PowerShell lessons (PS.0-PS.5)</li>
+<li>Start with <a href="#setup_screen_reader_accessibility_guide-screen_reader_accessibility_guide">Part 1: Setup &amp; Accessibility Fundamentals</a></li>
+<li>Read <a href="#command_line_interface_selection-command_line_interface_selection">Command Line Interface Selection Guide</a> to choose your CLI pathway</li>
+<li>Complete your chosen CLI Foundation (PowerShell, CMD, or Git Bash)</li>
 <li>Begin <a href="#3dmake_foundation_3dmake_intro-3dmake_intro">3dMake Introduction</a></li>
 <li>Follow <a href="#3dmake_foundation_lessons_3dmake_1-lessons_3dmake_1">Lesson 1: Environmental Configuration</a></li>
 <li>Continue through Lesson 11</li>
@@ -429,7 +460,7 @@
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="syllabus"><a class="header" href="#syllabus">3D Design &amp; Printing Curriculum - Non-Visual Toolchain Edition</a></h1>
 <p><strong>Author</strong>: Michael Ryan Hunsaker, M.Ed., Ph.D.
-<strong>Last Updated</strong>: 2026-02-20
+<strong>Last Updated</strong>: 2026-02-22
 <strong>Target Audience</strong>: Blind and visually impaired high school students; anyone learning 3D design and printing through screen reader-accessible workflows.</p>
 <hr>
 <h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
@@ -440,7 +471,7 @@
 <h3 id="core-philosophy"><a class="header" href="#core-philosophy">Core Philosophy</a></h3>
 <ol>
 <li>
-<p>Text-First Design: All core work happens in text editors and command-line interfaces-no graphical CAD previews, no mouse-dependent menu navigation.</p>
+<p>Text-First Design: All core work happens in text editors and command-line interfaces - no graphical CAD previews, no mouse-dependent menu navigation.</p>
 </li>
 <li>
 <p>Parametric Thinking: Students learn to express geometry as code using OpenSCAD, enabling precise, reproducible, and iterable designs without visual feedback.</p>
@@ -457,72 +488,97 @@
 </ol>
 <hr>
 <h2 id="curriculum-structure--scopesequence"><a class="header" href="#curriculum-structure--scopesequence">Curriculum Structure &amp; Scope/Sequence</a></h2>
-<h3 id="part-1-command-line-foundation-prerequisite---20-25-hours"><a class="header" href="#part-1-command-line-foundation-prerequisite---20-25-hours">Part 1: Command-Line Foundation (Prerequisite - 20-25 hours)</a></h3>
-<p>Start here: <a href="Command_Line_Interface_Selection.html">Command Line Interface Selection Guide</a></p>
-<p>Students who have never opened a terminal begin with foundational command-line skills. Choose one of three equivalent pathways based on your operating system and preferences. All three pathways teach the same concepts and prepare you equally well for 3dMake work.</p>
-<h4 id="-step-1-choose-your-pathway"><a class="header" href="#-step-1-choose-your-pathway">🔍 Step 1: Choose Your Pathway</a></h4>
-<p><a href="Command_Line_Interface_Selection.html">→ Command Line Interface Selection Guide</a> - Read this first to compare PowerShell, CMD, and Git Bash and choose which works best for you.</p>
-<hr>
-<h4 id="pathway-a-powershell-foundation-recommended-for-windows"><a class="header" href="#pathway-a-powershell-foundation-recommended-for-windows">Pathway A: PowerShell Foundation (Recommended for Windows)</a></h4>
-<p>Total Duration: 30-45 hours<br>Start here: <a href="#powershell_foundation_powershell_curriculum_overview-powershell_curriculum_overview">PowerShell Curriculum Overview</a></p>
+<h3 id="part-1-setup--accessibility-fundamentals-prerequisite---2-3-hours"><a class="header" href="#part-1-setup--accessibility-fundamentals-prerequisite---2-3-hours">Part 1: Setup &amp; Accessibility Fundamentals (Prerequisite - 2-3 hours)</a></h3>
+<p>Start here: <a href="#setup_screen_reader_accessibility_guide-screen_reader_accessibility_guide">Screen Reader Accessibility Guide</a></p>
+<p>Before choosing a command-line pathway, students optimize their screen reader setup for terminal work.</p>
 <div class="table-wrapper">
 <table>
 <thead>
 <tr><th>Component</th><th>Duration</th><th>Content</th></tr>
 </thead>
 <tbody>
-<tr><td>Screen Reader Accessibility Guide</td><td>1.5-2 hours</td><td>NVDA/JAWS reference, navigation sequences, handling output, keyboard shortcuts</td></tr>
-<tr><td>PS-Pre: Your First Terminal</td><td>2-2.5 hours</td><td>Opening PowerShell, first commands, basic navigation, screen reader tricks</td></tr>
-<tr><td>PS-0: Getting Started</td><td>1.5 hours</td><td>Paths, shortcuts, tab completion</td></tr>
-<tr><td>PS-1: Navigation</td><td>2-2.5 hours</td><td>Moving around the file system confidently</td></tr>
-<tr><td>PS-2: File &amp; Folder Manipulation</td><td>2.5-3 hours</td><td>Creating, editing, moving, copying, deleting files and directories</td></tr>
-<tr><td>PS-3: Input, Output &amp; Piping</td><td>2.5-3 hours</td><td>Redirecting output, piping commands, understanding data flow</td></tr>
-<tr><td>PS-4: Environment Variables &amp; Aliases</td><td>2-2.5 hours</td><td>Setting variables, creating shortcuts, persistent configurations</td></tr>
-<tr><td>PS-5: Filling in the Gaps</td><td>2.5-3 hours</td><td>Control flow, profiles, useful tricks, scripting fundamentals</td></tr>
-<tr><td>PS-6: Advanced Techniques</td><td>3-3.5 hours</td><td>Scripts, functions, professional workflows, automation patterns</td></tr>
-<tr><td>PS Unit Test &amp; Practice</td><td>2-3 hours</td><td>Practice exercises, assessment, reinforcement</td></tr>
+<tr><td><a href="#setup_screen_reader_accessibility_guide-screen_reader_accessibility_guide">Screen Reader Accessibility Guide</a></td><td>1-1.5 hours</td><td>NVDA/JAWS reference for PowerShell, CMD, and Git Bash; keyboard shortcuts</td></tr>
+<tr><td><a href="#setup_screen_reader_choice-screen_reader_choice">Screen Reader Choice: Windows CLI</a></td><td>30 min</td><td>Comparing NVDA, JAWS, Narrator, and Dolphin; choosing the right tool</td></tr>
+<tr><td><a href="#setup_braille_displays-braille_displays">Braille Display &amp; Terminal Mode</a></td><td>30 min</td><td>Optional: configuring refreshable braille displays for terminal work</td></tr>
+<tr><td><a href="#setup_editor_selection_setup-editor_selection_setup">Editor Selection and Setup</a></td><td>30 min</td><td>Choosing Notepad, Notepad++, or VS Code; configuring indent announcement</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h3 id="part-2-command-line-foundation-choose-your-path-1"><a class="header" href="#part-2-command-line-foundation-choose-your-path-1">Part 2: Command-Line Foundation (Choose Your Path)</a></h3>
+<p>Start here: <a href="#command_line_interface_selection-command_line_interface_selection">Command Line Interface Selection Guide</a></p>
+<p>Students master terminal/command-line fundamentals before learning 3D design. Choose one of three equivalent pathways based on your operating system and preferences. All three pathways teach the same concepts and prepare you equally well for 3dMake work.</p>
+<p><strong>Important:</strong> Choose ONE pathway and complete it fully before starting 3dMake Lesson 9. Lessons 1-8 can begin without CLI foundation, but Lesson 9+ requires command-line fluency.</p>
+<hr>
+<h4 id="pathway-a-powershell-foundation-recommended-for-windows"><a class="header" href="#pathway-a-powershell-foundation-recommended-for-windows">Pathway A: PowerShell Foundation (Recommended for Windows)</a></h4>
+<p>Total Duration: 30-45 hours
+Start here: <a href="#powershell_foundation_powershell_curriculum_overview-powershell_curriculum_overview">PowerShell Curriculum Overview</a></p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Component</th><th>Duration</th><th>Content</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="#powershell_foundation_powershell_introduction-powershell_introduction">PowerShell Introduction</a></td><td>20-30 min</td><td>Screen-reader-friendly quick-start (JAWS/NVDA); essential commands overview</td></tr>
+<tr><td><a href="PowerShell_Foundation/Powershell_Tutorial/Powershell_Tutorial.html">PowerShell Tutorial</a></td><td>30-45 min</td><td>Hands-on tutorial: paths, navigation, wildcards, running scripts</td></tr>
+<tr><td><a href="#powershell_foundation_ps_pre_your_first_terminal-ps_pre_your_first_terminal">PS-Pre: Your First Terminal</a></td><td>2-2.5 hours</td><td>Opening PowerShell, first commands, basic navigation, screen reader tricks</td></tr>
+<tr><td><a href="#powershell_foundation_ps_0_getting_started_layout_paths-ps_0_getting_started_layout_paths">PS-0: Getting Started</a></td><td>1.5 hours</td><td>Paths, shortcuts, tab completion</td></tr>
+<tr><td><a href="#powershell_foundation_ps_1_navigation-ps_1_navigation">PS-1: Navigation</a></td><td>2-2.5 hours</td><td>Moving around the file system confidently</td></tr>
+<tr><td><a href="#powershell_foundation_ps_2_file_folder_manipulation_modification-ps_2_file_folder_manipulation_modification">PS-2: File &amp; Folder Manipulation</a></td><td>2.5-3 hours</td><td>Creating, editing, moving, copying, deleting files and directories</td></tr>
+<tr><td><a href="#powershell_foundation_ps_3_input_output_piping-ps_3_input_output_piping">PS-3: Input, Output &amp; Piping</a></td><td>2.5-3 hours</td><td>Redirecting output, piping commands, understanding data flow</td></tr>
+<tr><td><a href="#powershell_foundation_ps_4_environment_variables_aliases-ps_4_environment_variables_aliases">PS-4: Environment Variables &amp; Aliases</a></td><td>2-2.5 hours</td><td>Setting variables, creating shortcuts, persistent configurations</td></tr>
+<tr><td><a href="#powershell_foundation_ps_5_filling_in_the_gaps-ps_5_filling_in_the_gaps">PS-5: Filling in the Gaps</a></td><td>2.5-3 hours</td><td>Control flow, profiles, useful tricks, scripting fundamentals</td></tr>
+<tr><td><a href="#powershell_foundation_ps_6_advanced_techniques-ps_6_advanced_techniques">PS-6: Advanced Terminal Techniques</a></td><td>4-4.5 hours</td><td>Scripts, functions, loops, professional workflows, automation patterns</td></tr>
+<tr><td><a href="#powershell_foundation_ps_unit_test-ps_unit_test">PowerShell Unit Test &amp; Practice</a></td><td>2-3 hours</td><td>Practice exercises, assessment, reinforcement</td></tr>
 </tbody>
 </table>
 </div>
 <p>Outcomes: Terminal fluency, file system mastery, basic scripting, screen reader optimization, automation readiness</p>
 <hr>
 <h4 id="pathway-b-windows-command-prompt-cmd-simpler-alternative"><a class="header" href="#pathway-b-windows-command-prompt-cmd-simpler-alternative">Pathway B: Windows Command Prompt (CMD) (Simpler alternative)</a></h4>
-<p>Total Duration: 30-45 hours<br>Start here: <a href="#cmd_foundation_cmd_curriculum_overview-cmd_curriculum_overview">CMD Curriculum Overview</a></p>
+<p>Total Duration: 30-45 hours
+Start here: <a href="#cmd_foundation_cmd_curriculum_overview-cmd_curriculum_overview">CMD Curriculum Overview</a></p>
 <div class="table-wrapper">
 <table>
 <thead>
 <tr><th>Component</th><th>Duration</th><th>Content</th></tr>
 </thead>
 <tbody>
-<tr><td>CMD-Pre: Your First Terminal</td><td>2-2.5 hours</td><td>Opening CMD, first commands, basic navigation, screen reader tricks</td></tr>
-<tr><td>CMD-0: Getting Started</td><td>1.5 hours</td><td>Paths, shortcuts, command basics</td></tr>
-<tr><td>CMD-1: Navigation</td><td>2-2.5 hours</td><td>Moving around the file system confidently</td></tr>
-<tr><td>CMD-2: File &amp; Folder Manipulation</td><td>2.5-3 hours</td><td>Creating, editing, moving, copying, deleting files and directories</td></tr>
-<tr><td>CMD-3: Input, Output &amp; Redirection</td><td>2-2.5 hours</td><td>Redirecting output, piping commands, understanding data flow</td></tr>
-<tr><td>CMD-4: Environment Variables &amp; Shortcuts</td><td>2-2.5 hours</td><td>Setting variables, creating shortcuts, persistent configurations</td></tr>
-<tr><td>CMD-5: Filling in the Gaps</td><td>2.5-3 hours</td><td>Batch files, advanced techniques, scripting fundamentals</td></tr>
-<tr><td>CMD-6: Advanced Techniques</td><td>3-3.5 hours</td><td>Scripts, automation patterns, professional workflows</td></tr>
-<tr><td>CMD Unit Test &amp; Practice</td><td>2-3 hours</td><td>Practice exercises, assessment, reinforcement</td></tr>
+<tr><td><a href="#cmd_foundation_cmd_pre_your_first_terminal-cmd_pre_your_first_terminal">CMD-Pre: Your First Terminal</a></td><td>2-2.5 hours</td><td>Opening CMD, first commands, basic navigation, screen reader tricks</td></tr>
+<tr><td><a href="#cmd_foundation_cmd_0_getting_started_layout_paths-cmd_0_getting_started_layout_paths">CMD-0: Getting Started</a></td><td>1.5 hours</td><td>Paths, shortcuts, command basics</td></tr>
+<tr><td><a href="#cmd_foundation_cmd_1_navigation-cmd_1_navigation">CMD-1: Navigation</a></td><td>2-2.5 hours</td><td>Moving around the file system confidently</td></tr>
+<tr><td><a href="#cmd_foundation_cmd_2_file_folder_manipulation_modification-cmd_2_file_folder_manipulation_modification">CMD-2: File &amp; Folder Manipulation</a></td><td>2.5-3 hours</td><td>Creating, editing, moving, copying, deleting files and directories</td></tr>
+<tr><td><a href="#cmd_foundation_cmd_3_input_output_piping-cmd_3_input_output_piping">CMD-3: Input, Output &amp; Redirection</a></td><td>2-2.5 hours</td><td>Redirecting output, piping commands, understanding data flow</td></tr>
+<tr><td><a href="#cmd_foundation_cmd_4_environment_variables_aliases-cmd_4_environment_variables_aliases">CMD-4: Environment Variables &amp; Shortcuts</a></td><td>2-2.5 hours</td><td>Setting variables, creating shortcuts, persistent configurations</td></tr>
+<tr><td><a href="#cmd_foundation_cmd_5_filling_in_the_gaps-cmd_5_filling_in_the_gaps">CMD-5: Filling in the Gaps</a></td><td>2.5-3 hours</td><td>Batch files, advanced techniques, scripting fundamentals</td></tr>
+<tr><td><a href="#cmd_foundation_cmd_6_advanced_techniques-cmd_6_advanced_techniques">CMD-6: Advanced Terminal Techniques</a></td><td>3-3.5 hours</td><td>Scripts, automation patterns, professional workflows</td></tr>
+<tr><td><a href="#cmd_foundation_cmd_unit_test-cmd_unit_test">CMD Unit Test &amp; Practice</a></td><td>2-3 hours</td><td>Practice exercises, assessment, reinforcement</td></tr>
 </tbody>
 </table>
 </div>
 <p>Outcomes: Terminal fluency, file system mastery, batch scripting, screen reader optimization, automation readiness</p>
 <hr>
 <h4 id="pathway-c-git-bash-best-for-macoslinux-or-cross-platform-development"><a class="header" href="#pathway-c-git-bash-best-for-macoslinux-or-cross-platform-development">Pathway C: Git Bash (Best for macOS/Linux or cross-platform development)</a></h4>
-<p>Total Duration: 20-25 hours<br>Start here: <a href="#gitbash_foundation_gitbash_curriculum_overview-gitbash_curriculum_overview">Git Bash Curriculum Overview</a></p>
+<p>Total Duration: 20-25 hours
+Start here: <a href="#gitbash_foundation_gitbash_curriculum_overview-gitbash_curriculum_overview">Git Bash Curriculum Overview</a></p>
 <div class="table-wrapper">
 <table>
 <thead>
 <tr><th>Component</th><th>Duration</th><th>Content</th></tr>
 </thead>
 <tbody>
-<tr><td>GitBash-Pre: Your First Terminal</td><td>2-2.5 hours</td><td>Opening Git Bash, first commands, basic navigation, screen reader tricks</td></tr>
-<tr><td>GitBash-1: Navigation &amp; Files</td><td>2-2.5 hours</td><td>File system fundamentals, moving around, creating/editing files</td></tr>
-<tr><td>GitBash-2: Advanced Navigation</td><td>2-2.5 hours</td><td>Advanced file operations, understanding paths, symlinks</td></tr>
-<tr><td>GitBash-3: Text Processing</td><td>2-2.5 hours</td><td>grep, sed, awk, text manipulation</td></tr>
-<tr><td>GitBash-4: Scripting &amp; Automation</td><td>2.5-3 hours</td><td>Bash scripts, functions, loops, conditional logic</td></tr>
-<tr><td>GitBash-5: Professional Workflows</td><td>2-2.5 hours</td><td>Git integration, version control, collaboration patterns</td></tr>
-<tr><td>GitBash Unit Test &amp; Practice</td><td>2-2.5 hours</td><td>Practice exercises, assessment, reinforcement</td></tr>
+<tr><td><a href="#gitbash_foundation_gitbash_introduction-gitbash_introduction">Git Bash Introduction</a></td><td>20-30 min</td><td>Screen-reader-friendly quick-start (JAWS/NVDA); essential commands</td></tr>
+<tr><td><a href="#gitbash_foundation_gitbash_tutorial-gitbash_tutorial">Git Bash Tutorial</a></td><td>30-45 min</td><td>Hands-on tutorial: paths, navigation, wildcards, running scripts</td></tr>
+<tr><td><a href="#gitbash_foundation_screen_reader_accessibility_guide-screen_reader_accessibility_guide">Screen Reader Accessibility Guide for Git Bash</a></td><td>30-45 min</td><td>NVDA and JAWS configuration specific to Git Bash</td></tr>
+<tr><td><a href="#gitbash_foundation_gitbash_pre_your_first_terminal-gitbash_pre_your_first_terminal">GitBash-Pre: Your First Terminal</a></td><td>2-2.5 hours</td><td>Opening Git Bash, first commands, basic navigation, screen reader tricks</td></tr>
+<tr><td><a href="#gitbash_foundation_gitbash_0_getting_started_layout_paths-gitbash_0_getting_started_layout_paths">GitBash-0: Getting Started</a></td><td>1.5 hours</td><td>Unix-style paths, shortcuts, command basics, Windows path conversion</td></tr>
+<tr><td><a href="#gitbash_foundation_gitbash_1_navigation-gitbash_1_navigation">GitBash-1: Navigation</a></td><td>2-2.5 hours</td><td>Moving around the file system confidently</td></tr>
+<tr><td><a href="#gitbash_foundation_gitbash_2_file_folder_manipulation_modification-gitbash_2_file_folder_manipulation_modification">GitBash-2: File and Folder Manipulation</a></td><td>2-2.5 hours</td><td>Creating, editing, moving, copying, deleting files and directories</td></tr>
+<tr><td><a href="#gitbash_foundation_gitbash_3_input_output_piping-gitbash_3_input_output_piping">GitBash-3: Input, Output &amp; Piping</a></td><td>2-2.5 hours</td><td>Redirecting output, piping with grep/sort/wc, understanding data flow</td></tr>
+<tr><td><a href="#gitbash_foundation_gitbash_4_environment_variables_aliases-gitbash_4_environment_variables_aliases">GitBash-4: Environment Variables &amp; Aliases</a></td><td>1.5-2 hours</td><td>Setting variables, creating aliases, editing .bashrc</td></tr>
+<tr><td><a href="#gitbash_foundation_gitbash_5_filling_in_the_gaps-gitbash_5_filling_in_the_gaps">GitBash-5: Filling in the Gaps</a></td><td>2-2.5 hours</td><td>Shell profiles, command history, debugging</td></tr>
+<tr><td><a href="#gitbash_foundation_gitbash_6_advanced_techniques-gitbash_6_advanced_techniques">GitBash-6: Advanced Terminal Techniques</a></td><td>2.5-3.5 hours</td><td>Shell scripts, functions, loops, professional workflows</td></tr>
+<tr><td><a href="#gitbash_foundation_gitbash_unit_test-gitbash_unit_test">GitBash Unit Test &amp; Practice</a></td><td>2-2.5 hours</td><td>Practice exercises, assessment, reinforcement</td></tr>
 </tbody>
 </table>
 </div>
@@ -536,10 +592,9 @@
 <li>Screen reader optimization for terminal work</li>
 <li>Foundation for 3DMake automation tasks</li>
 </ul>
-<p>Note: Students should complete their chosen Command-Line Foundation pathway before starting 3dMake Lesson 9 (Automation). Lessons 1-8 can begin without CLI foundation, but Lesson 9+ requires command-line fluency.</p>
 <hr>
-<h3 id="part-2-3dmake-foundation-main-curriculum---16-20-hours"><a class="header" href="#part-2-3dmake-foundation-main-curriculum---16-20-hours">Part 2: 3dMake Foundation (Main Curriculum - 16-20 hours)</a></h3>
-<p>Start here: <a href="3dMake_Foundation/3dMakeIntro/3dMakeIntro.html">3dMake Introduction</a></p>
+<h3 id="part-3-3dmake-foundation-main-curriculum---16-20-hours"><a class="header" href="#part-3-3dmake-foundation-main-curriculum---16-20-hours">Part 3: 3dMake Foundation (Main Curriculum - 16-20 hours)</a></h3>
+<p>Start here: <a href="#3dmake_foundation_3dmake_intro-3dmake_intro">3dMake Introduction</a></p>
 <p>11 progressive lessons building from foundational concepts to leadership-level design thinking, organized in 5 parts. Version 2.1 adds comprehensive advanced programming and design topics throughout.</p>
 <h4 id="part-1-foundations-lessons-1-3--4-5-hours"><a class="header" href="#part-1-foundations-lessons-1-3--4-5-hours">Part 1: Foundations (Lessons 1-3 | ~4-5 hours)</a></h4>
 <div class="table-wrapper">
@@ -586,7 +641,7 @@
 <tr><th>Lesson</th><th>Focus</th><th>Duration</th><th>Project</th></tr>
 </thead>
 <tbody>
-<tr><td><a href="#3dmake_foundation_lessons_3dmake_9-lessons_3dmake_9">Lesson 9</a></td><td>Automation + File Import/Export (requires PS Foundation)</td><td>75-105 min</td><td>Batch Processing Automation</td></tr>
+<tr><td><a href="#3dmake_foundation_lessons_3dmake_9-lessons_3dmake_9">Lesson 9</a></td><td>Automation + File Import/Export (requires CLI Foundation)</td><td>75-105 min</td><td>Batch Processing Automation</td></tr>
 <tr><td><a href="#3dmake_foundation_lessons_3dmake_10-lessons_3dmake_10">Lesson 10</a></td><td>Troubleshooting &amp; Mastery with Measurement</td><td>120-150 min</td><td>QA Testing + Accessibility Audit</td></tr>
 </tbody>
 </table>
@@ -604,46 +659,23 @@
 </div>
 <p>Total: 16-20 hours of instruction + projects</p>
 <hr>
-<h2 id="8-comprehensive-reference-appendices-1"><a class="header" href="#8-comprehensive-reference-appendices-1">8 Comprehensive Reference Appendices</a></h2>
-<p>Located in <code>/3dMake_Foundation/</code> alongside the lessons:</p>
-<h3 id="appendix-a-comprehensive-slicing-guide-1500-lines"><a class="header" href="#appendix-a-comprehensive-slicing-guide-1500-lines"><a href="#3dmake_foundation-appendix_a_comprehensive_slicing_guide">Appendix A: Comprehensive Slicing Guide</a> (1,500+ lines)</a></h3>
-<p>Reference for 7 major slicers:</p>
-<ul>
-<li>PrusaSlicer, Bambu Studio, Cura, SuperSlicer, OrcaSlicer, IdeaMaker, Fusion 360</li>
-<li>Setup guides, parameter explanations, troubleshooting, command-line integration</li>
-<li>Use when: Slicing questions, switching slicers, quality issues</li>
-</ul>
-<h3 id="appendix-b-material-properties--selection-1200-lines"><a class="header" href="#appendix-b-material-properties--selection-1200-lines"><a href="#3dmake_foundation-appendix_b_material_properties">Appendix B: Material Properties &amp; Selection</a> (1,200+ lines)</a></h3>
-<p>Complete material reference for 6 materials:</p>
-<ul>
-<li>PLA, PETG, ABS, TPU, Polycarbonate, Nylon</li>
-<li>Properties tables, printing parameters, quality verification, cost analysis</li>
-<li>Use when: Choosing material, troubleshooting prints, cost analysis</li>
-</ul>
-<h3 id="appendix-c-tolerance-testing--qa-matrix-1200-lines"><a class="header" href="#appendix-c-tolerance-testing--qa-matrix-1200-lines"><a href="#3dmake_foundation-appendix_c_tolerance_qa">Appendix C: Tolerance Testing &amp; QA Matrix</a> (1,200+ lines)</a></h3>
-<p>Measurement-based quality assurance procedures:</p>
-<ul>
-<li>Caliper techniques, weight verification, functional testing, tolerance stack-up</li>
-<li>Step-by-step procedures, checklist templates, CSV tracking</li>
-<li>Use when: Starting a project, verifying dimensions, quality issues</li>
-</ul>
-<h3 id="appendix-d-powershell-integration-for-scad-workflows-1100-lines"><a class="header" href="#appendix-d-powershell-integration-for-scad-workflows-1100-lines"><a href="#3dmake_foundation-appendix_d_powershell_integration">Appendix D: PowerShell Integration for SCAD Workflows</a> (1,100+ lines)</a></h3>
-<p>Complete automation guide for PowerShell + 3dMake:</p>
-<ul>
-<li>5 complete PowerShell scripts for workflow automation</li>
-<li>Parametric sweeps, batch processing, print logging, printer communication</li>
-<li>Use when: Automating tasks, testing variations, batch printing</li>
-</ul>
-<h3 id="appendix-e-advanced-openscad-concepts-2000-lines"><a class="header" href="#appendix-e-advanced-openscad-concepts-2000-lines"><a href="#3dmake_foundation-appendix_e_advanced_openscad_concepts">Appendix E: Advanced OpenSCAD Concepts</a> (2,000+ lines)</a></h3>
-<p>Specialized topics for experienced designers (v2.1 NEW):</p>
-<ul>
-<li>Gears and Mechanical Components: Gear tooth geometry, servo gearboxes, belt/pulley systems</li>
-<li>Batch Processing &amp; Statistical Analysis: Parameter sweeps, design space exploration, data-driven selection</li>
-<li>Performance Optimization: Render profiling, resolution strategies, caching calculations</li>
-<li>Print Orientation &amp; Support Algorithms: Strength analysis, support minimization, bridge calculations</li>
-<li>Recursive Function Patterns: Fractals, nested structures, performance considerations</li>
-<li>Use when: Building mechanical systems, optimizing complex models, exploring design variations</li>
-</ul>
+<h3 id="reference-appendices"><a class="header" href="#reference-appendices">Reference Appendices</a></h3>
+<p>Located in <code>3dMake_Foundation/</code> alongside the lessons:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Appendix</th><th>Title</th><th>Use When</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="#3dmake_foundation-appendix_a_comprehensive_slicing_guide">Appendix A</a></td><td>Comprehensive Slicing Guide</td><td>Slicing questions, switching slicers, quality issues</td></tr>
+<tr><td><a href="#3dmake_foundation-appendix_b_material_properties">Appendix B</a></td><td>Material Properties &amp; Selection Guide</td><td>Choosing material, troubleshooting prints, cost analysis</td></tr>
+<tr><td><a href="#3dmake_foundation-appendix_c_tolerance_qa">Appendix C</a></td><td>Tolerance Testing &amp; Quality Assurance Matrix</td><td>Starting a project, verifying dimensions, quality issues</td></tr>
+<tr><td><a href="#3dmake_foundation-appendix_d_powershell_integration">Appendix D</a></td><td>PowerShell Integration for SCAD Workflows</td><td>Automating tasks, testing variations, batch printing</td></tr>
+<tr><td><a href="#3dmake_foundation-appendix_e_advanced_openscad_concepts">Appendix E</a></td><td>Advanced OpenSCAD Concepts</td><td>Building mechanical systems, optimizing complex models</td></tr>
+<tr><td><a href="assets/3dMake_Foundation/README.html">Appendix F</a></td><td>3dMake Code Examples &amp; Assets</td><td>Reference designs, working code examples</td></tr>
+</tbody>
+</table>
+</div>
 <hr>
 <h2 id="learning-progression-student-roles"><a class="header" href="#learning-progression-student-roles">Learning Progression: Student Roles</a></h2>
 <p>Students move through roles across the curriculum:</p>
@@ -653,7 +685,7 @@
 <tr><th>Phase</th><th>Role</th><th>Core Tools</th><th>Focus</th></tr>
 </thead>
 <tbody>
-<tr><td>PowerShell Foundation</td><td>Observer/Learner</td><td>Terminal, command line</td><td>CLI fundamentals and keyboard navigation</td></tr>
+<tr><td>CLI Foundation</td><td>Observer/Learner</td><td>Terminal, command line</td><td>CLI fundamentals and keyboard navigation</td></tr>
 <tr><td>3dMake Lessons 1-5</td><td>Observer/Learner</td><td>OpenSCAD, 3DMake, editor</td><td>Using CLI tools, safety, concepts, measurement</td></tr>
 <tr><td>3dMake Lessons 6-8</td><td>Operator</td><td>Editor, OpenSCAD, 3DMake, slicer</td><td>Hands-on practice with structured projects</td></tr>
 <tr><td>3dMake Lessons 9-10</td><td>Designer</td><td>Full toolchain</td><td>Parametric design, automation, troubleshooting</td></tr>
@@ -674,9 +706,9 @@
 </ul>
 <h3 id="3dmake---the-non-visual-build-bridge"><a class="header" href="#3dmake---the-non-visual-build-bridge">3DMake - The Non-Visual Build Bridge</a></h3>
 <p>3DMake is a command-line tool that automates the journey from OpenSCAD code to a printable file:</p>
-<pre><code class="language-bash">3dm build        
-3dm info         
-3dm slice        
+<pre><code class="language-bash">3dm build
+3dm info
+3dm slice
 </code></pre>
 <p>Why 3DMake?</p>
 <ul>
@@ -700,10 +732,11 @@
 <tr><th>Section</th><th>Prerequisites</th><th>What You’ll Learn</th></tr>
 </thead>
 <tbody>
-<tr><td>PowerShell Foundation</td><td>None - start here</td><td>Terminal basics, keyboard navigation, file operations, basic scripting</td></tr>
-<tr><td>3dMake Lessons 1-5</td><td>PowerShell Foundation</td><td>3D printing concepts, safety, measurement, OpenSCAD basics, debugging</td></tr>
+<tr><td>Part 1: Setup</td><td>None - start here</td><td>Screen reader optimization, editor selection, accessibility setup</td></tr>
+<tr><td>CLI Foundation</td><td>Part 1: Setup</td><td>Terminal basics, keyboard navigation, file operations, basic scripting</td></tr>
+<tr><td>3dMake Lessons 1-5</td><td>Part 1: Setup (CLI Foundation recommended)</td><td>3D printing concepts, safety, measurement, OpenSCAD basics, debugging</td></tr>
 <tr><td>3dMake Lessons 6-8</td><td>Lessons 1-5</td><td>Building projects, parametric design, transforms, tolerances</td></tr>
-<tr><td>3dMake Lessons 9-10</td><td>Lessons 6-8 (Lesson 9 requires PS Foundation)</td><td>Automation, troubleshooting, advanced measurement and QA</td></tr>
+<tr><td>3dMake Lessons 9-10</td><td>Lessons 6-8 + CLI Foundation required</td><td>Automation, troubleshooting, advanced measurement and QA</td></tr>
 <tr><td>3dMake Lesson 11</td><td>Lessons 9-10</td><td>Stakeholder design, real-world prototyping, leadership</td></tr>
 </tbody>
 </table>
@@ -786,267 +819,98 @@
 <hr>
 <h2 id="quick-links-to-essential-tools--setup"><a class="header" href="#quick-links-to-essential-tools--setup">Quick Links to Essential Tools &amp; Setup</a></h2>
 <h3 id="core-design-toolchain"><a class="header" href="#core-design-toolchain">Core Design Toolchain</a></h3>
-<h3 id="openscad"><a class="header" href="#openscad">OpenSCAD</a></h3>
+<p><strong>OpenSCAD</strong></p>
 <ul>
 <li><a href="https://openscad.org/downloads.html">OpenSCAD Download</a> - Free, cross-platform CAD (all major OS)</li>
 <li><a href="https://openscad.org/documentation.html">OpenSCAD Documentation</a> - Official reference</li>
 <li><a href="#3dmake_foundation_lessons_3dmake_2-openscad-cheat-sheet">OpenSCAD Cheat Sheet</a> - Quick syntax reference</li>
-<li><a href="https://github.com/openscad/openscad">OpenSCAD on GitHub</a> - Source code and issue tracking</li>
 </ul>
-<h3 id="3dmake"><a class="header" href="#3dmake">3DMake</a></h3>
+<p><strong>3DMake</strong></p>
 <ul>
 <li><a href="https://github.com/tdeck/3dmake">3DMake Documentation &amp; Installation</a> - Command-line build tool for OpenSCAD</li>
 <li><a href="#3dmake_foundation-3dmake_quick_reference">3dMake Quick Reference</a> - Command and workflow reference</li>
-<li><a href="https://github.com/tdeck/3dmake/blob/main/docs/terminalquickstart.md">3DMake Terminal Quick Start</a> - CLI basics for new users</li>
 </ul>
-<h3 id="editors"><a class="header" href="#editors">Editors</a></h3>
+<p><strong>Editors</strong></p>
 <ul>
 <li><a href="https://code.visualstudio.com/">VS Code Download</a> - Free, screen-reader-accessible code editor</li>
-<li><a href="https://marketplace.visualstudio.com/items?itemName=Anio.openscad">VS Code OpenSCAD Extension</a> - Syntax highlighting for OpenSCAD</li>
-<li><a href="https://notepad-plus-plus.org/">Notepad++ Download</a> - Free, lightweight Windows editor with OpenSCAD syntax support</li>
-<li><a href="https://www.vim.org/">Vim/Neovim</a> - Terminal-based editor with full keyboard control</li>
+<li><a href="https://notepad-plus-plus.org/">Notepad++ Download</a> - Free, lightweight Windows editor</li>
+<li><a href="#setup_editor_selection_setup-editor_selection_setup">Editor Selection and Setup Guide</a> - Accessibility-focused setup guide</li>
 </ul>
 <h3 id="screen-reader--accessibility"><a class="header" href="#screen-reader--accessibility">Screen Reader &amp; Accessibility</a></h3>
-<h3 id="screen-readers"><a class="header" href="#screen-readers">Screen Readers</a></h3>
+<p><strong>Screen Readers</strong></p>
 <ul>
 <li><a href="https://www.nvaccess.org/">NVDA Download</a> - Free, open-source screen reader (Windows)</li>
 <li><a href="https://www.freedomscientific.com/products/software/jaws/">JAWS Screen Reader</a> - Commercial screen reader (Windows, macOS)</li>
-<li><a href="https://www.apple.com/accessibility/voiceover/">VoiceOver (macOS/iOS)</a> - Built-in Apple screen reader</li>
-<li><a href="https://www.nvaccess.org/documentation/">NVDA User Guide</a> - Complete NVDA documentation</li>
 </ul>
-<h3 id="accessibility-configuration"><a class="header" href="#accessibility-configuration">Accessibility Configuration</a></h3>
+<p><strong>Accessibility Configuration</strong></p>
 <ul>
+<li><a href="#setup_screen_reader_accessibility_guide-screen_reader_accessibility_guide">Screen Reader Accessibility Guide</a> - Comprehensive terminal accessibility guide</li>
 <li><a href="#3dmake_foundation_lessons_3dmake_1-nvda-jaws-coding-tips">Screen Reader Coding Tips (NVDA &amp; JAWS)</a> - Keyboard shortcuts and configuration</li>
 <li><a href="#3dmake_foundation_lessons_3dmake_1-vscode-setup-guide">VSCode Setup Guide</a> - Accessibility-focused editor configuration</li>
-<li><a href="https://code.visualstudio.com/docs/editor/accessibility">Accessibility in VS Code</a> - Official VS Code accessibility guide</li>
-<li><a href="https://github.com/jsa2/jaws-scripts-for-vscode">JAWS Script Repository</a> - Custom JAWS scripts for developers</li>
+<li><a href="#gitbash_foundation_screen_reader_accessibility_guide-screen_reader_accessibility_guide">Git Bash Screen Reader Guide</a> - NVDA and JAWS configuration for Git Bash</li>
 </ul>
-<h3 id="terminal--command-line"><a class="header" href="#terminal--command-line">Terminal &amp; Command Line</a></h3>
+<h3 id="slicing-software"><a class="header" href="#slicing-software">Slicing Software</a></h3>
 <ul>
-<li><a href="PowerShell_Foundation/Powershell_Introduction/Powershell_Introduction.html">PowerShell &amp; Command Line Fundamentals</a> - Terminal navigation for screen reader users</li>
-<li><a href="https://learn.microsoft.com/en-us/windows/terminal/panes">Windows Terminal Accessibility</a> - Official accessibility guide</li>
-<li><a href="https://www.linux-magazine.com/Issues/2018/214/Screen-Reader-Tips-for-Linux">Screen Reader Tips for Linux</a> - Linux-specific guidance</li>
-</ul>
-<h3 id="slicing--printing"><a class="header" href="#slicing--printing">Slicing &amp; Printing</a></h3>
-<h3 id="slicer-software--documentation"><a class="header" href="#slicer-software--documentation">Slicer Software &amp; Documentation</a></h3>
-<ul>
-<li><a href="https://help.prusa3d.com/en/category/prusaslicer424/">PrusaSlicer Documentation</a> - Official Prusa slicer</li>
-<li><a href="https://www.prusa3d.com/page/prusaslicer424/">PrusaSlicer Download</a> - Free slicer optimized for Prusa printers</li>
-<li><a href="https://ultimaker.com/en/resources/documentation">Cura Slicer Documentation</a> - Official UltiMaker Cura documentation</li>
-<li><a href="https://ultimaker.com/software/ultimaker-cura">Cura Slicer Download</a> - Free, open-source slicer for most printers</li>
-<li><a href="https://github.com/SoftFever/OrcaSlicer/wiki">OrcaSlicer Documentation</a> - Community wiki for OrcaSlicer</li>
-<li><a href="https://github.com/SoftFever/OrcaSlicer/releases">OrcaSlicer Download</a> - Free, open-source slicer fork with advanced features</li>
-<li><a href="https://wiki.bambulab.com/en/software/bambu-studio">Bambu Studio Documentation</a> - Official Bambu Lab slicer documentation</li>
-<li><a href="https://bambulab.com/en/download/studio">Bambu Studio Download</a> - Free slicer optimized for Bambu Lab printers</li>
-<li><a href="https://github.com/supermerill/SuperSlicer/wiki">SuperSlicer Documentation</a> - Community wiki for SuperSlicer</li>
-<li><a href="https://github.com/supermerill/SuperSlicer/releases">SuperSlicer Download</a> - Free, open-source advanced slicer</li>
-<li><a href="https://www.raise3d.com/ideamaker/">IdeaMaker Documentation</a> - Anycubic/Raise3D slicer documentation</li>
-<li><a href="https://www.raise3d.com/ideamaker">IdeaMaker Download</a> - Free slicer for Anycubic and other printers</li>
-<li><a href="https://slic3r.org/">Slic3r Documentation</a> - Original open-source command-line slicer</li>
-<li><a href="https://www.autodesk.com/products/fusion-360/overview">Fusion 360 Slicer</a> - Integrated slicer in Fusion 360 CAD</li>
-<li><a href="https://www.repetier.com/documentation/">Repetier-Host Documentation</a> - Host software with integrated slicing</li>
-<li><a href="#3dmake_foundation-appendix_a_comprehensive_slicing_guide">Appendix A: Comprehensive Slicing Guide</a> - Detailed comparison and setup guides for all major slicers</li>
-</ul>
-<h3 id="openscad-learning"><a class="header" href="#openscad-learning">OpenSCAD Learning</a></h3>
-<p>Tutorials &amp; Documentation:</p>
-<ul>
-<li><a href="https://openscad.org/documentation.html#tutorials">OpenSCAD Official Tutorials</a> - Step-by-step guides from the OpenSCAD project</li>
-<li><a href="https://en.wikibooks.org/wiki/OpenSCADUserManual">OpenSCAD User Manual</a> - Community-maintained comprehensive reference</li>
-<li><a href="https://openhome.cc/Codes/OpenSCAD/">OpenSCAD by Example</a> - Practical examples with code</li>
-<li><a href="https://learn.cadhub.xyz/blog/openscad-review/">CadHub OpenSCAD Guide</a> - Real-world applications and best practices</li>
-</ul>
-<p>Advanced Resources:</p>
-<ul>
-<li><a href="https://github.com/revarbat/BOSL2/wiki">BOSL2 Library Documentation</a> - Advanced shapes and transforms</li>
-<li><a href="https://openscad.org/libraries.html">OpenSCAD Libraries</a> - Complete library ecosystem</li>
-<li><a href="https://github.com/dotscad/dotscad">Dotscad</a> - Parametric design patterns library</li>
-<li><a href="https://github.com/openscad/openscad/wiki/Performance">OpenSCAD Performance Optimization</a> - Tips for faster rendering</li>
+<li><a href="https://www.prusa3d.com/page/prusaslicer424/">PrusaSlicer</a></li>
+<li><a href="https://bambulab.com/en/download/studio">Bambu Studio</a></li>
+<li><a href="https://ultimaker.com/software/ultimaker-cura">Cura</a></li>
+<li><a href="https://github.com/SoftFever/OrcaSlicer/releases">OrcaSlicer</a></li>
+<li><a href="#3dmake_foundation-appendix_a_comprehensive_slicing_guide">Appendix A: Comprehensive Slicing Guide</a> - Detailed setup guides for all major slicers</li>
 </ul>
 <h3 id="supplemental-textbooks"><a class="header" href="#supplemental-textbooks">Supplemental Textbooks</a></h3>
-<p>EPUB Textbooks:</p>
 <ul>
-<li><a href="assets/Programming_with_OpenSCAD.epub">Programming with OpenSCAD: A Beginner’s Guide to Coding 3D-Printable Objects</a> - Complete reference textbook (EPUB format)</li>
-<li><a href="assets/Simplifying_3D_Printing_with_OpenSCAD.epub">Simplifying 3D Printing with OpenSCAD</a> - Practical workflows and applications (EPUB format)</li>
-</ul>
-<p>Online Companion Resources:</p>
-<ul>
-<li><a href="https://programmingwithopenscad.github.io/learning.html">Programming with OpenSCAD Companion Resources</a> - Practice worksheets and teaching materials</li>
-<li><a href="https://programmingwithopenscad.github.io/quick-reference.html">Visual Quick Reference Guides</a> - Command syntax and geometry reference</li>
-<li><a href="https://github.com/ProgrammingWithOpenSCAD/CodeSolutions">Code Solutions Repository</a> - Working examples for all exercises</li>
-<li><a href="https://www.youtube.com/c/TeachingTech/playlists">Teaching Tech 3D Printing Guide</a> - Video tutorials and workflows</li>
-</ul>
-<h3 id="assistive-technology-design--research"><a class="header" href="#assistive-technology-design--research">Assistive Technology Design &amp; Research</a></h3>
-<p>Organizations &amp; Communities:</p>
-<ul>
-<li><a href="https://enablingthefuture.org/">e-NABLE Community Foundation</a> - 3D printed hand/arm devices</li>
-<li><a href="https://www.makersmakingchange.com/">Makers Making Change</a> - Open-source assistive designs</li>
-<li><a href="https://3dprint.nih.gov/">NIH 3D Print Exchange</a> - Medical and assistive models</li>
-<li><a href="https://www.printables.com/search/assistive">Printables - Assistive Technology</a> - Community models</li>
-<li><a href="https://www.thingiverse.com/search?q=adaptive">Thingiverse - Adaptive/Accessibility</a> - Model repository</li>
-<li><a href="https://www.youmagine.com/">YouMagine</a> - Open-source design platform</li>
-</ul>
-<p>Research &amp; Resources:</p>
-<ul>
-<li><a href="https://d-lab.mit.edu/">MIT D-Lab</a> - Design for development and assistive technology</li>
-<li><a href="https://www.designforall.org/">Design for All Institute</a> - Universal design principles</li>
-<li><a href="https://www.inclusivedesigntoolkit.org/">Inclusive Design Toolkit</a> - Design resources for disability</li>
-</ul>
-<h3 id="community--forums"><a class="header" href="#community--forums">Community &amp; Forums</a></h3>
-<p>OpenSCAD Community:</p>
-<ul>
-<li><a href="https://discord.gg/F2Nx2VxTB7">OpenSCAD Discord</a> - Real-time chat and support</li>
-<li><a href="https://www.reddit.com/r/openscad/">OpenSCAD Reddit</a> - Discussion forum for OpenSCAD users</li>
-<li><a href="https://groups.google.com/forum/#!forum/openscad">OpenSCAD Google Group</a> - Email-based discussion list</li>
-<li><a href="https://cadhub.xyz/community">CadHub Community</a> - Collaborative 3D design community</li>
-</ul>
-<p>3D Printing Community:</p>
-<ul>
-<li><a href="https://www.reddit.com/r/3Dprinting/">Reddit r/3Dprinting</a> - General 3D printing community</li>
-<li><a href="https://www.prusaprinters.org/community">Prusa Community</a> - Prusa-specific forum</li>
-<li><a href="https://forum.bambulab.com/">Bambu Lab Forum</a> - Bambu printer community</li>
-<li><a href="https://3dprinting.stackexchange.com/">3DPrinting Stack Exchange</a> - Q&amp;A platform for 3D printing</li>
-</ul>
-<h3 id="troubleshooting-resources"><a class="header" href="#troubleshooting-resources">Troubleshooting Resources</a></h3>
-<h3 id="common-issues"><a class="header" href="#common-issues">Common Issues</a></h3>
-<ul>
-<li><a href="#3dmake_foundation_lessons_3dmake_10-common_issues_and_solutions">Common Issues and Solutions</a> - Course-specific troubleshooting guide</li>
-<li><a href="#3dmake_foundation_lessons_3dmake_10-diagnostic_checklist">Diagnostic Checklist</a> - Step-by-step diagnostics</li>
-<li><a href="https://openscad.org/faq.html">OpenSCAD FAQ</a> - Frequently asked questions</li>
-<li><a href="https://help.prusa3d.com/en/article/troubleshooting3">PrusaSlicer Troubleshooting</a> - Prusa-specific solutions</li>
-</ul>
-<h3 id="tools-for-debugging"><a class="header" href="#tools-for-debugging">Tools for Debugging</a></h3>
-<ul>
-<li><a href="https://www.autodesk.com/products/netfabb/overview">Netfabb Online</a> - Free online mesh repair tool</li>
-<li><a href="https://www.meshmixer.com/">Meshmixer</a> - Advanced mesh editing and repair</li>
-<li><a href="https://www.meshlab.net/">MeshLab</a> - Open-source mesh processing</li>
-<li><a href="https://www.viewstl.com/">STL Viewer Online</a> - Quick STL preview without installing software</li>
-</ul>
-<h3 id="printer-specific-guides"><a class="header" href="#printer-specific-guides">Printer-Specific Guides</a></h3>
-<h3 id="prusa-printers"><a class="header" href="#prusa-printers">Prusa Printers</a></h3>
-<ul>
-<li><a href="https://help.prusa3d.com/en">Prusa Knowledge Base</a> - Official documentation and troubleshooting</li>
-<li><a href="https://www.prusa3d.com/en/print-safety-manual/">Prusa Assembly Guides</a> - Setup and calibration</li>
-</ul>
-<h3 id="bambu-lab-printers"><a class="header" href="#bambu-lab-printers">Bambu Lab Printers</a></h3>
-<ul>
-<li><a href="https://wiki.bambulab.com/en/home">Bambu Lab Wiki</a> - Complete documentation</li>
-<li><a href="https://support.bambulab.com/">Bambu Lab Support</a> - Customer support resources</li>
-</ul>
-<h3 id="anycubic-printers"><a class="header" href="#anycubic-printers">Anycubic Printers</a></h3>
-<ul>
-<li><a href="https://www.anycubic.com/pages/support-services">Anycubic Support</a> - Official support</li>
-<li><a href="https://www.anycubicforums.com/">Anycubic Community</a> - User forum</li>
-</ul>
-<h3 id="creality-printers"><a class="header" href="#creality-printers">Creality Printers</a></h3>
-<ul>
-<li><a href="https://www.creality.com/pages/download-guides">Creality Documentation</a> - Official guides</li>
-<li><a href="https://www.creality.com/pages/service">Creality Support</a> - Customer service</li>
+<li><a href="https://nostarch.com/programmingopenscad">Programming with OpenSCAD: A Beginner’s Guide</a></li>
+<li><a href="https://www.packtpub.com/en-us/product/simplifying-3d-printing-with-openscad-9781801813174">Simplifying 3D Printing with OpenSCAD</a></li>
+<li><a href="https://programmingwithopenscad.github.io/learning.html">Programming with OpenSCAD Companion Resources</a></li>
+<li><a href="https://github.com/ProgrammingWithOpenSCAD/CodeSolutions">Code Solutions Repository</a></li>
 </ul>
 <hr>
 <h2 id="local-resources-utah-makerspaces--community-printing"><a class="header" href="#local-resources-utah-makerspaces--community-printing">Local Resources: Utah Makerspaces &amp; Community Printing</a></h2>
 <h3 id="public-library-make-spaces"><a class="header" href="#public-library-make-spaces">Public Library Make Spaces</a></h3>
-<h3 id="salt-lake-city-public-library"><a class="header" href="#salt-lake-city-public-library">Salt Lake City Public Library</a></h3>
+<p><strong>Salt Lake City Public Library</strong></p>
 <ul>
 <li><a href="https://services.slcpl.org/creativelab">SLC Public Creative Lab</a> - Main Library (Level 1)
 <ul>
 <li>Hardware: Prusa i3 MK3, LulzBot Taz 5, Elegoo Mars 2 (resin)</li>
 <li>Pricing: Free for prints under 6 hours; $0.50/hr + material cost otherwise</li>
-<li>Website: <a href="https://services.slcpl.org/creativelab">https://services.slcpl.org/creativelab</a></li>
 </ul>
 </li>
 </ul>
-<h3 id="salt-lake-county-library-system"><a class="header" href="#salt-lake-county-library-system">Salt Lake County Library System</a></h3>
+<p><strong>Salt Lake County Library System</strong></p>
 <ul>
-<li><a href="https://www.slcolibrary.org/what-we-have/create">County Library “Create” Spaces</a> - Locations: Daybreak, Granite, Kearns, Syracuse, Tooele, and more
+<li><a href="https://www.slcolibrary.org/what-we-have/create">County Library “Create” Spaces</a>
 <ul>
 <li>Hardware: Flashforge Adventurer 5M Pro, LulzBot Workhorse, laser cutters</li>
 <li>Pricing: $0.06 per gram of filament used</li>
-<li>Website: <a href="https://www.slcolibrary.org/what-we-have/create">https://www.slcolibrary.org/what-we-have/create</a></li>
 </ul>
 </li>
 </ul>
 <h3 id="makerspaces--community-centers"><a class="header" href="#makerspaces--community-centers">Makerspaces &amp; Community Centers</a></h3>
-<h3 id="make-salt-lake"><a class="header" href="#make-salt-lake">Make Salt Lake</a></h3>
+<p><strong>Make Salt Lake</strong></p>
 <ul>
 <li>Location: 663 W 100 S, Salt Lake City, UT 84101</li>
 <li>Website: <a href="https://makesaltlake.org/">https://makesaltlake.org/</a></li>
 <li>Equipment: Full metal shop, CNC machines, large-scale FDM and resin printing</li>
-<li>Membership: Required; offers certification classes for advanced tools</li>
-<li>Community: Active maker community with regular workshops</li>
 </ul>
-<h3 id="university-of-utah-maker-spaces"><a class="header" href="#university-of-utah-maker-spaces">University of Utah Maker Spaces</a></h3>
+<p><strong>University of Utah Maker Spaces</strong></p>
 <ul>
-<li><a href="https://www.theblackbookofinnovation.com/lassonde-studios">Lassonde Studios</a> - Entrepreneurship and innovation hub</li>
-<li><a href="https://lib.utah.edu/protospace.php">Marriott Library ProtoSpace</a> - 3D printing and fabrication</li>
-<li><a href="https://lib.utah.edu/services/">Eccles Health Sciences Library Technology Hub</a> - Biomedical device development</li>
-</ul>
-<h3 id="utah-valley-university"><a class="header" href="#utah-valley-university">Utah Valley University</a></h3>
-<ul>
-<li><a href="https://www.uvu.edu/maker/">UVU Maker Hub</a> - Open to community members</li>
-<li>Equipment: Large format 3D printers, laser cutters, CNC machines</li>
-</ul>
-<h3 id="school--educational-programs"><a class="header" href="#school--educational-programs">School &amp; Educational Programs</a></h3>
-<h3 id="salt-lake-city-schools"><a class="header" href="#salt-lake-city-schools">Salt Lake City Schools</a></h3>
-<ul>
-<li>STEM Lab programs in select elementary and secondary schools</li>
-<li>Advanced manufacturing pathways in Career and Technical Education (CTE)</li>
-<li>Contact: Salt Lake City School District STEM Coordinator</li>
-</ul>
-<h3 id="weber-school-district"><a class="header" href="#weber-school-district">Weber School District</a></h3>
-<ul>
-<li>Advanced Manufacturing Programs</li>
-<li>3D Design and Fabrication courses in multiple high schools</li>
-</ul>
-<h3 id="online-printing-services-when-local-access-unavailable"><a class="header" href="#online-printing-services-when-local-access-unavailable">Online Printing Services (When Local Access Unavailable)</a></h3>
-<h3 id="national--international-services"><a class="header" href="#national--international-services">National &amp; International Services</a></h3>
-<ul>
-<li><a href="https://www.shapeways.com/">Shapeways</a> - Professional print service with multiple materials</li>
-<li><a href="https://www.sculpteo.com/">Sculpteo</a> - Online 3D printing platform</li>
-<li><a href="https://www.ponoko.com/">Ponoko</a> - Custom manufacturing platform</li>
-<li><a href="https://www.3dhubs.com/">3D Hubs</a> - Community-based distributed manufacturing</li>
-<li><a href="https://localmotors.com/">Local Motors</a> - Custom manufacturing and consulting</li>
-</ul>
-<h3 id="material-suppliers-utah--regional"><a class="header" href="#material-suppliers-utah--regional">Material Suppliers (Utah &amp; Regional)</a></h3>
-<p>Local Filament Suppliers:</p>
-<ul>
-<li><a href="https://www.matterhackers.com/">MatterHackers</a> - Online with local Utah roots; wide material selection</li>
-<li><a href="https://www.hatchbox3d.com/">Hatchbox</a> - Reliable filament available at local retailers</li>
-<li><a href="https://shop.prusa3d.com/en/prusament">Prusament</a> - Premium Prusa filament</li>
-</ul>
-<p>Regional Retailers:</p>
-<ul>
-<li>Local Best Buy, Micro Center, and Fry’s Electronics locations carry common filaments</li>
-<li>Amazon Prime for next-day delivery on most materials</li>
-<li>Local makerspaces often sell filament at cost</li>
-</ul>
-<h3 id="recycling--sustainability"><a class="header" href="#recycling--sustainability">Recycling &amp; Sustainability</a></h3>
-<h3 id="3d-printing-waste"><a class="header" href="#3d-printing-waste">3D Printing Waste</a></h3>
-<ul>
-<li><a href="https://www.fused3d.com/">Fused Filament Fab</a> - Filament recycling programs</li>
-<li>Salt Lake City Recycling Center: Accepts PLA and PETG at select locations</li>
-<li>Local makerspaces: Often have filament recycling programs</li>
-</ul>
-<h3 id="professional-development--certifications"><a class="header" href="#professional-development--certifications">Professional Development &amp; Certifications</a></h3>
-<h3 id="organizations-offering-training"><a class="header" href="#organizations-offering-training">Organizations Offering Training</a></h3>
-<ul>
-<li><a href="https://makesaltlake.org/classes/">Make Salt Lake Workshops</a> - Regular classes and certifications</li>
-<li><a href="https://continue.utah.edu/">University of Utah Continuing Education</a> - Professional development courses</li>
-<li><a href="https://www.weber.edu/cepe/">Weber State University</a> - Continuing education programs</li>
+<li><a href="https://www.theblackbookofinnovation.com/lassonde-studios">Lassonde Studios</a></li>
+<li><a href="https://lib.utah.edu/protospace.php">Marriott Library ProtoSpace</a></li>
 </ul>
 <hr>
 <h2 id="troubleshooting--getting-help"><a class="header" href="#troubleshooting--getting-help">Troubleshooting &amp; Getting Help</a></h2>
-<h3 id="if-youre-stuck"><a class="header" href="#if-youre-stuck">If you’re stuck</a></h3>
+<p>If you’re stuck:</p>
 <ol>
 <li>Check <a href="#3dmake_foundation_lessons_3dmake_10-common_issues_and_solutions">Common Issues and Solutions</a></li>
+<li>Check <a href="#3dmake_foundation_lessons_3dmake_10-diagnostic_checklist">Diagnostic Checklist</a></li>
 <li>Post in <a href="https://discord.gg/F2Nx2VxTB7">OpenSCAD Discord</a> or <a href="https://www.reddit.com/r/openscad/">Reddit</a></li>
 <li>Visit your local makerspace for hands-on support</li>
-<li>Check printer-specific forums (Prusa, Bambu Lab, Anycubic, etc.)</li>
 </ol>
-<h3 id="for-accessibility-support"><a class="header" href="#for-accessibility-support">For accessibility support</a></h3>
+<p>For accessibility support:</p>
 <ul>
 <li>Contact your NVDA/JAWS vendor directly for technical assistance</li>
-<li>Post accessibility-specific questions in <a href="https://www.reddit.com/r/openscad/">OpenSCAD community</a></li>
-<li>This course’s GitHub Issues page for curriculum-specific questions</li>
+<li>Refer to the <a href="#setup_screen_reader_accessibility_guide-screen_reader_accessibility_guide">Screen Reader Accessibility Guide</a></li>
+<li>Check the <a href="#gitbash_foundation_screen_reader_accessibility_guide-screen_reader_accessibility_guide">Git Bash Screen Reader Guide</a> if using Git Bash</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="setup_screen_reader_accessibility_guide-screen_reader_accessibility_guide"><a class="header" href="#setup_screen_reader_accessibility_guide-screen_reader_accessibility_guide">Screen Reader Accessibility Guide for Command-Line Terminals</a></h1>
@@ -3043,7 +2907,7 @@ cd my-practice-folder
 </ul>
 <hr>
 <h2 id="getting-help"><a class="header" href="#getting-help">Getting Help</a></h2>
-<h3 id="if-youre-stuck-1"><a class="header" href="#if-youre-stuck-1">If You’re Stuck:</a></h3>
+<h3 id="if-youre-stuck"><a class="header" href="#if-youre-stuck">If You’re Stuck:</a></h3>
 <ol>
 <li><strong>Read the relevant section of Screen Reader Accessibility Guide</strong></li>
 <li><strong>Try a different approach</strong> from the “Solutions” sections</li>
@@ -3094,6 +2958,8 @@ cd my-practice-folder
 <hr>
 <p><strong>Questions? Feedback? Stuck?</strong> Refer back to this page and the Screen Reader Accessibility Guide. You’ve got everything you need.</p>
 <p><strong>Now open PS-Pre and let’s get started!</strong></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="powershell_foundation_powershell_introduction-powershell_introduction"><a class="header" href="#powershell_foundation_powershell_introduction-powershell_introduction">Appendix A: Introduction to Command Line Interfaces</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="powershell_foundation_ps_pre_your_first_terminal-ps_pre_your_first_terminal"><a class="header" href="#powershell_foundation_ps_pre_your_first_terminal-ps_pre_your_first_terminal">PS-Pre: Your First Terminal - Screen Reader Navigation Fundamentals</a></h1>
 <p><strong>Duration:</strong> 1.5-2 hours (for screen reader users)<br><strong>Prerequisites:</strong> None - this is the starting point<br><strong>Accessibility Note:</strong> This lesson is designed specifically for screen reader users (NVDA, JAWS)</p>
@@ -5226,7 +5092,7 @@ cd my-practice-folder
 </ul>
 <hr>
 <h2 id="getting-help-1"><a class="header" href="#getting-help-1">Getting Help</a></h2>
-<h3 id="if-youre-stuck-2"><a class="header" href="#if-youre-stuck-2">If You’re Stuck:</a></h3>
+<h3 id="if-youre-stuck-1"><a class="header" href="#if-youre-stuck-1">If You’re Stuck:</a></h3>
 <ol>
 <li><strong>Check the relevant lesson section</strong></li>
 <li><strong>Try a different approach</strong> from the examples</li>
@@ -5907,7 +5773,7 @@ cd OpenSCAD
 <li>Challenge: Navigate to a destination using only relative paths without using <code>cd</code> alone to check location (navigate “blind”)</li>
 </ol>
 <hr>
-<h2 id="common-issues-1"><a class="header" href="#common-issues-1">Common Issues</a></h2>
+<h2 id="common-issues"><a class="header" href="#common-issues">Common Issues</a></h2>
 <h3 id="cant-find-the-path-specified"><a class="header" href="#cant-find-the-path-specified">“Can’t find the path specified”</a></h3>
 <p><strong>Problem:</strong> <code>cd FolderName</code> says the folder doesn’t exist</p>
 <p><strong>Solutions:</strong></p>
@@ -7438,10 +7304,641 @@ cd my-practice-folder
 <p><strong>Questions? Stuck?</strong> Refer back to this page and the Screen Reader Accessibility Guide.</p>
 <p><strong>Now open GB-Pre and let’s get started!</strong></p>
 <div style="break-before: page; page-break-before: always;"></div>
+<h1 id="gitbash_foundation_gitbash_introduction-gitbash_introduction"><a class="header" href="#gitbash_foundation_gitbash_introduction-gitbash_introduction">Git Bash Introduction - Screen-Reader Friendly (JAWS/NVDA)</a></h1>
+<p>Estimated time: 20-30 minutes</p>
+<p><strong>Target audience:</strong> Users who are new to the command line and use screen readers.</p>
+<p><strong>Learning Goals</strong></p>
+<ul>
+<li>Open and identify the Git Bash prompt</li>
+<li>Run basic commands: <code>pwd</code>, <code>ls -1</code>, <code>cd</code>, <code>touch</code>, <code>cat</code>, <code>echo</code></li>
+<li>Redirect and page through long outputs for screen readers</li>
+<li>Use <code>--help</code> and <code>which</code> to discover more about commands</li>
+</ul>
+<hr>
+<h2 id="starting-git-bash"><a class="header" href="#starting-git-bash">Starting Git Bash</a></h2>
+<p><strong>Windows</strong></p>
+<ol>
+<li>Press <strong>Windows</strong>, type <code>Git Bash</code>, then press <strong>Enter</strong>.</li>
+<li>Git Bash opens a terminal window. You’ll hear the prompt announced by your screen reader.</li>
+</ol>
+<p>When Git Bash starts you will hear the prompt and usually your current path. The default prompt looks something like:</p>
+<pre><code>YourName@COMPUTER MINGW64 ~
+$
+</code></pre>
+<hr>
+<h2 id="essential-commands---short-list"><a class="header" href="#essential-commands---short-list">Essential Commands - Short List</a></h2>
+<ul>
+<li><code>pwd</code> - print working directory (where you are now)</li>
+<li><code>ls -1</code> - list file and folder names one per line (recommended for screen readers)</li>
+<li><code>cd &lt;path&gt;</code> - change directory</li>
+<li><code>touch &lt;filename&gt;</code> - create an empty file</li>
+<li><code>cat &lt;file&gt;</code> - show file contents</li>
+<li><code>echo &lt;text&gt;</code> - print text</li>
+</ul>
+<p>Quick examples:</p>
+<pre><code class="language-bash">pwd
+ls -1
+cd Documents
+touch notes.txt
+echo "hello" &gt; notes.txt
+cat notes.txt
+</code></pre>
+<hr>
+<h2 id="paging-long-outputs-for-screen-readers"><a class="header" href="#paging-long-outputs-for-screen-readers">Paging Long Outputs for Screen Readers</a></h2>
+<ul>
+<li>If an output is long, redirect to a file and open it in an editor:
+<pre><code class="language-bash">some-command &gt; output.txt
+notepad output.txt
+</code></pre>
+</li>
+<li>Or pipe to <code>less</code>: <code>some-command | less</code> (press Space to advance, Q to quit).</li>
+<li>For very long listings: <code>ls -1 &gt; list.txt &amp;&amp; notepad list.txt</code></li>
+</ul>
+<hr>
+<h2 id="help-and-discovery"><a class="header" href="#help-and-discovery">Help and Discovery</a></h2>
+<ul>
+<li><code>command --help</code> shows help: <code>ls --help</code> or <code>grep --help</code></li>
+<li><code>man command</code> shows the manual page (pipe it to a file for easy reading): <code>man ls &gt; lshelp.txt &amp;&amp; notepad lshelp.txt</code></li>
+<li><code>which &lt;name&gt;</code> locates a program: <code>which openscad</code></li>
+</ul>
+<hr>
+<h2 id="running-scripts-and-executables"><a class="header" href="#running-scripts-and-executables">Running Scripts and Executables</a></h2>
+<ul>
+<li>Make a script executable: <code>chmod +x script.sh</code></li>
+<li>Run a script in the current directory: <code>./script.sh</code></li>
+<li>Run an executable by full path: <code>'/c/Program Files/OpenSCAD/openscad.exe'</code></li>
+</ul>
+<hr>
+<h2 id="screen-reader-specific-tips-jaws-nvda"><a class="header" href="#screen-reader-specific-tips-jaws-nvda">Screen Reader Specific Tips (JAWS, NVDA)</a></h2>
+<ul>
+<li>Use <code>ls -1</code> to avoid cluttered, multi-column listings</li>
+<li>Redirect large outputs to a text file and open it in an editor your screen reader handles well</li>
+<li>If output stops being announced, try moving focus with <strong>Alt+Tab</strong> and back, or briefly pressing <strong>Ctrl</strong> or <strong>Shift</strong> to force announcement</li>
+</ul>
+<hr>
+<h2 id="git-bash-vs-windows-command-prompt"><a class="header" href="#git-bash-vs-windows-command-prompt">Git Bash vs Windows Command Prompt</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Task</th><th>Git Bash</th><th>Command Prompt</th></tr>
+</thead>
+<tbody>
+<tr><td>List files</td><td><code>ls -1</code></td><td><code>dir</code></td></tr>
+<tr><td>Show current path</td><td><code>pwd</code></td><td><code>cd</code></td></tr>
+<tr><td>Read a file</td><td><code>cat file.txt</code></td><td><code>type file.txt</code></td></tr>
+<tr><td>Create file</td><td><code>touch file.txt</code></td><td><code>type nul &gt; file.txt</code></td></tr>
+<tr><td>Copy file</td><td><code>cp src dest</code></td><td><code>copy src dest</code></td></tr>
+<tr><td>Move/rename</td><td><code>mv old new</code></td><td><code>move old new</code></td></tr>
+<tr><td>Delete file</td><td><code>rm file.txt</code></td><td><code>del file.txt</code></td></tr>
+</tbody>
+</table>
+</div>
+<p>Git Bash uses Unix commands that also work on Linux and macOS.</p>
+<hr>
+<h2 id="suggested-learning-path"><a class="header" href="#suggested-learning-path">Suggested Learning Path</a></h2>
+<ol>
+<li>Open Git Bash, run <code>pwd</code>, <code>ls -1</code>, <code>cd</code> into Documents.</li>
+<li>Create a file with <code>touch test.txt</code>, add a line with <code>echo "hi" &gt; test.txt</code>, and read it with <code>cat test.txt</code>.</li>
+<li>Use <code>ls --help</code> and redirect output to a file to read comfortably.</li>
+</ol>
+<hr>
+<h2 id="hands-on-explore-the-terminal-beginner"><a class="header" href="#hands-on-explore-the-terminal-beginner">Hands-On: Explore the Terminal (Beginner)</a></h2>
+<ol>
+<li>Run <code>pwd</code> and speak or note the output.</li>
+<li>Run <code>ls -1</code> in your home directory. If the list is long, save it: <code>ls -1 &gt; listing.txt &amp;&amp; notepad listing.txt</code></li>
+<li>Create a folder and file: <code>mkdir GBPractice &amp;&amp; cd GBPractice &amp;&amp; touch notes.txt</code></li>
+<li>Add a line: <code>echo "My first note" &gt; notes.txt &amp;&amp; cat notes.txt</code></li>
+</ol>
+<hr>
+<h2 id="extension-exercises"><a class="header" href="#extension-exercises">Extension Exercises</a></h2>
+<ol>
+<li>Use wildcards to list only <code>.scad</code> files: <code>ls *.scad</code>. Proceed to search for other types of files.</li>
+<li>Save a long command’s output and search it with <code>grep</code>.</li>
+<li>Create a small script (<code>chmod +x</code>, then <code>./</code>) that prints a timestamp and test it.</li>
+<li>Build a project template generator: write a script that creates a folder structure for a new 3D printing project.</li>
+<li>Create a personalized <code>.bashrc</code> with aliases for frequently used commands; test it after restarting Git Bash.</li>
+<li>Write a Bash script that combines multiple concepts: navigates folders, creates files, and performs file operations.</li>
+<li>Create a screen-reader navigation guide for Git Bash; test with an actual screen reader if available.</li>
+<li>Build a data analysis script: read a text or CSV file, filter and process data, and generate a report.</li>
+<li>Develop a troubleshooting aide: common Git Bash error messages, their causes, and solutions.</li>
+<li>Design a comprehensive Git Bash learning portfolio: document skills developed, commands mastered, scripts created, and practical applications.</li>
+</ol>
+<hr>
+<h2 id="quick-quiz-10-questions"><a class="header" href="#quick-quiz-10-questions">Quick Quiz (10 questions)</a></h2>
+<ol>
+<li>What command shows your current directory?</li>
+<li>How do you list names only, one per line, for screen readers?</li>
+<li>How do you create an empty file?</li>
+<li>How do you run a script in the current directory?</li>
+<li>How do you page through long output?</li>
+<li>True or False: Git Bash commands also work on Linux and macOS.</li>
+<li>What does the <code>~</code> symbol represent in a Git Bash path?</li>
+<li>Explain why redirecting output to a file (e.g., <code>command &gt; output.txt</code>) is helpful for screen reader users.</li>
+<li>What is the difference between <code>--help</code> and <code>man</code> in Git Bash?</li>
+<li>Describe a practical scenario where you would use piping (<code>|</code>) in Git Bash.</li>
+</ol>
+<hr>
+<h2 id="references-7"><a class="header" href="#references-7">References</a></h2>
+<ul>
+<li>Git for Windows. (2024). <em>Git Bash documentation</em>. https://gitforwindows.org/</li>
+<li>GNU. (2024). <em>Bash reference manual</em>. https://www.gnu.org/software/bash/manual/bash.html</li>
+<li>The Linux Documentation Project. (2024). <em>Bash Beginners Guide</em>. https://tldp.org/LDP/Bash-Beginners-Guide/html/</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="gitbash_foundation_gitbash_tutorial-gitbash_tutorial"><a class="header" href="#gitbash_foundation_gitbash_tutorial-gitbash_tutorial">Git Bash Tutorial</a></h1>
+<p>Estimated time: 30-45 minutes</p>
+<p><strong>Learning Objectives</strong></p>
+<ul>
+<li>Launch Git Bash and identify the prompt</li>
+<li>Understand and use basic path notation (<code>~</code>, <code>./</code>, <code>../</code>)</li>
+<li>Use <code>pwd</code>, <code>ls -1</code>, and <code>cd</code> to navigate the filesystem</li>
+<li>Open files in an external editor and run simple commands</li>
+</ul>
+<p><strong>Materials</strong></p>
+<ul>
+<li>A computer with Git Bash installed (install via https://git-scm.com/)</li>
+<li>Access to a text editor (Notepad, VS Code)</li>
+</ul>
+<h2 id="pre-requisite-knowledge"><a class="header" href="#pre-requisite-knowledge">Pre-Requisite Knowledge</a></h2>
+<ul>
+<li>Typing and basic text-editing skills</li>
+<li>Familiarity with file/folder concepts and basic OS navigation</li>
+<li>Basic screen-reading familiarity (if applicable)</li>
+</ul>
+<hr>
+<h2 id="what-is-git-bash-1"><a class="header" href="#what-is-git-bash-1">What is Git Bash?</a></h2>
+<p>Git Bash is a free terminal application for Windows that provides a <strong>Bash</strong> (Unix shell) environment. It is installed as part of <strong>Git for Windows</strong>. When you open Git Bash, you can use Unix commands like <code>ls</code>, <code>cat</code>, <code>grep</code>, and <code>echo</code> — the same commands used on Linux and macOS — right on your Windows computer.</p>
+<p>Git Bash is useful for:</p>
+<ul>
+<li>Running CLI programs (like OpenSCAD, slicers, or 3DMake)</li>
+<li>Navigating the filesystem with keyboard-only commands</li>
+<li>Automating repetitive tasks with scripts</li>
+<li>Accessibility: works cleanly with NVDA, JAWS, and other screen readers</li>
+</ul>
+<hr>
+<h2 id="what-well-do-and-why"><a class="header" href="#what-well-do-and-why">What We’ll Do and Why</a></h2>
+<p>You’ll use Git Bash to run CLI programs, navigate the filesystem, and manipulate files — tasks that are especially efficient when using a keyboard or a screen reader.</p>
+<hr>
+<h2 id="quick-tutorial--core-concepts"><a class="header" href="#quick-tutorial--core-concepts">Quick Tutorial &amp; Core Concepts</a></h2>
+<h3 id="paths-and-navigation"><a class="header" href="#paths-and-navigation">Paths and Navigation</a></h3>
+<ul>
+<li><code>~</code> - home directory (e.g., <code>/c/Users/YourName</code>)</li>
+<li><code>.</code> - current directory</li>
+<li><code>..</code> - parent directory</li>
+<li><code>./</code> - current directory shortcut (used to run scripts: <code>./script.sh</code>)</li>
+<li><code>../</code> - parent directory shortcut</li>
+<li>Use <strong>Tab</strong> to autocomplete files and folders</li>
+</ul>
+<p>Git Bash uses forward slashes (<code>/</code>) for paths, just like Linux. Your Windows <code>C:\Users\YourName</code> folder is accessible as <code>/c/Users/YourName</code> or simply <code>~</code>.</p>
+<h3 id="useful-commands-examples"><a class="header" href="#useful-commands-examples">Useful Commands (Examples)</a></h3>
+<pre><code class="language-bash">pwd                # show current directory
+ls -1              # list files, one per line (screen-reader friendly)
+cd path/to/dir     # change directory
+whoami             # current user
+</code></pre>
+<h3 id="wildcards"><a class="header" href="#wildcards">Wildcards</a></h3>
+<ul>
+<li><code>*</code> matches zero or more characters</li>
+<li><code>?</code> matches a single character</li>
+</ul>
+<p>Use <code>ls *.scad</code> to filter by extension, for example.</p>
+<hr>
+<h2 id="common-operations"><a class="header" href="#common-operations">Common Operations</a></h2>
+<h3 id="file-and-folder-manipulation"><a class="header" href="#file-and-folder-manipulation">File and Folder Manipulation</a></h3>
+<pre><code class="language-bash">mkdir my-folder          # create folder
+mkdir -p a/b/c           # create nested folders at once
+cp -r src dest           # copy (use -r for directories)
+mv oldname newname       # rename or move
+rm file                  # remove file
+rm -r folder             # remove folder and contents
+touch filename.txt       # create new empty file
+</code></pre>
+<h3 id="input-output-and-piping"><a class="header" href="#input-output-and-piping">Input, Output, and Piping</a></h3>
+<pre><code class="language-bash">echo 'hello' | clip      # copy to clipboard
+command &gt; output.txt     # redirect output to file
+command &gt;&gt; output.txt    # append output to file
+command &gt; /dev/null      # discard/suppress output
+</code></pre>
+<p>Use <code>|</code> to pipe output and <code>&gt;</code> to redirect into files.</p>
+<h3 id="editing-and-running-programs"><a class="header" href="#editing-and-running-programs">Editing and Running Programs</a></h3>
+<pre><code class="language-bash">notepad file.txt         # open in Notepad (Windows)
+code file.txt            # open in VS Code (if in PATH)
+./script.sh              # run a script in the current directory
+chmod +x script.sh       # make a script executable
+</code></pre>
+<hr>
+<h2 id="screen-reader-friendly-tips"><a class="header" href="#screen-reader-friendly-tips">Screen-Reader Friendly Tips</a></h2>
+<ul>
+<li>Prefer <code>ls -1</code> for name-only, one-per-line output.</li>
+<li>Filter lists with <code>grep</code>: <code>ls -1 ~/Documents | grep "\.scad$"</code> (files only ending in .scad).</li>
+<li>Redirect very long outputs to a file and open it in an editor.</li>
+</ul>
+<hr>
+<h2 id="error-handling-and-control"><a class="header" href="#error-handling-and-control">Error Handling and Control</a></h2>
+<ul>
+<li>Abort a running command: <code>Ctrl+C</code></li>
+<li>View history: Up/Down arrows or <code>history</code></li>
+<li>Clear screen: <code>clear</code> (or <code>Ctrl+L</code>)</li>
+<li>If an error is long, read the first few lines for the gist and copy short snippets into a file to examine.</li>
+</ul>
+<hr>
+<h2 id="environment-variables--path"><a class="header" href="#environment-variables--path">Environment Variables &amp; PATH</a></h2>
+<p>Environment variables configure your session. <code>PATH</code> tells the shell where to find executables.</p>
+<pre><code class="language-bash">echo $PATH
+echo $HOME
+echo $USER
+</code></pre>
+<p>To add a directory to PATH for the current session:</p>
+<pre><code class="language-bash">export PATH="$PATH:/path/to/my/tools"
+</code></pre>
+<p>To make it permanent, add that line to <code>~/.bashrc</code>.</p>
+<hr>
+<h2 id="running-cli-applications-and-archives"><a class="header" href="#running-cli-applications-and-archives">Running CLI Applications and Archives</a></h2>
+<p>To extract ZIP archives in Git Bash:</p>
+<pre><code class="language-bash"># Unzip a file
+unzip file.zip -d destinationfolder
+
+# Or use Windows' built-in tool (from Git Bash):
+powershell.exe Expand-Archive -Path file.zip -DestinationPath folder
+</code></pre>
+<hr>
+<h2 id="aliases-and-cross-platform-notes"><a class="header" href="#aliases-and-cross-platform-notes">Aliases and Cross-Platform Notes</a></h2>
+<p>Git Bash provides Unix commands that work identically on Linux and macOS. This means your Git Bash skills transfer directly if you ever work on a Mac or Linux system.</p>
+<p>Useful aliases to add to <code>~/.bashrc</code>:</p>
+<pre><code class="language-bash">alias ll='ls -la'
+alias la='ls -1a'
+alias ..='cd ..'
+alias ...='cd ../..'
+</code></pre>
+<hr>
+<h2 id="step-by-step-tasks-hands-on"><a class="header" href="#step-by-step-tasks-hands-on">Step-by-step Tasks (Hands-On)</a></h2>
+<ol>
+<li>Open Git Bash; listen for the prompt and current path.</li>
+<li>Run <code>pwd</code> to confirm your location.</li>
+<li>Run <code>ls -1</code> in your home directory and note the output.</li>
+<li>Practice <code>cd Documents</code>, <code>cd ../</code>, and <code>cd ~</code> to move between folders.</li>
+<li>Create and open a file: <code>touch example.txt &amp;&amp; notepad example.txt</code> (or <code>code example.txt</code>).</li>
+</ol>
+<h2 id="checkpoints-2"><a class="header" href="#checkpoints-2">Checkpoints</a></h2>
+<ul>
+<li>After step 3 you should be able to state your current directory.</li>
+<li>After step 5 you should be able to create and open a text file from Git Bash.</li>
+</ul>
+<hr>
+<h2 id="quick-quiz-10-questions-1"><a class="header" href="#quick-quiz-10-questions-1">Quick Quiz (10 questions)</a></h2>
+<ol>
+<li>What command prints your current directory?</li>
+<li>What does <code>~</code> represent?</li>
+<li>How do you list only names, one per line?</li>
+<li>How do you go up one directory level?</li>
+<li>How would you open <code>notes.txt</code> in Notepad from Git Bash?</li>
+<li>True or False: The pipe operator <code>|</code> sends output to a file.</li>
+<li>Explain why running a script requires <code>chmod +x</code> first.</li>
+<li>What is the difference between running a script with <code>./script.sh</code> versus <code>bash script.sh</code>?</li>
+<li>Describe how you would handle a very long command output when using a screen reader.</li>
+<li>What does the <code>PATH</code> environment variable do, and why is it important when running programs like OpenSCAD?</li>
+</ol>
+<hr>
+<h2 id="extension-problems-9"><a class="header" href="#extension-problems-9">Extension Problems</a></h2>
+<ol>
+<li>Create a folder <code>OpenSCADProjects</code> in Documents and verify its contents.</li>
+<li>Create three files named <code>a.scad</code>, <code>b.scad</code>, <code>c.scad</code> and list them with a wildcard.</li>
+<li>Save <code>ls -1 ~/Documents</code> output to <code>doclist.txt</code> and open it.</li>
+<li>Try tab-completion in a deeply nested folder and note behavior.</li>
+<li>Capture <code>pwd</code> output into a file and open it: <code>pwd &gt; cwd.txt &amp;&amp; notepad cwd.txt</code>.</li>
+<li>Build an automated setup script that creates a complete project directory structure, initializes placeholder files, and generates a README.</li>
+<li>Create a Git Bash cheat sheet for your most-used commands; organize by category (navigation, files, scripting, troubleshooting).</li>
+<li>Write a non-visual tutorial for Git Bash basics; use audio descriptions and keyboard-only navigation as the primary learning method.</li>
+<li>Develop a workflow automation script: combines multiple Git Bash concepts (folders, aliases, piping) to solve a real 3D printing task.</li>
+<li>Create a Git Bash proficiency self-assessment: list all concepts covered, provide test commands for each, and reflect on what you learned.</li>
+</ol>
+<hr>
+<h2 id="references-8"><a class="header" href="#references-8">References</a></h2>
+<ul>
+<li>Git for Windows. (2024). <em>Git Bash</em>. https://gitforwindows.org/</li>
+<li>GNU. (2024). <em>Bash reference manual</em>. https://www.gnu.org/software/bash/manual/bash.html</li>
+<li>The Linux Documentation Project. (2024). <em>Bash Beginners Guide</em>. https://tldp.org/LDP/Bash-Beginners-Guide/html/</li>
+</ul>
+<h2 id="helpful-resources-6"><a class="header" href="#helpful-resources-6">Helpful Resources</a></h2>
+<ul>
+<li><a href="https://gitforwindows.org/">Git for Windows</a></li>
+<li><a href="https://www.gnu.org/software/bash/manual/bash.html">Bash Reference Manual (GNU)</a></li>
+<li><a href="https://tldp.org/LDP/Bash-Beginners-Guide/html/">Bash Beginners Guide</a></li>
+<li><a href="https://www.gnu.org/software/coreutils/manual/">GNU Coreutils</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="gitbash_foundation_screen_reader_accessibility_guide-screen_reader_accessibility_guide"><a class="header" href="#gitbash_foundation_screen_reader_accessibility_guide-screen_reader_accessibility_guide">Screen Reader Accessibility Guide for Git Bash</a></h1>
+<p><strong>Target Users:</strong> NVDA, JAWS, and other screen reader users<br><strong>Last Updated:</strong> 2026</p>
+<p>This guide is used throughout the Git Bash Foundation curriculum to help screen reader users navigate and work efficiently with the terminal.</p>
+<hr>
+<h2 id="table-of-contents-2"><a class="header" href="#table-of-contents-2">Table of Contents</a></h2>
+<ol>
+<li><a href="#getting-started">Getting Started with Screen Readers</a></li>
+<li><a href="#nvda-tips">NVDA-Specific Tips</a></li>
+<li><a href="#jaws-tips">JAWS-Specific Tips</a></li>
+<li><a href="#general-terminal">General Terminal Accessibility</a></li>
+<li><a href="#long-output">Working with Long Output</a></li>
+<li><a href="#shortcuts">Keyboard Shortcuts Reference</a></li>
+<li><a href="#troubleshooting-3">Troubleshooting</a></li>
+</ol>
+<hr>
+<h2 id="getting-started-with-screen-readers"><a class="header" href="#getting-started-with-screen-readers">Getting Started with Screen Readers</a></h2>
+<h3 id="which-screen-reader-should-i-use-1"><a class="header" href="#which-screen-reader-should-i-use-1">Which Screen Reader Should I Use?</a></h3>
+<p>Both NVDA and JAWS work well with Git Bash, but they have different strengths:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Feature</th><th>NVDA</th><th>JAWS</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Cost</strong></td><td>Free</td><td>Commercial (paid)</td></tr>
+<tr><td><strong>Installation</strong></td><td>Simple</td><td>Complex but thorough</td></tr>
+<tr><td><strong>Git Bash Support</strong></td><td>Excellent</td><td>Excellent</td></tr>
+<tr><td><strong>Learning Curve</strong></td><td>Gentle</td><td>Steeper</td></tr>
+<tr><td><strong>Customization</strong></td><td>Good</td><td>Extensive</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>Recommendation:</strong> Start with NVDA if you’re new to screen readers. Both will work for this curriculum.</p>
+<h3 id="before-you-start-1"><a class="header" href="#before-you-start-1">Before You Start</a></h3>
+<ol>
+<li>Make sure your screen reader is running before opening Git Bash</li>
+<li>Open Git Bash and let your screen reader read the window title and prompt</li>
+<li>If you don’t hear anything, press <strong>Alt+Tab</strong> to cycle windows and find Git Bash</li>
+<li>Use your screen reader’s screen review features to understand the layout</li>
+</ol>
+<h3 id="what-is-git-bash-2"><a class="header" href="#what-is-git-bash-2">What is Git Bash?</a></h3>
+<p>Git Bash is a terminal application for Windows that provides a Unix-style command-line experience (Bash shell). It is installed as part of <strong>Git for Windows</strong>, which is free software available at https://git-scm.com/. When you open Git Bash, you get the same <code>bash</code>, <code>ls</code>, <code>grep</code>, <code>cat</code>, and other Unix tools used on Linux and macOS — but running on your Windows computer.</p>
+<hr>
+<h2 id="nvda-specific-tips"><a class="header" href="#nvda-specific-tips">NVDA-Specific Tips</a></h2>
+<p>NVDA is free and available from https://www.nvaccess.org/</p>
+<h3 id="key-commands-for-git-bash"><a class="header" href="#key-commands-for-git-bash">Key Commands for Git Bash</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Command</th><th>What It Does</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>NVDA+Home</strong></td><td>Read the current line (your command or output)</td></tr>
+<tr><td><strong>NVDA+Down Arrow</strong></td><td>Read from cursor to end of screen</td></tr>
+<tr><td><strong>NVDA+Up Arrow</strong></td><td>Read from top to cursor</td></tr>
+<tr><td><strong>NVDA+Page Down</strong></td><td>Read next page</td></tr>
+<tr><td><strong>NVDA+Page Up</strong></td><td>Read previous page</td></tr>
+<tr><td><strong>NVDA+F7</strong></td><td>Open the Review Mode viewer (can scroll through text)</td></tr>
+<tr><td><strong>NVDA+Shift+Right Arrow</strong></td><td>Read next word</td></tr>
+<tr><td><strong>NVDA+Shift+Down Arrow</strong></td><td>Read entire screen</td></tr>
+<tr><td><strong>NVDA+End</strong></td><td>Jump to end of line</td></tr>
+<tr><td><strong>NVDA+Home</strong></td><td>Jump to start of line</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="example-reading-long-output-2"><a class="header" href="#example-reading-long-output-2">Example: Reading Long Output</a></h3>
+<p><strong>Scenario:</strong> You ran <code>ls</code> and it listed 50 files.</p>
+<p><strong>Solution with NVDA:</strong></p>
+<ol>
+<li>After the command finishes, press <strong>NVDA+Home</strong> to read the current line</li>
+<li>Press <strong>NVDA+Down Arrow</strong> repeatedly to read all output</li>
+<li>Or press <strong>NVDA+F7</strong> to open Review Mode and use arrow keys to scroll</li>
+</ol>
+<h3 id="tip-use-ls--1-for-screen-reader-friendly-listings"><a class="header" href="#tip-use-ls--1-for-screen-reader-friendly-listings">Tip: Use <code>ls -1</code> for Screen Reader Friendly Listings</a></h3>
+<p>By default, <code>ls</code> in Git Bash may display files in columns. Use <code>ls -1</code> (the number one, not the letter L) to display one file per line — much easier to follow with a screen reader.</p>
+<hr>
+<h2 id="jaws-specific-tips"><a class="header" href="#jaws-specific-tips">JAWS-Specific Tips</a></h2>
+<p>JAWS is a commercial screen reader available from https://www.freedomscientific.com/</p>
+<h3 id="key-commands-for-git-bash-1"><a class="header" href="#key-commands-for-git-bash-1">Key Commands for Git Bash</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Command</th><th>What It Does</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Insert+Down Arrow</strong></td><td>Read line by line downward</td></tr>
+<tr><td><strong>Insert+Up Arrow</strong></td><td>Read line by line upward</td></tr>
+<tr><td><strong>Insert+Page Down</strong></td><td>Read next page of text</td></tr>
+<tr><td><strong>Insert+Page Up</strong></td><td>Read previous page of text</td></tr>
+<tr><td><strong>Insert+End</strong></td><td>Jump to end of text on screen</td></tr>
+<tr><td><strong>Insert+Home</strong></td><td>Jump to start of text on screen</td></tr>
+<tr><td><strong>Insert+Ctrl+Down</strong></td><td>Read to end of screen</td></tr>
+<tr><td><strong>Insert+Ctrl+Up</strong></td><td>Read to beginning of screen</td></tr>
+<tr><td><strong>Insert+F3</strong></td><td>Open JAWS menu</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="example-reading-long-output-1-1"><a class="header" href="#example-reading-long-output-1-1">Example: Reading Long Output</a></h3>
+<p><strong>Scenario:</strong> You ran <code>ls &gt; list.txt</code> and saved output to a file.</p>
+<p><strong>Solution with JAWS:</strong></p>
+<ol>
+<li>Open the file: <code>notepad list.txt</code></li>
+<li>In Notepad, press <strong>Insert+Ctrl+Down</strong> to hear all content</li>
+<li>Use <strong>Insert+Down Arrow</strong> to read line by line at your own pace</li>
+</ol>
+<hr>
+<h2 id="general-terminal-accessibility"><a class="header" href="#general-terminal-accessibility">General Terminal Accessibility</a></h2>
+<h3 id="understanding-the-git-bash-layout"><a class="header" href="#understanding-the-git-bash-layout">Understanding the Git Bash Layout</a></h3>
+<p>The Git Bash window contains:</p>
+<ol>
+<li><strong>Title bar:</strong> Window name (e.g., “MINGW64:/c/Users/YourName”)</li>
+<li><strong>Content area:</strong> Command history and output</li>
+<li><strong>Prompt:</strong> Where you type (e.g., <code>YourName@COMPUTER MINGW64 ~$</code>)</li>
+</ol>
+<p><strong>Your screen reader reads from top to bottom, but focus is at the prompt (bottom).</strong></p>
+<h3 id="the-git-bash-prompt"><a class="header" href="#the-git-bash-prompt">The Git Bash Prompt</a></h3>
+<p>The default Git Bash prompt looks like:</p>
+<pre><code>YourName@COMPUTERNAME MINGW64 ~/Documents
+$
+</code></pre>
+<ul>
+<li><code>YourName</code> = your Windows username</li>
+<li><code>COMPUTERNAME</code> = your computer’s name</li>
+<li><code>MINGW64</code> = the environment type (64-bit)</li>
+<li><code>~/Documents</code> = your current location</li>
+<li><code>$</code> = ready for input</li>
+</ul>
+<p><strong>Note:</strong> Paths in Git Bash use forward slashes (<code>/</code>) and your Windows <code>C:\Users\YourName</code> folder appears as <code>/c/Users/YourName</code> or simply <code>~</code>.</p>
+<h3 id="navigation-sequence-1"><a class="header" href="#navigation-sequence-1">Navigation Sequence</a></h3>
+<p><strong>When you open Git Bash:</strong></p>
+<ol>
+<li>Your screen reader announces the window title</li>
+<li>Then it announces the prompt line</li>
+<li>Anything before the prompt is previous output</li>
+<li>Anything after the prompt is where new output will appear</li>
+</ol>
+<h3 id="reading-output-effectively-1"><a class="header" href="#reading-output-effectively-1">Reading Output Effectively</a></h3>
+<p><strong>Strategy 1: Immediate Output (Small Amount)</strong></p>
+<ul>
+<li>Run a command</li>
+<li>Your screen reader announces output immediately</li>
+<li>This works well for short outputs (a few lines)</li>
+</ul>
+<p><strong>Strategy 2: Large Output (Many Lines)</strong></p>
+<ul>
+<li>Redirect to a file: <code>command &gt; output.txt</code></li>
+<li>Open the file: <code>notepad output.txt</code></li>
+<li>Read in Notepad (easier for long text)</li>
+</ul>
+<p><strong>Strategy 3: Searching Output</strong></p>
+<ul>
+<li>Use <code>grep</code> to filter:
+<pre><code class="language-bash">ls | grep "pattern"
+</code></pre>
+</li>
+<li>Only results matching “pattern” are shown</li>
+</ul>
+<hr>
+<h2 id="working-with-long-output"><a class="header" href="#working-with-long-output">Working with Long Output</a></h2>
+<h3 id="solution-1-redirect-to-a-file-1"><a class="header" href="#solution-1-redirect-to-a-file-1">Solution 1: Redirect to a File</a></h3>
+<pre><code class="language-bash">ls -1 &gt; list.txt
+notepad list.txt
+</code></pre>
+<h3 id="solution-2-use-pagination-1"><a class="header" href="#solution-2-use-pagination-1">Solution 2: Use Pagination</a></h3>
+<pre><code class="language-bash">ls | less
+</code></pre>
+<ul>
+<li>Press <strong>Space</strong> to see next page</li>
+<li>Press <strong>Q</strong> to quit</li>
+<li><strong>Note:</strong> Some screen readers struggle with <code>less</code>, so Solution 1 is preferred</li>
+</ul>
+<h3 id="solution-3-filter-output-1"><a class="header" href="#solution-3-filter-output-1">Solution 3: Filter Output</a></h3>
+<pre><code class="language-bash">ls | grep "\.scad"
+</code></pre>
+<h3 id="solution-4-count-before-displaying-1"><a class="header" href="#solution-4-count-before-displaying-1">Solution 4: Count Before Displaying</a></h3>
+<pre><code class="language-bash">ls | wc -l
+</code></pre>
+<p>Tells you how many items there are. If the count is over 20, use the file method.</p>
+<hr>
+<h2 id="keyboard-shortcuts-reference"><a class="header" href="#keyboard-shortcuts-reference">Keyboard Shortcuts Reference</a></h2>
+<h3 id="all-users-works-in-git-bash-regardless-of-screen-reader"><a class="header" href="#all-users-works-in-git-bash-regardless-of-screen-reader">All Users (Works in Git Bash Regardless of Screen Reader)</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Key</th><th>Action</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Up Arrow</strong></td><td>Show previous command</td></tr>
+<tr><td><strong>Down Arrow</strong></td><td>Show next command</td></tr>
+<tr><td><strong>Tab</strong></td><td>Auto-complete file/folder names</td></tr>
+<tr><td><strong>Shift+Tab</strong></td><td>Cycle backward through completions</td></tr>
+<tr><td><strong>Home</strong></td><td>Jump to start of line</td></tr>
+<tr><td><strong>End</strong></td><td>Jump to end of line</td></tr>
+<tr><td><strong>Ctrl+A</strong></td><td>Jump to start of line (alternate)</td></tr>
+<tr><td><strong>Ctrl+E</strong></td><td>Jump to end of line (alternate)</td></tr>
+<tr><td><strong>Ctrl+C</strong></td><td>Stop command</td></tr>
+<tr><td><strong>Ctrl+L</strong></td><td>Clear screen</td></tr>
+<tr><td><strong>Enter</strong></td><td>Run command</td></tr>
+<tr><td><strong>Ctrl+R</strong></td><td>Search command history interactively</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="troubleshooting-3"><a class="header" href="#troubleshooting-3">Troubleshooting</a></h2>
+<h3 id="problem-1-i-cant-hear-the-output-after-running-a-command-1"><a class="header" href="#problem-1-i-cant-hear-the-output-after-running-a-command-1">Problem 1: “I Can’t Hear the Output After Running a Command”</a></h3>
+<ol>
+<li><strong>Redirect to file:</strong> <code>command &gt; output.txt</code> then <code>notepad output.txt</code></li>
+<li><strong>Press End</strong> or <strong>Ctrl+End</strong> to go to end of text</li>
+<li><strong>Use Up Arrow</strong> to review previous command</li>
+</ol>
+<h3 id="problem-2-tab-completion-isnt-working-1"><a class="header" href="#problem-2-tab-completion-isnt-working-1">Problem 2: “Tab Completion Isn’t Working”</a></h3>
+<ol>
+<li><strong>Need at least one character</strong> — type <code>cd D</code> then Tab (not just <code>cd</code> then Tab)</li>
+<li><strong>Check if item exists</strong> — use <code>ls</code> first to see available items</li>
+<li><strong>Multiple matches</strong> — press Tab twice to list all options</li>
+</ol>
+<h3 id="problem-3-command-not-found-error"><a class="header" href="#problem-3-command-not-found-error">Problem 3: “‘Command Not Found’ Error”</a></h3>
+<ol>
+<li>Check spelling carefully</li>
+<li>Git Bash uses Unix commands: use <code>ls</code> not <code>dir</code>, use <code>cat</code> not <code>type</code></li>
+<li>Verify the program is installed and in your PATH: <code>which openscad</code></li>
+</ol>
+<h3 id="problem-4-paths-look-weird"><a class="header" href="#problem-4-paths-look-weird">Problem 4: “Paths Look Weird”</a></h3>
+<p>Git Bash converts Windows paths to Unix style:</p>
+<ul>
+<li>Windows: <code>C:\Users\YourName\Documents</code></li>
+<li>Git Bash: <code>/c/Users/YourName/Documents</code> or <code>~/Documents</code></li>
+</ul>
+<p>Both refer to the same location. When opening files in Windows apps (like Notepad), you may need to use the Windows path format.</p>
+<h3 id="problem-5-command-runs-forever-and-wont-stop"><a class="header" href="#problem-5-command-runs-forever-and-wont-stop">Problem 5: “Command Runs Forever and Won’t Stop”</a></h3>
+<p>Press <strong>Ctrl+C</strong></p>
+<h3 id="problem-6-i-need-to-edit-my-last-command"><a class="header" href="#problem-6-i-need-to-edit-my-last-command">Problem 6: “I Need to Edit My Last Command”</a></h3>
+<ol>
+<li>Press <strong>Up Arrow</strong> to show previous command</li>
+<li>Use <strong>arrow keys</strong> to move through it</li>
+<li>Edit the command</li>
+<li>Press <strong>Enter</strong> to run the modified version</li>
+</ol>
+<hr>
+<h2 id="pro-tips-for-efficiency-1"><a class="header" href="#pro-tips-for-efficiency-1">Pro Tips for Efficiency</a></h2>
+<h3 id="1-use-ls--1-for-screen-reader-friendly-listings"><a class="header" href="#1-use-ls--1-for-screen-reader-friendly-listings">1. Use <code>ls -1</code> for Screen Reader Friendly Listings</a></h3>
+<pre><code class="language-bash">ls -1
+</code></pre>
+<p>One file per line — much easier to follow with a screen reader.</p>
+<h3 id="2-create-aliases-for-frequently-used-commands"><a class="header" href="#2-create-aliases-for-frequently-used-commands">2. Create Aliases for Frequently Used Commands</a></h3>
+<pre><code class="language-bash">alias la='ls -1a'
+</code></pre>
+<p>Add this to your <code>~/.bashrc</code> file to make it permanent.</p>
+<h3 id="3-use-command-history-effectively"><a class="header" href="#3-use-command-history-effectively">3. Use Command History Effectively</a></h3>
+<pre><code class="language-bash">history
+</code></pre>
+<p>Run a previous command by number:</p>
+<pre><code class="language-bash">!5
+</code></pre>
+<p>(Runs the 5th command in history)</p>
+<p>Or search history interactively:</p>
+<pre><code class="language-bash"># Press Ctrl+R then type part of a previous command
+</code></pre>
+<h3 id="4-redirect-everything-to-files-for-accessibility"><a class="header" href="#4-redirect-everything-to-files-for-accessibility">4. Redirect Everything to Files for Accessibility</a></h3>
+<pre><code class="language-bash">command-name &gt; results.txt
+notepad results.txt
+</code></pre>
+<h3 id="5-create-a-readme-for-yourself"><a class="header" href="#5-create-a-readme-for-yourself">5. Create a README for Yourself</a></h3>
+<pre><code class="language-bash">echo "ls -1 means list files one per line (screen reader friendly)" &gt; my-notes.txt
+echo "cd means change directory" &gt;&gt; my-notes.txt
+notepad my-notes.txt
+</code></pre>
+<hr>
+<h2 id="recommended-workflow-1"><a class="header" href="#recommended-workflow-1">Recommended Workflow</a></h2>
+<p><strong>For every new task:</strong></p>
+<ol>
+<li><strong>Know where you are:</strong> <code>pwd</code></li>
+<li><strong>See what’s around:</strong> <code>ls -1</code></li>
+<li><strong>Plan your next step:</strong> Think before typing</li>
+<li><strong>Run the command:</strong> Type and press Enter</li>
+<li><strong>Check the output:</strong> Use screen reader or redirect to file</li>
+<li><strong>Move forward:</strong> Next command or <code>cd</code> to next folder</li>
+</ol>
+<hr>
+<h2 id="quick-reference-card-1"><a class="header" href="#quick-reference-card-1">Quick Reference Card</a></h2>
+<pre><code>EVERY COMMAND STARTS WITH:
+1. pwd (where am I?)
+2. ls -1 (what's here?)
+3. cd path (go there)
+
+LONG OUTPUT?
+→ command &gt; file.txt
+→ notepad file.txt
+
+STUCK?
+→ Ctrl+C
+
+WANT TO REPEAT?
+→ Up Arrow
+→ history
+
+NEED HELP?
+→ man command-name  (or: command --help)
+</code></pre>
+<hr>
+<h2 id="additional-resources-2"><a class="header" href="#additional-resources-2">Additional Resources</a></h2>
+<ul>
+<li><strong>NVDA Documentation:</strong> https://www.nvaccess.org/documentation/</li>
+<li><strong>JAWS Documentation:</strong> https://www.freedomscientific.com/support/</li>
+<li><strong>Git for Windows (includes Git Bash):</strong> https://git-scm.com/</li>
+<li><strong>Bash Manual:</strong> https://www.gnu.org/software/bash/manual/</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
 <h1 id="gitbash_foundation_gitbash_pre_your_first_terminal-gitbash_pre_your_first_terminal"><a class="header" href="#gitbash_foundation_gitbash_pre_your_first_terminal-gitbash_pre_your_first_terminal">GitBash-Pre: Your First Terminal - Screen Reader Navigation Fundamentals</a></h1>
 <p><strong>Duration:</strong> 1.5-2 hours (for screen reader users)<br><strong>Prerequisites:</strong> None - this is the starting point<br><strong>Accessibility Note:</strong> This lesson is designed specifically for screen reader users (NVDA, JAWS)<br><strong>Important:</strong> Git Bash uses Unix/bash commands, different from Windows CMD/PowerShell</p>
 <hr>
-<h2 id="what-is-git-bash-1"><a class="header" href="#what-is-git-bash-1">What is Git Bash?</a></h2>
+<h2 id="what-is-git-bash-3"><a class="header" href="#what-is-git-bash-3">What is Git Bash?</a></h2>
 <p>Git Bash is a Unix/Linux shell running on Windows. It gives you bash commands (same as macOS and Linux) while staying on your Windows computer.</p>
 <p><strong>Why learn this?</strong></p>
 <ul>
@@ -7739,7 +8236,7 @@ A: Git Bash uses Unix-style paths with forward slashes, not Windows backslashes.
 <li><strong>JAWS Screen Reader:</strong> https://www.freedomscientific.com/products/software/jaws/</li>
 </ul>
 <hr>
-<h2 id="troubleshooting-3"><a class="header" href="#troubleshooting-3">Troubleshooting</a></h2>
+<h2 id="troubleshooting-4"><a class="header" href="#troubleshooting-4">Troubleshooting</a></h2>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -7778,7 +8275,7 @@ A: Git Bash uses Unix-style paths with forward slashes, not Windows backslashes.
 <li>Practice <code>cd Documents</code>, <code>cd ../</code> and <code>cd ~</code> until comfortable.</li>
 <li>Try tab-completion: type <code>cd D</code> and press Tab.</li>
 </ol>
-<h2 id="checkpoints-2"><a class="header" href="#checkpoints-2">Checkpoints</a></h2>
+<h2 id="checkpoints-3"><a class="header" href="#checkpoints-3">Checkpoints</a></h2>
 <ul>
 <li>Confirm you can state your current path and move to <code>Documents</code>.</li>
 </ul>
@@ -7814,7 +8311,7 @@ A: Git Bash uses Unix-style paths with forward slashes, not Windows backslashes.
 <li>How would you navigate to your home directory from any location using a single command?</li>
 <li>What is the advantage of using relative paths (like <code>../</code>) versus absolute paths in automation scripts?</li>
 </ol>
-<h2 id="extension-problems-9"><a class="header" href="#extension-problems-9">Extension Problems</a></h2>
+<h2 id="extension-problems-10"><a class="header" href="#extension-problems-10">Extension Problems</a></h2>
 <ol>
 <li>Create a nested folder and practice <code>cd</code> into it by typing partial names and using Tab.</li>
 <li>Use <code>ls -la</code> to list all files including hidden ones in a folder.</li>
@@ -7832,13 +8329,13 @@ A: Git Bash uses Unix-style paths with forward slashes, not Windows backslashes.
 <li>Write a guide for a peer on how to understand the Git Bash prompt and path notation without using GUI file explorer.</li>
 <li>Create a troubleshooting flowchart: if someone says “I don’t know where I am,” what commands do you give them to find out?</li>
 </ol>
-<h2 id="references-7"><a class="header" href="#references-7">References</a></h2>
+<h2 id="references-9"><a class="header" href="#references-9">References</a></h2>
 <ul>
 <li>GNU. (2024). <em>Bash Manual</em>. https://www.gnu.org/software/bash/manual/</li>
 <li>Git SCM. (2024). <em>Git Bash documentation</em>. https://git-scm.com/book/en/v2</li>
 <li>Linux Foundation. (2024). <em>The Linux Command Line</em>. https://linuxcommand.org/</li>
 </ul>
-<h2 id="helpful-resources-6"><a class="header" href="#helpful-resources-6">Helpful Resources</a></h2>
+<h2 id="helpful-resources-7"><a class="header" href="#helpful-resources-7">Helpful Resources</a></h2>
 <ul>
 <li><a href="https://www.gnu.org/software/bash/manual/htmlnode/Bourne-Shell-Builtins.html">Bash Manual - Navigation</a></li>
 <li><a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository">Git Bash Basics</a></li>
@@ -8065,7 +8562,7 @@ cd OpenSCAD
 </ol>
 <p><strong>Answer all 10 confidently before moving to GitBash-2.</strong></p>
 <hr>
-<h2 id="extension-problems-10"><a class="header" href="#extension-problems-10">Extension Problems</a></h2>
+<h2 id="extension-problems-11"><a class="header" href="#extension-problems-11">Extension Problems</a></h2>
 <ol>
 <li>Create a folder with spaces in the name (e.g., <code>My Projects</code>) and navigate to it</li>
 <li>Use Tab completion to navigate into 5+ levels of folders without typing full paths</li>
@@ -8079,7 +8576,7 @@ cd OpenSCAD
 <li>Challenge: Navigate to a destination using only relative paths without using <code>pwd</code> to check location (navigate “blind”)</li>
 </ol>
 <hr>
-<h2 id="common-issues-2"><a class="header" href="#common-issues-2">Common Issues</a></h2>
+<h2 id="common-issues-1"><a class="header" href="#common-issues-1">Common Issues</a></h2>
 <h3 id="no-such-file-or-directory"><a class="header" href="#no-such-file-or-directory">“No such file or directory”</a></h3>
 <p><strong>Problem:</strong> <code>cd FolderName</code> says the folder doesn’t exist</p>
 <p><strong>Solutions:</strong></p>
@@ -8261,7 +8758,7 @@ ls -la                      # List including hidden files
 <p>For advanced students, the University of Utah provides several makerspaces, including the Lassonde Studios and the Eccles Health Sciences Library Technology Hub.[^34] These centers offer access to “industrial-grade” printing technologies, such as Selective Laser Sintering (SLS), which require even more rigorous safety training regarding inert gas (Argon/Nitrogen) asphyxiation hazards.<sup class="footnote-reference" id="fr-16-2"><a href="#footnote-16">10</a></sup></p>
 <h2 id="conclusion-the-pedagogy-of-programmatic-manufacturing"><a class="header" href="#conclusion-the-pedagogy-of-programmatic-manufacturing"><strong>Conclusion: The Pedagogy of Programmatic Manufacturing</strong></a></h2>
 <p>The integration of OpenSCAD and 3DMake into a high school curriculum is a powerful strategy for developing the next generation of engineers. By shifting the focus from “visual sculpting” to “mathematical definition,” students are forced to confront the underlying logic of their designs. The 3DMake toolchain facilitates this by removing the friction of manual rendering and slicing, allowing the student to stay in the “flow state” of coding.<br>However, the success of this instructional model depends on a comprehensive understanding of its limitations. The instructor must balance the efficiency of AI-assisted verification with a healthy skepticism of LLM spatial reasoning. They must enforce rigid safety protocols to mitigate the invisible risks of UFP and VOC emissions. And finally, they must guide the student through the idiosyncratic challenges of the OpenSCAD language-its absolute coordinates and its strict manifold requirements.</p>
-<h2 id="references-8"><a class="header" href="#references-8"><strong>References</strong></a></h2>
+<h2 id="references-10"><a class="header" href="#references-10"><strong>References</strong></a></h2>
 <p>Deck, T. (2025). <em>3DMake: A command-line tool for 3D printing workflows</em>. GitHub. <a href="https://github.com/tdeck/3dmake">https://github.com/tdeck/3dmake</a><br>Gohde, J., &amp; Kintel, M. (2021). <em>Programming with OpenSCAD: A beginner’s guide to coding 3D-printable objects</em>. No Starch Press.<br>Gonzalez Avila, J. F., Pietrzak, T., &amp; Casiez, G. (2024). <em>Understanding the challenges of OpenSCAD users for 3D printing</em>. Proceedings of the ACM Symposium on User Interface Software and Technology.<br>Google. (2025). <em>Vertex AI Gemini 3 Pro Preview: Getting started with generative AI</em>. <a href="https://docs.cloud.google.com/vertex-ai/generative-ai/docs/start/get-started-with-gemini-3">https://docs.cloud.google.com/vertex-ai/generative-ai/docs/start/get-started-with-gemini-3</a><br>National Institute for Occupational Safety and Health (NIOSH). (2024). <em>Approaches to safe 3D printing: A guide for makerspace users, schools, libraries, and small businesses</em>. <a href="https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html">https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html</a><br>Ohio State University Environmental Health and Safety. (2026). <em>3D printer safety concerns and ventilation</em>. <a href="https://ehs.osu.edu/kb/3d-printer-safety">https://ehs.osu.edu/kb/3d-printer-safety</a><br>Salt Lake City Public Library. (2026). <em>Creative Lab: Available hardware and 3D printing procedures</em>. <a href="https://services.slcpl.org/creativelab">https://services.slcpl.org/creativelab</a><br>Salt Lake County Library. (2026). <em>Create Spaces: Hardware specifications and filament fees</em>. <a href="https://www.slcolibrary.org/what-we-have/create">https://www.slcolibrary.org/what-we-have/create</a><br>University of Utah. (2026). <em>Marriott Library ProtoSpace and Maker hubs</em>. <a href="https://lib.utah.edu/protospace.php">https://lib.utah.edu/protospace.php</a><br>Washington State Department of Health. (2026). <em>3D printer and filament selection for safe school environments</em>. <a href="https://doh.wa.gov/community-and-environment/schools/3d-printers">https://doh.wa.gov/community-and-environment/schools/3d-printers</a></p>
 <h2 id="supplemental-learning-resources"><a class="header" href="#supplemental-learning-resources">Supplemental Learning Resources</a></h2>
 <p>This introduction is complemented by comprehensive textbooks and code examples:</p>
@@ -8876,7 +9373,7 @@ Then: Lesson 9 (Automation)</p>
 <li>Slice a preview: <code>3dm preview slice</code> then <code>3dm preview print</code> (or export preview STL) to test tactile output.</li>
 <li>Slice for full print: <code>3dm build slice</code> -&gt; inspect <code>build/main.gcode</code> with a layer-preview option in your slicer.</li>
 </ol>
-<h3 id="checkpoints-3"><a class="header" href="#checkpoints-3">Checkpoints</a></h3>
+<h3 id="checkpoints-4"><a class="header" href="#checkpoints-4">Checkpoints</a></h3>
 <ul>
 <li>After step 2 you can open and edit <code>src/main.scad</code> from the terminal.</li>
 <li>After step 3 the <code>build/</code> folder contains <code>main.stl</code>.</li>
@@ -9151,7 +9648,7 @@ union() {
 <li>Accessible: Non-visual users can understand the design intent and constraints</li>
 <li>Professional: Employers and collaborators trust well-documented code</li>
 </ul>
-<h3 id="checkpoints-4"><a class="header" href="#checkpoints-4">Checkpoints</a></h3>
+<h3 id="checkpoints-5"><a class="header" href="#checkpoints-5">Checkpoints</a></h3>
 <ul>
 <li>After step 2 you can locate <code>3dmake.toml</code> and the <code>build/</code> directory. Ensure your project scaffold matches the expected structure described in the 3dMake repository<sup class="footnote-reference" id="fr-1-3-1"><a href="#footnote-1-1">1</a></sup>.</li>
 <li>After step 4 the <code>build/</code> folder contains a valid <code>main.stl</code>. Verify the geometry using your slicer’s validation tools<sup class="footnote-reference" id="fr-5-1"><a href="#footnote-5">6</a></sup>.</li>
@@ -9741,7 +10238,7 @@ git commit -m "Initial project setup"
 </code></pre>
 <hr>
 <h2 id="part-6-troubleshooting"><a class="header" href="#part-6-troubleshooting">Part 6: Troubleshooting</a></h2>
-<h3 id="common-issues-3"><a class="header" href="#common-issues-3">Common Issues</a></h3>
+<h3 id="common-issues-2"><a class="header" href="#common-issues-2">Common Issues</a></h3>
 <h4 id="3dm-command-not-found"><a class="header" href="#3dm-command-not-found">“3dm command not found”</a></h4>
 <p><strong>Cause:</strong> 3dMake isn’t in your PATH or you haven’t completed setup.</p>
 <p><strong>Solution:</strong></p>
@@ -10098,7 +10595,7 @@ OR: In OpenSCAD, press F6 then File &gt; Export &gt; Export as STL</p>
 </li>
 </ol>
 <hr>
-<h2 id="troubleshooting-4"><a class="header" href="#troubleshooting-4">Troubleshooting</a></h2>
+<h2 id="troubleshooting-5"><a class="header" href="#troubleshooting-5">Troubleshooting</a></h2>
 <h3 id="openscad-doesnt-open-when-i-run-the-task"><a class="header" href="#openscad-doesnt-open-when-i-run-the-task"><strong>OpenSCAD doesn’t open when I run the task</strong></a></h3>
 <ul>
 <li>Confirm OpenSCAD is installed and in your PATH: <code>openscad --version</code> in PowerShell</li>
@@ -10121,7 +10618,7 @@ OR: In OpenSCAD, press F6 then File &gt; Export &gt; Export as STL</p>
 <li>Errors always include a line number - use <code>Ctrl + G</code> in VSCode to jump to that line</li>
 </ul>
 <hr>
-<h2 id="references-9"><a class="header" href="#references-9">References</a></h2>
+<h2 id="references-11"><a class="header" href="#references-11">References</a></h2>
 <p>Microsoft. (2024). <em>Visual Studio Code accessibility</em>. <a href="https://code.visualstudio.com/docs/editor/accessibility">https://code.visualstudio.com/docs/editor/accessibility</a></p>
 <p>NV Access. (2024). <em>NVDA user guide</em>. <a href="https://www.nvaccess.org/files/nvda/documentation/userGuide.html">https://www.nvaccess.org/files/nvda/documentation/userGuide.html</a></p>
 <p>OpenSCAD. (n.d.). <em>OpenSCAD documentation</em>. <a href="https://openscad.org/documentation.html">https://openscad.org/documentation.html</a></p>
@@ -10678,7 +11175,7 @@ keyboard navigation).</p>
 <li><code>T</code> - toggle the table of contents sidebar</li>
 </ul>
 <hr>
-<h2 id="references-10"><a class="header" href="#references-10">References</a></h2>
+<h2 id="references-12"><a class="header" href="#references-12">References</a></h2>
 <p>NV Access. (2024). <em>NVDA user guide</em>. <a href="https://www.nvaccess.org/files/nvda/documentation/userGuide.html">https://www.nvaccess.org/files/nvda/documentation/userGuide.html</a></p>
 <p>Freedom Scientific. (2024). <em>JAWS for Windows help</em>. <a href="https://support.freedomscientific.com/Content/Documents/Manuals/JAWS/JAWS-Screen-Reader-Help.pdf">https://support.freedomscientific.com/Content/Documents/Manuals/JAWS/JAWS-Screen-Reader-Help.pdf</a></p>
 <p>Microsoft. (2024). <em>Visual Studio Code accessibility</em>. <a href="https://code.visualstudio.com/docs/editor/accessibility">https://code.visualstudio.com/docs/editor/accessibility</a></p>
@@ -13023,7 +13520,7 @@ union(){
 <li>How does internal infill or cavity affect mass distribution and roll randomness?</li>
 <li>Which parameter had the largest effect on durability and why?</li>
 </ul>
-<h2 id="quick-quiz-10-questions"><a class="header" href="#quick-quiz-10-questions">Quick Quiz (10 questions)</a></h2>
+<h2 id="quick-quiz-10-questions-2"><a class="header" href="#quick-quiz-10-questions-2">Quick Quiz (10 questions)</a></h2>
 <ol>
 <li>What parameter controls wall thickness in your <code>.scad</code> file? (short answer)</li>
 <li>Name one method to increase a part’s impact resistance. (short answer)</li>
@@ -20957,10 +21454,6 @@ done
 <li><a href="#3dmake_foundation-appendix_d_powershell_integration">Appendix D: PowerShell Integration for SCAD Workflows</a> - Batch processing, automation scripts, and advanced workflow integration</li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="powershell_foundation_powershell_introduction-powershell_introduction"><a class="header" href="#powershell_foundation_powershell_introduction-powershell_introduction">Appendix A: Introduction to Command Line Interfaces</a></h1>
-<div style="break-before: page; page-break-before: always;"></div>
-<h1 id="powershell_foundation_powershell_tutorial-powershell_tutorial"><a class="header" href="#powershell_foundation_powershell_tutorial-powershell_tutorial">Appendix B: PowerShell Comprehensive Guide</a></h1>
-<div style="break-before: page; page-break-before: always;"></div>
 <h1 id="3dmake_foundation-appendix_a_comprehensive_slicing_guide"><a class="header" href="#3dmake_foundation-appendix_a_comprehensive_slicing_guide">Appendix A: Comprehensive Slicing Guide - All Major Slicers</a></h1>
 <p>This appendix covers settings, workflows, and troubleshooting for <strong>7 major 3D printer slicers</strong>. Each slicer is represented with:</p>
 <ul>
@@ -21095,7 +21588,7 @@ $config = "default"  # Use default printer profile
 
 Write-Host "Slicing complete: $output"
 </code></pre>
-<h3 id="troubleshooting-5"><a class="header" href="#troubleshooting-5">Troubleshooting</a></h3>
+<h3 id="troubleshooting-6"><a class="header" href="#troubleshooting-6">Troubleshooting</a></h3>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -24317,7 +24810,7 @@ difference() {
 <li><strong>OpenSCAD Cheat Sheet</strong>: <a href="#3dmake_foundation_lessons_3dmake_2-openscad-cheat-sheet">Syntax Quick Reference</a></li>
 <li><strong>3dMake Setup Guide</strong>: <a href="#3dmake_foundation_lessons_3dmake_1-3dmake-setup-guide">Commands &amp; Workflow</a></li>
 </ul>
-<h2 id="troubleshooting-6"><a class="header" href="#troubleshooting-6">Troubleshooting</a></h2>
+<h2 id="troubleshooting-7"><a class="header" href="#troubleshooting-7">Troubleshooting</a></h2>
 <p><strong>File not found when opening in OpenSCAD</strong></p>
 <ul>
 <li>Ensure file paths are correct</li>
@@ -24363,7 +24856,7 @@ difference() {
 <p>Motivated by observing persistent gaps in affordable, practical, and culturally responsive accessible educational materials, Dr. Hunsaker created <strong>TVI Resources</strong>, a collection of free, openly licensed instructional materials designed to meet the real needs of educators and students. This commitment to accessible education informed his development of this curriculum: a comprehensive, text-based approach to 3D design and digital fabrication specifically engineered for blind and visually impaired learners, emphasizing independence, technical mastery, and real-world application.</p>
 <h2 id="acknowledgements"><a class="header" href="#acknowledgements">Acknowledgements</a></h2>
 <p>This curriculum stands on the shoulders of innovators, educators, and open-source maintainers whose commitment to accessibility and open education made this work possible.</p>
-<h3 id="3dmake-1"><a class="header" href="#3dmake-1">3DMake</a></h3>
+<h3 id="3dmake"><a class="header" href="#3dmake">3DMake</a></h3>
 <p>Special thanks to Troy Deck, the creator and maintainer of <strong><a href="https://github.com/tdeck/3dmake">3DMake</a></strong>, an open-source command-line tool that automates the workflow from code-based 3D models to print-ready files. 3DMake is essential to this curriculum—it eliminates the visual GUI entirely and makes parametric 3D design accessible to screen reader users through text-based commands and configuration files. Without 3DMake, a truly non-visual pathway from design to fabrication would not exist.</p>
 <h3 id="texas-school-for-the-blind-and-visually-impaired-tsbvi"><a class="header" href="#texas-school-for-the-blind-and-visually-impaired-tsbvi">Texas School for the Blind and Visually Impaired (TSBVI)</a></h3>
 <p>This curriculum was directly inspired by the innovative work at <strong>TSBVI</strong>, a pioneer in accessible education for blind and visually impaired students. The foundational idea of using text-driven tools and command-line workflows for technical education originated from conversations and collaboration with TSBVI educators. Their commitment to demonstrating that blind and visually impaired students can excel in technical fields provided the vision for this project.</p>
@@ -24407,6 +24900,7 @@ difference() {
         <script src="book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
+        <script src="theme/theme-05ece643.js"></script>
 
         <script>
         window.addEventListener('load', function() {

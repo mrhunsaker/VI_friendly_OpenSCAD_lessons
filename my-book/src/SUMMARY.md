@@ -10,9 +10,10 @@
   - [Editor Selection and Setup](Setup/Editor_Selection_Setup/Editor_Selection_Setup.md)
 
 - [Part 2: Command-Line Foundation (Choose Your Path)](Command_Line_Interface_Selection/Command_Line_Interface_Selection.md)
-  
+
   - [Part 2A: Foundations of PowerShell](PowerShell_Foundation/Part_1.md)
     - [PowerShell Curriculum Overview](PowerShell_Foundation/PowerShell_Curriculum_Overview/PowerShell_Curriculum_Overview.md)
+    - [PowerShell Introduction](PowerShell_Foundation/Powershell_Introduction/Powershell_Introduction.md)
     - [PS-Pre: Your First Terminal](PowerShell_Foundation/PS_Pre_Your_First_Terminal/PS_Pre_Your_First_Terminal.md)
     - [PS-0: Getting Started - Layout, Paths, and the Shell](PowerShell_Foundation/PS_0_getting_started_layout_paths/PS_0_getting_started_layout_paths.md)
     - [PS-1: Navigation - Moving Around Your File System](PowerShell_Foundation/PS_1_navigation/PS_1_navigation.md)
@@ -22,7 +23,7 @@
     - [PS-5: Filling in the Gaps - Control Flow, Profiles, and Useful Tricks](PowerShell_Foundation/PS_5_filling_in_the_gaps/PS_5_filling_in_the_gaps.md)
     - [PS-6: Advanced Terminal Techniques - Scripts, Functions & Professional Workflows](PowerShell_Foundation/PS_6_Advanced_Techniques/PS_6_Advanced_Techniques.md)
     - [PowerShell Unit Test & Practice](PowerShell_Foundation/PS_Unit_Test/PS_Unit_Test.md)
-  
+
   - [Part 2B: Foundations of Windows Command Prompt (CMD)](CMD_Foundation/Part_1.md)
     - [CMD Curriculum Overview](CMD_Foundation/CMD_Curriculum_Overview/CMD_Curriculum_Overview.md)
     - [CMD-Pre: Your First Terminal](CMD_Foundation/CMD_Pre_Your_First_Terminal/CMD_Pre_Your_First_Terminal.md)
@@ -34,9 +35,12 @@
     - [CMD-5: Filling in the Gaps - Batch Files & Advanced Techniques](CMD_Foundation/CMD_5_filling_in_the_gaps/CMD_5_filling_in_the_gaps.md)
     - [CMD-6: Advanced Terminal Techniques - Scripts & Professional Workflows](CMD_Foundation/CMD_6_Advanced_Techniques/CMD_6_Advanced_Techniques.md)
     - [CMD Unit Test & Practice](CMD_Foundation/CMD_Unit_Test/CMD_Unit_Test.md)
-  
+
   - [Part 2C: Foundations of Git Bash](GitBash_Foundation/Part_1.md)
     - [Git Bash Curriculum Overview](GitBash_Foundation/GitBash_Curriculum_Overview/GitBash_Curriculum_Overview.md)
+    - [Git Bash Introduction](GitBash_Foundation/GitBash_Introduction/GitBash_Introduction.md)
+    - [Git Bash Tutorial](GitBash_Foundation/GitBash_Tutorial/GitBash_Tutorial.md)
+    - [Screen Reader Accessibility Guide for Git Bash](GitBash_Foundation/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.md)
     - [GitBash-Pre: Your First Terminal](GitBash_Foundation/GitBash_Pre_Your_First_Terminal/GitBash_Pre_Your_First_Terminal.md)
     - [GitBash-0: Getting Started - Layout, Paths, and the Shell](GitBash_Foundation/GitBash_0_getting_started_layout_paths/GitBash_0_getting_started_layout_paths.md)
     - [GitBash-1: Navigation - Moving Around Your File System](GitBash_Foundation/GitBash_1_navigation/GitBash_1_navigation.md)
@@ -51,7 +55,7 @@
   - [3D Make Introduction](3dMake_Foundation/3dMake_Intro/3dMake_Intro.md)
   - [3D Make Foundation Curriculum Guide](3dMake_Foundation/3dMake_Foundation_Curriculum_Guide.md)
   - [3D Make Tutorial](3dMake_Foundation/3dMake_Tutorial/3dMake_Tutorial.md)
-  
+
   - [Lesson 1: Foundations of 3D Make](3dMake_Foundation/Lessons_3dMake_1/Lessons_3dMake_1.md)
     - [Setup Guide: 3dMake](3dMake_Foundation/Lessons_3dMake_1/3dmake-setup-guide.md)
     - [Setup Guide: VSCode](3dMake_Foundation/Lessons_3dMake_1/vscode-setup-guide.md)
@@ -62,7 +66,7 @@
     - [Your First Print Project](3dMake_Foundation/Lessons_3dMake_1/your-first-print.md)
     - [Your First Print - Student Template](3dMake_Foundation/Lessons_3dMake_1/your_first_print_student_template.md)
     - [Your First Print - Teacher Template](3dMake_Foundation/Lessons_3dMake_1/your_first_print_teacher_template.md)
-  
+
   - [Lesson 2: Geometric Primitives and Constructive Solid Geometry](3dMake_Foundation/Lessons_3dMake_2/Lessons_3dMake_2.md)
     - [OpenSCAD Cheat Sheet](3dMake_Foundation/Lessons_3dMake_2/openscad-cheat-sheet.md)
     - [Your Second Print Project](3dMake_Foundation/Lessons_3dMake_2/your-second-print.md)
@@ -71,33 +75,33 @@
     - [Bonus Print Project](3dMake_Foundation/Lessons_3dMake_2/bonus-print.md)
     - [Bonus Print - Student Template](3dMake_Foundation/Lessons_3dMake_2/bonus_print_student_template.md)
     - [Bonus Print - Teacher Template](3dMake_Foundation/Lessons_3dMake_2/bonus_print_teacher_template.md)
-  
+
   - [Lesson 3: Parametric Architecture and Modular Libraries](3dMake_Foundation/Lessons_3dMake_3/Lessons_3dMake_3.md)
-  
+
   - [Lesson 4: AI-Enhanced Verification and Multimodal Feedback](3dMake_Foundation/Lessons_3dMake_4/Lessons_3dMake_4.md)
     - [Dice-Dice-Dice Project](3dMake_Foundation/Lessons_3dMake_4/Dice_Dice_Dice.md)
     - [Dice-Dice-Dice - Student Template](3dMake_Foundation/Lessons_3dMake_4/dice_dice_dice_student_template.md)
     - [Dice-Dice-Dice - Teacher Template](3dMake_Foundation/Lessons_3dMake_4/dice_dice_dice_teacher_template.md)
-  
+
   - [Lesson 5: Safety Protocols and the Physical Fabrication Interface](3dMake_Foundation/Lessons_3dMake_5/Lessons_3dMake_5.md)
     - [Safety Checklist](3dMake_Foundation/Lessons_3dMake_5/safety_checklist.md)
     - [Maintenance Log](3dMake_Foundation/Lessons_3dMake_5/maintenance_log.md)
-  
+
   - [Lesson 6: Practical 3dm Commands and Text Embossing](3dMake_Foundation/Lessons_3dMake_6/Lessons_3dMake_6.md)
     - [Slicing Settings Reference](3dMake_Foundation/Lessons_3dMake_6/slicing-settings-reference.md)
     - [Parametric Keychain Project](3dMake_Foundation/Lessons_3dMake_6/parametric-keychain.md)
     - [Parametric Keychain - Student Template](3dMake_Foundation/Lessons_3dMake_6/parametric_keychain_student_template.md)
     - [Parametric Keychain - Teacher Template](3dMake_Foundation/Lessons_3dMake_6/parametric_keychain_teacher_template.md)
-  
+
   - [Lesson 7: Parametric Transforms and the Phone Stand Project](3dMake_Foundation/Lessons_3dMake_7/Lessons_3dMake_7.md)
-  
+
   - [Lesson 8: Advanced Parametric Design and Interlocking Features](3dMake_Foundation/Lessons_3dMake_8/Lessons_3dMake_8.md)
     - [Snap-Fit Clip Project](3dMake_Foundation/Lessons_3dMake_8/snap-fit-clip.md)
     - [Snap-Fit Clip - Student Template](3dMake_Foundation/Lessons_3dMake_8/snap_fit_clip_student_template.md)
     - [Snap-Fit Clip - Teacher Template](3dMake_Foundation/Lessons_3dMake_8/snap_fit_clip_teacher_template.md)
-  
+
   - [Lesson 9: Automation and 3dm Workflows](3dMake_Foundation/Lessons_3dMake_9/Lessons_3dMake_9.md)
-  
+
   - [Lesson 10: Hands-On Practice Exercises and Troubleshooting](3dMake_Foundation/Lessons_3dMake_10/Lessons_3dMake_10.md)
     - [Diagnostic Checklist](3dMake_Foundation/Lessons_3dMake_10/diagnostic_checklist.md)
     - [Measurement Calibration Guide](3dMake_Foundation/Lessons_3dMake_10/measurement_calibration_guide.md)
@@ -106,7 +110,7 @@
     - [Accessibility Audit Project](3dMake_Foundation/Lessons_3dMake_10/Accessibility_Audit.md)
     - [Accessibility Audit - Student Template](3dMake_Foundation/Lessons_3dMake_10/accessibility_audit_student_template.md)
     - [Accessibility Audit - Teacher Template](3dMake_Foundation/Lessons_3dMake_10/accessibility_audit_teacher_template.md)
-  
+
   - [Lesson 11: Stakeholder-Centric Design and the Beaded Jewelry Project](3dMake_Foundation/Lessons_3dMake_11/Lessons_3dMake_11.md)
     - [Stakeholder Interview Template](3dMake_Foundation/Lessons_3dMake_11/stakeholder_interview_template.md)
     - [Functional Requirements Template](3dMake_Foundation/Lessons_3dMake_11/functional_requirements_template.md)
@@ -114,19 +118,17 @@
     - [Feedback Collection Template](3dMake_Foundation/Lessons_3dMake_11/feedback_collection_template.md)
     - [Master Rubric](3dMake_Foundation/Lessons_3dMake_11/master-rubric.md)
     - [Beaded Jewelry Project](3dMake_Foundation/Lessons_3dMake_11/beaded-jewelry.md)
-  
+
   - [3D Make Final Exam](3dMake_Foundation/3dMake_Final_Exam.md)
   - [3D Make Quick Reference](3dMake_Foundation/3dMake_Quick_Reference.md)
 
 - [Appendices](Appendices/Appendices.md)
-  - [Appendix A: Introduction to Command Line Interfaces](PowerShell_Foundation/PowerShell_Introduction/PowerShell_Introduction.md)
-  - [Appendix B: PowerShell Comprehensive Guide](PowerShell_Foundation/PowerShell_Tutorial/PowerShell_Tutorial.md)
-  - [Appendix C: Comprehensive Slicing Guide - All Major Slicers](3dMake_Foundation/Appendix_A_Comprehensive_Slicing_Guide.md)
-  - [Appendix D: Material Properties & Selection Guide](3dMake_Foundation/Appendix_B_Material_Properties.md)
-  - [Appendix E: Tolerance Testing & Quality Assurance Matrix](3dMake_Foundation/Appendix_C_Tolerance_QA.md)
-  - [Appendix F: PowerShell Integration for SCAD Workflows](3dMake_Foundation/Appendix_D_PowerShell_Integration.md)
-  - [Appendix G: Advanced OpenSCAD Concepts](3dMake_Foundation/Appendix_E_Advanced_OpenSCAD_Concepts.md)
-  - [Appendix H: 3dMake Code Examples & Assets](assets/3dMake_Foundation/README.md)
+  - [Appendix A: Comprehensive Slicing Guide - All Major Slicers](3dMake_Foundation/Appendix_A_Comprehensive_Slicing_Guide.md)
+  - [Appendix B: Material Properties & Selection Guide](3dMake_Foundation/Appendix_B_Material_Properties.md)
+  - [Appendix C: Tolerance Testing & Quality Assurance Matrix](3dMake_Foundation/Appendix_C_Tolerance_QA.md)
+  - [Appendix D: PowerShell Integration for SCAD Workflows](3dMake_Foundation/Appendix_D_PowerShell_Integration.md)
+  - [Appendix E: Advanced OpenSCAD Concepts](3dMake_Foundation/Appendix_E_Advanced_OpenSCAD_Concepts.md)
+  - [Appendix F: 3dMake Code Examples & Assets](assets/3dMake_Foundation/README.md)
 
 ---
 

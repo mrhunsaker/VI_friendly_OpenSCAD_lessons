@@ -1,0 +1,99 @@
+/* Catppuccin Macchiato Theme (extracted) */
+.macchiato.hljs {
+  color: #cad3f5;
+  background: #24273a;
+}
+.macchiato .hljs-keyword { color: #c6a0f6; }
+.macchiato .hljs-built_in { color: #ed8796; }
+.macchiato .hljs-type { color: #eed49f; }
+.macchiato .hljs-literal { color: #f5a97f; }
+.macchiato .hljs-number { color: #f5a97f; }
+.macchiato .hljs-operator { color: #91d7e3; }
+.macchiato .hljs-punctuation { color: #b8c0e0; }
+.macchiato .hljs-property { color: #8bd5ca; }
+.macchiato .hljs-regexp { color: #f5bde6; }
+.macchiato .hljs-string { color: #a6da95; }
+.macchiato .hljs-char.escape_ { color: #a6da95; }
+.macchiato .hljs-subst { color: #a5adcb; }
+.macchiato .hljs-symbol { color: #f0c6c6; }
+.macchiato .hljs-variable { color: #c6a0f6; }
+.macchiato .hljs-variable.language_ { color: #c6a0f6; }
+.macchiato .hljs-variable.constant_ { color: #f5a97f; }
+.macchiato .hljs-title { color: #8aadf4; }
+.macchiato .hljs-title.class_ { color: #eed49f; }
+.macchiato .hljs-title.function_ { color: #8aadf4; }
+.macchiato .hljs-params { color: #cad3f5; }
+.macchiato .hljs-comment { color: #939ab7; }
+.macchiato .hljs-doctag { color: #ed8796; }
+.macchiato .hljs-meta { color: #f5a97f; }
+.macchiato .hljs-section { color: #8aadf4; }
+.macchiato .hljs-tag { color: #8bd5ca; }
+.macchiato .hljs-name { color: #c6a0f6; }
+.macchiato .hljs-attr { color: #8aadf4; }
+.macchiato .hljs-attribute { color: #a6da95; }
+.macchiato .hljs-bullet { color: #8bd5ca; }
+.macchiato .hljs-code { color: #a6da95; }
+.macchiato .hljs-emphasis { color: #ed8796; font-style: italic; }
+.macchiato .hljs-strong { color: #ed8796; font-weight: bold; }
+.macchiato .hljs-formula { color: #8bd5ca; }
+.macchiato .hljs-link { color: #7dc4e4; font-style: italic; }
+.macchiato .hljs-quote { color: #a6da95; font-style: italic; }
+.macchiato .hljs-selector-tag { color: #eed49f; }
+.macchiato .hljs-selector-id { color: #8aadf4; }
+.macchiato .hljs-selector-class { color: #8bd5ca; }
+.macchiato .hljs-selector-attr { color: #c6a0f6; }
+.macchiato .hljs-selector-pseudo { color: #8bd5ca; }
+.macchiato .hljs-template-tag { color: #f0c6c6; }
+.macchiato .hljs-template-variable { color: #f0c6c6; }
+.macchiato .hljs-addition { color: #a6da95; background: rgba(166, 218, 149, 0.15); }
+.macchiato .hljs-deletion { color: #ed8796; background: rgba(237, 135, 150, 0.15); }
+.macchiato :is(h1, h2, h3, h4, h5, h6) a code { color: #cad3f5; }
+.macchiato a code { color: #8aadf4; }
+.macchiato code { color: #cad3f5; background: #1e2030; }
+.macchiato blockquote blockquote { border-top: 0.1em solid #5b6078; border-bottom: 0.1em solid #5b6078; }
+.macchiato hr { border-color: #5b6078; border-style: solid; }
+.macchiato del { color: #939ab7; }
+.macchiato .ace_gutter { color: #8087a2; background: #1e2030; }
+.macchiato .ace_gutter-active-line.ace_gutter-cell { color: #f5bde6; background: #1e2030; }
+.macchiato .tooltiptext { background: #1e2030; color: #cad3f5; }
+
+.macchiato {
+  --bg: #24273a;
+  --fg: #cad3f5;
+  --sidebar-bg: #1e2030;
+  --sidebar-fg: #cad3f5;
+  --sidebar-non-existant: #6e738d;
+  --sidebar-active: #8aadf4;
+  --sidebar-spacer: #6e738d;
+  --scrollbar: #6e738d;
+  --icons: #6e738d;
+  --icons-hover: #939ab7;
+  --links: #8aadf4;
+  --inline-code-color: #cad3f5;
+  --theme-popup-bg: #1e2030;
+  --theme-popup-border: #6e738d;
+  --theme-hover: #363a4f;
+  --quote-bg: #1e2030;
+  --quote-border: #181926;
+  --table-border-color: #363a4f;
+  --table-header-bg: #1e2030;
+  --table-alternate-bg: #1e2030;
+  --searchbar-border-color: #363a4f;
+  --searchbar-bg: #1e2030;
+  --searchbar-fg: #cad3f5;
+  --searchbar-shadow-color: #181926;
+  --searchresults-header-fg: #cad3f5;
+  --searchresults-border-color: #363a4f;
+  --searchresults-li-bg: #24273a;
+  --sidebar-header-border-color: #b7bdf8;
+  --search-mark-bg: #f5a97f;
+  --warning-border: #f5a97f;
+  --color-scheme: dark;
+  --copy-button-filter: brightness(0) saturate(100%) invert(75%) sepia(18%) saturate(361%) hue-rotate(190deg) brightness(91%) contrast(86%);
+  --copy-button-filter-hover: brightness(0) saturate(100%) invert(67%) sepia(17%) saturate(1007%) hue-rotate(183deg) brightness(99%) contrast(94%);
+  --blockquote-note-color: #8aadf4;
+  --blockquote-tip-color: #a6da95;
+  --blockquote-important-color: #c6a0f6;
+  --blockquote-warning-color: #eed49f;
+  --blockquote-caution-color: #ed8796;
+}

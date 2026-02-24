@@ -129,5 +129,5 @@ def main():
     print(f"Total files processed: {processedcount}")
     print(f"Files modified: {modifiedcount}")
 
-if name == "main":
+if __name__ == "__main__":
     main()

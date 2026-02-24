@@ -1,0 +1,7 @@
+/*
+ * Catppuccin Sidebar Color Override
+ * Example: Mocha variant (adjust as needed)
+ */
+.sidebar {
+  background-color: #1e1e2e !important; /* Mocha base */
+}

@@ -1,0 +1,99 @@
+/* Catppuccin Frappe Theme (extracted) */
+.frappe.hljs {
+  color: #c6d0f5;
+  background: #303446;
+}
+.frappe .hljs-keyword { color: #ca9ee6; }
+.frappe .hljs-built_in { color: #e78284; }
+.frappe .hljs-type { color: #e5c890; }
+.frappe .hljs-literal { color: #ef9f76; }
+.frappe .hljs-number { color: #ef9f76; }
+.frappe .hljs-operator { color: #99d1db; }
+.frappe .hljs-punctuation { color: #b5bfe2; }
+.frappe .hljs-property { color: #81c8be; }
+.frappe .hljs-regexp { color: #f4b8e4; }
+.frappe .hljs-string { color: #a6d189; }
+.frappe .hljs-char.escape_ { color: #a6d189; }
+.frappe .hljs-subst { color: #a5adce; }
+.frappe .hljs-symbol { color: #eebebe; }
+.frappe .hljs-variable { color: #ca9ee6; }
+.frappe .hljs-variable.language_ { color: #ca9ee6; }
+.frappe .hljs-variable.constant_ { color: #ef9f76; }
+.frappe .hljs-title { color: #8caaee; }
+.frappe .hljs-title.class_ { color: #e5c890; }
+.frappe .hljs-title.function_ { color: #8caaee; }
+.frappe .hljs-params { color: #c6d0f5; }
+.frappe .hljs-comment { color: #949cbb; }
+.frappe .hljs-doctag { color: #e78284; }
+.frappe .hljs-meta { color: #ef9f76; }
+.frappe .hljs-section { color: #8caaee; }
+.frappe .hljs-tag { color: #81c8be; }
+.frappe .hljs-name { color: #ca9ee6; }
+.frappe .hljs-attr { color: #8caaee; }
+.frappe .hljs-attribute { color: #a6d189; }
+.frappe .hljs-bullet { color: #81c8be; }
+.frappe .hljs-code { color: #a6d189; }
+.frappe .hljs-emphasis { color: #e78284; font-style: italic; }
+.frappe .hljs-strong { color: #e78284; font-weight: bold; }
+.frappe .hljs-formula { color: #81c8be; }
+.frappe .hljs-link { color: #85c1dc; font-style: italic; }
+.frappe .hljs-quote { color: #a6d189; font-style: italic; }
+.frappe .hljs-selector-tag { color: #e5c890; }
+.frappe .hljs-selector-id { color: #8caaee; }
+.frappe .hljs-selector-class { color: #81c8be; }
+.frappe .hljs-selector-attr { color: #ca9ee6; }
+.frappe .hljs-selector-pseudo { color: #81c8be; }
+.frappe .hljs-template-tag { color: #eebebe; }
+.frappe .hljs-template-variable { color: #eebebe; }
+.frappe .hljs-addition { color: #a6d189; background: rgba(166, 209, 137, 0.15); }
+.frappe .hljs-deletion { color: #e78284; background: rgba(231, 130, 132, 0.15); }
+.frappe :is(h1, h2, h3, h4, h5, h6) a code { color: #c6d0f5; }
+.frappe a code { color: #8caaee; }
+.frappe code { color: #c6d0f5; background: #292c3c; }
+.frappe blockquote blockquote { border-top: 0.1em solid #626880; border-bottom: 0.1em solid #626880; }
+.frappe hr { border-color: #626880; border-style: solid; }
+.frappe del { color: #949cbb; }
+.frappe .ace_gutter { color: #838ba7; background: #292c3c; }
+.frappe .ace_gutter-active-line.ace_gutter-cell { color: #f4b8e4; background: #292c3c; }
+.frappe .tooltiptext { background: #292c3c; color: #c6d0f5; }
+
+.frappe {
+  --bg: #303446;
+  --fg: #c6d0f5;
+  --sidebar-bg: #292c3c;
+  --sidebar-fg: #c6d0f5;
+  --sidebar-non-existant: #737994;
+  --sidebar-active: #8caaee;
+  --sidebar-spacer: #737994;
+  --scrollbar: #737994;
+  --icons: #737994;
+  --icons-hover: #949cbb;
+  --links: #8caaee;
+  --inline-code-color: #c6d0f5;
+  --theme-popup-bg: #292c3c;
+  --theme-popup-border: #737994;
+  --theme-hover: #414559;
+  --quote-bg: #292c3c;
+  --quote-border: #232634;
+  --table-border-color: #414559;
+  --table-header-bg: #292c3c;
+  --table-alternate-bg: #292c3c;
+  --searchbar-border-color: #414559;
+  --searchbar-bg: #292c3c;
+  --searchbar-fg: #c6d0f5;
+  --searchbar-shadow-color: #232634;
+  --searchresults-header-fg: #c6d0f5;
+  --searchresults-border-color: #414559;
+  --searchresults-li-bg: #303446;
+  --sidebar-header-border-color: #babbf1;
+  --search-mark-bg: #ef9f76;
+  --warning-border: #ef9f76;
+  --color-scheme: dark;
+  --copy-button-filter: brightness(0) saturate(100%) invert(82%) sepia(6%) saturate(1287%) hue-rotate(192deg) brightness(86%) contrast(85%);
+  --copy-button-filter-hover: brightness(0) saturate(100%) invert(68%) sepia(16%) saturate(1070%) hue-rotate(185deg) brightness(96%) contrast(95%);
+  --blockquote-note-color: #8caaee;
+  --blockquote-tip-color: #a6d189;
+  --blockquote-important-color: #ca9ee6;
+  --blockquote-warning-color: #e5c890;
+  --blockquote-caution-color: #e78284;
+}
