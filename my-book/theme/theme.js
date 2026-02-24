@@ -10,15 +10,26 @@ const CATPPUCCIN_VARIANTS = [
   { name: "Macchiato", css: "catppuccin-macchiato.css" }
 ];
 
+function findOrAssignLinkId(variant) {
+  // Find link by href ending
+  const links = Array.from(document.querySelectorAll('link[rel="stylesheet"]'));
+  const match = links.find(link => link.href && link.href.includes(variant.css));
+  if (match) {
+    const id = `catppuccin-${variant.name.toLowerCase()}-css`;
+    match.id = id;
+    return match;
+  }
+  return null;
+}
 function getCurrentVariant() {
   return localStorage.getItem("catppuccin-variant") || "Mocha";
 }
 
 function setVariant(variant) {
   localStorage.setItem("catppuccin-variant", variant);
-  CATPPUCCIN_VARIANTS.forEach(({ css, name }) => {
-    const link = document.getElementById(`catppuccin-${name.toLowerCase()}-css`);
-    if (link) link.disabled = (name !== variant);
+  CATPPUCCIN_VARIANTS.forEach(v => {
+    const link = findOrAssignLinkId(v);
+    if (link) link.disabled = (v.name !== variant);
   });
 }
 
@@ -73,17 +84,9 @@ function createPenSwitcher() {
   document.body.appendChild(container);
 }
 
-window.addEventListener("DOMContentLoaded", function() {
-  // Add link tags for all variants if not present
-  CATPPUCCIN_VARIANTS.forEach(({ css, name }) => {
-    if (!document.getElementById(`catppuccin-${name.toLowerCase()}-css`)) {
-      const link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.href = `theme/${css}`;
-      link.id = `catppuccin-${name.toLowerCase()}-css`;
-      link.disabled = true;
-      document.head.appendChild(link);
-    }
+  // Assign IDs to existing link elements for Catppuccin variants
+  CATPPUCCIN_VARIANTS.forEach(v => {
+    findOrAssignLinkId(v);
   });
   setVariant(getCurrentVariant());
   createPenSwitcher();
