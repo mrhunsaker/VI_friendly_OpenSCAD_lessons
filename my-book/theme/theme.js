@@ -11,9 +11,13 @@ const CATPPUCCIN_VARIANTS = [
 ];
 
 function findOrAssignLinkId(variant) {
-  // Find link by href ending
+  // Find link by exact href match (relative or absolute)
   const links = Array.from(document.querySelectorAll('link[rel="stylesheet"]'));
-  const match = links.find(link => link.href && link.href.includes(variant.css));
+  const match = links.find(link => {
+    if (!link.href) return false;
+    // Support both absolute and relative URLs
+    return link.href.endsWith(`/theme/${variant.css}`) || link.href.endsWith(`theme/${variant.css}`) || link.href.includes(variant.css);
+  });
   if (match) {
     const id = `catppuccin-${variant.name.toLowerCase()}-css`;
     match.id = id;
