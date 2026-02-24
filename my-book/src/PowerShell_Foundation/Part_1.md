@@ -1,4 +1,4 @@
-# Part 1: Foundations of PowerShell - Terminal & Screen Reader Accessibility {#powershell_foundation-part_1}
+# Foundations of PowerShell - Terminal & Screen Reader Accessibility {#powershell_foundation-part_1}
 
 This section covers terminal fundamentals, screen reader accessibility, and command-line basics needed before diving into 3D design with OpenSCAD.
 

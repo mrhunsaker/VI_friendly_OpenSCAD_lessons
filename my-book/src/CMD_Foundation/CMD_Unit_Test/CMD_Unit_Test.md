@@ -9,7 +9,7 @@
 
 ## Practical Skills Assessment
 
-### Part 1: Navigation & Directory Operations
+### Navigation & Directory Operations
 
 1. Navigate to your home directory and verify location
 2. Create a folder structure: `Project\Models\Designs`
@@ -17,7 +17,7 @@
 4. Navigate back home using an absolute path
 5. List all files and folders at each level
 
-### Part 2: File Operations
+### File Operations
 
 1. Create 5 text files with different names
 2. Copy them to a backup folder
@@ -26,7 +26,7 @@
 5. Delete one file safely
 6. Verify all operations succeeded
 
-### Part 3: Output Redirection
+### Output Redirection
 
 1. Save a directory listing to a file
 2. Append additional information to the file
@@ -34,7 +34,7 @@
 4. Redirect help output to a file
 5. Verify all saved files are correct
 
-### Part 4: Batch File Creation
+### Batch File Creation
 
 1. Create a batch file that creates a project structure
 2. Add comments explaining what it does
@@ -189,7 +189,7 @@ If you've completed all above, try these:
 
 ## Next Steps After This Assessment
 
-### If You Passed the Core Quiz (≥80%):
+### If You Passed the Core Quiz (\geq 80%):
 - Celebrate! You understand CMD fundamentals
 - Move on to **3D Printing Integration** lessons
 - Review extension projects for deeper skills

@@ -1,0 +1,1 @@
+[Header 3 ("gitbash_foundation_gitbash_6_advanced_techniques-gitbash_6_advanced_techniques", [], []) [Str "GitBash-6: Advanced Terminal Techniques"], Para [Str "Covers shell scripts (", Code ("", [], []) ".sh", Str " files), functions, loops, and professional bash workflows."]]

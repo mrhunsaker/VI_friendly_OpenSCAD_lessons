@@ -18,7 +18,7 @@ A terminal (also called command line or Command Prompt) is a text-based interfac
 
 ---
 
-## Part 1: Opening Command Prompt for the First Time
+## Opening Command Prompt for the First Time
 
 ### On Windows
 
@@ -59,7 +59,7 @@ C:\Users\YourName>
 
 ---
 
-## Part 2: Your First Commands (Screen Reader Edition)
+## Your First Commands (Screen Reader Edition)
 
 ### Command 1: "Where Am I?" - `cd`
 
@@ -129,7 +129,7 @@ C:\Users\YourName\Documents>
 
 ---
 
-## Part 3: Reading Screen Reader Output (Critical Skills)
+## Reading Screen Reader Output (Critical Skills)
 
 ### Dealing with Long Lists
 
@@ -173,7 +173,7 @@ One of the most powerful screen reader tricks is **Tab completion**:
 
 ---
 
-## Part 4: Creating and Viewing Files
+## Creating and Viewing Files
 
 ### Create a Simple File
 
@@ -211,7 +211,7 @@ This opens the file in Notepad where you can edit it with your screen reader.
 
 ---
 
-## Part 5: Essential Keyboard Shortcuts
+## Essential Keyboard Shortcuts
 
 These work in Command Prompt and are crucial for screen reader users:
 
@@ -228,7 +228,7 @@ These work in Command Prompt and are crucial for screen reader users:
 
 ---
 
-## Part 6: Screen Reader-Specific Tips
+## Screen Reader-Specific Tips
 
 ### NVDA Users
 
@@ -263,7 +263,7 @@ These work in Command Prompt and are crucial for screen reader users:
 
 ---
 
-## Part 7: Practice Exercises
+## Practice Exercises
 
 Complete these in order. Take your time with each one:
 

@@ -51,7 +51,7 @@ This lesson flips the process: **Listen First, Design Second** [^1].
 
 ---
 
-## Part 1: Stakeholder Interviews (20-30 minutes)
+## Stakeholder Interviews (20-30 minutes)
 
 ### What is a Stakeholder?
 
@@ -147,7 +147,7 @@ Constraints:
 
 ---
 
-## Part 2: Extract Functional Requirements (20-30 minutes)
+## Extract Functional Requirements (20-30 minutes)
 
 ### From Interview to Requirements
 
@@ -190,7 +190,7 @@ For each requirement, define how you'll TEST it:
 
 ---
 
-## Part 3: Design the Bracelet Holder (30-40 minutes)
+## Design the Bracelet Holder (30-40 minutes)
 
 ### Design Strategy
 
@@ -279,7 +279,7 @@ pegspacing = holderwidth / (numpegs + 1);
 
 ---
 
-## Part 4: Iterate Based on Feedback (20-30 minutes)
+## Iterate Based on Feedback (20-30 minutes)
 
 ### Feedback Loop
 

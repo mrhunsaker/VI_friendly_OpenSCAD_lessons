@@ -28,6 +28,12 @@ if (-not (Test-Path $BuildOutput)) {
     New-Item -ItemType Directory -Path $BuildOutput | Out-Null
 }
 
+# Clean previous build artifacts
+Write-Host "Cleaning previous mdBook build..."
+Push-Location $BookDir
+mdbook clean
+Pop-Location
+
 # Build the book
 Write-Host "Building mdbook..."
 Write-Host "  Source: $BookDir\src\"

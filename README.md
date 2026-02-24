@@ -61,7 +61,7 @@ Note: PowerShell is foundation for Lesson 9+, doesn't block starting Lessons 1-8
 
 ---
 
-### Part 1: Foundations (Lessons 1-3 | ~3 hours)
+### Foundations (Lessons 1-3 | ~3 hours)
 
 | Lesson                                                             | Focus                                       | Duration  | Project |
 |--------------------------------------------------------------------|---------------------------------------------|-----------|---------|
@@ -69,14 +69,14 @@ Note: PowerShell is foundation for Lesson 9+, doesn't block starting Lessons 1-8
 | [Lesson 2](3dMake_Foundation/Lessons_3dMake_2/Lessons_3dMake_2.md) | Primitives & Boolean Operations + Debugging | 60 min    | None    |
 | [Lesson 3](3dMake_Foundation/Lessons_3dMake_3/Lessons_3dMake_3.md) | Parametric Architecture & Modules           | 60 min    | None    |
 
-### Part 2: Verification & Safety (Lessons 4-5 | ~2 hours)
+### Verification & Safety (Lessons 4-5 | ~2 hours)
 
 | Lesson                                                             | Focus                               | Duration  | Project |
 |--------------------------------------------------------------------|-------------------------------------|-----------|---------|
 | [Lesson 4](3dMake_Foundation/Lessons_3dMake_4/Lessons_3dMake_4.md) | AI-Enhanced Verification & Feedback | 45-60 min | None    |
 | [Lesson 5](3dMake_Foundation/Lessons_3dMake_5/Lessons_3dMake_5.md) | Safety Protocols & Material Intro   | 60-90 min | None    |
 
-### Part 3: Applied Projects (Lessons 6-8 | ~4 hours)
+### Applied Projects (Lessons 6-8 | ~4 hours)
 
 | Lesson                                                             | Focus                      | Duration   | Project        |
 |--------------------------------------------------------------------|----------------------------|------------|----------------|
@@ -84,14 +84,14 @@ Note: PowerShell is foundation for Lesson 9+, doesn't block starting Lessons 1-8
 | [Lesson 7](3dMake_Foundation/Lessons_3dMake_7/Lessons_3dMake_7.md) | Parametric Transforms      | 75-90 min  | Phone Stand    |
 | [Lesson 8](3dMake_Foundation/Lessons_3dMake_8/Lessons_3dMake_8.md) | Advanced Parametric Design | 90-120 min | Stackable Bins |
 
-### Part 4: Advanced Topics (Lessons 9-10 | ~3 hours)
+### Advanced Topics (Lessons 9-10 | ~3 hours)
 
 | Lesson                                                                | Focus                      | Duration    | Project                                  |
 |-----------------------------------------------------------------------|----------------------------|-------------|------------------------------------------|
 | [Lesson 9](3dMake_Foundation/Lessons_3dMake_9/Lessons_3dMake_9.md)    | Automation & 3dm Workflows | 60-90 min   | [key] Keychain Automation                |
 | [Lesson 10](3dMake_Foundation/Lessons_3dMake_10/Lessons_3dMake_10.md) | Troubleshooting & Mastery  | 120-150 min | [dice] QA Testing +  Accessibility Audit |
 
-### Part 5: Leadership (Lesson 11 | ~2 hours)
+### Leadership (Lesson 11 | ~2 hours)
 
 | Lesson                                                                | Focus                      | Duration   | Project                       |
 |-----------------------------------------------------------------------|----------------------------|------------|-------------------------------|

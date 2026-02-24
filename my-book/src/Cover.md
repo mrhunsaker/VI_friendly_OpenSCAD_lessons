@@ -1,13 +1,9 @@
-# 3D Printing Course for Blind and Visually Impaired Learners {#cover}
+# 3D Printing Course for Blind and Visually Impaired Learners
 
 Michael Ryan Hunsaker, M.Ed., Ph.D.
 
-Last Updated: 2026-02-22
+Updated: 2026-02-25
 
-Book URL: [https://mrhunsaker.github.io/VI3DMakeOpenSCADCurriculum](https://mrhunsaker.github.io/VI3DMakeOpenSCADCurriculum)
-
-![Creative Commons CC BY-SA-ND license](assets/images/CC_BY-NC-ND.svg.png)
-
-3D Printing Course for Blind and Visually Impaired Learners  © 2026 by Jane Doe is licensed under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International. To view a copy of this license, visit [https://creativecommons.org/licenses/by-nc-nd/4.0/](https://creativecommons.org/licenses/by-nc-nd/4.0/)
-
-Project repository: [https://github.com/mrhunsaker/VI3DMakeOpenSCADCurriculum](https://github.com/mrhunsaker/VI3DMakeOpenSCADCurriculum)
+Copyright (c) 2026 Michael Ryan Hunsaker, M.Ed., Ph.D. All rights reserved.
+Creative Commons CC BY-NC-ND license. To view a copy of this license, visit [https://creativecommons.org/licenses/by-nc-nd/4.0/](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+Book URL: [https://mrhunsaker.github.io/VI_3DMake_OpenSCAD_Curriculum/](https://mrhunsaker.github.io/VI_3DMake_OpenSCAD_Curriculum/])

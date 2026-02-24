@@ -14,6 +14,10 @@ UNICODEREPLACEMENTS = {
     '★': '*',
     '✅': '[YES]',
     '❌': '[NO]',
+    '✓': '[YES]',
+    '✔': '[YES]',
+    '✗': '[NO]',
+    '✘': '[NO]',
     '🎉': '[celebration]',
     '🔑': '[key]',
     '🎲': '[dice]',
@@ -24,16 +28,45 @@ UNICODEREPLACEMENTS = {
     '←': '<-',
     '↓': 'v',
     '↑': '^',
+    '↔': '<->',
+    '↕': '|',
+    '⇒': '=>',
+    '⇐': '<=',
+    '⇑': '^',
+    '⇓': 'v',
+    '⇔': '<=>',
     
     # Dashes and hyphens
     '–': '-',      # en-dash
     '—': '-',      # em-dash
+    '―': '-',      # horizontal bar
     
     # Mathematical symbols
     '×': 'x',      # multiplication
     '±': '+/-',    # plus-minus
     '°': '',       # degree (remove, context determines it's Celsius)
     '÷': '/',      # division
+    '≥': '>=',     # greater-than-or-equal
+    '≤': '<=',     # less-than-or-equal
+    '≠': '!=',     # not-equal
+    '∑': 'sum',    # summation
+    '∏': 'prod',   # product
+    '√': 'sqrt',   # square root
+    '∞': 'infinity',
+    '≈': '~',      # approximately
+    '≡': '===',    # identical
+    '∫': 'integral',
+    '∂': 'd',      # partial derivative
+    '∇': 'grad',   # nabla
+    '∃': 'exists',
+    '∀': 'forall',
+    '∈': 'in',
+    '∉': 'notin',
+    '⊂': 'subset',
+    '⊃': 'superset',
+    '⊆': 'subseteq',
+    '⊇': 'superseteq',
+    '∅': 'empty',
     
     # Box drawing characters
     '├': '+--',
@@ -51,11 +84,25 @@ UNICODEREPLACEMENTS = {
     '…': '...',    # ellipsis
     '·': '*',      # middle dot
     '–': '-',      # another en-dash encoding
-    ''': "'",      # curly single quote
-    ''': "'",      # curly single quote
-    '"': '"',      # curly double quote
-    '"': '"',      # curly double quote
+    '“': '"',     # curly double quote
+    '”': '"',     # curly double quote
+    '‘': "'",     # curly single quote
+    '’': "'",     # curly single quote
     '•': '-',      # bullet
+    '©': '(c)',
+    '®': '(R)',
+    '™': '(TM)',
+    '§': 'section',
+    '¶': 'para',
+    '†': '+',
+    '‡': '++',
+    '‰': 'per mille',
+    '€': 'EUR',
+    '£': 'GBP',
+    '¥': 'JPY',
+    '¢': 'cent',
+    '¤': 'currency',
+    '°': 'deg',
 }
 
 def removeunicodefromfile(filepath):
@@ -85,32 +132,8 @@ def removeunicodefromfile(filepath):
         return False
 
 def main():
-    basepath = Path("/var/home/ryhunsaker/Documents/3dprintinstructionalresources/VIfriendlyOpenSCADlessons")
-    
-    # List of files to process
-    fileswithunicode = [
-        "my-book/src/SUMMARY.md",
-        "my-book/src/assets/README.md",
-        "my-book/src/assets/3dMake_Foundation/Lessons_3dMake_6/README.md",
-        "my-book/src/3dMake_Foundation/Appendix_B_Material_Properties.md",
-        "my-book/src/3dMake_Foundation/3dMakeIntro/3dMakeIntro.md",
-        "my-book/src/3dMake_Foundation/3dMakeTutorial/3dMakeTutorial.md",
-        "my-book/src/3dMake_Foundation/Lessons_3dMake_1/Lessons_3dMake_1.md",
-        "my-book/src/3dMake_Foundation/Lessons_3dMake_2/Lessons_3dMake_2.md",
-        "my-book/src/3dMake_Foundation/Lessons_3dMake_3/Lessons_3dMake_3.md",
-        "my-book/src/3dMake_Foundation/Lessons_3dMake_4/Lessons_3dMake_4.md",
-        "my-book/src/3dMake_Foundation/Lessons_3dMake_5/Lessons_3dMake_5.md",
-        "my-book/src/3dMake_Foundation/Lessons_3dMake_6/Lessons_3dMake_6.md",
-        "my-book/src/3dMake_Foundation/Lessons_3dMake_7/Lessons_3dMake_7.md",
-        "my-book/src/3dMake_Foundation/Lessons_3dMake_8/Lessons_3dMake_8.md",
-        "my-book/src/3dMake_Foundation/Lessons_3dMake_9/Lessons_3dMake_9.md",
-        "my-book/src/3dMake_Foundation/Lessons_3dMake_10/Lessons_3dMake_10.md",
-        "my-book/src/3dMake_Foundation/Lessons_3dMake_11/Lessons_3dMake_11.md",
-        "my-book/src/3dMake_Foundation/3dMakeFinalExam.md",
-        "my-book/src/README.md",
-        "my-book/src/Syllabus.md",
-        "README.md",
-    ]
+    # Use the current working directory as the project root
+    basepath = Path(os.getcwd())
     
     # Find all markdown files recursively
     allmdfiles = list(basepath.rglob("*.md"))

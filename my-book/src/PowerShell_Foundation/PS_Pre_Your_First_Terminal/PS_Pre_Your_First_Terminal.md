@@ -18,7 +18,7 @@ A terminal (also called a command line or shell) is a text-based interface where
 
 ---
 
-## Part 1: Opening PowerShell for the First Time
+## Opening PowerShell for the First Time
 
 ### On Windows
 
@@ -59,7 +59,7 @@ PS C:\Users\YourName>
 
 ---
 
-## Part 2: Your First Commands (Screen Reader Edition)
+## Your First Commands (Screen Reader Edition)
 
 ### Command 1: "Where Am I?" - `pwd`
 
@@ -135,7 +135,7 @@ PS C:\Users\YourName\Documents>
 
 ---
 
-## Part 3: Reading Screen Reader Output (Critical Skills)
+## Reading Screen Reader Output (Critical Skills)
 
 ### Dealing with Long Lists
 
@@ -182,7 +182,7 @@ One of the most powerful screen reader tricks is **Tab completion**:
 
 ---
 
-## Part 4: Creating and Editing Files
+## Creating and Editing Files
 
 ### Create a Simple File
 
@@ -220,7 +220,7 @@ This opens the file in Notepad where you can edit it with your screen reader.
 
 ---
 
-## Part 5: Essential Keyboard Shortcuts
+## Essential Keyboard Shortcuts
 
 These work in PowerShell and are crucial for screen reader users:
 
@@ -237,7 +237,7 @@ These work in PowerShell and are crucial for screen reader users:
 
 ---
 
-## Part 6: Screen Reader-Specific Tips
+## Screen Reader-Specific Tips
 
 ### NVDA Users
 
@@ -272,7 +272,7 @@ These work in PowerShell and are crucial for screen reader users:
 
 ---
 
-## Part 7: Practice Exercises
+## Practice Exercises
 
 Complete these in order. Take your time with each one:
 

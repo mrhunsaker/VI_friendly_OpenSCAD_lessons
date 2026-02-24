@@ -1,0 +1,1038 @@
+<!DOCTYPE HTML>
+<html lang="en" class="rust sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Lesson 3: Parametric Architecture and Modular Libraries - 3D Printing Course for Blind and Visually Impaired Learners</title>
+
+
+        <!-- Custom HTML head -->
+        <script>
+          (function(){
+            // Load Atkinson Hyperlegible fonts from the book assets (injected at runtime so paths are correct on GitHub Pages)
+            try {
+              const link = Array.from(document.getElementsByTagName('link')).find(l => l.href && l.href.match(/\/css\/variables-.*\.css$/));
+              const base = (function(){
+                if (!link) return (window.location.origin||'') + '/';
+                const u = new URL(link.href, window.location.href);
+                const basePath = u.pathname.replace(/\/css\/.*$/,'');
+                return u.origin + basePath + (basePath.endsWith('/') ? '' : '/');
+              })();
+        
+              const css = `\
+        @font-face {\
+          font-family: 'Atkinson Hyperlegible Next';\
+          src: url('${base}assets/fonts/AtkinsonHyperlegibleNext-Regular.ttf') format('truetype');\
+          font-weight: 400; font-style: normal; font-display: swap;\
+        }\
+        @font-face {\
+          font-family: 'Atkinson Hyperlegible Mono';\
+          src: url('${base}assets/fonts/AtkinsonHyperlegibleMono-SemiBold.ttf') format('truetype');\
+          font-weight: 600; font-style: normal; font-display: swap;\
+        }\
+        @font-face {\
+          font-family: 'Atkinson Hyperlegible Mono';\
+          src: url('${base}assets/fonts/AtkinsonHyperlegibleMono-Regular.otf') format('opentype');\
+          font-weight: 400; font-style: normal; font-display: swap;\
+        }\
+        pre, code, .hljs, .leftbar { font-family: 'Atkinson Hyperlegible Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", "Courier New", monospace !important; }\
+        body { font-family: 'Atkinson Hyperlegible Next', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }\
+        `;
+        
+              const style = document.createElement('style');
+              style.appendChild(document.createTextNode(css));
+              document.head.appendChild(style);
+            } catch (e) { console.warn('Font injection failed', e); }
+          })();
+        </script>
+        
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            mermaid.initialize({ startOnLoad: true });
+          });
+        </script>
+
+        <meta name="description" content="An introduction to 3D printing for blind and visually impaired learners, using OpenSCAD and 3DMake to create accessible 3D models.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-2459343d.css">
+        <link rel="stylesheet" href="../../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../../src/assets/custom-19d70d6b.css">
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "rust";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../../searchindex-d11bd641.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc-19a5926f.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('rust')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">3D Printing Course for Blind and Visually Impaired Learners</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="3dmake_foundation_lessons_3dmake_3-lessons_3dmake_3"><a class="header" href="#3dmake_foundation_lessons_3dmake_3-lessons_3dmake_3">Lesson 3: Parametric Architecture and Modular Libraries</a></h1>
+<p>Estimated time: 120-150 minutes</p>
+<ul>
+<li>Define and document top-level parameters and use them to drive model variants<sup class="footnote-reference" id="fr-3-1"><a href="#footnote-3">1</a></sup></li>
+<li>Create reusable modules and import a library module into a project<sup class="footnote-reference" id="fr-2-1"><a href="#footnote-2">2</a></sup></li>
+<li>Produce and test low-resolution renders and export a working STL<sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">3</a></sup></li>
+</ul>
+<p><strong>Materials</strong></p>
+<ul>
+<li>A 3dMake project scaffold with <code>src/main.scad</code></li>
+<li>Example library (e.g., BOSL) available in <code>lib/</code> or classroom assets</li>
+<li>Reference: <a href="../Lessons_3dMake_2/openscad-cheat-sheet.html">openscad-cheat-sheet.md</a> for parametric design patterns</li>
+</ul>
+<hr>
+<ol>
+<li>
+<p>Open <code>src/main.scad</code> and add three top-level parameters (with units) at the top of the file<sup class="footnote-reference" id="fr-3-2"><a href="#footnote-3">1</a></sup>.</p>
+<pre><code class="language-openscad">// Top-level parameters - customize these
+part_width = 50;    // mm
+part_height = 40;   // mm
+part_thickness = 5; // mm
+</code></pre>
+</li>
+<li>
+<p>Implement a simple <code>module bracket(width, height, thickness)</code> that composes primitives and boolean operations<sup class="footnote-reference" id="fr-2-2"><a href="#footnote-2">2</a></sup>.</p>
+<pre><code class="language-openscad">// Simple bracket module - combines primitives with CSG
+module bracket(w, h, t) {
+  union(){
+    // Base plate
+    cube([w, h, t], center=false);
+    
+    // Vertical support
+    translate([0, h-5, 0])
+      cube([t, 5, 20], center=false);
+  }
+}
+
+// Use the module
+bracket(part_width, part_height, part_thickness);
+</code></pre>
+</li>
+<li>
+<p>Include a library module (e.g., <code>include &lt;bosl/constants.scad&gt;</code>) and call a small helper from it; run <code>3dm build</code> <sup class="footnote-reference" id="fr-2-3"><a href="#footnote-2">2</a></sup>.</p>
+<p><strong>Alternative: Create your own simple library module:</strong></p>
+<pre><code class="language-openscad">// Create lib/helpers.scad
+module simple_fillet(size, radius) {
+  // Simple fillet using minkowski
+  minkowski(){
+    children();
+    cylinder(h=0.01, r=radius, $fn=16);
+  }
+}
+</code></pre>
+<p><strong>Then in main.scad:</strong></p>
+<pre><code class="language-openscad">include &lt;lib/helpers.scad&gt;
+
+simple_fillet(20, 2){
+  cube([20, 20, 20]);
+}
+</code></pre>
+</li>
+<li>
+<p>Produce a low-resolution render to confirm topology, then export an STL and inspect it in a slicer<sup class="footnote-reference" id="fr-4-1"><a href="#footnote-4">4</a></sup>.</p>
+<ul>
+<li>Use <code>$fn=12</code> or lower during development to speed up renders</li>
+<li>Once satisfied, increase to <code>$fn=32</code> or <code>$fn=64</code> for final prints</li>
+</ul>
+</li>
+<li>
+<p>Refactor the module into <code>lib/</code> with a short README and a usage example<sup class="footnote-reference" id="fr-3-3"><a href="#footnote-3">1</a></sup>.</p>
+</li>
+</ol>
+<h3 id="going-deeper-parametric-design-and-modular-thinking"><a class="header" href="#going-deeper-parametric-design-and-modular-thinking">Going Deeper: Parametric Design and Modular Thinking</a></h3>
+<p>Now that you’ve created simple modules, let’s explore <em>why</em> they matter for design at scale.</p>
+<h4 id="what-is-parametric-design"><a class="header" href="#what-is-parametric-design"><strong>What Is Parametric Design?</strong></a></h4>
+<p><strong>Parametric design</strong> means building your model around adjustable parameters so that a single change propagates automatically throughout your entire design. Instead of hardcoding a dimension like <code>50</code>, you store it in a variable:</p>
+<pre><code class="language-openscad">// Non-parametric (fragile):
+cube([50, 50, 50]);
+translate([50, 0, 0]) cube([50, 50, 50]);
+translate([100, 0, 0]) cube([50, 50, 50]);
+
+// Parametric (flexible):
+box_size = 50;
+cube([box_size, box_size, box_size]);
+translate([box_size, 0, 0]) cube([box_size, box_size, box_size]);
+translate([2*box_size, 0, 0]) cube([box_size, box_size, box_size]);
+</code></pre>
+<p>If you need to change the box size from 50 to 60 mm, the parametric version requires one change; the non-parametric version requires three edits.</p>
+<h4 id="modules-with-default-parameters"><a class="header" href="#modules-with-default-parameters"><strong>Modules with Default Parameters</strong></a></h4>
+<p>A module becomes even more powerful when you define <strong>default parameters</strong>:</p>
+<pre><code class="language-openscad">// Define a module with defaults
+module storage_box(length = 40, width = 30, height = 20, wall = 2) {
+    difference() {
+        // Outer shell
+        cube([length, width, height]);
+        
+        // Inner hollow (remove inside, keep walls and bottom)
+        translate([wall, wall, wall])
+            cube([length - 2*wall, width - 2*wall, height]);
+    }
+}
+
+// Call with defaults
+storage_box();
+
+// Call with one parameter changed
+storage_box(length = 60);
+
+// Call with all custom parameters
+storage_box(length = 80, width = 50, height = 30, wall = 3);
+</code></pre>
+<p>This approach creates a small, medium, and large box set:</p>
+<pre><code class="language-openscad">// Small box (all defaults)
+storage_box();
+
+// Medium box (positioned next to small)
+translate([45, 0, 0]) storage_box(length = 50, width = 40, height = 25);
+
+// Large box (positioned next to medium)
+translate([100, 0, 0]) storage_box(length = 70, width = 55, height = 35);
+</code></pre>
+<h4 id="the-dry-principle-dont-repeat-yourself"><a class="header" href="#the-dry-principle-dont-repeat-yourself"><strong>The DRY Principle: Don’t Repeat Yourself</strong></a></h4>
+<p>When you copy-paste the same shape over and over, you create maintenance risk. If you later discover a bug in the shape, you must fix it in <em>every</em> copy. Modules eliminate this:</p>
+<p><strong>Without modules (DRY violation):</strong></p>
+<pre><code class="language-openscad">// Bracket repeated 3 times (copy-paste)
+union(){ cube([10,10,10]); translate([0,20,0]) cube([2,30,10]); }
+translate([50, 0, 0]) union(){ cube([10,10,10]); translate([0,20,0]) cube([2,30,10]); }
+translate([100, 0, 0]) union(){ cube([10,10,10]); translate([0,20,0]) cube([2,30,10]); }
+</code></pre>
+<p><strong>With modules (DRY compliant):</strong></p>
+<pre><code class="language-openscad">module bracket() {
+    union(){
+        cube([10,10,10]);
+        translate([0,20,0]) cube([2,30,10]);
+    }
+}
+
+bracket();
+translate([50, 0, 0]) bracket();
+translate([100, 0, 0]) bracket();
+</code></pre>
+<h4 id="scope-and-reusability"><a class="header" href="#scope-and-reusability"><strong>Scope and Reusability</strong></a></h4>
+<p>Parameters are <strong>scoped</strong> to their module, meaning you can’t access a module’s parameters from outside it. This is intentional-it prevents naming conflicts and makes modules truly reusable:</p>
+<pre><code class="language-openscad">module box(size = 10) {
+    cube([size, size, size]);
+}
+
+// You can use 'size' in multiple contexts without conflict
+size = 100;  // Global size
+box();       // Calls box with its default size=10
+translate([size, 0, 0]) box(size = 50);  // Calls box with size=50
+</code></pre>
+<h4 id="importing-libraries-include-vs-use"><a class="header" href="#importing-libraries-include-vs-use"><strong>Importing Libraries: <code>include</code> vs <code>use</code></strong></a></h4>
+<p>Once you’ve written modules in <code>lib/helpers.scad</code>, you can share them with other projects:</p>
+<pre><code class="language-openscad">// Option 1: include (gives you all functions and modules)
+include &lt;lib/helpers.scad&gt;
+
+// Option 2: use (brings in functions but hides module definitions)
+use &lt;lib/helpers.scad&gt;
+
+// Now you can call any module from helpers.scad
+simple_fillet(20, 2) {
+    cube([20, 20, 20]);
+}
+</code></pre>
+<p>For most classroom use, <code>include</code> is simpler to understand. For larger projects, <code>use</code> provides cleaner namespace isolation.</p>
+<h4 id="testing-your-modules"><a class="header" href="#testing-your-modules"><strong>Testing Your Modules</strong></a></h4>
+<p>Before committing a module to your library, test it with:</p>
+<ol>
+<li><strong>Different parameter values:</strong> Call the module with minimum, maximum, and mid-range values</li>
+<li><strong>Default values:</strong> Verify that calling it with no parameters produces a reasonable result</li>
+<li><strong>Rendered output:</strong> Use <code>$fn = 32</code> to render the module and visually inspect for geometry issues</li>
+<li><strong>STL export:</strong> Export to STL and open in your slicer to check for non-manifold warnings</li>
+</ol>
+<p>Checkpoints</p>
+<ul>
+<li>After step 2 you have a parametric module you can call with different arguments<sup class="footnote-reference" id="fr-3-4"><a href="#footnote-3">1</a></sup>.</li>
+<li>After this section, you should understand how to create modules with default parameters and why that matters for reusability.</li>
+</ul>
+<hr>
+<h2 id="advanced-technique-loops-and-repetition"><a class="header" href="#advanced-technique-loops-and-repetition">Advanced Technique: Loops and Repetition</a></h2>
+<p>Beyond creating individual modules, OpenSCAD allows you to create multiple copies using for loops. This is powerful for creating arrays, spirals, or radially symmetric designs.</p>
+<h3 id="example-creating-arrays-with-for-loops"><a class="header" href="#example-creating-arrays-with-for-loops">Example: Creating Arrays with For Loops</a></h3>
+<p>The <code>for()</code> function iterates over a range and creates multiple copies of geometry:</p>
+<pre><code class="language-openscad">// Simple 3x3 array of cubes
+$fn = 32;
+
+for (x = [0:20:40])
+  for (y = [0:20:40])
+    translate([x, y, 0])
+      cube([10, 10, 10]);
+</code></pre>
+<p><strong>What it does:</strong></p>
+<ul>
+<li><code>x = [0:20:40]</code> creates x positions: 0, 20, 40</li>
+<li>Nested <code>y</code> loop creates 9 positions total (3 x 3)</li>
+<li>Each cube is translated to its position</li>
+</ul>
+<h3 id="practical-example-parametric-fin-can"><a class="header" href="#practical-example-parametric-fin-can">Practical Example: Parametric Fin Can</a></h3>
+<p>This real-world example from the <em>Simplifying 3D Printing</em> textbook demonstrates using for loops to create radially symmetric fins around a cylinder:</p>
+<pre><code class="language-openscad">// Parametric Fin Can - demonstrates for loops and radial arrays
+$fn = 100;
+
+// Parameters
+height = 70;
+diameter = 43.5;
+thickness = 1.2;
+guide_diameter = 3;
+fins = 3;  // Number of fins to create
+
+// Define the fin profile as a 2D polygon
+fin_shape = [[0, 0], [height, 0], [100, 35], [100, 45], [35, 35]];
+
+// Module to create a single fin
+module create_fin(angle = 0) {
+    rotate([0, 0, angle])
+    translate([diameter/2, 0, height])
+    rotate([90, 90, 0])
+    linear_extrude(height = thickness, center = true)
+      polygon(fin_shape);
+}
+
+// Main assembly
+module generate_fin_can() {
+    difference() {
+        union() {
+            // Central cylinder
+            cylinder(h = height, d = diameter + thickness);
+            
+            // Create fins using a for loop
+            for (i = [0 : fins - 1]) {
+                create_fin(i * (360 / fins));
+            }
+            
+            // Guide post
+            rotate([0, 0, 180 / fins])
+            translate([diameter/2 + guide_diameter/2 + thickness/2, 0, 0])
+            difference() {
+                cylinder(h = height, d = guide_diameter + thickness);
+                cylinder(h = height, d = guide_diameter);
+            }
+        }
+        // Hollow center
+        cylinder(h = 1000, d = diameter, center = true);
+    }
+}
+
+// Render the complete assembly
+generate_fin_can();
+</code></pre>
+<p><strong>Key points:</strong></p>
+<ul>
+<li>The <code>for (i = [0 : fins - 1])</code> loop creates a fin at each angle: 0deg, 120deg, 240deg</li>
+<li>The angle is calculated as <code>i * (360 / fins)</code> to distribute fins evenly</li>
+<li>Each iteration calls <code>create_fin()</code> with a different rotation angle</li>
+<li>This creates 3 identical fins perfectly positioned without copying code</li>
+</ul>
+<h3 id="common-for-loop-patterns"><a class="header" href="#common-for-loop-patterns">Common For Loop Patterns</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Pattern</th><th>Use Case</th><th>Example</th></tr>
+</thead>
+<tbody>
+<tr><td><code>for (x = [0:10:50])</code></td><td>Linear array</td><td>Grid of objects</td></tr>
+<tr><td><code>for (i = [0:n-1])</code></td><td>Index-based loop</td><td>Radial array with calculated angles</td></tr>
+<tr><td>Nested for loops</td><td>2D grids</td><td>Multiple rows and columns</td></tr>
+<tr><td><code>for (i = [start:step:end])</code></td><td>Custom spacing</td><td>Items at irregular intervals</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="try-this-modify-the-fin-can"><a class="header" href="#try-this-modify-the-fin-can">Try This: Modify the Fin Can</a></h3>
+<pre><code class="language-openscad">// Experiment with changing these parameters:
+fins = 4;           // Try 4, 5, or 6 fins
+height = 100;       // Make it taller
+diameter = 60;      // Make it wider
+thickness = 2;      // Make fins thicker
+
+// The for loop automatically distributes the fins evenly around the cylinder
+</code></pre>
+<p><strong>Checkpoint</strong>: After this section, you can:</p>
+<ul>
+<li>Use for loops to create arrays of objects</li>
+<li>Calculate rotation angles for radial symmetry</li>
+<li>Combine loops with modules to create parametric families of designs</li>
+</ul>
+<hr>
+<h2 id="advanced-programming-concepts"><a class="header" href="#advanced-programming-concepts">Advanced Programming Concepts</a></h2>
+<p>Beyond basic modules, professional OpenSCAD code uses conditional logic, type checking, and advanced data structures. These techniques enable robust, flexible, and maintainable designs.</p>
+<h3 id="1-conditional-logic-with-if-else-statements"><a class="header" href="#1-conditional-logic-with-if-else-statements">1. Conditional Logic with If-Else Statements</a></h3>
+<p>Use <code>if/else</code> to create designs that adapt based on parameters. This enables single-code designs that behave differently based on user input:</p>
+<pre><code class="language-openscad">// Parametric phone stand with optional features
+phone_width = 75;
+include_cable_holder = true;  // Toggle feature with parameter
+
+module phone_stand() {
+  // Always create the base
+  cube([phone_width + 20, 100, 5]);
+  
+  // Conditionally add cable holder
+  if (include_cable_holder) {
+    translate([phone_width + 10, 20, 5])
+      cube([10, 15, 20]);  // Cable management slot
+  }
+}
+
+phone_stand();
+</code></pre>
+<p><strong>Practical Example: Parametric Bracket with Optional Features</strong></p>
+<pre><code class="language-openscad">// Advanced bracket with conditional features
+bracket_size = 50;
+include_mounting_holes = true;
+include_reinforcement = true;
+hole_diameter = 3;
+
+module bracket() {
+  // Main body (always created)
+  difference() {
+    cube([bracket_size, bracket_size, 10]);
+    
+    // Hollow interior
+    translate([5, 5, 5])
+      cube([bracket_size - 10, bracket_size - 10, 10]);
+  }
+  
+  // Optional: Add mounting holes
+  if (include_mounting_holes) {
+    for (x = [10, bracket_size - 10])
+      for (y = [10, bracket_size - 10])
+        translate([x, y, -5])
+          cylinder(h=20, d=hole_diameter, $fn=16);
+  }
+  
+  // Optional: Add diagonal reinforcement
+  if (include_reinforcement) {
+    rotate([45, 0, 0])
+      cube([bracket_size - 10, 5, 5], center=true);
+  }
+}
+
+bracket();
+</code></pre>
+<p><strong>Key Patterns:</strong></p>
+<pre><code class="language-openscad">// Simple conditional
+if (parameter) {
+  // Create this if parameter is true
+  cube([10, 10, 10]);
+}
+
+// If-else conditional
+if (parameter &gt; 50) {
+  // Create large version
+  cube([100, 100, 100]);
+} else {
+  // Create small version
+  cube([50, 50, 50]);
+}
+
+// Multiple conditions
+if (enable_feature_a &amp;&amp; enable_feature_b) {
+  // Both features enabled
+} else if (enable_feature_a) {
+  // Only A enabled
+} else if (enable_feature_b) {
+  // Only B enabled
+} else {
+  // Neither enabled
+}
+</code></pre>
+<h3 id="2-type-testing-and-validation"><a class="header" href="#2-type-testing-and-validation">2. Type Testing and Validation</a></h3>
+<p>Before using parameters, test their type to avoid errors. This makes modules robust and user-friendly:</p>
+<pre><code class="language-openscad">// Type testing functions: is_number(), is_string(), is_list(), is_bool(), is_undef()
+
+// Example: Create a function that accepts either a single number or list
+module create_array(size) {
+  if (is_number(size)) {
+    // Single number: create 3x3 array of that size
+    for (x = [0:20:40])
+      for (y = [0:20:40])
+        translate([x, y, 0])
+          cube([size, size, size]);
+  } else if (is_list(size)) {
+    // List: [width, depth, height]
+    for (x = [0:20:40])
+      for (y = [0:20:40])
+        translate([x, y, 0])
+          cube(size);  // Use list directly
+  } else {
+    // Error: invalid type
+    echo("ERROR: size must be number or list");
+  }
+}
+
+// Both work:
+create_array(10);           // Creates 10x10x10 cubes
+create_array([15, 15, 20]); // Creates 15x15x20 cubes
+</code></pre>
+<p><strong>Practical Validation Example:</strong></p>
+<pre><code class="language-openscad">// Robust parametric keycap with validation
+module keycap(size, height, letter) {
+  // Validate inputs before using
+  valid_size = is_number(size) &amp;&amp; size &gt; 5 &amp;&amp; size &lt; 50;
+  valid_height = is_number(height) &amp;&amp; height &gt; 3 &amp;&amp; height &lt; 20;
+  valid_letter = is_string(letter) &amp;&amp; len(letter) == 1;
+  
+  if (valid_size &amp;&amp; valid_height &amp;&amp; valid_letter) {
+    // All parameters valid: create keycap
+    difference() {
+      cube([size, size, height]);
+      translate([size/2, size/2, size/2 - 1])
+        cube([size - 4, size - 4, height], center=true);
+    }
+    
+    // Add embossed letter
+    translate([size/2, size/2, height - 0.5])
+      linear_extrude(0.8)
+        text(letter, size=size*0.4, halign="center", valign="center");
+  } else {
+    // Parameter validation failed: report errors
+    if (!valid_size) echo("ERROR: size must be 5-50mm");
+    if (!valid_height) echo("ERROR: height must be 3-20mm");
+    if (!valid_letter) echo("ERROR: letter must be single character");
+  }
+}
+
+// These work:
+keycap(14, 10, "A");
+
+// These will fail gracefully with error messages:
+// keycap(-5, 10, "A");      // Invalid size
+// keycap(14, 10, "ABC");    // Invalid letter
+</code></pre>
+<h3 id="3-list-comprehensions-and-advanced-data-structures"><a class="header" href="#3-list-comprehensions-and-advanced-data-structures">3. List Comprehensions and Advanced Data Structures</a></h3>
+<p>List comprehensions create new lists by transforming or filtering existing lists. This enables sophisticated parametric designs:</p>
+<pre><code class="language-openscad">// Basic list comprehension syntax: [for (x = list) ... x ... ]
+
+// Example 1: Create list of squares
+squares = [for (x = [1:5]) x*x];
+// Result: [1, 4, 9, 16, 25]
+
+// Example 2: Filter list (keep only even numbers)
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+evens = [for (x = numbers) if (x % 2 == 0) x];
+// Result: [2, 4, 6, 8, 10]
+
+// Example 3: Create array of positions for mounting holes
+hole_positions = [for (i = [0:3]) [i*20, i*20, 0]];
+// Creates: [[0,0,0], [20,20,0], [40,40,0], [60,60,0]]
+</code></pre>
+<p><strong>Practical Example: Parametric Grid of Features</strong></p>
+<pre><code class="language-openscad">// Create parametric grid of mounting holes using list comprehension
+bracket_width = 100;
+bracket_depth = 80;
+hole_spacing = 20;  // mm between holes
+hole_diameter = 3;  // mm
+
+// Generate hole positions automatically
+hole_x_positions = [for (i = [0:(bracket_width/hole_spacing)]) i * hole_spacing];
+hole_y_positions = [for (i = [0:(bracket_depth/hole_spacing)]) i * hole_spacing];
+
+module bracket_with_holes() {
+  difference() {
+    // Base plate
+    cube([bracket_width, bracket_depth, 5]);
+    
+    // Subtract holes using comprehension
+    for (x = hole_x_positions)
+      for (y = hole_y_positions)
+        translate([x, y, -5])
+          cylinder(h=15, d=hole_diameter, $fn=16);
+  }
+}
+
+bracket_with_holes();
+</code></pre>
+<h3 id="4-special-variables-preview-children-fn"><a class="header" href="#4-special-variables-preview-children-fn">4. Special Variables: $preview, $children, $fn</a></h3>
+<p>OpenSCAD includes special variables that give modules information about their context:</p>
+<pre><code class="language-openscad">// $preview: Detects if in preview (F5) or render (F6) mode
+module adaptive_quality() {
+  quality = $preview ? 16 : 64;  // Low res in preview, high in render
+  
+  for (i = [0:360/quality:360])
+    rotate([0, 0, i])
+      translate([50, 0, 0])
+        sphere(r=5, $fn=quality);
+}
+
+// $children: Number of child objects passed to module
+module repeat_with_offset(count) {
+  for (i = [0:count-1])
+    translate([i*20, 0, 0])
+      children();  // Render each child at new position
+}
+
+// Usage:
+repeat_with_offset(3)
+  cube([10, 10, 10]);
+// Creates 3 cubes in a row, spaced 20mm apart
+
+// $fn, $fa, $fs: Global resolution parameters
+// $fn = 32;  // Number of segments (0 disables, uses $fa/$fs)
+// $fa = 12;  // Angle per segment (degrees)
+// $fs = 2;   // Minimum segment length (mm)
+</code></pre>
+<p><strong>Practical Example: Adaptive Quality Module</strong></p>
+<pre><code class="language-openscad">// Module that renders efficiently in preview but beautifully in export
+module rounded_box(w, h, d, radius) {
+  // Automatically adjust quality based on render mode
+  fn = $preview ? 8 : 32;  // Fast preview, quality export
+  
+  minkowski() {
+    cube([w - 2*radius, h - 2*radius, d - 2*radius], center=true);
+    cylinder(r=radius, h=0.01, $fn=fn);
+  }
+}
+
+// Use normally; quality automatically adapts
+rounded_box(50, 50, 50, 3);
+</code></pre>
+<h3 id="5-user-defined-functions-vs-modules"><a class="header" href="#5-user-defined-functions-vs-modules">5. User-Defined Functions vs Modules</a></h3>
+<p>OpenSCAD supports both modules (which create geometry) and functions (which compute values). Understanding the difference is critical:</p>
+<pre><code class="language-openscad">// MODULE: Creates 3D geometry (what we've been using)
+module box(w, h, d) {
+  cube([w, h, d]);
+}
+
+// FUNCTION: Computes and returns a value (no geometry)
+function box_volume(w, h, d) = w * h * d;
+
+// Usage:
+box(50, 50, 50);                    // Creates 50x50x50 cube
+volume = box_volume(50, 50, 50);    // Calculates: 125000
+echo(volume);                        // Prints: 125000
+
+// ============================================
+
+// Practical Example: Recursive function for power calculation
+function power(base, exp) = 
+  exp == 0 ? 1 :                    // Base case: anything^0 = 1
+  base * power(base, exp - 1);      // Recursive case
+
+// Calculate 2^5
+result = power(2, 5);
+echo(result);  // Prints: 32
+
+// ============================================
+
+// Another Example: Distance between two points
+function distance(p1, p2) =
+  sqrt((p2[0] - p1[0])^2 + (p2[1] - p1[1])^2 + (p2[2] - p1[2])^2);
+
+point_a = [0, 0, 0];
+point_b = [3, 4, 0];
+dist = distance(point_a, point_b);
+echo(dist);  // Prints: 5 (Pythagorean triple)
+</code></pre>
+<p><strong>Key Differences:</strong></p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Feature</th><th>Module</th><th>Function</th></tr>
+</thead>
+<tbody>
+<tr><td>Creates geometry</td><td>Yes</td><td>No</td></tr>
+<tr><td>Returns value</td><td>No</td><td>Yes</td></tr>
+<tr><td>Can use <code>children()</code></td><td>Yes</td><td>No</td></tr>
+<tr><td>Can combine with echo/if</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Use for</td><td>3D objects</td><td>Calculations</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>Practical Combined Example:</strong></p>
+<pre><code class="language-openscad">// Use function to calculate, module to create
+
+// Function: Calculate optimal wall thickness based on size
+function optimal_wall_thickness(size) =
+  size &lt; 20 ? 1.0 :
+  size &lt; 50 ? 1.5 :
+  size &lt; 100 ? 2.0 :
+  2.5;
+
+// Module: Create parametric container
+module container(width, height) {
+  wall = optimal_wall_thickness(width);
+  
+  difference() {
+    cube([width, width, height]);
+    translate([wall, wall, wall])
+      cube([width - 2*wall, width - 2*wall, height]);
+  }
+}
+
+// Usage
+container(30, 40);   // 1mm walls automatically
+container(75, 100);  // 1.5mm walls automatically
+container(120, 150); // 2mm walls automatically
+</code></pre>
+<hr>
+<h2 id="quiz---lesson-3dmake3-10-questions"><a class="header" href="#quiz---lesson-3dmake3-10-questions">Quiz - Lesson 3dMake.3 (10 questions)</a></h2>
+<ol>
+<li>What is a parametric module and why is it useful<sup class="footnote-reference" id="fr-3-5"><a href="#footnote-3">1</a></sup>?</li>
+<li>How do you include an external library in OpenSCAD<sup class="footnote-reference" id="fr-2-4"><a href="#footnote-2">2</a></sup>?</li>
+<li>What is one advantage of moving code into <code>lib/</code> <sup class="footnote-reference" id="fr-3-6"><a href="#footnote-3">1</a></sup>?</li>
+<li>How can you test a module quickly without a full high-resolution render<sup class="footnote-reference" id="fr-4-2"><a href="#footnote-4">4</a></sup>?</li>
+<li>Name one safety or documentation step to include when producing a reusable module<sup class="footnote-reference" id="fr-3-7"><a href="#footnote-3">1</a></sup>.</li>
+<li>True or False: Parametric modules can only accept one parameter.</li>
+<li>Describe what “Don’t Repeat Yourself” (DRY) means in the context of 3D model code.</li>
+<li>Explain how you would create a module with three parameters and use it in your main file.</li>
+<li>What testing strategies should you use to validate a new module before using it in production prints?</li>
+<li>How would you document a reusable module so that future users (including yourself) understand its parameters and limitations?</li>
+</ol>
+<p>Extension Problems (10)</p>
+<ol>
+<li>Create a module for a mounting bracket with parameters for hole size and spacing; publish a usage example<sup class="footnote-reference" id="fr-3-8"><a href="#footnote-3">1</a></sup>.</li>
+<li>Use a library module to add a fillet and compare the final STL before and after<sup class="footnote-reference" id="fr-2-5"><a href="#footnote-2">2</a></sup>.</li>
+<li>Produce three variants by changing a parameter and record estimated print times<sup class="footnote-reference" id="fr-3-9"><a href="#footnote-3">1</a></sup>.</li>
+<li>Move a working module into <code>lib/</code> and commit with a clear commit message<sup class="footnote-reference" id="fr-1-2"><a href="#footnote-1">3</a></sup>.</li>
+<li>Write a short README for your module describing parameter ranges and expected units<sup class="footnote-reference" id="fr-3-10"><a href="#footnote-3">1</a></sup>.</li>
+<li>Build a complete module library with 5+ reusable parts; create comprehensive documentation and usage examples for each.</li>
+<li>Design a module versioning and compatibility system; document how to manage parameter changes over time.</li>
+<li>Create a module testing suite: write validation tests for parameter ranges, edge cases, and output consistency.</li>
+<li>Develop an accessibility guide for module parameters: explain how to use and understand module options without visual feedback.</li>
+<li>Write a module library contribution guide: standards for code style, documentation, testing, and review for collaborative development.</li>
+</ol>
+<h2 id="supplemental-resources"><a class="header" href="#supplemental-resources">Supplemental Resources</a></h2>
+<p>For deeper exploration of parametric design and module creation, explore these resources:</p>
+<ul>
+<li><strong><a href="../../assets/Programming_with_OpenSCAD.epub">Programming with OpenSCAD EPUB Textbook</a></strong> - Comprehensive guide to modules, parametric design, and library creation</li>
+<li><strong><a href="https://github.com/ProgrammingWithOpenSCAD/CodeSolutions/tree/main/5_Modules">CodeSolutions: Modules</a></strong> - Working examples of module definition, parameter passing, and reusable components</li>
+<li><strong><a href="https://github.com/BelfrySCAD/BOSL2">BOSL2 Library</a></strong> - Professional OpenSCAD library with hundreds of reusable modules for common operations</li>
+</ul>
+<h2 id="starter-templates"><a class="header" href="#starter-templates">Starter Templates</a></h2>
+<h3 id="parametric-template"><a class="header" href="#parametric-template">Parametric Template</a></h3>
+<pre><code class="language-openscad">// Parametric Design Template
+// Demonstrates how to create designs that adapt to different inputs
+// This pattern allows you to quickly generate variations
+
+// ============================================
+// CUSTOMIZABLE PARAMETERS
+// ============================================
+
+// Box dimensions (change these to regenerate different sizes)
+boxwidth = 40;
+boxdepth = 40;
+boxheight = 30;
+
+// Feature sizing (scales with box size)
+cornerradius = 3;
+wallthickness = 2;
+
+// Boolean flags for feature toggling
+includelid = true;
+includefeet = true;
+hollowinterior = true;
+
+// ============================================
+// QUALITY SETTINGS
+// ============================================
+$fn = 30;  // Fragment quality
+
+// ============================================
+// PARAMETRIC MODULES
+// ============================================
+
+// Simple box with rounded corners
+module roundedbox(width, depth, height, radius) {
+    hull() {
+        // Create 8 corner spheres to define the shape
+        translate([radius, radius, radius])
+            sphere(r = radius);
+        translate([width - radius, radius, radius])
+            sphere(r = radius);
+        translate([radius, depth - radius, radius])
+            sphere(r = radius);
+        translate([width - radius, depth - radius, radius])
+            sphere(r = radius);
+        translate([radius, radius, height - radius])
+            sphere(r = radius);
+        translate([width - radius, radius, height - radius])
+            sphere(r = radius);
+        translate([radius, depth - radius, height - radius])
+            sphere(r = radius);
+        translate([width - radius, depth - radius, height - radius])
+            sphere(r = radius);
+    }
+}
+
+// Use the module
+roundedbox(boxwidth, boxdepth, boxheight, cornerradius);
+</code></pre>
+<h3 id="module-template"><a class="header" href="#module-template">Module Template</a></h3>
+<pre><code class="language-openscad">// Module Design Pattern Template
+// Demonstrates best practices for organizing code with reusable modules
+// Modules promote code reuse, clarity, and maintainability
+
+// ============================================
+// CONFIGURATION SECTION
+// ============================================
+
+$fn = 32;
+
+// Component dimensions
+connectordiameter = 8;
+connectorlength = 15;
+connectorwall = 1.5;
+
+basesize = 50;
+baseheight = 5;
+
+// ============================================
+// UTILITY MODULES (General Purpose)
+// ============================================
+
+// Create a hollow cylinder (tube/connector)
+module hollowcylinder(od, id, height) {
+    difference() {
+        cylinder(h = height, d = od, center = true);
+        cylinder(h = height + 1, d = id, center = true);
+    }
+}
+
+// Create a flat base/mounting plate
+module flatbase(size, thickness) {
+    cube([size, size, thickness], center = true);
+}
+
+// Create corner supports for strengthening
+module cornersupport(size, height) {
+    linearextrude(height = height, center = true)
+        polygon(points = [[0, 0], [size, 0], [0, size]]);
+}
+
+// ============================================
+// ASSEMBLY
+// ============================================
+
+// Combine modules for a complete design
+union(){
+    flatbase(basesize, baseheight);
+    translate([0, 0, baseheight]) 
+        hollowcylinder(connectordiameter, connectordiameter - 2*connectorwall, connectorlength);
+}
+</code></pre>
+<hr>
+<ol class="footnote-definition">
+<li id="footnote-3">
+<p>OpenSCAD Modules - https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Modules <a href="#fr-3-1">↩</a> <a href="#fr-3-2">↩2</a> <a href="#fr-3-3">↩3</a> <a href="#fr-3-4">↩4</a> <a href="#fr-3-5">↩5</a> <a href="#fr-3-6">↩6</a> <a href="#fr-3-7">↩7</a> <a href="#fr-3-8">↩8</a> <a href="#fr-3-9">↩9</a> <a href="#fr-3-10">↩10</a></p>
+</li>
+<li id="footnote-2">
+<p>BOSL - OpenSCAD Standard Library - https://github.com/BelfrySCAD/BOSL2 <a href="#fr-2-1">↩</a> <a href="#fr-2-2">↩2</a> <a href="#fr-2-3">↩3</a> <a href="#fr-2-4">↩4</a> <a href="#fr-2-5">↩5</a></p>
+</li>
+<li id="footnote-1">
+<p>3DMake GitHub - https://github.com/tdeck/3dmake <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a></p>
+</li>
+<li id="footnote-4">
+<p>OpenSCAD Review - Worth learning? - CadHub, accessed February 18, 2026, https://learn.cadhub.xyz/blog/openscad-review/ <a href="#fr-4-1">↩</a> <a href="#fr-4-2">↩2</a></p>
+</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../3dMake_Foundation/Lessons_3dMake_2/bonus_print_teacher_template.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                            </a>
+
+                            <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_4/Lessons_3dMake_4.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../3dMake_Foundation/Lessons_3dMake_2/bonus_print_teacher_template.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
+                    </a>
+
+                    <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_4/Lessons_3dMake_4.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
+                    </a>
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-c2a407aa.js"></script>
+
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-4a3ec6df.js"></script>
+        <script src="../../book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+
+    </div>
+    </body>
+</html>

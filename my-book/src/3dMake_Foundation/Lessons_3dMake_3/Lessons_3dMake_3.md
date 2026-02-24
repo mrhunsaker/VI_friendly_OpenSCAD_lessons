@@ -226,7 +226,7 @@ for (x = [0:20:40])
 
 **What it does:**
 - `x = [0:20:40]` creates x positions: 0, 20, 40
-- Nested `y` loop creates 9 positions total (3 × 3)
+- Nested `y` loop creates 9 positions total (3 x 3)
 - Each cube is translated to its position
 
 ### Practical Example: Parametric Fin Can
@@ -286,7 +286,7 @@ generate_fin_can();
 ```
 
 **Key points:**
-- The `for (i = [0 : fins - 1])` loop creates a fin at each angle: 0°, 120°, 240°
+- The `for (i = [0 : fins - 1])` loop creates a fin at each angle: 0deg, 120deg, 240deg
 - The angle is calculated as `i * (360 / fins)` to distribute fins evenly
 - Each iteration calls `create_fin()` with a different rotation angle
 - This creates 3 identical fins perfectly positioned without copying code

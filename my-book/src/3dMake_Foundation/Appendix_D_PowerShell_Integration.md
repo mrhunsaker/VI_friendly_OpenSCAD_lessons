@@ -102,7 +102,7 @@ Get-ExecutionPolicy
 
 ---
 
-## Part 1: Basic Workflow Automation
+## Basic Workflow Automation
 
 ### Script 1: Single-File Build
 
@@ -258,7 +258,7 @@ Write-Host "Results saved: $csvPath"
 
 ---
 
-## Part 2: Parametric Design Variation Testing
+## Parametric Design Variation Testing
 
 ### The Problem: Testing Multiple Parameter Values
 
@@ -384,7 +384,7 @@ variant_dia5_width135,5,135,2.3,Success,2024-01-15 14:35:28
 
 ---
 
-## Part 3: Automated Print Documentation
+## Automated Print Documentation
 
 ### Script: Print Logging & Quality Tracking
 
@@ -475,7 +475,7 @@ function EstimateWeight {
 
 ---
 
-## Part 4: Printer Communication & Monitoring
+## Printer Communication & Monitoring
 
 ### Script: Send G-code to Printer (USB)
 
@@ -576,7 +576,7 @@ if ($checksPerformed -ge $MaxChecks) {
 
 ---
 
-## Part 5: Complete Workflow Integration
+## Complete Workflow Integration
 
 ### Master Script: Design -> Print -> Log
 
@@ -638,7 +638,7 @@ Write-Host "`n Workflow complete!"
 
 ---
 
-## Part 6: PowerShell Skills Applied to SCAD
+## PowerShell Skills Applied to SCAD
 
 ### Lesson Mapping: PowerShell -> SCAD Workflows
 

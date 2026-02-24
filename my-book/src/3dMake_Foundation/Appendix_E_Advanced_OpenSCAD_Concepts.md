@@ -6,13 +6,13 @@ This appendix covers specialized topics for experienced users seeking to tackle 
 
 ## Topic 1: Gears and Mechanical Components
 
-Gears are one of the most challenging parametric designs, requiring careful calculation of tooth geometry. Understanding gear mathematics enables creation of mechanical systems—power transmission, speed reduction, or precise positioning.
+Gears are one of the most challenging parametric designs, requiring careful calculation of tooth geometry. Understanding gear mathematics enables creation of mechanical systems-power transmission, speed reduction, or precise positioning.
 
 ### Gear Terminology
 
 - **Pitch Diameter (PD)**: The reference diameter for meshing calculations
 - **Module**: PD divided by tooth count; determines tooth size
-- **Pressure Angle**: Typically 20° or 14.5°; affects tooth shape and strength
+- **Pressure Angle**: Typically 20deg or 14.5deg; affects tooth shape and strength
 - **Clearance**: Space between teeth to allow smooth meshing
 - **Backlash**: Intentional gap to prevent binding at tolerance extremes
 
@@ -157,7 +157,7 @@ wall_thicknesses = [1, 1.5, 2, 2.5, 3];
 part_sizes = [20, 30, 40, 50];
 materials = ["pla", "petg", "nylon"];
 
-// Theory: Generate 5 × 4 × 3 = 60 variants automatically
+// Theory: Generate 5 x 4 x 3 = 60 variants automatically
 // In practice, export each to separate STL for analysis
 ```
 
@@ -395,7 +395,7 @@ module poor_design() {
     cube([30, 30, 10]);  // 30mm overhang!
 }
 
-// GOOD: Bridge angle keeps overhang under 45°
+// GOOD: Bridge angle keeps overhang under 45deg
 module good_design() {
   cube([50, 50, 50]);
   

@@ -32,7 +32,7 @@
 
 #### Notepad
 **Advantages:**
-- Minimal interface with no distractions—excellent for absolute beginners
+- Minimal interface with no distractions-excellent for absolute beginners
 - Very predictable behavior for screen reader users
 - Extremely fast file operations
 - No configuration required; works immediately
@@ -122,7 +122,7 @@ reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.scad\
 #### Through File Properties (Graphical Method)
 
 1. Right-click any `.scad` file (create a test file if needed)
-2. Select "Open with" → "Choose another app"
+2. Select "Open with" -> "Choose another app"
 3. Browse to your editor executable (e.g., `C:\Program Files\Notepad++\notepad++.exe`)
 4. Check "Always use this app to open .scad files"
 5. Click "OK"
@@ -148,7 +148,7 @@ setx EDITOR "C:\Program Files\Notepad++\notepad++.exe"
 
 1. **Open 3dMake-generated .scad files directly:**
    - Navigate to your project folder in File Explorer
-   - Right-click the `.scad` file → "Open with" → "Notepad"
+   - Right-click the `.scad` file -> "Open with" -> "Notepad"
    - File opens immediately for editing
 
 2. **Edit and Save:**
@@ -179,17 +179,17 @@ setx EDITOR "C:\Program Files\Notepad++\notepad++.exe"
 
 3. **Configure OpenSCAD Language Support:**
    - Open Notepad++
-   - Language → User Defined Language → Import... (if OpenSCAD UDL available)
+   - Language -> User Defined Language -> Import... (if OpenSCAD UDL available)
    - Or manually set syntax highlighting:
-     - Language → OpenSCAD (if available in language menu)
-     - Otherwise Language → C++ (provides similar highlighting)
+     - Language -> OpenSCAD (if available in language menu)
+     - Otherwise Language -> C++ (provides similar highlighting)
 
 4. **Customize for Accessibility:**
-   - Settings → Preferences → General
+   - Settings -> Preferences -> General
    - Check: "Minimize to system tray" (optional)
-   - Settings → Preferences → MISC.
+   - Settings -> Preferences -> MISC.
    - Ensure Word Wrap is set to preference
-   - Settings → Preferences → Backup
+   - Settings -> Preferences -> Backup
    - Enable regular backups of your work
 
 5. **Set as Default Editor (see registry method above)**
@@ -197,7 +197,7 @@ setx EDITOR "C:\Program Files\Notepad++\notepad++.exe"
 **Recommended Keyboard Shortcuts (User-Defined):**
 
 Create custom shortcuts by:
-- Settings → Shortcut Mapper
+- Settings -> Shortcut Mapper
 - Add shortcuts for frequently used actions:
   - Save and Switch to Terminal: Alt+T
   - Copy File Path: Ctrl+Shift+C
@@ -251,7 +251,7 @@ Create custom shortcuts by:
 
 #### Option 1: Using Built-in Terminal (Less Accessible)
 
-1. View → Terminal (or Ctrl+`)
+1. View -> Terminal (or Ctrl+`)
 2. Terminal opens at bottom of VSCode window
 3. Run commands: `3dMake render filename.scad`
 4. **Note:** Switching focus between editor and terminal requires Tab navigation, which can be cumbersome for screen reader users
@@ -259,7 +259,7 @@ Create custom shortcuts by:
 **Keyboard Navigation:**
 - Ctrl+` : Toggle terminal visibility
 - Ctrl+Shift+` : Create new terminal
-- Alt+↑/↓ : Switch between terminals
+- Alt+^/v : Switch between terminals
 
 #### Option 2: Alt-Tab to Standalone Terminal (RECOMMENDED for Accessibility)
 
@@ -297,7 +297,7 @@ Create custom shortcuts by:
 **Project Organization in VSCode:**
 
 1. **Open Project Folder:**
-   - File → Open Folder (Ctrl+K, Ctrl+O)
+   - File -> Open Folder (Ctrl+K, Ctrl+O)
    - Select your project directory
    - All project files appear in Explorer sidebar
 
@@ -322,7 +322,7 @@ Proper indent announcement is critical for OpenSCAD development, as indentation 
 **Enable Indent Announcement:**
 
 1. **Open NVDA Menu:** Alt+N or right-click NVDA icon
-2. **Preferences → Settings (Ctrl+Comma)**
+2. **Preferences -> Settings (Ctrl+Comma)**
 3. **Document Formatting:** Tab to it
 4. **Check:** "Report indentation"
 5. **In the "Indentation reporting" dropdown:** Select "Tones and speech"
@@ -331,7 +331,7 @@ Proper indent announcement is critical for OpenSCAD development, as indentation 
 
 **Additional Tab Stop Configuration:**
 
-1. **Preferences → Settings → Document Formatting**
+1. **Preferences -> Settings -> Document Formatting**
 2. **Check:** "Report line indentation"
 3. **This will announce:** "Indent level 4" or similar as you navigate code
 
@@ -350,7 +350,7 @@ Proper indent announcement is critical for OpenSCAD development, as indentation 
 **Enable Indent Announcement:**
 
 1. **Open JAWS Manager:** Press JAWSKey+F2 (or right-click JAWS icon)
-2. **Utilities → Settings Manager**
+2. **Utilities -> Settings Manager**
 3. **Search:** "Indent"
 4. **Look for setting:** "Announce Indentation" or "Report Indentation"
 5. **Enable:** Set to "Tones" or "Tones and Speech"
@@ -360,7 +360,7 @@ Proper indent announcement is critical for OpenSCAD development, as indentation 
 **Advanced Configuration (Custom Scripts):**
 
 If built-in settings don't work:
-1. **JAWSKey+F2 → Utilities → Settings Manager**
+1. **JAWSKey+F2 -> Utilities -> Settings Manager**
 2. **Search:** "Line Breaks" or "Formatting"
 3. **Ensure:** "Report line indentation" is enabled
 4. **Set tone adjustment:** Higher pitch for deeper indents
@@ -381,7 +381,7 @@ If built-in settings don't work:
 **Enable Indent Announcement:**
 
 1. **Open Settings:** Win+I
-2. **Ease of Access → Narrator**
+2. **Ease of Access -> Narrator**
 3. **Advanced Options: Scroll down**
 4. **Check:** "Report indentation"
 5. **Indentation Reporting:** Select "Tones" (less intrusive) or "Speech" (explicit)
@@ -406,7 +406,7 @@ If built-in settings don't work:
 **Enable Indent Announcement:**
 
 1. **Open Dolphin Central:** Right-click Dolphin icon or click Dolphin icon in taskbar
-2. **Utilities → Settings → Text Processing**
+2. **Utilities -> Settings -> Text Processing**
 3. **Look for:** "Indentation" section
 4. **Enable:** "Announce indentation"
 5. **Mode:** Select "Tones", "Speech", or "Tones and Speech"
@@ -414,8 +414,8 @@ If built-in settings don't work:
 7. **Apply**
 
 **ECO (Ease of Cursor Operation) Customization:**
-1. **Dolphin Central → Utilities → ECO Settings**
-2. **Text Options → Indentation Reporting**
+1. **Dolphin Central -> Utilities -> ECO Settings**
+2. **Text Options -> Indentation Reporting**
 3. **Set preferred announcement style**
 
 **Testing:**
@@ -449,7 +449,7 @@ If built-in settings don't work:
 
 **Workflow Example:**
 ```
-1. Open Command Prompt → Navigate to project folder
+1. Open Command Prompt -> Navigate to project folder
 2. Run: 3dMake new myproject
 3. Alt+Tab to file explorer, open myproject.scad
 4. Notepad++ opens file
@@ -524,14 +524,14 @@ If built-in settings don't work:
    - Create separate tasks for render, export, etc.
 
 4. **Use Workspaces:**
-   - File → Save Workspace As...
+   - File -> Save Workspace As...
    - Save project-specific workspace with all settings
    - Reopen same workspace configuration automatically
 
 **Advanced Workflow Example:**
 ```
 1. Open VSCode with project workspace
-2. Ctrl+Shift+P → Run Task → "3dMake Render Current"
+2. Ctrl+Shift+P -> Run Task -> "3dMake Render Current"
 3. Renders file and shows output
 4. Use scad-preview extension for real-time 3D view
 5. Edit code with advanced search/replace
@@ -543,18 +543,18 @@ If built-in settings don't work:
 
 ## Quick Reference: Editor Comparison for Curriculum
 
-### Part 1: Foundations (Lessons 1-2)
+### Foundations (Lessons 1-2)
 - **Primary:** Notepad or Notepad++
 - **Focus:** Learn syntax and basic concepts
 - **Terminal:** Standalone Command Prompt (Alt-Tab)
 
-### Part 2: Core Skills (Lessons 3-6)
+### Core Skills (Lessons 3-6)
 - **Primary:** Notepad++ or VSCode
 - **New Features:** Begin using editor syntax highlighting
 - **Terminal:** Standalone (continue Alt-Tab method)
 - **Skills:** File organization, search/replace basics
 
-### Part 3: Advanced Projects (Lessons 7-11)
+### Advanced Projects (Lessons 7-11)
 - **Primary:** VSCode (strongly recommended)
 - **Advanced:** Use extensions, real-time preview, complex project management
 - **Terminal:** Choose Alt-Tab or built-in based on preference
@@ -588,7 +588,7 @@ If built-in settings don't work:
 ### Problem: Syntax Highlighting Not Working
 **Solution:**
 1. Verify file has `.scad` extension
-2. In Notepad++: Language menu → select OpenSCAD or C++
+2. In Notepad++: Language menu -> select OpenSCAD or C++
 3. In VSCode: Install OpenSCAD extension (search Extensions)
 4. Restart editor
 

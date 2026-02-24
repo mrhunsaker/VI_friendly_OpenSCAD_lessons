@@ -8,7 +8,7 @@ The curriculum is explicitly designed for blind and visually impaired learners w
 
 ## Curriculum Structure
 
-### Part 1: Screen Reader Setup & Accessibility Fundamentals
+### Screen Reader Setup & Accessibility Fundamentals
 
 Before choosing a command-line pathway, students learn to optimize their screen reader setup for terminal work and understand accessibility options.
 
@@ -22,13 +22,13 @@ Why start here? Screen reader optimization is the foundation for all command-lin
 
 ---
 
-### Part 2: Command-Line Foundation (Choose Your Path)
+### Command-Line Foundation (Choose Your Path)
 
 Students master terminal/command-line fundamentals before learning 3D design. You choose between three equivalent pathways based on your operating system and learning preferences.
 
 #### Compare All Three Pathways
 
-→ [Command Line Interface Selection Guide](Command_Line_Interface_Selection/Command_Line_Interface_Selection.md)
+-> [Command Line Interface Selection Guide](Command_Line_Interface_Selection/Command_Line_Interface_Selection.md)
 
 This guide provides a comprehensive comparison including:
 - Feature matrix comparing all three shells
@@ -109,7 +109,7 @@ Skills: Unix/bash commands, shell scripting, cross-platform automation
 
 ---
 
-### Part 3: 3dMake Foundation & Design (11 Lessons + 6 Appendices)
+### 3dMake Foundation & Design (11 Lessons + 6 Appendices)
 
 Where to Start: [3dMake Introduction](3dMake_Foundation/3dMake_Intro/3dMake_Intro.md)
 
@@ -248,7 +248,7 @@ This course is enhanced by comprehensive textbooks and companion materials from 
 
 For Students:
 
-1. Start with [Part 1: Setup & Accessibility Fundamentals](Setup/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.md)
+1. Start with [Setup & Accessibility Fundamentals](Setup/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.md)
 2. Read [Command Line Interface Selection Guide](Command_Line_Interface_Selection/Command_Line_Interface_Selection.md) to choose your CLI pathway
 3. Complete your chosen CLI Foundation (PowerShell, CMD, or Git Bash)
 4. Begin [3dMake Introduction](3dMake_Foundation/3dMake_Intro/3dMake_Intro.md)

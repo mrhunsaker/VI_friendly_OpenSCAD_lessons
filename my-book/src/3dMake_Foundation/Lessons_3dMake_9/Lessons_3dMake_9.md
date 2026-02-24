@@ -290,7 +290,7 @@ echo "Archive: ${OUTPUT_DIR}.tar.gz"
 
 ## File Import/Export: Working with External Assets
 
-Professional OpenSCAD projects often incorporate external files—DXF drawings, SVG logos, or shared library modules. Understanding import, include, and use is critical for managing complex projects.
+Professional OpenSCAD projects often incorporate external files-DXF drawings, SVG logos, or shared library modules. Understanding import, include, and use is critical for managing complex projects.
 
 ### import(): Loading 3D Files (DXF, STL, AMF)
 
@@ -439,15 +439,15 @@ echo "Exporting $INPUT_FILE in multiple formats..."
 
 # STL (3D printing)
 openscad -o "$OUTPUT_DIR/model.stl" "$INPUT_FILE"
-echo "✓ STL export complete"
+echo "[YES] STL export complete"
 
 # DXF (CAD compatible)
 openscad -o "$OUTPUT_DIR/model_projection.dxf" "$INPUT_FILE"
-echo "✓ DXF export complete"
+echo "[YES] DXF export complete"
 
 # SVG (web and vector graphics)
 openscad -o "$OUTPUT_DIR/model_projection.svg" "$INPUT_FILE"
-echo "✓ SVG export complete"
+echo "[YES] SVG export complete"
 
 # Generate report
 echo ""
@@ -497,27 +497,27 @@ Best practices for organizing files in larger projects:
 // Recommended project structure
 /*
 my_project/
-├── src/
-│   ├── main.scad
-│   ├── components/
-│   │   ├── fasteners.scad
-│   │   ├── connectors.scad
-│   │   └── mounting.scad
-│   └── libraries/
-│       ├── utilities.scad
-│       └── math_functions.scad
-├── assets/
-│   ├── sketches/
-│   │   ├── bracket_profile.dxf
-│   │   └── panel_layout.svg
-│   └── references/
-│       └── part_specifications.pdf
-└── build/
-    ├── main.stl
-    ├── exports/
-    │   ├── main.dxf
-    │   └── main.svg
-    └── documentation/
++------ src/
+|   +------ main.scad
+|   +------ components/
+|   |   +------ fasteners.scad
+|   |   +------ connectors.scad
+|   |   +------ mounting.scad
+|   +------ libraries/
+|       +------ utilities.scad
+|       +------ math_functions.scad
++------ assets/
+|   +------ sketches/
+|   |   +------ bracket_profile.dxf
+|   |   +------ panel_layout.svg
+|   +------ references/
+|       +------ part_specifications.pdf
++------ build/
+    +------ main.stl
+    +------ exports/
+    |   +------ main.dxf
+    |   +------ main.svg
+    +------ documentation/
 */
 
 // In main.scad, use relative paths:

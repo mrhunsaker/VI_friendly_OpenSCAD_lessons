@@ -1,4 +1,5 @@
-# Screen Reader Accessibility Guide for Git Bash {#gitbash_foundation_screen_reader_accessibility_guide-screen_reader_accessibility_guide}
+
+# Screen Reader Accessibility Guide for Git Bash
 
 **Target Users:** NVDA, JAWS, and other screen reader users  
 **Last Updated:** 2026
@@ -44,7 +45,7 @@ Both NVDA and JAWS work well with Git Bash, but they have different strengths:
 
 ### What is Git Bash?
 
-Git Bash is a terminal application for Windows that provides a Unix-style command-line experience (Bash shell). It is installed as part of **Git for Windows**, which is free software available at https://git-scm.com/. When you open Git Bash, you get the same `bash`, `ls`, `grep`, `cat`, and other Unix tools used on Linux and macOS — but running on your Windows computer.
+Git Bash is a terminal application for Windows that provides a Unix-style command-line experience (Bash shell). It is installed as part of **Git for Windows**, which is free software available at https://git-scm.com/. When you open Git Bash, you get the same `bash`, `ls`, `grep`, `cat`, and other Unix tools used on Linux and macOS - but running on your Windows computer.
 
 ---
 
@@ -78,7 +79,7 @@ NVDA is free and available from https://www.nvaccess.org/
 
 ### Tip: Use `ls -1` for Screen Reader Friendly Listings
 
-By default, `ls` in Git Bash may display files in columns. Use `ls -1` (the number one, not the letter L) to display one file per line — much easier to follow with a screen reader.
+By default, `ls` in Git Bash may display files in columns. Use `ls -1` (the number one, not the letter L) to display one file per line - much easier to follow with a screen reader.
 
 ---
 
@@ -233,9 +234,9 @@ Tells you how many items there are. If the count is over 20, use the file method
 
 ### Problem 2: "Tab Completion Isn't Working"
 
-1. **Need at least one character** — type `cd D` then Tab (not just `cd` then Tab)
-2. **Check if item exists** — use `ls` first to see available items
-3. **Multiple matches** — press Tab twice to list all options
+1. **Need at least one character** - type `cd D` then Tab (not just `cd` then Tab)
+2. **Check if item exists** - use `ls` first to see available items
+3. **Multiple matches** - press Tab twice to list all options
 
 ### Problem 3: "'Command Not Found' Error"
 
@@ -272,7 +273,7 @@ Press **Ctrl+C**
 ls -1
 ```
 
-One file per line — much easier to follow with a screen reader.
+One file per line - much easier to follow with a screen reader.
 
 ### 2. Create Aliases for Frequently Used Commands
 
@@ -338,18 +339,18 @@ EVERY COMMAND STARTS WITH:
 3. cd path (go there)
 
 LONG OUTPUT?
-→ command > file.txt
-→ notepad file.txt
+-> command > file.txt
+-> notepad file.txt
 
 STUCK?
-→ Ctrl+C
+-> Ctrl+C
 
 WANT TO REPEAT?
-→ Up Arrow
-→ history
+-> Up Arrow
+-> history
 
 NEED HELP?
-→ man command-name  (or: command --help)
+-> man command-name  (or: command --help)
 ```
 
 ---

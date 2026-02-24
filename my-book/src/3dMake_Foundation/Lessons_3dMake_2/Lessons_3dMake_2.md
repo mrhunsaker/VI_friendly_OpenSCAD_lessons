@@ -383,7 +383,7 @@ rotate_extrude(angle = 360, convexity = 4)
 
 **What it does:**
 - Draws a 2D square 20 units from the center
-- Rotates it 360° around the Z-axis
+- Rotates it 360deg around the Z-axis
 - Creates a hollow cylindrical vase
 
 **Try this variation:**
@@ -449,7 +449,7 @@ $fn = 100;
 
 difference()
 {
-  // Outer hook profile - rotated 360°
+  // Outer hook profile - rotated 360deg
   rotate_extrude(angle = 360, convexity = 4)
   {
     translate([25, 0, 0])

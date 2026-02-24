@@ -2,14 +2,14 @@
 
 Screen readers provide speech and (where supported) braille output that make textual interfaces accessible to people who are blind or have low vision. In command-line environments they convert terminal text, prompts, and keyboard navigation into audible or tactile feedback so users can interact independently with shells such as Windows Terminal, Command Prompt, and PowerShell.
 
-Choosing a screen reader is a personal decision — there is no single reader that is universally better or worse for every user. Preferences depend on workflow, training, budget, and comfort with customization; each product has strengths and trade-offs, so try available options and pick what feels best for you.
+Choosing a screen reader is a personal decision - there is no single reader that is universally better or worse for every user. Preferences depend on workflow, training, budget, and comfort with customization; each product has strengths and trade-offs, so try available options and pick what feels best for you.
 
 JAWS
 
 - Advantages: Mature, feature-rich, extensive documentation and vendor support; many users report robust compatibility with a wide range of Windows applications and advanced configuration options useful for power users.
 - Disadvantages: Commercial software with licensing costs and vendor-managed updates; some advanced customization can require a learning curve.
-- Cost (year): Commercial — expect a multi-hundred-dollar annual cost in common U.S. purchase scenarios.
-- Cost (year): Commercial — expect a multi-hundred-dollar annual cost in common U.S. purchase scenarios.
+- Cost (year): Commercial - expect a multi-hundred-dollar annual cost in common U.S. purchase scenarios.
+- Cost (year): Commercial - expect a multi-hundred-dollar annual cost in common U.S. purchase scenarios.
 - License/trial: JAWS commonly offers a time-limited demo (approximately 40 minutes per session); users may need to restart the computer or reinitialize the session to continue using the demo beyond that limit.
 
 NVDA
@@ -28,7 +28,7 @@ Dolphin (SuperNova / Dolphin Screen Reader family)
 
 - Advantages: Commercial product line focused on accessibility, with options tailored to different user needs (visual support, magnification + speech); vendor support and training options are available.
 - Disadvantages: Commercial licensing and potential configuration complexity depending on the product; features and behavior can differ across Dolphin products.
-- Cost (year): Commercial — typically in the range of other paid screen readers (expect a multi-hundred-dollar per-year cost for full-featured licensing/support).
+- Cost (year): Commercial - typically in the range of other paid screen readers (expect a multi-hundred-dollar per-year cost for full-featured licensing/support).
 - License/trial: Dolphin typically provides a full-featured 30-day trial license for evaluation before purchase.
 
 Choosing between them for command-line work

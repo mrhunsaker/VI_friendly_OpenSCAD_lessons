@@ -255,21 +255,21 @@ The main curriculum teaches you to use Git Bash for real work.
 
 ```
 Pre: First Terminal (accessibility focus)
-  ↓
+  v
 GitBash-0: Paths & Layout (foundations)
-  ↓
+  v
 GitBash-1: Navigation (mastery)
-  ↓
+  v
 GitBash-2: Files & Folders (basic manipulation)
-  ↓
+  v
 GitBash-3: Piping & Redirection (powerful combinations)
-  ↓
+  v
 GitBash-4: Variables & Aliases (customization)
-  ↓
+  v
 GitBash-5: History & Debugging (refinement)
-  ↓
+  v
 GitBash-6: Scripts & Functions (advanced)
-  ↓
+  v
 Unit Test & Practice (comprehensive)
 ```
 
@@ -519,7 +519,7 @@ Then proceed to **GitBash-Pre: Your First Terminal** to begin your journey!
 
 **Goal:** You can navigate to any folder and see what's in it with your screen reader.
 
-### Phase 2: Intermediate User → Power User
+### Phase 2: Intermediate User -> Power User
 
 | Lesson                                    | Duration | What You'll Learn                        |
 |-------------------------------------------|----------|------------------------------------------|
@@ -583,7 +583,7 @@ Every lesson includes:
 
 ## Quick Start Guide (First 15 Minutes)
 
-1. **Open Git Bash** (Start menu → type Git Bash → Enter)
+1. **Open Git Bash** (Start menu -> type Git Bash -> Enter)
 2. **Run these commands:**
    ```bash
    pwd
@@ -647,7 +647,7 @@ cd my-practice-folder
 ## Curriculum Map
 
 ```
-START HERE ↓
+START HERE v
 +---- Screen Reader Accessibility Guide (reference throughout)
 +---- GB-Pre: Your First Terminal (absolute beginner entry point)
 +---- GB-0: Getting Started (paths & navigation foundations)
@@ -657,9 +657,9 @@ START HERE ↓
 +---- GB-4: Environment Variables & Aliases (automation)
 +---- GB-5: Filling in the Gaps (profiles & history)
 +---- GBUnitTest (comprehensive practice & assessment)
-        ↓
+        v
     NEXT: 3D Printing Integration Lessons
-        ↓
+        v
     ADVANCED: Bash Scripting
 ```
 

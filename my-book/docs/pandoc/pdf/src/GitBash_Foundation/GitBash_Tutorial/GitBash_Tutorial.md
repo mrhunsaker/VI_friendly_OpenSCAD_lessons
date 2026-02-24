@@ -1,0 +1,64 @@
+[Header 3 ("gitbash_foundation_gitbash_tutorial-gitbash_tutorial", [], []) [Str "Git Bash Tutorial"], Para [Str "Estimated time: 30-45 minutes"], Para [Strong [Str "Learning Objectives"]], BulletList [[Plain [Str "Launch Git Bash and identify the prompt"]], [Plain [Str "Understand and use basic path notation (", Code ("", [], []) "~", Str ", ", Code ("", [], []) "./", Str ", ", Code ("", [], []) "../", Str ")"]], [Plain [Str "Use ", Code ("", [], []) "pwd", Str ", ", Code ("", [], []) "ls -1", Str ", and ", Code ("", [], []) "cd", Str " to navigate the filesystem"]], [Plain [Str "Open files in an external editor and run simple commands"]]], Para [Strong [Str "Materials"]], BulletList [[Plain [Str "A computer with Git Bash installed (install via https://git-scm.com/)"]], [Plain [Str "Access to a text editor (Notepad, VS Code)"]]], Header 4 ("pre-requisite-knowledge", ["unnumbered", "unlisted"], []) [Str "Pre-Requisite Knowledge"], BulletList [[Plain [Str "Typing and basic text-editing skills"]], [Plain [Str "Familiarity with file/folder concepts and basic OS navigation"]], [Plain [Str "Basic screen-reading familiarity (if applicable)"]]], HorizontalRule, Header 4 ("what-is-git-bash", ["unnumbered", "unlisted"], []) [Str "What is Git Bash?"], Para [Str "Git Bash is a free terminal application for Windows that provides a ", Strong [Str "Bash"], Str " (Unix shell) environment. It is installed as part of ", Strong [Str "Git for Windows"], Str ". When you open Git Bash, you can use Unix commands like ", Code ("", [], []) "ls", Str ", ", Code ("", [], []) "cat", Str ", ", Code ("", [], []) "grep", Str ", and ", Code ("", [], []) "echo", Str " - the same commands used on Linux and macOS - right on your Windows computer."], Para [Str "Git Bash is useful for:"], BulletList [[Plain [Str "Running CLI programs (like OpenSCAD, slicers, or 3DMake)"]], [Plain [Str "Navigating the filesystem with keyboard-only commands"]], [Plain [Str "Automating repetitive tasks with scripts"]], [Plain [Str "Accessibility: works cleanly with NVDA, JAWS, and other screen readers"]]], HorizontalRule, Header 4 ("what-well-do-and-why", ["unnumbered", "unlisted"], []) [Str "What We'll Do and Why"], Para [Str "You'll use Git Bash to run CLI programs, navigate the filesystem, and manipulate files - tasks that are especially efficient when using a keyboard or a screen reader."], HorizontalRule, Header 4 ("quick-tutorial--core-concepts", ["unnumbered", "unlisted"], []) [Str "Quick Tutorial & Core Concepts"], Header 5 ("paths-and-navigation", ["unnumbered", "unlisted"], []) [Str "Paths and Navigation"], BulletList [[Plain [Code ("", [], []) "~", Str " - home directory (e.g., ", Code ("", [], []) "/c/Users/YourName", Str ")"]], [Plain [Code ("", [], []) ".", Str " - current directory"]], [Plain [Code ("", [], []) "..", Str " - parent directory"]], [Plain [Code ("", [], []) "./", Str " - current directory shortcut (used to run scripts: ", Code ("", [], []) "./script.sh", Str ")"]], [Plain [Code ("", [], []) "../", Str " - parent directory shortcut"]], [Plain [Str "Use ", Strong [Str "Tab"], Str " to autocomplete files and folders"]]], Para [Str "Git Bash uses forward slashes (", Code ("", [], []) "/", Str ") for paths, just like Linux. Your Windows ", Code ("", [], []) "C:\\Users\\YourName", Str " folder is accessible as ", Code ("", [], []) "/c/Users/YourName", Str " or simply ", Code ("", [], []) "~", Str "."], Header 5 ("useful-commands-examples", ["unnumbered", "unlisted"], []) [Str "Useful Commands (Examples)"], CodeBlock ("", ["bash"], []) "pwd                # show current directory
+
+ls -1              # list files, one per line (screen-reader friendly)
+
+cd path/to/dir     # change directory
+
+whoami             # current user
+
+", Header 5 ("wildcards", ["unnumbered", "unlisted"], []) [Str "Wildcards"], BulletList [[Plain [Code ("", [], []) "*", Str " matches zero or more characters"]], [Plain [Code ("", [], []) "?", Str " matches a single character"]]], Para [Str "Use ", Code ("", [], []) "ls *.scad", Str " to filter by extension, for example."], HorizontalRule, Header 4 ("common-operations", ["unnumbered", "unlisted"], []) [Str "Common Operations"], Header 5 ("file-and-folder-manipulation", ["unnumbered", "unlisted"], []) [Str "File and Folder Manipulation"], CodeBlock ("", ["bash"], []) "mkdir my-folder          # create folder
+
+mkdir -p a/b/c           # create nested folders at once
+
+cp -r src dest           # copy (use -r for directories)
+
+mv oldname newname       # rename or move
+
+rm file                  # remove file
+
+rm -r folder             # remove folder and contents
+
+touch filename.txt       # create new empty file
+
+", Header 5 ("input-output-and-piping", ["unnumbered", "unlisted"], []) [Str "Input, Output, and Piping"], CodeBlock ("", ["bash"], []) "echo 'hello' | clip      # copy to clipboard
+
+command > output.txt     # redirect output to file
+
+command >> output.txt    # append output to file
+
+command > /dev/null      # discard/suppress output
+
+", Para [Str "Use ", Code ("", [], []) "|", Str " to pipe output and ", Code ("", [], []) ">", Str " to redirect into files."], Header 5 ("editing-and-running-programs", ["unnumbered", "unlisted"], []) [Str "Editing and Running Programs"], CodeBlock ("", ["bash"], []) "notepad file.txt         # open in Notepad (Windows)
+
+code file.txt            # open in VS Code (if in PATH)
+
+./script.sh              # run a script in the current directory
+
+chmod +x script.sh       # make a script executable
+
+", HorizontalRule, Header 4 ("screen-reader-friendly-tips", ["unnumbered", "unlisted"], []) [Str "Screen-Reader Friendly Tips"], BulletList [[Plain [Str "Prefer ", Code ("", [], []) "ls -1", Str " for name-only, one-per-line output."]], [Plain [Str "Filter lists with ", Code ("", [], []) "grep", Str ": ", Code ("", [], []) "ls -1 ~/Documents | grep \"\\.scad$\"", Str " (files only ending in .scad)."]], [Plain [Str "Redirect very long outputs to a file and open it in an editor."]]], HorizontalRule, Header 4 ("error-handling-and-control", ["unnumbered", "unlisted"], []) [Str "Error Handling and Control"], BulletList [[Plain [Str "Abort a running command: ", Code ("", [], []) "Ctrl+C"]], [Plain [Str "View history: Up/Down arrows or ", Code ("", [], []) "history"]], [Plain [Str "Clear screen: ", Code ("", [], []) "clear", Str " (or ", Code ("", [], []) "Ctrl+L", Str ")"]], [Plain [Str "If an error is long, read the first few lines for the gist and copy short snippets into a file to examine."]]], HorizontalRule, Header 4 ("environment-variables--path", ["unnumbered", "unlisted"], []) [Str "Environment Variables & PATH"], Para [Str "Environment variables configure your session. ", Code ("", [], []) "PATH", Str " tells the shell where to find executables."], CodeBlock ("", ["bash"], []) "echo $PATH
+
+echo $HOME
+
+echo $USER
+
+", Para [Str "To add a directory to PATH for the current session:"], CodeBlock ("", ["bash"], []) "export PATH=\"$PATH:/path/to/my/tools\"
+
+", Para [Str "To make it permanent, add that line to ", Code ("", [], []) "~/.bashrc", Str "."], HorizontalRule, Header 4 ("running-cli-applications-and-archives", ["unnumbered", "unlisted"], []) [Str "Running CLI Applications and Archives"], Para [Str "To extract ZIP archives in Git Bash:"], CodeBlock ("", ["bash"], []) "# Unzip a file
+
+unzip file.zip -d destinationfolder
+
+
+# Or use Windows' built-in tool (from Git Bash):
+
+powershell.exe Expand-Archive -Path file.zip -DestinationPath folder
+
+", HorizontalRule, Header 4 ("aliases-and-cross-platform-notes", ["unnumbered", "unlisted"], []) [Str "Aliases and Cross-Platform Notes"], Para [Str "Git Bash provides Unix commands that work identically on Linux and macOS. This means your Git Bash skills transfer directly if you ever work on a Mac or Linux system."], Para [Str "Useful aliases to add to ", Code ("", [], []) "~/.bashrc", Str ":"], CodeBlock ("", ["bash"], []) "alias ll='ls -la'
+
+alias la='ls -1a'
+
+alias ..='cd ..'
+
+alias ...='cd ../..'
+
+", HorizontalRule, Header 4 ("step-by-step-tasks-hands-on", ["unnumbered", "unlisted"], []) [Str "Step-by-step Tasks (Hands-On)"], OrderedList (1, DefaultStyle, DefaultDelim) [[Plain [Str "Open Git Bash; listen for the prompt and current path."]], [Plain [Str "Run ", Code ("", [], []) "pwd", Str " to confirm your location."]], [Plain [Str "Run ", Code ("", [], []) "ls -1", Str " in your home directory and note the output."]], [Plain [Str "Practice ", Code ("", [], []) "cd Documents", Str ", ", Code ("", [], []) "cd ../", Str ", and ", Code ("", [], []) "cd ~", Str " to move between folders."]], [Plain [Str "Create and open a file: ", Code ("", [], []) "touch example.txt && notepad example.txt", Str " (or ", Code ("", [], []) "code example.txt", Str ")."]]], Header 4 ("checkpoints", ["unnumbered", "unlisted"], []) [Str "Checkpoints"], BulletList [[Plain [Str "After step 3 you should be able to state your current directory."]], [Plain [Str "After step 5 you should be able to create and open a text file from Git Bash."]]], HorizontalRule, Header 4 ("quick-quiz-10-questions", ["unnumbered", "unlisted"], []) [Str "Quick Quiz (10 questions)"], OrderedList (1, DefaultStyle, DefaultDelim) [[Plain [Str "What command prints your current directory?"]], [Plain [Str "What does ", Code ("", [], []) "~", Str " represent?"]], [Plain [Str "How do you list only names, one per line?"]], [Plain [Str "How do you go up one directory level?"]], [Plain [Str "How would you open ", Code ("", [], []) "notes.txt", Str " in Notepad from Git Bash?"]], [Plain [Str "True or False: The pipe operator ", Code ("", [], []) "|", Str " sends output to a file."]], [Plain [Str "Explain why running a script requires ", Code ("", [], []) "chmod +x", Str " first."]], [Plain [Str "What is the difference between running a script with ", Code ("", [], []) "./script.sh", Str " versus ", Code ("", [], []) "bash script.sh", Str "?"]], [Plain [Str "Describe how you would handle a very long command output when using a screen reader."]], [Plain [Str "What does the ", Code ("", [], []) "PATH", Str " environment variable do, and why is it important when running programs like OpenSCAD?"]]], HorizontalRule, Header 4 ("extension-problems", ["unnumbered", "unlisted"], []) [Str "Extension Problems"], OrderedList (1, DefaultStyle, DefaultDelim) [[Plain [Str "Create a folder ", Code ("", [], []) "OpenSCADProjects", Str " in Documents and verify its contents."]], [Plain [Str "Create three files named ", Code ("", [], []) "a.scad", Str ", ", Code ("", [], []) "b.scad", Str ", ", Code ("", [], []) "c.scad", Str " and list them with a wildcard."]], [Plain [Str "Save ", Code ("", [], []) "ls -1 ~/Documents", Str " output to ", Code ("", [], []) "doclist.txt", Str " and open it."]], [Plain [Str "Try tab-completion in a deeply nested folder and note behavior."]], [Plain [Str "Capture ", Code ("", [], []) "pwd", Str " output into a file and open it: ", Code ("", [], []) "pwd > cwd.txt && notepad cwd.txt", Str "."]], [Plain [Str "Build an automated setup script that creates a complete project directory structure, initializes placeholder files, and generates a README."]], [Plain [Str "Create a Git Bash cheat sheet for your most-used commands; organize by category (navigation, files, scripting, troubleshooting)."]], [Plain [Str "Write a non-visual tutorial for Git Bash basics; use audio descriptions and keyboard-only navigation as the primary learning method."]], [Plain [Str "Develop a workflow automation script: combines multiple Git Bash concepts (folders, aliases, piping) to solve a real 3D printing task."]], [Plain [Str "Create a Git Bash proficiency self-assessment: list all concepts covered, provide test commands for each, and reflect on what you learned."]]], HorizontalRule, Header 4 ("references", ["unnumbered", "unlisted"], []) [Str "References"], BulletList [[Plain [Str "Git for Windows. (2024). ", Emph [Str "Git Bash"], Str ". https://gitforwindows.org/"]], [Plain [Str "GNU. (2024). ", Emph [Str "Bash reference manual"], Str ". https://www.gnu.org/software/bash/manual/bash.html"]], [Plain [Str "The Linux Documentation Project. (2024). ", Emph [Str "Bash Beginners Guide"], Str ". https://tldp.org/LDP/Bash-Beginners-Guide/html/"]]], Header 4 ("helpful-resources", ["unnumbered", "unlisted"], []) [Str "Helpful Resources"], BulletList [[Plain [Link ("", [], []) [Str "Git for Windows"] ("https://gitforwindows.org/", "")]], [Plain [Link ("", [], []) [Str "Bash Reference Manual (GNU)"] ("https://www.gnu.org/software/bash/manual/bash.html", "")]], [Plain [Link ("", [], []) [Str "Bash Beginners Guide"] ("https://tldp.org/LDP/Bash-Beginners-Guide/html/", "")]], [Plain [Link ("", [], []) [Str "GNU Coreutils"] ("https://www.gnu.org/software/coreutils/manual/", "")]]]]

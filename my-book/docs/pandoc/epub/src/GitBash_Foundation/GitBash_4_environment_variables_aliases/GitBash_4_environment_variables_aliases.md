@@ -1,0 +1,1 @@
+[Header 3 ("gitbash_foundation_gitbash_4_environment_variables_aliases-gitbash_4_environment_variables_aliases", [], []) [Str "GitBash-4: Environment Variables & Aliases"], Para [Str "Covers bash environment setup: ", Code ("", [], []) "export", Str ", ", Code ("", [], []) ".bashrc", Str ", ", Code ("", [], []) "alias", Str ", ", Code ("", [], []) "$PATH", Str "."]]

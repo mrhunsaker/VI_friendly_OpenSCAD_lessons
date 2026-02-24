@@ -1,0 +1,82 @@
+# Dice, Dice, Dice - Student Documentation Template (Extension Project) {#assets_3dmake_foundation_lessons_3dmake_4_dice_dice_dice-dice_dice_dice_student_template}
+
+- Author:
+- Date:
+- Description: Design parametric 3D-printed dice and test for fairness through statistical analysis.
+
+---
+
+## Design Concept
+
+- Dice specifications (size, material, infill):
+- How will you ensure uniform weight distribution?
+- What design details will your dice include (pips, patterns)?
+
+---
+
+## Design Specifications
+
+| Parameter              | Value |
+|------------------------|-------|
+| Die size               |       |
+| Infill %               |       |
+| Material               |       |
+| Pip depth              |       |
+| Pit/pip count per face |       |
+
+---
+
+## Fairness Testing
+
+### Test Setup
+
+- How many rolls will you conduct? (minimum 100)
+- Rolling surface and method:
+- Date/time of testing:
+
+### Roll Results
+
+| Face | Frequency (out of  rolls) | Percentage | Expected % |
+|------|---------------------------|------------|------------|
+| 1    |                           |            | 16.67%     |
+| 2    |                           |            | 16.67%     |
+| 3    |                           |            | 16.67%     |
+| 4    |                           |            | 16.67%     |
+| 5    |                           |            | 16.67%     |
+| 6    |                           |            | 16.67%     |
+
+### Statistical Analysis
+
+- Calculate chi-squared value or deviation from expected:
+- Is the die fair (within statistical tolerance)?
+- What face appears most/least frequently?
+
+---
+
+## Reflections
+
+- Were you surprised by the results?
+- What design factors influenced fairness?
+- How would you improve the dice design?
+- What did you learn about manufacturing precision?
+
+---
+
+## Attachments
+
+- [ ] `.scad` file with parametric dice module
+- [ ] Photo of test dice
+- [ ] Roll data (raw results or tally sheet)
+- [ ] Statistical analysis calculations
+- [ ] Design iteration notes (if multiple versions tested)
+
+---
+
+## Teacher Feedback
+
+| Category                    | Score  | Notes |
+|-----------------------------|--------|-------|
+| Problem & Solution (0-3)    |        |       |
+| Design & Code Quality (0-3) |        |       |
+| Documentation (0-3)         |        |       |
+| **Total (0-9)**             | **** |       |

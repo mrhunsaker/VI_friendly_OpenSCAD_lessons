@@ -14,7 +14,7 @@ You write your code in VSCode. OpenSCAD runs in the background (or in a separate
 
 ---
 
-## Part 1: Install Required Software
+## Install Required Software
 
 ### 1.1 Install VSCode
 
@@ -46,7 +46,7 @@ You should hear a version number. If you get an error, see the PATH setup sectio
 
 ---
 
-## Part 2: Configure the Task Runner
+## Configure the Task Runner
 
 VSCode uses a file called `tasks.json` to define custom commands you can run from the keyboard. We'll set up a task that opens your current `.scad` file in OpenSCAD for preview whenever you press a key.
 
@@ -128,7 +128,7 @@ To export an STL:
 
 ---
 
-## Part 3: NVDA Settings for VSCode
+## NVDA Settings for VSCode
 
 ### 3.1 Recommended NVDA Settings
 
@@ -169,7 +169,7 @@ You can also toggle punctuation level on the fly: `NVDA + P` cycles through None
 
 ---
 
-## Part 4: JAWS Settings for VSCode
+## JAWS Settings for VSCode
 
 ### 4.1 Virtual Cursor
 
@@ -196,7 +196,7 @@ JAWS may try to activate Virtual/Browse mode in VSCode. If VSCode stops respondi
 
 ---
 
-## Part 5: Notepad++ as an Alternative
+## Notepad++ as an Alternative
 
 If VSCode is too complex to set up, **Notepad++** is a simpler screen-reader-friendly option for editing `.scad` files.
 
@@ -227,7 +227,7 @@ Name it "Preview in OpenSCAD" and assign it a shortcut key (e.g., `Ctrl + F5`).
 
 ---
 
-## Part 6: Workflow Summary
+## Workflow Summary
 
 Here is the complete workflow from writing code to printing:
 

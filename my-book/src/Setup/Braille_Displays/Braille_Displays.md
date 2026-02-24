@@ -11,7 +11,7 @@ Most modern braille displays support a "braille terminal" or "braille output" mo
 
 - **Connection:** Connect via USB or Bluetooth according to the device vendor's instructions. Ensure the display's power and pairing state are correct before opening your terminal. Some displays require a companion driver or vendor utility on the host.
 - **Screen reader support:** Configure your Windows or Linux screen reader to use the braille display. Most mainstream screen readers include braille support or can interoperate with system braille services; follow the vendor documentation for enabling braille output.
-- **Terminal behavior:** Braille displays reflect the terminal buffer and the current focus. Use your screen reader's review/virtual cursor or the display's pan keys to move through lines of terminal output, and use the shell history (Up arrow) to recall commands — the braille display will show the recalled command when the shell line is focused.
+- **Terminal behavior:** Braille displays reflect the terminal buffer and the current focus. Use your screen reader's review/virtual cursor or the display's pan keys to move through lines of terminal output, and use the shell history (Up arrow) to recall commands - the braille display will show the recalled command when the shell line is focused.
 
 ## Compatibility and notetakers
 
@@ -23,30 +23,30 @@ Most modern braille displays support a "braille terminal" or "braille output" mo
 - **No output:** verify the connection, power, and pairing; restart the terminal or screen reader, and consult vendor docs for drivers or firmware updates.
 - **Navigation out of sync:** try toggling the display's terminal mode, restart the screen reader, or open the terminal in a different emulator (Windows Terminal, PowerShell, or a Linux terminal) to compare behavior.
 
-This page aims to give a practical overview — follow your braille display vendor and screen reader documentation for device-specific setup and advanced configuration.
+This page aims to give a practical overview - follow your braille display vendor and screen reader documentation for device-specific setup and advanced configuration.
 
 ## Vendor setup pages
 
-- [HumanWare](https://www.humanware.com) — Braille displays & BrailleNote/BrailleSense products
-- [Freedom Scientific](https://www.freedomscientific.com) — Focus Blue braille displays and related tools
-- [HIMS](https://hims-inc.com) — BrailleSense family
-- [Dolphin](https://www.dolphinuk.com) — SuperNova and related accessibility tools
+- [HumanWare](https://www.humanware.com) - Braille displays & BrailleNote/BrailleSense products
+- [Freedom Scientific](https://www.freedomscientific.com) - Focus Blue braille displays and related tools
+- [HIMS](https://hims-inc.com) - BrailleSense family
+- [Dolphin](https://www.dolphinuk.com) - SuperNova and related accessibility tools
 
 ## Connecting a braille display to common screen readers (general steps)
 
 - **JAWS:** Connect the display via USB or Bluetooth, then open JAWS Settings Center and look for the Braille / Braille Settings area (or the Braille Manager). Select the connected display and enable braille output; test in a terminal window. If the display requires a vendor driver, install it first.
-- **NVDA:** Connect the display and open the NVDA menu → Preferences → Braille display (or use NVDA's braille settings). NVDA generally detects many displays; choose the device and enable braille output. Install vendor drivers if needed.
-- **Windows Narrator:** Connect the display, then open Settings → Accessibility → Narrator → Braille (or related braille options) and enable braille output. Narrator will use the Windows braille services to route output to the display.
+- **NVDA:** Connect the display and open the NVDA menu -> Preferences -> Braille display (or use NVDA's braille settings). NVDA generally detects many displays; choose the device and enable braille output. Install vendor drivers if needed.
+- **Windows Narrator:** Connect the display, then open Settings -> Accessibility -> Narrator -> Braille (or related braille options) and enable braille output. Narrator will use the Windows braille services to route output to the display.
 - **Dolphin / SuperNova:** Connect the display via USB/Bluetooth, then open SuperNova settings and enable braille output, selecting the connected device. Dolphin provides driver/utility support for specific displays where required.
 
 ## Notes
 
-- These instructions are intentionally high-level — vendor drivers, firmware, and exact setting names can vary. If a device is not detected, install or update the vendor's drivers/utilities and consult the vendor setup pages listed above.
+- These instructions are intentionally high-level - vendor drivers, firmware, and exact setting names can vary. If a device is not detected, install or update the vendor's drivers/utilities and consult the vendor setup pages listed above.
 - When testing, open a terminal (Windows Terminal, Command Prompt, PowerShell, or a Linux terminal), run a few commands (for example `dir` / `ls`) and use the display's pan keys or your screen reader's review cursor to confirm tactile output and navigation.
 
 ## Multiline Braille Displays
 
-Multiline braille displays present several lines of braille at once (often 1–4 lines or more), which can greatly improve readability and code navigation compared with single-line displays. Seeing multiple lines simultaneously helps with indentation, matching braces, and maintaining context while reading or editing source files.
+Multiline braille displays present several lines of braille at once (often 1-4 lines or more), which can greatly improve readability and code navigation compared with single-line displays. Seeing multiple lines simultaneously helps with indentation, matching braces, and maintaining context while reading or editing source files.
 
 ### Examples (short notes)
 

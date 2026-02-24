@@ -35,3 +35,41 @@ level = 1
 
 [preprocessor.index]
 [preprocessor.links]
+
+[output.pandoc]
+
+
+[output.pandoc.profile.pdf]
+output-file = "OpenSCAD_Curriculum.pdf"
+to = "latex"
+number-sections = false
+toc = true
+toc-depth = 3
+include-before-body = ["E:/VI_friendly_OpenSCAD_lessons/my-book/src/Cover.tex"]
+template = "E:/VI_friendly_OpenSCAD_lessons/my-book/src/template.tex"
+
+[output.pandoc.profile.pdf.variables]
+secnumdepth = 2
+date = "2026-02-24"
+title-meta = "3D Printing Course for Blind and Visually Impaired Learners"
+author-meta = "Michael Ryan Hunsaker, M.Ed., Ph.D."
+title = ""
+author = ""
+documentclass = "book"
+papersize = "letter"
+fontsize = "11pt"
+maketitle = false
+header-includes = "\\usepackage{url}"
+
+
+[output.pandoc.profile.epub]
+output-file = "output.epub"
+to = "epub"
+number-sections = false
+toc-depth = 3
+include-before-body = ["E:/VI_friendly_OpenSCAD_lessons/my-book/src/Cover.html"]
+
+[output.pandoc.profile.epub.variables]
+date = "2026-02-24"
+title-meta = "3D Printing Course for Blind and Visually Impaired Learners"
+author-meta = "Michael Ryan Hunsaker, M.Ed., Ph.D."

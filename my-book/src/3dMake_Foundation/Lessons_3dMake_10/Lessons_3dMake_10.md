@@ -22,7 +22,7 @@ Estimated time: 120-150 minutes (multiple activities)
 
 ---
 
-## Part 1: Measurement Fundamentals
+## Measurement Fundamentals
 
 Before you can validate that your designs print correctly, you need to measure accurately. This section covers using calipers and interpreting measurement data.
 
@@ -354,7 +354,7 @@ Beyond basic primitives and boolean operations, professional designs often use h
 
 ### Example 1: Hull Operations for Organic Shapes
 
-The `hull()` function creates the convex hull of shapes—imagine wrapping them in plastic wrap. This is perfect for creating smooth, organic forms:
+The `hull()` function creates the convex hull of shapes-imagine wrapping them in plastic wrap. This is perfect for creating smooth, organic forms:
 
 ```openscad
 // Birdhouse using hull() - from Simplifying 3D Printing textbook

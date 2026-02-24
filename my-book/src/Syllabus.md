@@ -32,7 +32,7 @@ Accessibility is not an add-on. It is the foundation of every tool, workflow, an
 
 ## Curriculum Structure & Scope/Sequence
 
-### Part 1: Setup & Accessibility Fundamentals (Prerequisite - 2-3 hours)
+### Setup & Accessibility Fundamentals (Prerequisite - 2-3 hours)
 
 Start here: [Screen Reader Accessibility Guide](Setup/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.md)
 
@@ -47,7 +47,7 @@ Before choosing a command-line pathway, students optimize their screen reader se
 
 ---
 
-### Part 2: Command-Line Foundation (Choose Your Path)
+### Command-Line Foundation (Choose Your Path)
 
 Start here: [Command Line Interface Selection Guide](Command_Line_Interface_Selection/Command_Line_Interface_Selection.md)
 
@@ -135,13 +135,13 @@ Outcomes: Terminal fluency, file system mastery, bash scripting, version control
 
 ---
 
-### Part 3: 3dMake Foundation (Main Curriculum - 16-20 hours)
+### 3dMake Foundation (Main Curriculum - 16-20 hours)
 
 Start here: [3dMake Introduction](3dMake_Foundation/3dMake_Intro/3dMake_Intro.md)
 
 11 progressive lessons building from foundational concepts to leadership-level design thinking, organized in 5 parts. Version 2.1 adds comprehensive advanced programming and design topics throughout.
 
-#### Part 1: Foundations (Lessons 1-3 | ~4-5 hours)
+#### Foundations (Lessons 1-3 | ~4-5 hours)
 
 | Lesson                                                                                         | Focus                                                           | Duration   | Project |
 |------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|------------|---------|
@@ -149,14 +149,14 @@ Start here: [3dMake Introduction](3dMake_Foundation/3dMake_Intro/3dMake_Intro.md
 | [Lesson 2](3dMake_Foundation/Lessons_3dMake_2/Lessons_3dMake_2.md) | Primitives & Boolean Operations + Modifier Characters Debugging | 75-90 min  | None    |
 | [Lesson 3](3dMake_Foundation/Lessons_3dMake_3/Lessons_3dMake_3.md) | Parametric Architecture + Advanced Programming Concepts         | 90-120 min | None    |
 
-#### Part 2: Verification & Safety (Lessons 4-5 | ~2 hours)
+#### Verification & Safety (Lessons 4-5 | ~2 hours)
 
 | Lesson                                                                                         | Focus                                    | Duration  | Project |
 |------------------------------------------------------------------------------------------------|------------------------------------------|-----------|---------|
 | [Lesson 4](3dMake_Foundation/Lessons_3dMake_4/Lessons_3dMake_4.md) | AI-Enhanced Verification & Feedback      | 45-60 min | None    |
 | [Lesson 5](3dMake_Foundation/Lessons_3dMake_5/Lessons_3dMake_5.md) | Safety Protocols & Material Introduction | 60-90 min | None    |
 
-#### Part 3: Applied Projects (Lessons 6-8 | ~5-6 hours)
+#### Applied Projects (Lessons 6-8 | ~5-6 hours)
 
 | Lesson                                                                                         | Focus                                     | Duration    | Project             |
 |------------------------------------------------------------------------------------------------|-------------------------------------------|-------------|---------------------|
@@ -164,14 +164,14 @@ Start here: [3dMake Introduction](3dMake_Foundation/3dMake_Intro/3dMake_Intro.md
 | [Lesson 7](3dMake_Foundation/Lessons_3dMake_7/Lessons_3dMake_7.md) | Parametric Transforms + Math Functions    | 90-120 min  | Phone Stand         |
 | [Lesson 8](3dMake_Foundation/Lessons_3dMake_8/Lessons_3dMake_8.md) | Advanced Design + Assembly Best Practices | 105-150 min | Stackable Bins      |
 
-#### Part 4: Advanced Topics (Lessons 9-10 | ~3-4 hours)
+#### Advanced Topics (Lessons 9-10 | ~3-4 hours)
 
 | Lesson                                                                                            | Focus                                                    | Duration    | Project                          |
 |---------------------------------------------------------------------------------------------------|----------------------------------------------------------|-------------|----------------------------------|
 | [Lesson 9](3dMake_Foundation/Lessons_3dMake_9/Lessons_3dMake_9.md)    | Automation + File Import/Export (requires CLI Foundation) | 75-105 min  | Batch Processing Automation      |
 | [Lesson 10](3dMake_Foundation/Lessons_3dMake_10/Lessons_3dMake_10.md) | Troubleshooting & Mastery with Measurement               | 120-150 min | QA Testing + Accessibility Audit |
 
-#### Part 5: Leadership (Lesson 11 | ~2 hours)
+#### Leadership (Lesson 11 | ~2 hours)
 
 | Lesson                                                                                            | Focus                                        | Duration   | Project               |
 |---------------------------------------------------------------------------------------------------|----------------------------------------------|------------|-----------------------|
@@ -254,9 +254,9 @@ Students write OpenSCAD code using screen reader-accessible editors:
 
 | Section               | Prerequisites                                  | What You'll Learn                                                      |
 |-----------------------|------------------------------------------------|------------------------------------------------------------------------|
-| Part 1: Setup         | None - start here                              | Screen reader optimization, editor selection, accessibility setup      |
-| CLI Foundation        | Part 1: Setup                                  | Terminal basics, keyboard navigation, file operations, basic scripting |
-| 3dMake Lessons 1-5    | Part 1: Setup (CLI Foundation recommended)     | 3D printing concepts, safety, measurement, OpenSCAD basics, debugging  |
+| Setup         | None - start here                              | Screen reader optimization, editor selection, accessibility setup      |
+| CLI Foundation        | Setup                                  | Terminal basics, keyboard navigation, file operations, basic scripting |
+| 3dMake Lessons 1-5    | Setup (CLI Foundation recommended)     | 3D printing concepts, safety, measurement, OpenSCAD basics, debugging  |
 | 3dMake Lessons 6-8    | Lessons 1-5                                    | Building projects, parametric design, transforms, tolerances           |
 | 3dMake Lessons 9-10   | Lessons 6-8 + CLI Foundation required          | Automation, troubleshooting, advanced measurement and QA               |
 | 3dMake Lesson 11      | Lessons 9-10                                   | Stakeholder design, real-world prototyping, leadership                 |

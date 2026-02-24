@@ -306,7 +306,7 @@ While all three shells work equally well with screen readers, there are some dif
 
 ### Key Point for Learners
 
-**Choose ONE pathway and stick with it.** Each curriculum (PowerShell, CMD, Git Bash) teaches you the concepts using that specific shell's syntax. The accessibility experience is virtually identical—only the command syntax differs. By the end of your chosen curriculum, you'll understand the principles well enough to adapt to another shell if needed.
+**Choose ONE pathway and stick with it.** Each curriculum (PowerShell, CMD, Git Bash) teaches you the concepts using that specific shell's syntax. The accessibility experience is virtually identical-only the command syntax differs. By the end of your chosen curriculum, you'll understand the principles well enough to adapt to another shell if needed.
 
 ---
 

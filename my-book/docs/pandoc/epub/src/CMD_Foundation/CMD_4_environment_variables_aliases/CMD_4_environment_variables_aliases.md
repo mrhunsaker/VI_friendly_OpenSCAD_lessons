@@ -1,0 +1,21 @@
+[Header 3 ("cmd_foundation_cmd_4_environment_variables_aliases-cmd_4_environment_variables_aliases", [], []) [Str "CMD-4: Environment Variables & Aliases"], Para [Strong [Str "Duration:"], Str " 2 hours (for screen reader users)", LineBreak, Strong [Str "Prerequisites:"], Str " CMD-Pre through CMD-3"], Para [Strong [Str "Learning Objectives:"]], BulletList [[Plain [Str "Understand environment variables"]], [Plain [Str "Use variables in commands"]], [Plain [Str "Create custom shortcuts"]], [Plain [Str "Manage system paths"]]], HorizontalRule, Header 4 ("environment-variables", ["unnumbered", "unlisted"], []) [Str "Environment Variables"], Para [Str "Environment variables store information your system and programs use."], Header 5 ("common-variables", ["unnumbered", "unlisted"], []) [Str "Common Variables"], CodeBlock ("", ["cmd"], []) "%USERPROFILE%          :: Your home directory
+%USERNAME%             :: Your username
+%COMPUTERNAME%         :: Your computer name
+%TEMP%                 :: Temporary folder
+%PATH%                 :: Where system looks for executables
+", Header 5 ("using-variables", ["unnumbered", "unlisted"], []) [Str "Using Variables"], CodeBlock ("", ["cmd"], []) "cd %USERPROFILE%       :: Go to home directory
+echo %USERNAME%        :: Show your username
+dir %TEMP%             :: Show temp folder
+", Header 5 ("viewing-all-variables", ["unnumbered", "unlisted"], []) [Str "Viewing All Variables"], CodeBlock ("", ["cmd"], []) "set                    :: List all environment variables
+set | find \"USER\"      :: Find variables containing \"USER\"
+", HorizontalRule, Header 4 ("creating-shortcuts-with-doskey", ["unnumbered", "unlisted"], []) [Str "Creating Shortcuts with Doskey"], Para [Str "Create command aliases:"], CodeBlock ("", ["cmd"], []) "doskey ll=dir /B
+doskey home=cd %USERPROFILE%
+doskey myproject=cd C:\\Users\\%USERNAME%\\Documents\\MyProject
+", Para [Str "Now you can use:"], CodeBlock ("", ["cmd"], []) "ll                     :: Instead of dir /B
+home                   :: Instead of cd %USERPROFILE%
+myproject              :: Go directly to project folder
+", HorizontalRule, Header 4 ("batch-files-for-shortcuts", ["unnumbered", "unlisted"], []) [Str "Batch Files for Shortcuts"], Para [Str "Create a ", Code ("", [], []) ".bat", Str " file for complex shortcuts:"], Para [Strong [Str "File: go-to-project.bat"]], CodeBlock ("", ["batch"], []) "@echo off
+cd C:\\Users\\%USERNAME%\\Documents\\3DProjects
+dir /B
+", Para [Str "Run it:"], CodeBlock ("", ["cmd"], []) "go-to-project.bat
+", HorizontalRule, Header 4 ("practice-exercises", ["unnumbered", "unlisted"], []) [Str "Practice Exercises"], Header 5 ("exercise-1-use-variables", ["unnumbered", "unlisted"], []) [Str "Exercise 1: Use Variables"], OrderedList (1, DefaultStyle, DefaultDelim) [[Plain [Str "Run: ", Code ("", [], []) "echo %USERPROFILE%"]], [Plain [Str "Run: ", Code ("", [], []) "cd %USERPROFILE%"]], [Plain [Str "Run: ", Code ("", [], []) "echo %USERNAME%"]], [Plain [Str "Run: ", Code ("", [], []) "dir %USERPROFILE%\\Documents"]]], Para [Strong [Str "Goal:"], Str " Comfortable using variables."], Header 5 ("exercise-2-create-shortcuts", ["unnumbered", "unlisted"], []) [Str "Exercise 2: Create Shortcuts"], OrderedList (1, DefaultStyle, DefaultDelim) [[Plain [Str "Run: ", Code ("", [], []) "doskey home=cd %USERPROFILE%"]], [Plain [Str "Run: ", Code ("", [], []) "home", Str " (should take you to home directory)"]], [Plain [Str "Create another: ", Code ("", [], []) "doskey docs=cd %USERPROFILE%\\Documents"]], [Plain [Str "Run: ", Code ("", [], []) "docs", Str " (should go to Documents)"]]], Para [Strong [Str "Goal:"], Str " Create useful shortcuts."], HorizontalRule, Header 4 ("checkpoint-questions", ["unnumbered", "unlisted"], []) [Str "Checkpoint Questions"], OrderedList (1, DefaultStyle, DefaultDelim) [[Plain [Str "What is an environment variable?"]], [Plain [Str "What does ", Code ("", [], []) "%USERPROFILE%", Str " represent?"]], [Plain [Str "How do you view all environment variables?"]], [Plain [Str "How do you create a doskey alias?"]], [Plain [Str "Why are shortcuts useful?"]]], HorizontalRule, Header 4 ("next-steps", ["unnumbered", "unlisted"], []) [Str "Next Steps"], BulletList [[Plain [Str "Complete exercises"]], [Plain [Str "Move to ", Strong [Str "CMD-5: Filling in the Gaps"]]]]]

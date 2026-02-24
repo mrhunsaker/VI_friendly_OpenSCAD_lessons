@@ -21,7 +21,7 @@ Estimated time: 30-45 minutes
 
 ## What is Git Bash?
 
-Git Bash is a free terminal application for Windows that provides a **Bash** (Unix shell) environment. It is installed as part of **Git for Windows**. When you open Git Bash, you can use Unix commands like `ls`, `cat`, `grep`, and `echo` — the same commands used on Linux and macOS — right on your Windows computer.
+Git Bash is a free terminal application for Windows that provides a **Bash** (Unix shell) environment. It is installed as part of **Git for Windows**. When you open Git Bash, you can use Unix commands like `ls`, `cat`, `grep`, and `echo` - the same commands used on Linux and macOS - right on your Windows computer.
 
 Git Bash is useful for:
 - Running CLI programs (like OpenSCAD, slicers, or 3DMake)
@@ -33,7 +33,7 @@ Git Bash is useful for:
 
 ## What We'll Do and Why
 
-You'll use Git Bash to run CLI programs, navigate the filesystem, and manipulate files — tasks that are especially efficient when using a keyboard or a screen reader.
+You'll use Git Bash to run CLI programs, navigate the filesystem, and manipulate files - tasks that are especially efficient when using a keyboard or a screen reader.
 
 ---
 

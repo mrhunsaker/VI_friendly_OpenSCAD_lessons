@@ -21,7 +21,7 @@ By the end of this lesson, you will be able to:
 
 ---
 
-## Part 1: PowerShell Scripts Basics
+## PowerShell Scripts Basics
 
 ### What's a Script?
 
@@ -80,7 +80,7 @@ Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 
 ---
 
-## Part 2: Variables and Parameters
+## Variables and Parameters
 
 ### Using Variables
 
@@ -133,7 +133,7 @@ ListFolder -path "C:\Users\YourName\Downloads"
 
 ---
 
-## Part 3: Loops - Repeating Tasks
+## Loops - Repeating Tasks
 
 ### Loop Over Files
 
@@ -179,7 +179,7 @@ for ($i = 1; $i -le 5; $i++) {
 
 ---
 
-## Part 4: Real-World Example - Batch Processing SCAD Files
+## Real-World Example - Batch Processing SCAD Files
 
 ### Scenario
 
@@ -245,7 +245,7 @@ Batch processing complete!
 
 ---
 
-## Part 5: Error Handling
+## Error Handling
 
 ### Try-Catch Blocks
 
@@ -298,7 +298,7 @@ ProcessFolder -folderPath "C:\Users\YourName\Documents"
 
 ---
 
-## Part 6: Debugging Scripts
+## Debugging Scripts
 
 ### Common Errors and Solutions
 
@@ -368,7 +368,7 @@ Your screen reader will announce each step, so you know where errors happen.
 
 ---
 
-## Part 7: Creating Professional Workflows
+## Creating Professional Workflows
 
 ### Example 1: Automated Project Setup
 
@@ -464,7 +464,7 @@ if ($verified) {
 
 ---
 
-## Part 8: Screen Reader Tips for Scripts
+## Screen Reader Tips for Scripts
 
 ### Making Script Output Readable
 

@@ -20,7 +20,7 @@ Git Bash is a Unix/Linux shell running on Windows. It gives you bash commands (s
 
 ---
 
-## Part 1: Installing and Opening Git Bash
+## Installing and Opening Git Bash
 
 ### Installation (If Not Already Installed)
 
@@ -66,7 +66,7 @@ $
 
 ---
 
-## Part 2: Your First Commands (Screen Reader Edition)
+## Your First Commands (Screen Reader Edition)
 
 ### Command 1: "Where Am I?" - `pwd`
 
@@ -132,7 +132,7 @@ $
 
 ---
 
-## Part 3: Creating and Viewing Files
+## Creating and Viewing Files
 
 ### Create a Simple File
 
@@ -170,7 +170,7 @@ This opens the file in Notepad where you can edit it with your screen reader.
 
 ---
 
-## Part 4: Essential Keyboard Shortcuts
+## Essential Keyboard Shortcuts
 
 These work in Git Bash and are crucial for screen reader users:
 
@@ -189,7 +189,7 @@ These work in Git Bash and are crucial for screen reader users:
 
 ---
 
-## Part 5: Screen Reader-Specific Tips
+## Screen Reader-Specific Tips
 
 ### NVDA Users
 
@@ -224,7 +224,7 @@ These work in Git Bash and are crucial for screen reader users:
 
 ---
 
-## Part 6: Practice Exercises
+## Practice Exercises
 
 Complete these in order. Take your time with each one:
 

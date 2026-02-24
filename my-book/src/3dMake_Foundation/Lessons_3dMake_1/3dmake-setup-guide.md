@@ -4,7 +4,7 @@ This guide walks you through installing 3dMake, creating projects, and managing 
 
 ---
 
-## Part 1: Installing 3dMake
+## Installing 3dMake
 
 ### Prerequisites
 
@@ -126,7 +126,7 @@ This displays all available 3dMake commands.
 
 ---
 
-## Part 2: Creating and Managing Projects
+## Creating and Managing Projects
 
 ### What Is a 3dMake Project?
 
@@ -223,7 +223,7 @@ You should see the `src/`, `build/`, `3dmake.toml`, and `README.md` files listed
 
 ---
 
-## Part 3: Working With Your Project
+## Working With Your Project
 
 ### Creating OpenSCAD Models
 
@@ -357,7 +357,7 @@ Or simply:
 
 ---
 
-## Part 4: Managing Multiple Projects
+## Managing Multiple Projects
 
 ### Switching Between Projects
 
@@ -442,7 +442,7 @@ done
 
 ---
 
-## Part 5: Workflow Best Practices
+## Workflow Best Practices
 
 ### File Naming Conventions
 
@@ -640,7 +640,7 @@ editor = "gedit"
 
 ---
 
-## Part 6: Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -739,7 +739,7 @@ chmod +x 3dm
 
 ---
 
-## Part 7: Quick Reference
+## Quick Reference
 
 ### Essential Commands
 
@@ -787,7 +787,7 @@ For full configuration options, see the GitHub repository: [https://github.com/t
 
 ---
 
-## Part 8: Next Steps
+## Next Steps
 
 Once you're comfortable with basic projects:
 
