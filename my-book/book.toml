@@ -6,18 +6,9 @@ description = "An introduction to 3D printing for blind and visually impaired le
 src = "src"
 
 [output.html]
-additional-css = [
-	"theme/catppuccin-mocha.css",
-	"theme/catppuccin-latte.css",
-	"theme/catppuccin-frappe.css",
-	"theme/catppuccin-macchiato.css",
-	"theme/theme.css"
-]
+additional-css = ["src/assets/custom.css"]
 site-url = "https://github.com/mrhunsaker/VI3DMakeOpenSCADCurriculum"
 theme = "theme"
-default-theme = "latte"
-preferred-dark-theme = "mocha"
-additional-js = ["theme/theme.js"]
 
 [build]
 build-dir = "docs"

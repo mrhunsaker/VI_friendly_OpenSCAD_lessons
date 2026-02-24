@@ -1,7 +1,0 @@
-window.addEventListener('DOMContentLoaded', function() {
-  var sidebar = document.querySelector('.sidebar');
-  if (sidebar && sidebar.classList.contains('sidebar-visible')) {
-    sidebar.classList.remove('sidebar-visible');
-    sidebar.classList.add('sidebar-hidden');
-  }
-});
