@@ -93,5 +93,3 @@ window.addEventListener("DOMContentLoaded", function() {
   setVariant(getCurrentVariant());
   createPenSwitcher();
 });
-  createPenSwitcher();
-});
