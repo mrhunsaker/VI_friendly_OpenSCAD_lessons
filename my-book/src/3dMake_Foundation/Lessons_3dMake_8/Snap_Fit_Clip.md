@@ -1,4 +1,4 @@
-# Snap-Fit Clip - Extension Project 
+# Snap-Fit Clip - Extension Project  {#3dmake_foundation_lessons_3dmake_8-snap_fit_clip}
 
 **Estimated time:** 3-6 hours
 

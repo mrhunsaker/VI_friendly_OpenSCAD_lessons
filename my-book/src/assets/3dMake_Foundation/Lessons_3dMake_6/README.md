@@ -1,8 +1,8 @@
-# Lesson 6 Code Examples - Practical 3dm Commands and Text Embossing
+# Lesson 6 Code Examples - Practical 3dm Commands and Text Embossing {#assets_3dmake_foundation_lessons_3dmake_6-readme}
 
 ## Files
 
-- **cubekeycap.scad** - Beginner-level example of text embossing with parametric design
+- **cube_keycap.scad** - Beginner-level example of text embossing with parametric design
 
 ## Learning Objectives
 
@@ -13,8 +13,8 @@
 
 ## How to Use This Code
 
-1. Copy `cubekeycap.scad` into your 3dMake project's `src/` folder
-2. Open in OpenSCAD (or use `3dm edit-model cubekeycap.scad`)
+1. Copy `cube_keycap.scad` into your 3dMake project's `src/` folder
+2. Open in OpenSCAD (or use `3dm edit-model cube_keycap.scad`)
 3. Press F5 to preview; F6 for full render
 4. Modify the top-level parameters:
    - `letter` - Change to your initial
@@ -39,6 +39,6 @@
 
 ## Related Files
 
-- See Lesson 6: [Lesson 6 Markdown](../../../3dMakeFoundation/Lessons3dMake6/Lessons3dMake6.md) for full tutorial
-- See Project: [Parametric Keychain Project](../../../3dMakeFoundation/Lessons3dMake6/parametric-keychain.md) for more text embossing exercises
-- Reference: [OpenSCAD Cheat Sheet](../../../3dMakeFoundation/Lessons3dMake2/openscad-cheat-sheet.md) for `text()` and `linearextrude()` syntax
+- See Lesson 6: [Lesson 6 Markdown](../../../3dMake_Foundation/Lessons_3dMake_6/Lessons_3dMake_6.md) for full tutorial
+- See Project: [Parametric Keychain Project](../../../3dMake_Foundation/Lessons_3dMake_6/parametric-keychain.md) for more text embossing exercises
+- Reference: [OpenSCAD Cheat Sheet](../../../3dMake_Foundation/Lessons_3dMake_2/openscad-cheat-sheet.md) for `text()` and `linearextrude()` syntax

@@ -1,4 +1,4 @@
-# CMD Unit Test & Practice - Comprehensive Assessment
+# CMD Unit Test & Practice - Comprehensive Assessment {#cmd_foundation_cmd_unit_test-cmd_unit_test}
 
 **Duration:** 2.5-4 hours (for screen reader users)  
 **Prerequisites:** All CMD lessons (CMD-Pre through CMD-6)

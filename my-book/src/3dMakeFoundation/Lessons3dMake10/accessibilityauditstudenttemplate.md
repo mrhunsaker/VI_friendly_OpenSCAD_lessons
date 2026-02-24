@@ -1,1 +1,0 @@
-# Accessibility Audit - Student Template

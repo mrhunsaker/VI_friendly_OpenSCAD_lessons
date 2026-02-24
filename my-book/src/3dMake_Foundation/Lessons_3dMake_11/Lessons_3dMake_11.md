@@ -1,4 +1,4 @@
-# Lesson 11: Stakeholder-Centric Design and the Beaded Jewelry Project
+# Lesson 11: Stakeholder-Centric Design and the Beaded Jewelry Project {#3dmake_foundation_lessons_3dmake_11-lessons_3dmake_11}
 
 Estimated time: 90-120 minutes | **Level:** Advanced
 
@@ -19,7 +19,7 @@ Estimated time: 90-120 minutes | **Level:** Advanced
 - Calipers for measurement
 - Reference: [master-rubric.md](master-rubric.md) for design documentation standards
 
-**Extension Project**: Complete [BeadedJewelryUnit](beaded-jewelry.md) to apply stakeholder-centric design principles in a real project context.
+**Extension Project**: Complete [Beaded_Jewelry_Unit](beaded-jewelry.md) to apply stakeholder-centric design principles in a real project context.
 
 ---
 
@@ -31,7 +31,7 @@ Most design failures start before CAD. They happen because:
 - **Specification Problem:** Unclear requirements lead to wasted iterations
 - **Accessibility Problem:** Features designed without considering all users
 
-This lesson flips the process: **Listen First, Design Second**[^1].
+This lesson flips the process: **Listen First, Design Second** [^1].
 
 ### The Design Thinking Pipeline
 
@@ -457,6 +457,6 @@ You're now ready for:
 
 **References**
 
-[^1]: Design Thinking Process - IDEO - <https://www.ideo.com/perspectives/design-thinking>
-[^2]: Functional Requirements in Product Design - <https://www.productschool.com/blog/requirements/>
-[^3]: Accessible Design Documentation - <https://www.a11y-101.com/design/inclusive-documentation>
+[^1]: Design Thinking Process - IDEO - [https://www.ideo.com/perspectives/design-thinking](https://www.ideo.com/perspectives/design-thinking)
+[^2]: Functional Requirements in Product Design - [https://www.productschool.com/blog/requirements/](https://www.productschool.com/blog/requirements/)
+[^3]: Accessible Design Documentation - [https://www.a11y-101.com/design/inclusive-documentation](https://www.a11y-101.com/design/inclusive-documentation)

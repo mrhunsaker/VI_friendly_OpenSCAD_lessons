@@ -1,4 +1,4 @@
-# Git Bash Curriculum Overview
+# Git Bash Curriculum Overview {#gitbash_foundation_gitbash_curriculum_overview-gitbash_curriculum_overview}
 
 **Total Duration:** 20-25 hours (for screen reader users)  
 **Target Audience:** Screen reader users, accessibility-first learners  
@@ -27,7 +27,7 @@ Git Bash is a Unix/bash shell that runs natively on Windows. It provides the sam
 ### Part 1 (Intro): Comparing Command Line Interfaces
 
 Start here if you're new to terminals:
-- **[Command Line Interface Selection Guide](../CommandLineInterfaceSelection.md)** - Decision guide comparing PowerShell, CMD, and Git Bash
+- **[Command Line Interface Selection Guide](../Command_Line_Interface_Selection.md)** - Decision guide comparing PowerShell, CMD, and Git Bash
 - Learn which option fits your learning style
 - Understand when to use each tool
 
@@ -513,7 +513,7 @@ This curriculum is built on:
 
 ## Ready to Begin?
 
-Start with the **[Command Line Interface Selection Guide](../CommandLineInterfaceSelection.md)** to see why Git Bash might be the right choice for you.
+Start with the **[Command Line Interface Selection Guide](../Command_Line_Interface_Selection.md)** to see why Git Bash might be the right choice for you.
 
 Then proceed to **GitBash-Pre: Your First Terminal** to begin your journey!
 

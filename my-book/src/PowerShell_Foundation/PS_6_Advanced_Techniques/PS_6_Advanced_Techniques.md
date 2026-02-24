@@ -1,4 +1,4 @@
-# PS-6: Advanced Terminal Techniques - Scripts, Functions & Professional Workflows
+# PS-6: Advanced Terminal Techniques - Scripts, Functions & Professional Workflows {#powershell_foundation_ps_6_advanced_techniques-ps_6_advanced_techniques}
 
 **Duration:** 4-4.5 hours (for screen reader users)  
 **Prerequisites:** Complete PS-0 through PS-5  

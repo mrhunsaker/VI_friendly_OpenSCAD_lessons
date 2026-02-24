@@ -1,4 +1,4 @@
-# Parametric Keychain - Student Documentation Template (Extension Project)
+# Parametric Keychain - Student Documentation Template (Extension Project) {#assets_3dmake_foundation_lessons_3dmake_6_parametric_keychain-parametric_keychain_student_template}
 
 - Author:
 - Date:

@@ -1,4 +1,4 @@
-# CMD-6: Advanced Terminal Techniques - Scripts & Professional Workflows
+# CMD-6: Advanced Terminal Techniques - Scripts & Professional Workflows {#cmd_foundation_cmd_6_advanced_techniques-cmd_6_advanced_techniques}
 
 **Duration:** 2.5-3 hours (for screen reader users)  
 **Prerequisites:** CMD-Pre through CMD-5
@@ -158,5 +158,5 @@ dir /B /A:D
 
 - Complete all exercises
 - Review all CMD lessons
-- Take the **CMDUnitTest: Comprehensive Practice & Assessment**
+- Take the **CMD_Unit_Test: Comprehensive Practice & Assessment**
 

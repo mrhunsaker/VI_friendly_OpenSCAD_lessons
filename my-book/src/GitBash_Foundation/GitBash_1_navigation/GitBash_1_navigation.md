@@ -1,4 +1,4 @@
-# GitBash-1: Navigation - Moving Around Your File System
+# GitBash-1: Navigation - Moving Around Your File System {#gitbash_foundation_gitbash_1_navigation-gitbash_1_navigation}
 
 **Duration:** 1.5-2 hours (for screen reader users)  
 **Prerequisites:** GitBash-Pre and GitBash-0  

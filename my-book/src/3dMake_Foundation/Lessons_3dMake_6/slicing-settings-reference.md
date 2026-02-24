@@ -1,4 +1,4 @@
-# Slicing Settings Quick Reference - PrusaSlicer
+# Slicing Settings Quick Reference - PrusaSlicer {#3dmake_foundation_lessons_3dmake_6-slicing-settings-reference}
 
 ---
 

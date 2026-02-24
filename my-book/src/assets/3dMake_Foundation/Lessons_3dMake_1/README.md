@@ -1,4 +1,4 @@
-# Lesson 1: Environmental Configuration and the Developer Workflow
+# Lesson 1: Environmental Configuration and the Developer Workflow {#assets_3dmake_foundation_lessons_3dmake_1-readme}
 
 **Estimated time:** 60-90 minutes
 
@@ -7,7 +7,7 @@
 This folder contains supporting materials for Lesson 1:
 
 - **Starter Files:** Project scaffold templates and setup scripts
-- **Extension Projects:** YourFirstPrint - Low-friction introduction to the complete printing workflow
+- **Extension Projects:** Your_First_Print - Low-friction introduction to the complete printing workflow
 - **Reference Materials:** Setup guides, checklists, and documentation templates
 
 ## Learning Objectives
@@ -18,13 +18,13 @@ This folder contains supporting materials for Lesson 1:
 
 ## Key Materials
 
-- [Lesson 1 Main Content](../../../3dMakeFoundation/Lessons3dMake1/Lessons3dMake1.md)
-- [3dMake Setup Guide](../../../3dMakeFoundation/Lessons3dMake1/3dmake-setup-guide.md)
-- [VSCode Setup Guide](../../../3dMakeFoundation/Lessons3dMake1/vscode-setup-guide.md)
+- [Lesson 1 Main Content](../../../3dMake_Foundation/Lessons_3dMake_1/Lessons_3dMake_1.md)
+- [3dMake Setup Guide](../../../3dMake_Foundation/Lessons_3dMake_1/3dmake-setup-guide.md)
+- [VSCode Setup Guide](../../../3dMake_Foundation/Lessons_3dMake_1/vscode-setup-guide.md)
 
 ## Extension Projects in This Folder
 
-### YourFirstPrint
+### Your_First_Print
 
 **Purpose:** Low-friction introduction to the printing workflow and slicer checks
 
@@ -43,7 +43,7 @@ This folder contains supporting materials for Lesson 1:
 - Measurement worksheet with deviations recorded
 - Reflection on first print experience
 
-**Recommended Path:** Complete Lesson 1, then immediately work on YourFirstPrint
+**Recommended Path:** Complete Lesson 1, then immediately work on Your_First_Print
 
 ---
 
@@ -52,8 +52,8 @@ This folder contains supporting materials for Lesson 1:
 1. Read Lesson 1 and set up your environment
 2. Follow the 3dMake Setup Guide for installation
 3. Create your first 3dMake project scaffold
-4. Proceed to YourFirstPrint project
+4. Proceed to Your_First_Print project
 
 ---
 
-**For navigation:** See [3dMakeFoundation Asset Index](../README.md)
+**For navigation:** See [3dMake_Foundation Asset Index](../README.md)

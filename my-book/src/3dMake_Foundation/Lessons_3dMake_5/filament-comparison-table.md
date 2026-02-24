@@ -1,4 +1,4 @@
-# Filament Comparison Table
+# Filament Comparison Table {#3dmake_foundation-lessons_3dmake_5-filament-comparison-table}
 
 *Quick reference for choosing the right filament. All temperature values are typical ranges - always check the label on your specific spool.*
 

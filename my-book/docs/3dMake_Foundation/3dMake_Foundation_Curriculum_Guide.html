@@ -1,5 +1,6 @@
+
 <!DOCTYPE HTML>
-<html lang="en" class="rust sidebar-visible" dir="ltr">
+<html lang="en" class="latte sidebar-visible" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -57,34 +58,35 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../favicon-de23e50b.svg">
-        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
-        <link rel="stylesheet" href="../css/variables-8adf115d.css">
-        <link rel="stylesheet" href="../css/general-2459343d.css">
-        <link rel="stylesheet" href="../css/chrome-ae938929.css">
-        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../src/assets/custom-8d04802b.css">
+        <link rel="stylesheet" href="../src/assets/custom.css">
+        <link rel="stylesheet" href="../theme/catppuccin.css">
 
 
         <!-- Provide site root and default themes to javascript -->
         <script>
             const path_to_root = "../";
-            const default_light_theme = "rust";
-            const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-c9b9a984.js";
+            const default_light_theme = "latte";
+            const default_dark_theme = "mocha";
+            window.path_to_searchindex_js = "../searchindex.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-9182b28d.js"></script>
+        <script src="../toc.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -122,7 +124,7 @@
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             const html = document.documentElement;
-            html.classList.remove('rust')
+            html.classList.remove('latte')
             html.classList.add(theme);
             html.classList.add("js");
         </script>
@@ -165,21 +167,20 @@
                 <div id="mdbook-menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
                         <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
-                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                            <!-- icon removed: fa helper unsupported -->
                         </label>
                         <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
-                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                            <!-- icon removed: fa helper unsupported -->
                         </button>
                         <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
                             <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="frappe">Frappé</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mocha">Mocha</button></li>
                         </ul>
                         <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
-                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                            <!-- icon removed: fa helper unsupported -->
                         </button>
                     </div>
 
@@ -187,7 +188,7 @@
 
                     <div class="right-buttons">
                         <a href="../print.html" title="Print this book" aria-label="Print this book">
-                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                            <!-- icon removed: fa helper unsupported -->
                         </a>
 
                     </div>
@@ -198,7 +199,7 @@
                         <div class="search-wrapper">
                             <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
                             <div class="spinner-wrapper">
-                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                                <!-- icon removed: fa helper unsupported -->
                             </div>
                         </div>
                     </form>
@@ -220,9 +221,9 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="3d-make-foundation-complete-curriculum-guide"><a class="header" href="#3d-make-foundation-complete-curriculum-guide">3D Make Foundation: Complete Curriculum Guide</a></h1>
+                        <h1 id="3dmake_foundation-3dmake_foundation_curriculum_guide"><a class="header" href="#3dmake_foundation-3dmake_foundation_curriculum_guide">3D Make Foundation: Complete Curriculum Guide</a></h1>
 <p><strong>A comprehensive, hands-on, screenreader accessible introduction to programmatic 3D design using OpenSCAD and 3DMake</strong></p>
-<hr>
+<hr />
 <h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
 <p>This <strong>11-lesson curriculum + 4 reference appendices</strong> teaches non-visual 3D modeling, parametric design principles, and the complete 3D printing workflow through integrated projects. Each lesson builds on prior knowledge, introducing real-world examples and hands-on activities.</p>
 <p><strong>Target Audience:</strong> High school and early undergraduate students, makers, and anyone interested in programmatic CAD and 3D printing</p>
@@ -234,7 +235,7 @@
 <li>4 comprehensive reference appendices (1,200-1,500 lines each)</li>
 <li>Complete learning paths for different skill levels</li>
 </ul>
-<hr>
+<hr />
 <h2 id="lesson-structure"><a class="header" href="#lesson-structure">Lesson Structure</a></h2>
 <h3 id="lesson-1-environmental-configuration-and-the-developer-workflow"><a class="header" href="#lesson-1-environmental-configuration-and-the-developer-workflow">Lesson 1: Environmental Configuration and the Developer Workflow</a></h3>
 <p><strong>Duration:</strong> 2.5-3.5 hours | <strong>Level:</strong> Beginner</p>
@@ -253,7 +254,7 @@
 <li>Build and inspect the generated STL</li>
 </ul>
 <p><strong>Checkpoint:</strong> You can initialize a project, edit a parametric model, and generate an STL file</p>
-<hr>
+<hr />
 <h3 id="lesson-2-geometric-primitives-and-constructive-solid-geometry"><a class="header" href="#lesson-2-geometric-primitives-and-constructive-solid-geometry">Lesson 2: Geometric Primitives and Constructive Solid Geometry</a></h3>
 <p><strong>Duration:</strong> 60 minutes | <strong>Level:</strong> Beginner</p>
 <p>Discover how to combine basic shapes (cube, sphere, cylinder) using boolean operations (union, difference, intersection). This lesson introduces the mathematical foundation of 3D modeling.</p>
@@ -271,10 +272,10 @@
 <li>Validate geometry in a slicer</li>
 </ul>
 <p><strong>Checkpoint:</strong> You understand CSG operations and can diagnose common geometry issues</p>
-<hr>
+<hr />
 <h3 id="lesson-3-parametric-architecture-and-modular-libraries"><a class="header" href="#lesson-3-parametric-architecture-and-modular-libraries">Lesson 3: Parametric Architecture and Modular Libraries</a></h3>
 <p><strong>Duration:</strong> 2.5 hours | <strong>Level:</strong> Beginner+</p>
-<p>Learn to create reusable modules and organize code into libraries. This lesson introduces the “don’t repeat yourself” (DRY) principle for code reuse.</p>
+<p>Learn to create reusable modules and organize code into libraries. This lesson introduces the "don't repeat yourself" (DRY) principle for code reuse.</p>
 <p><strong>Key Topics:</strong></p>
 <ul>
 <li>Module definitions with parameters</li>
@@ -290,7 +291,7 @@
 <li>Move a module into a reusable library</li>
 </ul>
 <p><strong>Checkpoint:</strong> You can create parametric modules and organize code into libraries</p>
-<hr>
+<hr />
 <h3 id="lesson-4-ai-enhanced-verification-and-multimodal-feedback"><a class="header" href="#lesson-4-ai-enhanced-verification-and-multimodal-feedback">Lesson 4: AI-Enhanced Verification and Multimodal Feedback</a></h3>
 <p><strong>Duration:</strong> 2-2.5 hours | <strong>Level:</strong> Intermediate</p>
 <p>Use <code>3dm info</code> to generate AI diagnostics and validate designs. This lesson covers verification workflows and the strengths/limitations of AI in design.</p>
@@ -309,7 +310,7 @@
 <li>Document an AI-assisted design decision</li>
 </ul>
 <p><strong>Checkpoint:</strong> You can use AI tools to supplement your design validation</p>
-<hr>
+<hr />
 <h3 id="lesson-5-safety-protocols-and-the-physical-fabrication-interface"><a class="header" href="#lesson-5-safety-protocols-and-the-physical-fabrication-interface">Lesson 5: Safety Protocols and the Physical Fabrication Interface</a></h3>
 <p><strong>Duration:</strong> 2.5-3.5 hours | <strong>Level:</strong> Intermediate</p>
 <p>Transition from digital design to physical printing. Learn safety procedures, environmental controls, and the complete print workflow.</p>
@@ -329,7 +330,7 @@
 <li>Monitor and measure a completed print</li>
 </ul>
 <p><strong>Checkpoint:</strong> You understand safety procedures and can safely conduct supervised prints</p>
-<hr>
+<hr />
 <h3 id="lesson-6-practical-3dm-commands-and-text-embossing"><a class="header" href="#lesson-6-practical-3dm-commands-and-text-embossing">Lesson 6: Practical 3dm Commands and Text Embossing</a></h3>
 <p><strong>Duration:</strong> 2.5-3.5 hours | <strong>Level:</strong> Intermediate</p>
 <p>Master the key 3dm commands by building a practical project-a customizable keycap with embossed text. This lesson ties together design and verification.</p>
@@ -348,7 +349,7 @@
 <li>Test emboss quality in slicer preview</li>
 </ul>
 <p><strong>Checkpoint:</strong> You can generate keycaps with embossed text and understand all major 3dm commands</p>
-<hr>
+<hr />
 <h3 id="lesson-7-parametric-transforms-and-the-phone-stand-project"><a class="header" href="#lesson-7-parametric-transforms-and-the-phone-stand-project">Lesson 7: Parametric Transforms and the Phone Stand Project</a></h3>
 <p><strong>Duration:</strong> 3-3.5 hours | <strong>Level:</strong> Intermediate+</p>
 <p>Apply transforms (translate, rotate, scale) to build a multi-part assembly. This lesson covers spatial positioning and practical product design.</p>
@@ -368,7 +369,7 @@
 <li>Validate angles and friction after printing</li>
 </ul>
 <p><strong>Checkpoint:</strong> You can design multi-part assemblies with positioned components</p>
-<hr>
+<hr />
 <h3 id="lesson-8-advanced-parametric-design-and-interlocking-features"><a class="header" href="#lesson-8-advanced-parametric-design-and-interlocking-features">Lesson 8: Advanced Parametric Design and Interlocking Features</a></h3>
 <p><strong>Duration:</strong> 90-120 minutes | <strong>Level:</strong> Advanced</p>
 <p>Design tolerance-critical assemblies where parts snap together. This lesson covers precision manufacturing principles.</p>
@@ -389,7 +390,7 @@
 <li>Document tolerance data</li>
 </ul>
 <p><strong>Checkpoint:</strong> You understand tolerance management and can design stackable assemblies</p>
-<hr>
+<hr />
 <h3 id="lesson-9-automation-and-3dm-workflows"><a class="header" href="#lesson-9-automation-and-3dm-workflows">Lesson 9: Automation and 3dm Workflows</a></h3>
 <p><strong>Duration:</strong> 2.5-3.5 hours | <strong>Level:</strong> Advanced</p>
 <p>Automate design workflows using shell scripts. This lesson teaches batch processing and continuous integration concepts.</p>
@@ -409,7 +410,7 @@
 <li>Learn library management</li>
 </ul>
 <p><strong>Checkpoint:</strong> You can automate design workflows and manage parametric variants at scale</p>
-<hr>
+<hr />
 <h3 id="lesson-10-hands-on-practice-exercises-and-troubleshooting"><a class="header" href="#lesson-10-hands-on-practice-exercises-and-troubleshooting">Lesson 10: Hands-On Practice Exercises and Troubleshooting</a></h3>
 <p><strong>Duration:</strong> 5-6 hours | <strong>Level:</strong> Advanced</p>
 <p>Complete integrated projects and learn to diagnose and fix common issues. This capstone lesson synthesizes all prior learning.</p>
@@ -433,7 +434,7 @@
 <li>Quality assurance workflows</li>
 </ul>
 <p><strong>Checkpoint:</strong> You can complete real projects from concept to verified print</p>
-<hr>
+<hr />
 <h2 id="learning-progressions"><a class="header" href="#learning-progressions">Learning Progressions</a></h2>
 <h3 id="by-skill-level"><a class="header" href="#by-skill-level">By Skill Level</a></h3>
 <p><strong>Beginner Track</strong> (Lessons 1-3):</p>
@@ -459,15 +460,10 @@
 <strong>Verification &amp; Validation:</strong> Lessons 4, 6, 10
 <strong>Safety &amp; Printing:</strong> Lesson 5, 10
 <strong>Automation:</strong> Lesson 9</p>
-<hr>
+<hr />
 <h2 id="practice-exercises-quick-reference"><a class="header" href="#practice-exercises-quick-reference">Practice Exercises Quick Reference</a></h2>
 <h3 id="structured-exercises-by-lesson"><a class="header" href="#structured-exercises-by-lesson">Structured Exercises by Lesson</a></h3>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Lesson</th><th>Exercise Type</th><th>Deliverable</th></tr>
-</thead>
-<tbody>
+<div class="table-wrapper"><table><thead><tr><th>Lesson</th><th>Exercise Type</th><th>Deliverable</th></tr></thead><tbody>
 <tr><td>1</td><td>Setup &amp; Configuration</td><td>Working project scaffold</td></tr>
 <tr><td>2</td><td>Geometry Construction</td><td>3 CSG examples + fixes</td></tr>
 <tr><td>3</td><td>Modular Design</td><td>Parametric bracket module</td></tr>
@@ -478,10 +474,9 @@
 <tr><td>8</td><td>Tolerance Design</td><td>Stackable bins + tolerance matrix</td></tr>
 <tr><td>9</td><td>Automation</td><td>Batch build script + variants</td></tr>
 <tr><td>10</td><td>Integration</td><td>3 complete projects + documentation</td></tr>
-</tbody>
-</table>
+</tbody></table>
 </div>
-<hr>
+<hr />
 <h2 id="code-examples-repository"><a class="header" href="#code-examples-repository">Code Examples Repository</a></h2>
 <p>All code examples from lessons are provided as:</p>
 <ol>
@@ -489,7 +484,7 @@
 <li><strong>Shell script examples</strong> for automation tasks</li>
 <li><strong>Documentation templates</strong> for reproducible workflows</li>
 </ol>
-<hr>
+<hr />
 <h2 id="accessibility-features"><a class="header" href="#accessibility-features">Accessibility Features</a></h2>
 <p>This curriculum is designed for non-visual learners:</p>
 <ul>
@@ -500,7 +495,7 @@
 <li>Parametric organization for clear understanding</li>
 <li>Measurement-based validation without visual inspection</li>
 </ul>
-<hr>
+<hr />
 <h2 id="recommended-reading-order"><a class="header" href="#recommended-reading-order">Recommended Reading Order</a></h2>
 <h3 id="option-1-linear-complete-foundation"><a class="header" href="#option-1-linear-complete-foundation">Option 1: Linear (Complete Foundation)</a></h3>
 <p>Lesson 1 -&gt; 2 -&gt; 3 -&gt; 4 -&gt; 5 -&gt; 6 -&gt; 7 -&gt; 8 -&gt; 9 -&gt; 10</p>
@@ -514,51 +509,39 @@ Then: Lesson 7 (Phone Stand)
 Then: Lesson 8 (Storage Bins)
 Then: Lesson 9 (Automation)</p>
 <p><strong>Best for:</strong> Learning by doing with integrated projects</p>
-<hr>
+<hr />
 <h2 id="assessment-and-completion"><a class="header" href="#assessment-and-completion">Assessment and Completion</a></h2>
 <h3 id="lesson-completion-criteria"><a class="header" href="#lesson-completion-criteria">Lesson Completion Criteria</a></h3>
 <p>Each lesson includes:</p>
 <ul>
-<li><strong>Learning objectives</strong> (concepts you’ll understand)</li>
+<li><strong>Learning objectives</strong> (concepts you'll understand)</li>
 <li><strong>Step-by-step tasks</strong> (hands-on activities)</li>
 <li><strong>Checkpoints</strong> (verification milestones)</li>
 <li><strong>Quiz</strong> (10 self-assessment questions)</li>
 <li><strong>Extension problems</strong> (10 advanced challenges)</li>
 </ul>
 <h3 id="project-completion-tracking"><a class="header" href="#project-completion-tracking">Project Completion Tracking</a></h3>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Project</th><th>Lessons</th><th>Output Files</th><th>Est. Print Time</th></tr>
-</thead>
-<tbody>
+<div class="table-wrapper"><table><thead><tr><th>Project</th><th>Lessons</th><th>Output Files</th><th>Est. Print Time</th></tr></thead><tbody>
 <tr><td>Keycap Set</td><td>1-6</td><td>5+ SCAD files, 3+ STL files</td><td>15-30 min total</td></tr>
 <tr><td>Phone Stand</td><td>1-7</td><td>1 SCAD with 3+ variants</td><td>30-60 min total</td></tr>
 <tr><td>Storage Bins</td><td>1-8</td><td>1 parametric SCAD, 3 sizes</td><td>60-90 min total</td></tr>
-</tbody>
-</table>
+</tbody></table>
 </div>
-<hr>
+<hr />
 <h2 id="troubleshooting-guide"><a class="header" href="#troubleshooting-guide">Troubleshooting Guide</a></h2>
 <h3 id="common-issues-and-references"><a class="header" href="#common-issues-and-references">Common Issues and References</a></h3>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Issue</th><th>Related Lesson</th><th>Solution</th></tr>
-</thead>
-<tbody>
-<tr><td>Model won’t build</td><td>Lesson 2</td><td>Check for non-manifold geometry with <code>3dm describe</code></td></tr>
-<tr><td>Parts don’t fit</td><td>Lesson 8</td><td>Use tolerance testing matrix to find correct <code>stack_clear</code></td></tr>
+<div class="table-wrapper"><table><thead><tr><th>Issue</th><th>Related Lesson</th><th>Solution</th></tr></thead><tbody>
+<tr><td>Model won't build</td><td>Lesson 2</td><td>Check for non-manifold geometry with <code>3dm describe</code></td></tr>
+<tr><td>Parts don't fit</td><td>Lesson 8</td><td>Use tolerance testing matrix to find correct <code>stack_clear</code></td></tr>
 <tr><td>Print fails</td><td>Lesson 5</td><td>Verify pre-print checklist and slicer settings</td></tr>
 <tr><td>Dimensions off</td><td>Lesson 10</td><td>Conduct tolerance sensitivity study and apply correction factor</td></tr>
 <tr><td>Slow renders</td><td>Lesson 3</td><td>Lower <code>$fn</code> for faster debugging</td></tr>
 <tr><td>Script errors</td><td>Lesson 9</td><td>Use <code>&amp;&amp;</code> to chain commands properly; check file paths</td></tr>
-</tbody>
-</table>
+</tbody></table>
 </div>
-<hr>
+<hr />
 <h2 id="next-steps-after-completion"><a class="header" href="#next-steps-after-completion">Next Steps After Completion</a></h2>
-<p>Upon completing this curriculum, you’re ready for:</p>
+<p>Upon completing this curriculum, you're ready for:</p>
 <ol>
 <li><strong>Advanced 3D Design:</strong> Explore BOSL2 library features, parametric assemblies</li>
 <li><strong>Multi-Material Printing:</strong> Design parts for different materials (TPU, Nylon, etc.)</li>
@@ -566,7 +549,7 @@ Then: Lesson 9 (Automation)</p>
 <li><strong>Community Contribution:</strong> Share your designs and libraries with OpenSCAD community</li>
 <li><strong>Professional Applications:</strong> Apply skills to product design, prototyping, manufacturing</li>
 </ol>
-<hr>
+<hr />
 <h2 id="resources-and-references"><a class="header" href="#resources-and-references">Resources and References</a></h2>
 <h3 id="official-documentation"><a class="header" href="#official-documentation">Official Documentation</a></h3>
 <ul>
@@ -591,10 +574,10 @@ Then: Lesson 9 (Automation)</p>
 <li><a href="https://community.prusa3d.com/">Prusa Community</a></li>
 <li><a href="https://www.reddit.com/r/3Dprinting/">Reddit r/3Dprinting</a></li>
 </ul>
-<hr>
+<hr />
 <h2 id="lesson-11-stakeholder-centric-design-and-the-beaded-jewelry-project"><a class="header" href="#lesson-11-stakeholder-centric-design-and-the-beaded-jewelry-project">Lesson 11: Stakeholder-Centric Design and the Beaded Jewelry Project</a></h2>
 <p><strong>Duration:</strong> 3.5-4.5 hours | <strong>Level:</strong> Advanced/Leadership</p>
-<p>The final lesson teaches you to design for real users, not just yourself. You’ll learn to conduct stakeholder interviews, extract functional requirements, and iterate based on real feedback. This bridges the gap between maker and design professional.</p>
+<p>The final lesson teaches you to design for real users, not just yourself. You'll learn to conduct stakeholder interviews, extract functional requirements, and iterate based on real feedback. This bridges the gap between maker and design professional.</p>
 <p><strong>Key Topics:</strong></p>
 <ul>
 <li>Stakeholder identification and interview techniques</li>
@@ -613,11 +596,11 @@ Then: Lesson 9 (Automation)</p>
 <li>Document the complete design process</li>
 </ul>
 <p><strong>Checkpoint:</strong> You can conduct a real interview, translate needs into measurable requirements, and iterate a design based on user feedback</p>
-<hr>
+<hr />
 <h2 id="3d-make-foundation-appendices"><a class="header" href="#3d-make-foundation-appendices">3D Make Foundation Appendices</a></h2>
 <h3 id="appendix-a-comprehensive-slicing-guide---all-major-slicers"><a class="header" href="#appendix-a-comprehensive-slicing-guide---all-major-slicers">Appendix A: Comprehensive Slicing Guide - All Major Slicers</a></h3>
 <p>A complete reference covering multiple major slicers (PrusaSlicer, Bambu Studio, Cura, SuperSlicer, OrcaSlicer, IdeaMaker, Fusion 360 built in slicer).</p>
-<p><strong>What You’ll Find:</strong></p>
+<p><strong>What You'll Find:</strong></p>
 <ul>
 <li>Setup and workflow for each slicer</li>
 <li>Accessible parameter explanations (non-visual)</li>
@@ -626,10 +609,10 @@ Then: Lesson 9 (Automation)</p>
 <li>Comparison table for choosing the right slicer</li>
 </ul>
 <p><strong>When to Use:</strong> Reference whenever slicing, switching slicers, or troubleshooting print quality</p>
-<hr>
+<hr />
 <h3 id="appendix-b-material-properties--selection-guide"><a class="header" href="#appendix-b-material-properties--selection-guide">Appendix B: Material Properties &amp; Selection Guide</a></h3>
 <p>Comprehensive reference for 6 common filament materials (PLA, PETG, ABS, TPU, Polycarbonate, Nylon).</p>
-<p><strong>What You’ll Find:</strong></p>
+<p><strong>What You'll Find:</strong></p>
 <ul>
 <li>Properties table (strength, flexibility, temperature, cost)</li>
 <li>Ideal projects and use cases for each material</li>
@@ -640,10 +623,10 @@ Then: Lesson 9 (Automation)</p>
 <li>Material selection decision tree</li>
 </ul>
 <p><strong>When to Use:</strong> Reference when choosing material for a project or troubleshooting print quality issues</p>
-<hr>
+<hr />
 <h3 id="appendix-c-tolerance-testing--quality-assurance-matrix"><a class="header" href="#appendix-c-tolerance-testing--quality-assurance-matrix">Appendix C: Tolerance Testing &amp; Quality Assurance Matrix</a></h3>
 <p>Measurement-based QA methodology designed to be used non-visually (with calipers, scales, and functional tests).</p>
-<p><strong>What You’ll Find:</strong></p>
+<p><strong>What You'll Find:</strong></p>
 <ul>
 <li>Essential measurement tools (digital calipers, scales, go/no-go gauges)</li>
 <li>Step-by-step measurement procedures for all common dimensions</li>
@@ -654,10 +637,10 @@ Then: Lesson 9 (Automation)</p>
 <li>Accessibility-focused best practices</li>
 </ul>
 <p><strong>When to Use:</strong> Reference when starting a new project (create test plan), after printing (verify dimensions), or when troubleshooting quality issues</p>
-<hr>
+<hr />
 <h3 id="appendix-d-powershell-integration-for-scad-workflows"><a class="header" href="#appendix-d-powershell-integration-for-scad-workflows">Appendix D: PowerShell Integration for SCAD Workflows</a></h3>
 <p>Shows how to automate 3D design workflows using PowerShell scripts (from PowerShell_Foundation Lessons 1-6).</p>
-<p><strong>What You’ll Find:</strong></p>
+<p><strong>What You'll Find:</strong></p>
 <ul>
 <li>Basic workflow automation (SCAD -&gt; STL -&gt; G-code)</li>
 <li>Parametric sweep (test 5, 10, or 100 design variations automatically)</li>
@@ -669,10 +652,10 @@ Then: Lesson 9 (Automation)</p>
 <li>Accessibility considerations and best practices</li>
 </ul>
 <p><strong>When to Use:</strong> Reference when automating repetitive tasks, testing parameter variations, or building a batch of designs</p>
-<hr>
+<hr />
 <h3 id="appendix-e-advanced-openscad-concepts"><a class="header" href="#appendix-e-advanced-openscad-concepts">Appendix E: Advanced OpenSCAD Concepts</a></h3>
 <p>Optional topics for experienced designers tackling specialized applications. Five in-depth modules with complete working examples.</p>
-<p><strong>What You’ll Find:</strong></p>
+<p><strong>What You'll Find:</strong></p>
 <ol>
 <li>
 <p><strong>Gears and Mechanical Components</strong></p>
@@ -731,21 +714,15 @@ Then: Lesson 9 (Automation)</p>
 <li>For advanced library and framework development</li>
 </ul>
 <p><strong>Accessibility:</strong> Each example includes comprehensive comments, starts with simplified versions before advanced techniques, and documents performance implications for both visual and non-visual users</p>
-<hr>
+<hr />
 <h2 id="curriculum-revision-history"><a class="header" href="#curriculum-revision-history">Curriculum Revision History</a></h2>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Version</th><th>Date</th><th>Changes</th></tr>
-</thead>
-<tbody>
+<div class="table-wrapper"><table><thead><tr><th>Version</th><th>Date</th><th>Changes</th></tr></thead><tbody>
 <tr><td>2.1</td><td>Feb 2026</td><td>Added Appendix E (Advanced OpenSCAD); Enhanced Lessons 3, 6, 7, 8, 9 with advanced topics</td></tr>
 <tr><td>2.0</td><td>Feb 2026</td><td>Added Lesson 11 (Stakeholder Design) + 4 Appendices; Consolidated Units 0-3 content</td></tr>
 <tr><td>1.0</td><td>Feb 2026</td><td>Initial comprehensive curriculum with 10 lessons + 5 projects</td></tr>
-</tbody>
-</table>
+</tbody></table>
 </div>
-<hr>
+<hr />
 <h2 id="feedback-and-contributions"><a class="header" href="#feedback-and-contributions">Feedback and Contributions</a></h2>
 <p>Have suggestions to improve this curriculum? Found an issue in a lesson or code example?</p>
 <p>Please reach out with:</p>
@@ -754,20 +731,14 @@ Then: Lesson 9 (Automation)</p>
 <li>Description of the issue or suggestion</li>
 <li>Proposed solution (if applicable)</li>
 </ul>
-<hr>
+<hr />
 <p>**Happy designing! **</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../3dMake_Foundation/3dMake_Intro/3dMake_Intro.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
-                            </a>
 
-                            <a rel="next prefetch" href="../3dMake_Foundation/3dMake_Tutorial/3dMake_Tutorial.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
-                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -775,22 +746,12 @@ Then: Lesson 9 (Automation)</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../3dMake_Foundation/3dMake_Intro/3dMake_Intro.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
-                    </a>
 
-                    <a rel="next prefetch" href="../3dMake_Foundation/3dMake_Tutorial/3dMake_Tutorial.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
-                    </a>
             </nav>
 
         </div>
 
-        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
-        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
-        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
-        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
-        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+        <!-- templates for fa icons removed: fa helper unsupported -->
 
 
 
@@ -799,13 +760,13 @@ Then: Lesson 9 (Automation)</p>
         </script>
 
 
-        <script src="../elasticlunr-ef4e11c1.min.js"></script>
-        <script src="../mark-09e88c2c.min.js"></script>
-        <script src="../searcher-c2a407aa.js"></script>
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
 
-        <script src="../clipboard-1626706a.min.js"></script>
-        <script src="../highlight-4a3ec6df.js"></script>
-        <script src="../book-a0b12cfe.js"></script>
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
 
         <!-- Custom JS scripts -->
 

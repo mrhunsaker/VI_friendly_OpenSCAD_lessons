@@ -1,4 +1,4 @@
-# Lesson 2: Geometric Primitives and Constructive Solid Geometry 
+# Lesson 2: Geometric Primitives and Constructive Solid Geometry  {#3dmake_foundation_lessons_3dmake_2-lessons_3dmake_2}
 
 Estimated time: 75-90 minutes
 - Use OpenSCAD primitives (`cube()`, `sphere()`, `cylinder()`) and transforms (`translate()`, `rotate()`, `scale()`)[^2]
@@ -11,7 +11,7 @@ Estimated time: 75-90 minutes
 - Reference: [openscad-cheat-sheet.md](openscad-cheat-sheet.md) for syntax quick-reference
 
 ---
-1. Open `src/main.scad`; identify and run simple examples using `cube()`, `sphere()`, and `cylinder()`[^2].
+1. Open `src/main.scad`; identify and run simple examples using `cube()`, `sphere()`, and `cylinder()` [^2].
 
    **Example primitives:**
    ```openscad

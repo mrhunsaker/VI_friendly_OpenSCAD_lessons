@@ -1,4 +1,4 @@
-# Project 1: Tactile Floor Markers - Student Documentation Template
+# Project 1: Tactile Floor Markers - Student Documentation Template {#3dmake_foundation_templates_student-project_1_student_template}
 
 - Author:
 - Date:

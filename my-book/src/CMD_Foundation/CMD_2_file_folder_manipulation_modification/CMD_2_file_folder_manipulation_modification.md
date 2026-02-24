@@ -1,4 +1,4 @@
-# CMD-2: File and Folder Manipulation
+# CMD-2: File and Folder Manipulation {#cmd_foundation_cmd_2_file_folder_manipulation_modification-cmd_2_file_folder_manipulation_modification}
 
 **Duration:** 2-2.5 hours (for screen reader users)  
 **Prerequisites:** CMD-Pre, CMD-0, CMD-1

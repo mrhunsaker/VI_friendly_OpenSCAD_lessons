@@ -1,4 +1,4 @@
-# Screen Reader Accessibility Guide for Git Bash
+# Screen Reader Accessibility Guide for Git Bash {#gitbash_foundation_screen_reader_accessibility_guide-screen_reader_accessibility_guide}
 
 **Target Users:** NVDA, JAWS, and other screen reader users  
 **Last Updated:** 2026

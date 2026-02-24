@@ -1,4 +1,4 @@
-# Lesson 10: Hands-On Practice Exercises and Troubleshooting
+# Lesson 10: Hands-On Practice Exercises and Troubleshooting {#3dmake_foundation_lessons_3dmake_10-lessons_3dmake_10}
 
 Estimated time: 120-150 minutes (multiple activities)
 
@@ -15,10 +15,10 @@ Estimated time: 120-150 minutes (multiple activities)
 - Printer for test prints (recommended)
 - Measuring tools (calipers, protractor)
 - Access to 3dm commands
-- Reference: [master-rubric.md](../Lessons_3dMake_11/master-rubric.md) for assessment criteria
-- Reference: [filament-comparison-table.md](../Lessons_3dMake_5/filament-comparison-table.md) for material properties
+- Reference: [master-rubric.md](/Lessons_3dMake_11/master-rubric.md) for assessment criteria
+- Reference: [filament-comparison-table.md](/Lessons_3dMake_5/filament-comparison-table.md) for material properties
 
-**Extension Projects**: Complete [Dice_Dice_Dice](../Lessons_3dMake_4/Dice_Dice_Dice.md) or [Snap_Fit_Clip](../Lessons_3dMake_8/snap-fit-clip.md) to practice integrated validation workflows.
+**Extension Projects**: Complete [Dice_Dice_Dice](/Lessons_3dMake_4/Dice_Dice_Dice.md) or [Snap_Fit_Clip](../Lessons_3dMake_8/snap-fit-clip.md) to practice integrated validation workflows.
 
 ---
 

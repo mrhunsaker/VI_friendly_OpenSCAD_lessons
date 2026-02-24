@@ -1,4 +1,4 @@
-# GitBash-Pre: Your First Terminal - Screen Reader Navigation Fundamentals
+# GitBash-Pre: Your First Terminal - Screen Reader Navigation Fundamentals {#gitbash_foundation_gitbash_pre_your_first_terminal-gitbash_pre_your_first_terminal}
 
 **Duration:** 1.5-2 hours (for screen reader users)  
 **Prerequisites:** None - this is the starting point  

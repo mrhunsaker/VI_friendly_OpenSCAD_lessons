@@ -1,4 +1,4 @@
-# Accessibility Audit - Student Documentation Template (Extension Project)
+# Accessibility Audit - Student Documentation Template (Extension Project) {#3dmake_foundation_templates_student-accessibility_audit_student_template}
 
 - Author:
 - Date:

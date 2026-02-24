@@ -1,4 +1,4 @@
-# GitBash-2 through GitBash-6 and Unit Test
+# GitBash-2 through GitBash-6 and Unit Test {#gitbash_foundation_gitbash_2_file_folder_manipulation_modification-gitbash_2_file_folder_manipulation_modification}
 
 *These lesson files will use bash/Unix commands equivalent to the PowerShell and CMD versions. For brevity in this setup, core lesson templates are provided below. Each should adapt the concepts to bash syntax.*
 
@@ -11,7 +11,7 @@
 - GitBash-4: Environment Variables & Aliases (`export`, `alias`, `.bashrc`)
 - GitBash-5: Filling in the Gaps (Shell profiles, history, debugging)
 - GitBash-6: Advanced Terminal Techniques (Shell scripts `.sh`, functions, loops)
-- GitBashUnitTest: Comprehensive Practice & Assessment
+- GitBash_Unit_Test: Comprehensive Practice & Assessment
 
 Each should follow the same structure as PowerShell/CMD equivalents but using bash commands.
 

@@ -1,4 +1,4 @@
-# Summary
+# Summary {#summary}
 
 [Cover](Cover.md)
 [Accessible 3D Printing with OpenSCAD and 3DMake](README.md)
@@ -8,7 +8,6 @@
   - [Screen Reader Choice: Windows CLI](Setup/Screen_Reader_Choice/Screen_Reader_Choice.md)
   - [Braille Display & Terminal Mode](Setup/Braille_Displays/Braille_Displays.md)
   - [Editor Selection and Setup](Setup/Editor_Selection_Setup/Editor_Selection_Setup.md)
-
 
 - [Part 2: Command-Line Foundation (Choose Your Path)](Command_Line_Interface_Selection/Command_Line_Interface_Selection.md)
   
@@ -76,7 +75,7 @@
   - [Lesson 3: Parametric Architecture and Modular Libraries](3dMake_Foundation/Lessons_3dMake_3/Lessons_3dMake_3.md)
   
   - [Lesson 4: AI-Enhanced Verification and Multimodal Feedback](3dMake_Foundation/Lessons_3dMake_4/Lessons_3dMake_4.md)
-    - [Dice-Dice-Dice Project](3dMake_Foundation/Lessons_3dMake_4/DiceDiceDice.md)
+    - [Dice-Dice-Dice Project](3dMake_Foundation/Lessons_3dMake_4/Dice_Dice_Dice.md)
     - [Dice-Dice-Dice - Student Template](3dMake_Foundation/Lessons_3dMake_4/dice_dice_dice_student_template.md)
     - [Dice-Dice-Dice - Teacher Template](3dMake_Foundation/Lessons_3dMake_4/dice_dice_dice_teacher_template.md)
   
@@ -118,7 +117,6 @@
   
   - [3D Make Final Exam](3dMake_Foundation/3dMake_Final_Exam.md)
   - [3D Make Quick Reference](3dMake_Foundation/3dMake_Quick_Reference.md)
-
 
 - [Appendices](Appendices/Appendices.md)
   - [Appendix A: Introduction to Command Line Interfaces](PowerShell_Foundation/PowerShell_Introduction/PowerShell_Introduction.md)

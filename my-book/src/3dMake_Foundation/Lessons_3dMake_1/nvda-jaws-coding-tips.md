@@ -1,4 +1,4 @@
-# Screen Reader Coding Tips - NVDA & JAWS
+# Screen Reader Coding Tips - NVDA & JAWS {#3dmake_foundation_lessons_3dmake_1-nvda-jaws-coding-tips}
 
 *A consolidated reference for using NVDA or JAWS while writing OpenSCAD code in VSCode or Notepad++. Tips that were previously scattered across lesson files are collected here.*
 

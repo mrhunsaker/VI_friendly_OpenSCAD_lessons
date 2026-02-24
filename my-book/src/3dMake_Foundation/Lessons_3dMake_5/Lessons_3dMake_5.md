@@ -1,4 +1,4 @@
-# Lesson 5: Safety Protocols and the Physical Fabrication Interface 
+# Lesson 5: Safety Protocols and the Physical Fabrication Interface  {#3dmake_foundation_lessons_3dmake_5-lessons_3dmake_5}
 
 Estimated time: 60-90 minutes
 

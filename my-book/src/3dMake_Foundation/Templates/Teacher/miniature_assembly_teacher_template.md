@@ -1,4 +1,4 @@
-# Miniature Assembly - Teacher Template (Extension Project)
+# Miniature Assembly - Teacher Template (Extension Project) {#3dmake_foundation_templates_teacher-miniature_assembly_teacher_template}
 
 ## Briefing
 

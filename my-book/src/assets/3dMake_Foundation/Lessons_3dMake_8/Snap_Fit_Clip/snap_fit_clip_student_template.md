@@ -1,4 +1,4 @@
-# Snap-Fit Clip - Student Documentation Template (Extension Project)
+# Snap-Fit Clip - Student Documentation Template (Extension Project) {#assets_3dmake_foundation_lessons_3dmake_8_snap_fit_clip-snap_fit_clip_student_template}
 
 - Author:
 - Date:

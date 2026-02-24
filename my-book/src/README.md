@@ -1,8 +1,8 @@
-# Introduction
+# Introduction {#readme}
 
-This course teaches 3D design and digital fabrication using a fully accessible, command-line-driven toolchain centered on **OpenSCAD** (text-based CAD), **3DMake** (non-visual build automation), and accessible editors (VS Code, Notepad++, command-line editors) with screen reader support.
+This course teaches 3D design and digital fabrication using a fully accessible, command-line-driven toolchain centered on OpenSCAD (text-based CAD), 3DMake (non-visual build automation), and accessible editors (VS Code, Notepad++, command-line editors) with screen reader support.
 
-The curriculum is explicitly designed for blind and visually impaired learners who use screen readers (NVDA, JAWS, VoiceOver). It eliminates GUI navigation and visual feedback in favor of keyboard-driven, text-based workflows that screen readers can fully access. **Accessibility is not an add-on. It is the foundation of every tool, workflow, and lesson in this curriculum.**
+The curriculum is explicitly designed for blind and visually impaired learners who use screen readers (NVDA, JAWS, VoiceOver). It eliminates GUI navigation and visual feedback in favor of keyboard-driven, text-based workflows that screen readers can fully access. Accessibility is not an add-on. It is the foundation of every tool, workflow, and lesson in this curriculum.
 
 ---
 
@@ -12,22 +12,22 @@ The curriculum is explicitly designed for blind and visually impaired learners w
 
 Before choosing a command-line pathway, students learn to optimize their screen reader setup for terminal work and understand accessibility options.
 
-**What's Included:**
-- [Screen Reader Accessibility Guide](PowerShell_Foundation/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.md) - Comprehensive NVDA & JAWS reference with terminal tips
-- [Screen Reader Choice: Windows CLI](ScreenReaderChoice.md) - Help choosing between NVDA and JAWS
-- [Braille Display & Terminal Mode](BrailleDisplays.md) - Advanced accessibility setup with refreshable braille displays
+What's Included:
+- [Screen Reader Accessibility Guide](Setup/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.md) - Comprehensive NVDA & JAWS reference with terminal tips
+- [Screen Reader Choice: Windows CLI](Setup/Screen_Reader_Choice/Screen_Reader_Choice.md) - Help choosing between NVDA and JAWS
+- [Braille Display & Terminal Mode](Setup/Braille_Displays/Braille_Displays.md) - Advanced accessibility setup with refreshable braille displays
 
-**Why start here?** Screen reader optimization is the foundation for all command-line work. Students learn keyboard shortcuts, navigation techniques, and terminal-specific accessibility before diving into any CLI pathway.
+Why start here? Screen reader optimization is the foundation for all command-line work. Students learn keyboard shortcuts, navigation techniques, and terminal-specific accessibility before diving into any CLI pathway.
 
 ---
 
 ### Part 2: Command-Line Foundation (Choose Your Path)
 
-Students master terminal/command-line fundamentals before learning 3D design. **You choose between three equivalent pathways** based on your operating system and learning preferences.
+Students master terminal/command-line fundamentals before learning 3D design. You choose between three equivalent pathways based on your operating system and learning preferences.
 
-#### **Compare All Three Pathways**
+#### Compare All Three Pathways
 
-**→ [Command Line Interface Selection Guide](Command_Line_Interface_Selection.md)**
+→ [Command Line Interface Selection Guide](Command_Line_Interface_Selection/Command_Line_Interface_Selection.md)
 
 This guide provides a comprehensive comparison including:
 - Feature matrix comparing all three shells
@@ -38,86 +38,86 @@ This guide provides a comprehensive comparison including:
 
 ---
 
-#### **Part 2A: PowerShell Foundation (Recommended for Windows Users)**
+#### Part 2A: PowerShell Foundation (Recommended for Windows Users)
 
-**Where to Start:** [PowerShell Curriculum Overview](PowerShell_Foundation/PowerShell_Curriculum_Overview/PowerShell_Curriculum_Overview.md)
+Where to Start: [PowerShell Curriculum Overview](PowerShell_Foundation/PowerShell_Curriculum_Overview/PowerShell_Curriculum_Overview.md)
 
-**Lessons Included:**
-- **PS-Pre: Your First Terminal** - Opening PowerShell, first commands, screen reader tricks
-- **PS-0: Getting Started** - Paths, shortcuts, tab completion
-- **PS-1: Navigation** - Moving around the file system confidently
-- **PS-2: File and Folder Manipulation** - Creating, editing, moving files
-- **PS-3: Input, Output, and Piping** - Redirecting output, piping commands
-- **PS-4: Environment Variables and Aliases** - Setting variables, creating shortcuts
-- **PS-5: Filling in the Gaps** - Control flow, profiles, useful tricks
-- **PS-6: Advanced Terminal Techniques** - Scripts, functions, professional workflows
-- **PowerShell Unit Test & Practice** - Comprehensive self-assessment
+Lessons Included:
+- PS-Pre: Your First Terminal - Opening PowerShell, first commands, screen reader tricks
+- PS-0: Getting Started - Paths, shortcuts, tab completion
+- PS-1: Navigation - Moving around the file system confidently
+- PS-2: File and Folder Manipulation - Creating, editing, moving files
+- PS-3: Input, Output, and Piping - Redirecting output, piping commands
+- PS-4: Environment Variables and Aliases - Setting variables, creating shortcuts
+- PS-5: Filling in the Gaps - Control flow, profiles, useful tricks
+- PS-6: Advanced Terminal Techniques - Scripts, functions, professional workflows
+- PowerShell Unit Test & Practice - Comprehensive self-assessment
 
-**Time commitment:** 30-45 hours (for screen reader users)  
-**Best for:** Users who want modern features and advanced automation  
-**Skills:** Terminal navigation, piping, advanced scripting, professional automation
+Time commitment: 30-45 hours (for screen reader users)  
+Best for: Users who want modern features and advanced automation  
+Skills: Terminal navigation, piping, advanced scripting, professional automation
 
-#### **Part 2B: Windows Command Prompt Foundation (Simplified Alternative)**
+#### Part 2B: Windows Command Prompt Foundation (Simplified Alternative)
 
-**Where to Start:** [CMD Curriculum Overview](CMD_Foundation/CMD_Curriculum_Overview/CMD_Curriculum_Overview.md)
+Where to Start: [CMD Curriculum Overview](CMD_Foundation/CMD_Curriculum_Overview/CMD_Curriculum_Overview.md)
 
-**Lessons Included:**
-- **CMD-Pre: Your First Terminal** - Opening CMD, first commands, screen reader tricks
-- **CMD-0: Getting Started** - Paths, shortcuts, command basics
-- **CMD-1: Navigation** - Moving around the file system confidently
-- **CMD-2: File and Folder Manipulation** - Creating, editing, moving files
-- **CMD-3: Input, Output & Redirection** - Redirecting output, piping commands
-- **CMD-4: Environment Variables & Shortcuts** - Setting variables, shortcuts
-- **CMD-5: Filling in the Gaps** - Batch files, advanced techniques
-- **CMD-6: Advanced Terminal Techniques** - Scripts, automation, professional workflows
-- **CMD Unit Test & Practice** - Comprehensive self-assessment
+Lessons Included:
+- CMD-Pre: Your First Terminal - Opening CMD, first commands, screen reader tricks
+- CMD-0: Getting Started - Paths, shortcuts, command basics
+- CMD-1: Navigation - Moving around the file system confidently
+- CMD-2: File and Folder Manipulation - Creating, editing, moving files
+- CMD-3: Input, Output & Redirection - Redirecting output, piping commands
+- CMD-4: Environment Variables & Shortcuts - Setting variables, shortcuts
+- CMD-5: Filling in the Gaps - Batch files, advanced techniques
+- CMD-6: Advanced Terminal Techniques - Scripts, automation, professional workflows
+- CMD Unit Test & Practice - Comprehensive self-assessment
 
-**Time commitment:** 30-45 hours (for screen reader users)  
-**Best for:** Absolute beginners or users who prefer simplicity  
-**Skills:** Terminal navigation, file operations, batch scripting, basic automation
+Time commitment: 30-45 hours (for screen reader users)  
+Best for: Absolute beginners or users who prefer simplicity  
+Skills: Terminal navigation, file operations, batch scripting, basic automation
 
-#### **Part 2C: Git Bash Foundation (Cross-Platform Skills)**
+#### Part 2C: Git Bash Foundation (Cross-Platform Skills)
 
-**Where to Start:** [Git Bash Curriculum Overview](GitBash_Foundation/GitBash_Curriculum_Overview/GitBash_Curriculum_Overview.md)
+Where to Start: [Git Bash Curriculum Overview](GitBash_Foundation/GitBash_Curriculum_Overview/GitBash_Curriculum_Overview.md)
 
-**Lessons Included:**
-- **GitBash-Pre: Your First Terminal** - Opening Git Bash, first commands, screen reader tricks
-- **GitBash-0: Getting Started** - Paths, shortcuts, command basics
-- **GitBash-1: Navigation** - Moving around the file system confidently
-- **GitBash-2: File and Folder Manipulation** - Creating, editing, moving files
-- **GitBash-3: Input, Output & Piping** - Redirecting output, piping commands
-- **GitBash-4: Environment Variables & Aliases** - Setting variables, shortcuts
-- **GitBash-5: Filling in the Gaps** - Shell profiles, history, debugging
-- **GitBash-6: Advanced Terminal Techniques** - Scripts, functions, professional workflows
-- **GitBash Unit Test & Practice** - Comprehensive self-assessment
+Lessons Included:
+- GitBash-Pre: Your First Terminal - Opening Git Bash, first commands, screen reader tricks
+- GitBash-0: Getting Started - Paths, shortcuts, command basics
+- GitBash-1: Navigation - Moving around the file system confidently
+- GitBash-2: File and Folder Manipulation - Creating, editing, moving files
+- GitBash-3: Input, Output & Piping - Redirecting output, piping commands
+- GitBash-4: Environment Variables & Aliases - Setting variables, shortcuts
+- GitBash-5: Filling in the Gaps - Shell profiles, history, debugging
+- GitBash-6: Advanced Terminal Techniques - Scripts, functions, professional workflows
+- GitBash Unit Test & Practice - Comprehensive self-assessment
 
-**Time commitment:** 20-25 hours (for screen reader users)  
-**Best for:** Users who want cross-platform skills (Windows, macOS, Linux)  
-**Skills:** Unix/bash commands, shell scripting, cross-platform automation
+Time commitment: 20-25 hours (for screen reader users)  
+Best for: Users who want cross-platform skills (Windows, macOS, Linux)  
+Skills: Unix/bash commands, shell scripting, cross-platform automation
 
-**Important:** Choose ONE pathway and complete it fully. All three teach identical fundamental concepts using different tools. Each integrates fully with 3D design workflows.
+Important: Choose ONE pathway and complete it fully. All three teach identical fundamental concepts using different tools. Each integrates fully with 3D design workflows.
 
 ---
 
 ### Part 3: 3dMake Foundation & Design (11 Lessons + 8 Appendices)
 
-**Where to Start:** [3dMake Introduction](3dMake_Foundation/3dMake_Intro/3dMake_Intro.md)
+Where to Start: [3dMake Introduction](3dMake_Foundation/3dMake_Intro/3dMake_Intro.md)
 
 Students build parametric 3D designs using OpenSCAD and automate the workflow with 3DMake.
 
 #### Main Curriculum: 11 Progressive Lessons
 
-| Part                      | Lessons | Focus                                                                         | Duration  |
-|---------------------------|---------|-------------------------------------------------------------------------------|-----------|
-| **Foundations**           | 1-3     | Environment setup, primitives, parametric design + advanced language features | 4-5 hours |
-| **Verification & Safety** | 4-5     | AI verification, safety protocols, materials                                  | 2-3 hours |
-| **Applied Projects**      | 6-8     | Practical commands, text functions, transforms, assembly patterns             | 5-6 hours |
-| **Advanced Topics**       | 9-10    | Automation with file I/O, troubleshooting, mastery                            | 3-4 hours |
-| **Leadership**            | 11      | Stakeholder-centric design                                                    | 2-3 hours |
+| Part                  | Lessons | Focus                                                                         | Duration  |
+|-----------------------|---------|-------------------------------------------------------------------------------|-----------|
+| Foundations           | 1-3     | Environment setup, primitives, parametric design + advanced language features | 4-5 hours |
+| Verification & Safety | 4-5     | AI verification, safety protocols, materials                                  | 2-3 hours |
+| Applied Projects      | 6-8     | Practical commands, text functions, transforms, assembly patterns             | 5-6 hours |
+| Advanced Topics       | 9-10    | Automation with file I/O, troubleshooting, mastery                            | 3-4 hours |
+| Leadership            | 11      | Stakeholder-centric design                                                    | 2-3 hours |
 
-**Total:** 45-55 hours instruction + practice projects
+Total: 45-55 hours instruction + practice projects
 
-**What's New (v2.1):**
+What's New (v2.1):
 - Lesson 3: Added Advanced Programming Concepts (Conditionals, Type Testing, List Comprehensions, Special Variables, Functions)
 - Lesson 6: Added String Functions for dynamic naming and labeling
 - Lesson 7: Added Mathematical Functions (trigonometry, rounding, power/root, vector math)
@@ -126,14 +126,14 @@ Students build parametric 3D designs using OpenSCAD and automate the workflow wi
 
 #### 8 Comprehensive Reference Appendices
 
-- **Appendix A: Introduction to Command Line Interfaces** - CLI overview
-- **Appendix B: PowerShell Comprehensive Guide** - Detailed PowerShell reference
-- **Appendix C: Comprehensive Slicing Guide** - All major slicers (PrusaSlicer, Bambu Studio, Cura, OrcaSlicer)
-- **Appendix D: Material Properties & Selection** - Material reference with properties
-- **Appendix E: Tolerance Testing & Quality Assurance Matrix** - QA procedures
-- **Appendix F: PowerShell Integration for SCAD Workflows** - Automation and batch processing
-- **Appendix G: Advanced OpenSCAD Concepts** - 5 specialized topics (Gears, Batch Processing, Performance, Print Orientation, Recursion)
-- **Appendix H: 3dMake Code Examples & Assets** - OpenSCAD code examples and reference designs
+- Appendix A: Introduction to Command Line Interfaces - CLI overview
+- Appendix B: PowerShell Comprehensive Guide - Detailed PowerShell reference
+- Appendix C: Comprehensive Slicing Guide - All major slicers (PrusaSlicer, Bambu Studio, Cura, OrcaSlicer)
+- Appendix D: Material Properties & Selection - Material reference with properties
+- Appendix E: Tolerance Testing & Quality Assurance Matrix - QA procedures
+- Appendix F: PowerShell Integration for SCAD Workflows - Automation and batch processing
+- Appendix G: Advanced OpenSCAD Concepts - 5 specialized topics (Gears, Batch Processing, Performance, Print Orientation, Recursion)
+- Appendix H: 3dMake Code Examples & Assets - OpenSCAD code examples and reference designs
 
 ---
 
@@ -143,16 +143,16 @@ Students build parametric 3D designs using OpenSCAD and automate the workflow wi
 
 This course uses tools designed for screen reader access:
 
-- **Terminal/Command line** - Text-based, fully accessible to NVDA, JAWS, VoiceOver
-- **OpenSCAD** - Free, open-source text-based CAD (no visual-only GUI dependency)
-- **3DMake** - Command-line build tool eliminating GUI navigation
-- **Accessible editors** - VS Code, Notepad++, Nano, Vim (all keyboard-driven, screen reader friendly)
+- Terminal/Command line - Text-based, fully accessible to NVDA, JAWS, VoiceOver
+- OpenSCAD - Free, open-source text-based CAD (no visual-only GUI dependency)
+- 3DMake - Command-line build tool eliminating GUI navigation
+- Accessible editors - VS Code, Notepad++, Nano, Vim (all keyboard-driven, screen reader friendly)
 
-See [Screen Reader Coding Tips (NVDA & JAWS)](3dMakeFoundation/Lessons3dMake1/nvda-jaws-coding-tips.md) for detailed keyboard shortcuts and configuration.
+See [Screen Reader Coding Tips (NVDA & JAWS)](3dMake_Foundation/Lessons_3dMake_1/nvda-jaws-coding-tips.md) for detailed keyboard shortcuts and configuration.
 
 ### 3DMake: Non-Visual Build Automation
 
-**3DMake** makes the entire design-to-print pipeline accessible:
+3DMake makes the entire design-to-print pipeline accessible:
 
 ```bash
 3dm build        -> Compiles main.scad to main.stl
@@ -168,13 +168,13 @@ See [Screen Reader Coding Tips (NVDA & JAWS)](3dMakeFoundation/Lessons3dMake1/nv
 
 ### Iterative, Non-Visual Design
 
-Students learn to design through **code and testing**, not visual previews:
+Students learn to design through code and testing, not visual previews:
 
 - Write parametric OpenSCAD code in accessible editors
 - Run `3dm build` to compile to printable file
 - Use measurement-based verification (calipers, scales, functional testing)
 - Iterate by editing parameters and rebuilding
-- **No reliance on 3D preview or visual feedback**
+- No reliance on 3D preview or visual feedback
 
 ---
 
@@ -182,12 +182,12 @@ Students learn to design through **code and testing**, not visual previews:
 
 Every 3dMake lesson includes hands-on projects:
 
-- **Lesson 6:** Keycap with embossed text (3dm commands)
-- **Lesson 7:** Phone stand (parametric transforms)
-- **Lesson 8:** Stackable bins (interlocking features, tolerances)
-- **Lesson 9:** Keychain automation (PowerShell batch processing)
-- **Lesson 10:** QA testing + accessibility audit (measurement, troubleshooting)
-- **Lesson 11:** Beaded jewelry holder (stakeholder-driven design)
+- Lesson 6: Keycap with embossed text (3dm commands)
+- Lesson 7: Phone stand (parametric transforms)
+- Lesson 8: Stackable bins (interlocking features, tolerances)
+- Lesson 9: Keychain automation (PowerShell batch processing)
+- Lesson 10: QA testing + accessibility audit (measurement, troubleshooting)
+- Lesson 11: Beaded jewelry holder (stakeholder-driven design)
 
 Each project requires:
 
@@ -203,19 +203,19 @@ Each project requires:
 
 Quick navigation to common topics:
 
-- [OpenSCAD Cheat Sheet](3dMakeFoundation/Lessons3dMake2/openscad-cheat-sheet.md) - Syntax quick-reference
-- [3dMake Setup Guide](3dMakeFoundation/Lessons3dMake1/3dmake-setup-guide.md) - Installation walkthrough
-- [VSCode Setup Guide](3dMakeFoundation/Lessons3dMake1/vscode-setup-guide.md) - Accessibility configuration
-- [Vocabulary Glossary](3dMakeFoundation/Lessons3dMake1/vocabulary-glossary.md) - Course terminology
-- [Filament Comparison Table](3dMakeFoundation/Lessons3dMake5/filament-comparison-table.md) - Material reference
-- [Master Rubric](3dMakeFoundation/Lessons3dMake11/master-rubric.md) - Project assessment criteria
+[OpenSCAD Cheat Sheet](3dMake_Foundation/Lessons_3dMake_2/openscad-cheat-sheet.md) - Syntax quick-reference  
+[3dMake Setup Guide](3dMake_Foundation/Lessons_3dMake_1/3dmake-setup-guide.md) - Installation walkthrough  
+[VSCode Setup Guide](3dMake_Foundation/Lessons_3dMake_1/vscode-setup-guide.md) - Accessibility configuration  
+[Vocabulary Glossary](3dMake_Foundation/Lessons_3dMake_1/vocabulary-glossary.md) - Course terminology  
+[Filament Comparison Table](3dMake_Foundation/Lessons_3dMake_5/filament-comparison-table.md) - Material reference  
+[Master Rubric](3dMake_Foundation/Lessons_3dMake_11/master-rubric.md) - Project assessment criteria  
 
 ### Navigation
 
-- **[SUMMARY.md](SUMMARY.md)** - Complete table of contents
-- **[Curriculum Guide](3dMakeFoundation/3dMakeFoundationCurriculumGuide.md)** - Detailed overview of all lessons and appendices
-- **[Quick Reference](3dMakeFoundation/3dMakeQuickReference.md)** - At-a-glance command and syntax reference
-- **[Appendices](Appendices/Appendices.md)** - PowerShell and 3dMake reference materials
+[SUMMARY.md](SUMMARY.md) - Complete table of contents  
+[Curriculum Guide](3dMake_Foundation/3dMake_Foundation_Curriculum_Guide.md) - Detailed overview of all lessons and appendices  
+[Quick Reference](3dMake_Foundation/3dMake_Quick_Reference.md) - At-a-glance command and syntax reference  
+[Appendices](Appendices/Appendices.md) - PowerShell and 3dMake reference materials  
 
 ---
 
@@ -225,30 +225,30 @@ This course is enhanced by comprehensive textbooks and companion materials from 
 
 ### Textbook options (EPUB Format)
 
-- **[Programming with OpenSCAD: A Beginner's Guide to Coding 3D-Printable Objects](https://nostarch.com/programmingopenscad)** - Comprehensive reference covering OpenSCAD syntax, geometry concepts, and design patterns. Ideal for deep dives into specific topics and as a reference guide throughout the course.
-- **[Simplifying 3D Printing with OpenSCAD](https://www.packtpub.com/en-us/product/simplifying-3d-printing-with-openscad-9781801813174)** - Focused on practical workflows, optimization, and real-world printing scenarios.
+- [Programming with OpenSCAD: A Beginner's Guide to Coding 3D-Printable Objects](https://nostarch.com/programmingopenscad) - Comprehensive reference covering OpenSCAD syntax, geometry concepts, and design patterns. Ideal for deep dives into specific topics and as a reference guide throughout the course.
+- [Simplifying 3D Printing with OpenSCAD](https://www.packtpub.com/en-us/product/simplifying-3d-printing-with-openscad-9781801813174) - Focused on practical workflows, optimization, and real-world printing scenarios.
 
 ### Companion Teaching Resources
 
-- **[Practice Worksheets](https://programmingwithopenscad.github.io/learning.html)** - Printable worksheets for visualization practice, decomposition exercises, vocabulary building, and assessment.
-- **[Visual Quick Reference](https://programmingwithopenscad.github.io/quick-reference.html)** - Command syntax guides and geometry reference.
-- **[Code Solutions Repository](https://github.com/ProgrammingWithOpenSCAD/CodeSolutions)** - Working OpenSCAD examples organized by topic (3D shapes, transformations, loops, modules, if-statements, advanced techniques).
+[Practice Worksheets](https://programmingwithopenscad.github.io/learning.html) - Printable worksheets for visualization practice, decomposition exercises, vocabulary building, and assessment.  
+[Visual Quick Reference](https://programmingwithopenscad.github.io/quick-reference.html) - Command syntax guides and geometry reference.  
+[Code Solutions Repository](https://github.com/ProgrammingWithOpenSCAD/CodeSolutions) - Working OpenSCAD examples organized by topic (3D shapes, transformations, loops, modules, if-statements, advanced techniques).
 
 ---
 
 ## Getting Started
 
-**For Students:**
+For Students:
 
-1. Start with [PowerShell Introduction](PowerShellFoundation/PowershellIntroduction/PowershellIntroduction.md)
+1. Start with [PowerShell Introduction](PowerShell_Foundation/Powershell_Introduction/Powershell_Introduction.md)
 2. Complete PowerShell lessons (PS.0-PS.5)
-3. Begin [3dMake Introduction](3dMakeFoundation/3dMakeIntro/3dMakeIntro.md)
-4. Follow [Lesson 1: Environmental Configuration](3dMakeFoundation/Lessons3dMake1/Lessons3dMake1.md)
+3. Begin [3dMake Introduction](3dMake_Foundation/3dMake_Intro/3dMake_Intro.md)
+4. Follow [Lesson 1: Environmental Configuration](3dMake_Foundation/Lessons_3dMake_1/Lessons_3dMake_1.md)
 5. Continue through Lesson 11
 
-**For Instructors:**
+For Instructors:
 
-1. Review [Curriculum Guide](3dMakeFoundation/3dMakeFoundationCurriculumGuide.md)
-2. Use [11 Teacher Templates](3dMakeFoundation/Templates/Teacher/) for assessment
-3. Reference [Master Rubric](3dMakeFoundation/Lessons3dMake11/master-rubric.md) for grading
+1. Review [Curriculum Guide](3dMake_Foundation/3dMake_Foundation_Curriculum_Guide.md)
+2. Use [11 Teacher Templates](3dMake_Foundation/Templates/Teacher/) for assessment
+3. Reference [Master Rubric](3dMake_Foundation/Lessons_3dMake_11/master-rubric.md) for grading
 4. Check [Syllabus](Syllabus.md) for course policies and learning progression

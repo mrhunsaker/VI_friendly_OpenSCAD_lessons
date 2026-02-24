@@ -1,4 +1,4 @@
-# PS-0: Getting Started - Layout, Paths, and the Shell 
+# PS-0: Getting Started - Layout, Paths, and the Shell  {#powershell_foundation_ps_0_getting_started_layout_paths-ps_0_getting_started_layout_paths}
 
 Estimated time: 20-30 minutes
 

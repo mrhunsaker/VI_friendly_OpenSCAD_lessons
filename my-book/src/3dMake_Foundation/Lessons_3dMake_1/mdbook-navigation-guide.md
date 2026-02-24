@@ -1,4 +1,4 @@
-# Navigating This Curriculum - mdBook Guide
+# Navigating This Curriculum - mdBook Guide {#3dmake_foundation_lessons_3dmake_1-mdbook-navigation-guide}
 
 *This curriculum is published as a web book using mdBook. This page explains how to find what you need, navigate between chapters, and use the book with a screen reader.*
 

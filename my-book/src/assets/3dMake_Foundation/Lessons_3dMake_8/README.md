@@ -1,8 +1,8 @@
-# Lesson 8 Code Examples - Advanced Parametric Design and Interlocking Features
+# Lesson 8 Code Examples - Advanced Parametric Design and Interlocking Features {#assets_3dmake_foundation_lessons_3dmake_8-readme}
 
 ## Files
 
-- **stackablebins.scad** - Advanced example of tolerance design, interlocking features, and multi-part assemblies
+- **stackable_bins.scad** - Advanced example of tolerance design, interlocking features, and multi-part assemblies
 
 ## Learning Objectives
 
@@ -14,8 +14,8 @@
 
 ## How to Use This Code
 
-1. Copy `stackablebins.scad` into your 3dMake project's `src/` folder
-2. Open in OpenSCAD (or use `3dm edit-model stackablebins.scad`)
+1. Copy `stackable_bins.scad` into your 3dMake project's `src/` folder
+2. Open in OpenSCAD (or use `3dm edit-model stackable_bins.scad`)
 3. Press F5 to preview; F6 for full render
 4. Modify the top-level parameters:
    - `binw`, `bind`, `binh` - Adjust bin dimensions
@@ -58,8 +58,8 @@
 
 ## Related Files
 
-- See Lesson 8: [Lesson 8 Markdown](../../../3dMakeFoundation/Lessons3dMake8/Lessons3dMake8.md) for full tutorial
-- See Appendix C: [Tolerance Testing & QA Matrix](../../../3dMakeFoundation/AppendixCToleranceQA.md) for complete validation procedures
-- See Appendix B: [Material Properties](../../../3dMakeFoundation/AppendixBMaterialProperties.md) for shrinkage data by material
-- Reference: [Snap-Fit Clip Project](../../../3dMakeFoundation/Lessons3dMake8/snap-fit-clip.md) for more tolerance examples
-- Reference: [Measurement Worksheet](../../../3dMakeFoundation/Lessons3dMake10/measurement-worksheet.md) for recording tolerance data
+- See Lesson 8: [Lesson 8 Markdown](../../../3dMake_Foundation/Lessons_3dMake_8/Lessons_3dMake_8.md) for full tutorial
+- See Appendix C: [Tolerance Testing & QA Matrix](../../../3dMake_Foundation/Appendix_C_Tolerance_QA.md) for complete validation procedures
+- See Appendix B: [Material Properties](../../../3dMake_Foundation/Appendix_B_Material_Properties.md) for shrinkage data by material
+- Reference: [Snap-Fit Clip Project](../../../3dMake_Foundation/Lessons_3dMake_8/snap-fit-clip.md) for more tolerance examples
+- Reference: [Measurement Worksheet](../../../3dMake_Foundation/Lessons_3dMake_10/measurement-worksheet.md) for recording tolerance data

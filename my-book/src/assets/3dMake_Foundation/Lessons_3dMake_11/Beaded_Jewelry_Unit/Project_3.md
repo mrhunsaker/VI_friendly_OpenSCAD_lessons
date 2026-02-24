@@ -1,4 +1,4 @@
-# Project 3: Beaded Jewelry - OpenSCAD Design
+# Project 3: Beaded Jewelry - OpenSCAD Design {#assets_3dmake_foundation_lessons_3dmake_11_beaded_jewelry_unit-project_3}
 
 **Accessibility:** When including images or diagrams, add short alt-text and provide a comment-based walkthrough for any `.scad` examples so screen-reader users can follow the design steps.
 

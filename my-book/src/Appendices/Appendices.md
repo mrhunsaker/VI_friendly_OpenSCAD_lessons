@@ -1,4 +1,4 @@
-# Appendices
+# Appendices {#appendices-appendices}
 
 Comprehensive reference materials, guides, and supplemental resources for the OpenSCAD and 3dMake curriculum.
 

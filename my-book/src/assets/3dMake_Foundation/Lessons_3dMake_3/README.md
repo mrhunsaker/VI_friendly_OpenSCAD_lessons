@@ -1,4 +1,4 @@
-# Lesson 3: Parametric Architecture and Modular Libraries
+# Lesson 3: Parametric Architecture and Modular Libraries {#assets_3dmake_foundation_lessons_3dmake_3-readme}
 
 **Estimated time:** 60 minutes
 
@@ -19,14 +19,14 @@ This folder contains supporting materials for Lesson 3:
 
 ## Key Materials
 
-- [Lesson 3 Main Content](../../../3dMakeFoundation/Lessons3dMake3/Lessons3dMake3.md)
-- [OpenSCAD Cheat Sheet - Modules & Functions](../../../3dMakeFoundation/Lessons3dMake2/openscad-cheat-sheet.md)
-- [Appendix D: PowerShell Integration](../../../3dMakeFoundation/AppendixDPowerShellIntegration.md)
+- [Lesson 3 Main Content](../../../3dMake_Foundation/Lessons_3dMake_3/Lessons_3dMake_3.md)
+- [OpenSCAD Cheat Sheet - Modules & Functions](../../../3dMake_Foundation/Lessons_3dMake_2/openscad-cheat-sheet.md)
+- [Appendix D: PowerShell Integration](../../../3dMake_Foundation/Appendix_D_PowerShell_Integration.md)
 
 ## Starter Templates in This Folder
 
-- `parametrictemplate.scad` - Basic parametric structure with top-level parameters
-- `moduletemplate.scad` - Reusable module pattern with documentation
+- `parametric_template.scad` - Basic parametric structure with top-level parameters
+- `module_template.scad` - Reusable module pattern with documentation
 
 ---
 
@@ -39,4 +39,4 @@ This folder contains supporting materials for Lesson 3:
 
 ---
 
-**For navigation:** See [3dMakeFoundation Asset Index](../README.md)
+**For navigation:** See [3dMake_Foundation Asset Index](../README.md)

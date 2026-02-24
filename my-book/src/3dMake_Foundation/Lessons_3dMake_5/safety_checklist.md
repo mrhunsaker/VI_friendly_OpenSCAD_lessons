@@ -1,4 +1,4 @@
-# Safety Checklist for 3D Printing
+# Safety Checklist for 3D Printing {#3dmake_foundation_lessons_3dmake_5-safety_checklist}
 
 Complete this checklist before each printing session to maintain a safe workspace.
 

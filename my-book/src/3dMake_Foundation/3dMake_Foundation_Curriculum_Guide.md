@@ -1,4 +1,4 @@
-# 3D Make Foundation: Complete Curriculum Guide
+# 3D Make Foundation: Complete Curriculum Guide {#3dmake_foundation-3dmake_foundation_curriculum_guide}
 
 **A comprehensive, hands-on, screenreader accessible introduction to programmatic 3D design using OpenSCAD and 3DMake**
 

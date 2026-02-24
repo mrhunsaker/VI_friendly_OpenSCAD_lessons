@@ -1,4 +1,4 @@
-# CMD-4: Environment Variables & Aliases
+# CMD-4: Environment Variables & Aliases {#cmd_foundation_cmd_4_environment_variables_aliases-cmd_4_environment_variables_aliases}
 
 **Duration:** 2 hours (for screen reader users)  
 **Prerequisites:** CMD-Pre through CMD-3

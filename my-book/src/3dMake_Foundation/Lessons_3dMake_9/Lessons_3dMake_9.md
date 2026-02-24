@@ -1,4 +1,4 @@
-# Lesson 9: Automation and 3dm Workflows
+# Lesson 9: Automation and 3dm Workflows {#3dmake_foundation_lessons_3dmake_9-lessons_3dmake_9}
 
 Estimated time: 90-120 minutes
 

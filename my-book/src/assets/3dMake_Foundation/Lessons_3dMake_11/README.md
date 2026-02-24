@@ -1,4 +1,4 @@
-# Lesson 11: Stakeholder-Centric Design and the Beaded Jewelry Project
+# Lesson 11: Stakeholder-Centric Design and the Beaded Jewelry Project {#3dmake_foundation-lessons_3dmake_10-lessons_3dmake_11-master-rubric} {#assets_3dmake_foundation_lessons_3dmake_11-readme}
 
 **Estimated time:** 90-120 minutes | **Level:** Advanced
 
@@ -6,7 +6,7 @@
 
 This folder contains supporting materials for Lesson 11:
 
-- **Extension Projects:** BeadedJewelryUnit for stakeholder-centric design
+- **Extension Projects:** Beaded_Jewelry_Unit for stakeholder-centric design
 - **Templates:** Interview worksheets, requirements gathering forms, feedback templates
 - **Reference Materials:** Design thinking frameworks, documentation standards
 
@@ -20,13 +20,13 @@ This folder contains supporting materials for Lesson 11:
 
 ## Key Materials
 
-- [Lesson 11 Main Content](../../../3dMakeFoundation/Lessons3dMake11/Lessons3dMake11.md)
-- [Master Rubric](../../../3dMakeFoundation/Lessons3dMake11/master-rubric.md) - Design documentation standards
-- [Markdown Starter Guide](../../../3dMakeFoundation/Lessons3dMake11/master-rubric.md)
+- [Lesson 11 Main Content](../../../3dMake_Foundation/Lessons_3dMake_11/Lessons_3dMake_11.md)
+- [Master Rubric](../../../3dMake_Foundation/Lessons_3dMake_11/master-rubric.md) - Design documentation standards
+- [Markdown Starter Guide](../../../3dMake_Foundation/Lessons_3dMake_11/master-rubric.md)
 
 ## Extension Projects in This Folder
 
-### BeadedJewelryUnit
+### Beaded_Jewelry_Unit
 
 **Purpose:** Full stakeholder-centric design project with interviews, requirements, prototyping, and iteration
 
@@ -52,10 +52,10 @@ This folder contains supporting materials for Lesson 11:
 
 ## Interview & Requirements Templates
 
-- `stakeholderinterviewtemplate.md` - Guided interview questions
-- `functionalrequirementstemplate.md` - Converting interview data to requirements
-- `designspecificationtemplate.md` - Complete design documentation
-- `feedbackcollectiontemplate.md` - Gathering and documenting stakeholder feedback
+- `stakeholder_interview_template.md` - Guided interview questions
+- `functional_requirements_template.md` - Converting interview data to requirements
+- `design_specification_template.md` - Complete design documentation
+- `feedback_collection_template.md` - Gathering and documenting stakeholder feedback
 
 ---
 
@@ -64,9 +64,9 @@ This folder contains supporting materials for Lesson 11:
 1. Complete Lesson 11 on design thinking and stakeholder engagement
 2. Reference the interview template to conduct stakeholder interviews
 3. Use the requirements template to extract functional needs
-4. Work through BeadedJewelryUnit as your capstone project
+4. Work through Beaded_Jewelry_Unit as your capstone project
 5. Document all decisions and iterations using Master Rubric
 
 ---
 
-**For navigation:** See [3dMakeFoundation Asset Index](../README.md)
+**For navigation:** See [3dMake_Foundation Asset Index](../README.md)

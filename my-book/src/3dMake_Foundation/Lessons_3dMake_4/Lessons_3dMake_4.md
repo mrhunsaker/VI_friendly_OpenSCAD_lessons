@@ -1,4 +1,4 @@
-# Lesson 4: AI-Enhanced Verification and Multimodal Feedback
+# Lesson 4: AI-Enhanced Verification and Multimodal Feedback {#3dmake_foundation_lessons_3dmake_4-lessons_3dmake_4}
 
 Estimated time: 45-60 minutes
 
@@ -16,14 +16,14 @@ Estimated time: 45-60 minutes
 Step-by-step Tasks
 
 1. Verify API configuration (if used) or run `3dm info --dry-run` to confirm render pipeline works locally[^1].
-2. Run `3dm info` and save the produced images and textual report to `build/`[^1].
+2. Run `3dm info` and save the produced images and textual report to `build/` [^1].
 3. Inspect deterministic outputs (render warnings, slicer preview) and compare them to AI recommendations; prioritize deterministic issues[^8][^10].
 4. Iterate prompt engineering (in `3dmake.toml` or via `--prompt`) with precise technical primitives and re-run `3dm info` to examine changes[^8].
 5. Document all prompts, AI outputs, and deterministic validation steps in `AI-notes.md` within the project[^8].
 
 Checkpoints
 
-- After step 2 you have stored render images and the AI report in `build/`[^1].
+- After step 2 you have stored render images and the AI report in `build/` [^1].
 
 ## Quiz - Lesson 3dMake.4 (10 questions)
 

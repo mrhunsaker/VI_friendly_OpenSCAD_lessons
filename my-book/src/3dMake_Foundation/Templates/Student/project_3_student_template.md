@@ -1,4 +1,4 @@
-# Project 3: Beaded Jewelry - Student Documentation Template
+# Project 3: Beaded Jewelry - Student Documentation Template {#3dmake_foundation_templates_student-project_3_student_template}
 
 - Author:
 - Date:

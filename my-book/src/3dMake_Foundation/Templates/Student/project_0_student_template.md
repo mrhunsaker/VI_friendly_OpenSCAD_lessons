@@ -1,4 +1,4 @@
-# Project 0: Your First 3D Print - Student Documentation Template
+# Project 0: Your First 3D Print - Student Documentation Template {#3dmake_foundation_templates_student-project_0_student_template}
 
 - Author:
 - Date:

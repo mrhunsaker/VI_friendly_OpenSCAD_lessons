@@ -6,10 +6,12 @@ description = "An introduction to 3D printing for blind and visually impaired le
 src = "src"
 
 [output.html]
-additional-css = ["src/assets/custom.css"]
-default-theme = "rust"
+additional-css = ["src/assets/custom.css","theme/catppuccin.css"]
 site-url = "https://github.com/mrhunsaker/VI3DMakeOpenSCADCurriculum"
 theme = "theme"
+default-theme = "latte"
+preferred-dark-theme = "mocha"
+preferred-light-theme = "latte"
 
 [build]
 build-dir = "docs"
@@ -35,3 +37,18 @@ level = 1
 
 [preprocessor.index]
 [preprocessor.links]
+
+[output.html.print]
+enable = true
+
+# mdbook PDF
+# [output.pdf]
+
+# Typst PDF
+#[output.typst]
+#output-dir = "pdf"
+#optional = true
+
+#[output.typst.output]
+#format = "pdf"
+

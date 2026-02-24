@@ -1,4 +1,4 @@
-# PS-1: Navigation - Moving Around Your File System
+# PS-1: Navigation - Moving Around Your File System {#powershell_foundation_ps_1_navigation-ps_1_navigation}
 
 **Duration:** 1 class period  
 **Prerequisite:** PS-0 (Getting Started)

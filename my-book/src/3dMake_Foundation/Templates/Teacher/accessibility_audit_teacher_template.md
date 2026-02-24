@@ -1,4 +1,4 @@
-# Accessibility Audit - Teacher Template (Extension Project)
+# Accessibility Audit - Teacher Template (Extension Project) {#3dmake_foundation_templates_teacher-accessibility_audit_teacher_template}
 
 ## Briefing
 

@@ -1,4 +1,4 @@
-# Feedback Collection Template
+# Feedback Collection Template {#3dmake_foundation_lessons_3dmake_11-feedback_collection_template}
 
 Structured approach to gathering and analyzing feedback from users and stakeholders throughout the design process.
 
@@ -232,10 +232,10 @@ Structured approach to gathering and analyzing feedback from users and stakehold
 
 | Metric                  | Average | Range | Status |
 |-------------------------|---------|-------|--------|
-| Overall Satisfaction    | /5      | -     | //     |
-| Likelihood to Recommend | /5      | -     | //     |
-| Meets Needs             | /5      | -     | //     |
-| Usability Rating        | /5      | -     | //     |
+| Overall Satisfaction    | /5      |       |        |
+| Likelihood to Recommend | /5      |       |        |
+| Meets Needs             | /5      |       |        |
+| Usability Rating        | /5      |       |        |
 
 ---
 

@@ -1,4 +1,4 @@
-# Bonus Print - Guided Extension 
+# Bonus Print - Guided Extension  {#assets_3dmake_foundation_lessons_3dmake_2_bonus_print-bonus-print}
 
 Estimated time: 3-5 hours
 

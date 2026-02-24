@@ -1,4 +1,4 @@
-# PS-4: Environment Variables, PATH, and Aliases 
+# PS-4: Environment Variables, PATH, and Aliases  {#powershell_foundation_ps_4_environment_variables_aliases-ps_4_environment_variables_aliases}
 
 
 

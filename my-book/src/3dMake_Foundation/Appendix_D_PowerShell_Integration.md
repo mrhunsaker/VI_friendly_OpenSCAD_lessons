@@ -1,4 +1,4 @@
-# Appendix D: PowerShell Integration for SCAD Workflows
+# Appendix D: PowerShell Integration for SCAD Workflows {#3dmake_foundation-appendix_d_powershell_integration}
 
 This appendix shows how **PowerShell (command-line scripting)** streamlines 3D design workflows, automating the repetitive tasks from design through printing. It bridges **PowerShell_Foundation concepts** with **3dMake_Foundation practical applications**.
 

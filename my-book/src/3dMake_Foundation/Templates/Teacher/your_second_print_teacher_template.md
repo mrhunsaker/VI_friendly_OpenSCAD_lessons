@@ -1,4 +1,4 @@
-# Your Second Print - Teacher Template (Extension Project)
+# Your Second Print - Teacher Template (Extension Project) {#3dmake_foundation_templates_teacher-your_second_print_teacher_template}
 
 ## Briefing
 

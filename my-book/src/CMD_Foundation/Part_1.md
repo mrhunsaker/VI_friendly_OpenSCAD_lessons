@@ -1,4 +1,4 @@
-# Part 1: Foundations of Windows CMD - Terminal & Screen Reader Accessibility
+# Part 1: Foundations of Windows CMD - Terminal & Screen Reader Accessibility {#cmd_foundation-part_1}
 
 This section covers terminal fundamentals, screen reader accessibility, and command-line basics needed before diving into 3D design with OpenSCAD. This is an alternate pathway to the PowerShell curriculum, using Windows Command Prompt (CMD) instead.
 

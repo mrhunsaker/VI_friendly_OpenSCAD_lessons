@@ -1,13 +1,13 @@
-# Lesson 1: Environmental Configuration and the Developer Workflow 
+# Lesson 1: Environmental Configuration and the Developer Workflow  {#3dmake_foundation_lessons_3dmake_1-lessons_3dmake_1}
 
 Estimated time: 90-120 minutes
 
-## **Learning Objectives**
-- Install and verify `3dm`[^1], `openscad`[^2], and a slicer are discoverable in the terminal
+## Learning Objectives
+- Install and verify 3dm[^1], openscad[^2], and a slicer are discoverable in the terminal
 - Initialize a 3dMake project and understand the project scaffold (`src/`, `build/`, `3dmake.toml`)
 - Edit `src/main.scad` using OpenSCAD's parametric design capabilities[^3], run `3dm build`, and inspect the generated `build/main.stl`
 
-## **Materials**
+## Materials
 - Terminal with 3dMake installed
 - Editor (VS Code or Notepad)
 - Example scaffold or classroom repository
@@ -19,7 +19,7 @@ Estimated time: 90-120 minutes
 2. Create a project scaffold with `3dm new` and open `src/main.scad` using `3dm edit-model`. For a comprehensive introduction to the workflow, consult the OpenSCAD documentation[^2].
 3. Add three top-level parameters (e.g., `width`, `height`, `thickness`) and a minimal model. This demonstrates the parametric design philosophy central to OpenSCAD[^3].
 
-   **Example `src/main.scad`:**
+   Example `src/main.scad`:
    ```openscad
    // Top-level parameters (change these to customize your model)
    width = 50;      // mm
@@ -42,7 +42,7 @@ Professional OpenSCAD code follows consistent documentation practices for clarit
 
 ### Comment Types and When to Use Them
 
-**File Header Comments** - Describe the entire file's purpose:
+File Header Comments - Describe the entire file's purpose:
 ```openscad
 // ==============================================================
 // Parametric Phone Stand - Design v2.1
@@ -59,7 +59,7 @@ Professional OpenSCAD code follows consistent documentation practices for clarit
 // ==============================================================
 ```
 
-**Section Comments** - Organize code into logical blocks:
+Section Comments - Organize code into logical blocks:
 ```openscad
 // ============================================
 // CUSTOMIZABLE PARAMETERS
@@ -81,7 +81,7 @@ module base() { ... }
 module stand() { ... }
 ```
 
-**Inline Comments** - Clarify complex logic:
+Inline Comments - Clarify complex logic:
 ```openscad
 // Use minkowski for smooth edges (prevents sharp corners)
 module rounded_base() {
@@ -92,7 +92,7 @@ module rounded_base() {
 }
 ```
 
-**Parameter Documentation** - Explain units and constraints:
+Parameter Documentation - Explain units and constraints:
 ```openscad
 // Parameter ranges and units
 width = 100;         // mm - must be > 50 mm for stability
@@ -104,12 +104,12 @@ $fn = 32;            // render quality - use 16-20 for preview, 32+ for export
 
 ### Documentation Best Practices
 
-**1. Write for Your Audience**
+1. Write for Your Audience
 - Document assumptions and constraints
 - Explain non-obvious design choices
 - Use clear parameter names (`wall_thickness` not `w`)
 
-**2. Include Module Documentation**
+2. Include Module Documentation
 ```openscad
 // Create a hollow box with walls of specified thickness
 // Parameters: outer_w, outer_d, outer_h (mm), wall (mm)
@@ -122,7 +122,7 @@ module hollow_box(outer_w, outer_d, outer_h, wall) {
 }
 ```
 
-**3. Document Known Limitations**
+3. Document Known Limitations
 ```openscad
 // Phone Stand v2
 // Limitations:
@@ -132,7 +132,7 @@ module hollow_box(outer_w, outer_d, outer_h, wall) {
 // - Supports may be needed on underside of angle > 70 degrees
 ```
 
-**4. Accessibility in Code Documentation**
+4. Accessibility in Code Documentation
 - Use plain language, not jargon (or explain jargon)
 - Explain visual concepts in text (e.g., "fillet radius of 3mm rounds sharp corners")
 - Include parameter ranges and units always
@@ -222,10 +222,10 @@ union() {
 ```
 
 This level of documentation makes your code:
-- **Reusable:** Others can use it without reading every line
-- **Maintainable:** You can modify it months later and understand why things are designed a certain way
-- **Accessible:** Non-visual users can understand the design intent and constraints
-- **Professional:** Employers and collaborators trust well-documented code
+- Reusable: Others can use it without reading every line
+- Maintainable: You can modify it months later and understand why things are designed a certain way
+- Accessible: Non-visual users can understand the design intent and constraints
+- Professional: Employers and collaborators trust well-documented code
 
 ### Checkpoints
 - After step 2 you can locate `3dmake.toml` and the `build/` directory. Ensure your project scaffold matches the expected structure described in the 3dMake repository[^1].
@@ -242,34 +242,34 @@ Before you send your first print, it's important to understand how 3D printers w
 
 FDM printing builds objects layer by layer, where each layer is a thin horizontal slice of your STL file. Here's the complete pipeline:
 
-1. **STL File** -> Your 3dMake model exported as an STL geometry file
-2. **Slicer Analysis** -> Software like PrusaSlicer reads the STL and divides it into layers
-3. **G-code Generation** -> The slicer converts layers into machine instructions (coordinates, temperature, speed)
-4. **Printing** -> The printer reads G-code, heats the nozzle to ~200-230C, and extrudes plastic one layer at a time
-5. **Cooling & Solidification** -> Each layer cools and bonds to the layer below
+1. STL File -> Your 3dMake model exported as an STL geometry file
+2. Slicer Analysis -> Software like PrusaSlicer reads the STL and divides it into layers
+3. G-code Generation -> The slicer converts layers into machine instructions (coordinates, temperature, speed)
+4. Printing -> The printer reads G-code, heats the nozzle to ~200-230C, and extrudes plastic one layer at a time
+5. Cooling & Solidification -> Each layer cools and bonds to the layer below
 
 ### Critical Settings That Affect Your Print
 
 When you open your STL in a slicer, you'll encounter several parameters that directly impact quality, time, and strength:
 
-#### **Layer Height**
-- **Definition:** The thickness of each printed layer (typically 0.15-0.30 mm)
-- **Effect on Time:** Smaller layers = more detail but longer print time. A layer height of 0.15 mm prints slower than 0.30 mm because more layers must be printed
-- **Effect on Quality:** Smaller layers produce smoother surfaces; larger layers print faster but appear more "stepped"
-- **Common Choice:** 0.20 mm is a good balance for classroom projects
+#### Layer Height
+- Definition: The thickness of each printed layer (typically 0.15-0.30 mm)
+- Effect on Time: Smaller layers = more detail but longer print time. A layer height of 0.15 mm prints slower than 0.30 mm because more layers must be printed
+- Effect on Quality: Smaller layers produce smoother surfaces; larger layers print faster but appear more "stepped"
+- Common Choice: 0.20 mm is a good balance for classroom projects
 
-#### **Infill**
-- **Definition:** The interior solid percentage of your model (0-100%)
-- **Purpose:** Infill provides internal strength without using solid material throughout (which would be wasteful and heavy)
-- **Common Values for Classroom:** 15-20% infill is typical; 10% for very light parts, 50% for functional parts
-- **Infill Patterns:** Grid, gyroid, or honeycomb patterns determine how the internal structure looks. Grid is simple and fast; gyroid is strong but more complex
-- **Rule of Thumb:** Higher infill = stronger, heavier, and longer print time
+#### Infill
+- Definition: The interior solid percentage of your model (0-100%)
+- Purpose: Infill provides internal strength without using solid material throughout (which would be wasteful and heavy)
+- Common Values for Classroom: 15-20% infill is typical; 10% for very light parts, 50% for functional parts
+- Infill Patterns: Grid, gyroid, or honeycomb patterns determine how the internal structure looks. Grid is simple and fast; gyroid is strong but more complex
+- Rule of Thumb: Higher infill = stronger, heavier, and longer print time
 
-#### **Supports**
-- **Definition:** Temporary structures the printer creates to hold overhanging geometry during printing
-- **When Needed:** Any geometry that "hangs" at a steep angle (typically > 45 from vertical) requires supports
-- **Post-Processing:** Supports must be removed after printing (breaking them off, dissolving them, or picking them away)
-- **Cost:** Supports increase print time and waste material, so good STL design minimizes them
+#### Supports
+- Definition: Temporary structures the printer creates to hold overhanging geometry during printing
+- When Needed: Any geometry that "hangs" at a steep angle (typically > 45 from vertical) requires supports
+- Post-Processing: Supports must be removed after printing (breaking them off, dissolving them, or picking them away)
+- Cost: Supports increase print time and waste material, so good STL design minimizes them
 
 ### Why This Matters for Your Design
 
@@ -300,13 +300,13 @@ Once you've completed this lesson, you're ready to work on hands-on projects. Th
 
 These projects are located in the Lesson 1 assets folder and are designed to reinforce your skills in practical contexts:
 
-- **Your First Print** ([Lesson 1 Assets - Your First Print](../../assets/3dMake_Foundation/Lessons_3dMake_1/Your_First_Print/your-first-print.md))
+- Your First Print ([Lesson 1 Assets - Your First Print](../../assets/3dMake_Foundation/Lessons_3dMake_1/Your_First_Print/your-first-print.md))
   - Goal: Low-friction introduction to the complete printing workflow
   - Skills: Setup, basic slicing, first-time print validation
   - Best for: After completing Lesson 1
   - Asset folder: [assets/Lessons_3dMake_1/Your_First_Print/](../../assets/3dMake_Foundation/Lessons_3dMake_1/Your_First_Print/)
 
-- **Basic Project Scaffold Template** ([Lesson 1 Assets - SCAD Template](../../assets/3dMake_Foundation/Lessons_3dMake_1/basic_project_scaffold.scad))
+- Basic Project Scaffold Template ([Lesson 1 Assets - SCAD Template](../../assets/3dMake_Foundation/Lessons_3dMake_1/basic_project_scaffold.scad))
   - A starter template for your own 3D printing projects
   - Includes parameter configuration and TODO sections
   
@@ -314,19 +314,19 @@ These projects are located in the Lesson 1 assets folder and are designed to rei
 
 The `3dmake_learning_series/` folder contains worked examples aligned with this curriculum:
 
-- **01_cube_keycap** (Beginner) - Text embossing basics
-- **02_parametric_phone_stand** (Intermediate) - Transforms and Minkowski fillets
-- **03_stackable_bins** (Advanced) - Tolerance and assemblies
+- 01_cube_keycap (Beginner) - Text embossing basics
+- 02_parametric_phone_stand (Intermediate) - Transforms and Minkowski fillets
+- 03_stackable_bins (Advanced) - Tolerance and assemblies
 
 ### Reference Materials
 
 Quick-reference guides are available in `Reference_Materials/`:
 
-- **3dmake-setup-guide.md** - Complete setup walkthrough and command reference
-- **openscad-cheat-sheet.md** - Keyboard shortcuts, syntax, and common functions
-- **filament-comparison-table.md** - Material properties for different print scenarios
-- **master-rubric.md** - Assessment criteria for evaluating student work
-- **markdown-starter-guide.md** - Documentation best practices
+- 3dmake-setup-guide.md - Complete setup walkthrough and command reference
+- openscad-cheat-sheet.md - Keyboard shortcuts, syntax, and common functions
+- filament-comparison-table.md - Material properties for different print scenarios
+- master-rubric.md - Assessment criteria for evaluating student work
+- markdown-starter-guide.md - Documentation best practices
 
 ---
 
@@ -359,9 +359,9 @@ Quick-reference guides are available in `Reference_Materials/`:
 
 For deeper exploration of OpenSCAD and parametric design, consult these resources:
 
-- **[Programming with OpenSCAD EPUB Textbook](../../assets/Programming_with_OpenSCAD.epub)** - Comprehensive reference with examples of parametric design, transformations, and modules
-- **[CodeSolutions Repository](https://github.com/ProgrammingWithOpenSCAD/CodeSolutions)** - Working OpenSCAD code organized by topic, including 3D primitives and parametric examples relevant to Lesson 1
-- **[OpenSCAD Quick Reference](https://programmingwithopenscad.github.io/quick-reference.html)** - Visual syntax guide and command reference
+- [Programming with OpenSCAD EPUB Textbook](../../assets/Programming_with_OpenSCAD.epub) - Comprehensive reference with examples of parametric design, transformations, and modules
+- [CodeSolutions Repository](https://github.com/ProgrammingWithOpenSCAD/CodeSolutions) - Working OpenSCAD code organized by topic, including 3D primitives and parametric examples relevant to Lesson 1
+- [OpenSCAD Quick Reference](https://programmingwithopenscad.github.io/quick-reference.html) - Visual syntax guide and command reference
 
 [^1]: 3DMake GitHub Repository - https://github.com/tdeck/3dmake
 

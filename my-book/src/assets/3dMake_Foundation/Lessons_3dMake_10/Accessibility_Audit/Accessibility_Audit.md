@@ -1,4 +1,4 @@
-# Accessibility Audit - Extension Project
+# Accessibility Audit - Extension Project {#assets_3dmake_foundation_lessons_3dmake_10_accessibility_audit-accessibility_audit}
 
 **Estimated time:** 2-4 hours
 
@@ -28,7 +28,7 @@ By completing this project, you will:
 
 ## Starter files
 
-- [starter.scad](../../../ExtensionProjects/AccessibilityAudit/starter.scad) - small tactile marker scaffold for testing contrast and tactile cues.
+- [starter.scad](../../../Extension_Projects/Accessibility_Audit/starter.scad) - small tactile marker scaffold for testing contrast and tactile cues.
 
 ## Assessment Questions (Optional)
 

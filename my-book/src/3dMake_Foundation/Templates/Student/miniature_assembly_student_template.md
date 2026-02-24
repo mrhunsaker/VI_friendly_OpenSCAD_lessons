@@ -1,4 +1,4 @@
-# Miniature Assembly - Student Documentation Template (Extension Project)
+# Miniature Assembly - Student Documentation Template (Extension Project) {#3dmake_foundation_templates_student-miniature_assembly_student_template}
 
 - Author:
 - Date:

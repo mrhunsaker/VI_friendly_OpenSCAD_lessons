@@ -1,5 +1,6 @@
+
 <!DOCTYPE HTML>
-<html lang="en" class="rust sidebar-visible" dir="ltr">
+<html lang="en" class="latte sidebar-visible" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -57,34 +58,35 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../../favicon-de23e50b.svg">
-        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
-        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
-        <link rel="stylesheet" href="../../css/general-2459343d.css">
-        <link rel="stylesheet" href="../../css/chrome-ae938929.css">
-        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../src/assets/custom-8d04802b.css">
+        <link rel="stylesheet" href="../../src/assets/custom.css">
+        <link rel="stylesheet" href="../../theme/catppuccin.css">
 
 
         <!-- Provide site root and default themes to javascript -->
         <script>
             const path_to_root = "../../";
-            const default_light_theme = "rust";
-            const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-c9b9a984.js";
+            const default_light_theme = "latte";
+            const default_dark_theme = "mocha";
+            window.path_to_searchindex_js = "../../searchindex.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-9182b28d.js"></script>
+        <script src="../../toc.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -122,7 +124,7 @@
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             const html = document.documentElement;
-            html.classList.remove('rust')
+            html.classList.remove('latte')
             html.classList.add(theme);
             html.classList.add("js");
         </script>
@@ -165,21 +167,20 @@
                 <div id="mdbook-menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
                         <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
-                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                            <!-- icon removed: fa helper unsupported -->
                         </label>
                         <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
-                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                            <!-- icon removed: fa helper unsupported -->
                         </button>
                         <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
                             <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="frappe">Frappé</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mocha">Mocha</button></li>
                         </ul>
                         <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
-                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                            <!-- icon removed: fa helper unsupported -->
                         </button>
                     </div>
 
@@ -187,7 +188,7 @@
 
                     <div class="right-buttons">
                         <a href="../../print.html" title="Print this book" aria-label="Print this book">
-                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                            <!-- icon removed: fa helper unsupported -->
                         </a>
 
                     </div>
@@ -198,7 +199,7 @@
                         <div class="search-wrapper">
                             <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
                             <div class="spinner-wrapper">
-                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                                <!-- icon removed: fa helper unsupported -->
                             </div>
                         </div>
                     </form>
@@ -220,10 +221,12 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="ps-6-advanced-terminal-techniques---scripts-functions--professional-workflows"><a class="header" href="#ps-6-advanced-terminal-techniques---scripts-functions--professional-workflows">PS-6: Advanced Terminal Techniques - Scripts, Functions &amp; Professional Workflows</a></h1>
-<p><strong>Duration:</strong> 4-4.5 hours (for screen reader users)<br><strong>Prerequisites:</strong> Complete PS-0 through PS-5<br><strong>Skill Level:</strong> Advanced intermediate</p>
-<p>This lesson extends PowerShell skills to professional-level workflows. You’ll learn to automate complex tasks, write reusable code, and integrate tools for 3D printing workflows.</p>
-<hr>
+                        <h1 id="powershell_foundation_ps_6_advanced_techniques-ps_6_advanced_techniques"><a class="header" href="#powershell_foundation_ps_6_advanced_techniques-ps_6_advanced_techniques">PS-6: Advanced Terminal Techniques - Scripts, Functions &amp; Professional Workflows</a></h1>
+<p><strong>Duration:</strong> 4-4.5 hours (for screen reader users)<br />
+<strong>Prerequisites:</strong> Complete PS-0 through PS-5<br />
+<strong>Skill Level:</strong> Advanced intermediate</p>
+<p>This lesson extends PowerShell skills to professional-level workflows. You'll learn to automate complex tasks, write reusable code, and integrate tools for 3D printing workflows.</p>
+<hr />
 <h2 id="learning-objectives"><a class="header" href="#learning-objectives">Learning Objectives</a></h2>
 <p>By the end of this lesson, you will be able to:</p>
 <ul>
@@ -234,9 +237,9 @@
 <li>Debug scripts when something goes wrong</li>
 <li>Create professional workflows combining multiple tools</li>
 </ul>
-<hr>
+<hr />
 <h2 id="part-1-powershell-scripts-basics"><a class="header" href="#part-1-powershell-scripts-basics">Part 1: PowerShell Scripts Basics</a></h2>
-<h3 id="whats-a-script"><a class="header" href="#whats-a-script">What’s a Script?</a></h3>
+<h3 id="whats-a-script"><a class="header" href="#whats-a-script">What's a Script?</a></h3>
 <p>A script is a file containing PowerShell commands that run in sequence. Instead of typing commands one by one, you put them in a file and run them all at once.</p>
 <p><strong>Why use scripts?</strong></p>
 <ul>
@@ -268,7 +271,7 @@ Write-Output "Script is done!"
 <p><strong>What happens:</strong>
 PowerShell runs each command in sequence and shows output.</p>
 <h3 id="important-script-execution-policy"><a class="header" href="#important-script-execution-policy">Important: Script Execution Policy</a></h3>
-<p>On some Windows systems, you might get an error about “execution policy”. This is a security feature.</p>
+<p>On some Windows systems, you might get an error about "execution policy". This is a security feature.</p>
 <p><strong>To fix it temporarily:</strong></p>
 <pre><code class="language-powershell">Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 </code></pre>
@@ -276,7 +279,7 @@ PowerShell runs each command in sequence and shows output.</p>
 <pre><code class="language-powershell">.\my-first-script.ps1
 </code></pre>
 <p><strong>Note for screen readers:</strong> Your screen reader will announce the error if there is one. Use <code>Get-Help Get-ExecutionPolicy</code> for more information.</p>
-<hr>
+<hr />
 <h2 id="part-2-variables-and-parameters"><a class="header" href="#part-2-variables-and-parameters">Part 2: Variables and Parameters</a></h2>
 <h3 id="using-variables"><a class="header" href="#using-variables">Using Variables</a></h3>
 <p>Variables store values you want to use later.</p>
@@ -311,7 +314,7 @@ ls -n
 ListFolder -path "C:\Users\YourName\Documents"
 ListFolder -path "C:\Users\YourName\Downloads"
 </code></pre>
-<p><strong>What’s happening:</strong></p>
+<p><strong>What's happening:</strong></p>
 <ul>
 <li><code>function ListFolder</code> = name of the function</li>
 <li><code>param([string]$path)</code> = the function accepts a parameter called <code>$path</code></li>
@@ -319,7 +322,7 @@ ListFolder -path "C:\Users\YourName\Downloads"
 <li>Call the function with <code>-path "value"</code></li>
 </ul>
 <p><strong>Screen reader tip:</strong> When you call a function, PowerShell will announce the results just like any command.</p>
-<hr>
+<hr />
 <h2 id="part-3-loops---repeating-tasks"><a class="header" href="#part-3-loops---repeating-tasks">Part 3: Loops - Repeating Tasks</a></h2>
 <h3 id="loop-over-files"><a class="header" href="#loop-over-files">Loop Over Files</a></h3>
 <p>Imagine you have 10 SCAD files and want to print their contents. You could do it 10 times manually, or use a loop.</p>
@@ -332,7 +335,7 @@ foreach ($file in $scadFiles) {
     Write-Output ""
 }
 </code></pre>
-<p><strong>What’s happening:</strong></p>
+<p><strong>What's happening:</strong></p>
 <ul>
 <li><code>$scadFiles = ls -n *.scad</code> = find all .scad files and store in variable</li>
 <li><code>foreach ($file in $scadFiles)</code> = for each file, do this:
@@ -351,14 +354,14 @@ foreach ($file in $scadFiles) {
     # Do something here
 }
 </code></pre>
-<p><strong>What’s happening:</strong></p>
+<p><strong>What's happening:</strong></p>
 <ul>
 <li><code>for ($i = 1; $i -le 5; $i++)</code> = loop from 1 to 5</li>
 <li><code>$i</code> = counter variable (starts at 1, increases each loop)</li>
-<li><code>-le</code> = “less than or equal to” (stop when $i &gt; 5)</li>
+<li><code>-le</code> = "less than or equal to" (stop when $i &gt; 5)</li>
 <li><code>$i++</code> = add 1 to $i each time through</li>
 </ul>
-<hr>
+<hr />
 <h2 id="part-4-real-world-example---batch-processing-scad-files"><a class="header" href="#part-4-real-world-example---batch-processing-scad-files">Part 4: Real-World Example - Batch Processing SCAD Files</a></h2>
 <h3 id="scenario"><a class="header" href="#scenario">Scenario</a></h3>
 <p>You have 10 OpenSCAD (.scad) files in a folder. You want to:</p>
@@ -418,7 +421,7 @@ Found 10 files
 [... more files ...]
 Batch processing complete!
 </code></pre>
-<hr>
+<hr />
 <h2 id="part-5-error-handling"><a class="header" href="#part-5-error-handling">Part 5: Error Handling</a></h2>
 <h3 id="try-catch-blocks"><a class="header" href="#try-catch-blocks">Try-Catch Blocks</a></h3>
 <p>What if something goes wrong? Use try-catch:</p>
@@ -432,7 +435,7 @@ Batch processing complete!
     Write-Output "Details: $_"
 }
 </code></pre>
-<p><strong>What’s happening:</strong></p>
+<p><strong>What's happening:</strong></p>
 <ul>
 <li><code>try</code> = run these commands</li>
 <li>If an error happens, PowerShell jumps to <code>catch</code></li>
@@ -456,16 +459,16 @@ Batch processing complete!
 
 ProcessFolder -folderPath "C:\Users\YourName\Documents"
 </code></pre>
-<p><strong>What’s happening:</strong></p>
+<p><strong>What's happening:</strong></p>
 <ul>
 <li><code>Test-Path</code> = check if folder exists</li>
 <li><code>-not</code> = if NOT true</li>
 <li><code>return</code> = exit the function early if error</li>
 </ul>
-<hr>
+<hr />
 <h2 id="part-6-debugging-scripts"><a class="header" href="#part-6-debugging-scripts">Part 6: Debugging Scripts</a></h2>
 <h3 id="common-errors-and-solutions"><a class="header" href="#common-errors-and-solutions">Common Errors and Solutions</a></h3>
-<h4 id="error-1-command-not-found"><a class="header" href="#error-1-command-not-found">Error 1: “Command not found”</a></h4>
+<h4 id="error-1-command-not-found"><a class="header" href="#error-1-command-not-found">Error 1: "Command not found"</a></h4>
 <p><strong>Cause:</strong> Typo in command name</p>
 <p><strong>Fix:</strong> Check spelling</p>
 <pre><code class="language-powershell"># Wrong:
@@ -474,13 +477,13 @@ writ-output "hello"
 # Correct:
 Write-Output "hello"
 </code></pre>
-<h4 id="error-2-variable-is-null"><a class="header" href="#error-2-variable-is-null">Error 2: “Variable is null”</a></h4>
+<h4 id="error-2-variable-is-null"><a class="header" href="#error-2-variable-is-null">Error 2: "Variable is null"</a></h4>
 <p><strong>Cause:</strong> Variable was never assigned</p>
 <p><strong>Fix:</strong> Make sure variable is set before using it</p>
 <pre><code class="language-powershell">$myvar = "hello"  # Set first
 Write-Output $myvar  # Then use
 </code></pre>
-<h4 id="error-3-cannot-find-path"><a class="header" href="#error-3-cannot-find-path">Error 3: “Cannot find path”</a></h4>
+<h4 id="error-3-cannot-find-path"><a class="header" href="#error-3-cannot-find-path">Error 3: "Cannot find path"</a></h4>
 <p><strong>Cause:</strong> Wrong folder path</p>
 <p><strong>Fix:</strong> Verify path exists</p>
 <pre><code class="language-powershell"># Check if path exists:
@@ -488,14 +491,14 @@ Test-Path -Path "C:\Users\YourName\Documents"
 
 # If false, the path is wrong
 </code></pre>
-<h4 id="error-4-access-denied"><a class="header" href="#error-4-access-denied">Error 4: “Access denied”</a></h4>
-<p><strong>Cause:</strong> Don’t have permission</p>
+<h4 id="error-4-access-denied"><a class="header" href="#error-4-access-denied">Error 4: "Access denied"</a></h4>
+<p><strong>Cause:</strong> Don't have permission</p>
 <p><strong>Fix:</strong> Run PowerShell as administrator</p>
 <ul>
 <li>Right-click PowerShell -&gt; Run as administrator</li>
 </ul>
 <h3 id="debugging-technique-trace-output"><a class="header" href="#debugging-technique-trace-output">Debugging Technique: Trace Output</a></h3>
-<p>Add <code>Write-Output</code> statements to track what’s happening:</p>
+<p>Add <code>Write-Output</code> statements to track what's happening:</p>
 <pre><code class="language-powershell">$path = "C:\Users\YourName\Documents"
 Write-Output "Starting script. Path is: $path"
 
@@ -511,7 +514,7 @@ foreach ($file in $files) {
 Write-Output "Script complete"
 </code></pre>
 <p>Your screen reader will announce each step, so you know where errors happen.</p>
-<hr>
+<hr />
 <h2 id="part-7-creating-professional-workflows"><a class="header" href="#part-7-creating-professional-workflows">Part 7: Creating Professional Workflows</a></h2>
 <h3 id="example-1-automated-project-setup"><a class="header" href="#example-1-automated-project-setup">Example 1: Automated Project Setup</a></h3>
 <p><strong>Scenario:</strong> You start a new 3D printing project regularly. Instead of creating folders manually:</p>
@@ -598,7 +601,7 @@ if ($verified) {
     Write-Output "Safe to proceed with processing"
 }
 </code></pre>
-<hr>
+<hr />
 <h2 id="part-8-screen-reader-tips-for-scripts"><a class="header" href="#part-8-screen-reader-tips-for-scripts">Part 8: Screen Reader Tips for Scripts</a></h2>
 <h3 id="making-script-output-readable"><a class="header" href="#making-script-output-readable">Making Script Output Readable</a></h3>
 <p><strong>Problem:</strong> Script runs but output scrolls too fast or is hard to follow</p>
@@ -632,7 +635,7 @@ foreach ($file in $files) {
 
 Write-Output "All $count files processed!"
 </code></pre>
-<hr>
+<hr />
 <h2 id="practice-exercises"><a class="header" href="#practice-exercises">Practice Exercises</a></h2>
 <h3 id="exercise-1-your-first-script"><a class="header" href="#exercise-1-your-first-script">Exercise 1: Your First Script</a></h3>
 <p><strong>Goal:</strong> Create and run a simple script</p>
@@ -707,7 +710,7 @@ Write-Output "Loop complete!"
 </li>
 <li>Run: <code>.\repeat.ps1</code></li>
 </ol>
-<p><strong>Checkpoint:</strong> Should print “Iteration 1” through “Iteration 5”.</p>
+<p><strong>Checkpoint:</strong> Should print "Iteration 1" through "Iteration 5".</p>
 <h3 id="exercise-5-real-world-script"><a class="header" href="#exercise-5-real-world-script">Exercise 5: Real-World Script</a></h3>
 <p><strong>Goal:</strong> Create a useful script for a real task</p>
 <p><strong>Steps:</strong></p>
@@ -739,7 +742,7 @@ Write-Output "=== END REPORT ==="
 <li>Run: <code>.\report.ps1</code></li>
 </ol>
 <p><strong>Checkpoint:</strong> Should show report of all files in the test folder.</p>
-<hr>
+<hr />
 <h2 id="quiz---lesson-ps-6"><a class="header" href="#quiz---lesson-ps-6">Quiz - Lesson PS-6</a></h2>
 <ol>
 <li>What is a PowerShell script?</li>
@@ -753,7 +756,7 @@ Write-Output "=== END REPORT ==="
 <li>When would you use <code>Try-Catch</code>?</li>
 <li>What technique makes script output readable for screen readers?</li>
 </ol>
-<hr>
+<hr />
 <h2 id="extension-problems"><a class="header" href="#extension-problems">Extension Problems</a></h2>
 <ol>
 <li><strong>Auto-Backup Script:</strong> Create a script that copies all files from one folder to another, announcing progress</li>
@@ -767,16 +770,16 @@ Write-Output "=== END REPORT ==="
 <li><strong>Report Generator:</strong> Create a summary report of all projects in a folder</li>
 <li><strong>Error Tracker:</strong> Script that lists all commands that had errors in your recent history</li>
 </ol>
-<hr>
+<hr />
 <h2 id="important-notes"><a class="header" href="#important-notes">Important Notes</a></h2>
 <ul>
 <li><strong>Always test scripts on small sets of files first</strong> before running them on important data</li>
 <li><strong>Save your work regularly</strong> - use version control if possible</li>
-<li><strong>Test error handling</strong> - make sure errors don’t crash silently</li>
+<li><strong>Test error handling</strong> - make sure errors don't crash silently</li>
 <li><strong>Document your scripts</strong> - use comments so you remember what each part does</li>
 <li><strong>Backup before batch operations</strong> - if something goes wrong, you have the original</li>
 </ul>
-<hr>
+<hr />
 <h2 id="references"><a class="header" href="#references">References</a></h2>
 <ul>
 <li><strong>Microsoft PowerShell Scripting Guide:</strong> https://docs.microsoft.com/powershell/scripting/</li>
@@ -784,20 +787,14 @@ Write-Output "=== END REPORT ==="
 <li><strong>Error Handling:</strong> https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_error_handling</li>
 <li><strong>Loops:</strong> https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_foreach</li>
 </ul>
-<hr>
+<hr />
 <p><strong>Next Steps:</strong> After mastering this lesson, explore PowerShell modules, remoting, and 3D printing integration in the main curriculum.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../PowerShell_Foundation/PS_5_filling_in_the_gaps/PS_5_filling_in_the_gaps.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
-                            </a>
 
-                            <a rel="next prefetch" href="../../PowerShell_Foundation/PS_Unit_Test/PS_Unit_Test.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
-                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -805,22 +802,12 @@ Write-Output "=== END REPORT ==="
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../PowerShell_Foundation/PS_5_filling_in_the_gaps/PS_5_filling_in_the_gaps.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
-                    </a>
 
-                    <a rel="next prefetch" href="../../PowerShell_Foundation/PS_Unit_Test/PS_Unit_Test.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
-                    </a>
             </nav>
 
         </div>
 
-        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
-        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
-        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
-        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
-        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+        <!-- templates for fa icons removed: fa helper unsupported -->
 
 
 
@@ -829,13 +816,13 @@ Write-Output "=== END REPORT ==="
         </script>
 
 
-        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
-        <script src="../../mark-09e88c2c.min.js"></script>
-        <script src="../../searcher-c2a407aa.js"></script>
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
 
-        <script src="../../clipboard-1626706a.min.js"></script>
-        <script src="../../highlight-4a3ec6df.js"></script>
-        <script src="../../book-a0b12cfe.js"></script>
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
 
         <!-- Custom JS scripts -->
 

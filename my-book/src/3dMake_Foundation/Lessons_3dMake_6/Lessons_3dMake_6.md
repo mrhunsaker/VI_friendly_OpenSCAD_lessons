@@ -1,10 +1,10 @@
-# Lesson 6: Practical 3dm Commands and Text Embossing
+# Lesson 6: Practical 3dm Commands and Text Embossing {#3dmake_foundation_lessons_3dmake_6-lessons_3dmake_6}
 
 Estimated time: 90-120 minutes
 
 **Learning Objectives**
 
-- Master key 3dMake commands: `3dm describe`, `3dm preview`, `3dm orient`, `3dm slice`[^1]
+- Master key 3dMake commands: `3dm describe`, `3dm preview`, `3dm orient`, `3dm slice` [^1]
 - Apply text embossing and parametric customization to create a personalized keycap[^2]
 - Generate tactile 2D previews for accessible model inspection[^1]
 
@@ -403,7 +403,7 @@ Modify the keycap by changing these parameters and observing the results:
 ## Extension Problems (10)
 
 1. Create three keycap variants (small, medium, large) by changing `key_size` and export each as a separate STL[^2].
-2. Add a decorative border using `linear_extrude` and `text()`; verify the result with `3dm preview`[^1].
+2. Add a decorative border using `linear_extrude` and `text()`; verify the result with `3dm preview` [^1].
 3. Run `3dm describe`, `3dm preview`, and `3dm orient` on your keycap; document all outputs[^1].
 4. Modify the emboss module to support multiple characters in different positions[^2].
 5. Create a parametric keycap library with variants for different keyboard layouts (cherry, OEM, DSA profiles)[^2].

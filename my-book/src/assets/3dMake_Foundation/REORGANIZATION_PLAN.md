@@ -1,47 +1,47 @@
-# Mapping Extension Projects to Lessons
+# Mapping Extension Projects to Lessons {#assets_3dmake_foundation-reorganization_plan}
 
 ```
 Lesson 1: Environmental Configuration
-  +------ YourFirstPrint (primary)
+  +------ Your_First_Print (primary)
   +------ Supporting materials: Setup checklists, safety guides
 
 Lesson 2: Geometric Primitives
-  +------ YourSecondPrint (primary)
-  +------ BonusPrint (secondary)
+  +------ Your_Second_Print (primary)
+  +------ Bonus_Print (secondary)
   +------ Supporting: Slicer validation guides
 
 Lesson 3: Parametric Architecture
   +------ Supporting: Parametric templates, module examples
 
 Lesson 4: AI-Enhanced Verification
-  +------ DiceDiceDice (primary - testing & validation)
+  +------ Dice_Dice_Dice (primary - testing & validation)
   +------ Supporting: Design validation worksheets
 
 Lesson 5: Safety Protocols
   +------ Supporting: Safety checklists, material properties, maintenance logs
 
 Lesson 6: 3dm Commands & Text Embossing
-  +------ ParametricKeychain (primary - text embossing project)
-  +------ cubekeycap.scad (worked example)
+  +------ Parametric_Keychain (primary - text embossing project)
+  +------ cube_keycap.scad (worked example)
 
 Lesson 7: Parametric Transforms
-  +------ phonestand.scad (worked example)
+  +------ phone_stand.scad (worked example)
   +------ Supporting: Transform reference guides
 
 Lesson 8: Advanced Parametric Design & Tolerance
-  +------ SnapFitClip (primary - tolerance project)
-  +------ stackablebins.scad (worked example)
+  +------ Snap_Fit_Clip (primary - tolerance project)
+  +------ stackable_bins.scad (worked example)
   +------ Supporting: Tolerance templates, measurement guides
 
 Lesson 9: Automation & Workflows
   +------ Supporting: Batch scripts, automation templates
 
 Lesson 10: Practice & Troubleshooting
-  +------ AccessibilityAudit (primary - comprehensive assessment)
+  +------ Accessibility_Audit (primary - comprehensive assessment)
   +------ Supporting: Troubleshooting guides, QA checklists
 
 Lesson 11: Stakeholder-Centric Design
-  +------ BeadedJewelryUnit (primary - full design project)
+  +------ Beaded_Jewelry_Unit (primary - full design project)
   +------ Supporting: Interview templates, requirements forms
 ```
 
@@ -49,31 +49,31 @@ Lesson 11: Stakeholder-Centric Design
 
 ### Starter SCAD Templates
 
-- `parametrictemplate.scad` - Lesson 3
-- `moduletemplate.scad` - Lesson 3
-- `basicprojectscaffold.scad` - Lesson 1
+- `parametric_template.scad` - Lesson 3
+- `module_template.scad` - Lesson 3
+- `basic_project_scaffold.scad` - Lesson 1
 
 ### Supporting Materials
 
 - `safetychecklist.md` - Lesson 5
 - `maintenancelog.md` - Lesson 5
-- `materialpropertiesquickreference.md` - Lesson 5
-- `commonissuesandsolutions.md` - Lesson 10
-- `measurementcalibrationguide.md` - Lesson 10
-- `diagnosticchecklist.md` - Lesson 10
-- `buildall.sh` - Lesson 9
-- `testvariants.sh` - Lesson 9
-- `exportbatch.ps1` - Lesson 9
-- `stakeholderinterviewtemplate.md` - Lesson 11
-- `functionalrequirementstemplate.md` - Lesson 11
-- `designspecificationtemplate.md` - Lesson 11
-- `feedbackcollectiontemplate.md` - Lesson 11
+- `material_properties_quick_reference.md` - Lesson 5
+- `common_issues_and_solutions.md` - Lesson 10
+- `measurement_calibration_guide.md` - Lesson 10
+- `diagnostic_checklist.md` - Lesson 10
+- `build_all.sh` - Lesson 9
+- `test_variants.sh` - Lesson 9
+- `export_batch.ps1` - Lesson 9
+- `stakeholder_interview_template.md` - Lesson 11
+- `functional_requirements_template.md` - Lesson 11
+- `design_specification_template.md` - Lesson 11
+- `feedback_collection_template.md` - Lesson 11
 
 ## Implementation Status
 
 - [YES] Created folder structure for Lessons 1-5, 9-11
 - [YES] Created README.md for each lesson folder
--  Copy ExtensionProjects to lesson folders (in progress)
+-  Copy Extension_Projects to lesson folders (in progress)
 -  Move SCAD files to lesson asset folders (ready)
 -  Create starter SCAD templates
 -  Create supporting materials
@@ -82,7 +82,7 @@ Lesson 11: Stakeholder-Centric Design
 
 ## Next Steps
 
-1. Copy ExtensionProjects into corresponding lesson folders
+1. Copy Extension_Projects into corresponding lesson folders
 2. Create starter SCAD files
 3. Create supporting material templates
 4. Update lesson markdown files with new asset paths

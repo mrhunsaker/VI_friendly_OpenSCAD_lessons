@@ -34,8 +34,10 @@ echo "  Output: $BUILDOUTPUT"
 echo ""
 
 cd "$BOOKDIR"
-mdbook build --dest-dir "$BUILDOUTPUT"
+RUST_BACKTRACE=full mdbook build --dest-dir "$BUILDOUTPUT"
 
 echo ""
-echo " Build complete!"
-echo "HTML output is available at: $BUILDOUTPUT"
+echo " HTML Build complete!"
+echo " HTML output is available at: $BUILDOUTPUT"
+
+

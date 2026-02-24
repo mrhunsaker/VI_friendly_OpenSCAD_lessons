@@ -1,6 +1,6 @@
-# 3dMake Foundation Quick Reference Guide
+# 3dMake Foundation Quick Reference Guide {#3dmake_foundation-3dmake_quick_reference}
 
-**Fast lookup for lessons, projects, resources, and common tasks**
+Fast lookup for lessons, projects, resources, and common tasks
 
 ---
 
@@ -8,19 +8,19 @@
 
 ### All 11 Lessons at a Glance
 
-| #  | Title                       | Duration | Level         | Main Topics                                    | Key Project         |
-|----|-----------------------------|----------|---------------|------------------------------------------------|---------------------|
-| 1  | Environmental Configuration | 60-90m   | Beginner      | Setup, project structure, `3dm build`          | None                |
-| 2  | Geometric Primitives & CSG  | 60m      | Beginner      | Primitives, CSG operations, debugging          | None                |
-| 3  | Parametric Architecture     | 60m      | Beginner+     | Modules, libraries, parameters                 | None                |
-| 4  | AI Verification             | 45-60m   | Intermediate  | `3dm info`, validation, design documentation   | None                |
-| 5  | Safety & Physical Interface | 60-90m   | Intermediate  | Safety protocols, materials, pre-print checks  | None                |
-| 6  | 3dm Commands & Text         | 60-90m   | Intermediate  | `3dm describe/preview/orient/slice`, embossing | Keycap              |
-| 7  | Parametric Transforms       | 75-90m   | Intermediate+ | Transforms, multi-part design, assembly        | Phone Stand         |
-| 8  | Advanced Parametric Design  | 90-120m  | Advanced      | Tolerance, interlocking features, snap-fits    | Stackable Bins      |
+| #  | Title                       | Duration | Level         | Main Topics                                    | Key Project            |
+|----|-----------------------------|----------|---------------|------------------------------------------------|------------------------|
+| 1  | Environmental Configuration | 60-90m   | Beginner      | Setup, project structure, `3dm build`          | None                   |
+| 2  | Geometric Primitives & CSG  | 60m      | Beginner      | Primitives, CSG operations, debugging          | None                   |
+| 3  | Parametric Architecture     | 60m      | Beginner+     | Modules, libraries, parameters                 | None                   |
+| 4  | AI Verification             | 45-60m   | Intermediate  | `3dm info`, validation, design documentation   | None                   |
+| 5  | Safety & Physical Interface | 60-90m   | Intermediate  | Safety protocols, materials, pre-print checks  | None                   |
+| 6  | 3dm Commands & Text         | 60-90m   | Intermediate  | `3dm describe/preview/orient/slice`, embossing | Keycap                 |
+| 7  | Parametric Transforms       | 75-90m   | Intermediate+ | Transforms, multi-part design, assembly        | Phone Stand            |
+| 8  | Advanced Parametric Design  | 90-120m  | Advanced      | Tolerance, interlocking features, snap-fits    | Stackable Bins         |
 | 9  | Automation & Workflows      | 60-90m   | Advanced      | PowerShell scripting, batch processing, CI/CD  | [key] Batch Automation |
-| 10 | Troubleshooting & Mastery   | 120-150m | Advanced      | Measurement, QA testing, diagnostics           | [dice] QA +  Audit    |
-| 11 | Stakeholder-Centric Design  | 90-120m  | Advanced+     | Design thinking, user research, iteration      | [beads] Jewelry Holder   |
+| 10 | Troubleshooting & Mastery   | 120-150m | Advanced      | Measurement, QA testing, diagnostics           | [dice] QA +  Audit     |
+| 11 | Stakeholder-Centric Design  | 90-120m  | Advanced+     | Design thinking, user research, iteration      | [beads] Jewelry Holder |
 
 ---
 
@@ -40,21 +40,25 @@ Quick links to comprehensive reference materials:
 ## Learning Paths
 
 ### Path 1: Complete Mastery (18-22 hours)
+
 -> **Lessons 1-11 + All Appendices**
 
 Best for: Complete skill development, comprehensive understanding
 
 ### Path 2: Design Focus (12-15 hours)
+
 -> **Lessons 1-3, 6-8, 11 + Appendices A, B, C**
 
 Best for: Experienced makers new to programmatic CAD
 
 ### Path 3: Project-Based (14-18 hours)
+
 -> **Lessons 1-5 (Foundations) -> 6 (Keycap) -> 7 (Stand) -> 8 (Bins) -> 9 (Automation) -> 10 (Troubleshooting) -> 11 (Leadership)**
 
 Best for: Learning through building
 
 ### Path 4: Safety & Printing (10-12 hours)
+
 -> **Lessons 1, 2, 5, 6, 10 + Appendices A, B, C**
 
 Best for: Focus on practical printing and quality
@@ -152,6 +156,7 @@ inner = width - 2*wall;
 ### Project 1: Parametric Keycap (Lesson 6)
 
 **Key Parameters:**
+
 ```openscad
 key_size = 18;      // mm
 key_height = 12;    // mm
@@ -160,19 +165,22 @@ letter = "A";       // Character
 ```
 
 **Variants to Try:**
+
 - Small: 12mm, 10mm height
 - Medium: 18mm, 12mm height
 - Large: 24mm, 14mm height
 
 **Files:**
+
 - Code: Lesson 6 (Keycap section)
-- Output: keycap_*.scad, keycap_*.stl
+- Output: keycap_X.scad, keycap_X.stl
 
 ---
 
 ### Project 2: Phone Stand (Lesson 7)
 
 **Key Parameters:**
+
 ```openscad
 phone_width = 75;   // mm
 base_width = 85;    // mm
@@ -181,21 +189,24 @@ lip_height = 15;    // mm
 ```
 
 **Configurations:**
+
 | Phone  | Width | Angle | Result            |
 |--------|-------|-------|-------------------|
-| iPhone | 60mm  | 60   | Portrait viewing  |
-| iPad   | 100mm | 40   | Landscape viewing |
-| Tablet | 150mm | 35   | Document viewing  |
+| iPhone | 60mm  | 60    | Portrait viewing  |
+| iPad   | 100mm | 40    | Landscape viewing |
+| Tablet | 150mm | 35    | Document viewing  |
 
 **Files:**
+
 - Code: Lesson 7 (Phone Stand section)
-- Output: stand_*.stl, stand_*.gcode
+- Output: stand_X.stl, stand_X.gcode
 
 ---
 
 ### Project 3: Stackable Bins (Lesson 8)
 
 **Key Parameters:**
+
 ```openscad
 bin_w = 80;         // width (mm)
 bin_d = 120;        // depth (mm)
@@ -205,13 +216,15 @@ stack_clear = 0.6;  // tolerance (mm) - CRITICAL
 ```
 
 **Tolerance Testing:**
-```
+
+```plaintext
 stack_clear = 0.4mm  -> Too tight (hard to stack)
 stack_clear = 0.6mm  -> Ideal (smooth fit)
 stack_clear = 0.8mm  -> Too loose (unstable)
 ```
 
 **Files:**
+
 - Code: Lesson 8 (Bins section)
 - Output: bin_*.stl, tolerance_matrix.md
 
@@ -275,12 +288,14 @@ done
 ### Problem: Model won't build
 
 **Diagnosis:**
+
 ```bash
 3dm describe file.scad
 # Look for error messages
 ```
 
 **Common Fixes:**
+
 - Check syntax (missing semicolons, parentheses)
 - Look for non-manifold geometry
 - Use `$fn=12` for faster test renders
@@ -288,10 +303,12 @@ done
 ### Problem: Parts don't fit together
 
 **Diagnosis:**
+
 - Print and test fit
 - Measure with calipers
 
 **Solution:**
+
 - Adjust `stack_clear` (smaller = tighter)
 - Increase `wall` thickness
 - Test with tolerance matrix
@@ -299,10 +316,12 @@ done
 ### Problem: Embossed text looks bad
 
 **Diagnosis:**
+
 - Check preview in slicer
 - Use `3dm preview` for tactile version
 
 **Solution:**
+
 - Increase `letter_raise` (deeper emboss)
 - Use larger `$fn` in `text()`
 - Simplify character or use different size
@@ -310,10 +329,12 @@ done
 ### Problem: Print fails
 
 **Diagnosis:**
+
 - Check slicer layer preview
 - Verify bed adhesion and temperature
 
 **Solution:**
+
 - Check pre-print checklist (Lesson 5)
 - Adjust print temperature
 - Verify bed is level and clean
@@ -353,15 +374,18 @@ done
 ## Resources & Links
 
 ### Official Docs
+
 - [OpenSCAD Manual](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual)
 - [3DMake GitHub](https://github.com/tdeck/3dmake)
 - [BOSL2 Library](https://github.com/revarbat/BOSL2)
 
 ### Tutorials
+
 - [OpenSCAD Basics](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language)
 - [3D Printing Guide](https://www.prusa3d.com/support/)
 
 ### Community
+
 - [OpenSCAD Forums](https://forum.openscad.org/)
 - [r/3Dprinting](https://www.reddit.com/r/3Dprinting/)
 
@@ -370,24 +394,28 @@ done
 ## Tips & Tricks
 
 ### Debugging
+
 - Lower `$fn` to 8-12 for faster renders during development
 - Use `3dm describe` frequently to catch issues early
 - Test components individually before assembling
 - Generate `3dm preview` for 2D tactile verification
 
 ### Design
+
 - Keep parameters at the top of file for easy modification
 - Use descriptive names (not `w`, use `width`)
 - Include units in comments
 - Document parameter ranges (e.g., `// 0-100 mm`)
 
 ### Organization
+
 - Use `src/` for SCAD files, `lib/` for modules, `build/` for outputs
 - Create variants by copying files and renaming
 - Use bash scripts for batch operations
 - Archive successful builds with timestamps
 
 ### Accessibility
+
 - Always use `3dm describe` to verify non-visual usability
 - Generate `3dm preview` for tactile inspection
 - Document measurements clearly

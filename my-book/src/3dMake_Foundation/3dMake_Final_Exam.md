@@ -1,4 +1,4 @@
-# 3dMake Foundation Final Exam
+# 3dMake Foundation Final Exam {#3dmake_foundation-3dmake_final_exam}
 
 **Name:**  | **Date:**
 
@@ -479,11 +479,11 @@ For Iteration 3, what thickness would you try and why? How would you make this d
 
 ## References You May Use
 
-- [3dMake Quick Reference](3dMakeQuickReference.md)
-- [OpenSCAD Cheat Sheet](Lessons3dMake2/openscad-cheat-sheet.md)
-- [Appendix A: Comprehensive Slicing Guide](AppendixAComprehensiveSlicingGuide.md)
-- [Appendix C: Tolerance Testing & QA Matrix](AppendixCToleranceQA.md)
-- [Appendix D: PowerShell Integration](AppendixDPowerShellIntegration.md)
+- [3dMake Quick Reference](3dMake_Quick_Reference.md)
+- [OpenSCAD Cheat Sheet](Lessons_3dMake_2/openscad-cheat-sheet.md)
+- [Appendix A: Comprehensive Slicing Guide](Appendix_A_Comprehensive_Slicing_Guide.md)
+- [Appendix C: Tolerance Testing & QA Matrix](Appendix_C_Tolerance_QA.md)
+- [Appendix D: PowerShell Integration](Appendix_D_PowerShell_Integration.md)
 
 ---
 

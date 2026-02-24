@@ -1,5 +1,6 @@
+
 <!DOCTYPE HTML>
-<html lang="en" class="rust sidebar-visible" dir="ltr">
+<html lang="en" class="latte sidebar-visible" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -57,34 +58,35 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../../favicon-de23e50b.svg">
-        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
-        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
-        <link rel="stylesheet" href="../../css/general-2459343d.css">
-        <link rel="stylesheet" href="../../css/chrome-ae938929.css">
-        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../src/assets/custom-8d04802b.css">
+        <link rel="stylesheet" href="../../src/assets/custom.css">
+        <link rel="stylesheet" href="../../theme/catppuccin.css">
 
 
         <!-- Provide site root and default themes to javascript -->
         <script>
             const path_to_root = "../../";
-            const default_light_theme = "rust";
-            const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-c9b9a984.js";
+            const default_light_theme = "latte";
+            const default_dark_theme = "mocha";
+            window.path_to_searchindex_js = "../../searchindex.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-9182b28d.js"></script>
+        <script src="../../toc.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -122,7 +124,7 @@
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             const html = document.documentElement;
-            html.classList.remove('rust')
+            html.classList.remove('latte')
             html.classList.add(theme);
             html.classList.add("js");
         </script>
@@ -165,21 +167,20 @@
                 <div id="mdbook-menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
                         <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
-                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                            <!-- icon removed: fa helper unsupported -->
                         </label>
                         <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
-                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                            <!-- icon removed: fa helper unsupported -->
                         </button>
                         <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
                             <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="frappe">Frappé</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mocha">Mocha</button></li>
                         </ul>
                         <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
-                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                            <!-- icon removed: fa helper unsupported -->
                         </button>
                     </div>
 
@@ -187,7 +188,7 @@
 
                     <div class="right-buttons">
                         <a href="../../print.html" title="Print this book" aria-label="Print this book">
-                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                            <!-- icon removed: fa helper unsupported -->
                         </a>
 
                     </div>
@@ -198,7 +199,7 @@
                         <div class="search-wrapper">
                             <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
                             <div class="spinner-wrapper">
-                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                                <!-- icon removed: fa helper unsupported -->
                             </div>
                         </div>
                     </form>
@@ -220,10 +221,12 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="git-bash-curriculum-overview"><a class="header" href="#git-bash-curriculum-overview">Git Bash Curriculum Overview</a></h1>
-<p><strong>Total Duration:</strong> 20-25 hours (for screen reader users)<br><strong>Target Audience:</strong> Screen reader users, accessibility-first learners<br><strong>Prerequisites:</strong> Basic Windows computer familiarity</p>
+                        <h1 id="gitbash_foundation_gitbash_curriculum_overview-gitbash_curriculum_overview"><a class="header" href="#gitbash_foundation_gitbash_curriculum_overview-gitbash_curriculum_overview">Git Bash Curriculum Overview</a></h1>
+<p><strong>Total Duration:</strong> 20-25 hours (for screen reader users)<br />
+<strong>Target Audience:</strong> Screen reader users, accessibility-first learners<br />
+<strong>Prerequisites:</strong> Basic Windows computer familiarity</p>
 <p><em>Note: Time estimates reflect the additional time needed for screen reader navigation, text-to-speech processing, and careful keyboard-based workflows.</em></p>
-<hr>
+<hr />
 <h2 id="what-is-git-bash"><a class="header" href="#what-is-git-bash">What is Git Bash?</a></h2>
 <p>Git Bash is a Unix/bash shell that runs natively on Windows. It provides the same powerful command-line tools as macOS and Linux while keeping you on Windows.</p>
 <p><strong>Why learn Git Bash?</strong></p>
@@ -231,25 +234,25 @@
 <li><strong>Cross-platform compatibility:</strong> Same commands work on Windows, macOS, and Linux</li>
 <li><strong>Professional standard:</strong> Developers worldwide use bash</li>
 <li><strong>Accessibility:</strong> Git Bash is 100% screen reader compatible with NVDA and JAWS</li>
-<li><strong>Powerful:</strong> Access to Unix tools that Windows Command Prompt and PowerShell can’t match</li>
+<li><strong>Powerful:</strong> Access to Unix tools that Windows Command Prompt and PowerShell can't match</li>
 <li><strong>3D printing workflows:</strong> Essential for OpenSCAD scripting and automation</li>
 <li><strong>Future-proof:</strong> Learning bash makes you adaptable to any computer system</li>
 </ul>
-<hr>
+<hr />
 <h2 id="curriculum-structure"><a class="header" href="#curriculum-structure">Curriculum Structure</a></h2>
 <h3 id="part-1-intro-comparing-command-line-interfaces"><a class="header" href="#part-1-intro-comparing-command-line-interfaces">Part 1 (Intro): Comparing Command Line Interfaces</a></h3>
-<p>Start here if you’re new to terminals:</p>
+<p>Start here if you're new to terminals:</p>
 <ul>
-<li><strong><a href="../CommandLineInterfaceSelection.html">Command Line Interface Selection Guide</a></strong> - Decision guide comparing PowerShell, CMD, and Git Bash</li>
+<li><strong><a href="../Command_Line_Interface_Selection.html">Command Line Interface Selection Guide</a></strong> - Decision guide comparing PowerShell, CMD, and Git Bash</li>
 <li>Learn which option fits your learning style</li>
 <li>Understand when to use each tool</li>
 </ul>
-<hr>
+<hr />
 <h2 id="core-curriculum-11-lessons"><a class="header" href="#core-curriculum-11-lessons">Core Curriculum (11 Lessons)</a></h2>
 <p>The main curriculum teaches you to use Git Bash for real work.</p>
 <h3 id="foundation-level-lessons-pre---1"><a class="header" href="#foundation-level-lessons-pre---1">Foundation Level (Lessons Pre - 1)</a></h3>
 <h4 id="gitbash-pre-your-first-terminal-15-25-hours"><a class="header" href="#gitbash-pre-your-first-terminal-15-25-hours"><strong>GitBash-Pre: Your First Terminal</strong> (1.5-2.5 hours)</a></h4>
-<p><strong>What you’ll learn:</strong></p>
+<p><strong>What you'll learn:</strong></p>
 <ul>
 <li>How to open and close Git Bash</li>
 <li>Understanding the prompt and what it tells you</li>
@@ -260,7 +263,7 @@
 <p><strong>Key Skills:</strong></p>
 <ul>
 <li>Know your current location (<code>pwd</code>)</li>
-<li>List what’s around you (<code>ls</code>)</li>
+<li>List what's around you (<code>ls</code>)</li>
 <li>Move to different folders (<code>cd</code>)</li>
 <li>Use Tab completion (Game-changer for screen reader users!)</li>
 <li>Redirect output to files for easier reading</li>
@@ -273,9 +276,9 @@
 <li>Create your first test file</li>
 <li>Read it back with a screen reader</li>
 </ul>
-<hr>
+<hr />
 <h4 id="gitbash-0-getting-started---layout-paths-and-the-shell-1-15-hours"><a class="header" href="#gitbash-0-getting-started---layout-paths-and-the-shell-1-15-hours"><strong>GitBash-0: Getting Started - Layout, Paths, and the Shell</strong> (1-1.5 hours)</a></h4>
-<p><strong>What you’ll learn:</strong></p>
+<p><strong>What you'll learn:</strong></p>
 <ul>
 <li>Unix-style paths vs Windows paths</li>
 <li>Absolute vs relative paths</li>
@@ -297,9 +300,9 @@
 <li>Practice relative paths in a deep folder structure</li>
 <li>Document your project folder paths</li>
 </ul>
-<hr>
+<hr />
 <h4 id="gitbash-1-navigation---moving-around-your-file-system-15-25-hours"><a class="header" href="#gitbash-1-navigation---moving-around-your-file-system-15-25-hours"><strong>GitBash-1: Navigation - Moving Around Your File System</strong> (1.5-2.5 hours)</a></h4>
-<p><strong>What you’ll learn:</strong></p>
+<p><strong>What you'll learn:</strong></p>
 <ul>
 <li>Mastering <code>cd</code> for folder navigation</li>
 <li>Tab completion strategies</li>
@@ -318,13 +321,13 @@
 <ul>
 <li>Create a 5-level folder structure and navigate it</li>
 <li>Navigate 20+ different locations</li>
-<li>Build a “favorites” list of important paths</li>
+<li>Build a "favorites" list of important paths</li>
 <li>Time yourself: navigate blindly using only commands</li>
 </ul>
-<hr>
+<hr />
 <h3 id="intermediate-level-lessons-2---4"><a class="header" href="#intermediate-level-lessons-2---4">Intermediate Level (Lessons 2 - 4)</a></h3>
 <h4 id="gitbash-2-file-and-folder-manipulation-2-25-hours"><a class="header" href="#gitbash-2-file-and-folder-manipulation-2-25-hours"><strong>GitBash-2: File and Folder Manipulation</strong> (2-2.5 hours)</a></h4>
-<p><strong>What you’ll learn:</strong></p>
+<p><strong>What you'll learn:</strong></p>
 <ul>
 <li>Creating files and folders: <code>mkdir</code>, <code>touch</code>, <code>echo &gt; file</code></li>
 <li>Copying files: <code>cp</code></li>
@@ -349,9 +352,9 @@
 <li>Practice safe deletion with confirmation</li>
 <li>Build a file organization system for 3D printing projects</li>
 </ul>
-<hr>
+<hr />
 <h4 id="gitbash-3-input-output--piping-2-25-hours"><a class="header" href="#gitbash-3-input-output--piping-2-25-hours"><strong>GitBash-3: Input, Output &amp; Piping</strong> (2-2.5 hours)</a></h4>
-<p><strong>What you’ll learn:</strong></p>
+<p><strong>What you'll learn:</strong></p>
 <ul>
 <li>Redirecting output: <code>&gt;</code>, <code>&gt;&gt;</code></li>
 <li>Reading files: <code>cat</code>, <code>less</code></li>
@@ -377,9 +380,9 @@
 <li>Create scripts that redirect output to files</li>
 <li>Build a file-processing workflow</li>
 </ul>
-<hr>
+<hr />
 <h4 id="gitbash-4-environment-variables--aliases-15-2-hours"><a class="header" href="#gitbash-4-environment-variables--aliases-15-2-hours"><strong>GitBash-4: Environment Variables &amp; Aliases</strong> (1.5-2 hours)</a></h4>
-<p><strong>What you’ll learn:</strong></p>
+<p><strong>What you'll learn:</strong></p>
 <ul>
 <li>Understanding environment variables: <code>echo $PATH</code>, <code>echo $HOME</code></li>
 <li>Setting variables: <code>export MYVAR="value"</code></li>
@@ -402,10 +405,10 @@
 <li>Test variables from different locations</li>
 <li>Build a custom shell environment</li>
 </ul>
-<hr>
+<hr />
 <h3 id="advanced-level-lessons-5---6"><a class="header" href="#advanced-level-lessons-5---6">Advanced Level (Lessons 5 - 6)</a></h3>
 <h4 id="gitbash-5-filling-in-the-gaps---shell-profiles-history-and-debugging-2-25-hours"><a class="header" href="#gitbash-5-filling-in-the-gaps---shell-profiles-history-and-debugging-2-25-hours"><strong>GitBash-5: Filling in the Gaps - Shell Profiles, History, and Debugging</strong> (2-2.5 hours)</a></h4>
-<p><strong>What you’ll learn:</strong></p>
+<p><strong>What you'll learn:</strong></p>
 <ul>
 <li>Using command history: <code>history</code>, <code>!</code>, reverse search</li>
 <li>Debugging commands with <code>set -x</code></li>
@@ -428,9 +431,9 @@
 <li>Set up a personalized <code>.bashrc</code></li>
 <li>Create aliases for common debugging tasks</li>
 </ul>
-<hr>
+<hr />
 <h4 id="gitbash-6-advanced-terminal-techniques---scripts-functions--professional-workflows-25-35-hours"><a class="header" href="#gitbash-6-advanced-terminal-techniques---scripts-functions--professional-workflows-25-35-hours"><strong>GitBash-6: Advanced Terminal Techniques - Scripts, Functions &amp; Professional Workflows</strong> (2.5-3.5 hours)</a></h4>
-<p><strong>What you’ll learn:</strong></p>
+<p><strong>What you'll learn:</strong></p>
 <ul>
 <li>Writing bash scripts (<code>.sh</code> files)</li>
 <li>Creating functions for reuse</li>
@@ -455,10 +458,10 @@
 <li>Write scripts with error checking</li>
 <li>Create a file backup automation system</li>
 </ul>
-<hr>
+<hr />
 <h3 id="comprehensive-assessment-25-5-hours"><a class="header" href="#comprehensive-assessment-25-5-hours">Comprehensive Assessment (2.5-5 hours)</a></h3>
 <h4 id="gitbash-unit-test--practice"><a class="header" href="#gitbash-unit-test--practice"><strong>GitBash Unit Test &amp; Practice</strong></a></h4>
-<p><strong>What you’ll do:</strong></p>
+<p><strong>What you'll do:</strong></p>
 <ul>
 <li>30 practical exercises covering all skills</li>
 <li>Real-world scenarios with 3D printing workflows</li>
@@ -473,7 +476,7 @@
 <li>Write 2 advanced automation scripts</li>
 <li>Pass all checkpoint tests</li>
 </ul>
-<hr>
+<hr />
 <h2 id="lesson-progression-map"><a class="header" href="#lesson-progression-map">Lesson Progression Map</a></h2>
 <pre><code>Pre: First Terminal (accessibility focus)
   ↓
@@ -493,7 +496,7 @@ GitBash-6: Scripts &amp; Functions (advanced)
   ↓
 Unit Test &amp; Practice (comprehensive)
 </code></pre>
-<hr>
+<hr />
 <h2 id="command-reference-by-lesson"><a class="header" href="#command-reference-by-lesson">Command Reference by Lesson</a></h2>
 <h3 id="gitbash-pre"><a class="header" href="#gitbash-pre">GitBash-Pre</a></h3>
 <ul>
@@ -564,7 +567,7 @@ Unit Test &amp; Practice (comprehensive)
 <li><code>source script.sh</code> - Run script</li>
 <li><code>$1, $2</code> - Arguments</li>
 </ul>
-<hr>
+<hr />
 <h2 id="accessibility-features-throughout"><a class="header" href="#accessibility-features-throughout">Accessibility Features Throughout</a></h2>
 <p>Every lesson includes:</p>
 <ul>
@@ -575,14 +578,9 @@ Unit Test &amp; Practice (comprehensive)
 <li><strong>Keyboard-only workflows</strong> - No mouse required</li>
 <li><strong>Practical tips</strong> for both NVDA and JAWS users</li>
 </ul>
-<hr>
+<hr />
 <h2 id="time-breakdown"><a class="header" href="#time-breakdown">Time Breakdown</a></h2>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Component</th><th>Time</th></tr>
-</thead>
-<tbody>
+<div class="table-wrapper"><table><thead><tr><th>Component</th><th>Time</th></tr></thead><tbody>
 <tr><td>GitBash-Pre</td><td>1.5-2.5 hours</td></tr>
 <tr><td>GitBash-0</td><td>1-1.5 hours</td></tr>
 <tr><td>GitBash-1</td><td>1.5-2.5 hours</td></tr>
@@ -593,10 +591,9 @@ Unit Test &amp; Practice (comprehensive)
 <tr><td>GitBash-6</td><td>2.5-3.5 hours</td></tr>
 <tr><td>Unit Test</td><td>2.5-5 hours</td></tr>
 <tr><td><strong>Total</strong></td><td><strong>20-25 hours</strong></td></tr>
-</tbody>
-</table>
+</tbody></table>
 </div>
-<hr>
+<hr />
 <h2 id="learning-approach"><a class="header" href="#learning-approach">Learning Approach</a></h2>
 <h3 id="core-teaching-method"><a class="header" href="#core-teaching-method">Core Teaching Method</a></h3>
 <ol>
@@ -614,12 +611,12 @@ Unit Test &amp; Practice (comprehensive)
 <h3 id="best-practices"><a class="header" href="#best-practices">Best Practices</a></h3>
 <ul>
 <li>Take breaks between lessons</li>
-<li>Do all practice exercises - don’t skip</li>
+<li>Do all practice exercises - don't skip</li>
 <li>Answer checkpoint questions before moving on</li>
 <li>Review previous lessons if stuck</li>
 <li>Use screen reader at full speed once comfortable</li>
 </ul>
-<hr>
+<hr />
 <h2 id="prerequisites--assumptions"><a class="header" href="#prerequisites--assumptions">Prerequisites &amp; Assumptions</a></h2>
 <p>This curriculum assumes you:</p>
 <ul>
@@ -629,13 +626,13 @@ Unit Test &amp; Practice (comprehensive)
 <li>Can use a keyboard efficiently</li>
 <li>Have a text editor (Notepad, VS Code, etc.)</li>
 </ul>
-<hr>
-<h2 id="what-youll-be-able-to-do"><a class="header" href="#what-youll-be-able-to-do">What You’ll Be Able to Do</a></h2>
+<hr />
+<h2 id="what-youll-be-able-to-do"><a class="header" href="#what-youll-be-able-to-do">What You'll Be Able to Do</a></h2>
 <p>After completing this curriculum:</p>
 <h3 id="basic-skills-after-lesson-1"><a class="header" href="#basic-skills-after-lesson-1">Basic Skills (After Lesson 1)</a></h3>
 <ul>
 <li>Navigate any folder on your computer</li>
-<li>List files to understand what’s available</li>
+<li>List files to understand what's available</li>
 <li>Create and organize folders</li>
 <li>Find files quickly</li>
 </ul>
@@ -654,7 +651,7 @@ Unit Test &amp; Practice (comprehensive)
 <li>Solve complex problems</li>
 <li>Work efficiently across Windows, macOS, and Linux</li>
 </ul>
-<hr>
+<hr />
 <h2 id="assessment--completion"><a class="header" href="#assessment--completion">Assessment &amp; Completion</a></h2>
 <h3 id="unit-test-comprehensive"><a class="header" href="#unit-test-comprehensive">Unit Test (Comprehensive)</a></h3>
 <ul>
@@ -670,7 +667,7 @@ Unit Test &amp; Practice (comprehensive)
 <li>Skills assessment document</li>
 <li>Portfolio project (optional)</li>
 </ul>
-<hr>
+<hr />
 <h2 id="moving-forward"><a class="header" href="#moving-forward">Moving Forward</a></h2>
 <p>After completing this curriculum, you can:</p>
 <h3 id="use-git-bash-daily"><a class="header" href="#use-git-bash-daily">Use Git Bash Daily</a></h3>
@@ -692,10 +689,10 @@ Unit Test &amp; Practice (comprehensive)
 <li>Skills transfer to Linux systems</li>
 <li>Knowledge applies to cloud environments (AWS, Azure, GCP)</li>
 </ul>
-<hr>
+<hr />
 <h2 id="frequently-asked-questions"><a class="header" href="#frequently-asked-questions">Frequently Asked Questions</a></h2>
 <p><strong>Q: Why Git Bash instead of PowerShell or CMD?</strong>
-A: Git Bash gives you the same commands as macOS and Linux, making it a cross-platform skill that’s more valuable long-term.</p>
+A: Git Bash gives you the same commands as macOS and Linux, making it a cross-platform skill that's more valuable long-term.</p>
 <p><strong>Q: How is this different from regular bash?</strong>
 A: Git Bash is bash running on Windows. 100% compatible with standard bash. All commands work the same way.</p>
 <p><strong>Q: Will I need to use a mouse?</strong>
@@ -706,7 +703,7 @@ A: Yes! Each lesson stands alone. You can take days or weeks between lessons.</p
 A: Each lesson has extension problems for deeper learning and troubleshooting guides for common issues.</p>
 <p><strong>Q: Will this help with 3D printing?</strong>
 A: Absolutely! Many lessons include 3D printing workflows and OpenSCAD automation examples.</p>
-<hr>
+<hr />
 <h2 id="support--resources"><a class="header" href="#support--resources">Support &amp; Resources</a></h2>
 <ul>
 <li><strong>NVDA Screen Reader:</strong> https://www.nvaccess.org/</li>
@@ -715,7 +712,7 @@ A: Absolutely! Many lessons include 3D printing workflows and OpenSCAD automatio
 <li><strong>Git Bash Documentation:</strong> https://git-scm.com/book/</li>
 <li><strong>Linux Command Reference:</strong> https://linuxcommand.org/</li>
 </ul>
-<hr>
+<hr />
 <h2 id="curriculum-philosophy"><a class="header" href="#curriculum-philosophy">Curriculum Philosophy</a></h2>
 <p>This curriculum is built on:</p>
 <ul>
@@ -725,71 +722,59 @@ A: Absolutely! Many lessons include 3D printing workflows and OpenSCAD automatio
 <li><strong>Hands-On Practice</strong> - Learn by doing</li>
 <li><strong>Professional Standards</strong> - Industry-ready skills</li>
 </ul>
-<hr>
+<hr />
 <h2 id="ready-to-begin"><a class="header" href="#ready-to-begin">Ready to Begin?</a></h2>
-<p>Start with the <strong><a href="../CommandLineInterfaceSelection.html">Command Line Interface Selection Guide</a></strong> to see why Git Bash might be the right choice for you.</p>
+<p>Start with the <strong><a href="../Command_Line_Interface_Selection.html">Command Line Interface Selection Guide</a></strong> to see why Git Bash might be the right choice for you.</p>
 <p>Then proceed to <strong>GitBash-Pre: Your First Terminal</strong> to begin your journey!</p>
-<p><strong>Goal:</strong> You can navigate to any folder and see what’s in it with your screen reader.</p>
+<p><strong>Goal:</strong> You can navigate to any folder and see what's in it with your screen reader.</p>
 <h3 id="phase-2-intermediate-user--power-user"><a class="header" href="#phase-2-intermediate-user--power-user">Phase 2: Intermediate User → Power User</a></h3>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Lesson</th><th>Duration</th><th>What You’ll Learn</th></tr>
-</thead>
-<tbody>
+<div class="table-wrapper"><table><thead><tr><th>Lesson</th><th>Duration</th><th>What You'll Learn</th></tr></thead><tbody>
 <tr><td><strong>GB-2: File &amp; Folder Manipulation</strong></td><td>60 min</td><td>Create, copy, move, delete files/folders</td></tr>
 <tr><td><strong>GB-3: Input, Output &amp; Piping</strong></td><td>60 min</td><td>Chain commands together, redirect output</td></tr>
 <tr><td><strong>GB-4: Environment Variables &amp; Aliases</strong></td><td>45 min</td><td>Automate settings, create shortcuts</td></tr>
 <tr><td><strong>GB-5: Filling in the Gaps</strong></td><td>45 min</td><td>Profiles, history, debugging</td></tr>
-</tbody>
-</table>
+</tbody></table>
 </div>
 <p><strong>Goal:</strong> You can create folders, manage files, and combine commands to accomplish complex tasks.</p>
 <h3 id="phase-3-professional-skills-beyond-curriculum"><a class="header" href="#phase-3-professional-skills-beyond-curriculum">Phase 3: Professional Skills (Beyond Curriculum)</a></h3>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Topic</th><th>When to Learn</th></tr>
-</thead>
-<tbody>
+<div class="table-wrapper"><table><thead><tr><th>Topic</th><th>When to Learn</th></tr></thead><tbody>
 <tr><td><strong>Shell scripting (.sh files)</strong></td><td>After GB-5</td></tr>
 <tr><td><strong>Functions &amp; Loops</strong></td><td>After GB-5</td></tr>
 <tr><td><strong>Error Handling</strong></td><td>After GB-5</td></tr>
 <tr><td><strong>3D Printing Integration</strong></td><td>After all above</td></tr>
-</tbody>
-</table>
+</tbody></table>
 </div>
-<hr>
+<hr />
 <h2 id="how-to-use-this-curriculum"><a class="header" href="#how-to-use-this-curriculum">How to Use This Curriculum</a></h2>
-<h3 id="if-youve-never-used-a-terminal-before"><a class="header" href="#if-youve-never-used-a-terminal-before">If You’ve Never Used a Terminal Before</a></h3>
+<h3 id="if-youve-never-used-a-terminal-before"><a class="header" href="#if-youve-never-used-a-terminal-before">If You've Never Used a Terminal Before</a></h3>
 <ol>
 <li>Read <strong>Screen Reader Accessibility Guide</strong> completely</li>
 <li>Do <strong>GB-Pre: Your First Terminal</strong> exercises</li>
 <li>Continue with GB-0, GB-1, etc.</li>
 </ol>
-<h3 id="if-youve-used-a-terminal-before-but-not-with-a-screen-reader"><a class="header" href="#if-youve-used-a-terminal-before-but-not-with-a-screen-reader">If You’ve Used a Terminal Before (But Not with a Screen Reader)</a></h3>
+<h3 id="if-youve-used-a-terminal-before-but-not-with-a-screen-reader"><a class="header" href="#if-youve-used-a-terminal-before-but-not-with-a-screen-reader">If You've Used a Terminal Before (But Not with a Screen Reader)</a></h3>
 <ol>
 <li>Skim <strong>Screen Reader Accessibility Guide</strong></li>
 <li>Quickly review <strong>GB-Pre</strong></li>
 <li>Move to <strong>GB-0</strong> for deeper learning</li>
 </ol>
-<h3 id="if-youre-experienced-with-terminal--screen-reader"><a class="header" href="#if-youre-experienced-with-terminal--screen-reader">If You’re Experienced with Terminal + Screen Reader</a></h3>
+<h3 id="if-youre-experienced-with-terminal--screen-reader"><a class="header" href="#if-youre-experienced-with-terminal--screen-reader">If You're Experienced with Terminal + Screen Reader</a></h3>
 <ol>
 <li>Jump to specific lessons you need (GB-2, GB-3, etc.)</li>
 <li>Use the <strong>Quick Reference</strong> sections</li>
 <li>Skip the practice exercises, do the quizzes to verify knowledge</li>
 </ol>
-<hr>
+<hr />
 <h2 id="how-each-lesson-is-structured"><a class="header" href="#how-each-lesson-is-structured">How Each Lesson is Structured</a></h2>
 <ol>
-<li><strong>Learning Objectives</strong> - What you’ll be able to do</li>
+<li><strong>Learning Objectives</strong> - What you'll be able to do</li>
 <li><strong>Key Commands</strong> - The important ones to memorize</li>
 <li><strong>Step-by-Step Examples</strong> - How to actually do it</li>
 <li><strong>Practice Exercises</strong> - Hands-on work</li>
 <li><strong>Quiz Questions</strong> - Check your understanding</li>
 <li><strong>Extension Problems</strong> - Go deeper if interested</li>
 </ol>
-<hr>
+<hr />
 <h2 id="screen-reader-tips-throughout-the-curriculum"><a class="header" href="#screen-reader-tips-throughout-the-curriculum">Screen Reader Tips Throughout the Curriculum</a></h2>
 <p>Every lesson includes:</p>
 <ul>
@@ -798,7 +783,7 @@ A: Absolutely! Many lessons include 3D printing workflows and OpenSCAD automatio
 <li>Solutions for common accessibility issues</li>
 <li>Workarounds for long outputs</li>
 </ul>
-<hr>
+<hr />
 <h2 id="quick-start-guide-first-15-minutes"><a class="header" href="#quick-start-guide-first-15-minutes">Quick Start Guide (First 15 Minutes)</a></h2>
 <ol>
 <li><strong>Open Git Bash</strong> (Start menu → type Git Bash → Enter)</li>
@@ -817,7 +802,7 @@ cat learning.txt
 </code></pre>
 </li>
 </ol>
-<hr>
+<hr />
 <h2 id="important-rules"><a class="header" href="#important-rules">Important Rules</a></h2>
 <h3 id="rule-1-always-know-where-you-are"><a class="header" href="#rule-1-always-know-where-you-are">Rule 1: Always Know Where You Are</a></h3>
 <pre><code class="language-bash">pwd
@@ -838,16 +823,16 @@ notepad output.txt
 <pre><code class="language-bash">mkdir my-practice-folder
 cd my-practice-folder
 </code></pre>
-<hr>
-<h2 id="troubleshooting-nothing-works"><a class="header" href="#troubleshooting-nothing-works">Troubleshooting: “Nothing Works!”</a></h2>
+<hr />
+<h2 id="troubleshooting-nothing-works"><a class="header" href="#troubleshooting-nothing-works">Troubleshooting: "Nothing Works!"</a></h2>
 <ol>
-<li><strong>Can’t hear Git Bash?</strong> Make sure screen reader is running BEFORE Git Bash. Try <strong>Alt+Tab</strong>.</li>
+<li><strong>Can't hear Git Bash?</strong> Make sure screen reader is running BEFORE Git Bash. Try <strong>Alt+Tab</strong>.</li>
 <li><strong>Commands not working?</strong> Check spelling. Make sure you pressed Enter.</li>
-<li><strong>Can’t read the output?</strong> Redirect to file: <code>command &gt; output.txt</code>, then <code>notepad output.txt</code></li>
+<li><strong>Can't read the output?</strong> Redirect to file: <code>command &gt; output.txt</code>, then <code>notepad output.txt</code></li>
 <li><strong>Something ran forever?</strong> Press <strong>Ctrl+C</strong> to stop it.</li>
 <li><strong>Completely confused?</strong> Go back to GB-Pre and start over.</li>
 </ol>
-<hr>
+<hr />
 <h2 id="curriculum-map"><a class="header" href="#curriculum-map">Curriculum Map</a></h2>
 <pre><code>START HERE ↓
 +---- Screen Reader Accessibility Guide (reference throughout)
@@ -864,21 +849,15 @@ cd my-practice-folder
         ↓
     ADVANCED: Bash Scripting
 </code></pre>
-<hr>
+<hr />
 <p><strong>Questions? Stuck?</strong> Refer back to this page and the Screen Reader Accessibility Guide.</p>
-<p><strong>Now open GB-Pre and let’s get started!</strong></p>
+<p><strong>Now open GB-Pre and let's get started!</strong></p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../GitBash_Foundation/Part_1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
-                            </a>
 
-                            <a rel="next prefetch" href="../../GitBash_Foundation/GitBash_Pre_Your_First_Terminal/GitBash_Pre_Your_First_Terminal.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
-                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -886,22 +865,12 @@ cd my-practice-folder
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../GitBash_Foundation/Part_1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
-                    </a>
 
-                    <a rel="next prefetch" href="../../GitBash_Foundation/GitBash_Pre_Your_First_Terminal/GitBash_Pre_Your_First_Terminal.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
-                    </a>
             </nav>
 
         </div>
 
-        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
-        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
-        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
-        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
-        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+        <!-- templates for fa icons removed: fa helper unsupported -->
 
 
 
@@ -910,13 +879,13 @@ cd my-practice-folder
         </script>
 
 
-        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
-        <script src="../../mark-09e88c2c.min.js"></script>
-        <script src="../../searcher-c2a407aa.js"></script>
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
 
-        <script src="../../clipboard-1626706a.min.js"></script>
-        <script src="../../highlight-4a3ec6df.js"></script>
-        <script src="../../book-a0b12cfe.js"></script>
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
 
         <!-- Custom JS scripts -->
 

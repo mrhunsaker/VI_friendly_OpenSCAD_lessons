@@ -1,5 +1,5 @@
 
-# Using a Braille Display with the Curriculum
+# Using a Braille Display with the Curriculum {#setup_braille_displays-braille_displays}
 
 Refreshingly, many blind and low-vision coders prefer tactile output in addition to speech. A refreshable braille display presents terminal text as tactile braille cells and can be used alongside or instead of spoken output while working through this curriculum.
 

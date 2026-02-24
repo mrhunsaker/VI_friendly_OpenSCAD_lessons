@@ -1,5 +1,6 @@
+
 <!DOCTYPE HTML>
-<html lang="en" class="rust sidebar-visible" dir="ltr">
+<html lang="en" class="latte sidebar-visible" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -57,34 +58,35 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../../favicon-de23e50b.svg">
-        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
-        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
-        <link rel="stylesheet" href="../../css/general-2459343d.css">
-        <link rel="stylesheet" href="../../css/chrome-ae938929.css">
-        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../src/assets/custom-8d04802b.css">
+        <link rel="stylesheet" href="../../src/assets/custom.css">
+        <link rel="stylesheet" href="../../theme/catppuccin.css">
 
 
         <!-- Provide site root and default themes to javascript -->
         <script>
             const path_to_root = "../../";
-            const default_light_theme = "rust";
-            const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-c9b9a984.js";
+            const default_light_theme = "latte";
+            const default_dark_theme = "mocha";
+            window.path_to_searchindex_js = "../../searchindex.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-9182b28d.js"></script>
+        <script src="../../toc.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -122,7 +124,7 @@
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             const html = document.documentElement;
-            html.classList.remove('rust')
+            html.classList.remove('latte')
             html.classList.add(theme);
             html.classList.add("js");
         </script>
@@ -165,21 +167,20 @@
                 <div id="mdbook-menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
                         <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
-                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                            <!-- icon removed: fa helper unsupported -->
                         </label>
                         <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
-                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                            <!-- icon removed: fa helper unsupported -->
                         </button>
                         <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
                             <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="frappe">Frappé</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mocha">Mocha</button></li>
                         </ul>
                         <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
-                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                            <!-- icon removed: fa helper unsupported -->
                         </button>
                     </div>
 
@@ -187,7 +188,7 @@
 
                     <div class="right-buttons">
                         <a href="../../print.html" title="Print this book" aria-label="Print this book">
-                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                            <!-- icon removed: fa helper unsupported -->
                         </a>
 
                     </div>
@@ -198,7 +199,7 @@
                         <div class="search-wrapper">
                             <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
                             <div class="spinner-wrapper">
-                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                                <!-- icon removed: fa helper unsupported -->
                             </div>
                         </div>
                     </form>
@@ -220,7 +221,7 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="editor-selection-and-accessibility-setup-guide"><a class="header" href="#editor-selection-and-accessibility-setup-guide">Editor Selection and Accessibility Setup Guide</a></h1>
+                        <h1 id="setup_editor_selection_setup-editor_selection_setup"><a class="header" href="#setup_editor_selection_setup-editor_selection_setup">Editor Selection and Accessibility Setup Guide</a></h1>
 <h2 id="table-of-contents"><a class="header" href="#table-of-contents">Table of Contents</a></h2>
 <ol>
 <li><a href="#editor-comparison">Editor Comparison</a></li>
@@ -228,15 +229,10 @@
 <li><a href="#screen-reader-indent-announcement-configuration">Screen Reader Indent Announcement Configuration</a></li>
 <li><a href="#curriculum-specific-editor-recommendations">Curriculum-Specific Editor Recommendations</a></li>
 </ol>
-<hr>
+<hr />
 <h2 id="editor-comparison"><a class="header" href="#editor-comparison">Editor Comparison</a></h2>
 <h3 id="overview-table"><a class="header" href="#overview-table">Overview Table</a></h3>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Feature</th><th>Notepad</th><th>Notepad++</th><th>Visual Studio Code</th></tr>
-</thead>
-<tbody>
+<div class="table-wrapper"><table><thead><tr><th>Feature</th><th>Notepad</th><th>Notepad++</th><th>Visual Studio Code</th></tr></thead><tbody>
 <tr><td><strong>Cost</strong></td><td>Free (built-in)</td><td>Free</td><td>Free</td></tr>
 <tr><td><strong>Learning Curve</strong></td><td>Minimal</td><td>Low</td><td>Moderate</td></tr>
 <tr><td><strong>Screen Reader Support</strong></td><td>Good (basic)</td><td>Good (syntax features)</td><td>Excellent (built-in accessibility)</td></tr>
@@ -250,8 +246,7 @@
 <tr><td><strong>Hot Key Customization</strong></td><td>Limited</td><td>Good</td><td>Excellent</td></tr>
 <tr><td><strong>File Size Handling</strong></td><td>Good</td><td>Good</td><td>Excellent</td></tr>
 <tr><td><strong>Built-in Debugging</strong></td><td>None</td><td>None</td><td>Limited</td></tr>
-</tbody>
-</table>
+</tbody></table>
 </div>
 <h3 id="detailed-comparison"><a class="header" href="#detailed-comparison">Detailed Comparison</a></h3>
 <h4 id="notepad"><a class="header" href="#notepad">Notepad</a></h4>
@@ -273,7 +268,7 @@
 </ul>
 <p><strong>Best For:</strong> Users who prefer absolute simplicity and want minimal cognitive load during learning phase</p>
 <p><strong>Screen Reader Experience:</strong> Windows Narrator reads all content clearly; JAWS and NVDA work well with standard keyboard navigation</p>
-<hr>
+<hr />
 <h4 id="notepad-1"><a class="header" href="#notepad-1">Notepad++</a></h4>
 <p><strong>Advantages:</strong></p>
 <ul>
@@ -294,7 +289,7 @@
 </ul>
 <p><strong>Best For:</strong> Users who want a lightweight editor with syntax highlighting but prefer not to use a full IDE</p>
 <p><strong>Screen Reader Experience:</strong> JAWS and NVDA handle navigation well; Windows Narrator works but may struggle with complex UI elements</p>
-<hr>
+<hr />
 <h4 id="visual-studio-code"><a class="header" href="#visual-studio-code">Visual Studio Code</a></h4>
 <p><strong>Advantages:</strong></p>
 <ul>
@@ -316,7 +311,7 @@
 </ul>
 <p><strong>Best For:</strong> Users building comprehensive accessibility workflow and wanting integrated development environment</p>
 <p><strong>Screen Reader Experience:</strong> Excellent; built specifically with accessibility in mind. NVDA, JAWS, Windows Narrator, and Dolphin all receive high-quality support.</p>
-<hr>
+<hr />
 <h2 id="editor-setup-for-3dmake"><a class="header" href="#editor-setup-for-3dmake">Editor Setup for 3dMake</a></h2>
 <h3 id="setting-default-editor-in-3dmake"><a class="header" href="#setting-default-editor-in-3dmake">Setting Default Editor in 3dMake</a></h3>
 <p>The 3dMake tool uses your system default text editor. Configure it through:</p>
@@ -333,10 +328,10 @@
 <h4 id="through-file-properties-graphical-method"><a class="header" href="#through-file-properties-graphical-method">Through File Properties (Graphical Method)</a></h4>
 <ol>
 <li>Right-click any <code>.scad</code> file (create a test file if needed)</li>
-<li>Select “Open with” → “Choose another app”</li>
+<li>Select "Open with" → "Choose another app"</li>
 <li>Browse to your editor executable (e.g., <code>C:\Program Files\Notepad++\notepad++.exe</code>)</li>
-<li>Check “Always use this app to open .scad files”</li>
-<li>Click “OK”</li>
+<li>Check "Always use this app to open .scad files"</li>
+<li>Click "OK"</li>
 </ol>
 <h4 id="environment-variable-command-line-method"><a class="header" href="#environment-variable-command-line-method">Environment Variable (Command Line Method)</a></h4>
 <p>For <strong>PowerShell</strong>:</p>
@@ -346,7 +341,7 @@
 <p>For <strong>Command Prompt</strong>:</p>
 <pre><code class="language-batch">setx EDITOR "C:\Program Files\Notepad++\notepad++.exe"
 </code></pre>
-<hr>
+<hr />
 <h3 id="notepad-setup"><a class="header" href="#notepad-setup">Notepad Setup</a></h3>
 <p><strong>Configuration Steps:</strong></p>
 <ol>
@@ -354,7 +349,7 @@
 <p><strong>Open 3dMake-generated .scad files directly:</strong></p>
 <ul>
 <li>Navigate to your project folder in File Explorer</li>
-<li>Right-click the <code>.scad</code> file → “Open with” → “Notepad”</li>
+<li>Right-click the <code>.scad</code> file → "Open with" → "Notepad"</li>
 <li>File opens immediately for editing</li>
 </ul>
 </li>
@@ -383,7 +378,7 @@
 <li><code>Ctrl+Z</code>: Undo</li>
 <li><code>Ctrl+Y</code>: Redo</li>
 </ul>
-<hr>
+<hr />
 <h3 id="notepad-setup-1"><a class="header" href="#notepad-setup-1">Notepad++ Setup</a></h3>
 <p><strong>Installation and Configuration:</strong></p>
 <ol>
@@ -397,7 +392,7 @@
 <p><strong>Configure OpenSCAD Language Support:</strong></p>
 <ul>
 <li>Open Notepad++</li>
-<li>Language → User Defined Language → Import… (if OpenSCAD UDL available)</li>
+<li>Language → User Defined Language → Import... (if OpenSCAD UDL available)</li>
 <li>Or manually set syntax highlighting:
 <ul>
 <li>Language → OpenSCAD (if available in language menu)</li>
@@ -410,7 +405,7 @@
 <p><strong>Customize for Accessibility:</strong></p>
 <ul>
 <li>Settings → Preferences → General</li>
-<li>Check: “Minimize to system tray” (optional)</li>
+<li>Check: "Minimize to system tray" (optional)</li>
 <li>Settings → Preferences → MISC.</li>
 <li>Ensure Word Wrap is set to preference</li>
 <li>Settings → Preferences → Backup</li>
@@ -444,7 +439,7 @@
 <li>Alt-Tab to standalone terminal or command prompt</li>
 <li>Run: <code>3dMake render filename.scad</code></li>
 </ul>
-<hr>
+<hr />
 <h3 id="visual-studio-code-setup"><a class="header" href="#visual-studio-code-setup">Visual Studio Code Setup</a></h3>
 <p><strong>Installation:</strong></p>
 <ol>
@@ -455,9 +450,9 @@
 <p><strong>Enable OpenSCAD Support:</strong></p>
 <ol>
 <li>Open Extensions (Ctrl+Shift+X)</li>
-<li>Search: “OpenSCAD”</li>
-<li>Install: “scad-preview” by Antyos</li>
-<li>Install: “OpenSCAD Syntax Highlighter” (optional, for better syntax highlighting)</li>
+<li>Search: "OpenSCAD"</li>
+<li>Install: "scad-preview" by Antyos</li>
+<li>Install: "OpenSCAD Syntax Highlighter" (optional, for better syntax highlighting)</li>
 </ol>
 <p><strong>Initial Accessibility Configuration:</strong></p>
 <ol>
@@ -465,7 +460,7 @@
 <p><strong>Open Settings:</strong> Ctrl+,</p>
 </li>
 <li>
-<p><strong>Search:</strong> “accessibility”</p>
+<p><strong>Search:</strong> "accessibility"</p>
 </li>
 <li>
 <p><strong>Enable Key Settings:</strong></p>
@@ -479,10 +474,10 @@
 <li>
 <p><strong>Configure Editor Font:</strong></p>
 <ul>
-<li>Search: “editor.fontSize”</li>
+<li>Search: "editor.fontSize"</li>
 <li>Set to comfortable size (recommend 14-16 for better readability)</li>
-<li>Search: “editor.fontFamily”</li>
-<li>Select monospace font (e.g., “Consolas” or “Courier New”)</li>
+<li>Search: "editor.fontFamily"</li>
+<li>Select monospace font (e.g., "Consolas" or "Courier New")</li>
 </ul>
 </li>
 </ol>
@@ -506,7 +501,7 @@
 <li>
 <p><strong>Keep Command Prompt/PowerShell open:</strong></p>
 <ul>
-<li>Open Command Prompt (Win+R, type “cmd”, Enter)</li>
+<li>Open Command Prompt (Win+R, type "cmd", Enter)</li>
 <li>Position window or minimize to taskbar</li>
 <li>Navigate to project directory: <code>cd C:\path\to\project</code></li>
 </ul>
@@ -529,12 +524,7 @@
 <li>Easier to diagnose issues when editor and terminal are separate</li>
 </ul>
 <p><strong>Keyboard Shortcuts for Common Tasks:</strong></p>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Action</th><th>Shortcut</th></tr>
-</thead>
-<tbody>
+<div class="table-wrapper"><table><thead><tr><th>Action</th><th>Shortcut</th></tr></thead><tbody>
 <tr><td>Save</td><td>Ctrl+S</td></tr>
 <tr><td>Find</td><td>Ctrl+F</td></tr>
 <tr><td>Find and Replace</td><td>Ctrl+H</td></tr>
@@ -544,8 +534,7 @@
 <tr><td>Open Terminal</td><td>Ctrl+`</td></tr>
 <tr><td>Alt-Tab to Another Window</td><td>Alt+Tab</td></tr>
 <tr><td>Command Palette</td><td>Ctrl+Shift+P</td></tr>
-</tbody>
-</table>
+</tbody></table>
 </div>
 <p><strong>Project Organization in VSCode:</strong></p>
 <ol>
@@ -574,7 +563,7 @@
 </ul>
 </li>
 </ol>
-<hr>
+<hr />
 <h2 id="screen-reader-indent-announcement-configuration"><a class="header" href="#screen-reader-indent-announcement-configuration">Screen Reader Indent Announcement Configuration</a></h2>
 <p>Proper indent announcement is critical for OpenSCAD development, as indentation indicates code nesting and structure.</p>
 <h3 id="nvda-nonvisual-desktop-access"><a class="header" href="#nvda-nonvisual-desktop-access">NVDA (NonVisual Desktop Access)</a></h3>
@@ -583,16 +572,16 @@
 <li><strong>Open NVDA Menu:</strong> Alt+N or right-click NVDA icon</li>
 <li><strong>Preferences → Settings (Ctrl+Comma)</strong></li>
 <li><strong>Document Formatting:</strong> Tab to it</li>
-<li><strong>Check:</strong> “Report indentation”</li>
-<li><strong>In the “Indentation reporting” dropdown:</strong> Select “Tones and speech”</li>
+<li><strong>Check:</strong> "Report indentation"</li>
+<li><strong>In the "Indentation reporting" dropdown:</strong> Select "Tones and speech"</li>
 <li><strong>Tone Description:</strong> NVDA will announce indent level as progressively higher tones (or speaking indent amount)</li>
 <li><strong>Apply:</strong> Click OK</li>
 </ol>
 <p><strong>Additional Tab Stop Configuration:</strong></p>
 <ol>
 <li><strong>Preferences → Settings → Document Formatting</strong></li>
-<li><strong>Check:</strong> “Report line indentation”</li>
-<li><strong>This will announce:</strong> “Indent level 4” or similar as you navigate code</li>
+<li><strong>Check:</strong> "Report line indentation"</li>
+<li><strong>This will announce:</strong> "Indent level 4" or similar as you navigate code</li>
 </ol>
 <p><strong>Testing:</strong></p>
 <ul>
@@ -604,24 +593,24 @@
 <ul>
 <li>NVDA+3 on Numpad: Cycles indent/outline level reporting</li>
 </ul>
-<hr>
+<hr />
 <h3 id="jaws-freedom-scientific"><a class="header" href="#jaws-freedom-scientific">JAWS (Freedom Scientific)</a></h3>
 <p><strong>Enable Indent Announcement:</strong></p>
 <ol>
 <li><strong>Open JAWS Manager:</strong> Press JAWSKey+F2 (or right-click JAWS icon)</li>
 <li><strong>Utilities → Settings Manager</strong></li>
-<li><strong>Search:</strong> “Indent”</li>
-<li><strong>Look for setting:</strong> “Announce Indentation” or “Report Indentation”</li>
-<li><strong>Enable:</strong> Set to “Tones” or “Tones and Speech”</li>
+<li><strong>Search:</strong> "Indent"</li>
+<li><strong>Look for setting:</strong> "Announce Indentation" or "Report Indentation"</li>
+<li><strong>Enable:</strong> Set to "Tones" or "Tones and Speech"</li>
 <li><strong>Speech Indent Announcement:</strong> Speak indent level</li>
 <li><strong>Tone Indent Announcement:</strong> Pitch increases with indent level</li>
 </ol>
 <p><strong>Advanced Configuration (Custom Scripts):</strong></p>
-<p>If built-in settings don’t work:</p>
+<p>If built-in settings don't work:</p>
 <ol>
 <li><strong>JAWSKey+F2 → Utilities → Settings Manager</strong></li>
-<li><strong>Search:</strong> “Line Breaks” or “Formatting”</li>
-<li><strong>Ensure:</strong> “Report line indentation” is enabled</li>
+<li><strong>Search:</strong> "Line Breaks" or "Formatting"</li>
+<li><strong>Ensure:</strong> "Report line indentation" is enabled</li>
 <li><strong>Set tone adjustment:</strong> Higher pitch for deeper indents</li>
 </ol>
 <p><strong>Testing:</strong></p>
@@ -635,15 +624,15 @@
 <li>JAWSKey+Alt+I: Toggle indent reporting</li>
 <li>JAWSKey+Alt+Shift+I: Cycle between indent reporting modes (speech/tones/off)</li>
 </ul>
-<hr>
+<hr />
 <h3 id="windows-narrator"><a class="header" href="#windows-narrator">Windows Narrator</a></h3>
 <p><strong>Enable Indent Announcement:</strong></p>
 <ol>
 <li><strong>Open Settings:</strong> Win+I</li>
 <li><strong>Ease of Access → Narrator</strong></li>
 <li><strong>Advanced Options: Scroll down</strong></li>
-<li><strong>Check:</strong> “Report indentation”</li>
-<li><strong>Indentation Reporting:</strong> Select “Tones” (less intrusive) or “Speech” (explicit)</li>
+<li><strong>Check:</strong> "Report indentation"</li>
+<li><strong>Indentation Reporting:</strong> Select "Tones" (less intrusive) or "Speech" (explicit)</li>
 <li><strong>Apply settings</strong></li>
 </ol>
 <p><strong>Narrator Keyboard Shortcuts:</strong></p>
@@ -659,15 +648,15 @@
 <li>Listen for indent tone changes or announcements</li>
 </ul>
 <p><strong>Note:</strong> Windows Narrator has fewer customization options than JAWS/NVDA; consider NVDA or JAWS for deeper indent control</p>
-<hr>
+<hr />
 <h3 id="dolphin-easyconverter-dolphin-screen-reader"><a class="header" href="#dolphin-easyconverter-dolphin-screen-reader">Dolphin EasyConverter (Dolphin Screen Reader)</a></h3>
 <p><strong>Enable Indent Announcement:</strong></p>
 <ol>
 <li><strong>Open Dolphin Central:</strong> Right-click Dolphin icon or click Dolphin icon in taskbar</li>
 <li><strong>Utilities → Settings → Text Processing</strong></li>
-<li><strong>Look for:</strong> “Indentation” section</li>
-<li><strong>Enable:</strong> “Announce indentation”</li>
-<li><strong>Mode:</strong> Select “Tones”, “Speech”, or “Tones and Speech”</li>
+<li><strong>Look for:</strong> "Indentation" section</li>
+<li><strong>Enable:</strong> "Announce indentation"</li>
+<li><strong>Mode:</strong> Select "Tones", "Speech", or "Tones and Speech"</li>
 <li><strong>Tone Pitch:</strong> Configure pitch increase for deeper indents</li>
 <li><strong>Apply</strong></li>
 </ol>
@@ -688,7 +677,7 @@
 <li>Ctrl+Dolphin+I: Toggle indent reporting on/off</li>
 <li>Ctrl+Dolphin+Shift+I: Cycle indent reporting mode</li>
 </ul>
-<hr>
+<hr />
 <h2 id="curriculum-specific-editor-recommendations"><a class="header" href="#curriculum-specific-editor-recommendations">Curriculum-Specific Editor Recommendations</a></h2>
 <h3 id="for-absolute-beginners-lesson-1-2"><a class="header" href="#for-absolute-beginners-lesson-1-2">For Absolute Beginners (Lesson 1-2)</a></h3>
 <p><strong>Recommended: Notepad or Notepad++</strong></p>
@@ -717,7 +706,7 @@
 8. Run: 3dMake render myproject.scad
 9. Check output, return to Notepad++ to refine code
 </code></pre>
-<hr>
+<hr />
 <h3 id="for-intermediate-users-lesson-3-6"><a class="header" href="#for-intermediate-users-lesson-3-6">For Intermediate Users (Lesson 3-6)</a></h3>
 <p><strong>Recommended: Notepad++ or VSCode</strong></p>
 <p><strong>Notepad++:</strong></p>
@@ -737,7 +726,7 @@
 <p><strong>Setup Decision Tree:</strong></p>
 <ul>
 <li><strong>Choose Notepad++ if:</strong> You prefer simplicity and want to focus on code logic</li>
-<li><strong>Choose VSCode if:</strong> You’re ready to invest time learning editor features for long-term benefit</li>
+<li><strong>Choose VSCode if:</strong> You're ready to invest time learning editor features for long-term benefit</li>
 </ul>
 <p><strong>Workflow Example with VSCode:</strong></p>
 <pre><code>1. Open VSCode (folder view of project)
@@ -750,7 +739,7 @@
 8. Run: 3dMake render filename.scad
 9. Alt+Tab back to VSCode to refine code
 </code></pre>
-<hr>
+<hr />
 <h3 id="for-advanced-users-lesson-7-11"><a class="header" href="#for-advanced-users-lesson-7-11">For Advanced Users (Lesson 7-11)</a></h3>
 <p><strong>Recommended: Visual Studio Code</strong></p>
 <p><strong>Rationale:</strong></p>
@@ -773,10 +762,10 @@
 <li>
 <p><strong>Install Additional Extensions:</strong></p>
 <ul>
-<li>“scad-preview”: Real-time 3D preview</li>
-<li>“Better Comments”: Categorize comments with colors/tones</li>
-<li>“Bracket Pair Colorizer”: Visual/tonal bracket matching</li>
-<li>“GitLens”: Track code changes over time</li>
+<li>"scad-preview": Real-time 3D preview</li>
+<li>"Better Comments": Categorize comments with colors/tones</li>
+<li>"Bracket Pair Colorizer": Visual/tonal bracket matching</li>
+<li>"GitLens": Track code changes over time</li>
 </ul>
 </li>
 <li>
@@ -789,7 +778,7 @@
 <li>
 <p><strong>Use Workspaces:</strong></p>
 <ul>
-<li>File → Save Workspace As…</li>
+<li>File → Save Workspace As...</li>
 <li>Save project-specific workspace with all settings</li>
 <li>Reopen same workspace configuration automatically</li>
 </ul>
@@ -804,7 +793,7 @@
 6. Ctrl+Alt+R saves and renders automatically
 7. Use version control (Git) for tracking changes
 </code></pre>
-<hr>
+<hr />
 <h2 id="quick-reference-editor-comparison-for-curriculum"><a class="header" href="#quick-reference-editor-comparison-for-curriculum">Quick Reference: Editor Comparison for Curriculum</a></h2>
 <h3 id="part-1-foundations-lessons-1-2"><a class="header" href="#part-1-foundations-lessons-1-2">Part 1: Foundations (Lessons 1-2)</a></h3>
 <ul>
@@ -826,7 +815,7 @@
 <li><strong>Terminal:</strong> Choose Alt-Tab or built-in based on preference</li>
 <li><strong>Skills:</strong> Workspaces, task automation, version control</li>
 </ul>
-<hr>
+<hr />
 <h2 id="troubleshooting-common-issues"><a class="header" href="#troubleshooting-common-issues">Troubleshooting Common Issues</a></h2>
 <h3 id="problem-screen-reader-not-announcing-indent"><a class="header" href="#problem-screen-reader-not-announcing-indent">Problem: Screen Reader Not Announcing Indent</a></h3>
 <p><strong>Solution:</strong></p>
@@ -849,7 +838,7 @@
 <ol>
 <li>Verify you pressed Ctrl+S</li>
 <li>Check file permissions on project folder</li>
-<li>Try “Save As” instead</li>
+<li>Try "Save As" instead</li>
 <li>Ensure filename includes <code>.scad</code> extension</li>
 </ol>
 <h3 id="problem-syntax-highlighting-not-working"><a class="header" href="#problem-syntax-highlighting-not-working">Problem: Syntax Highlighting Not Working</a></h3>
@@ -868,7 +857,7 @@
 <li>Use Alt+Tab multiple times if more than 2 windows open</li>
 <li>Alternatively, click taskbar directly (Alt+Tab usually more accessible)</li>
 </ol>
-<hr>
+<hr />
 <h2 id="next-steps"><a class="header" href="#next-steps">Next Steps</a></h2>
 <p>After completing this setup guide:</p>
 <ol>
@@ -880,7 +869,7 @@
 <li><strong>Document your setup</strong> in a personal note for reference</li>
 </ol>
 <p><strong>You are now ready to begin Lesson 1: Environmental Configuration and Developer Workflow</strong></p>
-<hr>
+<hr />
 <h2 id="additional-resources"><a class="header" href="#additional-resources">Additional Resources</a></h2>
 <ul>
 <li><strong>NVDA Documentation:</strong> https://www.nvaccess.org/documentation/</li>
@@ -889,7 +878,7 @@
 <li><strong>Windows Narrator Guide:</strong> https://support.microsoft.com/en-us/help/22798/windows-11-narrator-get-started</li>
 <li><strong>Notepad++ Documentation:</strong> https://notepad-plus-plus.org/online-help/</li>
 </ul>
-<hr>
+<hr />
 <p><strong>Document Version:</strong> 2.1 (Updated for v2.1 Curriculum)
 <strong>Last Updated:</strong> February 2026
 <strong>Accessibility Level:</strong> Full WCAG 2.1 AA Compliance
@@ -899,13 +888,7 @@
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../Setup/Braille_Displays/Braille_Displays.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
-                            </a>
 
-                            <a rel="next prefetch" href="../../Command_Line_Interface_Selection/Command_Line_Interface_Selection.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
-                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -913,22 +896,12 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../Setup/Braille_Displays/Braille_Displays.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
-                    </a>
 
-                    <a rel="next prefetch" href="../../Command_Line_Interface_Selection/Command_Line_Interface_Selection.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
-                    </a>
             </nav>
 
         </div>
 
-        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
-        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
-        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
-        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
-        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+        <!-- templates for fa icons removed: fa helper unsupported -->
 
 
 
@@ -937,13 +910,13 @@
         </script>
 
 
-        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
-        <script src="../../mark-09e88c2c.min.js"></script>
-        <script src="../../searcher-c2a407aa.js"></script>
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
 
-        <script src="../../clipboard-1626706a.min.js"></script>
-        <script src="../../highlight-4a3ec6df.js"></script>
-        <script src="../../book-a0b12cfe.js"></script>
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
 
         <!-- Custom JS scripts -->
 

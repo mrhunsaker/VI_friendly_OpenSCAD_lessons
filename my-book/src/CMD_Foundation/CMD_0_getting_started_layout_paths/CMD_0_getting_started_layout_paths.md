@@ -1,4 +1,4 @@
-# CMD-0: Getting Started - Layout, Paths, and the Shell 
+# CMD-0: Getting Started - Layout, Paths, and the Shell  {#cmd_foundation_cmd_0_getting_started_layout_paths-cmd_0_getting_started_layout_paths}
 
 Estimated time: 20-30 minutes
 

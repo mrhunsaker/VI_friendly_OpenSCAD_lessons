@@ -1,4 +1,4 @@
-# Appendix C: Tolerance Testing & Quality Assurance Matrix
+# Appendix C: Tolerance Testing & Quality Assurance Matrix {#3dmake_foundation-appendix_c_tolerance_qa}
 
 This appendix provides **measurement-based testing methodology** for verifying that 3D-printed parts meet design specifications. It's designed to be used **non-visually**-focusing on calipers, scales, and functional tests rather than visual inspection.
 

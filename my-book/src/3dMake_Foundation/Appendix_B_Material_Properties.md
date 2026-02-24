@@ -1,4 +1,4 @@
-# Appendix B: Material Properties & Selection Guide
+# Appendix B: Material Properties & Selection Guide {#3dmake_foundation-appendix_b_material_properties}
 
 This appendix covers **material properties, characteristics, and selection criteria** for 3D printing filaments. Each material includes:
 - Physical properties (strength, flexibility, temperature tolerance)

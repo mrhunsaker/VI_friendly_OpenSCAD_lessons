@@ -1,4 +1,4 @@
-# Appendix E: Advanced OpenSCAD Concepts
+# Appendix E: Advanced OpenSCAD Concepts {#3dmake_foundation-appendix_e_advanced_openscad_concepts}
 
 This appendix covers specialized topics for experienced users seeking to tackle complex parametric designs. These are optional topics not required for foundational mastery but valuable for professional application development.
 

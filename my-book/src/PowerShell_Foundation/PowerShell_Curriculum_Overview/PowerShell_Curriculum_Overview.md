@@ -1,4 +1,4 @@
-# PowerShell for Screen Reader Users - Complete Curriculum Overview
+# PowerShell for Screen Reader Users - Complete Curriculum Overview {#powershell_foundation_powershell_curriculum_overview-powershell_curriculum_overview}
 
 **Welcome!** This curriculum teaches you how to use PowerShell (Windows Terminal) as a screen reader user, starting from zero experience and building to professional-level skills.
 

@@ -1,4 +1,4 @@
-# CMD-5: Filling in the Gaps - Batch Files & Advanced Techniques
+# CMD-5: Filling in the Gaps - Batch Files & Advanced Techniques {#cmd_foundation_cmd_5_filling_in_the_gaps-cmd_5_filling_in_the_gaps}
 
 **Duration:** 2 hours (for screen reader users)  
 **Prerequisites:** CMD-Pre through CMD-4
@@ -141,5 +141,5 @@ assoc .scad               :: Show program associated with .scad
 
 - Complete all exercises
 - Review all previous lessons
-- Move to **CMDUnitTest: Comprehensive Practice**
+- Move to **CMD_Unit_Test: Comprehensive Practice**
 

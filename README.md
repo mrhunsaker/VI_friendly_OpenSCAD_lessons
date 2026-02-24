@@ -2,14 +2,14 @@
 
 ## What This Is
 
-A comprehensive, **accessible 3D design and printing curriculum** organized into:
+A comprehensive, accessible 3D design and printing curriculum organized into:
 
-- **11 progressive lessons** (Foundations -> Leadership)
-- **4 comprehensive appendices** (Reference materials)
-- **9 integrated projects** (Hands-on learning)
-- **6 PowerShell foundation lessons** (Command-line automation)
-- **Screen reader friendly** (All text-based, measurement-based verification)
-- **2 supplemental EPUB textbooks** (Programming with OpenSCAD, Simplifying 3D Printing)
+- 11 progressive lessons (Foundations -> Leadership)
+- 4 comprehensive appendices (Reference materials)
+- 9 integrated projects (Hands-on learning)
+- 6 PowerShell foundation lessons (Command-line automation)
+- Screen reader friendly (All text-based, measurement-based verification)
+- 2 supplemental EPUB textbooks (Programming with OpenSCAD, Simplifying 3D Printing)
 
 ---
 
@@ -19,26 +19,26 @@ A comprehensive, **accessible 3D design and printing curriculum** organized into
 
 ### Start here
 
-1. Read [Syllabus](my-book/src/Syllabus.md)
-2. Read [How to Navigate This Book](my-book/src/ReferenceMaterials/mdbook-navigation-guide.md)
-3. Read [Screen Reader Coding Tips](my-book/src/ReferenceMaterials/nvda-jaws-coding-tips.md)
-4. **Start Lesson 1:** [Environmental Configuration](my-book/src/3dMakeFoundation/Lessons3dMake1/Lessons3dMake1.md)
+1. Read [Syllabus](Syllabus.md)
+2. Read [How to Navigate This Book](Reference_Materials/mdbook-navigation-guide.md)
+3. Read [Screen Reader Coding Tips](Reference_Materials/nvda-jaws-coding-tips.md)
+4. Start Lesson 1: [Environmental Configuration](3dMake_Foundation/Lessons_3dMake_1/Lessons_3dMake_1.md)
 5. Follow Lessons 1-11 in order
 
 ### Use appendices for reference
 
-- **Appendix A:** [Comprehensive Slicing Guide](my-book/src/3dMakeFoundation/AppendixAComprehensiveSlicingGuide.md)
-- **Appendix B:** [Material Properties](my-book/src/3dMakeFoundation/AppendixBMaterialProperties.md) - 6 materials (PLA, PETG, ABS, TPU, PC, Nylon)
-- **Appendix C:** [Tolerance Testing & QA](my-book/src/3dMakeFoundation/AppendixCToleranceQA.md) - Measurement-based quality assurance
-- **Appendix D:** [PowerShell Integration](my-book/src/3dMakeFoundation/AppendixDPowerShellIntegration.md) - 5 complete automation scripts
+- Appendix A: [Comprehensive Slicing Guide](3dMake_Foundation/Appendix_A_Comprehensive_Slicing_Guide.md)
+- Appendix B: [Material Properties](3dMake_Foundation/Appendix_B_Material_Properties.md) - 6 materials (PLA, PETG, ABS, TPU, PC, Nylon)
+- Appendix C: [Tolerance Testing & QA](3dMake_Foundation/Appendix_C_Tolerance_QA.md) - Measurement-based quality assurance
+- Appendix D: [PowerShell Integration](3dMake_Foundation/Appendix_D_PowerShell_Integration.md) - 5 complete automation scripts
 
 ### For Instructors
 
 ### Use these resources
 
-1. [Curriculum Guide](my-book/src/3dMakeFoundation/3dMakeFoundationCurriculumGuide.md) - Full overview of all 11 lessons
-2. [11 Teacher Templates](my-book/src/3dMakeFoundation/Templates/Teacher/) - Ready-to-use assessment rubrics
-3. [SUMMARY.md](my-book/src/SUMMARY.md) - Navigation structure
+1. [Curriculum Guide](3dMake_Foundation/3dMake_Foundation_Curriculum_Guide.md) - Full overview of all 11 lessons
+2. [11 Teacher Templates](3dMake_Foundation/Templates/Teacher/) - Ready-to-use assessment rubrics
+3. [SUMMARY.md](SUMMARY.md) - Navigation structure
 4. [Resource Integration Map](RESOURCEINTEGRATIONMAP.md) - Complete resource ecosystem
 
 ---
@@ -51,87 +51,95 @@ A comprehensive, **accessible 3D design and printing curriculum** organized into
 
 Before starting 3dMake Lesson 9, complete the PowerShell Foundation curriculum:
 
-- **[PS Introduction](my-book/src/PowerShellFoundation/PowershellIntroduction/PowershellIntroduction.md)** - Before your first terminal
-- **[PS.0 - PS.5](my-book/src/PowerShellFoundation/)** - 6 progressive lessons (PS.0: Basic Commands through PS.5: Error Handling)
-- **[PowerShell Curriculum Overview](my-book/src/PowerShellFoundation/PowerShellCurriculumOverview.md)** - Complete guide with screen reader tips
-- **[Screen Reader Accessibility Guide](my-book/src/PowerShellFoundation/ScreenReaderAccessibilityGuide.md)** - NVDA & JAWS reference
+- [PS Introduction](/PowerShell_Foundation/Powershell_Introduction/Powershell_Introduction.md) - Before your first terminal
+- [PS.0 - PS.5](/PowerShell_Foundation/) - 6 progressive lessons (PS.0: Basic Commands through PS.5: Error Handling)
+- [PowerShell Curriculum Overview](PowerShell_Foundation/PowerShell_Curriculum_Overview.md) - Complete guide with screen reader tips
+- [Screen Reader Accessibility Guide](Setup/ScreenReader_Accessibility_Guide/ScreenReader_Accessibility_Guide.md) - NVDA & JAWS reference
 
-**Time commitment:** ~6 hours  
-**Note:** PowerShell is foundation for Lesson 9+, doesn't block starting Lessons 1-8
+Time commitment: ~6 hours  
+Note: PowerShell is foundation for Lesson 9+, doesn't block starting Lessons 1-8
 
 ---
 
-### **Part 1: Foundations** (Lessons 1-3 | ~3 hours)
+### Part 1: Foundations (Lessons 1-3 | ~3 hours)
 
-| Lesson                                                                        | Focus                                       | Duration  | Project |
-|-------------------------------------------------------------------------------|---------------------------------------------|-----------|---------|
-| **[Lesson 1](my-book/src/3dMakeFoundation/Lessons3dMake1/Lessons3dMake1.md)** | Environment Setup + How 3D Printing Works   | 60-90 min | None    |
-| **[Lesson 2](my-book/src/3dMakeFoundation/Lessons3dMake2/Lessons3dMake2.md)** | Primitives & Boolean Operations + Debugging | 60 min    | None    |
-| **[Lesson 3](my-book/src/3dMakeFoundation/Lessons3dMake3/Lessons3dMake3.md)** | Parametric Architecture & Modules           | 60 min    | None    |
+| Lesson                                                             | Focus                                       | Duration  | Project |
+|--------------------------------------------------------------------|---------------------------------------------|-----------|---------|
+| [Lesson 1](3dMake_Foundation/Lessons_3dMake_1/Lessons_3dMake_1.md) | Environment Setup + How 3D Printing Works   | 60-90 min | None    |
+| [Lesson 2](3dMake_Foundation/Lessons_3dMake_2/Lessons_3dMake_2.md) | Primitives & Boolean Operations + Debugging | 60 min    | None    |
+| [Lesson 3](3dMake_Foundation/Lessons_3dMake_3/Lessons_3dMake_3.md) | Parametric Architecture & Modules           | 60 min    | None    |
 
-### **Part 2: Verification & Safety** (Lessons 4-5 | ~2 hours)
+### Part 2: Verification & Safety (Lessons 4-5 | ~2 hours)
 
-| Lesson                                                                        | Focus                               | Duration  | Project |
-|-------------------------------------------------------------------------------|-------------------------------------|-----------|---------|
-| **[Lesson 4](my-book/src/3dMakeFoundation/Lessons3dMake4/Lessons3dMake4.md)** | AI-Enhanced Verification & Feedback | 45-60 min | None    |
-| **[Lesson 5](my-book/src/3dMakeFoundation/Lessons3dMake5/Lessons3dMake5.md)** | Safety Protocols & Material Intro   | 60-90 min | None    |
+| Lesson                                                             | Focus                               | Duration  | Project |
+|--------------------------------------------------------------------|-------------------------------------|-----------|---------|
+| [Lesson 4](3dMake_Foundation/Lessons_3dMake_4/Lessons_3dMake_4.md) | AI-Enhanced Verification & Feedback | 45-60 min | None    |
+| [Lesson 5](3dMake_Foundation/Lessons_3dMake_5/Lessons_3dMake_5.md) | Safety Protocols & Material Intro   | 60-90 min | None    |
 
-### **Part 3: Applied Projects** (Lessons 6-8 | ~4 hours)
+### Part 3: Applied Projects (Lessons 6-8 | ~4 hours)
 
-| Lesson                                                                        | Focus                      | Duration   | Project        |
-|-------------------------------------------------------------------------------|----------------------------|------------|----------------|
-| **[Lesson 6](my-book/src/3dMakeFoundation/Lessons3dMake6/Lessons3dMake6.md)** | Practical 3dm Commands     | 60-90 min  | Keycap         |
-| **[Lesson 7](my-book/src/3dMakeFoundation/Lessons3dMake7/Lessons3dMake7.md)** | Parametric Transforms      | 75-90 min  | Phone Stand    |
-| **[Lesson 8](my-book/src/3dMakeFoundation/Lessons3dMake8/Lessons3dMake8.md)** | Advanced Parametric Design | 90-120 min | Stackable Bins |
+| Lesson                                                             | Focus                      | Duration   | Project        |
+|--------------------------------------------------------------------|----------------------------|------------|----------------|
+| [Lesson 6](3dMake_Foundation/Lessons_3dMake_6/Lessons_3dMake_6.md) | Practical 3dm Commands     | 60-90 min  | Keycap         |
+| [Lesson 7](3dMake_Foundation/Lessons_3dMake_7/Lessons_3dMake_7.md) | Parametric Transforms      | 75-90 min  | Phone Stand    |
+| [Lesson 8](3dMake_Foundation/Lessons_3dMake_8/Lessons_3dMake_8.md) | Advanced Parametric Design | 90-120 min | Stackable Bins |
 
-### **Part 4: Advanced Topics** (Lessons 9-10 | ~3 hours)
+### Part 4: Advanced Topics (Lessons 9-10 | ~3 hours)
 
-| Lesson                                                                           | Focus                      | Duration    | Project                                  |
-|----------------------------------------------------------------------------------|----------------------------|-------------|------------------------------------------|
-| **[Lesson 9](my-book/src/3dMakeFoundation/Lessons3dMake9/Lessons3dMake9.md)**    | Automation & 3dm Workflows | 60-90 min   | [key] Keychain Automation                |
-| **[Lesson 10](my-book/src/3dMakeFoundation/Lessons3dMake10/Lessons3dMake10.md)** | Troubleshooting & Mastery  | 120-150 min | [dice] QA Testing +  Accessibility Audit |
+| Lesson                                                                | Focus                      | Duration    | Project                                  |
+|-----------------------------------------------------------------------|----------------------------|-------------|------------------------------------------|
+| [Lesson 9](3dMake_Foundation/Lessons_3dMake_9/Lessons_3dMake_9.md)    | Automation & 3dm Workflows | 60-90 min   | [key] Keychain Automation                |
+| [Lesson 10](3dMake_Foundation/Lessons_3dMake_10/Lessons_3dMake_10.md) | Troubleshooting & Mastery  | 120-150 min | [dice] QA Testing +  Accessibility Audit |
 
-### **Part 5: Leadership** (Lesson 11 | ~2 hours)
+### Part 5: Leadership (Lesson 11 | ~2 hours)
 
-| Lesson                                                                           | Focus                      | Duration   | Project                       |
-|----------------------------------------------------------------------------------|----------------------------|------------|-------------------------------|
-| **[Lesson 11](my-book/src/3dMakeFoundation/Lessons3dMake11/Lessons3dMake11.md)** | Stakeholder-Centric Design | 90-120 min | [beads] Beaded Jewelry Holder |
+| Lesson                                                                | Focus                      | Duration   | Project                       |
+|-----------------------------------------------------------------------|----------------------------|------------|-------------------------------|
+| [Lesson 11](3dMake_Foundation/Lessons_3dMake_11/Lessons_3dMake_11.md) | Stakeholder-Centric Design | 90-120 min | [beads] Beaded Jewelry Holder |
 
-**Total:** 14-18 hours of instruction + projects
+Total: 14-18 hours of instruction + projects
 
 ## Reference Appendices
 
-### **[Appendix A: Comprehensive Slicing Guide](my-book/src/3dMakeFoundation/AppendixAComprehensiveSlicingGuide.md)** (1,500+ lines)
+### Appendix A: Comprehensive Slicing Guide
+
+[Appendix A: Comprehensive Slicing Guide](3dMake_Foundation/Appendix_A_Comprehensive_Slicing_Guide.md) 
 
 Complete reference for 7 major slicers
 
-- **Coverage:** PrusaSlicer, Bambu Studio, Cura, SuperSlicer, OrcaSlicer, IdeaMaker, Fusion 360
-- **Content:** Setup guides, parameter explanations, troubleshooting, command-line integration
-- **Use when:** Slicing questions, switching slicers, quality issues, non-visual parameter descriptions
+- Coverage: PrusaSlicer, Bambu Studio, Cura, SuperSlicer, OrcaSlicer, IdeaMaker, Fusion 360
+- Content: Setup guides, parameter explanations, troubleshooting, command-line integration
+- Use when: Slicing questions, switching slicers, quality issues, non-visual parameter descriptions
 
-### **[Appendix B: Material Properties & Selection](my-book/src/3dMakeFoundation/AppendixBMaterialProperties.md)** (1,200+ lines)
+### Appendix B: Material Properties & Selection
+
+[Appendix B: Material Properties & Selection](3dMake_Foundation/Appendix_B_Material_Properties.md) 
 
 Complete material reference
 
-- **Coverage:** 6 materials (PLA, PETG, ABS, TPU, Polycarbonate, Nylon)
-- **Content:** Properties tables, printing parameters, quality verification, cost analysis
-- **Use when:** Choosing material, troubleshooting prints, cost analysis, measurement-based verification
+- Coverage: 6 materials (PLA, PETG, ABS, TPU, Polycarbonate, Nylon)
+- Content: Properties tables, printing parameters, quality verification, cost analysis
+- Use when: Choosing material, troubleshooting prints, cost analysis, measurement-based verification
 
-### **[Appendix C: Tolerance Testing & QA Matrix](my-book/src/3dMakeFoundation/AppendixCToleranceQA.md)** (1,200+ lines)
+### Appendix C: Tolerance Testing & QA Matrix
+
+[Appendix C: Tolerance Testing & QA Matrix](3dMake_Foundation/Appendix_C_Tolerance_QA.md)
 
 Measurement-based quality assurance procedures
 
-- **Coverage:** Caliper techniques, weight verification, functional testing, tolerance stack-up
-- **Content:** Step-by-step procedures, checklist templates, CSV tracking
-- **Use when:** Starting a project, verifying dimensions, troubleshooting quality issues, accessibility audits
+- Coverage: Caliper techniques, weight verification, functional testing, tolerance stack-up
+- Content: Step-by-step procedures, checklist templates, CSV tracking
+- Use when: Starting a project, verifying dimensions, troubleshooting quality issues, accessibility audits
 
-### **[Appendix D: PowerShell Integration for SCAD Workflows](my-book/src/3dMakeFoundation/AppendixDPowerShellIntegration.md)** (1,100+ lines)
+### Appendix D: PowerShell Integration for SCAD Workflows
+
+[Appendix D: PowerShell Integration for SCAD Workflows](3dMake_Foundation/Appendix_D_PowerShell_Integration.md)
 
 Complete automation guide for PowerShell + 3dMake
 
-- **Coverage:** 5 complete PowerShell scripts for workflow automation
-- **Content:** Parametric sweeps, batch processing, print logging, printer communication
-- **Use when:** Automating tasks, testing variations, batch printing, building print queues
+- Coverage: 5 complete PowerShell scripts for workflow automation
+- Content: Parametric sweeps, batch processing, print logging, printer communication
+- Use when: Automating tasks, testing variations, batch printing, building print queues
 
 ---
 
@@ -144,7 +152,7 @@ Lesson 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11
 (15-20 hours total)
 ```
 
-**Best for:** Most learners, builds comprehensive skills
+Best for: Most learners, builds comprehensive skills
 
 ### Path 2: Focused (Projects Only)
 
@@ -153,7 +161,7 @@ Foundations (1-3) -> Lesson 6 (Keycap) -> Lesson 7 (Phone Stand) -> Lesson 8 (Bi
 (~6 hours)
 ```
 
-**Best for:** Busy makers, hands-on learners
+Best for: Busy makers, hands-on learners
 
 ### Path 3: Professional (All Advanced Topics)
 
@@ -162,7 +170,7 @@ All Lessons -> All Appendices + All Projects + Appendix D scripts
 (20-25 hours)
 ```
 
-**Best for:** Instructors, professional makers, automation enthusiasts
+Best for: Instructors, professional makers, automation enthusiasts
 
 ---
 
@@ -184,9 +192,9 @@ All Lessons -> All Appendices + All Projects + Appendix D scripts
 
 ### References
 
-- [3dMake Setup Guide](my-book/src/ReferenceMaterials/3dmake-setup-guide.md)
-- [VSCode Setup Guide](my-book/src/ReferenceMaterials/vscode-setup-guide.md)
-- [Course Setup Guide](my-book/src/ReferenceMaterials/course-setup-guide.md)
+- [3dMake Setup Guide](Reference_Materials/3dmake-setup-guide.md)
+- [VSCode Setup Guide](Reference_Materials/vscode-setup-guide.md)
+- [Course Setup Guide](Reference_Materials/course-setup-guide.md)
 
 ---
 
@@ -194,23 +202,21 @@ All Lessons -> All Appendices + All Projects + Appendix D scripts
 
 ### Starting Points
 
-- **[SUMMARY.md](my-book/src/SUMMARY.md)** - Complete table of contents with all links
-- **[Curriculum Guide](my-book/src/3dMakeFoundation/3dMakeFoundationCurriculumGuide.md)** - Big-picture overview
-- **[Syllabus](my-book/src/Syllabus.md)** - Course syllabus with grading rubric
+- [SUMMARY.md](SUMMARY.md) - Complete table of contents with all links
+- [Curriculum Guide](3dMake_Foundation/3dMake_Foundation_Curriculum_Guide.md) - Big-picture overview
+- [Syllabus](Syllabus.md) - Course syllabus with grading rubric
 
 ### Finding Specific Topics
 
-| Topic               | Look In                                                                             |
-|---------------------|-------------------------------------------------------------------------------------|
-| Screen reader tips  | [NVDA/JAWS Guide](my-book/src/ReferenceMaterials/nvda-jaws-coding-tips.md)          |
-| Slicing questions   | [Appendix A](my-book/src/3dMakeFoundation/AppendixAComprehensiveSlicingGuide.md)    |
-| Material selection  | [Appendix B](my-book/src/3dMakeFoundation/AppendixBMaterialProperties.md)           |
-| Tolerance/QA        | [Appendix C](my-book/src/3dMakeFoundation/AppendixCToleranceQA.md)                  |
-| Automation scripts  | [Appendix D](my-book/src/3dMakeFoundation/AppendixDPowerShellIntegration.md)        |
-| Learning objectives | [Curriculum Guide](my-book/src/3dMakeFoundation/3dMakeFoundationCurriculumGuide.md) |
-| Assessment rubrics  | [Teacher Templates](my-book/src/3dMakeFoundation/Templates/Teacher/)                |
-| What consolidated?  | [Migration Summary](CurriculumConsolidationMigrationSummary.md)                     |
-| Resource locations  | [Resource Integration Map](RESOURCEINTEGRATIONMAP.md)                               |
+| Topic               | Look In                                                                     |
+|---------------------|-----------------------------------------------------------------------------|
+| Screen reader tips  | [NVDA/JAWS Guide](Reference_Materials/nvda-jaws-coding-tips.md)             |
+| Slicing questions   | [Appendix A](3dMake_Foundation/Appendix_A_Comprehensive_Slicing_Guide.md)   |
+| Material selection  | [Appendix B](3dMake_Foundation/Appendix_B_Material_Properties.md)           |
+| Tolerance/QA        | [Appendix C](3dMake_Foundation/Appendix_C_Tolerance_QA.md)                  |
+| Automation scripts  | [Appendix D](3dMake_Foundation/Appendix_D_PowerShell_Integration.md)        |
+| Learning objectives | [Curriculum Guide](3dMake_Foundation/3dMake_Foundation_Curriculum_Guide.md) |
+| Assessment rubrics  | [Teacher Templates](3dMake_Foundation/Templates/Teacher/)                   |
 
 ---
 
@@ -219,37 +225,37 @@ All Lessons -> All Appendices + All Projects + Appendix D scripts
 ### 3dMake Foundation Curriculum
 
 ```bash
-my-book/src/3dMakeFoundation/
-+------ 3dMakeFoundationCurriculumGuide.md          
+3dMake_Foundation/
++------ 3dMake_Foundation_Curriculum_Guide.md          
 +------ 3dMakeQuickReference.md                     
-+------ Lessons3dMake1/
-|   +------ Lessons3dMake1.md                        
++------ Lessons_3dMake_1/
+|   +------ Lessons_3dMake_1.md                        
 |   +------ (setup guides, references, assets)
-+------ Lessons3dMake2/
-|   +------ Lessons3dMake2.md                        
++------ Lessons_3dMake_2/
+|   +------ Lessons_3dMake_2.md                        
 |   +------ (references, code examples)
-+------ Lessons3dMake3/ through Lessons3dMake11/
-+------ AppendixAComprehensiveSlicingGuide.md    
-+------ AppendixBMaterialProperties.md              
-+------ AppendixCToleranceQA.md                     
-+------ AppendixDPowerShellIntegration.md           
++------ Lessons_3dMake_3/ through Lessons_3dMake_11/
++------ Appendix_A_Comprehensive_Slicing_Guide.md    
++------ Appendix_B_Material_Properties.md              
++------ Appendix_C_Tolerance_QA.md                     
++------ Appendix_D_PowerShell_Integration.md           
 ```
 
 ### Supporting Materials
 
 ```bash
-my-book/src/
+
 +------ SUMMARY.md                                     
 +------ Syllabus.md                                   
-+------ PowerShellFoundation/
-|   +------ PowershellIntroduction/                  
++------ PowerShell_Foundation/
+|   +------ Powershell_Introduction/                  
 |   +------ PS0throughPS5/                        
-|   +------ ScreenReaderAccessibilityGuide.md       
-|   +------ PowerShellCurriculumOverview.md         
+|   +------ ScreenReader_Accessibility_Guide.md       
+|   +------ PowerShell_Curriculum_Overview.md         
 +------ Templates/
 |   +------ Teacher/ (11 assessment rubric templates)
 |   +------ Student/ (11 project templates)
-+------ ReferenceMaterials/
++------ Reference_Materials/
 |   +------ vscode-setup-guide.md
 |   +------ 3dmake-setup-guide.md
 |   +------ course-setup-guide.md
@@ -289,9 +295,9 @@ my-book/src/
 
 You're now ready to start learning 3D design and printing using accessible, screen reader-friendly methods.
 
-**For students:** Begin with [Lesson 1: Environmental Configuration](my-book/src/3dMakeFoundation/Lessons3dMake1/Lessons3dMake1.md)
+For students: Begin with [Lesson 1: Environmental Configuration](3dMake_Foundation/Lessons_3dMake_1/Lessons_3dMake_1.md)
 
-**For instructors:** Start with [Curriculum Guide](my-book/src/3dMakeFoundation/3dMakeFoundationCurriculumGuide.md)
+For instructors: Start with [Curriculum Guide](3dMake_Foundation/3dMake_Foundation_Curriculum_Guide.md)
 
 ---
 
@@ -303,7 +309,7 @@ This curriculum is built with [mdBook](https://rust-lang.github.io/mdBook/), a s
 
 ### Prerequisites
 
-- Rust and Cargo (install from <https://rustup.rs/>)
+- Rust and Cargo (install from [https://rustup.rs/](https://rustup.rs/))
 - mdBook (install via Cargo)
 
 ### Installation

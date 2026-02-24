@@ -1,4 +1,4 @@
-# Parametric Keychain - Extension Project
+# Parametric Keychain - Extension Project {#assets_3dmake_foundation_lessons_3dmake_6_parametric_keychain-parametric_keychain}
 
 **Estimated time:** 2-4 hours
 
@@ -30,7 +30,7 @@ By completing this project, you will:
 
 ## Starter files
 
-- [starter.scad](../../../ExtensionProjects/ParametricKeychain/starter.scad) - minimal parametric scaffold to begin.
+- [starter.scad](../../../Extension_Projects/Parametric_Keychain/starter.scad) - minimal parametric scaffold to begin.
 
 ## Assessment Questions (Optional)
 

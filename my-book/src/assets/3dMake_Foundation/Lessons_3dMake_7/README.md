@@ -1,8 +1,8 @@
-# Lesson 7 Code Examples - Parametric Transforms and the Phone Stand Project
+# Lesson 7 Code Examples - Parametric Transforms and the Phone Stand Project {#assets_3dmake_foundation_lessons_3dmake_7-readme}
 
 ## Files
 
-- **phonestand.scad** - Intermediate-level example of transforms and Minkowski operations in a multi-part assembly
+- **phone_stand.scad** - Intermediate-level example of transforms and Minkowski operations in a multi-part assembly
 
 ## Learning Objectives
 
@@ -13,8 +13,8 @@
 
 ## How to Use This Code
 
-1. Copy `phonestand.scad` into your 3dMake project's `src/` folder
-2. Open in OpenSCAD (or use `3dm edit-model phonestand.scad`)
+1. Copy `phone_stand.scad` into your 3dMake project's `src/` folder
+2. Open in OpenSCAD (or use `3dm edit-model phone_stand.scad`)
 3. Press F5 to preview; F6 for full render
 4. Modify the top-level parameters:
    - `angle` - Adjust stand tilt (degrees)
@@ -52,6 +52,6 @@
 
 ## Related Files
 
-- See Lesson 7: [Lesson 7 Markdown](../../../3dMakeFoundation/Lessons3dMake7/Lessons3dMake7.md) for full tutorial
-- Reference: [OpenSCAD Cheat Sheet](../../../3dMakeFoundation/Lessons3dMake2/openscad-cheat-sheet.md) for transform and Minkowski syntax
-- See Appendix D: [PowerShell Integration](../../../3dMakeFoundation/AppendixDPowerShellIntegration.md) for scripting multiple variants
+- See Lesson 7: [Lesson 7 Markdown](../../../3dMake_Foundation/Lessons_3dMake_7/Lessons_3dMake_7.md) for full tutorial
+- Reference: [OpenSCAD Cheat Sheet](../../../3dMake_Foundation/Lessons_3dMake_2/openscad-cheat-sheet.md) for transform and Minkowski syntax
+- See Appendix D: [PowerShell Integration](../../../3dMake_Foundation/Appendix_D_PowerShell_Integration.md) for scripting multiple variants

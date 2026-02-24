@@ -1,4 +1,4 @@
-# Parametric Keychain - Teacher Template (Extension Project)
+# Parametric Keychain - Teacher Template (Extension Project) {#3dmake_foundation_templates_teacher-parametric_keychain_teacher_template}
 
 ## Briefing
 

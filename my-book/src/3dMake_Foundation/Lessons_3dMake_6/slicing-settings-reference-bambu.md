@@ -1,4 +1,4 @@
-# Slicing Settings Quick Reference - Bambu Studio / X1 Series
+# Slicing Settings Quick Reference - Bambu Studio / X1 Series {#3dmake_foundation_lessons_3dmake_6-slicing-settings-reference-bambu}
 
 ---
 

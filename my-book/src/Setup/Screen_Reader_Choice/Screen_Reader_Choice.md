@@ -1,4 +1,4 @@
-# Choosing a Screen Reader for Windows Command-Line Work
+# Choosing a Screen Reader for Windows Command-Line Work {#setup_screen_reader_choice-screen_reader_choice}
 
 Screen readers provide speech and (where supported) braille output that make textual interfaces accessible to people who are blind or have low vision. In command-line environments they convert terminal text, prompts, and keyboard navigation into audible or tactile feedback so users can interact independently with shells such as Windows Terminal, Command Prompt, and PowerShell.
 

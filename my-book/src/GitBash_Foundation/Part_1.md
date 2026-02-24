@@ -1,4 +1,4 @@
-# Part 1: Foundations of Git Bash - Terminal & Screen Reader Accessibility
+# Part 1: Foundations of Git Bash - Terminal & Screen Reader Accessibility {#gitbash_foundation-part_1}
 
 This section covers terminal fundamentals, screen reader accessibility, and command-line basics needed before diving into 3D design with OpenSCAD.
 

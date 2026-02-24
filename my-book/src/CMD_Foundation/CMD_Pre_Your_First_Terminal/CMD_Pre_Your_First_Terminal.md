@@ -1,4 +1,4 @@
-# CMD-Pre: Your First Terminal - Screen Reader Navigation Fundamentals
+# CMD-Pre: Your First Terminal - Screen Reader Navigation Fundamentals {#cmd_foundation_cmd_pre_your_first_terminal-cmd_pre_your_first_terminal}
 
 **Duration:** 1.5-2 hours (for screen reader users)  
 **Prerequisites:** None - this is the starting point  

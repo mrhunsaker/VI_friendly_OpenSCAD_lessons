@@ -1,4 +1,4 @@
-# Your First Print - Guided Extension 
+# Your First Print - Guided Extension  {#assets_3dmake_foundation_lessons_3dmake_1_your_first_print-your-first-print}
 
 Estimated time: 2-4 hours (including setup and print monitoring)
 

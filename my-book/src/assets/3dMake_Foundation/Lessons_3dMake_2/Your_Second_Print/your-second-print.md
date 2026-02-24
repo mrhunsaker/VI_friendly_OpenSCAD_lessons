@@ -1,4 +1,4 @@
-# Real-Life Problem Solver - Guided Extension 
+# Real-Life Problem Solver - Guided Extension  {#assets_3dmake_foundation_lessons_3dmake_2_your_second_print-your-second-print}
 
 Estimated time: 4-8 hours (design, adapt, print, and document)
 

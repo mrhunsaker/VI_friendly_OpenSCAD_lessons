@@ -1,4 +1,4 @@
-# Project 1: Tactile Floor Markers - Teacher Template
+# Project 1: Tactile Floor Markers - Teacher Template {#3dmake_foundation_templates_teacher-project_1_teacher_template}
 
 ## Briefing
 

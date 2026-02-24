@@ -1,4 +1,4 @@
-# Bonus Print - Teacher Template (Extension Project)
+# Bonus Print - Teacher Template (Extension Project) {#3dmake_foundation_templates_teacher-bonus_print_teacher_template}
 
 ## Briefing
 

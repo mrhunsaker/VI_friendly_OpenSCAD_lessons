@@ -1,4 +1,4 @@
-# Lesson 3: Parametric Architecture and Modular Libraries 
+# Lesson 3: Parametric Architecture and Modular Libraries  {#3dmake_foundation_lessons_3dmake_3-lessons_3dmake_3}
 
 Estimated time: 120-150 minutes
 - Define and document top-level parameters and use them to drive model variants[^3]
@@ -39,7 +39,7 @@ Estimated time: 120-150 minutes
    bracket(part_width, part_height, part_thickness);
    ```
 
-3. Include a library module (e.g., `include <bosl/constants.scad>`) and call a small helper from it; run `3dm build`[^2].
+3. Include a library module (e.g., `include <bosl/constants.scad>`) and call a small helper from it; run `3dm build` [^2].
 
    **Alternative: Create your own simple library module:**
    ```openscad
@@ -670,7 +670,7 @@ container(120, 150); // 2mm walls automatically
 
 1. What is a parametric module and why is it useful[^3]?
 2. How do you include an external library in OpenSCAD[^2]?
-3. What is one advantage of moving code into `lib/`[^3]?
+3. What is one advantage of moving code into `lib/` [^3]?
 4. How can you test a module quickly without a full high-resolution render[^4]?
 5. Name one safety or documentation step to include when producing a reusable module[^3].
 6. True or False: Parametric modules can only accept one parameter.

@@ -1,4 +1,4 @@
-# Screen Reader Accessibility Guide for Command-Line Terminals
+# Screen Reader Accessibility Guide for Command-Line Terminals {#setup_screen_reader_accessibility_guide-screen_reader_accessibility_guide}
 
 **Target Users:** NVDA, JAWS, and other screen reader users using PowerShell, CMD, or Git Bash  
 **Last Updated:** 2026

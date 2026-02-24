@@ -1,4 +1,4 @@
-# Printer Maintenance Log
+# Printer Maintenance Log {#3dmake_foundation_lessons_3dmake_5-maintenance_log}
 
 Track routine maintenance, repairs, and operational issues to keep your printer running smoothly.
 

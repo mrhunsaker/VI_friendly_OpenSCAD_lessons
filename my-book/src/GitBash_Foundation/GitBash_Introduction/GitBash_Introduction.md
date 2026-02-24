@@ -1,4 +1,4 @@
-# Git Bash Introduction - Screen-Reader Friendly (JAWS/NVDA)
+# Git Bash Introduction - Screen-Reader Friendly (JAWS/NVDA) {#gitbash_foundation_gitbash_introduction-gitbash_introduction}
 
 Estimated time: 20-30 minutes
 

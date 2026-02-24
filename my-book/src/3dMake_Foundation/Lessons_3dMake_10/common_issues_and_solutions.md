@@ -1,4 +1,4 @@
-# Common 3D Printing Issues and Solutions
+# Common 3D Printing Issues and Solutions {#3dmake_foundation_lessons_3dmake_10-common_issues_and_solutions}
 
 Comprehensive troubleshooting guide for diagnosing and fixing common 3D printing problems.
 

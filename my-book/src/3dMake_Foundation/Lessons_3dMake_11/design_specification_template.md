@@ -1,4 +1,4 @@
-# Design Specification Template
+# Design Specification Template {#3dmake_foundation_lessons_3dmake_11-design_specification_template}
 
 Technical design document specifying how requirements will be implemented.
 

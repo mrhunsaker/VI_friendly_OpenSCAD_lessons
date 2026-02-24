@@ -1,4 +1,4 @@
-# Measurement Calibration Guide
+# Measurement Calibration Guide {#3dmake_foundation_lessons_3dmake_10-measurement_calibration_guide}
 
 Ensure accurate dimensions in your 3D printed parts through proper calibration and verification procedures.
 

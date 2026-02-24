@@ -1,4 +1,4 @@
-# Bonus Print - Student Documentation Template (Extension Project)
+# Bonus Print - Student Documentation Template (Extension Project) {#3dmake_foundation_templates_student-bonus_print_student_template}
 
 - Author:
 - Date:

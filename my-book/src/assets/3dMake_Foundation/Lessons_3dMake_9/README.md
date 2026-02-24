@@ -1,4 +1,4 @@
-# Lesson 9: Automation and 3dm Workflows
+# Lesson 9: Automation and 3dm Workflows {#assets_3dmake_foundation_lessons_3dmake_9-readme}
 
 **Estimated time:** 60-90 minutes
 
@@ -19,15 +19,15 @@ This folder contains supporting materials for Lesson 9:
 
 ## Key Materials
 
-- [Lesson 9 Main Content](../../../3dMakeFoundation/Lessons3dMake9/Lessons3dMake9.md)
-- [3dMake Setup Guide - Command Reference](../../../3dMakeFoundation/Lessons3dMake1/3dmake-setup-guide.md)
-- [Appendix D: PowerShell Integration](../../../3dMakeFoundation/AppendixDPowerShellIntegration.md)
+- [Lesson 9 Main Content](../../../3dMake_Foundation/Lessons_3dMake_9/Lessons_3dMake_9.md)
+- [3dMake Setup Guide - Command Reference](../../../3dMake_Foundation/Lessons_3dMake_1/3dmake-setup-guide.md)
+- [Appendix D: PowerShell Integration](../../../3dMake_Foundation/Appendix_D_PowerShell_Integration.md)
 
 ## Script Templates in This Folder
 
-- `buildall.sh` - Batch build all models in a project
-- `testvariants.sh` - Build and test parameter variations
-- `exportbatch.ps1` - PowerShell export automation
+- `build_all.sh` - Batch build all models in a project
+- `test_variants.sh` - Build and test parameter variations
+- `export_batch.ps1` - PowerShell export automation
 
 ---
 
@@ -41,4 +41,4 @@ This folder contains supporting materials for Lesson 9:
 
 ---
 
-**For navigation:** See [3dMakeFoundation Asset Index](../README.md)
+**For navigation:** See [3dMake_Foundation Asset Index](../README.md)

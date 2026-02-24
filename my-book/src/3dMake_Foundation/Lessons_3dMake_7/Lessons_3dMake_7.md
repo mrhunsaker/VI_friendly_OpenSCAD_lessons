@@ -1,4 +1,4 @@
-# Lesson 7: Parametric Transforms and the Phone Stand Project
+# Lesson 7: Parametric Transforms and the Phone Stand Project {#3dmake_foundation_lessons_3dmake_7-lessons_3dmake_7}
 
 Estimated time: 105-135 minutes
 
@@ -546,7 +546,7 @@ spiral_generator(30, 50, 3);  // 30mm radius, 50mm tall, 3 complete revolutions
 1. What does the `rotate()` function do, and how does it differ from physical rotation[^1]?
 2. Why is parametric positioning important for design iteration[^1]?
 3. Explain the Minkowski sum operation and why it's useful for filleting[^2].
-4. How would you position a second component relative to the first using `translate()`[^1]?
+4. How would you position a second component relative to the first using `translate()` [^1]?
 5. What parameter would you change to make a phone stand suitable for tablets[^3]?
 6. True or False: You can rotate an object around multiple axes in a single `rotate()` call.
 7. Describe how `$fn` affects the appearance of rounded edges created by Minkowski[^2].

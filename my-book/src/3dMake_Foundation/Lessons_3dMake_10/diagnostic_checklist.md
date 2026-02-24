@@ -1,4 +1,4 @@
-# Diagnostic Checklist for 3D Printing
+# Diagnostic Checklist for 3D Printing {#3dmake_foundation_lessons_3dmake_10-diagnostic_checklist}
 
 Use this comprehensive checklist to systematically diagnose and troubleshoot printing issues.
 
@@ -243,7 +243,7 @@ If fails:
 ```plaintext
 Is filament stuck in extruder?
 +---- YES -> Nozzle clog likely
-|        -> See Nozzle Clog section (commonissuesandsolutions.md)
+|        -> See Nozzle Clog section (common_issues_and_solutions.md)
 |        -> Try: Cold pull, retract, clean
 |
 +---- NO -> Filament loading issue

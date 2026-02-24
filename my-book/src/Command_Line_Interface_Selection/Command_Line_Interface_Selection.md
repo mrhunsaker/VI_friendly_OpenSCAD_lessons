@@ -1,4 +1,4 @@
-# Part 1: Command-Line Fundamentals - Choose Your Path
+# Part 1: Command-Line Fundamentals - Choose Your Path {#command_line_interface_selection-command_line_interface_selection}
 
 **Welcome!** Before diving into 3D design with OpenSCAD, you'll master command-line fundamentals. This page will help you understand what command-line interfaces are and choose the best path for you.
 
@@ -208,7 +208,7 @@ Answer these questions to find your best match:
 - All core concepts transfer to others
 - Can switch later if needed
 
-[Start CMD Foundation](../CMDFoundation/CMDCurriculumOverview/CMDCurriculumOverview.md)
+[Start CMD Foundation](../CMD_Foundation/CMD_Curriculum_Overview/CMD_Curriculum_Overview.md)
 
 ---
 
@@ -221,7 +221,7 @@ Answer these questions to find your best match:
 - Better for complex 3D printing workflows
 - Skills are in-demand
 
-[Start PowerShell Foundation](../PowerShellFoundation/PowerShellCurriculumOverview/PowerShellCurriculumOverview.md)
+[Start PowerShell Foundation](../PowerShell_Foundation/PowerShell_Curriculum_Overview/PowerShell_Curriculum_Overview.md)
 
 ---
 
@@ -234,7 +234,7 @@ Answer these questions to find your best match:
 - Consistent across all platforms
 - Growing standard in 3D printing tools
 
-[Start Git Bash Foundation](../GitBashFoundation/GitBashCurriculumOverview/GitBashCurriculumOverview.md)
+[Start Git Bash Foundation](../GitBash_Foundation/GitBash_Curriculum_Overview/GitBash_Curriculum_Overview.md)
 
 ---
 
@@ -272,7 +272,7 @@ Take a moment and choose:
 
 ### 1️ **I want the simplest path**
 
-→ [Command Prompt Foundation](../CMDFoundation/Part1.md)
+→ [Command Prompt Foundation](../CMD_Foundation/Part_1.md)
 
 - **Time to first success:** ~30 minutes
 - **Learning curve:** Gentlest
@@ -282,7 +282,7 @@ Take a moment and choose:
 
 ### 2️ **I want modern, powerful Windows tools**
 
-→ [PowerShell Foundation](../PowerShellFoundation/Part1.md)
+→ [PowerShell Foundation](../PowerShell_Foundation/Part_1.md)
 
 - **Time to first success:** ~45 minutes
 - **Learning curve:** Moderate
@@ -292,7 +292,7 @@ Take a moment and choose:
 
 ### 3️ **I want Unix/Linux skills that work everywhere**
 
-→ [Git Bash Foundation](../GitBashFoundation/Part1.md)
+→ [Git Bash Foundation](../GitBash_Foundation/Part_1.md)
 
 - **Time to first success:** ~1 hour
 - **Learning curve:** Steeper but rewarding

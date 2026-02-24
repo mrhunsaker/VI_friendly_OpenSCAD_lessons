@@ -1,4 +1,4 @@
-# PowerShell Introduction - Screen-reader friendly (JAWS/NVDA)
+# PowerShell Introduction - Screen-reader friendly (JAWS/NVDA) {#powershell_foundation_powershell_introduction-powershell_introduction}
 
 Estimated time: 20-30 minutes
 

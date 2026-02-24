@@ -1,4 +1,4 @@
-# Project 0: Your First 3D Print - Teacher Template
+# Project 0: Your First 3D Print - Teacher Template {#3dmake_foundation_templates_teacher-project_0_teacher_template}
 
 ## Briefing
 

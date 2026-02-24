@@ -1,4 +1,4 @@
-# Windows Command Prompt (CMD) for Screen Reader Users - Complete Curriculum Overview
+# Windows Command Prompt (CMD) for Screen Reader Users - Complete Curriculum Overview {#cmd_foundation_cmd_curriculum_overview-cmd_curriculum_overview}
 
 **Welcome!** This curriculum teaches you how to use Windows Command Prompt (CMD) as a screen reader user, starting from zero experience and building to practical skill levels.
 

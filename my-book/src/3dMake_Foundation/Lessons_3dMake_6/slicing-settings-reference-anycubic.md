@@ -1,4 +1,4 @@
-# Slicing Settings Quick Reference - Cura / Anycubic i3 Mega
+# Slicing Settings Quick Reference - Cura / Anycubic i3 Mega {#3dmake_foundation_lessons_3dmake_6-slicing-settings-reference-anycubic}
 
 ---
 

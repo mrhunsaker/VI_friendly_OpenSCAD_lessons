@@ -1,4 +1,4 @@
-# Appendix A: Comprehensive Slicing Guide - All Major Slicers
+# Appendix A: Comprehensive Slicing Guide - All Major Slicers {#3dmake_foundation-appendix_a_comprehensive_slicing_guide}
 
 This appendix covers settings, workflows, and troubleshooting for **7 major 3D printer slicers**. Each slicer is represented with:
 - Recommended settings for beginners

@@ -1,4 +1,4 @@
-# Snap-Fit Clip Project
+# Snap-Fit Clip Project {#3dmake_foundation_lessons_3dmake_8-snap-fit-clip}
 ## Starter Code
 
 Use this stackable bins example as your starting point:

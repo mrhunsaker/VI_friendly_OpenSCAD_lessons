@@ -1,4 +1,4 @@
-# Lesson 8: Advanced Parametric Design and Interlocking Features
+# Lesson 8: Advanced Parametric Design and Interlocking Features {#3dmake_foundation_lessons_3dmake_8-lessons_3dmake_8}
 
 Estimated time: 120-150 minutes
 

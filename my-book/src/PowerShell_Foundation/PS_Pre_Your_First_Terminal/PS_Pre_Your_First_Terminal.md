@@ -1,4 +1,4 @@
-# PS-Pre: Your First Terminal - Screen Reader Navigation Fundamentals
+# PS-Pre: Your First Terminal - Screen Reader Navigation Fundamentals {#powershell_foundation_ps_pre_your_first_terminal-ps_pre_your_first_terminal}
 
 **Duration:** 1.5-2 hours (for screen reader users)  
 **Prerequisites:** None - this is the starting point  

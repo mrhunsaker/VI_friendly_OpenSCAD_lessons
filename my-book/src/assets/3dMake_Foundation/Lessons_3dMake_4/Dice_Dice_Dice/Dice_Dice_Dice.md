@@ -1,4 +1,4 @@
-# Dice Design Workshop - Guided Extension
+# Dice Design Workshop - Guided Extension {#assets_3dmake_foundation_lessons_3dmake_4_dice_dice_dice-dice_dice_dice}
 
 Estimated time: 3-6 hours
 

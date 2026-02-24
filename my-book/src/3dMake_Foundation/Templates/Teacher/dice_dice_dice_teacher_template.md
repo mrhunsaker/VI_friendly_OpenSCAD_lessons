@@ -1,4 +1,4 @@
-# Dice, Dice, Dice - Teacher Template (Extension Project)
+# Dice, Dice, Dice - Teacher Template (Extension Project) {#3dmake_foundation_templates_teacher-dice_dice_dice_teacher_template}
 
 ## Briefing
 

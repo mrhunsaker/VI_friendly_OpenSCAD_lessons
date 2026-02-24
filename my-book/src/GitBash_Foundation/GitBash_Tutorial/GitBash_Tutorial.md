@@ -1,4 +1,4 @@
-# Git Bash Tutorial
+# Git Bash Tutorial {#gitbash_foundation_gitbash_tutorial-gitbash_tutorial}
 
 Estimated time: 30-45 minutes
 

@@ -1,4 +1,4 @@
-# Editor Selection and Accessibility Setup Guide
+# Editor Selection and Accessibility Setup Guide {#setup_editor_selection_setup-editor_selection_setup}
 
 ## Table of Contents
 1. [Editor Comparison](#editor-comparison)

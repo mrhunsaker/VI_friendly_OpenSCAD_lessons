@@ -1,4 +1,4 @@
-# Dice, Dice, Dice - Student Documentation Template (Extension Project)
+# Dice, Dice, Dice - Student Documentation Template (Extension Project) {#3dmake_foundation_templates_student-dice_dice_dice_student_template}
 
 - Author:
 - Date:

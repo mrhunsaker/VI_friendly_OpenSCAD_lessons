@@ -1,4 +1,4 @@
-# Parametric Keychain - Extension Project 
+# Parametric Keychain - Extension Project  {#3dmake_foundation_lessons_3dmake_6-parametric_keychain}
 
 **Estimated time:** 2-4 hours
 

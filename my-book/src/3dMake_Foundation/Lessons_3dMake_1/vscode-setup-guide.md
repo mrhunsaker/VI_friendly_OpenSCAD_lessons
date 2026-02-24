@@ -1,4 +1,4 @@
-# VSCode Setup Guide - Accessible OpenSCAD Development
+# VSCode Setup Guide - Accessible OpenSCAD Development {#3dmake_foundation_lessons_3dmake_1-vscode-setup-guide}
 
 ## **For use with NVDA or JAWS on Windows**
 

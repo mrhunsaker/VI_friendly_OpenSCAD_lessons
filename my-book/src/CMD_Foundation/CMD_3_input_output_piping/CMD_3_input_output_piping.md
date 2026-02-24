@@ -1,4 +1,4 @@
-# CMD-3: Input, Output & Redirection
+# CMD-3: Input, Output & Redirection {#cmd_foundation_cmd_3_input_output_piping-cmd_3_input_output_piping}
 
 **Duration:** 2-2.5 hours (for screen reader users)  
 **Prerequisites:** CMD-Pre through CMD-2

@@ -1,4 +1,4 @@
-# Lesson 5: Safety Protocols and the Physical Fabrication Interface
+# Lesson 5: Safety Protocols and the Physical Fabrication Interface {#3dmake_foundation-lessons_3dmake_5-filament-comparison-table} {#assets_3dmake_foundation_lessons_3dmake_5-readme}
 
 **Estimated time:** 60-75 minutes
 
@@ -20,16 +20,16 @@ This folder contains supporting materials for Lesson 5:
 
 ## Key Materials
 
-- [Lesson 5 Main Content](../../../3dMakeFoundation/Lessons3dMake5/Lessons3dMake5.md)
-- [Filament Comparison Table](../../../3dMakeFoundation/Lessons3dMake5/filament-comparison-table.md)
-- [Appendix B: Material Properties & Selection Guide](../../../3dMakeFoundation/AppendixBMaterialProperties.md)
-- [Measurement Worksheet](../../../3dMakeFoundation/Lessons3dMake10/measurement-worksheet.md)
+- [Lesson 5 Main Content](3dMake_Foundation/Lessons_3dMake_5/Lessons_3dMake_5.md)
+- [Filament Comparison Table](3dMake_Foundation/Lessons_3dMake_5/filament-comparison-table.md)
+- [Appendix B: Material Properties & Selection Guide](3dMake_Foundation/Appendix_B_Material_Properties.md)
+- [Measurement Worksheet](3dMake_Foundation/Lessons_3dMake_10/measurement-worksheet.md)
 
 ## Supporting Files in This Folder
 
 - `safetychecklist.md` - Pre-print and operation safety verification
 - `maintenancelog.md` - Printer maintenance tracking template
-- `materialpropertiesquickreference.md` - Quick-access material data
+- `material_properties_quick_reference.md` - Quick-access material data
 
 ---
 
@@ -43,4 +43,4 @@ This folder contains supporting materials for Lesson 5:
 
 ---
 
-**For navigation:** See [3dMakeFoundation Asset Index](../README.md)
+**For navigation:** See [3dMake_Foundation Asset Index](README.md)

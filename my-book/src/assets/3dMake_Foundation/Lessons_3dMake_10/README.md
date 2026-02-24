@@ -1,4 +1,4 @@
-# Lesson 10: Hands-On Practice Exercises and Troubleshooting
+# Lesson 10: Hands-On Practice Exercises and Troubleshooting {#assets_3dmake_foundation_lessons_3dmake_10-readme}
 
 **Estimated time:** 120-150 minutes (multiple activities)
 
@@ -6,7 +6,7 @@
 
 This folder contains supporting materials for Lesson 10:
 
-- **Extension Projects:** AccessibilityAudit for inclusive design assessment
+- **Extension Projects:** Accessibility_Audit for inclusive design assessment
 - **Reference Materials:** Troubleshooting guides, QA matrices, measurement worksheets
 - **Assessment Tools:** Rubrics and evaluation templates
 
@@ -20,15 +20,15 @@ This folder contains supporting materials for Lesson 10:
 
 ## Key Materials
 
-- [Lesson 10 Main Content](../../../3dMakeFoundation/Lessons3dMake10/Lessons3dMake10.md)
-- [Master Rubric](../../../3dMakeFoundation/Lessons3dMake11/master-rubric.md)
-- [Measurement Worksheet](../../../3dMakeFoundation/Lessons3dMake10/measurement-worksheet.md)
-- [Filament Comparison Table](../../../3dMakeFoundation/Lessons3dMake5/filament-comparison-table.md)
-- [Appendix C: Tolerance Testing & QA Matrix](../../../3dMakeFoundation/AppendixCToleranceQA.md)
+- [Lesson 10 Main Content](3dMake_Foundation/Lessons_3dMake_10/Lessons_3dMake_10.md)
+- [Master Rubric](3dMake_Foundation/Lessons_3dMake_11/master-rubric.md)
+- [Measurement Worksheet](3dMake_Foundation/Lessons_3dMake_10/measurement-worksheet.md)
+- [Filament Comparison Table](3dMake_Foundation/Lessons_3dMake_5/filament-comparison-table.md)
+- [Appendix C: Tolerance Testing & QA Matrix](3dMake_Foundation/Appendix_C_Tolerance_QA.md)
 
 ## Extension Projects in This Folder
 
-### AccessibilityAudit
+### Accessibility_Audit
 
 **Purpose:** Practical exercise in improving designs for non-visual users; assess accessibility
 
@@ -49,20 +49,20 @@ This folder contains supporting materials for Lesson 10:
 
 ## Troubleshooting Resources
 
-- `commonissuesandsolutions.md` - Quick reference for typical problems
-- `measurementcalibrationguide.md` - How to verify tools and measurement accuracy
-- `diagnosticchecklist.md` - Systematic troubleshooting workflow
+- `common_issues_and_solutions.md` - Quick reference for typical problems
+- `measurement_calibration_guide.md` - How to verify tools and measurement accuracy
+- `diagnostic_checklist.md` - Systematic troubleshooting workflow
 
 ---
 
 ## Quick Start
 
 1. Complete Lesson 10 overview
-2. Work through AccessibilityAudit project
+2. Work through Accessibility_Audit project
 3. Reference troubleshooting guides for issues you encounter
 4. Use Appendix C for comprehensive QA procedures
 5. Document all lessons learned
 
 ---
 
-**For navigation:** See [3dMakeFoundation Asset Index](../README.md)
+**For navigation:** See [3dMake_Foundation Asset Index](../README.md)

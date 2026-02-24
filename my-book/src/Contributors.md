@@ -1,4 +1,4 @@
-# Contributors to this Curriculum
+# Contributors to this Curriculum {#contributors}
 
 ![Headshot of Michael Ryan Hunsaker, M.Ed., Ph.D.](assets/images/bio-photo.jpg)
 

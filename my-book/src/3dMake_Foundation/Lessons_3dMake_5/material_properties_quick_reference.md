@@ -1,4 +1,4 @@
-# Material Properties Quick Reference
+# Material Properties Quick Reference {#3dmake_foundation_lessons_3dmake_5-material_properties_quick_reference}
 
 Essential material information for 3D printing with FDM/FFF printers.
 

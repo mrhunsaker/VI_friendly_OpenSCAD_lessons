@@ -1,5 +1,6 @@
+
 <!DOCTYPE HTML>
-<html lang="en" class="rust sidebar-visible" dir="ltr">
+<html lang="en" class="latte sidebar-visible" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -57,34 +58,35 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="favicon-de23e50b.svg">
-        <link rel="shortcut icon" href="favicon-8114d1fc.png">
-        <link rel="stylesheet" href="css/variables-8adf115d.css">
-        <link rel="stylesheet" href="css/general-2459343d.css">
-        <link rel="stylesheet" href="css/chrome-ae938929.css">
-        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="src/assets/custom-8d04802b.css">
+        <link rel="stylesheet" href="src/assets/custom.css">
+        <link rel="stylesheet" href="theme/catppuccin.css">
 
 
         <!-- Provide site root and default themes to javascript -->
         <script>
             const path_to_root = "";
-            const default_light_theme = "rust";
-            const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-c9b9a984.js";
+            const default_light_theme = "latte";
+            const default_dark_theme = "mocha";
+            window.path_to_searchindex_js = "searchindex.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-9182b28d.js"></script>
+        <script src="toc.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -122,7 +124,7 @@
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             const html = document.documentElement;
-            html.classList.remove('rust')
+            html.classList.remove('latte')
             html.classList.add(theme);
             html.classList.add("js");
         </script>
@@ -165,21 +167,20 @@
                 <div id="mdbook-menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
                         <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
-                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                            <!-- icon removed: fa helper unsupported -->
                         </label>
                         <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
-                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                            <!-- icon removed: fa helper unsupported -->
                         </button>
                         <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
                             <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="frappe">Frappé</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mocha">Mocha</button></li>
                         </ul>
                         <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
-                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                            <!-- icon removed: fa helper unsupported -->
                         </button>
                     </div>
 
@@ -187,7 +188,7 @@
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
-                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                            <!-- icon removed: fa helper unsupported -->
                         </a>
 
                     </div>
@@ -198,7 +199,7 @@
                         <div class="search-wrapper">
                             <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
                             <div class="spinner-wrapper">
-                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                                <!-- icon removed: fa helper unsupported -->
                             </div>
                         </div>
                     </form>
@@ -220,25 +221,25 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
-<p>This course teaches 3D design and digital fabrication using a fully accessible, command-line-driven toolchain centered on <strong>OpenSCAD</strong> (text-based CAD), <strong>3DMake</strong> (non-visual build automation), and accessible editors (VS Code, Notepad++, command-line editors) with screen reader support.</p>
-<p>The curriculum is explicitly designed for blind and visually impaired learners who use screen readers (NVDA, JAWS, VoiceOver). It eliminates GUI navigation and visual feedback in favor of keyboard-driven, text-based workflows that screen readers can fully access. <strong>Accessibility is not an add-on. It is the foundation of every tool, workflow, and lesson in this curriculum.</strong></p>
-<hr>
+                        <h1 id="readme"><a class="header" href="#readme">Introduction</a></h1>
+<p>This course teaches 3D design and digital fabrication using a fully accessible, command-line-driven toolchain centered on OpenSCAD (text-based CAD), 3DMake (non-visual build automation), and accessible editors (VS Code, Notepad++, command-line editors) with screen reader support.</p>
+<p>The curriculum is explicitly designed for blind and visually impaired learners who use screen readers (NVDA, JAWS, VoiceOver). It eliminates GUI navigation and visual feedback in favor of keyboard-driven, text-based workflows that screen readers can fully access. Accessibility is not an add-on. It is the foundation of every tool, workflow, and lesson in this curriculum.</p>
+<hr />
 <h2 id="curriculum-structure"><a class="header" href="#curriculum-structure">Curriculum Structure</a></h2>
 <h3 id="part-1-screen-reader-setup--accessibility-fundamentals"><a class="header" href="#part-1-screen-reader-setup--accessibility-fundamentals">Part 1: Screen Reader Setup &amp; Accessibility Fundamentals</a></h3>
 <p>Before choosing a command-line pathway, students learn to optimize their screen reader setup for terminal work and understand accessibility options.</p>
-<p><strong>What’s Included:</strong></p>
+<p>What's Included:</p>
 <ul>
-<li><a href="PowerShell_Foundation/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.html">Screen Reader Accessibility Guide</a> - Comprehensive NVDA &amp; JAWS reference with terminal tips</li>
-<li><a href="ScreenReaderChoice.html">Screen Reader Choice: Windows CLI</a> - Help choosing between NVDA and JAWS</li>
-<li><a href="BrailleDisplays.html">Braille Display &amp; Terminal Mode</a> - Advanced accessibility setup with refreshable braille displays</li>
+<li><a href="Setup/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.html">Screen Reader Accessibility Guide</a> - Comprehensive NVDA &amp; JAWS reference with terminal tips</li>
+<li><a href="Setup/Screen_Reader_Choice/Screen_Reader_Choice.html">Screen Reader Choice: Windows CLI</a> - Help choosing between NVDA and JAWS</li>
+<li><a href="Setup/Braille_Displays/Braille_Displays.html">Braille Display &amp; Terminal Mode</a> - Advanced accessibility setup with refreshable braille displays</li>
 </ul>
-<p><strong>Why start here?</strong> Screen reader optimization is the foundation for all command-line work. Students learn keyboard shortcuts, navigation techniques, and terminal-specific accessibility before diving into any CLI pathway.</p>
-<hr>
+<p>Why start here? Screen reader optimization is the foundation for all command-line work. Students learn keyboard shortcuts, navigation techniques, and terminal-specific accessibility before diving into any CLI pathway.</p>
+<hr />
 <h3 id="part-2-command-line-foundation-choose-your-path"><a class="header" href="#part-2-command-line-foundation-choose-your-path">Part 2: Command-Line Foundation (Choose Your Path)</a></h3>
-<p>Students master terminal/command-line fundamentals before learning 3D design. <strong>You choose between three equivalent pathways</strong> based on your operating system and learning preferences.</p>
-<h4 id="compare-all-three-pathways"><a class="header" href="#compare-all-three-pathways"><strong>Compare All Three Pathways</strong></a></h4>
-<p><strong>→ <a href="Command_Line_Interface_Selection.html">Command Line Interface Selection Guide</a></strong></p>
+<p>Students master terminal/command-line fundamentals before learning 3D design. You choose between three equivalent pathways based on your operating system and learning preferences.</p>
+<h4 id="compare-all-three-pathways"><a class="header" href="#compare-all-three-pathways">Compare All Three Pathways</a></h4>
+<p>→ <a href="Command_Line_Interface_Selection/Command_Line_Interface_Selection.html">Command Line Interface Selection Guide</a></p>
 <p>This guide provides a comprehensive comparison including:</p>
 <ul>
 <li>Feature matrix comparing all three shells</li>
@@ -247,74 +248,74 @@
 <li>Goal-based recommendations</li>
 <li>FAQ addressing common questions</li>
 </ul>
-<hr>
-<h4 id="part-2a-powershell-foundation-recommended-for-windows-users"><a class="header" href="#part-2a-powershell-foundation-recommended-for-windows-users"><strong>Part 2A: PowerShell Foundation (Recommended for Windows Users)</strong></a></h4>
-<p><strong>Where to Start:</strong> <a href="PowerShell_Foundation/PowerShell_Curriculum_Overview/PowerShell_Curriculum_Overview.html">PowerShell Curriculum Overview</a></p>
-<p><strong>Lessons Included:</strong></p>
+<hr />
+<h4 id="part-2a-powershell-foundation-recommended-for-windows-users"><a class="header" href="#part-2a-powershell-foundation-recommended-for-windows-users">Part 2A: PowerShell Foundation (Recommended for Windows Users)</a></h4>
+<p>Where to Start: <a href="PowerShell_Foundation/PowerShell_Curriculum_Overview/PowerShell_Curriculum_Overview.html">PowerShell Curriculum Overview</a></p>
+<p>Lessons Included:</p>
 <ul>
-<li><strong>PS-Pre: Your First Terminal</strong> - Opening PowerShell, first commands, screen reader tricks</li>
-<li><strong>PS-0: Getting Started</strong> - Paths, shortcuts, tab completion</li>
-<li><strong>PS-1: Navigation</strong> - Moving around the file system confidently</li>
-<li><strong>PS-2: File and Folder Manipulation</strong> - Creating, editing, moving files</li>
-<li><strong>PS-3: Input, Output, and Piping</strong> - Redirecting output, piping commands</li>
-<li><strong>PS-4: Environment Variables and Aliases</strong> - Setting variables, creating shortcuts</li>
-<li><strong>PS-5: Filling in the Gaps</strong> - Control flow, profiles, useful tricks</li>
-<li><strong>PS-6: Advanced Terminal Techniques</strong> - Scripts, functions, professional workflows</li>
-<li><strong>PowerShell Unit Test &amp; Practice</strong> - Comprehensive self-assessment</li>
+<li>PS-Pre: Your First Terminal - Opening PowerShell, first commands, screen reader tricks</li>
+<li>PS-0: Getting Started - Paths, shortcuts, tab completion</li>
+<li>PS-1: Navigation - Moving around the file system confidently</li>
+<li>PS-2: File and Folder Manipulation - Creating, editing, moving files</li>
+<li>PS-3: Input, Output, and Piping - Redirecting output, piping commands</li>
+<li>PS-4: Environment Variables and Aliases - Setting variables, creating shortcuts</li>
+<li>PS-5: Filling in the Gaps - Control flow, profiles, useful tricks</li>
+<li>PS-6: Advanced Terminal Techniques - Scripts, functions, professional workflows</li>
+<li>PowerShell Unit Test &amp; Practice - Comprehensive self-assessment</li>
 </ul>
-<p><strong>Time commitment:</strong> 30-45 hours (for screen reader users)<br><strong>Best for:</strong> Users who want modern features and advanced automation<br><strong>Skills:</strong> Terminal navigation, piping, advanced scripting, professional automation</p>
-<h4 id="part-2b-windows-command-prompt-foundation-simplified-alternative"><a class="header" href="#part-2b-windows-command-prompt-foundation-simplified-alternative"><strong>Part 2B: Windows Command Prompt Foundation (Simplified Alternative)</strong></a></h4>
-<p><strong>Where to Start:</strong> <a href="CMD_Foundation/CMD_Curriculum_Overview/CMD_Curriculum_Overview.html">CMD Curriculum Overview</a></p>
-<p><strong>Lessons Included:</strong></p>
+<p>Time commitment: 30-45 hours (for screen reader users)<br />
+Best for: Users who want modern features and advanced automation<br />
+Skills: Terminal navigation, piping, advanced scripting, professional automation</p>
+<h4 id="part-2b-windows-command-prompt-foundation-simplified-alternative"><a class="header" href="#part-2b-windows-command-prompt-foundation-simplified-alternative">Part 2B: Windows Command Prompt Foundation (Simplified Alternative)</a></h4>
+<p>Where to Start: <a href="CMD_Foundation/CMD_Curriculum_Overview/CMD_Curriculum_Overview.html">CMD Curriculum Overview</a></p>
+<p>Lessons Included:</p>
 <ul>
-<li><strong>CMD-Pre: Your First Terminal</strong> - Opening CMD, first commands, screen reader tricks</li>
-<li><strong>CMD-0: Getting Started</strong> - Paths, shortcuts, command basics</li>
-<li><strong>CMD-1: Navigation</strong> - Moving around the file system confidently</li>
-<li><strong>CMD-2: File and Folder Manipulation</strong> - Creating, editing, moving files</li>
-<li><strong>CMD-3: Input, Output &amp; Redirection</strong> - Redirecting output, piping commands</li>
-<li><strong>CMD-4: Environment Variables &amp; Shortcuts</strong> - Setting variables, shortcuts</li>
-<li><strong>CMD-5: Filling in the Gaps</strong> - Batch files, advanced techniques</li>
-<li><strong>CMD-6: Advanced Terminal Techniques</strong> - Scripts, automation, professional workflows</li>
-<li><strong>CMD Unit Test &amp; Practice</strong> - Comprehensive self-assessment</li>
+<li>CMD-Pre: Your First Terminal - Opening CMD, first commands, screen reader tricks</li>
+<li>CMD-0: Getting Started - Paths, shortcuts, command basics</li>
+<li>CMD-1: Navigation - Moving around the file system confidently</li>
+<li>CMD-2: File and Folder Manipulation - Creating, editing, moving files</li>
+<li>CMD-3: Input, Output &amp; Redirection - Redirecting output, piping commands</li>
+<li>CMD-4: Environment Variables &amp; Shortcuts - Setting variables, shortcuts</li>
+<li>CMD-5: Filling in the Gaps - Batch files, advanced techniques</li>
+<li>CMD-6: Advanced Terminal Techniques - Scripts, automation, professional workflows</li>
+<li>CMD Unit Test &amp; Practice - Comprehensive self-assessment</li>
 </ul>
-<p><strong>Time commitment:</strong> 30-45 hours (for screen reader users)<br><strong>Best for:</strong> Absolute beginners or users who prefer simplicity<br><strong>Skills:</strong> Terminal navigation, file operations, batch scripting, basic automation</p>
-<h4 id="part-2c-git-bash-foundation-cross-platform-skills"><a class="header" href="#part-2c-git-bash-foundation-cross-platform-skills"><strong>Part 2C: Git Bash Foundation (Cross-Platform Skills)</strong></a></h4>
-<p><strong>Where to Start:</strong> <a href="GitBash_Foundation/GitBash_Curriculum_Overview/GitBash_Curriculum_Overview.html">Git Bash Curriculum Overview</a></p>
-<p><strong>Lessons Included:</strong></p>
+<p>Time commitment: 30-45 hours (for screen reader users)<br />
+Best for: Absolute beginners or users who prefer simplicity<br />
+Skills: Terminal navigation, file operations, batch scripting, basic automation</p>
+<h4 id="part-2c-git-bash-foundation-cross-platform-skills"><a class="header" href="#part-2c-git-bash-foundation-cross-platform-skills">Part 2C: Git Bash Foundation (Cross-Platform Skills)</a></h4>
+<p>Where to Start: <a href="GitBash_Foundation/GitBash_Curriculum_Overview/GitBash_Curriculum_Overview.html">Git Bash Curriculum Overview</a></p>
+<p>Lessons Included:</p>
 <ul>
-<li><strong>GitBash-Pre: Your First Terminal</strong> - Opening Git Bash, first commands, screen reader tricks</li>
-<li><strong>GitBash-0: Getting Started</strong> - Paths, shortcuts, command basics</li>
-<li><strong>GitBash-1: Navigation</strong> - Moving around the file system confidently</li>
-<li><strong>GitBash-2: File and Folder Manipulation</strong> - Creating, editing, moving files</li>
-<li><strong>GitBash-3: Input, Output &amp; Piping</strong> - Redirecting output, piping commands</li>
-<li><strong>GitBash-4: Environment Variables &amp; Aliases</strong> - Setting variables, shortcuts</li>
-<li><strong>GitBash-5: Filling in the Gaps</strong> - Shell profiles, history, debugging</li>
-<li><strong>GitBash-6: Advanced Terminal Techniques</strong> - Scripts, functions, professional workflows</li>
-<li><strong>GitBash Unit Test &amp; Practice</strong> - Comprehensive self-assessment</li>
+<li>GitBash-Pre: Your First Terminal - Opening Git Bash, first commands, screen reader tricks</li>
+<li>GitBash-0: Getting Started - Paths, shortcuts, command basics</li>
+<li>GitBash-1: Navigation - Moving around the file system confidently</li>
+<li>GitBash-2: File and Folder Manipulation - Creating, editing, moving files</li>
+<li>GitBash-3: Input, Output &amp; Piping - Redirecting output, piping commands</li>
+<li>GitBash-4: Environment Variables &amp; Aliases - Setting variables, shortcuts</li>
+<li>GitBash-5: Filling in the Gaps - Shell profiles, history, debugging</li>
+<li>GitBash-6: Advanced Terminal Techniques - Scripts, functions, professional workflows</li>
+<li>GitBash Unit Test &amp; Practice - Comprehensive self-assessment</li>
 </ul>
-<p><strong>Time commitment:</strong> 20-25 hours (for screen reader users)<br><strong>Best for:</strong> Users who want cross-platform skills (Windows, macOS, Linux)<br><strong>Skills:</strong> Unix/bash commands, shell scripting, cross-platform automation</p>
-<p><strong>Important:</strong> Choose ONE pathway and complete it fully. All three teach identical fundamental concepts using different tools. Each integrates fully with 3D design workflows.</p>
-<hr>
+<p>Time commitment: 20-25 hours (for screen reader users)<br />
+Best for: Users who want cross-platform skills (Windows, macOS, Linux)<br />
+Skills: Unix/bash commands, shell scripting, cross-platform automation</p>
+<p>Important: Choose ONE pathway and complete it fully. All three teach identical fundamental concepts using different tools. Each integrates fully with 3D design workflows.</p>
+<hr />
 <h3 id="part-3-3dmake-foundation--design-11-lessons--8-appendices"><a class="header" href="#part-3-3dmake-foundation--design-11-lessons--8-appendices">Part 3: 3dMake Foundation &amp; Design (11 Lessons + 8 Appendices)</a></h3>
-<p><strong>Where to Start:</strong> <a href="3dMake_Foundation/3dMake_Intro/3dMake_Intro.html">3dMake Introduction</a></p>
+<p>Where to Start: <a href="3dMake_Foundation/3dMake_Intro/3dMake_Intro.html">3dMake Introduction</a></p>
 <p>Students build parametric 3D designs using OpenSCAD and automate the workflow with 3DMake.</p>
 <h4 id="main-curriculum-11-progressive-lessons"><a class="header" href="#main-curriculum-11-progressive-lessons">Main Curriculum: 11 Progressive Lessons</a></h4>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Part</th><th>Lessons</th><th>Focus</th><th>Duration</th></tr>
-</thead>
-<tbody>
-<tr><td><strong>Foundations</strong></td><td>1-3</td><td>Environment setup, primitives, parametric design + advanced language features</td><td>4-5 hours</td></tr>
-<tr><td><strong>Verification &amp; Safety</strong></td><td>4-5</td><td>AI verification, safety protocols, materials</td><td>2-3 hours</td></tr>
-<tr><td><strong>Applied Projects</strong></td><td>6-8</td><td>Practical commands, text functions, transforms, assembly patterns</td><td>5-6 hours</td></tr>
-<tr><td><strong>Advanced Topics</strong></td><td>9-10</td><td>Automation with file I/O, troubleshooting, mastery</td><td>3-4 hours</td></tr>
-<tr><td><strong>Leadership</strong></td><td>11</td><td>Stakeholder-centric design</td><td>2-3 hours</td></tr>
-</tbody>
-</table>
+<div class="table-wrapper"><table><thead><tr><th>Part</th><th>Lessons</th><th>Focus</th><th>Duration</th></tr></thead><tbody>
+<tr><td>Foundations</td><td>1-3</td><td>Environment setup, primitives, parametric design + advanced language features</td><td>4-5 hours</td></tr>
+<tr><td>Verification &amp; Safety</td><td>4-5</td><td>AI verification, safety protocols, materials</td><td>2-3 hours</td></tr>
+<tr><td>Applied Projects</td><td>6-8</td><td>Practical commands, text functions, transforms, assembly patterns</td><td>5-6 hours</td></tr>
+<tr><td>Advanced Topics</td><td>9-10</td><td>Automation with file I/O, troubleshooting, mastery</td><td>3-4 hours</td></tr>
+<tr><td>Leadership</td><td>11</td><td>Stakeholder-centric design</td><td>2-3 hours</td></tr>
+</tbody></table>
 </div>
-<p><strong>Total:</strong> 45-55 hours instruction + practice projects</p>
-<p><strong>What’s New (v2.1):</strong></p>
+<p>Total: 45-55 hours instruction + practice projects</p>
+<p>What's New (v2.1):</p>
 <ul>
 <li>Lesson 3: Added Advanced Programming Concepts (Conditionals, Type Testing, List Comprehensions, Special Variables, Functions)</li>
 <li>Lesson 6: Added String Functions for dynamic naming and labeling</li>
@@ -324,28 +325,28 @@
 </ul>
 <h4 id="8-comprehensive-reference-appendices"><a class="header" href="#8-comprehensive-reference-appendices">8 Comprehensive Reference Appendices</a></h4>
 <ul>
-<li><strong>Appendix A: Introduction to Command Line Interfaces</strong> - CLI overview</li>
-<li><strong>Appendix B: PowerShell Comprehensive Guide</strong> - Detailed PowerShell reference</li>
-<li><strong>Appendix C: Comprehensive Slicing Guide</strong> - All major slicers (PrusaSlicer, Bambu Studio, Cura, OrcaSlicer)</li>
-<li><strong>Appendix D: Material Properties &amp; Selection</strong> - Material reference with properties</li>
-<li><strong>Appendix E: Tolerance Testing &amp; Quality Assurance Matrix</strong> - QA procedures</li>
-<li><strong>Appendix F: PowerShell Integration for SCAD Workflows</strong> - Automation and batch processing</li>
-<li><strong>Appendix G: Advanced OpenSCAD Concepts</strong> - 5 specialized topics (Gears, Batch Processing, Performance, Print Orientation, Recursion)</li>
-<li><strong>Appendix H: 3dMake Code Examples &amp; Assets</strong> - OpenSCAD code examples and reference designs</li>
+<li>Appendix A: Introduction to Command Line Interfaces - CLI overview</li>
+<li>Appendix B: PowerShell Comprehensive Guide - Detailed PowerShell reference</li>
+<li>Appendix C: Comprehensive Slicing Guide - All major slicers (PrusaSlicer, Bambu Studio, Cura, OrcaSlicer)</li>
+<li>Appendix D: Material Properties &amp; Selection - Material reference with properties</li>
+<li>Appendix E: Tolerance Testing &amp; Quality Assurance Matrix - QA procedures</li>
+<li>Appendix F: PowerShell Integration for SCAD Workflows - Automation and batch processing</li>
+<li>Appendix G: Advanced OpenSCAD Concepts - 5 specialized topics (Gears, Batch Processing, Performance, Print Orientation, Recursion)</li>
+<li>Appendix H: 3dMake Code Examples &amp; Assets - OpenSCAD code examples and reference designs</li>
 </ul>
-<hr>
+<hr />
 <h2 id="the-accessible-toolchain"><a class="header" href="#the-accessible-toolchain">The Accessible Toolchain</a></h2>
 <h3 id="screen-reader-compatibility-throughout"><a class="header" href="#screen-reader-compatibility-throughout">Screen Reader Compatibility Throughout</a></h3>
 <p>This course uses tools designed for screen reader access:</p>
 <ul>
-<li><strong>Terminal/Command line</strong> - Text-based, fully accessible to NVDA, JAWS, VoiceOver</li>
-<li><strong>OpenSCAD</strong> - Free, open-source text-based CAD (no visual-only GUI dependency)</li>
-<li><strong>3DMake</strong> - Command-line build tool eliminating GUI navigation</li>
-<li><strong>Accessible editors</strong> - VS Code, Notepad++, Nano, Vim (all keyboard-driven, screen reader friendly)</li>
+<li>Terminal/Command line - Text-based, fully accessible to NVDA, JAWS, VoiceOver</li>
+<li>OpenSCAD - Free, open-source text-based CAD (no visual-only GUI dependency)</li>
+<li>3DMake - Command-line build tool eliminating GUI navigation</li>
+<li>Accessible editors - VS Code, Notepad++, Nano, Vim (all keyboard-driven, screen reader friendly)</li>
 </ul>
-<p>See <a href="3dMakeFoundation/Lessons3dMake1/nvda-jaws-coding-tips.html">Screen Reader Coding Tips (NVDA &amp; JAWS)</a> for detailed keyboard shortcuts and configuration.</p>
+<p>See <a href="3dMake_Foundation/Lessons_3dMake_1/nvda-jaws-coding-tips.html">Screen Reader Coding Tips (NVDA &amp; JAWS)</a> for detailed keyboard shortcuts and configuration.</p>
 <h3 id="3dmake-non-visual-build-automation"><a class="header" href="#3dmake-non-visual-build-automation">3DMake: Non-Visual Build Automation</a></h3>
-<p><strong>3DMake</strong> makes the entire design-to-print pipeline accessible:</p>
+<p>3DMake makes the entire design-to-print pipeline accessible:</p>
 <pre><code class="language-bash">3dm build        -&gt; Compiles main.scad to main.stl
 3dm info         -&gt; Validates geometry and runs diagnostics
 3dm slice        -&gt; Prepares model for printing
@@ -358,24 +359,24 @@
 <li>Works with command-line slicers</li>
 </ul>
 <h3 id="iterative-non-visual-design"><a class="header" href="#iterative-non-visual-design">Iterative, Non-Visual Design</a></h3>
-<p>Students learn to design through <strong>code and testing</strong>, not visual previews:</p>
+<p>Students learn to design through code and testing, not visual previews:</p>
 <ul>
 <li>Write parametric OpenSCAD code in accessible editors</li>
 <li>Run <code>3dm build</code> to compile to printable file</li>
 <li>Use measurement-based verification (calipers, scales, functional testing)</li>
 <li>Iterate by editing parameters and rebuilding</li>
-<li><strong>No reliance on 3D preview or visual feedback</strong></li>
+<li>No reliance on 3D preview or visual feedback</li>
 </ul>
-<hr>
+<hr />
 <h2 id="project-based-learning"><a class="header" href="#project-based-learning">Project-Based Learning</a></h2>
 <p>Every 3dMake lesson includes hands-on projects:</p>
 <ul>
-<li><strong>Lesson 6:</strong> Keycap with embossed text (3dm commands)</li>
-<li><strong>Lesson 7:</strong> Phone stand (parametric transforms)</li>
-<li><strong>Lesson 8:</strong> Stackable bins (interlocking features, tolerances)</li>
-<li><strong>Lesson 9:</strong> Keychain automation (PowerShell batch processing)</li>
-<li><strong>Lesson 10:</strong> QA testing + accessibility audit (measurement, troubleshooting)</li>
-<li><strong>Lesson 11:</strong> Beaded jewelry holder (stakeholder-driven design)</li>
+<li>Lesson 6: Keycap with embossed text (3dm commands)</li>
+<li>Lesson 7: Phone stand (parametric transforms)</li>
+<li>Lesson 8: Stackable bins (interlocking features, tolerances)</li>
+<li>Lesson 9: Keychain automation (PowerShell batch processing)</li>
+<li>Lesson 10: QA testing + accessibility audit (measurement, troubleshooting)</li>
+<li>Lesson 11: Beaded jewelry holder (stakeholder-driven design)</li>
 </ul>
 <p>Each project requires:</p>
 <ul>
@@ -383,54 +384,48 @@
 <li>Functional prototype (tested, iterated)</li>
 <li>Complete documentation (reflections, measurements, decisions)</li>
 </ul>
-<hr>
+<hr />
 <h2 id="learning-support"><a class="header" href="#learning-support">Learning Support</a></h2>
 <h3 id="reference-materials"><a class="header" href="#reference-materials">Reference Materials</a></h3>
 <p>Quick navigation to common topics:</p>
-<ul>
-<li><a href="3dMakeFoundation/Lessons3dMake2/openscad-cheat-sheet.html">OpenSCAD Cheat Sheet</a> - Syntax quick-reference</li>
-<li><a href="3dMakeFoundation/Lessons3dMake1/3dmake-setup-guide.html">3dMake Setup Guide</a> - Installation walkthrough</li>
-<li><a href="3dMakeFoundation/Lessons3dMake1/vscode-setup-guide.html">VSCode Setup Guide</a> - Accessibility configuration</li>
-<li><a href="3dMakeFoundation/Lessons3dMake1/vocabulary-glossary.html">Vocabulary Glossary</a> - Course terminology</li>
-<li><a href="3dMakeFoundation/Lessons3dMake5/filament-comparison-table.html">Filament Comparison Table</a> - Material reference</li>
-<li><a href="3dMakeFoundation/Lessons3dMake11/master-rubric.html">Master Rubric</a> - Project assessment criteria</li>
-</ul>
+<p><a href="3dMake_Foundation/Lessons_3dMake_2/openscad-cheat-sheet.html">OpenSCAD Cheat Sheet</a> - Syntax quick-reference<br />
+<a href="3dMake_Foundation/Lessons_3dMake_1/3dmake-setup-guide.html">3dMake Setup Guide</a> - Installation walkthrough<br />
+<a href="3dMake_Foundation/Lessons_3dMake_1/vscode-setup-guide.html">VSCode Setup Guide</a> - Accessibility configuration<br />
+<a href="3dMake_Foundation/Lessons_3dMake_1/vocabulary-glossary.html">Vocabulary Glossary</a> - Course terminology<br />
+<a href="3dMake_Foundation/Lessons_3dMake_5/filament-comparison-table.html">Filament Comparison Table</a> - Material reference<br />
+<a href="3dMake_Foundation/Lessons_3dMake_11/master-rubric.html">Master Rubric</a> - Project assessment criteria</p>
 <h3 id="navigation"><a class="header" href="#navigation">Navigation</a></h3>
-<ul>
-<li><strong><a href="SUMMARY.html">SUMMARY.md</a></strong> - Complete table of contents</li>
-<li><strong><a href="3dMakeFoundation/3dMakeFoundationCurriculumGuide.html">Curriculum Guide</a></strong> - Detailed overview of all lessons and appendices</li>
-<li><strong><a href="3dMakeFoundation/3dMakeQuickReference.html">Quick Reference</a></strong> - At-a-glance command and syntax reference</li>
-<li><strong><a href="Appendices/Appendices.html">Appendices</a></strong> - PowerShell and 3dMake reference materials</li>
-</ul>
-<hr>
+<p><a href="SUMMARY.html">SUMMARY.md</a> - Complete table of contents<br />
+<a href="3dMake_Foundation/3dMake_Foundation_Curriculum_Guide.html">Curriculum Guide</a> - Detailed overview of all lessons and appendices<br />
+<a href="3dMake_Foundation/3dMake_Quick_Reference.html">Quick Reference</a> - At-a-glance command and syntax reference<br />
+<a href="Appendices/Appendices.html">Appendices</a> - PowerShell and 3dMake reference materials</p>
+<hr />
 <h2 id="supplemental-resources--textbooks"><a class="header" href="#supplemental-resources--textbooks">Supplemental Resources &amp; Textbooks</a></h2>
 <p>This course is enhanced by comprehensive textbooks and companion materials from the <em>Programming with OpenSCAD</em> project:</p>
 <h3 id="textbook-options-epub-format"><a class="header" href="#textbook-options-epub-format">Textbook options (EPUB Format)</a></h3>
 <ul>
-<li><strong><a href="https://nostarch.com/programmingopenscad">Programming with OpenSCAD: A Beginner’s Guide to Coding 3D-Printable Objects</a></strong> - Comprehensive reference covering OpenSCAD syntax, geometry concepts, and design patterns. Ideal for deep dives into specific topics and as a reference guide throughout the course.</li>
-<li><strong><a href="https://www.packtpub.com/en-us/product/simplifying-3d-printing-with-openscad-9781801813174">Simplifying 3D Printing with OpenSCAD</a></strong> - Focused on practical workflows, optimization, and real-world printing scenarios.</li>
+<li><a href="https://nostarch.com/programmingopenscad">Programming with OpenSCAD: A Beginner's Guide to Coding 3D-Printable Objects</a> - Comprehensive reference covering OpenSCAD syntax, geometry concepts, and design patterns. Ideal for deep dives into specific topics and as a reference guide throughout the course.</li>
+<li><a href="https://www.packtpub.com/en-us/product/simplifying-3d-printing-with-openscad-9781801813174">Simplifying 3D Printing with OpenSCAD</a> - Focused on practical workflows, optimization, and real-world printing scenarios.</li>
 </ul>
 <h3 id="companion-teaching-resources"><a class="header" href="#companion-teaching-resources">Companion Teaching Resources</a></h3>
-<ul>
-<li><strong><a href="https://programmingwithopenscad.github.io/learning.html">Practice Worksheets</a></strong> - Printable worksheets for visualization practice, decomposition exercises, vocabulary building, and assessment.</li>
-<li><strong><a href="https://programmingwithopenscad.github.io/quick-reference.html">Visual Quick Reference</a></strong> - Command syntax guides and geometry reference.</li>
-<li><strong><a href="https://github.com/ProgrammingWithOpenSCAD/CodeSolutions">Code Solutions Repository</a></strong> - Working OpenSCAD examples organized by topic (3D shapes, transformations, loops, modules, if-statements, advanced techniques).</li>
-</ul>
-<hr>
+<p><a href="https://programmingwithopenscad.github.io/learning.html">Practice Worksheets</a> - Printable worksheets for visualization practice, decomposition exercises, vocabulary building, and assessment.<br />
+<a href="https://programmingwithopenscad.github.io/quick-reference.html">Visual Quick Reference</a> - Command syntax guides and geometry reference.<br />
+<a href="https://github.com/ProgrammingWithOpenSCAD/CodeSolutions">Code Solutions Repository</a> - Working OpenSCAD examples organized by topic (3D shapes, transformations, loops, modules, if-statements, advanced techniques).</p>
+<hr />
 <h2 id="getting-started"><a class="header" href="#getting-started">Getting Started</a></h2>
-<p><strong>For Students:</strong></p>
+<p>For Students:</p>
 <ol>
-<li>Start with <a href="PowerShellFoundation/PowershellIntroduction/PowershellIntroduction.html">PowerShell Introduction</a></li>
+<li>Start with <a href="PowerShell_Foundation/Powershell_Introduction/Powershell_Introduction.html">PowerShell Introduction</a></li>
 <li>Complete PowerShell lessons (PS.0-PS.5)</li>
-<li>Begin <a href="3dMakeFoundation/3dMakeIntro/3dMakeIntro.html">3dMake Introduction</a></li>
-<li>Follow <a href="3dMakeFoundation/Lessons3dMake1/Lessons3dMake1.html">Lesson 1: Environmental Configuration</a></li>
+<li>Begin <a href="3dMake_Foundation/3dMake_Intro/3dMake_Intro.html">3dMake Introduction</a></li>
+<li>Follow <a href="3dMake_Foundation/Lessons_3dMake_1/Lessons_3dMake_1.html">Lesson 1: Environmental Configuration</a></li>
 <li>Continue through Lesson 11</li>
 </ol>
-<p><strong>For Instructors:</strong></p>
+<p>For Instructors:</p>
 <ol>
-<li>Review <a href="3dMakeFoundation/3dMakeFoundationCurriculumGuide.html">Curriculum Guide</a></li>
-<li>Use <a href="3dMakeFoundation/Templates/Teacher/">11 Teacher Templates</a> for assessment</li>
-<li>Reference <a href="3dMakeFoundation/Lessons3dMake11/master-rubric.html">Master Rubric</a> for grading</li>
+<li>Review <a href="3dMake_Foundation/3dMake_Foundation_Curriculum_Guide.html">Curriculum Guide</a></li>
+<li>Use <a href="3dMake_Foundation/Templates/Teacher/">11 Teacher Templates</a> for assessment</li>
+<li>Reference <a href="3dMake_Foundation/Lessons_3dMake_11/master-rubric.html">Master Rubric</a> for grading</li>
 <li>Check <a href="Syllabus.html">Syllabus</a> for course policies and learning progression</li>
 </ol>
 
@@ -438,13 +433,7 @@
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="Cover.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
-                            </a>
 
-                            <a rel="next prefetch" href="Syllabus.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
-                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -452,22 +441,12 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="Cover.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
-                    </a>
 
-                    <a rel="next prefetch" href="Syllabus.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
-                    </a>
             </nav>
 
         </div>
 
-        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
-        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
-        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
-        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
-        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+        <!-- templates for fa icons removed: fa helper unsupported -->
 
 
 
@@ -476,13 +455,13 @@
         </script>
 
 
-        <script src="elasticlunr-ef4e11c1.min.js"></script>
-        <script src="mark-09e88c2c.min.js"></script>
-        <script src="searcher-c2a407aa.js"></script>
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
 
-        <script src="clipboard-1626706a.min.js"></script>
-        <script src="highlight-4a3ec6df.js"></script>
-        <script src="book-a0b12cfe.js"></script>
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
 
         <!-- Custom JS scripts -->
 

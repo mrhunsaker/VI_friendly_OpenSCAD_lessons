@@ -1,4 +1,4 @@
-# CMD-1: Navigation - Moving Around Your File System
+# CMD-1: Navigation - Moving Around Your File System {#cmd_foundation_cmd_1_navigation-cmd_1_navigation}
 
 **Duration:** 1.5-2 hours (for screen reader users)  
 **Prerequisites:** CMD-Pre and CMD-0  

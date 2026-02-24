@@ -1,4 +1,4 @@
-# Project 3: Beaded Jewelry - Teacher Template
+# Project 3: Beaded Jewelry - Teacher Template {#3dmake_foundation_templates_teacher-project_3_teacher_template}
 
 ## Briefing
 

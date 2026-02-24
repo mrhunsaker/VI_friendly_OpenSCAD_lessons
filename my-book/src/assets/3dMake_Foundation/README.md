@@ -1,29 +1,29 @@
-# 3dMake Foundation Code Examples & Assets
+# 3dMake Foundation Code Examples & Assets {#assets_3dmake_foundation-readme}
 
 This directory contains all OpenSCAD code examples and supporting materials for the 3dMake Foundation curriculum (Lessons 1-11).
 
 ## Folder Structure
 
 ```plaintext
-assets/3dMakeFoundation/
+assets/3dMake_Foundation/
 +------ README.md (this file)
-+------ Lessons3dMake6/
++------ Lessons_3dMake_6/
 |   +------ README.md
-|   +------ cubekeycap.scad
-+------ Lessons3dMake7/
+|   +------ cube_keycap.scad
++------ Lessons_3dMake_7/
 |   +------ README.md
-|   +------ phonestand.scad
-+------ Lessons3dMake8/
+|   +------ phone_stand.scad
++------ Lessons_3dMake_8/
     +------ README.md
-    +------ stackablebins.scad
+    +------ stackable_bins.scad
 ```
 
 ## Code Examples by Lesson
 
 ### Lesson 6: Practical 3dm Commands and Text Embossing
 
-**Folder**: `Lessons3dMake6/`  
-**File**: `cubekeycap.scad`  
+**Folder**: `Lessons_3dMake_6/`  
+**File**: `cube_keycap.scad`  
 **Level**: Beginner  
 **Skills**: Text embossing, boolean operations, parametric design
 
@@ -33,14 +33,14 @@ A simple keycap with embossed text. Great for learning:
 - Creating hollow structures with `difference()`
 - Running 3dm commands (`describe`, `preview`, `orient`, `slice`)
 
-See `Lessons3dMake6/README.md` for detailed learning guide.
+See `Lessons_3dMake_6/README.md` for detailed learning guide.
 
 ---
 
 ### Lesson 7: Parametric Transforms and the Phone Stand Project
 
-**Folder**: `Lessons3dMake7/`  
-**File**: `phonestand.scad`  
+**Folder**: `Lessons_3dMake_7/`  
+**File**: `phone_stand.scad`  
 **Level**: Intermediate  
 **Skills**: Transforms, Minkowski operations, multi-part assemblies
 
@@ -51,14 +51,14 @@ A functional phone stand combining:
 - Multi-part assembly with `union()`
 - Parametric customization for different phone sizes
 
-See `Lessons3dMake7/README.md` for detailed learning guide.
+See `Lessons_3dMake_7/README.md` for detailed learning guide.
 
 ---
 
 ### Lesson 8: Advanced Parametric Design and Interlocking Features
 
-**Folder**: `Lessons3dMake8/`  
-**File**: `stackablebins.scad`  
+**Folder**: `Lessons_3dMake_8/`  
+**File**: `stackable_bins.scad`  
 **Level**: Advanced  
 **Skills**: Tolerance design, interlocking features, multi-part validation
 
@@ -69,7 +69,7 @@ Stackable storage bins demonstrating:
 - Chamfered edges for print quality
 - Parametric variation for different sizes
 
-See `Lessons3dMake8/README.md` for detailed learning guide.
+See `Lessons_3dMake_8/README.md` for detailed learning guide.
 
 ---
 
@@ -161,17 +161,17 @@ difference() {
 
 ## Learning Progression
 
-1. **Start with Lesson 6** (cubekeycap.scad)
+1. **Start with Lesson 6** (cube_keycap.scad)
    - Learn text embossing
    - Understand module organization
    - Apply basic 3dm commands
 
-2. **Move to Lesson 7** (phonestand.scad)
+2. **Move to Lesson 7** (phone_stand.scad)
    - Practice with transforms
    - Combine multiple parts
    - Use Minkowski for rounded edges
 
-3. **Progress to Lesson 8** (stackablebins.scad)
+3. **Progress to Lesson 8** (stackable_bins.scad)
    - Design with tolerances
    - Test and iterate
    - Validate with measurements
@@ -205,11 +205,11 @@ After learning each pattern:
 
 ## Reference Links
 
-- **Lesson 6**: [Practical 3dm Commands and Text Embossing](../../3dMakeFoundation/Lessons3dMake6/Lessons3dMake6.md)
-- **Lesson 7**: [Parametric Transforms and the Phone Stand](../../3dMakeFoundation/Lessons3dMake7/Lessons3dMake7.md)
-- **Lesson 8**: [Advanced Parametric Design](../../3dMakeFoundation/Lessons3dMake8/Lessons3dMake8.md)
-- **OpenSCAD Cheat Sheet**: [Syntax Quick Reference](../../3dMakeFoundation/Lessons3dMake2/openscad-cheat-sheet.md)
-- **3dMake Setup Guide**: [Commands & Workflow](../../3dMakeFoundation/Lessons3dMake1/3dmake-setup-guide.md)
+- **Lesson 6**: [Practical 3dm Commands and Text Embossing](../../3dMake_Foundation/Lessons_3dMake_6/Lessons_3dMake_6.md)
+- **Lesson 7**: [Parametric Transforms and the Phone Stand](../../3dMake_Foundation/Lessons_3dMake_7/Lessons_3dMake_7.md)
+- **Lesson 8**: [Advanced Parametric Design](../../3dMake_Foundation/Lessons_3dMake_8/Lessons_3dMake_8.md)
+- **OpenSCAD Cheat Sheet**: [Syntax Quick Reference](../../3dMake_Foundation/Lessons_3dMake_2/openscad-cheat-sheet.md)
+- **3dMake Setup Guide**: [Commands & Workflow](../../3dMake_Foundation/Lessons_3dMake_1/3dmake-setup-guide.md)
 
 ## Troubleshooting
 

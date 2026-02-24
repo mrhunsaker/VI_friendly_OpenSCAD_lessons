@@ -1,4 +1,4 @@
-# Your Second Print - Student Documentation Template (Extension Project)
+# Your Second Print - Student Documentation Template (Extension Project) {#3dmake_foundation_templates_student-your_second_print_student_template}
 
 - Author:
 - Date:

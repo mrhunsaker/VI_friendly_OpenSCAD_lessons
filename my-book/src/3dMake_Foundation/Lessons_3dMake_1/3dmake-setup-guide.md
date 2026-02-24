@@ -1,4 +1,4 @@
-# 3dMake Setup & Workflow Guide (Comprehensive)
+# 3dMake Setup & Workflow Guide (Comprehensive) {#3dmake_foundation_lessons_3dmake_1-3dmake-setup-guide}
 
 This guide walks you through installing 3dMake, creating projects, and managing your workflow efficiently.
 
@@ -783,7 +783,7 @@ overlays = ["supports"]          # Default slicing overlays
 editor = "code"                  # Text editor to use
 ```
 
-For full configuration options, see the GitHub repository: <https://github.com/tdeck/3dmake>
+For full configuration options, see the GitHub repository: [https://github.com/tdeck/3dmake](https://github.com/tdeck/3dmake)
 
 ---
 
@@ -808,10 +808,10 @@ For advanced topics, see:
 
 ## Sources
 
-3dMake GitHub Repository. (2026). *3dMake - Non-visual 3D design and printing*. Retrieved from <https://github.com/tdeck/3dmake>
+3dMake GitHub Repository. (2026). *3dMake - Non-visual 3D design and printing*. Retrieved from [https://github.com/tdeck/3dmake](https://github.com/tdeck/3dmake)
 
-3dMake Documentation. (2026). *Terminal quick start guide*. Retrieved from <https://github.com/tdeck/3dmake/blob/main/docs/terminalquickstart.md>
+3dMake Documentation. (2026). *Terminal quick start guide*. Retrieved from [https://github.com/tdeck/3dmake/blob/main/docs/terminalquickstart.md](https://github.com/tdeck/3dmake/blob/main/docs/terminalquickstart.md)
 
-OpenSCAD Community. (2025). *OpenSCAD user manual*. Retrieved from <https://en.wikibooks.org/wiki/OpenSCADUserManual>
+OpenSCAD Community. (2025). *OpenSCAD user manual*. Retrieved from [https://en.wikibooks.org/wiki/OpenSCADUserManual](https://en.wikibooks.org/wiki/OpenSCADUserManual)
 
-Revarbat (Ed.). (2024). *BOSL - Belfry OpenSCAD Library*. Retrieved from <https://github.com/revarbat/BOSL/wiki>
+Revarbat (Ed.). (2024). *BOSL - Belfry OpenSCAD Library*. Retrieved from [https://github.com/revarbat/BOSL/wiki](https://github.com/revarbat/BOSL/wiki)
