@@ -6,9 +6,10 @@ description = "An introduction to 3D printing for blind and visually impaired le
 src = "src"
 
 [output.html]
-additional-css = ["src/assets/atkinson-hyperlegible.css"]
-site-url = "https://github.com/mrhunsaker/VI3DMakeOpenSCADCurriculum"
-# Remove custom theme to use mdBook default
+additional-css = ["src/assets/custom.css"]
+default-theme = "rust"
+site-url = "https://github.com/mrhunsaker/VI_3DMake_OpenSCAD_Curriculum"
+theme = "theme"
 
 [build]
 build-dir = "docs"
@@ -34,8 +35,3 @@ level = 1
 
 [preprocessor.index]
 [preprocessor.links]
-
-
-[output.html.print]
-enable = true
-
