@@ -58,23 +58,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../../favicon.svg">
-        <link rel="shortcut icon" href="../../favicon.png">
-        <link rel="stylesheet" href="../../css/variables.css">
-        <link rel="stylesheet" href="../../css/general.css">
-        <link rel="stylesheet" href="../../css/chrome.css">
-        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-2459343d.css">
+        <link rel="stylesheet" href="../../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../theme/catppuccin.css">
+        <link rel="stylesheet" href="../../theme/catppuccin-be25834e.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -82,10 +82,10 @@
             const path_to_root = "../../";
             const default_light_theme = "latte";
             const default_dark_theme = "mocha";
-            window.path_to_searchindex_js = "../../searchindex.js";
+            window.path_to_searchindex_js = "../../searchindex-a4c66f4b.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc.js"></script>
+        <script src="../../toc-6a7ae851.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -233,7 +233,7 @@
 <li>Example primitive snippets (provided in assets)</li>
 <li>Reference: <a href="openscad-cheat-sheet.html">openscad-cheat-sheet.md</a> for syntax quick-reference</li>
 </ul>
-<hr />
+<hr>
 <ol>
 <li>
 <p>Open <code>src/main.scad</code>; identify and run simple examples using <code>cube()</code>, <code>sphere()</code>, and <code>cylinder()</code> <sup class="footnote-reference" id="fr-2-2"><a href="#footnote-2">1</a></sup>.</p>
@@ -318,7 +318,7 @@ lip();
 // DEBUG: Show only the stand by adding !
 // !stand();
 </code></pre>
-<p><strong>When to use:</strong> You're debugging a multi-part assembly and want to see one component in isolation</p>
+<p><strong>When to use:</strong> You’re debugging a multi-part assembly and want to see one component in isolation</p>
 <h4 id="2-the--character-highlight"><a class="header" href="#2-the--character-highlight"><strong>2. The <code>#</code> Character (Highlight)</strong></a></h4>
 <p>Use <code>#</code> to render the marked object <strong>and highlight it in red</strong> (in preview mode). This helps you see which part corresponds to which code:</p>
 <pre><code class="language-openscad">difference() {
@@ -330,7 +330,7 @@ lip();
 </code></pre>
 <p><strong>When to use:</strong> Identifying which boolean operation is creating problems or validating that two objects overlap correctly</p>
 <h4 id="3-the--character-transparentghost"><a class="header" href="#3-the--character-transparentghost"><strong>3. The <code>%</code> Character (Transparent/Ghost)</strong></a></h4>
-<p>Use <code>%</code> to render the marked object as <strong>transparent/ghosted</strong> (shown as semi-transparent geometry). This helps you see what's "underneath" without removing the code:</p>
+<p>Use <code>%</code> to render the marked object as <strong>transparent/ghosted</strong> (shown as semi-transparent geometry). This helps you see what’s “underneath” without removing the code:</p>
 <pre><code class="language-openscad">module outer_shell() {
   difference() {
     cube([50, 50, 50], center=true);
@@ -349,7 +349,7 @@ outer_shell();
 </code></pre>
 <p><strong>When to use:</strong> Visualizing assembly relationships or checking alignment of internal vs external features</p>
 <h4 id="4-the--character-disable"><a class="header" href="#4-the--character-disable"><strong>4. The <code>*</code> Character (Disable)</strong></a></h4>
-<p>Use <code>*</code> to <strong>disable rendering</strong> of a marked object entirely. It's like commenting it out but without modifying the code:</p>
+<p>Use <code>*</code> to <strong>disable rendering</strong> of a marked object entirely. It’s like commenting it out but without modifying the code:</p>
 <pre><code class="language-openscad">module component_a() { cube([30, 30, 30]); }
 module component_b() { sphere(r=20, $fn=32); }
 module component_c() { cylinder(h=40, r=15, $fn=32); }
@@ -360,7 +360,7 @@ component_c();
 </code></pre>
 <p><strong>When to use:</strong> Testing whether a component is causing rendering errors or print failures without deleting code</p>
 <h3 id="practical-debugging-workflow-using-modifiers"><a class="header" href="#practical-debugging-workflow-using-modifiers">Practical Debugging Workflow Using Modifiers</a></h3>
-<p><strong>Scenario:</strong> Your phone stand model has three parts, but it's rendering very slowly. You suspect one part is the problem.</p>
+<p><strong>Scenario:</strong> Your phone stand model has three parts, but it’s rendering very slowly. You suspect one part is the problem.</p>
 <pre><code class="language-openscad">module base() {
   cube([100, 100, 5]);
 }
@@ -400,14 +400,20 @@ lip();
 // (modify the $fn=64 to $fn=16 and see if faster)
 </code></pre>
 <h3 id="key-points-about-modifiers"><a class="header" href="#key-points-about-modifiers">Key Points About Modifiers</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>Character</th><th>Effect</th><th>Use Case</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Character</th><th>Effect</th><th>Use Case</th></tr>
+</thead>
+<tbody>
 <tr><td><code>!</code></td><td>Show only this object</td><td>Isolate one component in multi-part assembly</td></tr>
-<tr><td><code>#</code></td><td>Highlight in red</td><td>See what's being subtracted/added in boolean ops</td></tr>
+<tr><td><code>#</code></td><td>Highlight in red</td><td>See what’s being subtracted/added in boolean ops</td></tr>
 <tr><td><code>%</code></td><td>Ghost/transparent</td><td>See assembly relationships and overlaps</td></tr>
 <tr><td><code>*</code></td><td>Disable/hide</td><td>Test if a component is causing problems</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
-<p><strong>Important:</strong> Modifiers only affect the visual preview/render. They do <strong>not</strong> change the exported STL file. When you export, all objects are included normally (unless you've actually deleted or commented them out).</p>
+<p><strong>Important:</strong> Modifiers only affect the visual preview/render. They do <strong>not</strong> change the exported STL file. When you export, all objects are included normally (unless you’ve actually deleted or commented them out).</p>
 <h3 id="practice-exercise-modifier-workflow"><a class="header" href="#practice-exercise-modifier-workflow">Practice Exercise: Modifier Workflow</a></h3>
 <p>Create a file with three overlapping shapes and practice:</p>
 <ol>
@@ -450,11 +456,11 @@ module top_part() {
 // middle_part();
 // top_part();
 </code></pre>
-<hr />
+<hr>
 <h3 id="debugging-resolution-and-common-issues"><a class="header" href="#debugging-resolution-and-common-issues">Debugging, Resolution, and Common Issues</a></h3>
-<p>As your OpenSCAD models become more complex, you'll encounter rendering errors, non-manifold geometry, or slow previews. Learning to debug efficiently is essential for productive design work.</p>
+<p>As your OpenSCAD models become more complex, you’ll encounter rendering errors, non-manifold geometry, or slow previews. Learning to debug efficiently is essential for productive design work.</p>
 <h4 id="understanding-openscad-console-errors"><a class="header" href="#understanding-openscad-console-errors"><strong>Understanding OpenSCAD Console Errors</strong></a></h4>
-<p>When you press <strong>F5</strong> to preview or <strong>F6</strong> to render your model, OpenSCAD displays warnings and errors in the console at the bottom of the editor. Here's what to look for:</p>
+<p>When you press <strong>F5</strong> to preview or <strong>F6</strong> to render your model, OpenSCAD displays warnings and errors in the console at the bottom of the editor. Here’s what to look for:</p>
 <ul>
 <li><strong>Error Line Numbers:</strong> The console message tells you the exact line where the problem was detected. Look for missing semicolons, unmatched braces, or undefined variables</li>
 <li><strong>Syntax Errors:</strong> These prevent the model from rendering at all (common causes: missing <code>;</code>, unclosed <code>{</code> or <code>[</code>, typos in function names)</li>
@@ -502,14 +508,14 @@ difference(){
 </ul>
 <p>This workflow catches errors early and saves you from spending 10 minutes rendering only to discover a syntax error.</p>
 <h4 id="diagnosing-non-manifold-geometry"><a class="header" href="#diagnosing-non-manifold-geometry"><strong>Diagnosing Non-Manifold Geometry</strong></a></h4>
-<p>A model might render in OpenSCAD but still be unprintable. The slicer will report errors like "non-manifold edges" or "holes in surface." Common causes:</p>
+<p>A model might render in OpenSCAD but still be unprintable. The slicer will report errors like “non-manifold edges” or “holes in surface.” Common causes:</p>
 <ol>
 <li><strong>Coincident Faces</strong> -&gt; Use small offsets (0.001 mm)</li>
 <li><strong>Zero-Thickness Walls</strong> -&gt; Ensure all walls are at least 0.8-1.0 mm</li>
 <li><strong>Gaps Between Shapes</strong> -&gt; Check that boolean operations have no small gaps; use <code>minkowski()</code> for rounded edges if needed</li>
 <li><strong>Inside-Out Geometry</strong> -&gt; A shape might be flipped; use <code>scale([1, 1, -1])</code> to flip normals if needed</li>
 </ol>
-<p>When your slicer reports non-manifold issues, use the slicer's visualization to locate the problem, then reference the line numbers in your OpenSCAD code and test fixes incrementally using F5/F6.</p>
+<p>When your slicer reports non-manifold issues, use the slicer’s visualization to locate the problem, then reference the line numbers in your OpenSCAD code and test fixes incrementally using F5/F6.</p>
 <p>Checkpoints</p>
 <ul>
 <li>After task 3 the problematic boolean should render without non-manifold warnings<sup class="footnote-reference" id="fr-4-2"><a href="#footnote-4">4</a></sup>.</li>
@@ -523,12 +529,12 @@ difference(){
 <li>What is the 0.001 rule and why is it useful<sup class="footnote-reference" id="fr-4-4"><a href="#footnote-4">4</a></sup>?</li>
 <li>How does lowering <code>$fn</code> help during debugging<sup class="footnote-reference" id="fr-3-4"><a href="#footnote-3">2</a></sup>?</li>
 <li>True or False: <code>union()</code> combines shapes while <code>intersection()</code> keeps only overlapping volumes.</li>
-<li>Describe what Constructive Solid Geometry (CSG) is and give an example of where it's useful.</li>
-<li>Explain how scale(), translate(), and rotate() transforms change a primitive's behavior.</li>
+<li>Describe what Constructive Solid Geometry (CSG) is and give an example of where it’s useful.</li>
+<li>Explain how scale(), translate(), and rotate() transforms change a primitive’s behavior.</li>
 <li>How would you diagnose and fix a non-manifold issue in your model?</li>
 <li>When validating geometry in a slicer, what specific issues should you look for?</li>
 </ol>
-<hr />
+<hr>
 <h2 id="lesson-2-assets--projects"><a class="header" href="#lesson-2-assets--projects">Lesson 2 Assets &amp; Projects</a></h2>
 <p>Your Lesson 2 assets are located in the centralized assets folder:</p>
 <ul>
@@ -537,7 +543,7 @@ difference(){
 <li><strong>Bonus Print Project</strong> (<a href="../../assets/3dMake_Foundation/Lessons_3dMake_2/Bonus_Print/">assets/Lessons_3dMake_2/Bonus_Print/</a>) - Practice resizing and parametric variation</li>
 </ul>
 <p>These projects reinforce the boolean operations and CSG concepts you learned in this lesson.</p>
-<hr />
+<hr>
 <h2 id="advanced-example-rotational-and-linear-extrusion"><a class="header" href="#advanced-example-rotational-and-linear-extrusion">Advanced Example: Rotational and Linear Extrusion</a></h2>
 <p>Beyond basic primitives and boolean operations, OpenSCAD provides powerful 2D-to-3D operations. Here are practical examples from real-world designs:</p>
 <h3 id="example-1-rotating-2d-shapes-with-rotate_extrude"><a class="header" href="#example-1-rotating-2d-shapes-with-rotate_extrude">Example 1: Rotating 2D Shapes with <code>rotate_extrude()</code></a></h3>
@@ -629,12 +635,18 @@ difference()
 <li>This is used in real products like the birdhouse and PVC hook examples from the <em>Simplifying 3D Printing</em> textbook</li>
 </ul>
 <h3 id="key-concepts-for-2d-to-3d-conversion"><a class="header" href="#key-concepts-for-2d-to-3d-conversion">Key Concepts for 2D-to-3D Conversion</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>Function</th><th>Purpose</th><th>Common Use</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Function</th><th>Purpose</th><th>Common Use</th></tr>
+</thead>
+<tbody>
 <tr><td><code>linear_extrude(height)</code></td><td>Pull 2D shape vertically</td><td>Text, badges, plaques</td></tr>
 <tr><td><code>rotate_extrude(angle)</code></td><td>Rotate 2D shape around Z-axis</td><td>Vases, bowls, hooks, symmetric parts</td></tr>
 <tr><td><code>scale()</code></td><td>Stretch/compress along axes</td><td>Tapered cones, proportional variations</td></tr>
 <tr><td>Combining with <code>difference()</code></td><td>Hollow out the extruded shape</td><td>Cups, containers, hollow handles</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
 <p><strong>Checkpoint</strong>: After this section, you can:</p>
 <ul>
@@ -664,7 +676,8 @@ difference()
 <li><strong><a href="https://programmingwithopenscad.github.io/learning.html">Practice Worksheets: 3D Shapes</a></strong> - Visualization and decomposition exercises</li>
 </ul>
 <hr>
-<ol class="footnote-definition"><li id="footnote-2">
+<ol class="footnote-definition">
+<li id="footnote-2">
 <p>OpenSCAD Manual - Primitives and Transforms - https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_the_2D_Subsystem <a href="#fr-2-1">↩</a> <a href="#fr-2-2">↩2</a> <a href="#fr-2-3">↩3</a> <a href="#fr-2-4">↩4</a></p>
 </li>
 <li id="footnote-3">
@@ -677,11 +690,18 @@ difference()
 <p>Google. (2025). <em>Vertex AI Gemini 3 Pro Preview: Getting started with generative AI</em>. https://docs.cloud.google.com/vertex-ai/generative-ai/docs/start/get-started-with-gemini-3 <a href="#fr-4-1">↩</a> <a href="#fr-4-2">↩2</a> <a href="#fr-4-3">↩3</a> <a href="#fr-4-4">↩4</a> <a href="#fr-4-5">↩5</a></p>
 </li>
 </ol>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../3dMake_Foundation/Lessons_3dMake_1/your_first_print_teacher_template.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
+                            <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_2/openscad-cheat-sheet.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -689,7 +709,13 @@ difference()
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../3dMake_Foundation/Lessons_3dMake_1/your_first_print_teacher_template.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
 
+                    <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_2/openscad-cheat-sheet.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
             </nav>
 
         </div>
@@ -703,13 +729,13 @@ difference()
         </script>
 
 
-        <script src="../../elasticlunr.min.js"></script>
-        <script src="../../mark.min.js"></script>
-        <script src="../../searcher.js"></script>
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-c2a407aa.js"></script>
 
-        <script src="../../clipboard.min.js"></script>
-        <script src="../../highlight.js"></script>
-        <script src="../../book.js"></script>
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-4a3ec6df.js"></script>
+        <script src="../../book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
 

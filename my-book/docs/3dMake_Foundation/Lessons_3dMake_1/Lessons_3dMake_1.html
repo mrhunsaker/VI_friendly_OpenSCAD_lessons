@@ -58,23 +58,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../../favicon.svg">
-        <link rel="shortcut icon" href="../../favicon.png">
-        <link rel="stylesheet" href="../../css/variables.css">
-        <link rel="stylesheet" href="../../css/general.css">
-        <link rel="stylesheet" href="../../css/chrome.css">
-        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-2459343d.css">
+        <link rel="stylesheet" href="../../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../theme/catppuccin.css">
+        <link rel="stylesheet" href="../../theme/catppuccin-be25834e.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -82,10 +82,10 @@
             const path_to_root = "../../";
             const default_light_theme = "latte";
             const default_dark_theme = "mocha";
-            window.path_to_searchindex_js = "../../searchindex.js";
+            window.path_to_searchindex_js = "../../searchindex-a4c66f4b.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc.js"></script>
+        <script src="../../toc-6a7ae851.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -226,7 +226,7 @@
 <ul>
 <li>Install and verify 3dm<sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">1</a></sup>, openscad<sup class="footnote-reference" id="fr-2-1"><a href="#footnote-2">2</a></sup>, and a slicer are discoverable in the terminal</li>
 <li>Initialize a 3dMake project and understand the project scaffold (<code>src/</code>, <code>build/</code>, <code>3dmake.toml</code>)</li>
-<li>Edit <code>src/main.scad</code> using OpenSCAD's parametric design capabilities<sup class="footnote-reference" id="fr-3-1"><a href="#footnote-3">3</a></sup>, run <code>3dm build</code>, and inspect the generated <code>build/main.stl</code></li>
+<li>Edit <code>src/main.scad</code> using OpenSCAD’s parametric design capabilities<sup class="footnote-reference" id="fr-3-1"><a href="#footnote-3">3</a></sup>, run <code>3dm build</code>, and inspect the generated <code>build/main.stl</code></li>
 </ul>
 <h2 id="materials"><a class="header" href="#materials">Materials</a></h2>
 <ul>
@@ -234,11 +234,11 @@
 <li>Editor (VS Code or Notepad)</li>
 <li>Example scaffold or classroom repository</li>
 </ul>
-<hr />
+<hr>
 <h2 id="step-by-step-tasks"><a class="header" href="#step-by-step-tasks">Step-by-step Tasks</a></h2>
 <ol>
 <li>
-<p>Run <code>./3dm setup</code> or follow instructor's installation notes; confirm tools with <code>which 3dm</code> and <code>which openscad</code>. Verify your 3dMake installation is properly configured<sup class="footnote-reference" id="fr-1-2"><a href="#footnote-1">1</a></sup>.</p>
+<p>Run <code>./3dm setup</code> or follow instructor’s installation notes; confirm tools with <code>which 3dm</code> and <code>which openscad</code>. Verify your 3dMake installation is properly configured<sup class="footnote-reference" id="fr-1-2"><a href="#footnote-1">1</a></sup>.</p>
 </li>
 <li>
 <p>Create a project scaffold with <code>3dm new</code> and open <code>src/main.scad</code> using <code>3dm edit-model</code>. For a comprehensive introduction to the workflow, consult the OpenSCAD documentation<sup class="footnote-reference" id="fr-2-2"><a href="#footnote-2">2</a></sup>.</p>
@@ -265,11 +265,11 @@ cube([width, height, thickness]);
 <p>Try modifying the parameters and running <code>3dm build</code> again to see how parametric design allows you to quickly create variants.</p>
 </li>
 </ol>
-<hr />
+<hr>
 <h2 id="code-style-and-documentation-standards"><a class="header" href="#code-style-and-documentation-standards">Code Style and Documentation Standards</a></h2>
 <p>Professional OpenSCAD code follows consistent documentation practices for clarity, maintainability, and accessibility. As you write more complex designs, good documentation becomes essential for both you and anyone reading your code.</p>
 <h3 id="comment-types-and-when-to-use-them"><a class="header" href="#comment-types-and-when-to-use-them">Comment Types and When to Use Them</a></h3>
-<p>File Header Comments - Describe the entire file's purpose:</p>
+<p>File Header Comments - Describe the entire file’s purpose:</p>
 <pre><code class="language-openscad">// ==============================================================
 // Parametric Phone Stand - Design v2.1
 // ==============================================================
@@ -358,9 +358,9 @@ module hollow_box(outer_w, outer_d, outer_h, wall) {
 </ol>
 <ul>
 <li>Use plain language, not jargon (or explain jargon)</li>
-<li>Explain visual concepts in text (e.g., "fillet radius of 3mm rounds sharp corners")</li>
+<li>Explain visual concepts in text (e.g., “fillet radius of 3mm rounds sharp corners”)</li>
 <li>Include parameter ranges and units always</li>
-<li>Describe geometry relationships (e.g., "lip height 1/3 of stand height")</li>
+<li>Describe geometry relationships (e.g., “lip height 1/3 of stand height”)</li>
 </ul>
 <h3 id="example-well-documented-file"><a class="header" href="#example-well-documented-file">Example: Well-Documented File</a></h3>
 <pre><code class="language-openscad">// ==============================================================
@@ -452,14 +452,14 @@ union() {
 <h3 id="checkpoints"><a class="header" href="#checkpoints">Checkpoints</a></h3>
 <ul>
 <li>After step 2 you can locate <code>3dmake.toml</code> and the <code>build/</code> directory. Ensure your project scaffold matches the expected structure described in the 3dMake repository<sup class="footnote-reference" id="fr-1-3"><a href="#footnote-1">1</a></sup>.</li>
-<li>After step 4 the <code>build/</code> folder contains a valid <code>main.stl</code>. Verify the geometry using your slicer's validation tools<sup class="footnote-reference" id="fr-5-1"><a href="#footnote-5">6</a></sup>.</li>
+<li>After step 4 the <code>build/</code> folder contains a valid <code>main.stl</code>. Verify the geometry using your slicer’s validation tools<sup class="footnote-reference" id="fr-5-1"><a href="#footnote-5">6</a></sup>.</li>
 <li>After this section, your code includes file header, parameter documentation, and module descriptions following professional standards.</li>
 </ul>
-<hr />
+<hr>
 <h2 id="understanding-3d-printing-technology-the-fdm-pipeline"><a class="header" href="#understanding-3d-printing-technology-the-fdm-pipeline">Understanding 3D Printing Technology: The FDM Pipeline</a></h2>
-<p>Before you send your first print, it's important to understand how 3D printers work and how the choices you make in the slicer affect the final result. This section builds on the workflow you learned above by explaining <em>what happens after</em> <code>3dm build</code>.</p>
+<p>Before you send your first print, it’s important to understand how 3D printers work and how the choices you make in the slicer affect the final result. This section builds on the workflow you learned above by explaining <em>what happens after</em> <code>3dm build</code>.</p>
 <h3 id="the-fdm-fused-deposition-modeling-process"><a class="header" href="#the-fdm-fused-deposition-modeling-process">The FDM (Fused Deposition Modeling) Process</a></h3>
-<p>FDM printing builds objects layer by layer, where each layer is a thin horizontal slice of your STL file. Here's the complete pipeline:</p>
+<p>FDM printing builds objects layer by layer, where each layer is a thin horizontal slice of your STL file. Here’s the complete pipeline:</p>
 <ol>
 <li>STL File -&gt; Your 3dMake model exported as an STL geometry file</li>
 <li>Slicer Analysis -&gt; Software like PrusaSlicer reads the STL and divides it into layers</li>
@@ -468,12 +468,12 @@ union() {
 <li>Cooling &amp; Solidification -&gt; Each layer cools and bonds to the layer below</li>
 </ol>
 <h3 id="critical-settings-that-affect-your-print"><a class="header" href="#critical-settings-that-affect-your-print">Critical Settings That Affect Your Print</a></h3>
-<p>When you open your STL in a slicer, you'll encounter several parameters that directly impact quality, time, and strength:</p>
+<p>When you open your STL in a slicer, you’ll encounter several parameters that directly impact quality, time, and strength:</p>
 <h4 id="layer-height"><a class="header" href="#layer-height">Layer Height</a></h4>
 <ul>
 <li>Definition: The thickness of each printed layer (typically 0.15-0.30 mm)</li>
 <li>Effect on Time: Smaller layers = more detail but longer print time. A layer height of 0.15 mm prints slower than 0.30 mm because more layers must be printed</li>
-<li>Effect on Quality: Smaller layers produce smoother surfaces; larger layers print faster but appear more "stepped"</li>
+<li>Effect on Quality: Smaller layers produce smoother surfaces; larger layers print faster but appear more “stepped”</li>
 <li>Common Choice: 0.20 mm is a good balance for classroom projects</li>
 </ul>
 <h4 id="infill"><a class="header" href="#infill">Infill</a></h4>
@@ -487,7 +487,7 @@ union() {
 <h4 id="supports"><a class="header" href="#supports">Supports</a></h4>
 <ul>
 <li>Definition: Temporary structures the printer creates to hold overhanging geometry during printing</li>
-<li>When Needed: Any geometry that "hangs" at a steep angle (typically &gt; 45 from vertical) requires supports</li>
+<li>When Needed: Any geometry that “hangs” at a steep angle (typically &gt; 45 from vertical) requires supports</li>
 <li>Post-Processing: Supports must be removed after printing (breaking them off, dissolving them, or picking them away)</li>
 <li>Cost: Supports increase print time and waste material, so good STL design minimizes them</li>
 </ul>
@@ -507,10 +507,10 @@ union() {
 <li>Preview the layers to see what the printer will do</li>
 <li>Export as G-code to send to the printer</li>
 </ol>
-<p>You'll practice this workflow in Lesson 2, where you'll iterate on a simple part and resolve common printing issues.</p>
-<hr />
+<p>You’ll practice this workflow in Lesson 2, where you’ll iterate on a simple part and resolve common printing issues.</p>
+<hr>
 <h2 id="getting-started-guided-projects--extension-resources"><a class="header" href="#getting-started-guided-projects--extension-resources">Getting Started: Guided Projects &amp; Extension Resources</a></h2>
-<p>Once you've completed this lesson, you're ready to work on hands-on projects. The curriculum includes several guided projects and extension resources:</p>
+<p>Once you’ve completed this lesson, you’re ready to work on hands-on projects. The curriculum includes several guided projects and extension resources:</p>
 <h3 id="extension-projects-beginner-to-advanced"><a class="header" href="#extension-projects-beginner-to-advanced">Extension Projects (Beginner to Advanced)</a></h3>
 <p>These projects are located in the Lesson 1 assets folder and are designed to reinforce your skills in practical contexts:</p>
 <ul>
@@ -547,7 +547,7 @@ union() {
 <li>master-rubric.md - Assessment criteria for evaluating student work</li>
 <li>markdown-starter-guide.md - Documentation best practices</li>
 </ul>
-<hr />
+<hr>
 <h2 id="quiz---lesson-3dmake1-10-questions"><a class="header" href="#quiz---lesson-3dmake1-10-questions">Quiz - Lesson 3dMake.1 (10 questions)</a></h2>
 <ol>
 <li>What command initializes a 3dMake project?</li>
@@ -582,7 +582,8 @@ union() {
 <li><a href="https://programmingwithopenscad.github.io/quick-reference.html">OpenSCAD Quick Reference</a> - Visual syntax guide and command reference</li>
 </ul>
 <hr>
-<ol class="footnote-definition"><li id="footnote-1">
+<ol class="footnote-definition">
+<li id="footnote-1">
 <p>3DMake GitHub Repository - https://github.com/tdeck/3dmake <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a> <a href="#fr-1-3">↩3</a></p>
 </li>
 <li id="footnote-2">
@@ -607,11 +608,18 @@ union() {
 <p>Slicing Guides and Common Geometry Issues - PrusaSlicer Documentation, accessed February 18, 2026, https://docs.prusa3d.com/en/ <a href="#fr-7-1">↩</a></p>
 </li>
 </ol>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../3dMake_Foundation/3dMake_Tutorial/3dMake_Tutorial.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
+                            <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_1/3dmake-setup-guide.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -619,7 +627,13 @@ union() {
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../3dMake_Foundation/3dMake_Tutorial/3dMake_Tutorial.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
 
+                    <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_1/3dmake-setup-guide.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
             </nav>
 
         </div>
@@ -633,13 +647,13 @@ union() {
         </script>
 
 
-        <script src="../../elasticlunr.min.js"></script>
-        <script src="../../mark.min.js"></script>
-        <script src="../../searcher.js"></script>
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-c2a407aa.js"></script>
 
-        <script src="../../clipboard.min.js"></script>
-        <script src="../../highlight.js"></script>
-        <script src="../../book.js"></script>
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-4a3ec6df.js"></script>
+        <script src="../../book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
 

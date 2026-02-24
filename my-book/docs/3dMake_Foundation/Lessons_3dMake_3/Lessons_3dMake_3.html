@@ -58,23 +58,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../../favicon.svg">
-        <link rel="shortcut icon" href="../../favicon.png">
-        <link rel="stylesheet" href="../../css/variables.css">
-        <link rel="stylesheet" href="../../css/general.css">
-        <link rel="stylesheet" href="../../css/chrome.css">
-        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-2459343d.css">
+        <link rel="stylesheet" href="../../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../theme/catppuccin.css">
+        <link rel="stylesheet" href="../../theme/catppuccin-be25834e.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -82,10 +82,10 @@
             const path_to_root = "../../";
             const default_light_theme = "latte";
             const default_dark_theme = "mocha";
-            window.path_to_searchindex_js = "../../searchindex.js";
+            window.path_to_searchindex_js = "../../searchindex-a4c66f4b.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc.js"></script>
+        <script src="../../toc-6a7ae851.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -233,7 +233,7 @@
 <li>Example library (e.g., BOSL) available in <code>lib/</code> or classroom assets</li>
 <li>Reference: <a href="../Lessons_3dMake_2/openscad-cheat-sheet.html">openscad-cheat-sheet.md</a> for parametric design patterns</li>
 </ul>
-<hr />
+<hr>
 <ol>
 <li>
 <p>Open <code>src/main.scad</code> and add three top-level parameters (with units) at the top of the file<sup class="footnote-reference" id="fr-3-2"><a href="#footnote-3">1</a></sup>.</p>
@@ -293,7 +293,7 @@ simple_fillet(20, 2){
 </li>
 </ol>
 <h3 id="going-deeper-parametric-design-and-modular-thinking"><a class="header" href="#going-deeper-parametric-design-and-modular-thinking">Going Deeper: Parametric Design and Modular Thinking</a></h3>
-<p>Now that you've created simple modules, let's explore <em>why</em> they matter for design at scale.</p>
+<p>Now that you’ve created simple modules, let’s explore <em>why</em> they matter for design at scale.</p>
 <h4 id="what-is-parametric-design"><a class="header" href="#what-is-parametric-design"><strong>What Is Parametric Design?</strong></a></h4>
 <p><strong>Parametric design</strong> means building your model around adjustable parameters so that a single change propagates automatically throughout your entire design. Instead of hardcoding a dimension like <code>50</code>, you store it in a variable:</p>
 <pre><code class="language-openscad">// Non-parametric (fragile):
@@ -341,7 +341,7 @@ translate([45, 0, 0]) storage_box(length = 50, width = 40, height = 25);
 // Large box (positioned next to medium)
 translate([100, 0, 0]) storage_box(length = 70, width = 55, height = 35);
 </code></pre>
-<h4 id="the-dry-principle-dont-repeat-yourself"><a class="header" href="#the-dry-principle-dont-repeat-yourself"><strong>The DRY Principle: Don't Repeat Yourself</strong></a></h4>
+<h4 id="the-dry-principle-dont-repeat-yourself"><a class="header" href="#the-dry-principle-dont-repeat-yourself"><strong>The DRY Principle: Don’t Repeat Yourself</strong></a></h4>
 <p>When you copy-paste the same shape over and over, you create maintenance risk. If you later discover a bug in the shape, you must fix it in <em>every</em> copy. Modules eliminate this:</p>
 <p><strong>Without modules (DRY violation):</strong></p>
 <pre><code class="language-openscad">// Bracket repeated 3 times (copy-paste)
@@ -362,7 +362,7 @@ translate([50, 0, 0]) bracket();
 translate([100, 0, 0]) bracket();
 </code></pre>
 <h4 id="scope-and-reusability"><a class="header" href="#scope-and-reusability"><strong>Scope and Reusability</strong></a></h4>
-<p>Parameters are <strong>scoped</strong> to their module, meaning you can't access a module's parameters from outside it. This is intentional-it prevents naming conflicts and makes modules truly reusable:</p>
+<p>Parameters are <strong>scoped</strong> to their module, meaning you can’t access a module’s parameters from outside it. This is intentional-it prevents naming conflicts and makes modules truly reusable:</p>
 <pre><code class="language-openscad">module box(size = 10) {
     cube([size, size, size]);
 }
@@ -373,7 +373,7 @@ box();       // Calls box with its default size=10
 translate([size, 0, 0]) box(size = 50);  // Calls box with size=50
 </code></pre>
 <h4 id="importing-libraries-include-vs-use"><a class="header" href="#importing-libraries-include-vs-use"><strong>Importing Libraries: <code>include</code> vs <code>use</code></strong></a></h4>
-<p>Once you've written modules in <code>lib/helpers.scad</code>, you can share them with other projects:</p>
+<p>Once you’ve written modules in <code>lib/helpers.scad</code>, you can share them with other projects:</p>
 <pre><code class="language-openscad">// Option 1: include (gives you all functions and modules)
 include &lt;lib/helpers.scad&gt;
 
@@ -399,7 +399,7 @@ simple_fillet(20, 2) {
 <li>After step 2 you have a parametric module you can call with different arguments<sup class="footnote-reference" id="fr-3-4"><a href="#footnote-3">1</a></sup>.</li>
 <li>After this section, you should understand how to create modules with default parameters and why that matters for reusability.</li>
 </ul>
-<hr />
+<hr>
 <h2 id="advanced-technique-loops-and-repetition"><a class="header" href="#advanced-technique-loops-and-repetition">Advanced Technique: Loops and Repetition</a></h2>
 <p>Beyond creating individual modules, OpenSCAD allows you to create multiple copies using for loops. This is powerful for creating arrays, spirals, or radially symmetric designs.</p>
 <h3 id="example-creating-arrays-with-for-loops"><a class="header" href="#example-creating-arrays-with-for-loops">Example: Creating Arrays with For Loops</a></h3>
@@ -478,12 +478,18 @@ generate_fin_can();
 <li>This creates 3 identical fins perfectly positioned without copying code</li>
 </ul>
 <h3 id="common-for-loop-patterns"><a class="header" href="#common-for-loop-patterns">Common For Loop Patterns</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>Pattern</th><th>Use Case</th><th>Example</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Pattern</th><th>Use Case</th><th>Example</th></tr>
+</thead>
+<tbody>
 <tr><td><code>for (x = [0:10:50])</code></td><td>Linear array</td><td>Grid of objects</td></tr>
 <tr><td><code>for (i = [0:n-1])</code></td><td>Index-based loop</td><td>Radial array with calculated angles</td></tr>
 <tr><td>Nested for loops</td><td>2D grids</td><td>Multiple rows and columns</td></tr>
 <tr><td><code>for (i = [start:step:end])</code></td><td>Custom spacing</td><td>Items at irregular intervals</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
 <h3 id="try-this-modify-the-fin-can"><a class="header" href="#try-this-modify-the-fin-can">Try This: Modify the Fin Can</a></h3>
 <pre><code class="language-openscad">// Experiment with changing these parameters:
@@ -500,7 +506,7 @@ thickness = 2;      // Make fins thicker
 <li>Calculate rotation angles for radial symmetry</li>
 <li>Combine loops with modules to create parametric families of designs</li>
 </ul>
-<hr />
+<hr>
 <h2 id="advanced-programming-concepts"><a class="header" href="#advanced-programming-concepts">Advanced Programming Concepts</a></h2>
 <p>Beyond basic modules, professional OpenSCAD code uses conditional logic, type checking, and advanced data structures. These techniques enable robust, flexible, and maintainable designs.</p>
 <h3 id="1-conditional-logic-with-if-else-statements"><a class="header" href="#1-conditional-logic-with-if-else-statements">1. Conditional Logic with If-Else Statements</a></h3>
@@ -771,13 +777,19 @@ dist = distance(point_a, point_b);
 echo(dist);  // Prints: 5 (Pythagorean triple)
 </code></pre>
 <p><strong>Key Differences:</strong></p>
-<div class="table-wrapper"><table><thead><tr><th>Feature</th><th>Module</th><th>Function</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Feature</th><th>Module</th><th>Function</th></tr>
+</thead>
+<tbody>
 <tr><td>Creates geometry</td><td>Yes</td><td>No</td></tr>
 <tr><td>Returns value</td><td>No</td><td>Yes</td></tr>
 <tr><td>Can use <code>children()</code></td><td>Yes</td><td>No</td></tr>
 <tr><td>Can combine with echo/if</td><td>Yes</td><td>Yes</td></tr>
 <tr><td>Use for</td><td>3D objects</td><td>Calculations</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
 <p><strong>Practical Combined Example:</strong></p>
 <pre><code class="language-openscad">// Use function to calculate, module to create
@@ -805,7 +817,7 @@ container(30, 40);   // 1mm walls automatically
 container(75, 100);  // 1.5mm walls automatically
 container(120, 150); // 2mm walls automatically
 </code></pre>
-<hr />
+<hr>
 <h2 id="quiz---lesson-3dmake3-10-questions"><a class="header" href="#quiz---lesson-3dmake3-10-questions">Quiz - Lesson 3dMake.3 (10 questions)</a></h2>
 <ol>
 <li>What is a parametric module and why is it useful<sup class="footnote-reference" id="fr-3-5"><a href="#footnote-3">1</a></sup>?</li>
@@ -814,7 +826,7 @@ container(120, 150); // 2mm walls automatically
 <li>How can you test a module quickly without a full high-resolution render<sup class="footnote-reference" id="fr-4-2"><a href="#footnote-4">4</a></sup>?</li>
 <li>Name one safety or documentation step to include when producing a reusable module<sup class="footnote-reference" id="fr-3-7"><a href="#footnote-3">1</a></sup>.</li>
 <li>True or False: Parametric modules can only accept one parameter.</li>
-<li>Describe what "Don't Repeat Yourself" (DRY) means in the context of 3D model code.</li>
+<li>Describe what “Don’t Repeat Yourself” (DRY) means in the context of 3D model code.</li>
 <li>Explain how you would create a module with three parameters and use it in your main file.</li>
 <li>What testing strategies should you use to validate a new module before using it in production prints?</li>
 <li>How would you document a reusable module so that future users (including yourself) understand its parameters and limitations?</li>
@@ -952,7 +964,8 @@ union(){
 }
 </code></pre>
 <hr>
-<ol class="footnote-definition"><li id="footnote-3">
+<ol class="footnote-definition">
+<li id="footnote-3">
 <p>OpenSCAD Modules - https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Modules <a href="#fr-3-1">↩</a> <a href="#fr-3-2">↩2</a> <a href="#fr-3-3">↩3</a> <a href="#fr-3-4">↩4</a> <a href="#fr-3-5">↩5</a> <a href="#fr-3-6">↩6</a> <a href="#fr-3-7">↩7</a> <a href="#fr-3-8">↩8</a> <a href="#fr-3-9">↩9</a> <a href="#fr-3-10">↩10</a></p>
 </li>
 <li id="footnote-2">
@@ -965,11 +978,18 @@ union(){
 <p>OpenSCAD Review - Worth learning? - CadHub, accessed February 18, 2026, https://learn.cadhub.xyz/blog/openscad-review/ <a href="#fr-4-1">↩</a> <a href="#fr-4-2">↩2</a></p>
 </li>
 </ol>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../3dMake_Foundation/Lessons_3dMake_2/bonus_print_teacher_template.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
+                            <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_4/Lessons_3dMake_4.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -977,7 +997,13 @@ union(){
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../3dMake_Foundation/Lessons_3dMake_2/bonus_print_teacher_template.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
 
+                    <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_4/Lessons_3dMake_4.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
             </nav>
 
         </div>
@@ -991,13 +1017,13 @@ union(){
         </script>
 
 
-        <script src="../../elasticlunr.min.js"></script>
-        <script src="../../mark.min.js"></script>
-        <script src="../../searcher.js"></script>
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-c2a407aa.js"></script>
 
-        <script src="../../clipboard.min.js"></script>
-        <script src="../../highlight.js"></script>
-        <script src="../../book.js"></script>
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-4a3ec6df.js"></script>
+        <script src="../../book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
 

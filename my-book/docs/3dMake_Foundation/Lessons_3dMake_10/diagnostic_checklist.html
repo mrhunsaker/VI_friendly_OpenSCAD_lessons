@@ -58,23 +58,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../../favicon.svg">
-        <link rel="shortcut icon" href="../../favicon.png">
-        <link rel="stylesheet" href="../../css/variables.css">
-        <link rel="stylesheet" href="../../css/general.css">
-        <link rel="stylesheet" href="../../css/chrome.css">
-        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-2459343d.css">
+        <link rel="stylesheet" href="../../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../theme/catppuccin.css">
+        <link rel="stylesheet" href="../../theme/catppuccin-be25834e.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -82,10 +82,10 @@
             const path_to_root = "../../";
             const default_light_theme = "latte";
             const default_dark_theme = "mocha";
-            window.path_to_searchindex_js = "../../searchindex.js";
+            window.path_to_searchindex_js = "../../searchindex-a4c66f4b.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc.js"></script>
+        <script src="../../toc-6a7ae851.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -245,21 +245,16 @@
    +---- Rough surface -&gt; CHECK: Flow rate, speed, temperature
    +---- Warped -&gt; CHECK: Bed temperature, cooling rate, material
 </code></pre>
-<hr />
+<hr>
 <h2 id="pre-print-diagnostics"><a class="header" href="#pre-print-diagnostics">Pre-Print Diagnostics</a></h2>
 <h3 id="category-a-power--connectivity"><a class="header" href="#category-a-power--connectivity">Category A: Power &amp; Connectivity</a></h3>
 <p><strong>Checklist:</strong></p>
 <ul>
-<li><input disabled="" type="checkbox"/>
-Printer powered on</li>
-<li><input disabled="" type="checkbox"/>
-LED indicators showing normal status</li>
-<li><input disabled="" type="checkbox"/>
-USB cable connected (if applicable)</li>
-<li><input disabled="" type="checkbox"/>
-No error codes displaying</li>
-<li><input disabled="" type="checkbox"/>
-Display/interface responding to input</li>
+<li><input disabled="" type="checkbox"> Printer powered on</li>
+<li><input disabled="" type="checkbox"> LED indicators showing normal status</li>
+<li><input disabled="" type="checkbox"> USB cable connected (if applicable)</li>
+<li><input disabled="" type="checkbox"> No error codes displaying</li>
+<li><input disabled="" type="checkbox"> Display/interface responding to input</li>
 </ul>
 <p><strong>If failed:</strong></p>
 <ol>
@@ -269,18 +264,14 @@ Display/interface responding to input</li>
 <li>Try power-cycling (off 30 sec, on)</li>
 <li>Check for blown fuses inside printer</li>
 </ol>
-<hr />
+<hr>
 <h3 id="category-b-temperature-system"><a class="header" href="#category-b-temperature-system">Category B: Temperature System</a></h3>
 <p><strong>Heating Element Status:</strong></p>
 <ul>
-<li><input disabled="" type="checkbox"/>
-Hot end temperature rises when heating commanded</li>
-<li><input disabled="" type="checkbox"/>
-Bed temperature rises when heating commanded</li>
-<li><input disabled="" type="checkbox"/>
-Temperature readings stable (not fluctuating 5C+)</li>
-<li><input disabled="" type="checkbox"/>
-No error messages during heating</li>
+<li><input disabled="" type="checkbox"> Hot end temperature rises when heating commanded</li>
+<li><input disabled="" type="checkbox"> Bed temperature rises when heating commanded</li>
+<li><input disabled="" type="checkbox"> Temperature readings stable (not fluctuating 5C+)</li>
+<li><input disabled="" type="checkbox"> No error messages during heating</li>
 </ul>
 <p><strong>Measurement Method:</strong></p>
 <pre><code class="language-plaintext">1. Set hot end to 200C, observe rise
@@ -294,16 +285,11 @@ No error messages during heating</li>
 </code></pre>
 <p><strong>If heating slow/incomplete:</strong></p>
 <ul>
-<li><input disabled="" type="checkbox"/>
-Verify target temperature was set</li>
-<li><input disabled="" type="checkbox"/>
-Check heating element firmware settings</li>
-<li><input disabled="" type="checkbox"/>
-Test thermal sensor connectivity</li>
-<li><input disabled="" type="checkbox"/>
-Inspect heating element for damage</li>
-<li><input disabled="" type="checkbox"/>
-Measure electrical resistance of heaters</li>
+<li><input disabled="" type="checkbox"> Verify target temperature was set</li>
+<li><input disabled="" type="checkbox"> Check heating element firmware settings</li>
+<li><input disabled="" type="checkbox"> Test thermal sensor connectivity</li>
+<li><input disabled="" type="checkbox"> Inspect heating element for damage</li>
+<li><input disabled="" type="checkbox"> Measure electrical resistance of heaters</li>
 </ul>
 <p><strong>Temperature Stability Test:</strong></p>
 <pre><code class="language-plaintext">1. Heat to target temperature
@@ -317,7 +303,7 @@ Results:
 - +/-10C range:  Marginal
 - &gt;+/-10C range:  Problem
 </code></pre>
-<hr />
+<hr>
 <h3 id="category-c-mechanical-systems"><a class="header" href="#category-c-mechanical-systems">Category C: Mechanical Systems</a></h3>
 <p><strong>Movement Diagnostics:</strong></p>
 <p><strong>Manual Axis Movement:</strong></p>
@@ -331,16 +317,11 @@ Results:
 <p><strong>Expected results:</strong> Smooth, no grinding sounds</p>
 <p><strong>If rough/stuck:</strong></p>
 <ul>
-<li><input disabled="" type="checkbox"/>
-Check for visible obstructions</li>
-<li><input disabled="" type="checkbox"/>
-Inspect rails for debris</li>
-<li><input disabled="" type="checkbox"/>
-Verify pulleys turn freely</li>
-<li><input disabled="" type="checkbox"/>
-Check belt tension (if accessible)</li>
-<li><input disabled="" type="checkbox"/>
-Lubricate dry joints</li>
+<li><input disabled="" type="checkbox"> Check for visible obstructions</li>
+<li><input disabled="" type="checkbox"> Inspect rails for debris</li>
+<li><input disabled="" type="checkbox"> Verify pulleys turn freely</li>
+<li><input disabled="" type="checkbox"> Check belt tension (if accessible)</li>
+<li><input disabled="" type="checkbox"> Lubricate dry joints</li>
 </ul>
 <p><strong>Powered Movement Test:</strong></p>
 <pre><code class="language-plaintext">1. Position nozzle at center
@@ -349,7 +330,7 @@ Lubricate dry joints</li>
 4. Repeat for Y+10mm and Z+5mm
 5. Check for skipping or missed steps
 </code></pre>
-<hr />
+<hr>
 <h3 id="category-d-leveling--alignment"><a class="header" href="#category-d-leveling--alignment">Category D: Leveling &amp; Alignment</a></h3>
 <p><strong>Build Plate Leveling Test:</strong></p>
 <p><strong>Paper Method (Most Common):</strong></p>
@@ -365,31 +346,21 @@ Target: Consistent slight paper drag all points
 </code></pre>
 <p><strong>Leveling Validation:</strong></p>
 <ul>
-<li><input disabled="" type="checkbox"/>
-Level at 4 corners</li>
-<li><input disabled="" type="checkbox"/>
-Level at bed center</li>
-<li><input disabled="" type="checkbox"/>
-No high/low points</li>
-<li><input disabled="" type="checkbox"/>
-Nozzle doesn't hit bed at any point</li>
-<li><input disabled="" type="checkbox"/>
-Consistent first-layer appearance across bed</li>
+<li><input disabled="" type="checkbox"> Level at 4 corners</li>
+<li><input disabled="" type="checkbox"> Level at bed center</li>
+<li><input disabled="" type="checkbox"> No high/low points</li>
+<li><input disabled="" type="checkbox"> Nozzle doesn’t hit bed at any point</li>
+<li><input disabled="" type="checkbox"> Consistent first-layer appearance across bed</li>
 </ul>
-<hr />
+<hr>
 <h3 id="category-e-filament--extruder"><a class="header" href="#category-e-filament--extruder">Category E: Filament &amp; Extruder</a></h3>
 <p><strong>Filament Quality Check:</strong></p>
 <ul>
-<li><input disabled="" type="checkbox"/>
-Filament diameter consistent (visually inspect ~50cm)</li>
-<li><input disabled="" type="checkbox"/>
-No visible cracks or damage</li>
-<li><input disabled="" type="checkbox"/>
-Spool rotates freely without binding</li>
-<li><input disabled="" type="checkbox"/>
-Filament path clear to extruder</li>
-<li><input disabled="" type="checkbox"/>
-No tangles in filament path</li>
+<li><input disabled="" type="checkbox"> Filament diameter consistent (visually inspect ~50cm)</li>
+<li><input disabled="" type="checkbox"> No visible cracks or damage</li>
+<li><input disabled="" type="checkbox"> Spool rotates freely without binding</li>
+<li><input disabled="" type="checkbox"> Filament path clear to extruder</li>
+<li><input disabled="" type="checkbox"> No tangles in filament path</li>
 </ul>
 <p><strong>Extruder Test:</strong></p>
 <pre><code class="language-plaintext">1. Heat to printing temperature
@@ -400,7 +371,7 @@ No tangles in filament path</li>
 
 Expected: Smooth push, consistent extrusion
 </code></pre>
-<hr />
+<hr>
 <h2 id="filament-loading-test"><a class="header" href="#filament-loading-test">Filament Loading Test</a></h2>
 <p><strong>Test Sequence:</strong></p>
 <pre><code class="language-plaintext">1. Heat extruder to material temp
@@ -416,32 +387,34 @@ Timeline:
 If fails:
 -&gt; See "Filament Won't Load" troubleshooting
 </code></pre>
-<hr />
+<hr>
 <h2 id="first-layer-diagnostics"><a class="header" href="#first-layer-diagnostics">First Layer Diagnostics</a></h2>
 <h3 id="layer-appearance-test"><a class="header" href="#layer-appearance-test">Layer Appearance Test</a></h3>
 <p><strong>After printing first 5-10 layer heights, evaluate:</strong></p>
-<div class="table-wrapper"><table><thead><tr><th>Appearance</th><th>Issue</th><th>Action</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Appearance</th><th>Issue</th><th>Action</th></tr>
+</thead>
+<tbody>
 <tr><td>Wavy/embossed</td><td>Bed not level or too close</td><td>Relevel bed</td></tr>
 <tr><td>Gaps between lines</td><td>Nozzle too high</td><td>Lower Z-offset</td></tr>
 <tr><td>Completely squished</td><td>Nozzle too low</td><td>Raise Z-offset</td></tr>
 <tr><td>Partial adhesion</td><td>Bed too cool or dirty</td><td>Clean bed, increase temp</td></tr>
 <tr><td>Consistent squish/lines</td><td>Correct</td><td>Continue print</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
-<hr />
+<hr>
 <h2 id="mid-print-issue-diagnostics"><a class="header" href="#mid-print-issue-diagnostics">Mid-Print Issue Diagnostics</a></h2>
 <h3 id="extrusion-failure-checklist"><a class="header" href="#extrusion-failure-checklist">Extrusion Failure Checklist</a></h3>
 <p><strong>When extrusion stops during print:</strong></p>
 <p><strong>Immediate Actions:</strong></p>
 <ul>
-<li><input disabled="" type="checkbox"/>
-Pause print (don't stop)</li>
-<li><input disabled="" type="checkbox"/>
-Listen for extruder sounds (grinding = jam)</li>
-<li><input disabled="" type="checkbox"/>
-Feel nozzle carefully (if cooled slightly)</li>
-<li><input disabled="" type="checkbox"/>
-Observe filament in extruder (is it feeding?)</li>
+<li><input disabled="" type="checkbox"> Pause print (don’t stop)</li>
+<li><input disabled="" type="checkbox"> Listen for extruder sounds (grinding = jam)</li>
+<li><input disabled="" type="checkbox"> Feel nozzle carefully (if cooled slightly)</li>
+<li><input disabled="" type="checkbox"> Observe filament in extruder (is it feeding?)</li>
 </ul>
 <p><strong>Diagnostic Decision:</strong></p>
 <pre><code class="language-plaintext">Is filament stuck in extruder?
@@ -454,7 +427,7 @@ Observe filament in extruder (is it feeding?)</li>
          -&gt; Is path blocked? -&gt; Clear obstruction
          -&gt; Is drive gear slipping? -&gt; Clean/tension drive gear
 </code></pre>
-<hr />
+<hr>
 <h3 id="mechanical-issue-diagnostics"><a class="header" href="#mechanical-issue-diagnostics">Mechanical Issue Diagnostics</a></h3>
 <p><strong>When movement sounds wrong:</strong></p>
 <p><strong>Listen for:</strong></p>
@@ -473,7 +446,7 @@ Observe filament in extruder (is it feeding?)</li>
    - Stuck: Mechanical bind
 4. Visually inspect that axis
 </code></pre>
-<hr />
+<hr>
 <h2 id="layer-quality-diagnostics"><a class="header" href="#layer-quality-diagnostics">Layer Quality Diagnostics</a></h2>
 <h3 id="visual-inspection-during-print"><a class="header" href="#visual-inspection-during-print">Visual Inspection During Print</a></h3>
 <p><strong>Every 30 minutes of printing, check:</strong></p>
@@ -484,7 +457,7 @@ Observe filament in extruder (is it feeding?)</li>
 [ ] No material strings between features
 [ ] Consistent layer heights visible
 </code></pre>
-<hr />
+<hr>
 <h2 id="dimensional-accuracy-diagnostics"><a class="header" href="#dimensional-accuracy-diagnostics">Dimensional Accuracy Diagnostics</a></h2>
 <p><strong>After print completes and cools (24 hours):</strong></p>
 <h3 id="precision-measurement"><a class="header" href="#precision-measurement">Precision Measurement</a></h3>
@@ -509,36 +482,36 @@ Example:
 - Deviation: ((19.8 - 20.0) / 20.0) x 100% = -1%
 </code></pre>
 <h3 id="tolerance-evaluation"><a class="header" href="#tolerance-evaluation">Tolerance Evaluation</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>Tolerance</th><th>Pass/Fail</th><th>Action</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Tolerance</th><th>Pass/Fail</th><th>Action</th></tr>
+</thead>
+<tbody>
 <tr><td>+/-0.5mm or better</td><td>PASS</td><td>No adjustment needed</td></tr>
 <tr><td>+/-0.5-1mm</td><td>MARGINAL</td><td>Document and monitor</td></tr>
 <tr><td>&gt;+/-1mm</td><td>FAIL</td><td>Adjust flow/calibration</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
-<hr />
+<hr>
 <h2 id="environmental-diagnostics"><a class="header" href="#environmental-diagnostics">Environmental Diagnostics</a></h2>
 <p><strong>When quality varies between prints:</strong></p>
 <p><strong>Check Conditions:</strong></p>
 <ul>
-<li><input disabled="" type="checkbox"/>
-Room temperature stable (+/-5C?)</li>
-<li><input disabled="" type="checkbox"/>
-Humidity reasonable (30-60%?)</li>
-<li><input disabled="" type="checkbox"/>
-No drafts from windows/AC near printer</li>
-<li><input disabled="" type="checkbox"/>
-Consistent vibration level (no external impact)</li>
-<li><input disabled="" type="checkbox"/>
-Same filament spool/batch used</li>
-<li><input disabled="" type="checkbox"/>
-Same slicer settings applied</li>
+<li><input disabled="" type="checkbox"> Room temperature stable (+/-5C?)</li>
+<li><input disabled="" type="checkbox"> Humidity reasonable (30-60%?)</li>
+<li><input disabled="" type="checkbox"> No drafts from windows/AC near printer</li>
+<li><input disabled="" type="checkbox"> Consistent vibration level (no external impact)</li>
+<li><input disabled="" type="checkbox"> Same filament spool/batch used</li>
+<li><input disabled="" type="checkbox"> Same slicer settings applied</li>
 </ul>
 <p><strong>Environmental Log:</strong></p>
 <pre><code class="language-plaintext">Date:     Time:     Temp: C    Humidity: %
 Print Duration:     Result Quality: Poor/Fair/Good/Excellent
 Notes: 
 </code></pre>
-<hr />
+<hr>
 <h2 id="troubleshooting-decision-tree"><a class="header" href="#troubleshooting-decision-tree">Troubleshooting Decision Tree</a></h2>
 <p><strong>Start here for systematic diagnosis:</strong></p>
 <pre><code class="language-plaintextv">+---- Printer won't start?
@@ -570,7 +543,7 @@ Notes:
 +---- Dimensions wrong?
    +---- Check: Flow rate calibration, printer accuracy limits
 </code></pre>
-<hr />
+<hr>
 <h2 id="diagnostic-report-template"><a class="header" href="#diagnostic-report-template">Diagnostic Report Template</a></h2>
 <p><strong>Use when seeking help:</strong></p>
 <pre><code class="language-plaintext">DIAGNOSTIC REPORT
@@ -601,16 +574,21 @@ Attempted Solutions:
 
 Result: (Solved/Partial/Ongoing) 
 </code></pre>
-<hr />
+<hr>
 <p><strong>Last Diagnostic Date:</strong>
-<strong>Issue Resolved:</strong><br />
-<strong>Diagnostic Performed By:</strong></p>
+<strong>Issue Resolved:</strong><br><strong>Diagnostic Performed By:</strong></p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../3dMake_Foundation/Lessons_3dMake_10/Lessons_3dMake_10.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
+                            <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_10/measurement_calibration_guide.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -618,7 +596,13 @@ Result: (Solved/Partial/Ongoing)
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../3dMake_Foundation/Lessons_3dMake_10/Lessons_3dMake_10.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
 
+                    <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_10/measurement_calibration_guide.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
             </nav>
 
         </div>
@@ -632,13 +616,13 @@ Result: (Solved/Partial/Ongoing)
         </script>
 
 
-        <script src="../../elasticlunr.min.js"></script>
-        <script src="../../mark.min.js"></script>
-        <script src="../../searcher.js"></script>
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-c2a407aa.js"></script>
 
-        <script src="../../clipboard.min.js"></script>
-        <script src="../../highlight.js"></script>
-        <script src="../../book.js"></script>
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-4a3ec6df.js"></script>
+        <script src="../../book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
 

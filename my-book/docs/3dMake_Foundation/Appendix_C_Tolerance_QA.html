@@ -58,23 +58,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../favicon.svg">
-        <link rel="shortcut icon" href="../favicon.png">
-        <link rel="stylesheet" href="../css/variables.css">
-        <link rel="stylesheet" href="../css/general.css">
-        <link rel="stylesheet" href="../css/chrome.css">
-        <link rel="stylesheet" href="../css/print.css" media="print">
+        <link rel="icon" href="../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../css/general-2459343d.css">
+        <link rel="stylesheet" href="../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../fonts/fonts.css">
+        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../theme/catppuccin.css">
+        <link rel="stylesheet" href="../theme/catppuccin-be25834e.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -82,10 +82,10 @@
             const path_to_root = "../";
             const default_light_theme = "latte";
             const default_dark_theme = "mocha";
-            window.path_to_searchindex_js = "../searchindex.js";
+            window.path_to_searchindex_js = "../searchindex-a4c66f4b.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc.js"></script>
+        <script src="../toc-6a7ae851.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -221,9 +221,9 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="3dmake_foundation-appendix_c_tolerance_qa"><a class="header" href="#3dmake_foundation-appendix_c_tolerance_qa">Appendix C: Tolerance Testing &amp; Quality Assurance Matrix</a></h1>
-<p>This appendix provides <strong>measurement-based testing methodology</strong> for verifying that 3D-printed parts meet design specifications. It's designed to be used <strong>non-visually</strong>-focusing on calipers, scales, and functional tests rather than visual inspection.</p>
+<p>This appendix provides <strong>measurement-based testing methodology</strong> for verifying that 3D-printed parts meet design specifications. It’s designed to be used <strong>non-visually</strong>-focusing on calipers, scales, and functional tests rather than visual inspection.</p>
 <p><strong>Referenced in:</strong> Lessons 8-10 (Complex Design, Troubleshooting, Mastery)</p>
-<hr />
+<hr>
 <h2 id="overview-what-is-tolerance"><a class="header" href="#overview-what-is-tolerance">Overview: What is Tolerance?</a></h2>
 <p><strong>Tolerance</strong> is the acceptable range of variation in dimensions:</p>
 <pre><code class="language-plaintext">Design spec:  Hole diameter = 6mm
@@ -239,7 +239,7 @@ or            7.2mm [NO] (exceeds tolerance)
 <li><strong>Safety:</strong> Wrong tolerance = part failure</li>
 <li><strong>Cost:</strong> Tight tolerance = slower, more waste</li>
 </ol>
-<hr />
+<hr>
 <h2 id="essential-measurement-tools"><a class="header" href="#essential-measurement-tools">Essential Measurement Tools</a></h2>
 <h3 id="1-digital-calipers"><a class="header" href="#1-digital-calipers">1. Digital Calipers</a></h3>
 <p><strong>What they measure:</strong></p>
@@ -309,11 +309,16 @@ union() {
 <li>Try inserting peg into no-go-gauge -&gt; Should NOT fit</li>
 <li>If both tests pass = tolerance correct</li>
 </ul>
-<hr />
+<hr>
 <h2 id="quality-assurance-testing-matrix"><a class="header" href="#quality-assurance-testing-matrix">Quality Assurance Testing Matrix</a></h2>
 <h3 id="critical-dimensions-to-test"><a class="header" href="#critical-dimensions-to-test">Critical Dimensions to Test</a></h3>
 <p>Create a <strong>Test Plan</strong> before printing:</p>
-<div class="table-wrapper"><table><thead><tr><th>Part</th><th>Dimension</th><th>Spec</th><th>Tolerance</th><th>How to Test</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Part</th><th>Dimension</th><th>Spec</th><th>Tolerance</th><th>How to Test</th></tr>
+</thead>
+<tbody>
 <tr><td><strong>Bracelet Holder</strong></td><td>Base width</td><td>127mm</td><td>+/-2mm</td><td>Measure with calipers (multiple points)</td></tr>
 <tr><td></td><td>Peg diameter</td><td>6mm</td><td>+/-0.5mm</td><td>Test fit with go/no-go gauge</td></tr>
 <tr><td></td><td>Peg spacing</td><td>8mm</td><td>+/-1mm</td><td>Measure distance between pegs</td></tr>
@@ -321,7 +326,8 @@ union() {
 <tr><td><strong>Phone Stand</strong></td><td>Slope angle</td><td>20</td><td>+/-3</td><td>Calculate from height/depth ratio</td></tr>
 <tr><td></td><td>Weight capacity</td><td>200g</td><td>150-250g</td><td>Load test (see below)</td></tr>
 <tr><td></td><td>Stability</td><td>N/A</td><td>Pass/fail</td><td>1-hour load test without tipping</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
 <h3 id="pre-print-planning"><a class="header" href="#pre-print-planning">Pre-Print Planning</a></h3>
 <p>Before slicing, define:</p>
@@ -329,7 +335,7 @@ union() {
 <li><strong>Critical dimensions:</strong> Which measurements matter most?</li>
 <li><strong>Acceptable range:</strong> What tolerance is realistic?</li>
 <li><strong>Test method:</strong> How will you verify?</li>
-<li><strong>Pass/fail criteria:</strong> What does "success" look like?</li>
+<li><strong>Pass/fail criteria:</strong> What does “success” look like?</li>
 </ol>
 <p><strong>Example Plan for Phone Stand:</strong></p>
 <pre><code class="language-markdown"># Phone Stand - Quality Assurance Plan
@@ -355,7 +361,7 @@ union() {
 - Phone slides or part tips
 - Visible cracks
 </code></pre>
-<hr />
+<hr>
 <h2 id="measurement-procedures"><a class="header" href="#measurement-procedures">Measurement Procedures</a></h2>
 <h3 id="procedure-1-linear-dimension-width-height-depth"><a class="header" href="#procedure-1-linear-dimension-width-height-depth">Procedure 1: Linear Dimension (Width, Height, Depth)</a></h3>
 <p><strong>Equipment needed:</strong> Digital calipers</p>
@@ -464,13 +470,19 @@ Acceptable range: 290-315g (+/-5%)
 4. Compare to expected weight
 </code></pre>
 <p><strong>Step 3: Interpret Result</strong></p>
-<div class="table-wrapper"><table><thead><tr><th>Actual Weight</th><th>Interpretation</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Actual Weight</th><th>Interpretation</th></tr>
+</thead>
+<tbody>
 <tr><td>290-315g</td><td>[YES] Correct infill, no internal voids</td></tr>
 <tr><td>&lt;280g</td><td>Infill too low or significant voids</td></tr>
 <tr><td>&gt;320g</td><td>Infill too high (was it supposed to be 20%?)</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
-<hr />
+<hr>
 <h2 id="functional-testing"><a class="header" href="#functional-testing">Functional Testing</a></h2>
 <h3 id="test-1-load-testing-strength"><a class="header" href="#test-1-load-testing-strength">Test 1: Load Testing (Strength)</a></h3>
 <p><strong>Purpose:</strong> Verify part can hold weight without failure</p>
@@ -542,7 +554,7 @@ Test procedure:
    -&gt; Should hold without slipping
 </code></pre>
 <h3 id="test-3-durability-testing-repeated-use"><a class="header" href="#test-3-durability-testing-repeated-use">Test 3: Durability Testing (Repeated Use)</a></h3>
-<p><strong>Purpose:</strong> Verify part doesn't fail after repeated cycles</p>
+<p><strong>Purpose:</strong> Verify part doesn’t fail after repeated cycles</p>
 <p><strong>Example: Phone Stand Tilt Cycles</strong></p>
 <pre><code class="language-plaintext">1. Record baseline dimensions
 2. Cycle 1: Place phone, tilt to max angle, remove
@@ -553,7 +565,7 @@ Test procedure:
 
 If no damage after 10 cycles -&gt; Durable [YES]
 </code></pre>
-<hr />
+<hr>
 <h2 id="tolerance-stack-up-multi-part-designs"><a class="header" href="#tolerance-stack-up-multi-part-designs">Tolerance Stack-Up (Multi-Part Designs)</a></h2>
 <p>When multiple parts are assembled, tolerances add:</p>
 <pre><code class="language-plaintext">Design:
@@ -579,9 +591,14 @@ Total = (0.5 + 0.5 + 0.5)
       = 0.75
       = 0.87mm
 </code></pre>
-<hr />
+<hr>
 <h2 id="common-dimensional-problems--fixes"><a class="header" href="#common-dimensional-problems--fixes">Common Dimensional Problems &amp; Fixes</a></h2>
-<div class="table-wrapper"><table><thead><tr><th>Problem</th><th>Typical Cause</th><th>How to Fix</th><th>Prevent Next Time</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Problem</th><th>Typical Cause</th><th>How to Fix</th><th>Prevent Next Time</th></tr>
+</thead>
+<tbody>
 <tr><td><strong>Part too small (all dimensions off)</strong></td><td>Scale wrong in slicer</td><td>Scale STL up in CAD or slicer</td><td>Verify scale before slicing</td></tr>
 <tr><td><strong>Holes too small</strong></td><td>Compensation shrinkage</td><td>Increase hole diameter +0.5mm</td><td>Add shrinkage factor to design</td></tr>
 <tr><td><strong>Walls too thin</strong></td><td>Layer squishing</td><td>Check first layer height; may need recalibration</td><td>Measure first layer thickness</td></tr>
@@ -589,9 +606,10 @@ Total = (0.5 + 0.5 + 0.5)
 <tr><td><strong>Inconsistent across print</strong></td><td>Nozzle clogging mid-print</td><td>Clean nozzle; check filament quality</td><td>Use quality filament; monitor print</td></tr>
 <tr><td>**Z-axis dimensions off</td><td>Z-axis uncalibrated</td><td>Run Z-calibration procedure</td><td>Calibrate before critical prints</td></tr>
 <tr><td><strong>Dimensions change between prints</strong></td><td>Thermal drift</td><td>Print in stable temperature</td><td>Use enclosed printer if possible</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
-<hr />
+<hr>
 <h2 id="testing-checklist-template"><a class="header" href="#testing-checklist-template">Testing Checklist Template</a></h2>
 <p>Print this checklist <strong>before starting a new project</strong>:</p>
 <pre><code class="language-markdown"># Quality Assurance Checklist: [Project Name]
@@ -631,7 +649,7 @@ Total = (0.5 + 0.5 + 0.5)
 ## Notes
 [Space for observations]
 </code></pre>
-<hr />
+<hr>
 <h2 id="powershell-integration-track-quality-metrics"><a class="header" href="#powershell-integration-track-quality-metrics">PowerShell Integration: Track Quality Metrics</a></h2>
 <pre><code class="language-powershell"># Track print quality across multiple projects
 
@@ -659,7 +677,7 @@ Write-Host "Print success rate: $passRate%"
 Write-Host "`nRecent issues:"
 $log | Where-Object { $.DimensionsPass -eq "FAIL" } | Select-Object ProjectName, Notes
 </code></pre>
-<hr />
+<hr>
 <h2 id="accessibility-focused-qa-best-practices"><a class="header" href="#accessibility-focused-qa-best-practices">Accessibility-Focused QA Best Practices</a></h2>
 <h3 id="why-measurement-based-testing-matters"><a class="header" href="#why-measurement-based-testing-matters">Why Measurement-Based Testing Matters</a></h3>
 <p>Traditional visual QA (looking at surface finish, checking dimensions by eye) is inherently inaccessible. This appendix prioritizes:</p>
@@ -699,7 +717,7 @@ $log | Where-Object { $.DimensionsPass -eq "FAIL" } | Select-Object ProjectName,
 ### Overall Result
 [YES] **PASS** - All dimensions within tolerance; functionally sound
 </code></pre>
-<hr />
+<hr>
 <h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
 <p><strong>Key Principles:</strong></p>
 <ol>
@@ -710,13 +728,19 @@ $log | Where-Object { $.DimensionsPass -eq "FAIL" } | Select-Object ProjectName,
 <li><strong>Iterate based on data:</strong> If test fails, adjust design or process</li>
 </ol>
 <p><strong>When to Use Each Test:</strong></p>
-<div class="table-wrapper"><table><thead><tr><th>Situation</th><th>Recommended Test</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Situation</th><th>Recommended Test</th></tr>
+</thead>
+<tbody>
 <tr><td>Prototype/mockup</td><td>Linear dimensions only</td></tr>
 <tr><td>Assembly with other parts</td><td>Tolerance stack-up analysis</td></tr>
 <tr><td>Load-bearing part</td><td>Functional load test</td></tr>
 <tr><td>Repeated-use item</td><td>Durability cycling test</td></tr>
 <tr><td>Multi-part design</td><td>Assembly fit test</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
 <p><strong>Accessibility Reminder:</strong></p>
 <p>All QA testing in this appendix is <strong>measurement-based and non-visual</strong>, making it equally accessible to all users. The goal is objective, quantifiable verification-not subjective assessment.</p>
@@ -725,7 +749,13 @@ $log | Where-Object { $.DimensionsPass -eq "FAIL" } | Select-Object ProjectName,
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../3dMake_Foundation/Appendix_B_Material_Properties.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
+                            <a rel="next prefetch" href="../3dMake_Foundation/Appendix_D_PowerShell_Integration.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -733,7 +763,13 @@ $log | Where-Object { $.DimensionsPass -eq "FAIL" } | Select-Object ProjectName,
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../3dMake_Foundation/Appendix_B_Material_Properties.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
 
+                    <a rel="next prefetch" href="../3dMake_Foundation/Appendix_D_PowerShell_Integration.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
             </nav>
 
         </div>
@@ -747,13 +783,13 @@ $log | Where-Object { $.DimensionsPass -eq "FAIL" } | Select-Object ProjectName,
         </script>
 
 
-        <script src="../elasticlunr.min.js"></script>
-        <script src="../mark.min.js"></script>
-        <script src="../searcher.js"></script>
+        <script src="../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../mark-09e88c2c.min.js"></script>
+        <script src="../searcher-c2a407aa.js"></script>
 
-        <script src="../clipboard.min.js"></script>
-        <script src="../highlight.js"></script>
-        <script src="../book.js"></script>
+        <script src="../clipboard-1626706a.min.js"></script>
+        <script src="../highlight-4a3ec6df.js"></script>
+        <script src="../book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
 

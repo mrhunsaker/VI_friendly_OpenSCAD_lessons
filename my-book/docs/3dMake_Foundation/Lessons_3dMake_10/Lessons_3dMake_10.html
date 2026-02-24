@@ -58,23 +58,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../../favicon.svg">
-        <link rel="shortcut icon" href="../../favicon.png">
-        <link rel="stylesheet" href="../../css/variables.css">
-        <link rel="stylesheet" href="../../css/general.css">
-        <link rel="stylesheet" href="../../css/chrome.css">
-        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-2459343d.css">
+        <link rel="stylesheet" href="../../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../theme/catppuccin.css">
+        <link rel="stylesheet" href="../../theme/catppuccin-be25834e.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -82,10 +82,10 @@
             const path_to_root = "../../";
             const default_light_theme = "latte";
             const default_dark_theme = "mocha";
-            window.path_to_searchindex_js = "../../searchindex.js";
+            window.path_to_searchindex_js = "../../searchindex-a4c66f4b.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc.js"></script>
+        <script src="../../toc-6a7ae851.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -239,16 +239,22 @@
 <li>Reference: <a href="/Lessons_3dMake_5/filament-comparison-table.html">filament-comparison-table.md</a> for material properties</li>
 </ul>
 <p><strong>Extension Projects</strong>: Complete <a href="/Lessons_3dMake_4/Dice_Dice_Dice.html">Dice_Dice_Dice</a> or <a href="../Lessons_3dMake_8/snap-fit-clip.html">Snap_Fit_Clip</a> to practice integrated validation workflows.</p>
-<hr />
+<hr>
 <h2 id="part-1-measurement-fundamentals"><a class="header" href="#part-1-measurement-fundamentals">Part 1: Measurement Fundamentals</a></h2>
 <p>Before you can validate that your designs print correctly, you need to measure accurately. This section covers using calipers and interpreting measurement data.</p>
 <h3 id="understanding-digital-calipers"><a class="header" href="#understanding-digital-calipers">Understanding Digital Calipers</a></h3>
 <p>A <strong>digital caliper</strong> is a precision tool with three measurement modes:</p>
-<div class="table-wrapper"><table><thead><tr><th>Mode</th><th>Use</th><th>Example</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Mode</th><th>Use</th><th>Example</th></tr>
+</thead>
+<tbody>
 <tr><td><strong>Outside jaws</strong></td><td>Measure outer dimensions</td><td>Diameter of a cylinder, width of a part</td></tr>
 <tr><td><strong>Inside jaws</strong></td><td>Measure inner dimensions</td><td>Hole diameter, inside width of a box</td></tr>
 <tr><td><strong>Depth rod</strong></td><td>Measure depth or thickness</td><td>Depth of a recess, thickness of a part</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
 <h3 id="measurement-best-practices"><a class="header" href="#measurement-best-practices">Measurement Best Practices</a></h3>
 <ol>
@@ -340,7 +346,7 @@ Status:  Excellent
 <li>Stress testing procedures</li>
 <li>Complete measurement worksheets</li>
 </ul>
-<hr />
+<hr>
 <h2 id="exercise-set-a-guided-projects-with-real-world-constraints"><a class="header" href="#exercise-set-a-guided-projects-with-real-world-constraints">Exercise Set A: Guided Projects with Real-World Constraints</a></h2>
 <h3 id="exercise-a1-the-parametric-phone-stand-beginner"><a class="header" href="#exercise-a1-the-parametric-phone-stand-beginner">Exercise A1: The Parametric Phone Stand (Beginner)</a></h3>
 <p><strong>Objective:</strong> Create a phone stand that works for 3+ phone models with different screen sizes.</p>
@@ -387,7 +393,7 @@ union() {
 </code></pre>
 <p><strong>Tasks:</strong></p>
 <ol>
-<li>Build the model and verify it's manifold with <code>3dm describe</code></li>
+<li>Build the model and verify it’s manifold with <code>3dm describe</code></li>
 <li>Generate 3 variants: iPhone (60mm), iPad mini (100mm), Tablet (150mm)</li>
 <li>Test each variant by measuring critical dimensions</li>
 <li>Document which variant works best with real devices</li>
@@ -398,7 +404,7 @@ union() {
 <li>Printed parts successfully hold test phones</li>
 <li>Dimensions match designs within 0.5mm</li>
 </ul>
-<hr />
+<hr>
 <h3 id="exercise-a2-the-customizable-keycap-set-intermediate"><a class="header" href="#exercise-a2-the-customizable-keycap-set-intermediate">Exercise A2: The Customizable Keycap Set (Intermediate)</a></h3>
 <p><strong>Objective:</strong> Design a family of keycaps for a custom keyboard with text, icons, and different profiles.</p>
 <p><strong>Requirements:</strong></p>
@@ -456,7 +462,7 @@ union() {
 <li>Print time estimates for each</li>
 <li>Post-processing notes (support removal, surface finishing)</li>
 </ul>
-<hr />
+<hr>
 <h3 id="exercise-a3-the-stackable-storage-system-advanced"><a class="header" href="#exercise-a3-the-stackable-storage-system-advanced">Exercise A3: The Stackable Storage System (Advanced)</a></h3>
 <p><strong>Objective:</strong> Design a modular storage system where bins stack securely and dividers are customizable.</p>
 <p><strong>Requirements:</strong></p>
@@ -535,7 +541,7 @@ union() {
 <li>Assembly instructions with photos/descriptions</li>
 <li>Recommendations for printer calibration</li>
 </ul>
-<hr />
+<hr>
 <h2 id="advanced-geometry-techniques-hull-and-minkowski-operations"><a class="header" href="#advanced-geometry-techniques-hull-and-minkowski-operations">Advanced Geometry Techniques: Hull and Minkowski Operations</a></h2>
 <p>Beyond basic primitives and boolean operations, professional designs often use hull and Minkowski operations to create smooth, rounded, and organic shapes. These are essential for creating high-quality, manufacturable designs.</p>
 <h3 id="example-1-hull-operations-for-organic-shapes"><a class="header" href="#example-1-hull-operations-for-organic-shapes">Example 1: Hull Operations for Organic Shapes</a></h3>
@@ -638,12 +644,18 @@ union() {
 }
 </code></pre>
 <p><strong>Comparison:</strong></p>
-<div class="table-wrapper"><table><thead><tr><th>Method</th><th>Complexity</th><th>Speed</th><th>Quality</th><th>Use Case</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Method</th><th>Complexity</th><th>Speed</th><th>Quality</th><th>Use Case</th></tr>
+</thead>
+<tbody>
 <tr><td>Sharp edges</td><td>Simple</td><td>Fast</td><td>Angular, technical</td><td>Mechanical parts</td></tr>
 <tr><td><code>hull()</code> for rounding</td><td>Medium</td><td>Medium</td><td>Smooth, organic</td><td>Consumer products</td></tr>
 <tr><td><code>minkowski()</code> for fillets</td><td>Medium</td><td>Medium</td><td>Professional</td><td>Finished goods</td></tr>
 <tr><td>Manual fillet modules</td><td>Complex</td><td>Slow</td><td>Precise</td><td>Custom requirements</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
 <h3 id="example-3-combining-hull-and-minkowski"><a class="header" href="#example-3-combining-hull-and-minkowski">Example 3: Combining Hull and Minkowski</a></h3>
 <p>Create sophisticated shapes by combining multiple techniques:</p>
@@ -686,7 +698,7 @@ union() {
 <li><strong>Validate manifold:</strong> Always run <code>3dm describe</code> after using hull/minkowski</li>
 <li><strong>Consider performance:</strong> These operations can slow down preview significantly</li>
 </ol>
-<hr />
+<hr>
 <h2 id="exercise-set-b-common-problems-and-solutions"><a class="header" href="#exercise-set-b-common-problems-and-solutions">Exercise Set B: Common Problems and Solutions</a></h2>
 <h3 id="b1-non-manifold-geometry"><a class="header" href="#b1-non-manifold-geometry">B1: Non-Manifold Geometry</a></h3>
 <p><strong>Problem:</strong> Model renders but slicer shows errors or generates invalid G-code</p>
@@ -695,12 +707,18 @@ union() {
 # Look for messages like "non-manifold edges" or "thickness near zero"
 </code></pre>
 <p><strong>Common Causes and Fixes:</strong></p>
-<div class="table-wrapper"><table><thead><tr><th>Issue</th><th>Cause</th><th>Fix</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Issue</th><th>Cause</th><th>Fix</th></tr>
+</thead>
+<tbody>
 <tr><td>Coincident faces</td><td>Shapes touching exactly</td><td>Add 0.001 offset: <code>translate([0, 0, 0.001])</code></td></tr>
 <tr><td>Zero-thickness walls</td><td>Wall too thin to render</td><td>Increase wall: <code>wall = 2.0</code> instead of <code>wall = 0.5</code></td></tr>
 <tr><td>Incomplete shape</td><td>Missing face in difference</td><td>Check boolean operations have complete shells</td></tr>
 <tr><td>Self-intersecting faces</td><td>Shape overlaps itself</td><td>Simplify geometry, use <code>hull()</code> instead of union</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
 <p><strong>Fix Example:</strong></p>
 <pre><code class="language-openscad">// BEFORE (often fails)
@@ -716,7 +734,7 @@ difference(){
     sphere(r=10, $fn=32);
 }
 </code></pre>
-<hr />
+<hr>
 <h3 id="b2-print-failures"><a class="header" href="#b2-print-failures">B2: Print Failures</a></h3>
 <p><strong>Problem:</strong> Print starts but fails partway through</p>
 <p><strong>Diagnosis:</strong></p>
@@ -727,13 +745,19 @@ difference(){
 # Preview layer-by-layer
 </code></pre>
 <p><strong>Common Causes:</strong></p>
-<div class="table-wrapper"><table><thead><tr><th>Symptom</th><th>Cause</th><th>Prevention</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Symptom</th><th>Cause</th><th>Prevention</th></tr>
+</thead>
+<tbody>
 <tr><td>Nozzle clogs after 10 min</td><td>Too fast extrusion speed</td><td>Reduce speed in slicer</td></tr>
 <tr><td>Parts separate from bed</td><td>Poor first layer adhesion</td><td>Check bed level, clean bed</td></tr>
 <tr><td>Melted plastic strands</td><td>Retraction not working</td><td>Verify retraction in slicer</td></tr>
 <tr><td>Model warping</td><td>Thermal stress, no cooling</td><td>Cool model, improve ventilation</td></tr>
 <tr><td>Supports fail to remove</td><td>Too thin or fused to model</td><td>Thicken supports, adjust angle</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
 <p><strong>Validation Checklist Before Printing:</strong></p>
 <pre><code class="language-bash">#!/bin/bash
@@ -759,7 +783,7 @@ echo "Generated G-code: build/main.gcode"
 
 echo "=== Ready to print? ==="
 </code></pre>
-<hr />
+<hr>
 <h3 id="b3-dimensional-inaccuracy"><a class="header" href="#b3-dimensional-inaccuracy">B3: Dimensional Inaccuracy</a></h3>
 <p><strong>Problem:</strong> Printed part measures 0.5-2mm different from design</p>
 <p><strong>Cause:</strong> Printer calibration, shrinkage, or design tolerance issues<sup class="footnote-reference" id="fr-1-6"><a href="#footnote-1">1</a></sup></p>
@@ -787,7 +811,7 @@ Step 4: Reprint and verify
 <li>Document printer baseline dimensions</li>
 <li>Apply material-specific shrinkage factors</li>
 </ul>
-<hr />
+<hr>
 <h2 id="exercise-set-c-validation-and-documentation"><a class="header" href="#exercise-set-c-validation-and-documentation">Exercise Set C: Validation and Documentation</a></h2>
 <h3 id="c1-design-review-checklist"><a class="header" href="#c1-design-review-checklist">C1: Design Review Checklist</a></h3>
 <p>After completing any design, validate using this checklist:</p>
@@ -852,7 +876,7 @@ Step 4: Reprint and verify
 - [Related documentation]
 - [Similar issues]
 </code></pre>
-<hr />
+<hr>
 <h2 id="checkpoint"><a class="header" href="#checkpoint">Checkpoint</a></h2>
 <ul>
 <li>After Exercise A1, you have a working phone stand</li>
@@ -861,7 +885,7 @@ Step 4: Reprint and verify
 <li>After Exercise B, you understand common failure modes</li>
 <li>After Exercise C, you have documentation habits</li>
 </ul>
-<hr />
+<hr>
 <h2 id="quiz---lesson-3dmake10-10-questions"><a class="header" href="#quiz---lesson-3dmake10-10-questions">Quiz - Lesson 3dMake.10 (10 questions)</a></h2>
 <ol>
 <li>What is the first diagnostic step when a model fails to slice<sup class="footnote-reference" id="fr-2-2"><a href="#footnote-2">2</a></sup>?</li>
@@ -888,10 +912,11 @@ Step 4: Reprint and verify
 <li>Design a quality assurance system: define metrics, measurement methods, acceptance criteria<sup class="footnote-reference" id="fr-1-19"><a href="#footnote-1">1</a></sup>.</li>
 <li>Write a comprehensive troubleshooting and maintenance guide: diagnostics, solutions, prevention strategies, and accessibility considerations.</li>
 </ol>
-<hr />
+<hr>
 <p><strong>References</strong></p>
 <hr>
-<ol class="footnote-definition"><li id="footnote-1">
+<ol class="footnote-definition">
+<li id="footnote-1">
 <p>OpenSCAD Best Practices - https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/FAQ <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a> <a href="#fr-1-3">↩3</a> <a href="#fr-1-4">↩4</a> <a href="#fr-1-5">↩5</a> <a href="#fr-1-6">↩6</a> <a href="#fr-1-7">↩7</a> <a href="#fr-1-8">↩8</a> <a href="#fr-1-9">↩9</a> <a href="#fr-1-10">↩10</a> <a href="#fr-1-11">↩11</a> <a href="#fr-1-12">↩12</a> <a href="#fr-1-13">↩13</a> <a href="#fr-1-14">↩14</a> <a href="#fr-1-15">↩15</a> <a href="#fr-1-16">↩16</a> <a href="#fr-1-17">↩17</a> <a href="#fr-1-18">↩18</a> <a href="#fr-1-19">↩19</a></p>
 </li>
 <li id="footnote-2">
@@ -901,11 +926,18 @@ Step 4: Reprint and verify
 <p>3DMake Documentation - https://github.com/tdeck/3dmake/wiki/Troubleshooting <a href="#fr-3-1">↩</a> <a href="#fr-3-2">↩2</a></p>
 </li>
 </ol>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../3dMake_Foundation/Lessons_3dMake_9/Lessons_3dMake_9.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
+                            <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_10/diagnostic_checklist.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -913,7 +945,13 @@ Step 4: Reprint and verify
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../3dMake_Foundation/Lessons_3dMake_9/Lessons_3dMake_9.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
 
+                    <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_10/diagnostic_checklist.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
             </nav>
 
         </div>
@@ -927,13 +965,13 @@ Step 4: Reprint and verify
         </script>
 
 
-        <script src="../../elasticlunr.min.js"></script>
-        <script src="../../mark.min.js"></script>
-        <script src="../../searcher.js"></script>
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-c2a407aa.js"></script>
 
-        <script src="../../clipboard.min.js"></script>
-        <script src="../../highlight.js"></script>
-        <script src="../../book.js"></script>
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-4a3ec6df.js"></script>
+        <script src="../../book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
 

@@ -874,6 +874,7 @@
   --blockquote-warning-color: #f9e2af;
   --blockquote-caution-color: #f38ba8;
 }
+
 @font-face {
   font-family: "Atkinson Hyperlegible Next";
   src: url("../../assets/fonts/AtkinsonHyperlegibleNext-Regular.ttf")

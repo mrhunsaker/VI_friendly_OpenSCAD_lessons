@@ -58,23 +58,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../favicon.svg">
-        <link rel="shortcut icon" href="../favicon.png">
-        <link rel="stylesheet" href="../css/variables.css">
-        <link rel="stylesheet" href="../css/general.css">
-        <link rel="stylesheet" href="../css/chrome.css">
-        <link rel="stylesheet" href="../css/print.css" media="print">
+        <link rel="icon" href="../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../css/general-2459343d.css">
+        <link rel="stylesheet" href="../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../fonts/fonts.css">
+        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../theme/catppuccin.css">
+        <link rel="stylesheet" href="../theme/catppuccin-be25834e.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -82,10 +82,10 @@
             const path_to_root = "../";
             const default_light_theme = "latte";
             const default_dark_theme = "mocha";
-            window.path_to_searchindex_js = "../searchindex.js";
+            window.path_to_searchindex_js = "../searchindex-a4c66f4b.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc.js"></script>
+        <script src="../toc-6a7ae851.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -230,7 +230,7 @@
 <li>Command-line usage (for PowerShell integration)</li>
 </ul>
 <p><strong>Referenced in:</strong> Lessons 5 (Safety), 8 (Design), 10 (Verification)</p>
-<hr />
+<hr>
 <h2 id="overview-what-is-slicing"><a class="header" href="#overview-what-is-slicing">Overview: What is Slicing?</a></h2>
 <p><strong>Slicing</strong> converts a 3D model into printer instructions:</p>
 <pre><code>SCAD Design (bracelet_holder.scad)
@@ -248,7 +248,12 @@ Send to Printer
 Physical part
 </code></pre>
 <h3 id="core-slicing-parameters-all-slicers-share-these"><a class="header" href="#core-slicing-parameters-all-slicers-share-these">Core Slicing Parameters (All Slicers Share These)</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>Parameter</th><th>What It Does</th><th>Typical Range</th><th>Impact</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Parameter</th><th>What It Does</th><th>Typical Range</th><th>Impact</th></tr>
+</thead>
+<tbody>
 <tr><td><strong>Nozzle Temp</strong></td><td>Filament melting heat</td><td>200-250C</td><td>Too cold -&gt; weak; too hot -&gt; oozing</td></tr>
 <tr><td><strong>Bed Temp</strong></td><td>Build plate heat</td><td>50-110C</td><td>Helps adhesion; prevents warping</td></tr>
 <tr><td><strong>Layer Height</strong></td><td>Z-axis precision</td><td>0.1-0.4mm</td><td>Finer = slower, better detail</td></tr>
@@ -256,9 +261,10 @@ Physical part
 <tr><td><strong>Infill %</strong></td><td>Interior density</td><td>10-100%</td><td>Higher = stronger + heavier</td></tr>
 <tr><td><strong>Support</strong></td><td>Temporary scaffolding</td><td>On/Off</td><td>Required for overhangs &gt;45</td></tr>
 <tr><td><strong>Bed Adhesion</strong></td><td>First layer stickiness</td><td>Brim/Raft/Skirt</td><td>Prevents parts lifting mid-print</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
-<hr />
+<hr>
 <h2 id="1-prusaslicer-prusa"><a class="header" href="#1-prusaslicer-prusa">1. PrusaSlicer (Prusa)</a></h2>
 <h3 id="overview"><a class="header" href="#overview">Overview</a></h3>
 <ul>
@@ -282,14 +288,20 @@ Physical part
 </code></pre>
 <p><strong>Step 3: Essential Settings</strong></p>
 <p>These are the most important adjustments:</p>
-<div class="table-wrapper"><table><thead><tr><th>Setting</th><th>Location</th><th>Beginner Value</th><th>Why</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Setting</th><th>Location</th><th>Beginner Value</th><th>Why</th></tr>
+</thead>
+<tbody>
 <tr><td><strong>Layer Height</strong></td><td>Print Settings</td><td>0.15mm</td><td>Balance speed &amp; quality</td></tr>
 <tr><td><strong>Infill</strong></td><td>Print Settings</td><td>20%</td><td>Enough strength; fast print</td></tr>
 <tr><td><strong>Support</strong></td><td>Print Settings</td><td>Yes (if needed)</td><td>For overhangs &gt;45</td></tr>
 <tr><td><strong>Nozzle Temp</strong></td><td>Filament Settings</td><td>210C</td><td>Default for PLA</td></tr>
 <tr><td><strong>Bed Temp</strong></td><td>Filament Settings</td><td>60C</td><td>Standard PLA adhesion</td></tr>
 <tr><td><strong>Print Speed</strong></td><td>Print Settings</td><td>150 mm/s</td><td>Balanced quality</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
 <p><strong>Step 4: Preview &amp; Export</strong></p>
 <pre><code>1. Click "Slice now" (or G-code icon)
@@ -325,8 +337,8 @@ Physical part
 <p><strong>First Layer</strong></p>
 <ul>
 <li><strong>Brim:</strong> Adds border to help adhesion (recommended for beginners)</li>
-<li><strong>Raft:</strong> Sacrificial platform (good if bed isn't level)</li>
-<li><strong>Skirt:</strong> Just outline, doesn't help adhesion (fastest)</li>
+<li><strong>Raft:</strong> Sacrificial platform (good if bed isn’t level)</li>
+<li><strong>Skirt:</strong> Just outline, doesn’t help adhesion (fastest)</li>
 </ul>
 <h3 id="command-line-usage-powershell-integration"><a class="header" href="#command-line-usage-powershell-integration">Command-Line Usage (PowerShell Integration)</a></h3>
 <pre><code class="language-powershell"># Slice a model automatically with PrusaSlicer
@@ -343,15 +355,21 @@ $config = "default"  # Use default printer profile
 Write-Host "Slicing complete: $output"
 </code></pre>
 <h3 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>Problem</th><th>Cause</th><th>Solution</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Problem</th><th>Cause</th><th>Solution</th></tr>
+</thead>
+<tbody>
 <tr><td>First layer not sticking</td><td>Bed not level</td><td>Bed leveling procedure in printer manual</td></tr>
-<tr><td>Supports everywhere</td><td>No support type selected</td><td>Change to "Linear" or "Grid"</td></tr>
+<tr><td>Supports everywhere</td><td>No support type selected</td><td>Change to “Linear” or “Grid”</td></tr>
 <tr><td>Nozzle drags through model</td><td>Z-offset too low</td><td>Raise Z-offset +0.1mm</td></tr>
 <tr><td>Oozing strings between parts</td><td>Temp too high</td><td>Lower nozzle temp 5-10C</td></tr>
 <tr><td>Print breaks mid-way</td><td>Adhesion problem</td><td>Add brim; check bed level</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
-<hr />
+<hr>
 <h2 id="2-bambu-studio-bambu-lab"><a class="header" href="#2-bambu-studio-bambu-lab">2. Bambu Studio (Bambu Lab)</a></h2>
 <h3 id="overview-1"><a class="header" href="#overview-1">Overview</a></h3>
 <ul>
@@ -374,13 +392,19 @@ Write-Host "Slicing complete: $output"
 3. Default profile applied automatically
 </code></pre>
 <p><strong>Step 3: Key Settings (Bambu-Specific)</strong></p>
-<div class="table-wrapper"><table><thead><tr><th>Setting</th><th>Default</th><th>Adjustment</th><th>Why</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Setting</th><th>Default</th><th>Adjustment</th><th>Why</th></tr>
+</thead>
+<tbody>
 <tr><td><strong>AMS Multi-Color</strong></td><td>Off</td><td>On (if AMS attached)</td><td>Auto-switch filament</td></tr>
 <tr><td><strong>Auto-Leveling</strong></td><td>Enabled</td><td>Keep On</td><td>Bambu feature-very reliable</td></tr>
 <tr><td><strong>Nozzle Temp</strong></td><td>220C</td><td>Keep unless specified</td><td>Bambu-optimized</td></tr>
 <tr><td><strong>Layer Height</strong></td><td>0.2mm</td><td>0.15mm for detail</td><td>Balance speed/quality</td></tr>
 <tr><td><strong>Bed Temp</strong></td><td>65C</td><td>60C for PLA</td><td>Standard adhesion</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
 <p><strong>Step 4: Send to Printer</strong></p>
 <pre><code>1. Click "Prepare" (bottom right)
@@ -398,7 +422,7 @@ Write-Host "Slicing complete: $output"
 </ul>
 <p><strong>Filament Calibration</strong></p>
 <ul>
-<li>Before first use of new filament color, run "Filament Calibration"</li>
+<li>Before first use of new filament color, run “Filament Calibration”</li>
 <li>This optimizes temperature and speed for that specific filament</li>
 <li>Explanation: Ensures consistent color and strength</li>
 </ul>
@@ -428,14 +452,20 @@ Write-Host "Slice saved: $output"
 # (Requires API key-see Bambu documentation)
 </code></pre>
 <h3 id="troubleshooting-1"><a class="header" href="#troubleshooting-1">Troubleshooting</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>Problem</th><th>Cause</th><th>Solution</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Problem</th><th>Cause</th><th>Solution</th></tr>
+</thead>
+<tbody>
 <tr><td>WiFi not connecting</td><td>Network issue</td><td>Restart printer WiFi; check SSID</td></tr>
 <tr><td>AMS not switching</td><td>Filament not detected</td><td>Load filament into AMS; recalibrate</td></tr>
 <tr><td>Print quality inconsistent</td><td>Wrong filament type</td><td>Run filament calibration</td></tr>
 <tr><td>Nozzle crashes on first layer</td><td>Auto-level failed</td><td>Manually check nozzle height</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
-<hr />
+<hr>
 <h2 id="3-cura-ultimaker"><a class="header" href="#3-cura-ultimaker">3. Cura (Ultimaker)</a></h2>
 <h3 id="overview-2"><a class="header" href="#overview-2">Overview</a></h3>
 <ul>
@@ -459,7 +489,12 @@ Write-Host "Slice saved: $output"
 3. Right-click -&gt; "Support" (if overhangs need support)
 </code></pre>
 <p><strong>Step 3: Recommended Settings</strong></p>
-<div class="table-wrapper"><table><thead><tr><th>Setting</th><th>Value</th><th>Notes</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Setting</th><th>Value</th><th>Notes</th></tr>
+</thead>
+<tbody>
 <tr><td><strong>Profile</strong></td><td>Standard</td><td>Good balance for most prints</td></tr>
 <tr><td><strong>Layer Height</strong></td><td>0.2mm</td><td>Default; change to 0.15mm for detail</td></tr>
 <tr><td><strong>Infill</strong></td><td>20%</td><td>100% waste for solid parts</td></tr>
@@ -467,7 +502,8 @@ Write-Host "Slice saved: $output"
 <tr><td><strong>Build Plate Adhesion</strong></td><td>Brim</td><td>Helps first layer stick</td></tr>
 <tr><td><strong>Nozzle Temp</strong></td><td>200C</td><td>Standard PLA</td></tr>
 <tr><td><strong>Bed Temp</strong></td><td>60C</td><td>Standard PLA</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
 <p><strong>Step 4: Print</strong></p>
 <pre><code>1. Click "Slice" (bottom right)
@@ -487,14 +523,14 @@ Write-Host "Slice saved: $output"
 <ul>
 <li>Adjusts first-layer distance</li>
 <li>Too low -&gt; nozzle scrapes bed (bad)</li>
-<li>Too high -&gt; filament doesn't stick (bad)</li>
+<li>Too high -&gt; filament doesn’t stick (bad)</li>
 <li>Correct -&gt; thin line of plastic sticks to bed</li>
 </ul>
 <p><strong>Gradual Infill</strong></p>
 <ul>
 <li>Automatically reduces infill strength away from surface</li>
 <li>Saves filament while maintaining strength</li>
-<li>Explanation: The core doesn't need to be solid</li>
+<li>Explanation: The core doesn’t need to be solid</li>
 </ul>
 <h3 id="command-line-usage-powershell-1"><a class="header" href="#command-line-usage-powershell-1">Command-Line Usage (PowerShell)</a></h3>
 <pre><code class="language-powershell"># Cura engine CLI (CuraEngine)
@@ -511,14 +547,20 @@ $config = "default.cfg"
 Write-Host "Sliced: $output"
 </code></pre>
 <h3 id="troubleshooting-2"><a class="header" href="#troubleshooting-2">Troubleshooting</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>Problem</th><th>Cause</th><th>Solution</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Problem</th><th>Cause</th><th>Solution</th></tr>
+</thead>
+<tbody>
 <tr><td>Model appears too small on bed</td><td>Scale wrong</td><td>Right-click -&gt; Scale to fit</td></tr>
 <tr><td>Stringing between parts</td><td>Retraction disabled</td><td>Enable retraction in settings</td></tr>
-<tr><td>Support doesn't generate</td><td>Auto-support off</td><td>Enable "Generate Support"</td></tr>
+<tr><td>Support doesn’t generate</td><td>Auto-support off</td><td>Enable “Generate Support”</td></tr>
 <tr><td>Printer not found</td><td>Network/USB issue</td><td>Check connection; restart Cura</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
-<hr />
+<hr>
 <h2 id="4-superslicer-modification-of-prusa"><a class="header" href="#4-superslicer-modification-of-prusa">4. SuperSlicer (Modification of Prusa)</a></h2>
 <h3 id="overview-3"><a class="header" href="#overview-3">Overview</a></h3>
 <ul>
@@ -529,12 +571,18 @@ Write-Host "Sliced: $output"
 <li><strong>Accessibility:</strong> Similar to Prusa, more advanced options</li>
 </ul>
 <h3 id="key-differences-from-prusa"><a class="header" href="#key-differences-from-prusa">Key Differences from Prusa</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>Feature</th><th>PrusaSlicer</th><th>SuperSlicer</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Feature</th><th>PrusaSlicer</th><th>SuperSlicer</th></tr>
+</thead>
+<tbody>
 <tr><td><strong>Arachne Engine</strong></td><td>No</td><td>Yes-better edges</td></tr>
 <tr><td><strong>Seam Position</strong></td><td>Limited options</td><td>Full control</td></tr>
 <tr><td><strong>Pressure Equalization</strong></td><td>No</td><td>Yes-better bridging</td></tr>
 <tr><td><strong>Stealth Mode</strong></td><td>No</td><td>Yes-quieter/higher quality</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
 <h3 id="when-to-use-superslicer"><a class="header" href="#when-to-use-superslicer">When to Use SuperSlicer</a></h3>
 <ul>
@@ -567,7 +615,7 @@ Write-Host "Sliced: $output"
 <li>Reduces sagging on overhangs</li>
 <li>Recommended: Enable for complex designs</li>
 </ul>
-<hr />
+<hr>
 <h2 id="5-orcaslicer-modern-bamboo-alternative"><a class="header" href="#5-orcaslicer-modern-bamboo-alternative">5. OrcaSlicer (Modern Bamboo Alternative)</a></h2>
 <h3 id="overview-4"><a class="header" href="#overview-4">Overview</a></h3>
 <ul>
@@ -578,7 +626,7 @@ Write-Host "Sliced: $output"
 <li><strong>Accessibility:</strong> Modern UI, good keyboard support</li>
 </ul>
 <h3 id="why-orca"><a class="header" href="#why-orca">Why Orca?</a></h3>
-<p>OrcaSlicer brings Bambu Studio's best features to <strong>any printer</strong>:</p>
+<p>OrcaSlicer brings Bambu Studio’s best features to <strong>any printer</strong>:</p>
 <ul>
 <li>Excellent defaults</li>
 <li>Fast slicing</li>
@@ -592,13 +640,19 @@ Write-Host "Sliced: $output"
 4. Uses good defaults-usually ready to print
 </code></pre>
 <h3 id="key-settings"><a class="header" href="#key-settings">Key Settings</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>Setting</th><th>Value</th><th>Why</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Setting</th><th>Value</th><th>Why</th></tr>
+</thead>
+<tbody>
 <tr><td><strong>Wall Loops</strong></td><td>2</td><td>Strong walls, visible detail</td></tr>
 <tr><td><strong>Internal Solid Layer</strong></td><td>4</td><td>Strength for brackets/connectors</td></tr>
 <tr><td><strong>Infill Pattern</strong></td><td>Grid</td><td>Balanced strength</td></tr>
 <tr><td><strong>Line Width</strong></td><td>Auto</td><td>Matches nozzle diameter</td></tr>
 <tr><td><strong>Speed</strong></td><td>80 mm/s</td><td>Balanced quality/speed</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
 <h3 id="accessible-features"><a class="header" href="#accessible-features">Accessible Features</a></h3>
 <p><strong>Filament Manager</strong></p>
@@ -616,7 +670,7 @@ Write-Host "Sliced: $output"
 <li>Pre-configured settings for common filaments</li>
 <li>Just select material type; settings auto-apply</li>
 </ul>
-<hr />
+<hr>
 <h2 id="6-ideamaker-raise3d"><a class="header" href="#6-ideamaker-raise3d">6. IdeaMaker (Raise3D)</a></h2>
 <h3 id="overview-5"><a class="header" href="#overview-5">Overview</a></h3>
 <ul>
@@ -656,7 +710,7 @@ Write-Host "Sliced: $output"
 <li>Optimizes nozzle movement for efficiency</li>
 <li>Reduces print time without sacrificing quality</li>
 </ul>
-<hr />
+<hr>
 <h2 id="7-fusion-360-cad--slicer"><a class="header" href="#7-fusion-360-cad--slicer">7. Fusion 360 (CAD + Slicer)</a></h2>
 <h3 id="overview-6"><a class="header" href="#overview-6">Overview</a></h3>
 <ul>
@@ -691,15 +745,20 @@ Write-Host "Sliced: $output"
 # Then import into Fusion 360
 # For more complex designs that need refinement
 </code></pre>
-<hr />
+<hr>
 <h2 id="universal-troubleshooting-guide"><a class="header" href="#universal-troubleshooting-guide">Universal Troubleshooting Guide</a></h2>
-<div class="table-wrapper"><table><thead><tr><th>Problem</th><th>Diagnosis</th><th>Solution</th></tr></thead><tbody>
-<tr><td><strong>Print won't stick to bed</strong></td><td>Bed temperature too low</td><td>Raise bed temp +5C; check bed level</td></tr>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Problem</th><th>Diagnosis</th><th>Solution</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Print won’t stick to bed</strong></td><td>Bed temperature too low</td><td>Raise bed temp +5C; check bed level</td></tr>
 <tr><td></td><td>Bed not level</td><td>Manual leveling procedure (printer manual)</td></tr>
 <tr><td></td><td>Build plate dirty</td><td>Clean with isopropyl alcohol</td></tr>
 <tr><td><strong>Nozzle hits model mid-print</strong></td><td>Z-offset wrong</td><td>Adjust Z-offset; re-level bed</td></tr>
-<tr><td></td><td>Model placed too low on bed</td><td>Use "Arrange on Bed" tool in slicer</td></tr>
-<tr><td><strong>Supports won't remove</strong></td><td>Too much support generated</td><td>Reduce support density or angle</td></tr>
+<tr><td></td><td>Model placed too low on bed</td><td>Use “Arrange on Bed” tool in slicer</td></tr>
+<tr><td><strong>Supports won’t remove</strong></td><td>Too much support generated</td><td>Reduce support density or angle</td></tr>
 <tr><td></td><td>Support too strong</td><td>Reduce support material percentage</td></tr>
 <tr><td><strong>Stringy/Oozing</strong></td><td>Nozzle too hot</td><td>Reduce temp by 5-10C</td></tr>
 <tr><td></td><td>Retraction disabled</td><td>Enable retraction in settings</td></tr>
@@ -708,21 +767,28 @@ Write-Host "Sliced: $output"
 <tr><td></td><td>Stepper motor power issue</td><td>Firmware issue-check printer logs</td></tr>
 <tr><td><strong>Model prints poorly but slices look good</strong></td><td>Filament quality issue</td><td>Try different filament batch</td></tr>
 <tr><td></td><td>Nozzle clogged</td><td>Unclog nozzle (heat -&gt; purge -&gt; clean)</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
-<hr />
+<hr>
 <h2 id="recommended-slicer-for-each-situation"><a class="header" href="#recommended-slicer-for-each-situation">Recommended Slicer for Each Situation</a></h2>
-<div class="table-wrapper"><table><thead><tr><th>Scenario</th><th>Best Slicer</th><th>Why</th></tr></thead><tbody>
-<tr><td><strong>I'm a beginner</strong></td><td>PrusaSlicer</td><td>Clear defaults, excellent UI</td></tr>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Scenario</th><th>Best Slicer</th><th>Why</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>I’m a beginner</strong></td><td>PrusaSlicer</td><td>Clear defaults, excellent UI</td></tr>
 <tr><td><strong>I have a Bambu printer</strong></td><td>Bambu Studio</td><td>Native, best features</td></tr>
 <tr><td><strong>I have an Ultimaker</strong></td><td>Cura</td><td>Official support, broad compatibility</td></tr>
 <tr><td><strong>I have a Raise3D</strong></td><td>IdeaMaker</td><td>Official, dual-extrusion support</td></tr>
 <tr><td><strong>I want advanced control</strong></td><td>SuperSlicer</td><td>Maximum customization</td></tr>
 <tr><td><strong>I want modern/fast slicing</strong></td><td>OrcaSlicer</td><td>Great defaults, any printer</td></tr>
 <tr><td><strong>I use Fusion 360 for CAD</strong></td><td>Fusion 360 Print Prep</td><td>Integrated workflow</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
-<hr />
+<hr>
 <h2 id="powershell-integration-batch-slicing"><a class="header" href="#powershell-integration-batch-slicing">PowerShell Integration: Batch Slicing</a></h2>
 <h3 id="slice-multiple-files-automatically"><a class="header" href="#slice-multiple-files-automatically">Slice Multiple Files Automatically</a></h3>
 <pre><code class="language-powershell"># Batch slice all SCAD designs in a project
@@ -769,7 +835,7 @@ Write-Host "State: $($status.state.text)"
 Write-Host "Progress: $($status.progress.completion)%"
 Write-Host "Time remaining: $($status.progress.printTimeLeft) seconds"
 </code></pre>
-<hr />
+<hr>
 <h2 id="accessibility-best-practices-for-slicing"><a class="header" href="#accessibility-best-practices-for-slicing">Accessibility Best Practices for Slicing</a></h2>
 <h3 id="describing-sliced-models"><a class="header" href="#describing-sliced-models">Describing Sliced Models</a></h3>
 <pre><code class="language-bash"># Use 3dm describe to understand the slicer's output
@@ -806,11 +872,11 @@ Write-Host "Time remaining: $($status.progress.printTimeLeft) seconds"
 <ul>
 <li>Assemble with other parts</li>
 <li>Test strength by loading with known weight</li>
-<li>Verify support removal didn't damage part</li>
+<li>Verify support removal didn’t damage part</li>
 </ul>
 </li>
 </ol>
-<hr />
+<hr>
 <h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
 <p>This appendix provides:</p>
 <ul>
@@ -834,7 +900,13 @@ Write-Host "Time remaining: $($status.progress.printTimeLeft) seconds"
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../PowerShell_Foundation/PowerShell_Tutorial/PowerShell_Tutorial.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
+                            <a rel="next prefetch" href="../3dMake_Foundation/Appendix_B_Material_Properties.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -842,7 +914,13 @@ Write-Host "Time remaining: $($status.progress.printTimeLeft) seconds"
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../PowerShell_Foundation/PowerShell_Tutorial/PowerShell_Tutorial.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
 
+                    <a rel="next prefetch" href="../3dMake_Foundation/Appendix_B_Material_Properties.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
             </nav>
 
         </div>
@@ -856,13 +934,13 @@ Write-Host "Time remaining: $($status.progress.printTimeLeft) seconds"
         </script>
 
 
-        <script src="../elasticlunr.min.js"></script>
-        <script src="../mark.min.js"></script>
-        <script src="../searcher.js"></script>
+        <script src="../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../mark-09e88c2c.min.js"></script>
+        <script src="../searcher-c2a407aa.js"></script>
 
-        <script src="../clipboard.min.js"></script>
-        <script src="../highlight.js"></script>
-        <script src="../book.js"></script>
+        <script src="../clipboard-1626706a.min.js"></script>
+        <script src="../highlight-4a3ec6df.js"></script>
+        <script src="../book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
 

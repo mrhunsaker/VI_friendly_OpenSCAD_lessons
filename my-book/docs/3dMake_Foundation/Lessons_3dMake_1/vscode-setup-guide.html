@@ -58,23 +58,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../../favicon.svg">
-        <link rel="shortcut icon" href="../../favicon.png">
-        <link rel="stylesheet" href="../../css/variables.css">
-        <link rel="stylesheet" href="../../css/general.css">
-        <link rel="stylesheet" href="../../css/chrome.css">
-        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-2459343d.css">
+        <link rel="stylesheet" href="../../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../theme/catppuccin.css">
+        <link rel="stylesheet" href="../../theme/catppuccin-be25834e.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -82,10 +82,10 @@
             const path_to_root = "../../";
             const default_light_theme = "latte";
             const default_dark_theme = "mocha";
-            window.path_to_searchindex_js = "../../searchindex.js";
+            window.path_to_searchindex_js = "../../searchindex-a4c66f4b.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc.js"></script>
+        <script src="../../toc-6a7ae851.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -223,18 +223,18 @@
                         <h1 id="3dmake_foundation_lessons_3dmake_1-vscode-setup-guide"><a class="header" href="#3dmake_foundation_lessons_3dmake_1-vscode-setup-guide">VSCode Setup Guide - Accessible OpenSCAD Development</a></h1>
 <h2 id="for-use-with-nvda-or-jaws-on-windows"><a class="header" href="#for-use-with-nvda-or-jaws-on-windows"><strong>For use with NVDA or JAWS on Windows</strong></a></h2>
 <p>This guide walks you through setting up Visual Studio Code (VSCode) as an accessible code editor for writing OpenSCAD files, with a task runner that automatically previews your <code>.scad</code> code in OpenSCAD whenever you save.</p>
-<hr />
+<hr>
 <h2 id="why-vscode-instead-of-the-openscad-editor"><a class="header" href="#why-vscode-instead-of-the-openscad-editor">Why VSCode Instead of the OpenSCAD Editor?</a></h2>
 <p>The built-in OpenSCAD editor has inconsistent behavior with screen readers - focus can jump unexpectedly, and the editor sometimes stops being read after certain actions. VSCode is a mainstream code editor with strong, well-tested accessibility support for both NVDA and JAWS.</p>
 <p>You write your code in VSCode. OpenSCAD runs in the background (or in a separate window) to render the preview. You never have to interact with the OpenSCAD editor itself.</p>
-<hr />
+<hr>
 <h2 id="part-1-install-required-software"><a class="header" href="#part-1-install-required-software">Part 1: Install Required Software</a></h2>
 <h3 id="11-install-vscode"><a class="header" href="#11-install-vscode">1.1 Install VSCode</a></h3>
 <p>Download from: <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p>
 <p>During installation:</p>
 <ul>
-<li>Check <strong>"Add to PATH"</strong> - this is important for running VSCode from PowerShell</li>
-<li>Check <strong>"Register Code as an editor for supported file types"</strong></li>
+<li>Check <strong>“Add to PATH”</strong> - this is important for running VSCode from PowerShell</li>
+<li>Check <strong>“Register Code as an editor for supported file types”</strong></li>
 </ul>
 <h3 id="12-install-openscad"><a class="header" href="#12-install-openscad">1.2 Install OpenSCAD</a></h3>
 <p>Download from: <a href="https://openscad.org/downloads.html">https://openscad.org/downloads.html</a></p>
@@ -247,11 +247,11 @@
 <li>Open VSCode</li>
 <li>Press <code>Ctrl + Shift + X</code> to open the Extensions panel</li>
 <li>Type <code>openscad</code> in the search box</li>
-<li>Install <strong>"OpenSCAD Language Support"</strong> - this adds syntax highlighting and keyword completion for <code>.scad</code> files</li>
+<li>Install <strong>“OpenSCAD Language Support”</strong> - this adds syntax highlighting and keyword completion for <code>.scad</code> files</li>
 </ol>
-<hr />
+<hr>
 <h2 id="part-2-configure-the-task-runner"><a class="header" href="#part-2-configure-the-task-runner">Part 2: Configure the Task Runner</a></h2>
-<p>VSCode uses a file called <code>tasks.json</code> to define custom commands you can run from the keyboard. We'll set up a task that opens your current <code>.scad</code> file in OpenSCAD for preview whenever you press a key.</p>
+<p>VSCode uses a file called <code>tasks.json</code> to define custom commands you can run from the keyboard. We’ll set up a task that opens your current <code>.scad</code> file in OpenSCAD for preview whenever you press a key.</p>
 <h3 id="21-open-or-create-your-workspace-folder"><a class="header" href="#21-open-or-create-your-workspace-folder">2.1 Open or Create Your Workspace Folder</a></h3>
 <p>All your <code>.scad</code> files for a project should be in one folder. Open that folder in VSCode:</p>
 <pre><code class="language-powershell">cd ~/Documents/OpenSCAD_Projects
@@ -262,8 +262,8 @@ code .
 <ol>
 <li>In VSCode, press <code>Ctrl + Shift + P</code> to open the Command Palette</li>
 <li>Type <code>Tasks: Configure Task</code> and press Enter</li>
-<li>Select <strong>"Create tasks.json file from template"</strong></li>
-<li>Select <strong>"Others"</strong></li>
+<li>Select <strong>“Create tasks.json file from template”</strong></li>
+<li>Select <strong>“Others”</strong></li>
 </ol>
 <p>This creates a <code>.vscode/tasks.json</code> file. Replace its entire contents with the following:</p>
 <pre><code class="language-json">{
@@ -315,10 +315,10 @@ code .
 <ol>
 <li>Press <code>Ctrl + Shift + P</code></li>
 <li>Type <code>Tasks: Run Task</code></li>
-<li>Select <strong>"Export STL"</strong></li>
+<li>Select <strong>“Export STL”</strong></li>
 <li>The <code>.stl</code> file will be saved in the same folder as your <code>.scad</code> file</li>
 </ol>
-<hr />
+<hr>
 <h2 id="part-3-nvda-settings-for-vscode"><a class="header" href="#part-3-nvda-settings-for-vscode">Part 3: NVDA Settings for VSCode</a></h2>
 <h3 id="31-recommended-nvda-settings"><a class="header" href="#31-recommended-nvda-settings">3.1 Recommended NVDA Settings</a></h3>
 <p>Open NVDA Menu (<code>NVDA + N</code>) -&gt; Preferences -&gt; Settings:</p>
@@ -328,10 +328,15 @@ code .
 </ul>
 <p><strong>Browse Mode category:</strong></p>
 <ul>
-<li>Uncheck "Use browse mode on page load in web content" - not needed for VSCode</li>
+<li>Uncheck “Use browse mode on page load in web content” - not needed for VSCode</li>
 </ul>
 <h3 id="32-useful-nvda--vscode-keyboard-shortcuts"><a class="header" href="#32-useful-nvda--vscode-keyboard-shortcuts">3.2 Useful NVDA + VSCode Keyboard Shortcuts</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>Action</th><th>Keys</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Action</th><th>Keys</th></tr>
+</thead>
+<tbody>
 <tr><td>Read current line</td><td><code>NVDA + Up Arrow</code></td></tr>
 <tr><td>Read from cursor</td><td><code>NVDA + Down Arrow</code></td></tr>
 <tr><td>Spell current word</td><td><code>NVDA + Numpad 2</code> (twice quickly)</td></tr>
@@ -344,13 +349,14 @@ code .
 <tr><td>Go to line number</td><td><code>Ctrl + G</code>, type number, Enter</td></tr>
 <tr><td>Find in file</td><td><code>Ctrl + F</code></td></tr>
 <tr><td>Open file in workspace</td><td><code>Ctrl + P</code>, type filename</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
 <h3 id="33-punctuation-level"><a class="header" href="#33-punctuation-level">3.3 Punctuation Level</a></h3>
 <p>When reading code, you need to hear all punctuation - semicolons, brackets, parentheses, and commas are all part of OpenSCAD syntax.</p>
 <p>In NVDA: <code>NVDA + N</code> -&gt; Preferences -&gt; Settings -&gt; Speech -&gt; <strong>Symbol level: Most</strong></p>
 <p>You can also toggle punctuation level on the fly: <code>NVDA + P</code> cycles through None, Some, Most, All.</p>
-<hr />
+<hr>
 <h2 id="part-4-jaws-settings-for-vscode"><a class="header" href="#part-4-jaws-settings-for-vscode">Part 4: JAWS Settings for VSCode</a></h2>
 <h3 id="41-virtual-cursor"><a class="header" href="#41-virtual-cursor">4.1 Virtual Cursor</a></h3>
 <p>JAWS may try to activate Virtual/Browse mode in VSCode. If VSCode stops responding to arrow keys for navigation and starts reading the page as HTML, press <code>JAWS Key + Z</code> to toggle Virtual mode off. You want to be in <strong>Application mode</strong> (not Virtual mode) when using VSCode.</p>
@@ -361,7 +367,12 @@ code .
 <li><strong>Spell current line:</strong> <code>JAWS Key + Up Arrow</code> twice quickly</li>
 </ul>
 <h3 id="43-useful-jaws--vscode-keyboard-shortcuts"><a class="header" href="#43-useful-jaws--vscode-keyboard-shortcuts">4.3 Useful JAWS + VSCode Keyboard Shortcuts</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>Action</th><th>Keys</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Action</th><th>Keys</th></tr>
+</thead>
+<tbody>
 <tr><td>Read current line</td><td><code>JAWS Key + Up Arrow</code></td></tr>
 <tr><td>Read from cursor</td><td><code>JAWS Key + Down Arrow</code></td></tr>
 <tr><td>Read current character</td><td><code>JAWS Key + Numpad 5</code></td></tr>
@@ -370,9 +381,10 @@ code .
 <tr><td>Toggle comment</td><td><code>Ctrl + /</code></td></tr>
 <tr><td>Go to line</td><td><code>Ctrl + G</code></td></tr>
 <tr><td>Open command palette</td><td><code>Ctrl + Shift + P</code></td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
-<hr />
+<hr>
 <h2 id="part-5-notepad-as-an-alternative"><a class="header" href="#part-5-notepad-as-an-alternative">Part 5: Notepad++ as an Alternative</a></h2>
 <p>If VSCode is too complex to set up, <strong>Notepad++</strong> is a simpler screen-reader-friendly option for editing <code>.scad</code> files.</p>
 <h3 id="setup"><a class="header" href="#setup">Setup</a></h3>
@@ -381,7 +393,7 @@ code .
 <li>Install the <strong>OpenSCAD syntax highlighting</strong> plugin:
 <ul>
 <li>Go to Plugins -&gt; Plugin Admin</li>
-<li>Search for "OpenSCAD" - install if available</li>
+<li>Search for “OpenSCAD” - install if available</li>
 <li>Alternatively, download a UDL (User Defined Language) file from the OpenSCAD community and import it via Language -&gt; User Defined Language -&gt; Import</li>
 </ul>
 </li>
@@ -390,7 +402,7 @@ code .
 <p>Use the Run menu (<code>F5</code>) to configure a custom command:</p>
 <pre><code class="language-openscad">openscad "$(FULL_CURRENT_PATH)"
 </code></pre>
-<p>Name it "Preview in OpenSCAD" and assign it a shortcut key (e.g., <code>Ctrl + F5</code>).</p>
+<p>Name it “Preview in OpenSCAD” and assign it a shortcut key (e.g., <code>Ctrl + F5</code>).</p>
 <h3 id="nvda--notepad-tips"><a class="header" href="#nvda--notepad-tips">NVDA + Notepad++ Tips</a></h3>
 <ul>
 <li>Punctuation level: set to <strong>Most</strong> or <strong>All</strong></li>
@@ -398,7 +410,7 @@ code .
 <li>Use <code>Ctrl + F</code> to find text</li>
 <li>The status bar at the bottom of Notepad++ announces line and column numbers - useful for finding where errors are</li>
 </ul>
-<hr />
+<hr>
 <h2 id="part-6-workflow-summary"><a class="header" href="#part-6-workflow-summary">Part 6: Workflow Summary</a></h2>
 <p>Here is the complete workflow from writing code to printing:</p>
 <ol>
@@ -420,7 +432,7 @@ Ctrl + F5         (Notepad++)</p>
 </li>
 <li>
 <p>If the shape looks right, export STL
-Run "Export STL" task in VSCode
+Run “Export STL” task in VSCode
 OR: In OpenSCAD, press F6 then File &gt; Export &gt; Export as STL</p>
 </li>
 <li>
@@ -430,30 +442,30 @@ OR: In OpenSCAD, press F6 then File &gt; Export &gt; Export as STL</p>
 <p>Load G-code onto SD card or USB and print</p>
 </li>
 </ol>
-<hr />
+<hr>
 <h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
-<h3 id="openscad-doesnt-open-when-i-run-the-task"><a class="header" href="#openscad-doesnt-open-when-i-run-the-task"><strong>OpenSCAD doesn't open when I run the task</strong></a></h3>
+<h3 id="openscad-doesnt-open-when-i-run-the-task"><a class="header" href="#openscad-doesnt-open-when-i-run-the-task"><strong>OpenSCAD doesn’t open when I run the task</strong></a></h3>
 <ul>
 <li>Confirm OpenSCAD is installed and in your PATH: <code>openscad --version</code> in PowerShell</li>
 <li>If not found, add the OpenSCAD install folder to your PATH (see PowerShell Foundation guide)</li>
 </ul>
-<h3 id="vscode-isnt-being-read-by-my-screen-reader"><a class="header" href="#vscode-isnt-being-read-by-my-screen-reader"><strong>VSCode isn't being read by my screen reader</strong></a></h3>
+<h3 id="vscode-isnt-being-read-by-my-screen-reader"><a class="header" href="#vscode-isnt-being-read-by-my-screen-reader"><strong>VSCode isn’t being read by my screen reader</strong></a></h3>
 <ul>
 <li>For JAWS: Press <code>JAWS Key + Z</code> to toggle out of Virtual mode</li>
 <li>For NVDA: Make sure you are focused inside the editor panel, not a sidebar</li>
 <li>Try clicking directly in the editor area with the mouse once to confirm focus</li>
 </ul>
-<h3 id="i-hear-unlabeled-for-some-vscode-elements"><a class="header" href="#i-hear-unlabeled-for-some-vscode-elements"><strong>I hear "unlabeled" for some VSCode elements</strong></a></h3>
+<h3 id="i-hear-unlabeled-for-some-vscode-elements"><a class="header" href="#i-hear-unlabeled-for-some-vscode-elements"><strong>I hear “unlabeled” for some VSCode elements</strong></a></h3>
 <ul>
 <li>This is a known VSCode accessibility limitation for some UI panels</li>
 <li>Use keyboard shortcuts rather than trying to navigate by element - the editor itself reads well</li>
 </ul>
-<h3 id="my-scad-file-has-an-error-but-i-cant-find-it"><a class="header" href="#my-scad-file-has-an-error-but-i-cant-find-it"><strong>My .scad file has an error but I can't find it</strong></a></h3>
+<h3 id="my-scad-file-has-an-error-but-i-cant-find-it"><a class="header" href="#my-scad-file-has-an-error-but-i-cant-find-it"><strong>My .scad file has an error but I can’t find it</strong></a></h3>
 <ul>
 <li>OpenSCAD will display an error in its console - use <code>Alt + Tab</code> to switch to OpenSCAD and arrow through the console to read the error</li>
 <li>Errors always include a line number - use <code>Ctrl + G</code> in VSCode to jump to that line</li>
 </ul>
-<hr />
+<hr>
 <h2 id="references"><a class="header" href="#references">References</a></h2>
 <p>Microsoft. (2024). <em>Visual Studio Code accessibility</em>. <a href="https://code.visualstudio.com/docs/editor/accessibility">https://code.visualstudio.com/docs/editor/accessibility</a></p>
 <p>NV Access. (2024). <em>NVDA user guide</em>. <a href="https://www.nvaccess.org/files/nvda/documentation/userGuide.html">https://www.nvaccess.org/files/nvda/documentation/userGuide.html</a></p>
@@ -463,7 +475,13 @@ OR: In OpenSCAD, press F6 then File &gt; Export &gt; Export as STL</p>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../3dMake_Foundation/Lessons_3dMake_1/3dmake-setup-guide.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
+                            <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_1/mdbook-navigation-guide.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -471,7 +489,13 @@ OR: In OpenSCAD, press F6 then File &gt; Export &gt; Export as STL</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../3dMake_Foundation/Lessons_3dMake_1/3dmake-setup-guide.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
 
+                    <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_1/mdbook-navigation-guide.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
             </nav>
 
         </div>
@@ -485,13 +509,13 @@ OR: In OpenSCAD, press F6 then File &gt; Export &gt; Export as STL</p>
         </script>
 
 
-        <script src="../../elasticlunr.min.js"></script>
-        <script src="../../mark.min.js"></script>
-        <script src="../../searcher.js"></script>
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-c2a407aa.js"></script>
 
-        <script src="../../clipboard.min.js"></script>
-        <script src="../../highlight.js"></script>
-        <script src="../../book.js"></script>
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-4a3ec6df.js"></script>
+        <script src="../../book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
 

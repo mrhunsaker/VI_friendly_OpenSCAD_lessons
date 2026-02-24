@@ -58,23 +58,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../../favicon.svg">
-        <link rel="shortcut icon" href="../../favicon.png">
-        <link rel="stylesheet" href="../../css/variables.css">
-        <link rel="stylesheet" href="../../css/general.css">
-        <link rel="stylesheet" href="../../css/chrome.css">
-        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-2459343d.css">
+        <link rel="stylesheet" href="../../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../theme/catppuccin.css">
+        <link rel="stylesheet" href="../../theme/catppuccin-be25834e.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -82,10 +82,10 @@
             const path_to_root = "../../";
             const default_light_theme = "latte";
             const default_dark_theme = "mocha";
-            window.path_to_searchindex_js = "../../searchindex.js";
+            window.path_to_searchindex_js = "../../searchindex-a4c66f4b.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc.js"></script>
+        <script src="../../toc-6a7ae851.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -223,20 +223,25 @@
                         <h1 id="powershell_foundation_ps_3_input_output_piping-ps_3_input_output_piping"><a class="header" href="#powershell_foundation_ps_3_input_output_piping-ps_3_input_output_piping">PS-3: Input, Output, and Piping</a></h1>
 <p><strong>Duration:</strong> 1 class period
 <strong>Prerequisite:</strong> PS-2 (File and Folder Manipulation)</p>
-<hr />
+<hr>
 <h2 id="learning-objectives"><a class="header" href="#learning-objectives">Learning Objectives</a></h2>
 <p>By the end of this lesson, you will be able to:</p>
 <ul>
 <li>Use <code>echo</code> to print text to the screen</li>
 <li>Use <code>cat</code> to read file contents</li>
 <li>Use <code>&gt;</code> to redirect output into a file</li>
-<li>Use <code>|</code> (pipe) to send one command's output to another</li>
+<li>Use <code>|</code> (pipe) to send one command’s output to another</li>
 <li>Copy output to the clipboard with <code>clip</code></li>
 <li>Open files with a text editor from the command line</li>
 </ul>
-<hr />
+<hr>
 <h2 id="commands-covered"><a class="header" href="#commands-covered">Commands Covered</a></h2>
-<div class="table-wrapper"><table><thead><tr><th>Command</th><th>What It Does</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Command</th><th>What It Does</th></tr>
+</thead>
+<tbody>
 <tr><td><code>echo "text"</code></td><td>Print text to the screen</td></tr>
 <tr><td><code>cat filename</code></td><td>Print the contents of a file</td></tr>
 <tr><td><code>&gt; filename</code></td><td>Redirect output into a file (overwrites)</td></tr>
@@ -244,15 +249,16 @@
 <tr><td><code>|</code></td><td>Pipe - send output from one command to the next</td></tr>
 <tr><td><code>clip</code></td><td>Copy piped input to the Windows clipboard</td></tr>
 <tr><td><code>notepad.exe filename</code></td><td>Open a file in Notepad</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
-<hr />
+<hr>
 <h2 id="echo---printing-text"><a class="header" href="#echo---printing-text"><code>echo</code> - Printing Text</a></h2>
 <p><code>echo</code> prints text to the screen. It is useful for testing, for writing text into files, and for understanding how piping works.</p>
 <pre><code class="language-powershell">echo "Hello, World"
 echo "This is a test"
 </code></pre>
-<hr />
+<hr>
 <h2 id="cat---reading-files"><a class="header" href="#cat---reading-files"><code>cat</code> - Reading Files</a></h2>
 <p><code>cat</code> prints the contents of a file to the screen.</p>
 <pre><code class="language-powershell"># Read a text file
@@ -262,8 +268,8 @@ cat ~/Documents/notes.txt
 cat ~/Documents/OpenSCAD_Projects/project0.scad
 </code></pre>
 <p>With a long file, use <code>cat filename | more</code> to read it page by page (press <code>Space</code> to advance, <code>Q</code> to quit).</p>
-<hr />
-<h2 id="--redirecting-output-to-a-file"><a class="header" href="#--redirecting-output-to-a-file"><code>&gt;</code> - Redirecting Output to a File</a></h2>
+<hr>
+<h2 id="---redirecting-output-to-a-file"><a class="header" href="#---redirecting-output-to-a-file"><code>&gt;</code> - Redirecting Output to a File</a></h2>
 <p>The <code>&gt;</code> symbol redirects output from the screen into a file instead.</p>
 <pre><code class="language-powershell"># Create a file with a single line
 echo "Author: Your Name" &gt; header.txt
@@ -276,7 +282,7 @@ cat header.txt
 echo "Project: Floor Marker" &gt;&gt; header.txt
 cat header.txt
 </code></pre>
-<hr />
+<hr>
 <h2 id="---piping"><a class="header" href="#---piping"><code>|</code> - Piping</a></h2>
 <p>The pipe symbol <code>|</code> sends the output of one command to the input of the next. This lets you chain commands together.</p>
 <pre><code class="language-powershell"># List files and send the list to clip (copies to clipboard)
@@ -287,7 +293,7 @@ ls -n | clip
 <pre><code class="language-powershell"># Search within a file's contents using Select-String (like grep)
 cat project0.scad | Select-String "cube"
 </code></pre>
-<hr />
+<hr>
 <h2 id="clip---copying-to-clipboard"><a class="header" href="#clip---copying-to-clipboard"><code>clip</code> - Copying to Clipboard</a></h2>
 <p><code>clip</code> takes whatever is piped to it and puts it on the Windows clipboard.</p>
 <pre><code class="language-powershell"># Copy your current directory path to the clipboard
@@ -300,7 +306,7 @@ ls -n | clip
 cat notes.txt | clip
 </code></pre>
 <p>After any of these, press <code>Ctrl + V</code> in any application to paste.</p>
-<hr />
+<hr>
 <h2 id="opening-files-in-notepad"><a class="header" href="#opening-files-in-notepad">Opening Files in Notepad</a></h2>
 <pre><code class="language-powershell"># Open a file in Notepad
 notepad.exe ~/Documents/notes.txt
@@ -387,7 +393,13 @@ Checkpoints
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../PowerShell_Foundation/PS_2_file_folder_manipulation_modification/PS_2_file_folder_manipulation_modification.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
+                            <a rel="next prefetch" href="../../PowerShell_Foundation/PS_4_environment_variables_aliases/PS_4_environment_variables_aliases.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -395,7 +407,13 @@ Checkpoints
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../PowerShell_Foundation/PS_2_file_folder_manipulation_modification/PS_2_file_folder_manipulation_modification.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
 
+                    <a rel="next prefetch" href="../../PowerShell_Foundation/PS_4_environment_variables_aliases/PS_4_environment_variables_aliases.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
             </nav>
 
         </div>
@@ -409,13 +427,13 @@ Checkpoints
         </script>
 
 
-        <script src="../../elasticlunr.min.js"></script>
-        <script src="../../mark.min.js"></script>
-        <script src="../../searcher.js"></script>
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-c2a407aa.js"></script>
 
-        <script src="../../clipboard.min.js"></script>
-        <script src="../../highlight.js"></script>
-        <script src="../../book.js"></script>
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-4a3ec6df.js"></script>
+        <script src="../../book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
 

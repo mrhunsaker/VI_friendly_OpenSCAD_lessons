@@ -58,23 +58,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../../favicon.svg">
-        <link rel="shortcut icon" href="../../favicon.png">
-        <link rel="stylesheet" href="../../css/variables.css">
-        <link rel="stylesheet" href="../../css/general.css">
-        <link rel="stylesheet" href="../../css/chrome.css">
-        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-2459343d.css">
+        <link rel="stylesheet" href="../../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../theme/catppuccin.css">
+        <link rel="stylesheet" href="../../theme/catppuccin-be25834e.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -82,10 +82,10 @@
             const path_to_root = "../../";
             const default_light_theme = "latte";
             const default_dark_theme = "mocha";
-            window.path_to_searchindex_js = "../../searchindex.js";
+            window.path_to_searchindex_js = "../../searchindex-a4c66f4b.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc.js"></script>
+        <script src="../../toc-6a7ae851.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -221,8 +221,7 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="cmd_foundation_cmd_5_filling_in_the_gaps-cmd_5_filling_in_the_gaps"><a class="header" href="#cmd_foundation_cmd_5_filling_in_the_gaps-cmd_5_filling_in_the_gaps">CMD-5: Filling in the Gaps - Batch Files &amp; Advanced Techniques</a></h1>
-<p><strong>Duration:</strong> 2 hours (for screen reader users)<br />
-<strong>Prerequisites:</strong> CMD-Pre through CMD-4</p>
+<p><strong>Duration:</strong> 2 hours (for screen reader users)<br><strong>Prerequisites:</strong> CMD-Pre through CMD-4</p>
 <p><strong>Learning Objectives:</strong></p>
 <ul>
 <li>Create and run batch files</li>
@@ -230,7 +229,7 @@
 <li>Automate repetitive tasks</li>
 <li>Understand command history and debugging</li>
 </ul>
-<hr />
+<hr>
 <h2 id="batch-files-basics"><a class="header" href="#batch-files-basics">Batch Files Basics</a></h2>
 <p>A batch file (<code>.bat</code>) contains multiple commands that run in sequence.</p>
 <h3 id="creating-a-simple-batch-file"><a class="header" href="#creating-a-simple-batch-file">Creating a Simple Batch File</a></h3>
@@ -250,7 +249,7 @@ echo Message        :: Print text
 pause               :: Wait for user to press a key
 ::                  :: Comment line
 </code></pre>
-<hr />
+<hr>
 <h2 id="variables-in-batch-files"><a class="header" href="#variables-in-batch-files">Variables in Batch Files</a></h2>
 <pre><code class="language-batch">@echo off
 set folder=%USERPROFILE%\Documents\3DModels
@@ -258,7 +257,7 @@ cd %folder%
 dir /B &gt; filelist.txt
 echo Done
 </code></pre>
-<hr />
+<hr>
 <h2 id="practice-exercises"><a class="header" href="#practice-exercises">Practice Exercises</a></h2>
 <h3 id="exercise-1-create-simple-batch-file"><a class="header" href="#exercise-1-create-simple-batch-file">Exercise 1: Create Simple Batch File</a></h3>
 <ol>
@@ -295,7 +294,7 @@ echo Done!
 <li>Save and run</li>
 </ol>
 <p><strong>Goal:</strong> Use variables in batch files.</p>
-<hr />
+<hr>
 <h2 id="checkpoint-questions"><a class="header" href="#checkpoint-questions">Checkpoint Questions</a></h2>
 <ol>
 <li>What does <code>@echo off</code> do?</li>
@@ -304,7 +303,7 @@ echo Done!
 <li>What does <code>pause</code> do?</li>
 <li>How do you use variables in batch files?</li>
 </ol>
-<hr />
+<hr>
 <h2 id="screen-reader-accessibility-in-command-prompt"><a class="header" href="#screen-reader-accessibility-in-command-prompt">Screen Reader Accessibility in Command Prompt</a></h2>
 <h3 id="best-practices"><a class="header" href="#best-practices">Best Practices</a></h3>
 <ol>
@@ -314,7 +313,7 @@ echo Done!
 <li><strong>Test carefully</strong> - especially with <code>delete</code> or <code>move</code> commands</li>
 <li><strong>Keep backups</strong> - always important</li>
 </ol>
-<hr />
+<hr>
 <h2 id="advanced-command-prompt-tips"><a class="header" href="#advanced-command-prompt-tips">Advanced Command Prompt Tips</a></h2>
 <h3 id="finding-files"><a class="header" href="#finding-files">Finding Files</a></h3>
 <pre><code class="language-cmd">dir /S /B *.scad          :: Find all .scad files recursively
@@ -328,7 +327,7 @@ dir /?                    :: Alternative help syntax
 <pre><code class="language-cmd">file type.txt             :: Show file information (if available)
 assoc .scad               :: Show program associated with .scad
 </code></pre>
-<hr />
+<hr>
 <h2 id="next-steps"><a class="header" href="#next-steps">Next Steps</a></h2>
 <ul>
 <li>Complete all exercises</li>
@@ -340,7 +339,13 @@ assoc .scad               :: Show program associated with .scad
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../CMD_Foundation/CMD_4_environment_variables_aliases/CMD_4_environment_variables_aliases.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
+                            <a rel="next prefetch" href="../../CMD_Foundation/CMD_6_Advanced_Techniques/CMD_6_Advanced_Techniques.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -348,7 +353,13 @@ assoc .scad               :: Show program associated with .scad
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../CMD_Foundation/CMD_4_environment_variables_aliases/CMD_4_environment_variables_aliases.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
 
+                    <a rel="next prefetch" href="../../CMD_Foundation/CMD_6_Advanced_Techniques/CMD_6_Advanced_Techniques.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
             </nav>
 
         </div>
@@ -362,13 +373,13 @@ assoc .scad               :: Show program associated with .scad
         </script>
 
 
-        <script src="../../elasticlunr.min.js"></script>
-        <script src="../../mark.min.js"></script>
-        <script src="../../searcher.js"></script>
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-c2a407aa.js"></script>
 
-        <script src="../../clipboard.min.js"></script>
-        <script src="../../highlight.js"></script>
-        <script src="../../book.js"></script>
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-4a3ec6df.js"></script>
+        <script src="../../book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
 

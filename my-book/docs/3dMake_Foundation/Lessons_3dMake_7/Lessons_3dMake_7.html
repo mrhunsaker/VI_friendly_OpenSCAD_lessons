@@ -58,23 +58,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../../favicon.svg">
-        <link rel="shortcut icon" href="../../favicon.png">
-        <link rel="stylesheet" href="../../css/variables.css">
-        <link rel="stylesheet" href="../../css/general.css">
-        <link rel="stylesheet" href="../../css/chrome.css">
-        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-2459343d.css">
+        <link rel="stylesheet" href="../../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../theme/catppuccin.css">
+        <link rel="stylesheet" href="../../theme/catppuccin-be25834e.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -82,10 +82,10 @@
             const path_to_root = "../../";
             const default_light_theme = "latte";
             const default_dark_theme = "mocha";
-            window.path_to_searchindex_js = "../../searchindex.js";
+            window.path_to_searchindex_js = "../../searchindex-a4c66f4b.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc.js"></script>
+        <script src="../../toc-6a7ae851.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -236,16 +236,22 @@
 <li>Measuring tools (calipers) for post-print validation</li>
 </ul>
 <p><strong>Related Project</strong>: Study <a href="../../assets/3dMake_Foundation/Lessons_3dMake_7/phone_stand.scad">phone_stand.scad</a> for an advanced example combining multiple transforms and Minkowski operations in a real-world assembly.</p>
-<hr />
+<hr>
 <h2 id="understanding-parametric-transforms"><a class="header" href="#understanding-parametric-transforms">Understanding Parametric Transforms</a></h2>
 <p>Transforms are the foundation of positioning objects in 3D space. Unlike drag-and-drop interfaces, OpenSCAD requires you to explicitly specify every position and rotation. This precision is what enables parametric design-once defined mathematically, a model can be infinitely reconfigured.</p>
 <h3 id="core-transform-operations"><a class="header" href="#core-transform-operations">Core Transform Operations</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>Operation</th><th>Syntax</th><th>Example</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Operation</th><th>Syntax</th><th>Example</th></tr>
+</thead>
+<tbody>
 <tr><td><strong>Translate</strong> (move)</td><td><code>translate([x, y, z]) { ... }</code></td><td><code>translate([10, 0, 0]) cube([5, 5, 5]);</code></td></tr>
 <tr><td><strong>Rotate</strong></td><td><code>rotate([x_deg, y_deg, z_deg]) { ... }</code></td><td><code>rotate([45, 0, 0]) cube([5, 5, 5]);</code></td></tr>
 <tr><td><strong>Scale</strong></td><td><code>scale([x, y, z]) { ... }</code></td><td><code>scale([2, 1, 1]) cube([5, 5, 5]);</code></td></tr>
 <tr><td><strong>Minkowski</strong> (fillets/rounding)</td><td><code>minkowski() { shape; fillet; }</code></td><td><code>minkowski(){ cube([10,10,10]); cylinder(r=2, h=0.01); }</code></td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
 <h3 id="translating-objects-moving-in-3d-space"><a class="header" href="#translating-objects-moving-in-3d-space">Translating Objects: Moving in 3D Space</a></h3>
 <p><code>translate([x, y, z])</code> moves an object in three-dimensional space. The key insight is that you specify the movement <em>before</em> creating or referencing the object:</p>
@@ -328,7 +334,7 @@ module axes() {
 axes();
 translate([100, 0, 0]) axes();  // Check alignment at offset
 </code></pre>
-<hr />
+<hr>
 <h2 id="step-by-step-tasks"><a class="header" href="#step-by-step-tasks">Step-by-step Tasks</a></h2>
 <h3 id="task-1-build-a-simple-phone-stand-base"><a class="header" href="#task-1-build-a-simple-phone-stand-base">Task 1: Build a Simple Phone Stand Base</a></h3>
 <p>Create a parametric base plate that can be adjusted for different phone weights and sizes:</p>
@@ -399,11 +405,17 @@ union() {
 # 3dm build
 </code></pre>
 <p>Document the impact:</p>
-<div class="table-wrapper"><table><thead><tr><th>Parameter</th><th>Value</th><th>Use Case</th><th>Print Time</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Parameter</th><th>Value</th><th>Use Case</th><th>Print Time</th></tr>
+</thead>
+<tbody>
 <tr><td><code>angle</code></td><td>45</td><td>Shallow viewing (documents, web browsing)</td><td>~1.5 hrs</td></tr>
 <tr><td><code>angle</code></td><td>65</td><td>Comfortable video watching</td><td>~1.5 hrs</td></tr>
 <tr><td><code>angle</code></td><td>75</td><td>Steep vertical viewing</td><td>~1.5 hrs</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
 <h3 id="task-3-run-3dm-orient-to-optimize-orientation"><a class="header" href="#task-3-run-3dm-orient-to-optimize-orientation">Task 3: Run <code>3dm orient</code> to Optimize Orientation</a></h3>
 <pre><code class="language-bash">3dm orient src/main.scad
@@ -438,7 +450,7 @@ angle = 40;
 <li><strong>Friction resistance</strong> (does phone stay in place?)</li>
 <li><strong>Print quality</strong> (note any support marks, layer quality)</li>
 </ul>
-<hr />
+<hr>
 <h2 id="advanced-adding-snap-fit-connectors"><a class="header" href="#advanced-adding-snap-fit-connectors">Advanced: Adding Snap-Fit Connectors</a></h2>
 <p>To join the base and back without fasteners, you can add interlocking features:</p>
 <pre><code class="language-openscad">// Optional: Add snap-fit connectors
@@ -459,14 +471,14 @@ module back_tab() {
     cube([tab_width, 20, tab_height]);
 }
 </code></pre>
-<hr />
+<hr>
 <h2 id="checkpoint"><a class="header" href="#checkpoint">Checkpoint</a></h2>
 <ul>
 <li>After task 1, you have a working 3-part stand (base, back, lip)</li>
-<li>After task 2, you've tested at least 2 parameter variations</li>
+<li>After task 2, you’ve tested at least 2 parameter variations</li>
 <li>After task 4, you have 3 different configurations ready to print</li>
 </ul>
-<hr />
+<hr>
 <h2 id="mathematical-functions-for-advanced-parametric-design"><a class="header" href="#mathematical-functions-for-advanced-parametric-design">Mathematical Functions for Advanced Parametric Design</a></h2>
 <p>Beyond translate and rotate, OpenSCAD includes mathematical functions for calculating positions, angles, and dimensions. These enable designs that respond dynamically to parameters.</p>
 <h3 id="trigonometric-functions-sin-cos-atan2"><a class="header" href="#trigonometric-functions-sin-cos-atan2">Trigonometric Functions: sin(), cos(), atan2()</a></h3>
@@ -647,7 +659,7 @@ module fixture_on_surface(surface_direction, offset_distance) {
 fixture_on_surface([1, 0, 0], 20);
 </code></pre>
 <h3 id="practical-application-parametric-spiral-design"><a class="header" href="#practical-application-parametric-spiral-design">Practical Application: Parametric Spiral Design</a></h3>
-<p>Here's a complete example combining multiple math functions:</p>
+<p>Here’s a complete example combining multiple math functions:</p>
 <pre><code class="language-openscad">// Create a parametric spiral using sin/cos and sqrt
 module spiral_generator(max_radius, height, spiral_tightness) {
   steps = 200;
@@ -671,25 +683,25 @@ module spiral_generator(max_radius, height, spiral_tightness) {
 
 spiral_generator(30, 50, 3);  // 30mm radius, 50mm tall, 3 complete revolutions
 </code></pre>
-<hr />
+<hr>
 <h2 id="quiz---lesson-3dmake7-10-questions"><a class="header" href="#quiz---lesson-3dmake7-10-questions">Quiz - Lesson 3dMake.7 (10 questions)</a></h2>
 <ol>
 <li>What does the <code>rotate()</code> function do, and how does it differ from physical rotation<sup class="footnote-reference" id="fr-1-3"><a href="#footnote-1">1</a></sup>?</li>
 <li>Why is parametric positioning important for design iteration<sup class="footnote-reference" id="fr-1-4"><a href="#footnote-1">1</a></sup>?</li>
-<li>Explain the Minkowski sum operation and why it's useful for filleting<sup class="footnote-reference" id="fr-2-2"><a href="#footnote-2">2</a></sup>.</li>
+<li>Explain the Minkowski sum operation and why it’s useful for filleting<sup class="footnote-reference" id="fr-2-2"><a href="#footnote-2">2</a></sup>.</li>
 <li>How would you position a second component relative to the first using <code>translate()</code> <sup class="footnote-reference" id="fr-1-5"><a href="#footnote-1">1</a></sup>?</li>
 <li>What parameter would you change to make a phone stand suitable for tablets<sup class="footnote-reference" id="fr-3-2"><a href="#footnote-3">3</a></sup>?</li>
 <li>True or False: You can rotate an object around multiple axes in a single <code>rotate()</code> call.</li>
 <li>Describe how <code>$fn</code> affects the appearance of rounded edges created by Minkowski<sup class="footnote-reference" id="fr-2-3"><a href="#footnote-2">2</a></sup>.</li>
 <li>What advantage does parametric design have over manually modeling each variant<sup class="footnote-reference" id="fr-1-6"><a href="#footnote-1">1</a></sup>?</li>
-<li>How would you verify that your stand's angle matches your design intent after printing<sup class="footnote-reference" id="fr-3-3"><a href="#footnote-3">3</a></sup>?</li>
+<li>How would you verify that your stand’s angle matches your design intent after printing<sup class="footnote-reference" id="fr-3-3"><a href="#footnote-3">3</a></sup>?</li>
 <li>What design considerations should you account for when adding a lip to prevent phone slippage<sup class="footnote-reference" id="fr-3-4"><a href="#footnote-3">3</a></sup>?</li>
 </ol>
 <h2 id="extension-problems-10"><a class="header" href="#extension-problems-10">Extension Problems (10)</a></h2>
 <ol>
 <li>Create five stand variants (for phones, tablets, documents, laptops, and books) by parameterizing width, angle, and lip height<sup class="footnote-reference" id="fr-3-5"><a href="#footnote-3">3</a></sup>.</li>
 <li>Add parametric feet (small cylinders) to the base to improve stability; test with and without feet<sup class="footnote-reference" id="fr-1-7"><a href="#footnote-1">1</a></sup>.</li>
-<li>Use <code>3dm describe</code> to document each variant's key geometric properties<sup class="footnote-reference" id="fr-1-8"><a href="#footnote-1">1</a></sup>.</li>
+<li>Use <code>3dm describe</code> to document each variant’s key geometric properties<sup class="footnote-reference" id="fr-1-8"><a href="#footnote-1">1</a></sup>.</li>
 <li>Design and test a snap-fit connector system that joins the base and back without fasteners<sup class="footnote-reference" id="fr-3-6"><a href="#footnote-3">3</a></sup>.</li>
 <li>Create a comparison table showing print time, material weight, and assembly complexity for each variant<sup class="footnote-reference" id="fr-3-7"><a href="#footnote-3">3</a></sup>.</li>
 <li>Build a complete phone stand product family: define naming convention, parameter ranges, and assembly instructions.</li>
@@ -744,10 +756,11 @@ union(){
   lip();
 }
 </code></pre>
-<hr />
+<hr>
 <p><strong>References</strong></p>
 <hr>
-<ol class="footnote-definition"><li id="footnote-1">
+<ol class="footnote-definition">
+<li id="footnote-1">
 <p>OpenSCAD Manual - Transformations - https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a> <a href="#fr-1-3">↩3</a> <a href="#fr-1-4">↩4</a> <a href="#fr-1-5">↩5</a> <a href="#fr-1-6">↩6</a> <a href="#fr-1-7">↩7</a> <a href="#fr-1-8">↩8</a></p>
 </li>
 <li id="footnote-2">
@@ -757,11 +770,18 @@ union(){
 <p>3DMake GitHub - Phone Stand Example - https://github.com/tdeck/3dmake/blob/main/docs/examples.md <a href="#fr-3-1">↩</a> <a href="#fr-3-2">↩2</a> <a href="#fr-3-3">↩3</a> <a href="#fr-3-4">↩4</a> <a href="#fr-3-5">↩5</a> <a href="#fr-3-6">↩6</a> <a href="#fr-3-7">↩7</a></p>
 </li>
 </ol>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../3dMake_Foundation/Lessons_3dMake_6/parametric_keychain_teacher_template.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
+                            <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_8/Lessons_3dMake_8.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -769,7 +789,13 @@ union(){
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../3dMake_Foundation/Lessons_3dMake_6/parametric_keychain_teacher_template.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
 
+                    <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_8/Lessons_3dMake_8.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
             </nav>
 
         </div>
@@ -783,13 +809,13 @@ union(){
         </script>
 
 
-        <script src="../../elasticlunr.min.js"></script>
-        <script src="../../mark.min.js"></script>
-        <script src="../../searcher.js"></script>
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-c2a407aa.js"></script>
 
-        <script src="../../clipboard.min.js"></script>
-        <script src="../../highlight.js"></script>
-        <script src="../../book.js"></script>
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-4a3ec6df.js"></script>
+        <script src="../../book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
 

@@ -58,23 +58,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../../favicon.svg">
-        <link rel="shortcut icon" href="../../favicon.png">
-        <link rel="stylesheet" href="../../css/variables.css">
-        <link rel="stylesheet" href="../../css/general.css">
-        <link rel="stylesheet" href="../../css/chrome.css">
-        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-2459343d.css">
+        <link rel="stylesheet" href="../../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../theme/catppuccin.css">
+        <link rel="stylesheet" href="../../theme/catppuccin-be25834e.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -82,10 +82,10 @@
             const path_to_root = "../../";
             const default_light_theme = "latte";
             const default_dark_theme = "mocha";
-            window.path_to_searchindex_js = "../../searchindex.js";
+            window.path_to_searchindex_js = "../../searchindex-a4c66f4b.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc.js"></script>
+        <script src="../../toc-6a7ae851.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -235,7 +235,7 @@
 <li>Terminal/command line access</li>
 <li>Text editor for script creation</li>
 </ul>
-<hr />
+<hr>
 <h2 id="the-3dm-command-chain"><a class="header" href="#the-3dm-command-chain">The 3dm Command Chain</a></h2>
 <p>Instead of running commands one at a time, you can chain them to automate the entire workflow:</p>
 <pre><code class="language-bash"># Individual commands (slow, manual)
@@ -247,7 +247,7 @@
 3dm build src/main.scad &amp;&amp; 3dm describe src/main.scad &amp;&amp; 3dm slice src/main.scad
 </code></pre>
 <p>The <code>&amp;&amp;</code> operator ensures each command runs only if the previous one succeeds.</p>
-<hr />
+<hr>
 <h2 id="step-by-step-tasks"><a class="header" href="#step-by-step-tasks">Step-by-step Tasks</a></h2>
 <h3 id="task-1-create-a-multi-variant-project"><a class="header" href="#task-1-create-a-multi-variant-project">Task 1: Create a Multi-Variant Project</a></h3>
 <p>Organize your project with multiple model files:</p>
@@ -419,7 +419,7 @@ while true; do
   sleep 5  # Check every 5 seconds
 done
 </code></pre>
-<hr />
+<hr>
 <h2 id="batch-processing-workflow"><a class="header" href="#batch-processing-workflow">Batch Processing Workflow</a></h2>
 <p>Complete pipeline from code to print-ready files:</p>
 <pre><code class="language-bash">#!/bin/bash
@@ -464,7 +464,7 @@ echo "=== Build complete ==="
 echo "Output: $OUTPUT_DIR"
 echo "Archive: ${OUTPUT_DIR}.tar.gz"
 </code></pre>
-<hr />
+<hr>
 <h2 id="file-importexport-working-with-external-assets"><a class="header" href="#file-importexport-working-with-external-assets">File Import/Export: Working with External Assets</a></h2>
 <p>Professional OpenSCAD projects often incorporate external files—DXF drawings, SVG logos, or shared library modules. Understanding import, include, and use is critical for managing complex projects.</p>
 <h3 id="import-loading-3d-files-dxf-stl-amf"><a class="header" href="#import-loading-3d-files-dxf-stl-amf">import(): Loading 3D Files (DXF, STL, AMF)</a></h3>
@@ -710,14 +710,14 @@ complete_product();
 // - SVG: 2D artwork for documentation
 // - AMF: Multi-material format (if colors matter)
 </code></pre>
-<hr />
+<hr>
 <h2 id="checkpoint"><a class="header" href="#checkpoint">Checkpoint</a></h2>
 <ul>
 <li>After task 2, you have a working batch build script</li>
-<li>After task 3, you've tested multiple parameter variants</li>
+<li>After task 3, you’ve tested multiple parameter variants</li>
 <li>After task 5, you understand continuous integration concepts</li>
 </ul>
-<hr />
+<hr>
 <h2 id="quiz---lesson-3dmake9-10-questions"><a class="header" href="#quiz---lesson-3dmake9-10-questions">Quiz - Lesson 3dMake.9 (10 questions)</a></h2>
 <ol>
 <li>What does the <code>&amp;&amp;</code> operator do in a command chain<sup class="footnote-reference" id="fr-1-4"><a href="#footnote-1">1</a></sup>?</li>
@@ -736,7 +736,7 @@ complete_product();
 <li>Create a batch build script that processes 5+ model variants and generates a comparison report<sup class="footnote-reference" id="fr-1-12"><a href="#footnote-1">1</a></sup>.</li>
 <li>Design a parameter testing matrix: test 3 dimensions x 3 wall thicknesses and compare results<sup class="footnote-reference" id="fr-1-13"><a href="#footnote-1">1</a></sup>.</li>
 <li>Build a library module for common features (brackets, connectors, fasteners); use in multiple projects<sup class="footnote-reference" id="fr-2-3"><a href="#footnote-2">2</a></sup>.</li>
-<li>Create a "watch and rebuild" script that automatically regenerates designs when code changes<sup class="footnote-reference" id="fr-1-14"><a href="#footnote-1">1</a></sup>.</li>
+<li>Create a “watch and rebuild” script that automatically regenerates designs when code changes<sup class="footnote-reference" id="fr-1-14"><a href="#footnote-1">1</a></sup>.</li>
 <li>Develop a production workflow script that generates timestamped builds with complete documentation<sup class="footnote-reference" id="fr-1-15"><a href="#footnote-1">1</a></sup>.</li>
 <li>Build an automated testing framework: validate designs against dimensional requirements<sup class="footnote-reference" id="fr-1-16"><a href="#footnote-1">1</a></sup>.</li>
 <li>Create a version control integration: automatically tag and archive successful builds<sup class="footnote-reference" id="fr-1-17"><a href="#footnote-1">1</a></sup>.</li>
@@ -744,9 +744,14 @@ complete_product();
 <li>Develop a remote print queue system: batch multiple models and send to printer automatically<sup class="footnote-reference" id="fr-1-19"><a href="#footnote-1">1</a></sup>.</li>
 <li>Write a comprehensive automation documentation: best practices, script templates, troubleshooting, and accessibility considerations.</li>
 </ol>
-<hr />
+<hr>
 <h2 id="helpful-shell-commands-reference"><a class="header" href="#helpful-shell-commands-reference">Helpful Shell Commands Reference</a></h2>
-<div class="table-wrapper"><table><thead><tr><th>Command</th><th>Purpose</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Command</th><th>Purpose</th></tr>
+</thead>
+<tbody>
 <tr><td><code>chmod +x script.sh</code></td><td>Make script executable</td></tr>
 <tr><td><code>./script.sh</code></td><td>Run a shell script</td></tr>
 <tr><td><code>for file in *.scad; do ... done</code></td><td>Loop through files</td></tr>
@@ -755,23 +760,32 @@ complete_product();
 <tr><td><code>find dir -name "*.scad"</code></td><td>Find all SCAD files</td></tr>
 <tr><td><code>tar -czf archive.tar.gz folder/</code></td><td>Create compressed archive</td></tr>
 <tr><td><code>du -sh folder/</code></td><td>Show folder size</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
-<hr />
+<hr>
 <p><strong>References</strong></p>
 <hr>
-<ol class="footnote-definition"><li id="footnote-1">
+<ol class="footnote-definition">
+<li id="footnote-1">
 <p>3DMake GitHub - Automation Examples - https://github.com/tdeck/3dmake/blob/main/docs/automation.md <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a> <a href="#fr-1-3">↩3</a> <a href="#fr-1-4">↩4</a> <a href="#fr-1-5">↩5</a> <a href="#fr-1-6">↩6</a> <a href="#fr-1-7">↩7</a> <a href="#fr-1-8">↩8</a> <a href="#fr-1-9">↩9</a> <a href="#fr-1-10">↩10</a> <a href="#fr-1-11">↩11</a> <a href="#fr-1-12">↩12</a> <a href="#fr-1-13">↩13</a> <a href="#fr-1-14">↩14</a> <a href="#fr-1-15">↩15</a> <a href="#fr-1-16">↩16</a> <a href="#fr-1-17">↩17</a> <a href="#fr-1-18">↩18</a> <a href="#fr-1-19">↩19</a></p>
 </li>
 <li id="footnote-2">
 <p>3DMake Library Management - https://github.com/tdeck/3dmake/wiki/Library-Management <a href="#fr-2-1">↩</a> <a href="#fr-2-2">↩2</a> <a href="#fr-2-3">↩3</a></p>
 </li>
 </ol>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../3dMake_Foundation/Lessons_3dMake_8/snap_fit_clip_teacher_template.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
+                            <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_10/Lessons_3dMake_10.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -779,7 +793,13 @@ complete_product();
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../3dMake_Foundation/Lessons_3dMake_8/snap_fit_clip_teacher_template.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
 
+                    <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_10/Lessons_3dMake_10.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
             </nav>
 
         </div>
@@ -793,13 +813,13 @@ complete_product();
         </script>
 
 
-        <script src="../../elasticlunr.min.js"></script>
-        <script src="../../mark.min.js"></script>
-        <script src="../../searcher.js"></script>
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-c2a407aa.js"></script>
 
-        <script src="../../clipboard.min.js"></script>
-        <script src="../../highlight.js"></script>
-        <script src="../../book.js"></script>
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-4a3ec6df.js"></script>
+        <script src="../../book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
 

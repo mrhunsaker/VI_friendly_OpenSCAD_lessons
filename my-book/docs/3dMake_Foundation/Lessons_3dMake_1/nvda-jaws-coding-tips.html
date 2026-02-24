@@ -58,23 +58,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../../favicon.svg">
-        <link rel="shortcut icon" href="../../favicon.png">
-        <link rel="stylesheet" href="../../css/variables.css">
-        <link rel="stylesheet" href="../../css/general.css">
-        <link rel="stylesheet" href="../../css/chrome.css">
-        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-2459343d.css">
+        <link rel="stylesheet" href="../../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../theme/catppuccin.css">
+        <link rel="stylesheet" href="../../theme/catppuccin-be25834e.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -82,10 +82,10 @@
             const path_to_root = "../../";
             const default_light_theme = "latte";
             const default_dark_theme = "mocha";
-            window.path_to_searchindex_js = "../../searchindex.js";
+            window.path_to_searchindex_js = "../../searchindex-a4c66f4b.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc.js"></script>
+        <script src="../../toc-6a7ae851.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -222,16 +222,16 @@
                     <main>
                         <h1 id="3dmake_foundation_lessons_3dmake_1-nvda-jaws-coding-tips"><a class="header" href="#3dmake_foundation_lessons_3dmake_1-nvda-jaws-coding-tips">Screen Reader Coding Tips - NVDA &amp; JAWS</a></h1>
 <p><em>A consolidated reference for using NVDA or JAWS while writing OpenSCAD code in VSCode or Notepad++. Tips that were previously scattered across lesson files are collected here.</em></p>
-<hr />
+<hr>
 <h2 id="general-principles-for-coding-with-a-screen-reader"><a class="header" href="#general-principles-for-coding-with-a-screen-reader">General Principles for Coding with a Screen Reader</a></h2>
 <ul>
 <li><strong>Turn punctuation up.</strong> All OpenSCAD syntax - semicolons, brackets, parentheses, commas - is meaningful. If your screen reader skips punctuation, you will miss syntax errors. Set punctuation to <strong>Most</strong> or <strong>All</strong> before coding.</li>
 <li><strong>Navigate by line.</strong> Arrow up and down to move through code one line at a time. Use <code>Ctrl + Left/Right</code> to move word by word within a line.</li>
 <li><strong>Use go-to-line.</strong> Both VSCode and Notepad++ let you jump to a specific line number with <code>Ctrl + G</code>. OpenSCAD errors always give a line number - use this to find them fast.</li>
-<li><strong>Spell when uncertain.</strong> If you are not sure what a character is, spell the line character by character using your screen reader's spell command.</li>
+<li><strong>Spell when uncertain.</strong> If you are not sure what a character is, spell the line character by character using your screen reader’s spell command.</li>
 <li><strong>Comment as you go.</strong> Adding a short comment after a block of code lets you navigate by searching for recognizable words with <code>Ctrl + F</code>.</li>
 </ul>
-<hr />
+<hr>
 <h2 id="nvda-quick-reference"><a class="header" href="#nvda-quick-reference">NVDA Quick Reference</a></h2>
 <h3 id="setting-punctuation-level"><a class="header" href="#setting-punctuation-level">Setting Punctuation Level</a></h3>
 <p><code>NVDA + P</code> - cycles through: None -&gt; Some -&gt; Most -&gt; All</p>
@@ -239,7 +239,12 @@
 <p>You can also set a permanent default:
 <code>NVDA + N</code> -&gt; Preferences -&gt; Settings -&gt; Speech -&gt; Symbol level</p>
 <h3 id="essential-reading-commands"><a class="header" href="#essential-reading-commands">Essential Reading Commands</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>Action</th><th>Keys</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Action</th><th>Keys</th></tr>
+</thead>
+<tbody>
 <tr><td>Read current line</td><td><code>NVDA + Up Arrow</code></td></tr>
 <tr><td>Spell current line</td><td><code>NVDA + Up Arrow</code> (twice quickly)</td></tr>
 <tr><td>Read from cursor to end</td><td><code>NVDA + Down Arrow</code></td></tr>
@@ -247,10 +252,16 @@
 <tr><td>Spell current word</td><td><code>NVDA + Numpad 5</code> (twice quickly)</td></tr>
 <tr><td>Read current character</td><td><code>NVDA + Numpad 2</code></td></tr>
 <tr><td>Stop reading</td><td><code>Ctrl</code></td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
 <h3 id="navigation-in-vscode-with-nvda"><a class="header" href="#navigation-in-vscode-with-nvda">Navigation in VSCode with NVDA</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>Action</th><th>Keys</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Action</th><th>Keys</th></tr>
+</thead>
+<tbody>
 <tr><td>Move by character</td><td><code>Left / Right Arrow</code></td></tr>
 <tr><td>Move by word</td><td><code>Ctrl + Left / Right Arrow</code></td></tr>
 <tr><td>Move by line</td><td><code>Up / Down Arrow</code></td></tr>
@@ -259,20 +270,26 @@
 <tr><td>Go to line number</td><td><code>Ctrl + G</code>, type number, <code>Enter</code></td></tr>
 <tr><td>Find text</td><td><code>Ctrl + F</code></td></tr>
 <tr><td>Toggle line comment</td><td><code>Ctrl + /</code></td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
 <h3 id="if-nvda-stops-reading-the-editor"><a class="header" href="#if-nvda-stops-reading-the-editor">If NVDA Stops Reading the Editor</a></h3>
 <ol>
 <li>Click in the editor area once with the mouse (or press <code>Escape</code> and then click)</li>
 <li>Press <code>NVDA + Space</code> to toggle between Browse and Application mode - for code editors, you want Application mode</li>
 </ol>
-<hr />
+<hr>
 <h2 id="jaws-quick-reference"><a class="header" href="#jaws-quick-reference">JAWS Quick Reference</a></h2>
 <h3 id="setting-punctuation-level-1"><a class="header" href="#setting-punctuation-level-1">Setting Punctuation Level</a></h3>
 <p><code>JAWS Key + Shift + 2</code> - cycles through punctuation levels</p>
 <p>For code: set to <strong>All</strong>.</p>
 <h3 id="essential-reading-commands-1"><a class="header" href="#essential-reading-commands-1">Essential Reading Commands</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>Action</th><th>Keys</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Action</th><th>Keys</th></tr>
+</thead>
+<tbody>
 <tr><td>Read current line</td><td><code>JAWS Key + Up Arrow</code></td></tr>
 <tr><td>Spell current line</td><td><code>JAWS Key + Up Arrow</code> (twice quickly)</td></tr>
 <tr><td>Read from cursor</td><td><code>JAWS Key + A</code></td></tr>
@@ -280,16 +297,28 @@
 <tr><td>Read next word</td><td><code>JAWS Key + Right Arrow</code></td></tr>
 <tr><td>Read current character</td><td><code>JAWS Key + Numpad 5</code> (once = word, twice = spell)</td></tr>
 <tr><td>Stop reading</td><td><code>Ctrl</code></td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
 <h3 id="adjusting-speech-rate"><a class="header" href="#adjusting-speech-rate">Adjusting Speech Rate</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>Action</th><th>Keys</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Action</th><th>Keys</th></tr>
+</thead>
+<tbody>
 <tr><td>Increase rate</td><td><code>Alt + Ctrl + Page Up</code> (or <code>Fn + Up Arrow</code> on laptops)</td></tr>
 <tr><td>Decrease rate</td><td><code>Alt + Ctrl + Page Down</code> (or <code>Fn + Down Arrow</code> on laptops)</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
 <h3 id="navigation-in-vscode-with-jaws"><a class="header" href="#navigation-in-vscode-with-jaws">Navigation in VSCode with JAWS</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>Action</th><th>Keys</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Action</th><th>Keys</th></tr>
+</thead>
+<tbody>
 <tr><td>Move by character</td><td><code>Left / Right Arrow</code></td></tr>
 <tr><td>Move by word</td><td><code>Ctrl + Left / Right Arrow</code></td></tr>
 <tr><td>Move by line</td><td><code>Up / Down Arrow</code></td></tr>
@@ -298,7 +327,8 @@
 <tr><td>Go to line number</td><td><code>Ctrl + G</code></td></tr>
 <tr><td>Find text</td><td><code>Ctrl + F</code></td></tr>
 <tr><td>Toggle line comment</td><td><code>Ctrl + /</code></td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
 <h3 id="if-jaws-stops-reading-the-editor"><a class="header" href="#if-jaws-stops-reading-the-editor">If JAWS Stops Reading the Editor</a></h3>
 <ol>
@@ -312,21 +342,27 @@
 <li><code>Alt + Tab</code> to cycle through open windows</li>
 <li>JAWS will announce the application name as you cycle</li>
 </ul>
-<hr />
+<hr>
 <h2 id="openscad-specific-tips"><a class="header" href="#openscad-specific-tips">OpenSCAD-Specific Tips</a></h2>
 <h3 id="reading-errors"><a class="header" href="#reading-errors">Reading Errors</a></h3>
-<p>When OpenSCAD can't render your code, it outputs an error. The error message always includes:</p>
+<p>When OpenSCAD can’t render your code, it outputs an error. The error message always includes:</p>
 <ul>
 <li><strong>Line number</strong> - use <code>Ctrl + G</code> in VSCode to jump there</li>
 <li><strong>Error type</strong> - usually a missing semicolon, a typo in a command name, or mismatched brackets</li>
 </ul>
 <p>Common errors and what they sound like:</p>
-<div class="table-wrapper"><table><thead><tr><th>Error message</th><th>What it usually means</th></tr></thead><tbody>
-<tr><td>"Expected ';' ..."</td><td>You forgot a semicolon at the end of a statement</td></tr>
-<tr><td>"Expected ',' or ')' ..."</td><td>Missing comma between parameters, or unclosed parenthesis</td></tr>
-<tr><td>"Identifier ... is undefined"</td><td>You typed a variable name wrong, or used a variable before declaring it</td></tr>
-<tr><td>"WARNING: Normalized tree is empty"</td><td>Your shape has no geometry (e.g., you subtracted more than you started with)</td></tr>
-</tbody></table>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Error message</th><th>What it usually means</th></tr>
+</thead>
+<tbody>
+<tr><td>“Expected ‘;’ …”</td><td>You forgot a semicolon at the end of a statement</td></tr>
+<tr><td>“Expected ‘,’ or ‘)’ …”</td><td>Missing comma between parameters, or unclosed parenthesis</td></tr>
+<tr><td>“Identifier … is undefined”</td><td>You typed a variable name wrong, or used a variable before declaring it</td></tr>
+<tr><td>“WARNING: Normalized tree is empty”</td><td>Your shape has no geometry (e.g., you subtracted more than you started with)</td></tr>
+</tbody>
+</table>
 </div>
 <h3 id="bracket-matching"><a class="header" href="#bracket-matching">Bracket Matching</a></h3>
 <p>All OpenSCAD shapes and operations use brackets and braces:</p>
@@ -352,16 +388,16 @@
 <li>Search for comments you wrote: e.g., <code>// Step 2</code></li>
 <li>Search for line numbers in error messages</li>
 </ul>
-<hr />
+<hr>
 <h2 id="caliper-and-openscad-workflow-tips"><a class="header" href="#caliper-and-openscad-workflow-tips">Caliper and OpenSCAD Workflow Tips</a></h2>
 <p>When measuring an object and entering it into OpenSCAD, say the measurement aloud before typing it to reduce transcription errors. Then read the number back after typing it to confirm.</p>
 <p>Recommended sequence:</p>
 <ol>
-<li>Measure -&gt; say "seventy point three millimeters"</li>
+<li>Measure -&gt; say “seventy point three millimeters”</li>
 <li>Type <code>70.3</code> in OpenSCAD</li>
-<li>Read back: "seven zero point three" to confirm</li>
+<li>Read back: “seven zero point three” to confirm</li>
 </ol>
-<hr />
+<hr>
 <h2 id="mdbook-navigation-web-version-of-this-curriculum"><a class="header" href="#mdbook-navigation-web-version-of-this-curriculum">mdBook Navigation (Web Version of This Curriculum)</a></h2>
 <p>If you are reading this curriculum through the web version (mdBook), here are tips for navigating with a screen reader:</p>
 <h3 id="nvda--browser"><a class="header" href="#nvda--browser">NVDA + Browser</a></h3>
@@ -386,12 +422,12 @@
 <li><code>Escape</code> - close search results</li>
 <li><code>T</code> - toggle the table of contents sidebar</li>
 </ul>
-<hr />
+<hr>
 <h2 id="references"><a class="header" href="#references">References</a></h2>
 <p>NV Access. (2024). <em>NVDA user guide</em>. <a href="https://www.nvaccess.org/files/nvda/documentation/userGuide.html">https://www.nvaccess.org/files/nvda/documentation/userGuide.html</a></p>
 <p>Freedom Scientific. (2024). <em>JAWS for Windows help</em>. <a href="https://support.freedomscientific.com/Content/Documents/Manuals/JAWS/JAWS-Screen-Reader-Help.pdf">https://support.freedomscientific.com/Content/Documents/Manuals/JAWS/JAWS-Screen-Reader-Help.pdf</a></p>
 <p>Microsoft. (2024). <em>Visual Studio Code accessibility</em>. <a href="https://code.visualstudio.com/docs/editor/accessibility">https://code.visualstudio.com/docs/editor/accessibility</a></p>
-<hr />
+<hr>
 <h3 id="more-on-mdbook-navigation"><a class="header" href="#more-on-mdbook-navigation">More on mdBook navigation</a></h3>
 <ul>
 <li><strong>mdBook (general / keyboard navigation):</strong> <a href="https://rust-lang.github.io/mdBook/">https://rust-lang.github.io/mdBook/</a> - includes documentation and basic navigation/usage for the mdBook web UI.</li>
@@ -402,7 +438,13 @@
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../3dMake_Foundation/Lessons_3dMake_1/vocabulary-glossary.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
+                            <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_1/your-first-print.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -410,7 +452,13 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../3dMake_Foundation/Lessons_3dMake_1/vocabulary-glossary.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
 
+                    <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_1/your-first-print.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
             </nav>
 
         </div>
@@ -424,13 +472,13 @@
         </script>
 
 
-        <script src="../../elasticlunr.min.js"></script>
-        <script src="../../mark.min.js"></script>
-        <script src="../../searcher.js"></script>
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-c2a407aa.js"></script>
 
-        <script src="../../clipboard.min.js"></script>
-        <script src="../../highlight.js"></script>
-        <script src="../../book.js"></script>
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-4a3ec6df.js"></script>
+        <script src="../../book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
 

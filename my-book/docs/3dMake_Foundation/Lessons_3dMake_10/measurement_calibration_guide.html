@@ -58,23 +58,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../../favicon.svg">
-        <link rel="shortcut icon" href="../../favicon.png">
-        <link rel="stylesheet" href="../../css/variables.css">
-        <link rel="stylesheet" href="../../css/general.css">
-        <link rel="stylesheet" href="../../css/chrome.css">
-        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-2459343d.css">
+        <link rel="stylesheet" href="../../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../theme/catppuccin.css">
+        <link rel="stylesheet" href="../../theme/catppuccin-be25834e.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -82,10 +82,10 @@
             const path_to_root = "../../";
             const default_light_theme = "latte";
             const default_dark_theme = "mocha";
-            window.path_to_searchindex_js = "../../searchindex.js";
+            window.path_to_searchindex_js = "../../searchindex-a4c66f4b.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc.js"></script>
+        <script src="../../toc-6a7ae851.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -233,7 +233,7 @@
 </ul>
 <p><strong>Typical tolerances without calibration:</strong> +/-0.3-0.5mm
 <strong>Typical tolerances with calibration:</strong> +/-0.1-0.2mm</p>
-<hr />
+<hr>
 <h2 id="pre-print-calibration"><a class="header" href="#pre-print-calibration">Pre-Print Calibration</a></h2>
 <h3 id="1-nozzle-diameter-verification"><a class="header" href="#1-nozzle-diameter-verification">1. Nozzle Diameter Verification</a></h3>
 <p><strong>What to verify:</strong> Is your nozzle actually 0.4mm?</p>
@@ -249,7 +249,7 @@
 <li>If too small: Nozzle might be partially clogged (clean)</li>
 <li>If significantly different from 0.4mm: Replace nozzle</li>
 </ul>
-<hr />
+<hr>
 <h3 id="2-e-steps-calibration-extrusion-rate"><a class="header" href="#2-e-steps-calibration-extrusion-rate">2. E-Steps Calibration (Extrusion Rate)</a></h3>
 <p><strong>What to verify:</strong> Does the extruder push the correct amount of filament?</p>
 <p><strong>Method:</strong></p>
@@ -274,7 +274,7 @@
 <li>Marlin: <code>M92 E101</code> then <code>M500</code> to save</li>
 <li>Klipper: Update configuration and restart</li>
 </ul>
-<hr />
+<hr>
 <h3 id="3-first-layer-height-verification"><a class="header" href="#3-first-layer-height-verification">3. First Layer Height Verification</a></h3>
 <p><strong>What to verify:</strong> Is first layer height optimal?</p>
 <p><strong>Test:</strong> Print a simple single-layer square (just base layer)</p>
@@ -290,7 +290,7 @@
 <li>If too low: Increase Z-offset by 0.05mm</li>
 <li>Test between adjustments</li>
 </ul>
-<hr />
+<hr>
 <h2 id="dimension-calibration-process"><a class="header" href="#dimension-calibration-process">Dimension Calibration Process</a></h2>
 <h3 id="standard-xy-calibration-test"><a class="header" href="#standard-xy-calibration-test">Standard XY Calibration Test</a></h3>
 <p><strong>Goal:</strong> Create parts with precisely measured dimensions</p>
@@ -351,27 +351,39 @@ Example:
 - Actual: 0.195mm per layer  
 - Adjustment: 0.2 / 0.195 = 1.026 (increase Z by 2.6%)
 </code></pre>
-<hr />
+<hr>
 <h2 id="tolerance-measurement-matrix"><a class="header" href="#tolerance-measurement-matrix">Tolerance Measurement Matrix</a></h2>
 <h3 id="critical-measurements-to-track"><a class="header" href="#critical-measurements-to-track">Critical Measurements to Track</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>Measurement</th><th>Method</th><th>Tolerance</th><th>Frequency</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Measurement</th><th>Method</th><th>Tolerance</th><th>Frequency</th></tr>
+</thead>
+<tbody>
 <tr><td>Wall thickness</td><td>Calipers (multiple spots)</td><td>+/-0.1mm</td><td>Every print</td></tr>
 <tr><td>Hole diameter</td><td>Calipers or gauge</td><td>+/-0.1-0.2mm</td><td>Every print</td></tr>
 <tr><td>Overall dimensions</td><td>Ruler/calipers</td><td>+/-0.2mm</td><td>Monthly</td></tr>
 <tr><td>Layer height</td><td>Stack on calipers</td><td>+/-0.02mm</td><td>Monthly</td></tr>
 <tr><td>Vertical dimensions</td><td>Measure sides</td><td>+/-0.1mm</td><td>Every print</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
-<hr />
+<hr>
 <h2 id="advanced-calibration"><a class="header" href="#advanced-calibration">Advanced Calibration</a></h2>
 <h3 id="shrinkage-compensation"><a class="header" href="#shrinkage-compensation">Shrinkage Compensation</a></h3>
 <p>Different materials shrink differently after cooling:</p>
-<div class="table-wrapper"><table><thead><tr><th>Material</th><th>Typical Shrinkage</th><th>Compensation</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Material</th><th>Typical Shrinkage</th><th>Compensation</th></tr>
+</thead>
+<tbody>
 <tr><td>PLA</td><td>0.3-0.5%</td><td>Usually acceptable, no action</td></tr>
 <tr><td>PETG</td><td>0.5-1%</td><td>Scale design up by 0.5-1% if critical</td></tr>
 <tr><td>ABS</td><td>0.8-1.5%</td><td>Scale design up by 1% minimum</td></tr>
 <tr><td>TPU</td><td>1-2%</td><td>Significant - scale up 1-2% for critical dimensions</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
 <p><strong>How to apply in design:</strong></p>
 <pre><code>// In OpenSCAD, scale critical dimensions
@@ -389,73 +401,68 @@ designed_size = final_size * material_shrinkage;
 </ul>
 <p><strong>Solution:</strong> Standardize bed temperature for repeatable results</p>
 <h3 id="environmental-factors"><a class="header" href="#environmental-factors">Environmental Factors</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>Factor</th><th>Effect</th><th>Mitigation</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Factor</th><th>Effect</th><th>Mitigation</th></tr>
+</thead>
+<tbody>
 <tr><td>Room temperature</td><td>Affects cooling rate</td><td>Maintain 20-22C</td></tr>
 <tr><td>Humidity</td><td>Affects material properties</td><td>Keep 40-60% RH</td></tr>
 <tr><td>Air flow</td><td>Inconsistent cooling</td><td>Avoid drafts near printer</td></tr>
 <tr><td>Time of day</td><td>Material temperature varies</td><td>Print at consistent times</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
-<hr />
+<hr>
 <h2 id="quick-calibration-checklist"><a class="header" href="#quick-calibration-checklist">Quick Calibration Checklist</a></h2>
 <h3 id="before-first-print-with-new-settings"><a class="header" href="#before-first-print-with-new-settings">Before First Print with New Settings</a></h3>
 <ul>
-<li><input disabled="" type="checkbox"/>
-E-steps calibration complete</li>
-<li><input disabled="" type="checkbox"/>
-First layer height verified</li>
-<li><input disabled="" type="checkbox"/>
-Nozzle diameter confirmed</li>
-<li><input disabled="" type="checkbox"/>
-Test print completed and measured</li>
+<li><input disabled="" type="checkbox"> E-steps calibration complete</li>
+<li><input disabled="" type="checkbox"> First layer height verified</li>
+<li><input disabled="" type="checkbox"> Nozzle diameter confirmed</li>
+<li><input disabled="" type="checkbox"> Test print completed and measured</li>
 </ul>
 <h3 id="monthly-maintenance"><a class="header" href="#monthly-maintenance">Monthly Maintenance</a></h3>
 <ul>
-<li><input disabled="" type="checkbox"/>
-Calibration cube printed and measured</li>
-<li><input disabled="" type="checkbox"/>
-Flow rate adjusted if needed</li>
-<li><input disabled="" type="checkbox"/>
-Layer height verified</li>
-<li><input disabled="" type="checkbox"/>
-Temperature consistency checked</li>
+<li><input disabled="" type="checkbox"> Calibration cube printed and measured</li>
+<li><input disabled="" type="checkbox"> Flow rate adjusted if needed</li>
+<li><input disabled="" type="checkbox"> Layer height verified</li>
+<li><input disabled="" type="checkbox"> Temperature consistency checked</li>
 </ul>
 <h3 id="when-dimensions-are-critical"><a class="header" href="#when-dimensions-are-critical">When Dimensions Are Critical</a></h3>
 <ul>
-<li><input disabled="" type="checkbox"/>
-Printed test part, let cool 24+ hours</li>
-<li><input disabled="" type="checkbox"/>
-Measured in multiple locations</li>
-<li><input disabled="" type="checkbox"/>
-Calculated average deviation</li>
-<li><input disabled="" type="checkbox"/>
-Flow rate adjusted accordingly</li>
-<li><input disabled="" type="checkbox"/>
-Re-printed and verified</li>
+<li><input disabled="" type="checkbox"> Printed test part, let cool 24+ hours</li>
+<li><input disabled="" type="checkbox"> Measured in multiple locations</li>
+<li><input disabled="" type="checkbox"> Calculated average deviation</li>
+<li><input disabled="" type="checkbox"> Flow rate adjusted accordingly</li>
+<li><input disabled="" type="checkbox"> Re-printed and verified</li>
 </ul>
 <h3 id="after-any-changes"><a class="header" href="#after-any-changes">After Any Changes</a></h3>
 <ul>
-<li><input disabled="" type="checkbox"/>
-Nozzle replacement -&gt; Re-verify nozzle diameter</li>
-<li><input disabled="" type="checkbox"/>
-Bed leveling -&gt; Re-verify first layer</li>
-<li><input disabled="" type="checkbox"/>
-Temperature changes -&gt; Test print required</li>
-<li><input disabled="" type="checkbox"/>
-Material change -&gt; Full calibration recommended</li>
+<li><input disabled="" type="checkbox"> Nozzle replacement -&gt; Re-verify nozzle diameter</li>
+<li><input disabled="" type="checkbox"> Bed leveling -&gt; Re-verify first layer</li>
+<li><input disabled="" type="checkbox"> Temperature changes -&gt; Test print required</li>
+<li><input disabled="" type="checkbox"> Material change -&gt; Full calibration recommended</li>
 </ul>
-<hr />
+<hr>
 <h2 id="measurement-tools-needed"><a class="header" href="#measurement-tools-needed">Measurement Tools Needed</a></h2>
-<div class="table-wrapper"><table><thead><tr><th>Tool</th><th>Cost</th><th>Accuracy</th><th>Use</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Tool</th><th>Cost</th><th>Accuracy</th><th>Use</th></tr>
+</thead>
+<tbody>
 <tr><td>Digital Calipers</td><td>$5-15</td><td>+/-0.05mm</td><td>Primary measurements</td></tr>
 <tr><td>Steel Ruler</td><td>$3-10</td><td>+/-1mm</td><td>Quick rough checks</td></tr>
 <tr><td>Vernier Calipers</td><td>$10-30</td><td>+/-0.05mm</td><td>Precision work</td></tr>
 <tr><td>Micrometer</td><td>$20-50</td><td>+/-0.01mm</td><td>Critical tolerances</td></tr>
 <tr><td>Layer Height Gauge</td><td>DIY or $5-10</td><td>+/-0.05mm</td><td>Layer verification</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
 <p><strong>Recommendation:</strong> Start with digital calipers (most versatile and affordable)</p>
-<hr />
+<hr>
 <h2 id="troubleshooting-calibration-issues"><a class="header" href="#troubleshooting-calibration-issues">Troubleshooting Calibration Issues</a></h2>
 <p><strong>Problem: Measurements still inconsistent after calibration</strong></p>
 <ul>
@@ -464,7 +471,7 @@ Material change -&gt; Full calibration recommended</li>
 <li>Ensure ambient temperature is stable</li>
 <li>Try printing on different bed locations</li>
 </ul>
-<p><strong>Problem: Can't achieve target dimensions</strong></p>
+<p><strong>Problem: Can’t achieve target dimensions</strong></p>
 <ul>
 <li>Nozzle may be damaged/worn (try replacement)</li>
 <li>Printer may have fundamental hardware issues</li>
@@ -478,7 +485,7 @@ Material change -&gt; Full calibration recommended</li>
 <li>Bed surface degrading</li>
 <li>Normal wear - recalibrate quarterly</li>
 </ul>
-<hr />
+<hr>
 <h2 id="reference-standard-test-models"><a class="header" href="#reference-standard-test-models">Reference: Standard Test Models</a></h2>
 <p>These models are helpful for calibration:</p>
 <ol>
@@ -487,18 +494,20 @@ Material change -&gt; Full calibration recommended</li>
 <li><strong>Layer Tower</strong> (graduated heights) - Layer consistency</li>
 <li><strong>Thin Wall Test</strong> (walls 1-5mm) - Wall thickness accuracy</li>
 </ol>
-<hr />
-<p><strong>Last Calibration Date:</strong> _<br />
-<strong>Printer Model:</strong> _<br />
-<strong>Current E-Steps:</strong> _<br />
-<strong>Current Flow Rate:</strong> _<br />
-<strong>Materials Calibrated For:</strong> _</p>
+<hr>
+<p><strong>Last Calibration Date:</strong> _<br><strong>Printer Model:</strong> _<br><strong>Current E-Steps:</strong> _<br><strong>Current Flow Rate:</strong> _<br><strong>Materials Calibrated For:</strong> _</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../3dMake_Foundation/Lessons_3dMake_10/diagnostic_checklist.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
+                            <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_10/measurement-worksheet.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -506,7 +515,13 @@ Material change -&gt; Full calibration recommended</li>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../3dMake_Foundation/Lessons_3dMake_10/diagnostic_checklist.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
 
+                    <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_10/measurement-worksheet.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
             </nav>
 
         </div>
@@ -520,13 +535,13 @@ Material change -&gt; Full calibration recommended</li>
         </script>
 
 
-        <script src="../../elasticlunr.min.js"></script>
-        <script src="../../mark.min.js"></script>
-        <script src="../../searcher.js"></script>
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-c2a407aa.js"></script>
 
-        <script src="../../clipboard.min.js"></script>
-        <script src="../../highlight.js"></script>
-        <script src="../../book.js"></script>
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-4a3ec6df.js"></script>
+        <script src="../../book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
 

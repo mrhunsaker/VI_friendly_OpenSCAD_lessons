@@ -58,23 +58,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../../favicon.svg">
-        <link rel="shortcut icon" href="../../favicon.png">
-        <link rel="stylesheet" href="../../css/variables.css">
-        <link rel="stylesheet" href="../../css/general.css">
-        <link rel="stylesheet" href="../../css/chrome.css">
-        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-2459343d.css">
+        <link rel="stylesheet" href="../../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../theme/catppuccin.css">
+        <link rel="stylesheet" href="../../theme/catppuccin-be25834e.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -82,10 +82,10 @@
             const path_to_root = "../../";
             const default_light_theme = "latte";
             const default_dark_theme = "mocha";
-            window.path_to_searchindex_js = "../../searchindex.js";
+            window.path_to_searchindex_js = "../../searchindex-a4c66f4b.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc.js"></script>
+        <script src="../../toc-6a7ae851.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -257,18 +257,31 @@
 <li>All four can be used with Windows Terminal, Command Prompt, and PowerShell; test the specific terminal and workflow you plan to use, since subtle differences in keystroke handling or focus behavior can affect CLI efficiency.</li>
 </ul>
 <p>All four can be used with Windows Terminal, Command Prompt, and PowerShell; test the specific terminal and workflow you plan to use, since subtle differences in keystroke handling or focus behavior can affect CLI efficiency.</p>
-<div class="table-wrapper"><table><thead><tr><th>Screen Reader</th><th>Read current line or prompt</th><th>Move/back through previous output</th><th>Recall last command (history)</th><th>Read all output / buffer</th></tr></thead><tbody>
-<tr><td>JAWS</td><td>Use the JAWS/virtual cursor or focus mode and move with arrow keys; JAWS will speak the current line or prompt.</td><td>Use the JAWS review cursor or arrow keys to navigate earlier lines of terminal output; review commands let you jump by line or paragraph.</td><td>Use the shell's history (Up arrow) to recall previous commands; JAWS will read the recalled line when focused.</td><td>Use JAWS "Say All" / review read to speak the full terminal buffer from the current position.</td></tr>
-<tr><td>NVDA</td><td>Use NVDA's focus/virtual review cursor and arrow keys to read the current line or prompt aloud.</td><td>Use NVDA's review cursor or move with arrow keys to read prior output lines; review commands can move by line or by larger chunks.</td><td>Use the shell's Up arrow to navigate history; NVDA will speak the recalled command when the line is focused.</td><td>Use NVDA's "say all" or read-from-current-position feature to speak the terminal buffer.</td></tr>
-<tr><td>Windows Narrator</td><td>In scan/focus mode, arrow keys read the current line or prompt; Narrator also offers read-from-here commands.</td><td>Use Narrator's scan mode and navigation keys to move back through previous output and have it read aloud.</td><td>Use the shell Up arrow to recall previous commands; Narrator will announce the recalled line when focused.</td><td>Use Narrator's continuous/read-all feature to read the terminal buffer from the current cursor.</td></tr>
-<tr><td>Dolphin (SuperNova)</td><td>Use Dolphin's review or focus cursor and arrow keys to have the current line or prompt spoken; Dolphin also provides review navigation controls.</td><td>Use Dolphin's review functions to step through past terminal output by line or paragraph.</td><td>Use the shell Up arrow to recall earlier commands; Dolphin will read the recalled command when focused.</td><td>Use Dolphin's read-all / continuous read features to speak the full terminal buffer.</td></tr>
-</tbody></table>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Screen Reader</th><th>Read current line or prompt</th><th>Move/back through previous output</th><th>Recall last command (history)</th><th>Read all output / buffer</th></tr>
+</thead>
+<tbody>
+<tr><td>JAWS</td><td>Use the JAWS/virtual cursor or focus mode and move with arrow keys; JAWS will speak the current line or prompt.</td><td>Use the JAWS review cursor or arrow keys to navigate earlier lines of terminal output; review commands let you jump by line or paragraph.</td><td>Use the shell’s history (Up arrow) to recall previous commands; JAWS will read the recalled line when focused.</td><td>Use JAWS “Say All” / review read to speak the full terminal buffer from the current position.</td></tr>
+<tr><td>NVDA</td><td>Use NVDA’s focus/virtual review cursor and arrow keys to read the current line or prompt aloud.</td><td>Use NVDA’s review cursor or move with arrow keys to read prior output lines; review commands can move by line or by larger chunks.</td><td>Use the shell’s Up arrow to navigate history; NVDA will speak the recalled command when the line is focused.</td><td>Use NVDA’s “say all” or read-from-current-position feature to speak the terminal buffer.</td></tr>
+<tr><td>Windows Narrator</td><td>In scan/focus mode, arrow keys read the current line or prompt; Narrator also offers read-from-here commands.</td><td>Use Narrator’s scan mode and navigation keys to move back through previous output and have it read aloud.</td><td>Use the shell Up arrow to recall previous commands; Narrator will announce the recalled line when focused.</td><td>Use Narrator’s continuous/read-all feature to read the terminal buffer from the current cursor.</td></tr>
+<tr><td>Dolphin (SuperNova)</td><td>Use Dolphin’s review or focus cursor and arrow keys to have the current line or prompt spoken; Dolphin also provides review navigation controls.</td><td>Use Dolphin’s review functions to step through past terminal output by line or paragraph.</td><td>Use the shell Up arrow to recall earlier commands; Dolphin will read the recalled command when focused.</td><td>Use Dolphin’s read-all / continuous read features to speak the full terminal buffer.</td></tr>
+</tbody>
+</table>
 </div>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../Setup/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
+                            <a rel="next prefetch" href="../../Setup/Braille_Displays/Braille_Displays.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -276,7 +289,13 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../Setup/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
 
+                    <a rel="next prefetch" href="../../Setup/Braille_Displays/Braille_Displays.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
             </nav>
 
         </div>
@@ -290,13 +309,13 @@
         </script>
 
 
-        <script src="../../elasticlunr.min.js"></script>
-        <script src="../../mark.min.js"></script>
-        <script src="../../searcher.js"></script>
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-c2a407aa.js"></script>
 
-        <script src="../../clipboard.min.js"></script>
-        <script src="../../highlight.js"></script>
-        <script src="../../book.js"></script>
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-4a3ec6df.js"></script>
+        <script src="../../book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
 

@@ -58,23 +58,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../../favicon.svg">
-        <link rel="shortcut icon" href="../../favicon.png">
-        <link rel="stylesheet" href="../../css/variables.css">
-        <link rel="stylesheet" href="../../css/general.css">
-        <link rel="stylesheet" href="../../css/chrome.css">
-        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-2459343d.css">
+        <link rel="stylesheet" href="../../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../theme/catppuccin.css">
+        <link rel="stylesheet" href="../../theme/catppuccin-be25834e.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -82,10 +82,10 @@
             const path_to_root = "../../";
             const default_light_theme = "latte";
             const default_dark_theme = "mocha";
-            window.path_to_searchindex_js = "../../searchindex.js";
+            window.path_to_searchindex_js = "../../searchindex-a4c66f4b.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc.js"></script>
+        <script src="../../toc-6a7ae851.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -236,7 +236,7 @@
 <li>Printer for test prints (recommended for validation)</li>
 </ul>
 <p><strong>Related Project</strong>: Work through <a href="../../assets/3dMake_Foundation/Lessons_3dMake_8/stackable_bins.scad">stackable_bins.scad</a> to apply tolerance design in a multi-part assembly with interlocking features.</p>
-<hr />
+<hr>
 <h2 id="understanding-tolerance-and-clearance"><a class="header" href="#understanding-tolerance-and-clearance">Understanding Tolerance and Clearance</a></h2>
 <p>In 3D printing, tolerance refers to the acceptable variation in printed dimensions. When designing parts that must fit together, you must account for:</p>
 <ul>
@@ -249,7 +249,7 @@
 rim_clearance = 0.6 mm  (small space between stack and rim below)
 rim_inner = bin_outer - 2*wall - 2*rim_clearance
 </code></pre>
-<hr />
+<hr>
 <h2 id="step-by-step-tasks"><a class="header" href="#step-by-step-tasks">Step-by-step Tasks</a></h2>
 <h3 id="task-1-design-a-parametric-stackable-bin"><a class="header" href="#task-1-design-a-parametric-stackable-bin">Task 1: Design a Parametric Stackable Bin</a></h3>
 <p>Create a storage bin with walls, a removable lid, and interlocking features:</p>
@@ -398,7 +398,7 @@ D      | 0.6 mm      | 2.5  | Better - stronger walls
 ========================================
 </code></pre>
 <p>After printing and testing, record observations about fit quality.</p>
-<hr />
+<hr>
 <h2 id="advanced-topics-snap-fit-connectors-and-multi-part-assemblies"><a class="header" href="#advanced-topics-snap-fit-connectors-and-multi-part-assemblies">Advanced Topics: Snap-Fit Connectors and Multi-Part Assemblies</a></h2>
 <p>As you progress beyond simple stacking, you may want to create assemblies where parts connect without fasteners. This section covers snap-fit and interlocking designs.</p>
 <h3 id="designing-snap-fit-clips"><a class="header" href="#designing-snap-fit-clips">Designing Snap-Fit Clips</a></h3>
@@ -408,7 +408,7 @@ D      | 0.6 mm      | 2.5  | Better - stronger walls
 <li>Providing a catch (usually a small notch or undercut) that locks into place</li>
 <li>Balancing flexibility (easy to insert/remove) with durability (survives many cycles)</li>
 </ol>
-<p>Here's a simple snap-fit connector:</p>
+<p>Here’s a simple snap-fit connector:</p>
 <pre><code class="language-openscad">// Simple snap-fit clip for connecting parts
 module snap_fit_base() {
   // Main mounting block
@@ -459,7 +459,7 @@ If too tight: Parts won't insert or break on insertion
 <li><strong>Use modular design</strong> so each part can be printed, tested, and refined independently</li>
 <li><strong>Document assembly order</strong> so users know which parts fit together first</li>
 </ol>
-<p>Here's a pattern for a multi-part assembly:</p>
+<p>Here’s a pattern for a multi-part assembly:</p>
 <pre><code class="language-openscad">// Multi-part assembly pattern
 
 // === ASSEMBLY PARAMETERS ===
@@ -535,7 +535,7 @@ Quality Checks:
 - All parts should be free of support marks or defects
 - Shelf should hold light objects without sagging
 </code></pre>
-<hr />
+<hr>
 <h2 id="advanced-assembly-best-practices"><a class="header" href="#advanced-assembly-best-practices">Advanced Assembly Best Practices</a></h2>
 <p>Professional assemblies require planning beyond individual parts. Consider assembly sequence, tolerance management, and accessibility.</p>
 <h3 id="designing-for-snap-fit-assemblies"><a class="header" href="#designing-for-snap-fit-assemblies">Designing for Snap-Fit Assemblies</a></h3>
@@ -767,7 +767,7 @@ module assembly_with_clearance_check() {
 
 // When rendered, the % shows potential interference areas
 </code></pre>
-<hr />
+<hr>
 <h2 id="checkpoint"><a class="header" href="#checkpoint">Checkpoint</a></h2>
 <p>Chamfers improve print quality by:</p>
 <ol>
@@ -784,20 +784,20 @@ module chamfer_corner(size, radius) {
   }
 }
 </code></pre>
-<hr />
+<hr>
 <h2 id="checkpoint-1"><a class="header" href="#checkpoint-1">Checkpoint</a></h2>
 <ul>
 <li>After task 1, you have a single parametric bin</li>
-<li>After task 2, you've verified stackability</li>
+<li>After task 2, you’ve verified stackability</li>
 <li>After task 4, you have optional dividers working</li>
-<li>After task 5, you've documented tolerance data</li>
+<li>After task 5, you’ve documented tolerance data</li>
 </ul>
-<hr />
+<hr>
 <h2 id="quiz---lesson-3dmake8-10-questions"><a class="header" href="#quiz---lesson-3dmake8-10-questions">Quiz - Lesson 3dMake.8 (10 questions)</a></h2>
 <ol>
 <li>What is the purpose of the <code>stack_clear</code> parameter in stackable bin design<sup class="footnote-reference" id="fr-1-3"><a href="#footnote-1">1</a></sup>?</li>
 <li>Why is wall thickness a critical parameter in structural parts<sup class="footnote-reference" id="fr-1-4"><a href="#footnote-1">1</a></sup>?</li>
-<li>Explain what "tolerance stack-up" means and why it matters in multi-part assemblies<sup class="footnote-reference" id="fr-1-5"><a href="#footnote-1">1</a></sup>.</li>
+<li>Explain what “tolerance stack-up” means and why it matters in multi-part assemblies<sup class="footnote-reference" id="fr-1-5"><a href="#footnote-1">1</a></sup>.</li>
 <li>How does chamfering improve print quality<sup class="footnote-reference" id="fr-3-2"><a href="#footnote-3">3</a></sup>?</li>
 <li>What parameter would you adjust to make bins stack with more friction for stability<sup class="footnote-reference" id="fr-1-6"><a href="#footnote-1">1</a></sup>?</li>
 <li>True or False: Thin walls always print faster than thick walls.</li>
@@ -819,10 +819,11 @@ module chamfer_corner(size, radius) {
 <li>Create a structural analysis guide: identify stress concentration points and propose reinforcement strategies.</li>
 <li>Write comprehensive bin design documentation: parameters, variants, assembly, stackability testing, tolerance management, maintenance, and accessibility features.</li>
 </ol>
-<hr />
+<hr>
 <p><strong>References</strong></p>
 <hr>
-<ol class="footnote-definition"><li id="footnote-1">
+<ol class="footnote-definition">
+<li id="footnote-1">
 <p>3DMake GitHub - Stackable Bins Example - https://github.com/tdeck/3dmake/blob/main/docs/examples.md <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a> <a href="#fr-1-3">↩3</a> <a href="#fr-1-4">↩4</a> <a href="#fr-1-5">↩5</a> <a href="#fr-1-6">↩6</a> <a href="#fr-1-7">↩7</a> <a href="#fr-1-8">↩8</a> <a href="#fr-1-9">↩9</a> <a href="#fr-1-10">↩10</a> <a href="#fr-1-11">↩11</a> <a href="#fr-1-12">↩12</a> <a href="#fr-1-13">↩13</a></p>
 </li>
 <li id="footnote-2">
@@ -832,11 +833,18 @@ module chamfer_corner(size, radius) {
 <p>OpenSCAD Manual - Minkowski (chamfers/rounding) - https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#minkowski <a href="#fr-3-1">↩</a> <a href="#fr-3-2">↩2</a> <a href="#fr-3-3">↩3</a></p>
 </li>
 </ol>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../3dMake_Foundation/Lessons_3dMake_7/Lessons_3dMake_7.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
+                            <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_8/snap-fit-clip.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -844,7 +852,13 @@ module chamfer_corner(size, radius) {
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../3dMake_Foundation/Lessons_3dMake_7/Lessons_3dMake_7.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
 
+                    <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_8/snap-fit-clip.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
             </nav>
 
         </div>
@@ -858,13 +872,13 @@ module chamfer_corner(size, radius) {
         </script>
 
 
-        <script src="../../elasticlunr.min.js"></script>
-        <script src="../../mark.min.js"></script>
-        <script src="../../searcher.js"></script>
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-c2a407aa.js"></script>
 
-        <script src="../../clipboard.min.js"></script>
-        <script src="../../highlight.js"></script>
-        <script src="../../book.js"></script>
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-4a3ec6df.js"></script>
+        <script src="../../book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
 

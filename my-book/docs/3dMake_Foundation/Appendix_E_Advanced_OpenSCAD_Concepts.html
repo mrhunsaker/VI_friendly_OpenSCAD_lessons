@@ -58,23 +58,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../favicon.svg">
-        <link rel="shortcut icon" href="../favicon.png">
-        <link rel="stylesheet" href="../css/variables.css">
-        <link rel="stylesheet" href="../css/general.css">
-        <link rel="stylesheet" href="../css/chrome.css">
-        <link rel="stylesheet" href="../css/print.css" media="print">
+        <link rel="icon" href="../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../css/general-2459343d.css">
+        <link rel="stylesheet" href="../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../fonts/fonts.css">
+        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../theme/catppuccin.css">
+        <link rel="stylesheet" href="../theme/catppuccin-be25834e.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -82,10 +82,10 @@
             const path_to_root = "../";
             const default_light_theme = "latte";
             const default_dark_theme = "mocha";
-            window.path_to_searchindex_js = "../searchindex.js";
+            window.path_to_searchindex_js = "../searchindex-a4c66f4b.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc.js"></script>
+        <script src="../toc-6a7ae851.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -222,7 +222,7 @@
                     <main>
                         <h1 id="3dmake_foundation-appendix_e_advanced_openscad_concepts"><a class="header" href="#3dmake_foundation-appendix_e_advanced_openscad_concepts">Appendix E: Advanced OpenSCAD Concepts</a></h1>
 <p>This appendix covers specialized topics for experienced users seeking to tackle complex parametric designs. These are optional topics not required for foundational mastery but valuable for professional application development.</p>
-<hr />
+<hr>
 <h2 id="topic-1-gears-and-mechanical-components"><a class="header" href="#topic-1-gears-and-mechanical-components">Topic 1: Gears and Mechanical Components</a></h2>
 <p>Gears are one of the most challenging parametric designs, requiring careful calculation of tooth geometry. Understanding gear mathematics enables creation of mechanical systems—power transmission, speed reduction, or precise positioning.</p>
 <h3 id="gear-terminology"><a class="header" href="#gear-terminology">Gear Terminology</a></h3>
@@ -349,7 +349,7 @@ module belt_drive_system() {
 
 belt_drive_system();
 </code></pre>
-<hr />
+<hr>
 <h2 id="topic-2-batch-processing-and-statistical-analysis"><a class="header" href="#topic-2-batch-processing-and-statistical-analysis">Topic 2: Batch Processing and Statistical Analysis</a></h2>
 <p>Professional applications often generate many variants and need to analyze results. Batch processing enables systematic exploration of parameter spaces.</p>
 <h3 id="parameter-sweep-generation"><a class="header" href="#parameter-sweep-generation">Parameter Sweep Generation</a></h3>
@@ -426,7 +426,7 @@ batch_optimized_part(40, "strength");    // thickest walls
 translate([60, 0, 0]) batch_optimized_part(40, "speed");    // thinnest walls
 translate([120, 0, 0]) batch_optimized_part(40, "balanced"); // medium walls
 </code></pre>
-<hr />
+<hr>
 <h2 id="topic-3-performance-optimization"><a class="header" href="#topic-3-performance-optimization">Topic 3: Performance Optimization</a></h2>
 <p>Complex models can take hours to render. Strategic optimization keeps iteration cycles fast.</p>
 <h3 id="measuring-render-performance"><a class="header" href="#measuring-render-performance">Measuring Render Performance</a></h3>
@@ -525,7 +525,7 @@ for fn_value in 8 16 32 64 128; do
     grep "Maximum resident set size"
 done
 </code></pre>
-<hr />
+<hr>
 <h2 id="topic-4-print-orientation-and-support-structure-algorithms"><a class="header" href="#topic-4-print-orientation-and-support-structure-algorithms">Topic 4: Print Orientation and Support Structure Algorithms</a></h2>
 <p>Strategic orientation dramatically affects support material, print time, and surface quality.</p>
 <h3 id="strength-orientation-analysis"><a class="header" href="#strength-orientation-analysis">Strength Orientation Analysis</a></h3>
@@ -647,7 +647,7 @@ module optimized_part(
 
 optimized_part(0.4, "detailed", 15, 2);
 </code></pre>
-<hr />
+<hr>
 <h2 id="topic-5-recursive-function-patterns"><a class="header" href="#topic-5-recursive-function-patterns">Topic 5: Recursive Function Patterns</a></h2>
 <p>Recursion enables elegant solutions to problems with self-similar structure: trees, fractals, nested components.</p>
 <h3 id="basic-recursive-pattern"><a class="header" href="#basic-recursive-pattern">Basic Recursive Pattern</a></h3>
@@ -785,17 +785,23 @@ module cable_tray(width, depth, height, levels, branch_angle) {
 
 cable_tray(40, 10, 5, 3, 30);  // 3-level branching cable tray
 </code></pre>
-<hr />
+<hr>
 <h2 id="summary-when-to-use-each-advanced-technique"><a class="header" href="#summary-when-to-use-each-advanced-technique">Summary: When to Use Each Advanced Technique</a></h2>
-<div class="table-wrapper"><table><thead><tr><th>Technique</th><th>Use Case</th><th>Complexity</th><th>Performance</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Technique</th><th>Use Case</th><th>Complexity</th><th>Performance</th></tr>
+</thead>
+<tbody>
 <tr><td>Gears</td><td>Mechanical power transmission</td><td>High</td><td>Medium</td></tr>
 <tr><td>Batch Processing</td><td>Design space exploration</td><td>Medium</td><td>Depends on scope</td></tr>
 <tr><td>Performance Optimization</td><td>Reducing render time</td><td>Medium</td><td>High payoff</td></tr>
 <tr><td>Orientation Analysis</td><td>Strength optimization</td><td>Medium</td><td>Simulation cost</td></tr>
 <tr><td>Recursion</td><td>Fractal/nested structures</td><td>High</td><td>Can be expensive</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
-<hr />
+<hr>
 <h2 id="references-and-further-learning"><a class="header" href="#references-and-further-learning">References and Further Learning</a></h2>
 <ul>
 <li>OpenSCAD Documentation - Advanced Features: https://en.wikibooks.org/wiki/OpenSCAD_User_Manual</li>
@@ -804,7 +810,7 @@ cable_tray(40, 10, 5, 3, 30);  // 3-level branching cable tray
 <li>Fractal Geometry: https://en.wikipedia.org/wiki/Fractal</li>
 <li>Recursive Algorithms: https://www.khanacademy.org/computing/computer-science/algorithms</li>
 </ul>
-<hr />
+<hr>
 <p><strong>For Educators and Students</strong></p>
 <p>These advanced topics are intended for:</p>
 <ul>
@@ -817,7 +823,7 @@ cable_tray(40, 10, 5, 3, 30);  // 3-level branching cable tray
 <ul>
 <li>All recursive examples include base cases clearly marked</li>
 <li>Each section provides simplified versions before advanced variants</li>
-<li>Code comments explain both "what" and "why"</li>
+<li>Code comments explain both “what” and “why”</li>
 <li>Practical examples show real-world applications</li>
 <li>Performance considerations documented to prevent frustration</li>
 </ul>
@@ -828,7 +834,13 @@ cable_tray(40, 10, 5, 3, 30);  // 3-level branching cable tray
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../3dMake_Foundation/Appendix_D_PowerShell_Integration.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
+                            <a rel="next prefetch" href="../assets/3dMake_Foundation/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -836,7 +848,13 @@ cable_tray(40, 10, 5, 3, 30);  // 3-level branching cable tray
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../3dMake_Foundation/Appendix_D_PowerShell_Integration.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
 
+                    <a rel="next prefetch" href="../assets/3dMake_Foundation/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
             </nav>
 
         </div>
@@ -850,13 +868,13 @@ cable_tray(40, 10, 5, 3, 30);  // 3-level branching cable tray
         </script>
 
 
-        <script src="../elasticlunr.min.js"></script>
-        <script src="../mark.min.js"></script>
-        <script src="../searcher.js"></script>
+        <script src="../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../mark-09e88c2c.min.js"></script>
+        <script src="../searcher-c2a407aa.js"></script>
 
-        <script src="../clipboard.min.js"></script>
-        <script src="../highlight.js"></script>
-        <script src="../book.js"></script>
+        <script src="../clipboard-1626706a.min.js"></script>
+        <script src="../highlight-4a3ec6df.js"></script>
+        <script src="../book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
 

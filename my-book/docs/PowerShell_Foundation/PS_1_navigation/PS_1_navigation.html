@@ -58,23 +58,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../../favicon.svg">
-        <link rel="shortcut icon" href="../../favicon.png">
-        <link rel="stylesheet" href="../../css/variables.css">
-        <link rel="stylesheet" href="../../css/general.css">
-        <link rel="stylesheet" href="../../css/chrome.css">
-        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-2459343d.css">
+        <link rel="stylesheet" href="../../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../theme/catppuccin.css">
+        <link rel="stylesheet" href="../../theme/catppuccin-be25834e.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -82,10 +82,10 @@
             const path_to_root = "../../";
             const default_light_theme = "latte";
             const default_dark_theme = "mocha";
-            window.path_to_searchindex_js = "../../searchindex.js";
+            window.path_to_searchindex_js = "../../searchindex-a4c66f4b.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc.js"></script>
+        <script src="../../toc-6a7ae851.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -221,8 +221,7 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="powershell_foundation_ps_1_navigation-ps_1_navigation"><a class="header" href="#powershell_foundation_ps_1_navigation-ps_1_navigation">PS-1: Navigation - Moving Around Your File System</a></h1>
-<p><strong>Duration:</strong> 1 class period<br />
-<strong>Prerequisite:</strong> PS-0 (Getting Started)</p>
+<p><strong>Duration:</strong> 1 class period<br><strong>Prerequisite:</strong> PS-0 (Getting Started)</p>
 <p><strong>Learning Objectives</strong>
 By the end of this lesson, you will be able to:</p>
 <ul>
@@ -238,9 +237,14 @@ By the end of this lesson, you will be able to:</p>
 <li>PowerShell</li>
 <li>Text editor (Notepad or VS Code)</li>
 </ul>
-<hr />
+<hr>
 <h2 id="commands-covered-in-this-lesson"><a class="header" href="#commands-covered-in-this-lesson">Commands Covered in This Lesson</a></h2>
-<div class="table-wrapper"><table><thead><tr><th>Command</th><th>What It Does</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Command</th><th>What It Does</th></tr>
+</thead>
+<tbody>
 <tr><td><code>pwd</code></td><td>Print Working Directory - shows where you are</td></tr>
 <tr><td><code>cd path</code></td><td>Change Directory - move to a new location</td></tr>
 <tr><td><code>ls</code></td><td>List - shows files and folders in current location</td></tr>
@@ -248,18 +252,19 @@ By the end of this lesson, you will be able to:</p>
 <tr><td><code>ls -n -af</code></td><td>List names of files only</td></tr>
 <tr><td><code>ls -n -ad</code></td><td>List names of directories only</td></tr>
 <tr><td><code>ls *.extension</code></td><td>List files matching a pattern</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
-<hr />
+<hr>
 <h2 id="pwd---where-am-i"><a class="header" href="#pwd---where-am-i"><code>pwd</code> - Where Am I?</a></h2>
 <p>Type <code>pwd</code> and press <code>Enter</code>. PowerShell prints the full path to your current location.</p>
 <pre><code class="language-powershell">pwd
 # Output: C:\Users\YourName
 </code></pre>
-<p><strong>When to use:</strong> Always run this if you're unsure of your current location.</p>
-<hr />
+<p><strong>When to use:</strong> Always run this if you’re unsure of your current location.</p>
+<hr>
 <h2 id="cd---changing-directories"><a class="header" href="#cd---changing-directories"><code>cd</code> - Changing Directories</a></h2>
-<p><code>cd</code> stands for "change directory."</p>
+<p><code>cd</code> stands for “change directory.”</p>
 <pre><code class="language-powershell"># Go to Documents
 cd Documents
 
@@ -272,7 +277,7 @@ cd ~
 # Go to a specific path
 cd C:\Users\YourName\Documents\3D_Projects
 </code></pre>
-<hr />
+<hr>
 <h2 id="ls---listing-files-and-folders"><a class="header" href="#ls---listing-files-and-folders"><code>ls</code> - Listing Files and Folders</a></h2>
 <p>Use <code>ls -n</code> for screen reader compatibility.</p>
 <pre><code class="language-powershell"># List all files and folders (names only)
@@ -284,7 +289,7 @@ ls -n -af
 # List only folders (no files)
 ls -n -ad
 </code></pre>
-<hr />
+<hr>
 <h2 id="wildcards---finding-files-by-pattern"><a class="header" href="#wildcards---finding-files-by-pattern">Wildcards - Finding Files by Pattern</a></h2>
 <p>Wildcards help you find files without typing the full name.</p>
 <p><strong><code>*</code> (asterisk)</strong> matches any number of characters:</p>
@@ -301,7 +306,7 @@ ls -n *_final*
 <pre><code class="language-powershell"># Find files like model1.scad, model2.scad (but not model12.scad)
 ls -n model?.scad
 </code></pre>
-<hr />
+<hr>
 <h2 id="step-by-step-practice"><a class="header" href="#step-by-step-practice">Step-by-step Practice</a></h2>
 <ol>
 <li>Run <code>pwd</code> and confirm your location</li>
@@ -312,20 +317,15 @@ ls -n model?.scad
 <li>Go back up: <code>cd ..</code></li>
 <li>Search for files: <code>ls -n *.txt</code></li>
 </ol>
-<hr />
+<hr>
 <h2 id="checkpoints"><a class="header" href="#checkpoints">Checkpoints</a></h2>
 <p>After this lesson, you should be able to:</p>
 <ul>
-<li><input disabled="" type="checkbox"/>
-Navigate to any folder using <code>cd</code></li>
-<li><input disabled="" type="checkbox"/>
-Confirm your location with <code>pwd</code></li>
-<li><input disabled="" type="checkbox"/>
-List files and folders with <code>ls -n</code></li>
-<li><input disabled="" type="checkbox"/>
-Use wildcards to find files by pattern</li>
-<li><input disabled="" type="checkbox"/>
-Move between absolute and relative paths confidently</li>
+<li><input disabled="" type="checkbox"> Navigate to any folder using <code>cd</code></li>
+<li><input disabled="" type="checkbox"> Confirm your location with <code>pwd</code></li>
+<li><input disabled="" type="checkbox"> List files and folders with <code>ls -n</code></li>
+<li><input disabled="" type="checkbox"> Use wildcards to find files by pattern</li>
+<li><input disabled="" type="checkbox"> Move between absolute and relative paths confidently</li>
 </ul>
 <h2 id="quiz---lesson-ps1"><a class="header" href="#quiz---lesson-ps1">Quiz - Lesson PS.1</a></h2>
 <ol>
@@ -337,11 +337,11 @@ Move between absolute and relative paths confidently</li>
 <li>True or False: The <code>*</code> wildcard matches exactly one character.</li>
 <li>Explain the difference between <code>ls -n</code> and <code>ls -n -ad</code>.</li>
 <li>Write a command that would list all <code>.txt</code> files in your Documents folder using a wildcard.</li>
-<li>How would you search for files containing "part" in their name across multiple files?</li>
+<li>How would you search for files containing “part” in their name across multiple files?</li>
 <li>Describe a practical scenario where using wildcards saves time in a 3D printing workflow.</li>
 <li>What happens when you use <code>ls -n part?.scad</code> versus <code>ls -n part*.scad</code>?</li>
 <li>How would you navigate to a folder whose name contains both spaces and special characters?</li>
-<li>If you're in <code>/Documents/Projects/3D</code> and you want to go to <code>/Documents/Resources</code>, what command would you use?</li>
+<li>If you’re in <code>/Documents/Projects/3D</code> and you want to go to <code>/Documents/Resources</code>, what command would you use?</li>
 <li>Write a command sequence that navigates to the Downloads folder, lists only files, then returns to home.</li>
 <li>Explain the purpose of using <code>ls -n -af</code> specifically in a screen reader context.</li>
 </ol>
@@ -360,7 +360,7 @@ Move between absolute and relative paths confidently</li>
 <li>Create a complex wildcard search: find all files in a folder and subfolders that match multiple patterns (e.g., <code>*_v1.* OR *_final.*</code>).</li>
 <li>Build a script that navigates through a folder tree, counts files at each level, and reports the structure.</li>
 <li>Document the output differences between <code>ls -n</code>, <code>ls -n -af</code>, <code>ls -n -ad</code>, and <code>Get-ChildItem</code>; explain when to use each.</li>
-<li>Create a navigation "cheat sheet" as a PowerShell script that prints common paths and how to navigate to them.</li>
+<li>Create a navigation “cheat sheet” as a PowerShell script that prints common paths and how to navigate to them.</li>
 <li>Design a project folder structure on your computer, document each path, then create a script that validates all folders exist.</li>
 </ol>
 <h2 id="references"><a class="header" href="#references">References</a></h2>
@@ -382,7 +382,13 @@ Move between absolute and relative paths confidently</li>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../PowerShell_Foundation/PS_0_getting_started_layout_paths/PS_0_getting_started_layout_paths.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
+                            <a rel="next prefetch" href="../../PowerShell_Foundation/PS_2_file_folder_manipulation_modification/PS_2_file_folder_manipulation_modification.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -390,7 +396,13 @@ Move between absolute and relative paths confidently</li>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../PowerShell_Foundation/PS_0_getting_started_layout_paths/PS_0_getting_started_layout_paths.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
 
+                    <a rel="next prefetch" href="../../PowerShell_Foundation/PS_2_file_folder_manipulation_modification/PS_2_file_folder_manipulation_modification.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
             </nav>
 
         </div>
@@ -404,13 +416,13 @@ Move between absolute and relative paths confidently</li>
         </script>
 
 
-        <script src="../../elasticlunr.min.js"></script>
-        <script src="../../mark.min.js"></script>
-        <script src="../../searcher.js"></script>
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-c2a407aa.js"></script>
 
-        <script src="../../clipboard.min.js"></script>
-        <script src="../../highlight.js"></script>
-        <script src="../../book.js"></script>
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-4a3ec6df.js"></script>
+        <script src="../../book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
 

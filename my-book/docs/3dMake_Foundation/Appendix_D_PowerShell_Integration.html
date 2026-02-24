@@ -58,23 +58,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../favicon.svg">
-        <link rel="shortcut icon" href="../favicon.png">
-        <link rel="stylesheet" href="../css/variables.css">
-        <link rel="stylesheet" href="../css/general.css">
-        <link rel="stylesheet" href="../css/chrome.css">
-        <link rel="stylesheet" href="../css/print.css" media="print">
+        <link rel="icon" href="../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../css/general-2459343d.css">
+        <link rel="stylesheet" href="../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../fonts/fonts.css">
+        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../theme/catppuccin.css">
+        <link rel="stylesheet" href="../theme/catppuccin-be25834e.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -82,10 +82,10 @@
             const path_to_root = "../";
             const default_light_theme = "latte";
             const default_dark_theme = "mocha";
-            window.path_to_searchindex_js = "../searchindex.js";
+            window.path_to_searchindex_js = "../searchindex-a4c66f4b.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc.js"></script>
+        <script src="../toc-6a7ae851.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -224,7 +224,7 @@
 <p>This appendix shows how <strong>PowerShell (command-line scripting)</strong> streamlines 3D design workflows, automating the repetitive tasks from design through printing. It bridges <strong>PowerShell_Foundation concepts</strong> with <strong>3dMake_Foundation practical applications</strong>.</p>
 <p><strong>Referenced in:</strong> Lessons 9 (Automation), 10 (Mastery), and any lesson requiring batch operations</p>
 <p><strong>Prerequisites:</strong> Completion of PowerShell_Foundation (Lessons 1-6)</p>
-<hr />
+<hr>
 <h2 id="overview-why-automate-scad-workflows"><a class="header" href="#overview-why-automate-scad-workflows">Overview: Why Automate SCAD Workflows?</a></h2>
 <h3 id="manual-workflow-time-consuming"><a class="header" href="#manual-workflow-time-consuming">Manual Workflow (Time-Consuming)</a></h3>
 <pre><code>1. Open SCAD manually -&gt; Edit parameters -&gt; Save -&gt; Export STL
@@ -257,7 +257,7 @@ Time: 2-3 minutes per iteration (plus print time)
 <li>[YES] <strong>Logging:</strong> Automatic documentation</li>
 <li>[YES] <strong>Accessibility:</strong> Screen reader captures script output (not UI clicks)</li>
 </ul>
-<hr />
+<hr>
 <h2 id="prerequisites--setup"><a class="header" href="#prerequisites--setup">Prerequisites &amp; Setup</a></h2>
 <h3 id="required-software"><a class="header" href="#required-software">Required Software</a></h3>
 <pre><code class="language-powershell"># Check what you have installed
@@ -298,7 +298,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 # Verify change
 Get-ExecutionPolicy
 </code></pre>
-<hr />
+<hr>
 <h2 id="part-1-basic-workflow-automation"><a class="header" href="#part-1-basic-workflow-automation">Part 1: Basic Workflow Automation</a></h2>
 <h3 id="script-1-single-file-build"><a class="header" href="#script-1-single-file-build">Script 1: Single-File Build</a></h3>
 <p>This script takes a SCAD file and converts it through the entire workflow:</p>
@@ -439,7 +439,7 @@ Write-Host "Results saved: $csvPath"
 
 # Processes all .scad files automatically
 </code></pre>
-<hr />
+<hr>
 <h2 id="part-2-parametric-design-variation-testing"><a class="header" href="#part-2-parametric-design-variation-testing">Part 2: Parametric Design Variation Testing</a></h2>
 <h3 id="the-problem-testing-multiple-parameter-values"><a class="header" href="#the-problem-testing-multiple-parameter-values">The Problem: Testing Multiple Parameter Values</a></h3>
 <p>You want to test the same design with different parameters (e.g., peg diameter: 5mm, 6mm, 7mm):</p>
@@ -550,7 +550,7 @@ variant_dia5_width127,5,127,2.5,Success,2024-01-15 14:35:25
 variant_dia5_width135,5,135,2.3,Success,2024-01-15 14:35:28
 ...
 </code></pre>
-<hr />
+<hr>
 <h2 id="part-3-automated-print-documentation"><a class="header" href="#part-3-automated-print-documentation">Part 3: Automated Print Documentation</a></h2>
 <h3 id="script-print-logging--quality-tracking"><a class="header" href="#script-print-logging--quality-tracking">Script: Print Logging &amp; Quality Tracking</a></h3>
 <pre><code class="language-powershell"># log_print.ps1 - Document each print with metadata
@@ -633,7 +633,7 @@ function EstimateWeight {
     -Material "PLA" `
     -Notes "Final design, tested with actual bracelets"
 </code></pre>
-<hr />
+<hr>
 <h2 id="part-4-printer-communication--monitoring"><a class="header" href="#part-4-printer-communication--monitoring">Part 4: Printer Communication &amp; Monitoring</a></h2>
 <h3 id="script-send-g-code-to-printer-usb"><a class="header" href="#script-send-g-code-to-printer-usb">Script: Send G-code to Printer (USB)</a></h3>
 <pre><code class="language-powershell"># send_to_printer.ps1 - Copy G-code to printer USB
@@ -720,7 +720,7 @@ if ($checksPerformed -ge $MaxChecks) {
 <p><strong>Usage:</strong></p>
 <pre><code class="language-powershell">.\monitor_printer.ps1 -PrinterIP "192.168.1.100" -CheckInterval 30
 </code></pre>
-<hr />
+<hr>
 <h2 id="part-5-complete-workflow-integration"><a class="header" href="#part-5-complete-workflow-integration">Part 5: Complete Workflow Integration</a></h2>
 <h3 id="master-script-design---print---log"><a class="header" href="#master-script-design---print---log">Master Script: Design -&gt; Print -&gt; Log</a></h3>
 <pre><code class="language-powershell"># full_workflow.ps1 - Complete automation from design to printing
@@ -774,17 +774,23 @@ Write-Host "`n Workflow complete!"
     -SendToPrinter `
     -PrinterUSBLetter "E"
 </code></pre>
-<hr />
+<hr>
 <h2 id="part-6-powershell-skills-applied-to-scad"><a class="header" href="#part-6-powershell-skills-applied-to-scad">Part 6: PowerShell Skills Applied to SCAD</a></h2>
 <h3 id="lesson-mapping-powershell---scad-workflows"><a class="header" href="#lesson-mapping-powershell---scad-workflows">Lesson Mapping: PowerShell -&gt; SCAD Workflows</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>PowerShell Lesson</th><th>SCAD Application</th><th>Example</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>PowerShell Lesson</th><th>SCAD Application</th><th>Example</th></tr>
+</thead>
+<tbody>
 <tr><td><strong>PS 1: Navigation</strong></td><td>Working with project directories</td><td>Using <code>cd</code> to navigate src/ -&gt; stl/ -&gt; gcode/</td></tr>
 <tr><td><strong>PS 2: File Manipulation</strong></td><td>Copying, organizing SCAD files</td><td>Copy design files, organize variants by date</td></tr>
 <tr><td><strong>PS 3: Piping &amp; Objects</strong></td><td>Pass data between scripts</td><td><code>$results | Export-Csv</code> exports analysis</td></tr>
 <tr><td><strong>PS 4: Variables &amp; Aliases</strong></td><td>Parameterize SCAD workflows</td><td>Variables store file paths, material types, etc.</td></tr>
 <tr><td><strong>PS 5: Functions &amp; Modules</strong></td><td>Reusable automation blocks</td><td>Build, slice, log = functions in one script</td></tr>
 <tr><td><strong>PS Unit Test</strong></td><td>Verify workflow correctness</td><td>Test that STL file exists before slicing</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
 <h3 id="example-file-navigation-with-scad-projects"><a class="header" href="#example-file-navigation-with-scad-projects">Example: File Navigation with SCAD Projects</a></h3>
 <pre><code class="language-powershell"># Navigate between SCAD project folders
@@ -816,7 +822,7 @@ Get-ChildItem -Path "$ProjectRoot\src" -Filter "*.scad" |
     Group-Object -Property Status |
     Select-Object Name, Count
 </code></pre>
-<hr />
+<hr>
 <h2 id="accessibility-considerations"><a class="header" href="#accessibility-considerations">Accessibility Considerations</a></h2>
 <h3 id="why-powershell-for-scad"><a class="header" href="#why-powershell-for-scad">Why PowerShell for SCAD?</a></h3>
 <ol>
@@ -838,7 +844,7 @@ Get-ChildItem -Path "$ProjectRoot\src" -Filter "*.scad" |
 Ready to print: C:\Projects\3dMake\gcode\bracelet_holder.gcode
 </code></pre>
 <p>All information is <strong>text-based and sequential</strong>-perfectly accessible to screen readers.</p>
-<hr />
+<hr>
 <h2 id="best-practices--tips"><a class="header" href="#best-practices--tips">Best Practices &amp; Tips</a></h2>
 <h3 id="1-always-log-everything"><a class="header" href="#1-always-log-everything">1. Always Log Everything</a></h3>
 <pre><code class="language-powershell">function Write-Log {
@@ -891,25 +897,37 @@ $Config = @{
 # . .\config.ps1
 # &amp; $Config.OpenSCADPath ...
 </code></pre>
-<hr />
+<hr>
 <h2 id="troubleshooting-automated-workflows"><a class="header" href="#troubleshooting-automated-workflows">Troubleshooting Automated Workflows</a></h2>
-<div class="table-wrapper"><table><thead><tr><th>Problem</th><th>Cause</th><th>Solution</th></tr></thead><tbody>
-<tr><td>Scripts won't run</td><td>Execution policy</td><td><code>Set-ExecutionPolicy -ExecutionPolicy RemoteSigned</code></td></tr>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Problem</th><th>Cause</th><th>Solution</th></tr>
+</thead>
+<tbody>
+<tr><td>Scripts won’t run</td><td>Execution policy</td><td><code>Set-ExecutionPolicy -ExecutionPolicy RemoteSigned</code></td></tr>
 <tr><td>Command not found</td><td>Tool not in PATH</td><td>Specify full path: <code>&amp; "C:\Program Files\OpenSCAD\openscad.exe"</code></td></tr>
 <tr><td>Files not created</td><td>Wrong working directory</td><td>Use absolute paths with <code>Join-Path</code></td></tr>
 <tr><td>Script hangs</td><td>Waiting for user input</td><td>Disable UI input; use <code>-o</code> flag for batch operations</td></tr>
 <tr><td>CSV data corrupted</td><td>Special characters in notes</td><td>Properly quote strings in CSV export</td></tr>
-<tr><td>No output/logging</td><td>Path doesn't exist</td><td>Create directory first: <code>New-Item -Type Directory -Path ... -Force</code></td></tr>
-</tbody></table>
+<tr><td>No output/logging</td><td>Path doesn’t exist</td><td>Create directory first: <code>New-Item -Type Directory -Path ... -Force</code></td></tr>
+</tbody>
+</table>
 </div>
-<hr />
+<hr>
 <h2 id="summary-powershell--scad-integration-benefits"><a class="header" href="#summary-powershell--scad-integration-benefits">Summary: PowerShell + SCAD Integration Benefits</a></h2>
 <h3 id="time-savings"><a class="header" href="#time-savings">Time Savings</a></h3>
-<div class="table-wrapper"><table><thead><tr><th>Task</th><th>Manual</th><th>Automated</th><th>Savings</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Task</th><th>Manual</th><th>Automated</th><th>Savings</th></tr>
+</thead>
+<tbody>
 <tr><td>Single design build</td><td>5 min</td><td>2.5 min</td><td>50%</td></tr>
 <tr><td>Test 10 parameter variations</td><td>50 min</td><td>5 min</td><td>90%</td></tr>
 <tr><td>Batch processing 20 designs</td><td>100 min</td><td>10 min</td><td>90%</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
 <h3 id="consistency"><a class="header" href="#consistency">Consistency</a></h3>
 <ul>
@@ -929,7 +947,7 @@ $Config = @{
 <li>[YES] Results logged in CSV (machine-readable, sortable)</li>
 <li>[YES] Repeatable (can verify steps later)</li>
 </ul>
-<hr />
+<hr>
 <h2 id="next-steps"><a class="header" href="#next-steps">Next Steps</a></h2>
 <ol>
 <li><strong>Try the basic build script</strong> (Script 1) with one of your SCAD files</li>
@@ -944,7 +962,13 @@ $Config = @{
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../3dMake_Foundation/Appendix_C_Tolerance_QA.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
+                            <a rel="next prefetch" href="../3dMake_Foundation/Appendix_E_Advanced_OpenSCAD_Concepts.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -952,7 +976,13 @@ $Config = @{
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../3dMake_Foundation/Appendix_C_Tolerance_QA.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
 
+                    <a rel="next prefetch" href="../3dMake_Foundation/Appendix_E_Advanced_OpenSCAD_Concepts.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
             </nav>
 
         </div>
@@ -966,13 +996,13 @@ $Config = @{
         </script>
 
 
-        <script src="../elasticlunr.min.js"></script>
-        <script src="../mark.min.js"></script>
-        <script src="../searcher.js"></script>
+        <script src="../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../mark-09e88c2c.min.js"></script>
+        <script src="../searcher-c2a407aa.js"></script>
 
-        <script src="../clipboard.min.js"></script>
-        <script src="../highlight.js"></script>
-        <script src="../book.js"></script>
+        <script src="../clipboard-1626706a.min.js"></script>
+        <script src="../highlight-4a3ec6df.js"></script>
+        <script src="../book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
 

@@ -58,23 +58,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../../favicon.svg">
-        <link rel="shortcut icon" href="../../favicon.png">
-        <link rel="stylesheet" href="../../css/variables.css">
-        <link rel="stylesheet" href="../../css/general.css">
-        <link rel="stylesheet" href="../../css/chrome.css">
-        <link rel="stylesheet" href="../../css/print.css" media="print">
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-2459343d.css">
+        <link rel="stylesheet" href="../../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../../fonts/fonts.css">
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../../theme/catppuccin.css">
+        <link rel="stylesheet" href="../../theme/catppuccin-be25834e.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -82,10 +82,10 @@
             const path_to_root = "../../";
             const default_light_theme = "latte";
             const default_dark_theme = "mocha";
-            window.path_to_searchindex_js = "../../searchindex.js";
+            window.path_to_searchindex_js = "../../searchindex-a4c66f4b.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc.js"></script>
+        <script src="../../toc-6a7ae851.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -240,7 +240,7 @@ Parameter - A named value passed into a module, function, or used as a
 variable to control dimensions and behavior.
 Preview - A fast, approximate display of a design in OpenSCAD used for
 checking structure before full render.
-Render - Full evaluation of a design's geometry in OpenSCAD; required
+Render - Full evaluation of a design’s geometry in OpenSCAD; required
 before exporting to an STL for printing.
 Units - The measurement units used in designs. OpenSCAD is unitless by
 default, but in 3D printing contexts millimeters are conventionally
@@ -249,7 +249,7 @@ Width / Length / Height - X, Y, and Z axis dimensions respectively.
 2D shape - A planar geometry with width and length but negligible
 height (e.g., a 2D profile used for extrusion).
 3D shape - A solid geometry with width, length, and height.</p>
-<hr />
+<hr>
 <h2 id="3d-printing-terminology"><a class="header" href="#3d-printing-terminology">3D Printing Terminology</a></h2>
 <p>Layer Height - The vertical thickness of each printed layer, typically
 measured in millimeters; smaller values give finer Z resolution.
@@ -286,7 +286,7 @@ Warping - Distortion caused by uneven cooling, often lifting corners
 from the build plate; mitigated by bed adhesion and enclosure.
 Calibration - The process of adjusting printer settings (e.g., steps/mm,
 nozzle height) to ensure accurate prints.</p>
-<hr />
+<hr>
 <h2 id="openscad-specific-terms"><a class="header" href="#openscad-specific-terms">OpenSCAD-Specific Terms</a></h2>
 <p>Module - A reusable block of OpenSCAD code defined with <code>module name(){}</code>
 which can be called with different parameters to produce geometry.
@@ -297,7 +297,7 @@ combine or subtract solids.
 Transform - Operations that change object position or orientation,
 including <code>translate()</code>, <code>rotate()</code>, and <code>scale()</code>.
 Children - In module calls, the nested code that becomes part of the
-module's execution context when using <code>children()</code>.
+module’s execution context when using <code>children()</code>.
 CSG (Constructive Solid Geometry) - The technique of building complex
 shapes by combining primitive solids with boolean operations.
 Primitive - Simple built-in shapes like <code>cube()</code>, <code>cylinder()</code>,
@@ -312,7 +312,7 @@ Preview vs Render - Preview is quick and approximate; render (<code>F6</code>)
 evaluates the final geometry for export.
 Parameterization - Designing with variables and parameters so that a
 single file can generate many variants by changing inputs.</p>
-<hr />
+<hr>
 <h2 id="3dmake--make3d-terminology-cli-based-toolchain-concepts"><a class="header" href="#3dmake--make3d-terminology-cli-based-toolchain-concepts">3dMake / Make3D Terminology (CLI-based toolchain concepts)</a></h2>
 <p>3dMake (Make3D) - A command-line workflow or helper scripts that
 automate building, slicing, and managing OpenSCAD-based projects.
@@ -327,7 +327,7 @@ Headless Render - Running OpenSCAD from the command line (no GUI)
 to render models and export STLs programmatically.
 Automation - Using scripts or CI to produce builds and test changes
 without manual GUI interaction.</p>
-<hr />
+<hr>
 <h2 id="powershell-terminology-relevant-to-automation-and-workflows"><a class="header" href="#powershell-terminology-relevant-to-automation-and-workflows">PowerShell Terminology (relevant to automation and workflows)</a></h2>
 <p>PowerShell - A task automation and configuration management framework
 from Microsoft that uses cmdlets and a scripting language.
@@ -356,7 +356,7 @@ or <code>@array</code> for cleaner code.
 Format-Table / Format-List - Cmdlets for controlling how objects are
 displayed in the console; for automation prefer raw objects to
 formatted text.</p>
-<hr />
+<hr>
 <h2 id="testing-documentation-and-workflow-terms"><a class="header" href="#testing-documentation-and-workflow-terms">Testing, Documentation, and Workflow Terms</a></h2>
 <p>Linting - Static analysis to detect style or simple errors in code
 (e.g., PowerShell Script Analyzer).
@@ -370,13 +370,18 @@ repository).
 Accessibility (a11y) - Ensuring materials and workflows work for
 people using assistive technology (screen readers, braille displays,
 keyboard navigation).</p>
-<hr />
-
+<hr>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../3dMake_Foundation/Lessons_3dMake_1/mdbook-navigation-guide.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
+                            <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_1/vocabulary-glossary.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -384,7 +389,13 @@ keyboard navigation).</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../3dMake_Foundation/Lessons_3dMake_1/mdbook-navigation-guide.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
 
+                    <a rel="next prefetch" href="../../3dMake_Foundation/Lessons_3dMake_1/vocabulary-glossary.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
             </nav>
 
         </div>
@@ -398,13 +409,13 @@ keyboard navigation).</p>
         </script>
 
 
-        <script src="../../elasticlunr.min.js"></script>
-        <script src="../../mark.min.js"></script>
-        <script src="../../searcher.js"></script>
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-c2a407aa.js"></script>
 
-        <script src="../../clipboard.min.js"></script>
-        <script src="../../highlight.js"></script>
-        <script src="../../book.js"></script>
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-4a3ec6df.js"></script>
+        <script src="../../book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
 

@@ -58,23 +58,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="../favicon.svg">
-        <link rel="shortcut icon" href="../favicon.png">
-        <link rel="stylesheet" href="../css/variables.css">
-        <link rel="stylesheet" href="../css/general.css">
-        <link rel="stylesheet" href="../css/chrome.css">
-        <link rel="stylesheet" href="../css/print.css" media="print">
+        <link rel="icon" href="../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../css/general-2459343d.css">
+        <link rel="stylesheet" href="../css/chrome-ae938929.css">
+        <link rel="stylesheet" href="../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../fonts/fonts.css">
+        <link rel="stylesheet" href="../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight.css">
-        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night.css">
-        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        <link rel="stylesheet" href="../theme/catppuccin.css">
+        <link rel="stylesheet" href="../theme/catppuccin-be25834e.css">
 
 
         <!-- Provide site root and default themes to javascript -->
@@ -82,10 +82,10 @@
             const path_to_root = "../";
             const default_light_theme = "latte";
             const default_dark_theme = "mocha";
-            window.path_to_searchindex_js = "../searchindex.js";
+            window.path_to_searchindex_js = "../searchindex-a4c66f4b.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc.js"></script>
+        <script src="../toc-6a7ae851.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -221,10 +221,10 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="command_line_interface_selection-command_line_interface_selection"><a class="header" href="#command_line_interface_selection-command_line_interface_selection">Part 1: Command-Line Fundamentals - Choose Your Path</a></h1>
-<p><strong>Welcome!</strong> Before diving into 3D design with OpenSCAD, you'll master command-line fundamentals. This page will help you understand what command-line interfaces are and choose the best path for you.</p>
-<hr />
+<p><strong>Welcome!</strong> Before diving into 3D design with OpenSCAD, you’ll master command-line fundamentals. This page will help you understand what command-line interfaces are and choose the best path for you.</p>
+<hr>
 <h2 id="what-is-a-command-line-interface-cli"><a class="header" href="#what-is-a-command-line-interface-cli">What is a Command-Line Interface (CLI)?</a></h2>
-<p>A command-line interface is a text-based way to control your computer by typing commands instead of clicking buttons. It's like sending written instructions to your computer.</p>
+<p>A command-line interface is a text-based way to control your computer by typing commands instead of clicking buttons. It’s like sending written instructions to your computer.</p>
 <h3 id="why-learn-it"><a class="header" href="#why-learn-it">Why learn it?</a></h3>
 <ul>
 <li><strong>Speed:</strong> Text commands are often faster than clicking through menus</li>
@@ -239,15 +239,15 @@
 <li>Opening File Explorer (click)</li>
 <li>Navigating folders (click, click, click)</li>
 <li>Right-clicking a file (click)</li>
-<li>Selecting "Copy" (click)</li>
+<li>Selecting “Copy” (click)</li>
 <li>Navigating to destination (click, click)</li>
 <li>Right-clicking (click)</li>
-<li>Selecting "Paste" (click)</li>
+<li>Selecting “Paste” (click)</li>
 </ol>
 <p>You type: <code>cp myfile.txt backup/</code> and press Enter. Done.</p>
-<hr />
+<hr>
 <h2 id="three-command-line-options-on-windows"><a class="header" href="#three-command-line-options-on-windows">Three Command-Line Options on Windows</a></h2>
-<p>Windows offers three ways to use the command line. All are accessible with screen readers. Here's how they compare:</p>
+<p>Windows offers three ways to use the command line. All are accessible with screen readers. Here’s how they compare:</p>
 <h3 id="option-1-windows-command-prompt-cmd"><a class="header" href="#option-1-windows-command-prompt-cmd">Option 1: Windows Command Prompt (CMD)</a></h3>
 <p><strong>What it is:</strong> The original Windows command-line (1981-present)</p>
 <p><strong>Best for:</strong> Absolute beginners, maximum simplicity</p>
@@ -269,9 +269,9 @@
 <p><strong>Typical command:</strong></p>
 <pre><code class="language-cmd">copy myfile.txt backup\
 </code></pre>
-<hr />
+<hr>
 <h3 id="option-2-powershell"><a class="header" href="#option-2-powershell">Option 2: PowerShell</a></h3>
-<p><strong>What it is:</strong> Microsoft's modern, powerful shell (2006-present)</p>
+<p><strong>What it is:</strong> Microsoft’s modern, powerful shell (2006-present)</p>
 <p><strong>Best for:</strong> Intermediate users, advanced automation</p>
 <p><strong>Pros:</strong></p>
 <ul>
@@ -285,13 +285,13 @@
 <ul>
 <li>Steeper learning curve than CMD</li>
 <li>More complex syntax</li>
-<li>More "wordy" commands</li>
+<li>More “wordy” commands</li>
 <li>Overkill for simple tasks</li>
 </ul>
 <p><strong>Typical command:</strong></p>
 <pre><code class="language-powershell">Copy-Item -Path myfile.txt -Destination backup/
 </code></pre>
-<hr />
+<hr>
 <h3 id="option-3-git-bash"><a class="header" href="#option-3-git-bash">Option 3: Git Bash</a></h3>
 <p><strong>What it is:</strong> A Unix/Linux shell on Windows (runs bash inside Git for Windows)</p>
 <p><strong>Best for:</strong> Programmers, users familiar with Linux, advanced users</p>
@@ -309,15 +309,20 @@
 <li>Steeper learning curve</li>
 <li>Path syntax is different from native Windows</li>
 <li>Less integrated with Windows system tools</li>
-<li>May be "too much" for beginners</li>
+<li>May be “too much” for beginners</li>
 </ul>
 <p><strong>Typical command:</strong></p>
 <pre><code class="language-bash">cp myfile.txt backup/
 </code></pre>
-<hr />
+<hr>
 <h2 id="command-comparison-table"><a class="header" href="#command-comparison-table">Command Comparison Table</a></h2>
-<p>Here's how common tasks compare across the three options:</p>
-<div class="table-wrapper"><table><thead><tr><th>Task</th><th>Command Prompt</th><th>PowerShell</th><th>Git Bash</th></tr></thead><tbody>
+<p>Here’s how common tasks compare across the three options:</p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Task</th><th>Command Prompt</th><th>PowerShell</th><th>Git Bash</th></tr>
+</thead>
+<tbody>
 <tr><td><strong>Show current location</strong></td><td><code>cd</code></td><td><code>pwd</code></td><td><code>pwd</code></td></tr>
 <tr><td><strong>List files</strong></td><td><code>dir /B</code></td><td><code>ls -n</code></td><td><code>ls</code></td></tr>
 <tr><td><strong>Go to folder</strong></td><td><code>cd Documents</code></td><td><code>cd Documents</code></td><td><code>cd Documents</code></td></tr>
@@ -335,11 +340,17 @@
 <tr><td><strong>Show file contents</strong></td><td><code>type file.txt</code></td><td><code>cat file.txt</code> or <code>Get-Content</code></td><td><code>cat file.txt</code></td></tr>
 <tr><td><strong>Create script</strong></td><td><code>.bat</code> files</td><td><code>.ps1</code> files</td><td><code>.sh</code> files</td></tr>
 <tr><td><strong>Run script</strong></td><td><code>script.bat</code></td><td><code>.\script.ps1</code></td><td><code>./script.sh</code></td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
-<hr />
+<hr>
 <h2 id="feature-comparison-table"><a class="header" href="#feature-comparison-table">Feature Comparison Table</a></h2>
-<div class="table-wrapper"><table><thead><tr><th>Feature</th><th>CMD</th><th>PowerShell</th><th>Git Bash</th></tr></thead><tbody>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Feature</th><th>CMD</th><th>PowerShell</th><th>Git Bash</th></tr>
+</thead>
+<tbody>
 <tr><td><strong>Simplicity</strong></td><td>Easiest</td><td>Moderate</td><td>Hardest</td></tr>
 <tr><td><strong>Beginner-Friendly</strong></td><td>Best</td><td>Good</td><td>Challenging</td></tr>
 <tr><td><strong>Power/Capability</strong></td><td>Basic</td><td>Excellent</td><td>Excellent</td></tr>
@@ -350,15 +361,16 @@
 <tr><td><strong>Community Support</strong></td><td>Moderate</td><td>Excellent</td><td>Excellent</td></tr>
 <tr><td><strong>Windows Integration</strong></td><td>Perfect</td><td>Perfect</td><td>Good</td></tr>
 <tr><td><strong>Installation Difficulty</strong></td><td>Built-in</td><td>Built-in</td><td>Requires Git</td></tr>
-</tbody></table>
+</tbody>
+</table>
 </div>
-<hr />
+<hr>
 <h2 id="quick-learner-profile-test"><a class="header" href="#quick-learner-profile-test">Quick Learner Profile Test</a></h2>
 <p>Answer these questions to find your best match:</p>
 <h3 id="question-1-experience-level"><a class="header" href="#question-1-experience-level">Question 1: Experience Level</a></h3>
 <ul>
-<li><strong>A:</strong> I've never used a command line → <strong>Easier paths better (CMD or PowerShell)</strong></li>
-<li><strong>B:</strong> I've used terminals before → <strong>Any path works</strong></li>
+<li><strong>A:</strong> I’ve never used a command line → <strong>Easier paths better (CMD or PowerShell)</strong></li>
+<li><strong>B:</strong> I’ve used terminals before → <strong>Any path works</strong></li>
 <li><strong>C:</strong> I use macOS or Linux → <strong>Git Bash most natural</strong></li>
 </ul>
 <h3 id="question-2-what-matters-most"><a class="header" href="#question-2-what-matters-most">Question 2: What matters most?</a></h3>
@@ -375,13 +387,13 @@
 </ul>
 <h3 id="question-4-your-main-concern"><a class="header" href="#question-4-your-main-concern">Question 4: Your main concern</a></h3>
 <ul>
-<li><strong>A:</strong> Don't want steep learning curve → <strong>CMD</strong></li>
+<li><strong>A:</strong> Don’t want steep learning curve → <strong>CMD</strong></li>
 <li><strong>B:</strong> Want industry-standard skills → <strong>Git Bash</strong></li>
-<li><strong>C:</strong> Want Microsoft's modern tool → <strong>PowerShell</strong></li>
+<li><strong>C:</strong> Want Microsoft’s modern tool → <strong>PowerShell</strong></li>
 </ul>
-<hr />
+<hr>
 <h2 id="recommendation-by-goal"><a class="header" href="#recommendation-by-goal">Recommendation by Goal</a></h2>
-<h3 id="goal-i-want-to-learn-the-basics-and-get-to-3d-printing-quickly"><a class="header" href="#goal-i-want-to-learn-the-basics-and-get-to-3d-printing-quickly">Goal: "I want to learn the basics and get to 3D printing quickly"</a></h3>
+<h3 id="goal-i-want-to-learn-the-basics-and-get-to-3d-printing-quickly"><a class="header" href="#goal-i-want-to-learn-the-basics-and-get-to-3d-printing-quickly">Goal: “I want to learn the basics and get to 3D printing quickly”</a></h3>
 <h4 id="-start-with-cmd-command-prompt"><a class="header" href="#-start-with-cmd-command-prompt">→ Start with CMD (Command Prompt)</a></h4>
 <ul>
 <li>Simplest syntax</li>
@@ -390,18 +402,18 @@
 <li>Can switch later if needed</li>
 </ul>
 <p><a href="../CMD_Foundation/CMD_Curriculum_Overview/CMD_Curriculum_Overview.html">Start CMD Foundation</a></p>
-<hr />
-<h3 id="goal-i-want-power-and-professional-automation"><a class="header" href="#goal-i-want-power-and-professional-automation">Goal: "I want power and professional automation"</a></h3>
+<hr>
+<h3 id="goal-i-want-power-and-professional-automation"><a class="header" href="#goal-i-want-power-and-professional-automation">Goal: “I want power and professional automation”</a></h3>
 <h4 id="-start-with-powershell"><a class="header" href="#-start-with-powershell">→ Start with PowerShell</a></h4>
 <ul>
-<li>Microsoft's modern, recommended tool</li>
+<li>Microsoft’s modern, recommended tool</li>
 <li>Professional-grade capabilities</li>
 <li>Better for complex 3D printing workflows</li>
 <li>Skills are in-demand</li>
 </ul>
 <p><a href="../PowerShell_Foundation/PowerShell_Curriculum_Overview/PowerShell_Curriculum_Overview.html">Start PowerShell Foundation</a></p>
-<hr />
-<h3 id="goal-i-want-skills-that-work-on-windows-mac-and-linux"><a class="header" href="#goal-i-want-skills-that-work-on-windows-mac-and-linux">Goal: "I want skills that work on Windows, Mac, and Linux"</a></h3>
+<hr>
+<h3 id="goal-i-want-skills-that-work-on-windows-mac-and-linux"><a class="header" href="#goal-i-want-skills-that-work-on-windows-mac-and-linux">Goal: “I want skills that work on Windows, Mac, and Linux”</a></h3>
 <h4 id="-start-with-git-bash"><a class="header" href="#-start-with-git-bash">→ Start with Git Bash</a></h4>
 <ul>
 <li>Unix/bash skills transfer everywhere</li>
@@ -410,7 +422,7 @@
 <li>Growing standard in 3D printing tools</li>
 </ul>
 <p><a href="../GitBash_Foundation/GitBash_Curriculum_Overview/GitBash_Curriculum_Overview.html">Start Git Bash Foundation</a></p>
-<hr />
+<hr>
 <h2 id="can-i-switch-paths-later"><a class="header" href="#can-i-switch-paths-later">Can I Switch Paths Later?</a></h2>
 <p><strong>Yes, absolutely!</strong> All three teach the same fundamental concepts:</p>
 <ul>
@@ -420,8 +432,8 @@
 <li>Scripting and automation basics</li>
 </ul>
 <p>Once you learn one, switching to another is quick. The concepts are identical; only the syntax changes.</p>
-<p><strong>Example:</strong> If you learn CMD first, then later want PowerShell's power, you'll find it easy. The command <code>cd Documents</code> works the same way in all three.</p>
-<hr />
+<p><strong>Example:</strong> If you learn CMD first, then later want PowerShell’s power, you’ll find it easy. The command <code>cd Documents</code> works the same way in all three.</p>
+<hr>
 <h2 id="important-all-are-equally-accessible"><a class="header" href="#important-all-are-equally-accessible">Important: All Are Equally Accessible</a></h2>
 <h3 id="screen-readers-work-perfectly-with-all-three"><a class="header" href="#screen-readers-work-perfectly-with-all-three">Screen readers work perfectly with all three</a></h3>
 <ul>
@@ -430,8 +442,8 @@
 <li>Output is naturally readable</li>
 <li>Keyboard-only workflows</li>
 </ul>
-<p>Don't let accessibility concerns influence your choice. All are fully accessible.</p>
-<hr />
+<p>Don’t let accessibility concerns influence your choice. All are fully accessible.</p>
+<hr>
 <h2 id="getting-started-your-decision"><a class="header" href="#getting-started-your-decision">Getting Started: Your Decision</a></h2>
 <p>Take a moment and choose:</p>
 <h3 id="1-i-want-the-simplest-path"><a class="header" href="#1-i-want-the-simplest-path">1️ <strong>I want the simplest path</strong></a></h3>
@@ -439,9 +451,9 @@
 <ul>
 <li><strong>Time to first success:</strong> ~30 minutes</li>
 <li><strong>Learning curve:</strong> Gentlest</li>
-<li><strong>When to upgrade:</strong> Once you're comfortable and want power</li>
+<li><strong>When to upgrade:</strong> Once you’re comfortable and want power</li>
 </ul>
-<hr />
+<hr>
 <h3 id="2-i-want-modern-powerful-windows-tools"><a class="header" href="#2-i-want-modern-powerful-windows-tools">2️ <strong>I want modern, powerful Windows tools</strong></a></h3>
 <p>→ <a href="../PowerShell_Foundation/Part_1.html">PowerShell Foundation</a></p>
 <ul>
@@ -449,7 +461,7 @@
 <li><strong>Learning curve:</strong> Moderate</li>
 <li><strong>Best for:</strong> Professional automation, 3D printing workflows</li>
 </ul>
-<hr />
+<hr>
 <h3 id="3-i-want-unixlinux-skills-that-work-everywhere"><a class="header" href="#3-i-want-unixlinux-skills-that-work-everywhere">3️ <strong>I want Unix/Linux skills that work everywhere</strong></a></h3>
 <p>→ <a href="../GitBash_Foundation/Part_1.html">Git Bash Foundation</a></p>
 <ul>
@@ -457,11 +469,11 @@
 <li><strong>Learning curve:</strong> Steeper but rewarding</li>
 <li><strong>Best for:</strong> Professional development, cross-platform work</li>
 </ul>
-<hr />
-<h2 id="not-sure-heres-what-most-people-do"><a class="header" href="#not-sure-heres-what-most-people-do">Not Sure? Here's What Most People Do</a></h2>
-<p><strong>If you're reading this and unsure:</strong></p>
+<hr>
+<h2 id="not-sure-heres-what-most-people-do"><a class="header" href="#not-sure-heres-what-most-people-do">Not Sure? Here’s What Most People Do</a></h2>
+<p><strong>If you’re reading this and unsure:</strong></p>
 <blockquote>
-<p><strong>Start with Command Prompt (CMD).</strong> It's the gentlest introduction. You'll be productive quickly and can always switch to PowerShell or Git Bash later. The skills transfer completely.</p>
+<p><strong>Start with Command Prompt (CMD).</strong> It’s the gentlest introduction. You’ll be productive quickly and can always switch to PowerShell or Git Bash later. The skills transfer completely.</p>
 </blockquote>
 <p>After completing CMD:</p>
 <ul>
@@ -469,34 +481,40 @@
 <li>Want Linux skills? → Git Bash is next</li>
 <li>Want to stick with CMD? → You have all the skills you need</li>
 </ul>
-<hr />
+<hr>
 <h2 id="faq"><a class="header" href="#faq">FAQ</a></h2>
 <p><strong>Q: Do I need to pick now and stick with it forever?</strong>
-A: No. Start with one, try another, switch between them. They're tools. Use what works.</p>
+A: No. Start with one, try another, switch between them. They’re tools. Use what works.</p>
 <p><strong>Q: Will my 3D printing skills work in all three?</strong>
 A: Yes. Once you understand the concepts (file organization, automation, piping), they apply everywhere.</p>
 <p><strong>Q: If I pick CMD, can I learn PowerShell later?</strong>
 A: Absolutely. Many learners do exactly this. CMD gets you productive; PowerShell adds power.</p>
 <p><strong>Q: Is Git Bash harder?</strong>
-A: Slightly, due to path syntax and Unix conventions. But not dramatically. If you take time with it, you'll learn it.</p>
+A: Slightly, due to path syntax and Unix conventions. But not dramatically. If you take time with it, you’ll learn it.</p>
 <p><strong>Q: Which do professional 3D printing developers use?</strong>
 A: Mix of all three, but Git Bash/Linux is most common in cross-platform teams.</p>
-<hr />
+<hr>
 <h2 id="ready-to-begin"><a class="header" href="#ready-to-begin">Ready to Begin?</a></h2>
 <p>Choose your path above and click to start. Remember:</p>
 <ul>
 <li>Each lesson includes practice exercises</li>
-<li>You can't break anything</li>
+<li>You can’t break anything</li>
 <li>Mistakes are learning opportunities</li>
 <li>Ask for help if stuck</li>
 </ul>
-<p><strong>Let's get you comfortable with the command line!</strong></p>
+<p><strong>Let’s get you comfortable with the command line!</strong></p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../Setup/Editor_Selection_Setup/Editor_Selection_Setup.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
+                            <a rel="next prefetch" href="../PowerShell_Foundation/Part_1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <!-- icon removed: fa helper unsupported -->
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -504,7 +522,13 @@ A: Mix of all three, but Git Bash/Linux is most common in cross-platform teams.<
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../Setup/Editor_Selection_Setup/Editor_Selection_Setup.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
 
+                    <a rel="next prefetch" href="../PowerShell_Foundation/Part_1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <!-- icon removed: fa helper unsupported -->
+                    </a>
             </nav>
 
         </div>
@@ -518,13 +542,13 @@ A: Mix of all three, but Git Bash/Linux is most common in cross-platform teams.<
         </script>
 
 
-        <script src="../elasticlunr.min.js"></script>
-        <script src="../mark.min.js"></script>
-        <script src="../searcher.js"></script>
+        <script src="../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../mark-09e88c2c.min.js"></script>
+        <script src="../searcher-c2a407aa.js"></script>
 
-        <script src="../clipboard.min.js"></script>
-        <script src="../highlight.js"></script>
-        <script src="../book.js"></script>
+        <script src="../clipboard-1626706a.min.js"></script>
+        <script src="../highlight-4a3ec6df.js"></script>
+        <script src="../book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
 
