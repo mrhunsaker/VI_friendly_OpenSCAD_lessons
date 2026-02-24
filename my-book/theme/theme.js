@@ -84,10 +84,14 @@ function createPenSwitcher() {
   document.body.appendChild(container);
 }
 
+
+window.addEventListener("DOMContentLoaded", function() {
   // Assign IDs to existing link elements for Catppuccin variants
   CATPPUCCIN_VARIANTS.forEach(v => {
     findOrAssignLinkId(v);
   });
   setVariant(getCurrentVariant());
+  createPenSwitcher();
+});
   createPenSwitcher();
 });
