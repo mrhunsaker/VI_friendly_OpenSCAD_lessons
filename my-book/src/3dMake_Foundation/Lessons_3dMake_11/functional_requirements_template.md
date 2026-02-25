@@ -4,32 +4,28 @@ Document and organize functional requirements derived from stakeholder interview
 
 ## Project Information
 
-- **Project Name:** _
-- **Version:** _
-- **Date Created:** _
-- **Last Updated:** _
-- **Prepared By:** _
-- **Approved By:** _
-
----
+- Project Name: _
+- Version: _
+- Date Created: _
+- Last Updated: _
+- Prepared By: _
+- Approved By: _
 
 ## Executive Summary
 
-**Project Description:**
+Project Description:
 (One paragraph overview of what this project is about)
 _
 _
 
-**Business/User Need:**
+Business/User Need:
 (Why is this project important?)
 _
 
-**Stakeholders:**
+Stakeholders:
 - Primary user: _
 - Secondary users: 
 - Decision makers: 
-
----
 
 ## Functional Requirements
 
@@ -41,85 +37,73 @@ Requirements organized by:
 - [ ] Priority level
 - [ ] Other: _
 
----
-
 ## Primary Functional Requirements
 
 *Core features that define the product*
 
 ### FR1: [Feature Name]
-**Priority:** [ ] Critical  [ ] High  [ ] Medium  [ ] Low
+Priority: [ ] Critical  [ ] High  [ ] Medium  [ ] Low
 
-**Description:**
+Description:
 What the product must do:
 _
 
-**User Stories:**
+User Stories:
 - "As a [user type], I want to [action] so that [benefit]"
   - _
   
 - "As a [user type], I want to [action] so that [benefit]"
   - _
 
-**Acceptance Criteria:**
+Acceptance Criteria:
 - [ ] 
 - [ ] 
 - [ ] 
 
-**Related Requirements:** 
-
----
+Related Requirements: 
 
 ### FR2: [Feature Name]
-**Priority:** [ ] Critical  [ ] High  [ ] Medium  [ ] Low
+Priority: [ ] Critical  [ ] High  [ ] Medium  [ ] Low
 
-**Description:**
+Description:
 _
 
-**User Stories:**
+User Stories:
 - 
 - 
 
-**Acceptance Criteria:**
+Acceptance Criteria:
 - [ ] 
 - [ ] 
 
-**Related Requirements:** 
-
----
+Related Requirements: 
 
 ### FR3: [Feature Name]
 (Continue with additional primary requirements)
-
----
 
 ## Secondary Functional Requirements
 
 *Important supporting features*
 
 ### FR-S1: [Feature Name]
-**Priority:** [ ] High  [ ] Medium  [ ] Low
+Priority: [ ] High  [ ] Medium  [ ] Low
 
-**Description:**
+Description:
 _
 
-**Acceptance Criteria:**
+Acceptance Criteria:
 - [ ] 
 - [ ] 
-
----
 
 ### FR-S2: [Feature Name]
 (Continue with secondary requirements)
 
----
-
 ## Non-Functional Requirements
 
-*Performance, reliability, and design properties*
+*Performance, reliability, and design}} properties*
 
 ### Performance Requirements
-- Response time: _
+- Response time}}: _
 - Throughput: _
 - Resource usage: _
 
@@ -148,14 +132,12 @@ _
 - [ ] Usable by people with cognitive differences
   - How: 
 
----
-
 ## Constraint Requirements
 
-*Limitations on design and implementation*
+*Limitations on design}} and implementation*
 
 ### Technical Constraints
-- Must work with: 
+- Must work}} with: 
 - Must not require: 
 - Must be compatible with: 
 
@@ -173,8 +155,6 @@ _
 - Maximum budget: 
 - Target unit cost: _
 
----
-
 ## Environmental Context
 
 ### Use Environment
@@ -188,11 +168,9 @@ _
 - Maintenance needed: 
 - End-of-life handling: 
 
----
-
 ## Dependency Mapping
 
-**Requirements that depend on other requirements:**
+Requirements that depend on other requirements:
 
 | Requirement | Depends On | Notes                        |
 |-------------|------------|------------------------------|
@@ -200,11 +178,9 @@ _
 | FR2         | FR1        | Cannot implement without FR1 |
 | FR3         |            |                              |
 
-**External dependencies:**
+External dependencies:
 - Third-party components needed: 
 - Integration points: 
-
----
 
 ## Scope Definition
 
@@ -220,54 +196,44 @@ _
 ### Future Considerations (Out of Scope but noted)
 - 
 
----
-
 ## Change Control
 
-**Requirements Changes:**
+Requirements Changes:
 
 | Change Request | Date | Reason | Status |
 |----------------|------|--------|--------|
 |                |      |        |        |
 |                |      |        |        |
 
----
-
 ## Verification Plan
 
-**How will we verify each requirement is met?**
+How will we verify each}} requirement is met?
 
 | Requirement | Verification Method    | Test Case | Status |
 |-------------|------------------------|-----------|--------|
 | FR1         | [Inspection/Test/Demo] |           |        |
 | FR2         | [Inspection/Test/Demo] |           |        |
 
----
-
 ## Sign-Off
 
-**Stakeholder Approval:**
+Stakeholder Approval:
 
 | Stakeholder | Title | Signature | Date |
 |-------------|-------|-----------|------|
 |             |       |           |      |
 |             |       |           |      |
 
-**Requirements Baseline Approved:**
+Requirements Baseline Approved:
 Date:   Status:  Approved /  Pending /  Rejected
-
----
 
 ## Reference Documents
 
 - Interview notes: 
-- Design sketches: 
+- Design}} sketches: 
 - Related specifications: _
 - Standards/guidelines: 
 
----
-
-**Document Version History:**
+Document Version History:
 
 | Version | Date | Author | Changes       |
 |---------|------|--------|---------------|

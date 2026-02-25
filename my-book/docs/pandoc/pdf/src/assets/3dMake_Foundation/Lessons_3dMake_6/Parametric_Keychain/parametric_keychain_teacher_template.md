@@ -4,9 +4,9 @@
 
 Students design a personalized keychain using fully parametric OpenSCAD code. This project emphasizes parameter-driven design, customization, and user-centered iteration.
 
-**Key Learning:** Parametric modularity; customization; design for manufacturing variation.
+Key Learning: Parametric modularity; customization; design for manufacturing variation.
 
-**Real-world Connection:** Mass customization is a growing manufacturing trend. Parametric design enables efficient production of personalized products.
+Real-world Connection: Mass customization is a growing manufacturing trend. Parametric design enables efficient production of personalized products.
 
 ## Constraints
 - Keychain must be fully parametric (text, size, material all variables)
@@ -38,10 +38,8 @@ Code is fully parametric and well-organized. Variants work well.
 ### Category 3: Documentation (0-3)
 Variant table complete. Customization guide clear and detailed.
 
----
-
 ## Assessment Notes
 
-- **Strong submissions:** Show comprehensive parametric thinking, multiple tested variants, and clear guidance for customization
-- **Reinforce:** Documentation for design reuse
-- **Extension:** User feedback on customization preferences; commercial potential analysis
+- Strong submissions: Show comprehensive parametric thinking, multiple tested variants, and clear guidance for customization
+- Reinforce: Documentation for design reuse
+- Extension: User feedback on customization preferences; commercial potential analysis

@@ -1,14 +1,14 @@
 # Lesson 2: Geometric Primitives and Constructive Solid Geometry {#assets_3dmake_foundation_lessons_3dmake_2-readme}
 
-**Estimated time:** 60 minutes
+Estimated time: 60 minutes
 
 ## Folder Contents
 
 This folder contains supporting materials for Lesson 2:
 
-- **Starter Code:** Example snippets for primitives and CSG operations
-- **Extension Projects:** Your_Second_Print and Bonus_Print for real-world application
-- **Reference Materials:** OpenSCAD cheat sheet, slicer validation guides
+- Starter Code: Example snippets for primitives and CSG operations
+- Extension Projects: Your_Second_Print and Bonus_Print for real-world application
+- Reference Materials: OpenSCAD cheat sheet, slicer validation guides
 
 ## Learning Objectives
 
@@ -27,11 +27,11 @@ This folder contains supporting materials for Lesson 2:
 
 ### Your_Second_Print
 
-**Purpose:** Adapt existing models to meet real-world needs; practice iteration and documentation
+Purpose: Adapt existing models to meet real-world needs; practice iteration and documentation
 
-**Time:** 4-8 hours (design, adapt, print, document)
+Time: 4-8 hours (design, adapt, print, document)
 
-**Skills Developed:**
+Skills Developed:
 - Model evaluation and adaptation
 - Parametric modification
 - Iterative design and testing
@@ -39,16 +39,14 @@ This folder contains supporting materials for Lesson 2:
 
 ### Bonus_Print
 
-**Purpose:** Scaling and simple modifications; multi-part printing and documentation
+Purpose: Scaling and simple modifications; multi-part printing and documentation
 
-**Time:** 2-3 hours
+Time: 2-3 hours
 
-**Skills Developed:**
+Skills Developed:
 - Model scaling and resizing
 - Multi-part workflow
 - Print organization and tracking
-
----
 
 ## Quick Start
 
@@ -57,6 +55,4 @@ This folder contains supporting materials for Lesson 2:
 3. Use Appendix A for slicer validation techniques
 4. (Optional) Complete Bonus_Print for additional scaling practice
 
----
-
-**For navigation:** See [3dMake_Foundation Asset Index](../README.md)
+For navigation: See [3dMake_Foundation Asset Index](../README.md)

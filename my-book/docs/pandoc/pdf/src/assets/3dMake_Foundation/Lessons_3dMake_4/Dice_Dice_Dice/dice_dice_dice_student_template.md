@@ -2,19 +2,15 @@
 
 - Author:
 - Date:
-- Description: Design parametric 3D-printed dice and test for fairness through statistical analysis.
+- Description: Design}} parametric}} 3D-printed dice and test}} for fairness through statistical analysis.
 
----
+## Design}} Concept
 
-## Design Concept
+- Dice specifications (size, material}}, infill):
+- How will you}} ensure uniform weight distribution?
+- What design}} details will your dice include (pips, patterns)?
 
-- Dice specifications (size, material, infill):
-- How will you ensure uniform weight distribution?
-- What design details will your dice include (pips, patterns)?
-
----
-
-## Design Specifications
+## Design}} Specifications
 
 | Parameter              | Value |
 |------------------------|-------|
@@ -24,15 +20,13 @@
 | Pip depth              |       |
 | Pit/pip count per face |       |
 
----
-
 ## Fairness Testing
 
 ### Test Setup
 
-- How many rolls will you conduct? (minimum 100)
+- How many rolls will you}} conduct? (minimum 100)
 - Rolling surface and method:
-- Date/time of testing:
+- Date/time}} of testing:
 
 ### Roll Results
 
@@ -51,32 +45,26 @@
 - Is the die fair (within statistical tolerance)?
 - What face appears most/least frequently?
 
----
-
 ## Reflections
 
-- Were you surprised by the results?
-- What design factors influenced fairness?
-- How would you improve the dice design?
-- What did you learn about manufacturing precision?
-
----
+- Were you}} surprised by the results?
+- What design}} factors influenced fairness?
+- How would you}} improve the dice design}}?
+- What did you}} learn about manufacturing precision?
 
 ## Attachments
 
-- [ ] `.scad` file with parametric dice module
-- [ ] Photo of test dice
+- [ ] `.scad` file}} with parametric}} dice module}}
+- [ ] Photo of test}} dice
 - [ ] Roll data (raw results or tally sheet)
 - [ ] Statistical analysis calculations
-- [ ] Design iteration notes (if multiple versions tested)
-
----
+- [ ] Design}} iteration notes (if multiple versions tested)
 
 ## Teacher Feedback
 
-| Category                    | Score  | Notes |
-|-----------------------------|--------|-------|
-| Problem & Solution (0-3)    |        |       |
-| Design & Code Quality (0-3) |        |       |
-| Documentation (0-3)         |        |       |
-| **Total (0-9)**             | **** |       |
+| Category                      | Score | Notes |
+|-------------------------------|-------|-------|
+| Problem & Solution (0-3)      |       |       |
+| Design}} & Code Quality (0-3) |       |       |
+| Documentation (0-3)           |       |       |
+| Total (0-9)                   |       |       |

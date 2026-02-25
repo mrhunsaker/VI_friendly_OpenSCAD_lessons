@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-d11bd641.js";
+            window.path_to_searchindex_js = "../../searchindex-d0af5d9e.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-19a5926f.js"></script>
+        <script src="../../toc-5b0c6224.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -220,120 +220,83 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="cmd_foundation_cmd_5_filling_in_the_gaps-cmd_5_filling_in_the_gaps"><a class="header" href="#cmd_foundation_cmd_5_filling_in_the_gaps-cmd_5_filling_in_the_gaps">CMD-5: Filling in the Gaps - Batch Files &amp; Advanced Techniques</a></h1>
-<p><strong>Duration:</strong> 2 hours (for screen reader users)<br><strong>Prerequisites:</strong> CMD-Pre through CMD-4</p>
-<p><strong>Learning Objectives:</strong></p>
+                        <h1 id="cmd-5-filling-in-the-gaps---control-flow-startup-scripts-and-useful-tricks"><a class="header" href="#cmd-5-filling-in-the-gaps---control-flow-startup-scripts-and-useful-tricks">CMD-5: Filling in the Gaps - Control Flow, Startup Scripts, and Useful Tricks</a></h1>
+<p>Estimated time: 30-45 minutes</p>
+<h2 id="learning-objectives"><a class="header" href="#learning-objectives">Learning Objectives</a></h2>
 <ul>
-<li>Create and run batch files</li>
-<li>Write simple batch scripts</li>
-<li>Automate repetitive tasks</li>
-<li>Understand command history and debugging</li>
+<li>Use history and abort commands (<code>doskey /history</code>, <code>F7</code>, <code>Ctrl+C</code>)</li>
+<li>Inspect and edit your CMD autorun script for persistent settings</li>
+<li>Run programs by full path using the <code>start</code> or call operator</li>
+<li>Handle common screen reader edge cases when using the terminal</li>
 </ul>
-<hr>
-<h2 id="batch-files-basics"><a class="header" href="#batch-files-basics">Batch Files Basics</a></h2>
-<p>A batch file (<code>.bat</code>) contains multiple commands that run in sequence.</p>
-<h3 id="creating-a-simple-batch-file"><a class="header" href="#creating-a-simple-batch-file">Creating a Simple Batch File</a></h3>
-<p><strong>File: backup.bat</strong></p>
-<pre><code class="language-batch">@echo off
-echo Starting backup...
-copy *.scad backup\
-echo Backup complete!
-pause
-</code></pre>
-<p>Run it:</p>
-<pre><code class="language-cmd">backup.bat
-</code></pre>
-<h3 id="batch-file-commands"><a class="header" href="#batch-file-commands">Batch File Commands</a></h3>
-<pre><code class="language-batch">@echo off           :: Don't show commands, only output
-echo Message        :: Print text
-pause               :: Wait for user to press a key
-::                  :: Comment line
-</code></pre>
-<hr>
-<h2 id="variables-in-batch-files"><a class="header" href="#variables-in-batch-files">Variables in Batch Files</a></h2>
-<pre><code class="language-batch">@echo off
-set folder=%USERPROFILE%\Documents\3DModels
-cd %folder%
-dir /B &gt; filelist.txt
-echo Done
-</code></pre>
-<hr>
-<h2 id="practice-exercises"><a class="header" href="#practice-exercises">Practice Exercises</a></h2>
-<h3 id="exercise-1-create-simple-batch-file"><a class="header" href="#exercise-1-create-simple-batch-file">Exercise 1: Create Simple Batch File</a></h3>
-<ol>
-<li>Open Notepad: <code>notepad.exe backup.bat</code></li>
-<li>Type:</li>
-</ol>
-<pre><code class="language-batch">@echo off
-echo Creating backup folder...
-mkdir backup-current
-echo Copying files...
-copy *.txt backup-current\
-echo Done!
-pause
-</code></pre>
-<ol start="3">
-<li>Save as: <code>backup.bat</code></li>
-<li>Run: <code>backup.bat</code></li>
-</ol>
-<p><strong>Goal:</strong> Create and run a batch file.</p>
-<h3 id="exercise-2-batch-file-with-variables"><a class="header" href="#exercise-2-batch-file-with-variables">Exercise 2: Batch File with Variables</a></h3>
-<ol>
-<li>Create file: <code>notepad.exe organize.bat</code></li>
-<li>Type:</li>
-</ol>
-<pre><code class="language-batch">@echo off
-set source=%USERPROFILE%\Downloads
-set dest=%USERPROFILE%\Documents\DownloadedFiles
-echo Moving files from %source% to %dest%...
-mkdir %dest%
-move %source%\* %dest%\
-echo Done!
-</code></pre>
-<ol start="3">
-<li>Save and run</li>
-</ol>
-<p><strong>Goal:</strong> Use variables in batch files.</p>
-<hr>
-<h2 id="checkpoint-questions"><a class="header" href="#checkpoint-questions">Checkpoint Questions</a></h2>
-<ol>
-<li>What does <code>@echo off</code> do?</li>
-<li>How do you create a batch file?</li>
-<li>How do you run a batch file?</li>
-<li>What does <code>pause</code> do?</li>
-<li>How do you use variables in batch files?</li>
-</ol>
-<hr>
-<h2 id="screen-reader-accessibility-in-command-prompt"><a class="header" href="#screen-reader-accessibility-in-command-prompt">Screen Reader Accessibility in Command Prompt</a></h2>
-<h3 id="best-practices"><a class="header" href="#best-practices">Best Practices</a></h3>
-<ol>
-<li><strong>Save output to files</strong> - always easier to read</li>
-<li><strong>Use clear, simple command names</strong> - easier to remember</li>
-<li><strong>Create batch files for complex operations</strong> - safer and repeatable</li>
-<li><strong>Test carefully</strong> - especially with <code>delete</code> or <code>move</code> commands</li>
-<li><strong>Keep backups</strong> - always important</li>
-</ol>
-<hr>
-<h2 id="advanced-command-prompt-tips"><a class="header" href="#advanced-command-prompt-tips">Advanced Command Prompt Tips</a></h2>
-<h3 id="finding-files"><a class="header" href="#finding-files">Finding Files</a></h3>
-<pre><code class="language-cmd">dir /S /B *.scad          :: Find all .scad files recursively
-</code></pre>
-<h3 id="getting-help"><a class="header" href="#getting-help">Getting Help</a></h3>
-<pre><code class="language-cmd">help                      :: List all commands
-help cd                   :: Help for specific command
-dir /?                    :: Alternative help syntax
-</code></pre>
-<h3 id="checking-file-types"><a class="header" href="#checking-file-types">Checking File Types</a></h3>
-<pre><code class="language-cmd">file type.txt             :: Show file information (if available)
-assoc .scad               :: Show program associated with .scad
-</code></pre>
-<hr>
-<h2 id="next-steps"><a class="header" href="#next-steps">Next Steps</a></h2>
+<h2 id="materials"><a class="header" href="#materials">Materials</a></h2>
 <ul>
-<li>Complete all exercises</li>
-<li>Review all previous lessons</li>
-<li>Move to <strong>CMD_Unit_Test: Comprehensive Practice</strong></li>
+<li>Command Prompt and an editor (Notepad/VS Code)</li>
 </ul>
+<h2 id="step-by-step-tasks"><a class="header" href="#step-by-step-tasks">Step-by-step Tasks</a></h2>
+<ol>
+<li>Run several simple commands (e.g., <code>cd</code>, <code>dir /B</code>, <code>echo hi</code>) then press <code>F7</code> or run <code>doskey /history</code> to view them.</li>
+<li>Use <code>F8</code> to search back through history, or use the up-arrow to re-run a previous command.</li>
+<li>Practice aborting a long-running command with <code>Ctrl + C</code> (for example, <code>ping 8.8.8.8</code>).</li>
+<li>Open your autorun script: <code>notepad.exe autorun.bat</code>; if it doesn’t exist, create it with <code>echo. &gt; autorun.bat</code>.</li>
+<li>Add a persistent alias line to your autorun script (example: <code>doskey preview=openscad $*</code>), save, and configure CMD to use it by registering it in the registry (advanced).</li>
+</ol>
+<h2 id="checkpoints"><a class="header" href="#checkpoints">Checkpoints</a></h2>
+<ul>
+<li>After step 2 you can re-run a recent command from history.</li>
+<li>After step 5 your alias should persist across CMD sessions.</li>
+</ul>
+<h2 id="quiz---lesson-cmd5"><a class="header" href="#quiz---lesson-cmd5">Quiz - Lesson CMD.5</a></h2>
+<ol>
+<li>How do you view the command history in CMD?</li>
+<li>Which key combination aborts a running command?</li>
+<li>What does <code>echo %CMDCMDLINE%</code> show?</li>
+<li>How does the <code>start</code> command help run executables?</li>
+<li>What is one strategy if terminal output stops being announced by your screen reader?</li>
+<li>True or False: Using <code>Ctrl+C</code> permanently deletes any files created by the command you abort.</li>
+<li>Explain the difference between pressing <code>F7</code> and running <code>doskey /history</code> in CMD.</li>
+<li>If you add a doskey macro to your autorun script but it doesn’t take effect after opening a new CMD window, what should you verify?</li>
+<li>Write a command that would run a program at the path <code>C:\Program Files\OpenSCAD\openscad.exe</code> directly.</li>
+<li>Describe a practical workflow scenario where having keyboard shortcuts (doskey macros) in your autorun script would save time.</li>
+<li>Explain how to re-run the 5th command from your history using <code>F7</code> and selection, and what would happen if that command had file operations (creates/deletes).</li>
+<li>Design an autorun initialization strategy that separates utilities for different projects; explain how you would switch between them.</li>
+<li>Walk through a troubleshooting workflow: your screen reader stops announcing output after running a long command. What steps would you take to diagnose and resolve the issue?</li>
+<li>Create a safety checkpoint system: before any destructive operation (mass delete, overwrite), how would you use autorun macros and history to verify the command is correct?</li>
+<li>Develop a comprehensive capstone scenario: integrate everything from CMD-0 through CMD-5 (navigation, file operations, piping, environment setup, history) to design an automated 3D printing project workflow with error handling and logging.</li>
+</ol>
+<h2 id="extension-problems"><a class="header" href="#extension-problems">Extension Problems</a></h2>
+<ol>
+<li>Add a doskey macro and an environment variable change to your autorun script and document the behavior after reopening CMD.</li>
+<li>Create a short batch script that automates creating a project folder and an initial <code>.scad</code> file.</li>
+<li>Experiment with running OpenSCAD by full path using <code>start</code> and by placing it in PATH; compare results.</li>
+<li>Practice redirecting <code>help</code> output to a file and reading it in Notepad for screen reader clarity.</li>
+<li>Document three screen reader troubleshooting steps you used and when they helped.</li>
+<li>Build a comprehensive CMD autorun script that includes aliases, environment variables, and helper macros for your 3D printing workflow.</li>
+<li>Create a batch script that troubleshoots common CMD issues (missing commands, permission errors, command not found); test at least three scenarios.</li>
+<li>Write a batch script that coordinates multiple tasks: creates a project folder, starts OpenSCAD, and opens a notes file.</li>
+<li>Design a screen-reader accessibility guide for CMD: document commands, outputs, and accessible navigation patterns.</li>
+<li>Develop an advanced CMD workflow: implement error handling, logging, and confirmation prompts for risky operations.</li>
+<li>Implement an “undo” system using history: create a batch script that logs destructive commands (<code>del</code>, <code>move</code>, <code>copy /Y</code>) and allows you to review the last operation.</li>
+<li>Build an autorun debugger: create a script that compares two CMD sessions’ environment states (variables, aliases, macros) to identify what loaded/failed to load.</li>
+<li>Develop a multi-project autorun manager: design a system where you can switch entire environments (paths, aliases, variables) for different 3D printing projects by running a single script.</li>
+<li>Create a comprehensive accessibility analyzer: write a batch script that tests whether key CMD commands produce screen-reader-friendly output; document workarounds for commands that don’t.</li>
+<li>Design a complete capstone project: build an integrated automation suite that manages a 3D printing workflow (project setup, file organization, CAD/slicing tool automation, output logging, error recovery, and audit trails) with full error handling and documentation.</li>
+</ol>
+<h2 id="references"><a class="header" href="#references">References</a></h2>
+<ul>
+<li>Microsoft. (2024). <em>CMD history and recall functionality</em>. <a href="https://example.com">https://example.com</a></li>
+<li>Microsoft. (2024). <em>Using CMD autorun scripts</em>. <a href="https://example.com">https://example.com</a></li>
+<li>Microsoft. (2024). <em>The START command for running executables</em>. <a href="https://example.com">https://example.com</a></li>
+</ul>
+<h2 id="helpful-resources"><a class="header" href="#helpful-resources">Helpful Resources</a></h2>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/doskey">DOSKEY History and Recall</a></li>
+<li><a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmd">CMD Autorun Scripts</a></li>
+<li><a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/start">START Command Reference</a></li>
+<li><a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/">CMD History Navigation</a></li>
+<li><a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands-glossary">Screen Reader Tips for CMD</a></li>
+</ul>
+<!--pagebreak-->
 
                     </main>
 

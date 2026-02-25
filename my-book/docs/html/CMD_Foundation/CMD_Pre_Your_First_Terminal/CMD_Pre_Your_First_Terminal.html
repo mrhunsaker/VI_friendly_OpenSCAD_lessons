@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-d11bd641.js";
+            window.path_to_searchindex_js = "../../searchindex-d0af5d9e.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-19a5926f.js"></script>
+        <script src="../../toc-5b0c6224.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -221,248 +221,236 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="cmd_foundation_cmd_pre_your_first_terminal-cmd_pre_your_first_terminal"><a class="header" href="#cmd_foundation_cmd_pre_your_first_terminal-cmd_pre_your_first_terminal">CMD-Pre: Your First Terminal - Screen Reader Navigation Fundamentals</a></h1>
-<p><strong>Duration:</strong> 1.5-2 hours (for screen reader users)<br><strong>Prerequisites:</strong> None - this is the starting point<br><strong>Accessibility Note:</strong> This lesson is designed specifically for screen reader users (NVDA, JAWS)</p>
+<p><strong>Duration:</strong> 1.5-2 hours (for screen reader users)<br><strong>Prerequisites:</strong> None — this is the starting point<br><strong>Accessibility Note:</strong> This lesson is designed specifically for screen reader users. Tips are provided for NVDA, JAWS, Windows Narrator, and Dolphin SuperNova.</p>
 <hr>
 <h2 id="what-is-a-terminal"><a class="header" href="#what-is-a-terminal">What is a Terminal?</a></h2>
 <p>A terminal (also called command line or Command Prompt) is a text-based interface where you type commands instead of clicking buttons. Think of it like sending written instructions to your computer instead of pointing and clicking.</p>
 <p><strong>Why learn this?</strong></p>
 <ul>
-<li>Faster and more precise work (especially for 3D printing scripts and automation)</li>
-<li>Essential for using tools like OpenSCAD</li>
-<li>Accessibility: Many command line tools work perfectly with screen readers</li>
-<li>Simple automation without complex scripting</li>
+<li>Faster and more precise work, especially for 3D printing scripts and automation.</li>
+<li>Essential for using tools like OpenSCAD.</li>
+<li>Accessibility: command-line tools work reliably with screen readers — output is plain text.</li>
+<li>Simple automation without complex graphical interfaces.</li>
 </ul>
 <hr>
 <h2 id="opening-command-prompt-for-the-first-time"><a class="header" href="#opening-command-prompt-for-the-first-time">Opening Command Prompt for the First Time</a></h2>
-<h3 id="on-windows"><a class="header" href="#on-windows">On Windows</a></h3>
-<p><strong>Method 1: Search (Easiest)</strong></p>
+<h3 id="method-1-search-easiest"><a class="header" href="#method-1-search-easiest">Method 1: Search (Easiest)</a></h3>
 <ol>
-<li>Press the <strong>Windows key</strong> alone</li>
-<li>You should hear “Search”</li>
+<li>Press the <strong>Windows key</strong> alone.</li>
 <li>Type: <code>cmd</code></li>
-<li>You’ll hear search results appear</li>
-<li>Press <strong>Enter</strong> to open the first result (Command Prompt)</li>
-<li>Command Prompt will open in a new window</li>
+<li>You will hear search results appear.</li>
+<li>Press <strong>Enter</strong> to open the first result (Command Prompt).</li>
 </ol>
-<p><strong>Method 2: Using Run Dialog</strong></p>
+<h3 id="method-2-using-the-run-dialog"><a class="header" href="#method-2-using-the-run-dialog">Method 2: Using the Run Dialog</a></h3>
 <ol>
-<li>Press <strong>Windows key + R</strong> (opens Run dialog)</li>
+<li>Press <strong>Windows key + R</strong> (opens the Run dialog).</li>
 <li>Type: <code>cmd</code></li>
-<li>Press <strong>Enter</strong></li>
+<li>Press <strong>Enter</strong>.</li>
 </ol>
-<p><strong>Method 3: From File Explorer</strong></p>
+<h3 id="method-3-from-the-start-menu"><a class="header" href="#method-3-from-the-start-menu">Method 3: From the Start Menu</a></h3>
 <ol>
-<li>Open File Explorer</li>
-<li>Navigate to any folder</li>
-<li>Press <strong>Shift+Right Click</strong> on the folder</li>
-<li>Look for “Open command window here” or “Open PowerShell window here”</li>
-<li>Press <strong>Enter</strong></li>
+<li>Press the <strong>Windows key</strong>.</li>
+<li>Navigate to <strong>Windows System</strong> or <strong>Windows Tools</strong> (depending on your Windows version).</li>
+<li>Open <strong>Command Prompt</strong>.</li>
 </ol>
 <h3 id="first-connection-understanding-the-prompt"><a class="header" href="#first-connection-understanding-the-prompt">First Connection: Understanding the Prompt</a></h3>
 <p>When Command Prompt opens, your screen reader will announce the window title and then the <strong>prompt</strong>. The prompt is where you type commands.</p>
-<p><strong>What you’ll hear:</strong></p>
-<pre><code>C:\Users\YourName&gt;
+<p><strong>What you will hear:</strong></p>
+<pre><code class="language-plaintext">C:\Users\YourName&gt;
 </code></pre>
 <p><strong>What this means:</strong></p>
 <ul>
-<li><code>C:\Users\YourName</code> = Your current location (the “path”)</li>
-<li><code>&gt;</code> = The prompt is ready for your input</li>
+<li><code>C:\Users\YourName</code> = Your current location (the path).</li>
+<li><code>&gt;</code> = The prompt is ready for input.</li>
 </ul>
-<p><strong>Important:</strong> Your cursor is blinking right after the <code>&gt;</code>. This is where you type.</p>
+<p>Your cursor is right after the <code>&gt;</code>. This is where you type.</p>
 <hr>
 <h2 id="your-first-commands-screen-reader-edition"><a class="header" href="#your-first-commands-screen-reader-edition">Your First Commands (Screen Reader Edition)</a></h2>
-<h3 id="command-1-where-am-i---cd"><a class="header" href="#command-1-where-am-i---cd">Command 1: “Where Am I?” - <code>cd</code></a></h3>
-<p><strong>What it does:</strong> Tells you your current location (cd with no arguments shows current directory)</p>
-<p><strong>Type this:</strong></p>
+<h3 id="command-1-where-am-i--cd"><a class="header" href="#command-1-where-am-i--cd">Command 1: “Where Am I?” — <code>cd</code></a></h3>
+<p>Running <code>cd</code> with no arguments shows your current directory.</p>
+<p><strong>Type this and press Enter:</strong></p>
 <pre><code class="language-cmd">cd
 </code></pre>
-<p><strong>Press Enter</strong></p>
-<p><strong>What you’ll hear:</strong>
-Your screen reader will announce the current path, something like:</p>
-<pre><code>C:\Users\YourName
+<p><strong>What you will hear:</strong>
+Your screen reader announces the current path, for example:</p>
+<pre><code class="language-plaintext">C:\Users\YourName
 </code></pre>
 <p><strong>Understanding paths:</strong></p>
 <ul>
-<li>Paths show your location in the file system (like a mailing address)</li>
+<li>A path shows your location in the file system, like a mailing address.</li>
 <li>Windows paths use backslashes: <code>C:\Users\YourName\Documents</code></li>
-<li>Think of it like folders inside folders: <code>C:\</code> (main drive) -&gt; <code>Users</code> -&gt; <code>YourName</code> -&gt; <code>Documents</code></li>
+<li>Think of it as nested folders: <code>C:\</code> (the main drive) → <code>Users</code> → <code>YourName</code> → <code>Documents</code></li>
 </ul>
-<h3 id="command-2-whats-here---dir"><a class="header" href="#command-2-whats-here---dir">Command 2: “What’s Here?” - <code>dir</code></a></h3>
-<p><strong>What it does:</strong> Lists all files and folders in your current location</p>
-<p><strong>Type this:</strong></p>
-<pre><code class="language-cmd">dir
-</code></pre>
-<p><strong>Press Enter</strong></p>
-<p><strong>What you’ll hear:</strong>
-Your screen reader will announce a list including file sizes and dates. If it’s hard to read, try:</p>
+<h3 id="command-2-whats-here--dir"><a class="header" href="#command-2-whats-here--dir">Command 2: “What’s Here?” — <code>dir</code></a></h3>
+<p><strong>Type this and press Enter:</strong></p>
 <pre><code class="language-cmd">dir /B
 </code></pre>
-<p>The <code>/B</code> flag shows bare listing (names only, one per line, perfect for screen readers)</p>
-<h3 id="command-3-go-there---cd-documents"><a class="header" href="#command-3-go-there---cd-documents">Command 3: “Go There” - <code>cd Documents</code></a></h3>
-<p><strong>What it does:</strong> Changes your location (navigates to a folder)</p>
-<p><strong>Type this:</strong></p>
+<p><strong>What you will hear:</strong>
+Your screen reader announces folder and file names, one per line. The <code>/B</code> flag gives a clean “bare” listing — names only, no dates or sizes — which is much easier to follow with a screen reader.</p>
+<p>If you want more detail (sizes, dates), run <code>dir</code> without <code>/B</code>. But for navigation, <code>dir /B</code> is preferred.</p>
+<h3 id="command-3-go-there--cd-documents"><a class="header" href="#command-3-go-there--cd-documents">Command 3: “Go There” — <code>cd Documents</code></a></h3>
+<p><strong>Type this and press Enter:</strong></p>
 <pre><code class="language-cmd">cd Documents
 </code></pre>
-<p><strong>Press Enter</strong></p>
-<p><strong>What you’ll hear:</strong>
-The prompt changes to show your new location. You might hear something like:</p>
-<pre><code>C:\Users\YourName\Documents&gt;
+<p><strong>What you will hear:</strong>
+The prompt changes to show your new location:</p>
+<pre><code class="language-plaintext">C:\Users\YourName\Documents&gt;
 </code></pre>
 <p><strong>Practice navigation:</strong></p>
 <ol>
-<li>Run <code>cd</code> to confirm you’re in Documents</li>
-<li>Run <code>dir /B</code> to see what files are in Documents</li>
-<li>Try going back: <code>cd ..</code> (the <code>..</code> means “go up one level”)</li>
-<li>Run <code>cd</code> again to confirm</li>
-<li>Go back to Documents: <code>cd Documents</code></li>
+<li>Run <code>cd</code> to confirm you are in Documents.</li>
+<li>Run <code>dir /B</code> to see what is there.</li>
+<li>Go back up: <code>cd ..</code> (the <code>..</code> means “go up one level”).</li>
+<li>Run <code>cd</code> again to confirm.</li>
+<li>Return to Documents: <code>cd Documents</code></li>
 </ol>
 <hr>
 <h2 id="reading-screen-reader-output-critical-skills"><a class="header" href="#reading-screen-reader-output-critical-skills">Reading Screen Reader Output (Critical Skills)</a></h2>
 <h3 id="dealing-with-long-lists"><a class="header" href="#dealing-with-long-lists">Dealing with Long Lists</a></h3>
-<p>When you run <code>dir</code> in a folder with many files, the list might be very long. Your screen reader might announce many items rapidly.</p>
+<p>When you run <code>dir</code> in a folder with many files, the list may be very long. Here is how to manage it:</p>
 <p><strong>Solution 1: Save to a File</strong></p>
 <pre><code class="language-cmd">dir /B &gt; list.txt
 notepad.exe list.txt
 </code></pre>
-<p>This saves the list to a file and opens it in Notepad where you can read it more slowly.</p>
+<p>This saves the listing to a file and opens it in Notepad, where you can read it calmly with your screen reader.</p>
 <p><strong>Solution 2: Use Pause</strong></p>
 <pre><code class="language-cmd">dir /B | more
 </code></pre>
-<p>This shows output one page at a time. Press <strong>Space</strong> to go to the next page, <strong>Q</strong> to quit.</p>
-<h3 id="navigating-tab-completion"><a class="header" href="#navigating-tab-completion">Navigating Tab Completion</a></h3>
-<p>One of the most powerful screen reader tricks is <strong>Tab completion</strong>:</p>
+<p>Shows output one page at a time. Press <strong>Space</strong> to go to the next page, <strong>Q</strong> to quit. Note: some screen readers read <code>more</code> output less reliably than a saved file — if this is difficult, use Solution 1.</p>
+<h3 id="tab-completion"><a class="header" href="#tab-completion">Tab Completion</a></h3>
+<p>Tab completion is one of the most powerful screen reader techniques in the terminal.</p>
 <p><strong>How it works:</strong></p>
 <ol>
-<li>Type the first few letters of a folder or file name</li>
-<li>Press <strong>Tab</strong></li>
-<li>Command Prompt automatically completes the rest</li>
+<li>Type the first few letters of a folder or file name.</li>
+<li>Press <strong>Tab</strong>.</li>
+<li>Command Prompt automatically completes the rest.</li>
 </ol>
 <p><strong>Example:</strong></p>
 <ol>
-<li>You’re in <code>C:\Users\YourName&gt;</code></li>
+<li>You are at <code>C:\Users\YourName&gt;</code></li>
 <li>Type: <code>cd Doc</code></li>
 <li>Press <strong>Tab</strong></li>
-<li>Command Prompt auto-completes it to: <code>cd Documents</code></li>
-<li>Press <strong>Enter</strong> to go there</li>
+<li>Command Prompt completes it to: <code>cd Documents</code></li>
+<li>Press <strong>Enter</strong> to navigate there.</li>
 </ol>
-<p><strong>With a screen reader:</strong></p>
-<ol>
-<li>As you type <code>Doc</code>, your screen reader announces each letter</li>
-<li>When you press Tab, Command Prompt types the rest and your screen reader announces the full command</li>
-<li>This is much faster than typing the whole thing</li>
-</ol>
+<p>With a screen reader, when you press Tab the screen reader announces the completed command — much faster and more accurate than typing the whole thing.</p>
 <hr>
 <h2 id="creating-and-viewing-files"><a class="header" href="#creating-and-viewing-files">Creating and Viewing Files</a></h2>
 <h3 id="create-a-simple-file"><a class="header" href="#create-a-simple-file">Create a Simple File</a></h3>
-<p><strong>Type this:</strong></p>
 <pre><code class="language-cmd">echo Hello, Command Prompt! &gt; hello.txt
 </code></pre>
-<p><strong>What this does:</strong></p>
 <ul>
-<li><code>echo</code> sends text to the screen (or file)</li>
-<li><code>"Hello, Command Prompt!"</code> is the text</li>
-<li><code>&gt;</code> redirects it to a file called <code>hello.txt</code></li>
+<li><code>echo</code> outputs text.</li>
+<li><code>&gt;</code> redirects it to a file called <code>hello.txt</code>.</li>
 </ul>
 <h3 id="read-the-file-back"><a class="header" href="#read-the-file-back">Read the File Back</a></h3>
-<p><strong>Type this:</strong></p>
 <pre><code class="language-cmd">type hello.txt
 </code></pre>
-<p><strong>What you’ll hear:</strong>
-Your screen reader announces:</p>
-<pre><code>Hello, Command Prompt!
-</code></pre>
+<p>Your screen reader announces the file contents.</p>
 <h3 id="open-and-edit-the-file"><a class="header" href="#open-and-edit-the-file">Open and Edit the File</a></h3>
-<p><strong>Type this:</strong></p>
 <pre><code class="language-cmd">notepad.exe hello.txt
 </code></pre>
-<p>This opens the file in Notepad where you can edit it with your screen reader.</p>
+<p>Opens the file in Notepad for comfortable editing with your screen reader.</p>
 <hr>
 <h2 id="essential-keyboard-shortcuts"><a class="header" href="#essential-keyboard-shortcuts">Essential Keyboard Shortcuts</a></h2>
-<p>These work in Command Prompt and are crucial for screen reader users:</p>
 <div class="table-wrapper">
 <table>
 <thead>
 <tr><th>Key Combination</th><th>What It Does</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Up Arrow</strong></td><td>Shows your previous command (press again to go further back)</td></tr>
-<tr><td><strong>Down Arrow</strong></td><td>Shows your next command (if you went back)</td></tr>
-<tr><td><strong>Tab</strong></td><td>Auto-completes folder/file names</td></tr>
+<tr><td><strong>Up Arrow</strong></td><td>Shows your previous command (press again for earlier commands)</td></tr>
+<tr><td><strong>Down Arrow</strong></td><td>Shows a more recent command in history</td></tr>
+<tr><td><strong>Tab</strong></td><td>Auto-completes folder and file names</td></tr>
 <tr><td><strong>Ctrl+C</strong></td><td>Stops a running command</td></tr>
-<tr><td><strong>Ctrl+L</strong></td><td>Clears the screen (or type <code>cls</code>)</td></tr>
-<tr><td><strong>Enter</strong></td><td>Runs the command</td></tr>
+<tr><td><strong>cls</strong></td><td>Clears the screen (type this and press Enter)</td></tr>
+<tr><td><strong>Enter</strong></td><td>Runs the command you have typed</td></tr>
+<tr><td><strong>Home</strong></td><td>Moves cursor to start of command line</td></tr>
+<tr><td><strong>End</strong></td><td>Moves cursor to end of command line</td></tr>
 </tbody>
 </table>
 </div>
-<p><strong>Screen reader tip:</strong> These all work perfectly with your screen reader. Try them!</p>
 <hr>
 <h2 id="screen-reader-specific-tips"><a class="header" href="#screen-reader-specific-tips">Screen Reader-Specific Tips</a></h2>
 <h3 id="nvda-users"><a class="header" href="#nvda-users">NVDA Users</a></h3>
+<p>NVDA is available free from <a href="https://example.com">https://example.com</a></p>
 <ol>
-<li>
-<p><strong>Reading Command Output:</strong></p>
-<ul>
-<li>Use <strong>NVDA+Home</strong> to read the current line</li>
-<li>Use <strong>NVDA+Down Arrow</strong> to read to the end of the screen</li>
-<li>Use <strong>NVDA+Page Down</strong> to read the next page</li>
-</ul>
-</li>
-<li>
-<p><strong>Reviewing Text:</strong></p>
-<ul>
-<li>Use <strong>NVDA+Shift+Page Up</strong> to review text above</li>
-</ul>
-</li>
+<li><strong>After running a command</strong>, press <strong>NVDA+Home</strong> (Insert+Home or CapsLock+Home) to read the current line.</li>
+<li><strong>To read all output</strong>, press <strong>NVDA+Down Arrow</strong> to read from the cursor to the end of the screen.</li>
+<li><strong>To browse previous output</strong>, use the NVDA review cursor: press <strong>Numpad 8/2</strong> (desktop) or the equivalent laptop keys to move up and down through lines.</li>
+<li><strong>If output scrolled past</strong>, redirect to a file: <code>command &gt; output.txt</code>, then <code>notepad.exe output.txt</code>.</li>
+<li><strong>To open NVDA settings</strong>: press <strong>NVDA+N</strong> (opens NVDA menu), then go to Preferences.</li>
 </ol>
+<blockquote>
+<p><strong>NVDA key note:</strong> The NVDA modifier key is <strong>Insert</strong> by default on desktops. On laptops it is often <strong>CapsLock</strong>. Check your NVDA settings if these shortcuts do not work as described.</p>
+</blockquote>
 <h3 id="jaws-users"><a class="header" href="#jaws-users">JAWS Users</a></h3>
+<p>JAWS is available from <a href="https://example.com">https://example.com</a></p>
 <ol>
-<li>
-<p><strong>Reading Output:</strong></p>
-<ul>
-<li>Use <strong>Insert+Down Arrow</strong> to read line-by-line</li>
-<li>Use <strong>Insert+Page Down</strong> to read by page</li>
-<li>Use <strong>Insert+End</strong> to jump to the end of text</li>
-</ul>
-</li>
-<li>
-<p><strong>Reading All Text:</strong></p>
-<ul>
-<li>Use <strong>Insert+Down Arrow</strong> repeatedly</li>
-<li>Or use <strong>Insert+Ctrl+Down</strong> to read to the end</li>
-</ul>
-</li>
+<li><strong>After running a command</strong>, press <strong>Insert+Up Arrow</strong> to re-read the current line.</li>
+<li><strong>To read all output</strong>, press <strong>Insert+Ctrl+Down</strong> to read to the end of the screen.</li>
+<li><strong>To move through output line by line</strong>, press <strong>Insert+Down Arrow</strong> repeatedly.</li>
+<li><strong>If output is too long</strong>, redirect to a file: <code>command &gt; output.txt</code>, then <code>notepad.exe output.txt</code>.</li>
+<li><strong>JAWS demo mode reminder:</strong> If you are using JAWS without a license, sessions are limited to approximately 40 minutes. Save your work and restart the session if JAWS stops responding.</li>
 </ol>
-<h3 id="common-issue-i-cant-hear-the-output"><a class="header" href="#common-issue-i-cant-hear-the-output">Common Issue: “I Can’t Hear the Output”</a></h3>
-<p><strong>Problem:</strong> You run a command but don’t hear the output</p>
-<p><strong>Solutions:</strong></p>
+<blockquote>
+<p><strong>JAWS key note:</strong> The JAWS modifier key is <strong>Insert</strong> by default. On some laptops it can be set to <strong>CapsLock</strong> in JAWS Settings Center.</p>
+</blockquote>
+<h3 id="windows-narrator-users"><a class="header" href="#windows-narrator-users">Windows Narrator Users</a></h3>
+<p>Windows Narrator is built into Windows 10 and Windows 11. Enable it with <strong>Windows+Ctrl+Enter</strong>.</p>
 <ol>
-<li>Make sure your cursor is at the prompt (try pressing <strong>End</strong> or <strong>Ctrl+End</strong>)</li>
-<li>Use <strong>Up Arrow</strong> to go back to your previous command and review it</li>
-<li>Try redirecting to a file: <code>command &gt; output.txt</code> then open the file</li>
-<li>In NVDA: Try pressing <strong>NVDA+F7</strong> to open the Review Mode viewer</li>
+<li><strong>After running a command</strong>, press <strong>Narrator+D</strong> (CapsLock+D or Insert+D) to read the current line.</li>
+<li><strong>To read all output from here</strong>, press <strong>Narrator+R</strong> to read from the cursor position.</li>
+<li><strong>To move through output</strong>, use <strong>Narrator+Up/Down Arrow</strong> in scan mode (press <strong>Narrator+Space</strong> to toggle scan mode on).</li>
+<li><strong>For long outputs</strong>, always redirect to a file: <code>command &gt; output.txt</code>, then <code>notepad.exe output.txt</code>. Notepad is more comfortable for Narrator users than reading directly from the terminal.</li>
+<li><strong>Narrator settings</strong>: Windows key → Settings → Accessibility → Narrator.</li>
+</ol>
+<blockquote>
+<p><strong>Narrator key note:</strong> The Narrator modifier key is <strong>CapsLock</strong> or <strong>Insert</strong>. You can change it in Settings → Accessibility → Narrator → Keyboard shortcuts.</p>
+</blockquote>
+<h3 id="dolphin-supernova-users"><a class="header" href="#dolphin-supernova-users">Dolphin SuperNova Users</a></h3>
+<p>Dolphin SuperNova is available from <a href="https://example.com">https://example.com</a></p>
+<ol>
+<li><strong>After running a command</strong>, press <strong>CapsLock+L</strong> to read the current line.</li>
+<li><strong>To read all output</strong>, press <strong>CapsLock+Numpad Plus</strong> (say all from current position).</li>
+<li><strong>To move through output</strong>, press <strong>CapsLock+Numpad 8</strong> (up) and <strong>CapsLock+Numpad 2</strong> (down) to move line by line through the review buffer.</li>
+<li><strong>For long outputs</strong>, redirect to a file: <code>command &gt; output.txt</code>, then <code>notepad.exe output.txt</code>.</li>
+<li><strong>SuperNova settings</strong>: press <strong>CapsLock+SpaceBar</strong> to open the SuperNova Control Panel.</li>
+</ol>
+<blockquote>
+<p><strong>Dolphin key note:</strong> The SuperNova modifier key is <strong>CapsLock</strong> by default. This can be changed in the SuperNova Control Panel → Keyboard.</p>
+</blockquote>
+<hr>
+<h2 id="common-issue-i-cant-hear-the-output"><a class="header" href="#common-issue-i-cant-hear-the-output">Common Issue: “I Can’t Hear the Output”</a></h2>
+<p>This happens to everyone starting out. Here are the solutions:</p>
+<ol>
+<li><strong>Make sure your screen reader was running before you opened Command Prompt.</strong> If not, close Command Prompt, confirm your screen reader is running, then reopen it.</li>
+<li><strong>Press End</strong> to make sure your cursor is at the prompt.</li>
+<li><strong>Redirect to a file</strong>: <code>command &gt; output.txt</code>, then <code>notepad.exe output.txt</code>. This always works with all screen readers.</li>
+<li><strong>Use the screen reader’s review commands</strong> listed above to scan back through previous output.</li>
 </ol>
 <hr>
 <h2 id="practice-exercises"><a class="header" href="#practice-exercises">Practice Exercises</a></h2>
-<p>Complete these in order. Take your time with each one:</p>
+<p>Complete these in order. Take your time.</p>
 <h3 id="exercise-1-basic-navigation"><a class="header" href="#exercise-1-basic-navigation">Exercise 1: Basic Navigation</a></h3>
 <ol>
-<li>Open Command Prompt</li>
-<li>Run <code>cd</code> and note your location</li>
-<li>Run <code>dir /B</code> and listen to what’s there</li>
-<li>Try <code>cd Documents</code> or another folder</li>
-<li>Run <code>cd</code> to confirm your new location</li>
-<li>Run <code>dir /B</code> in this new location</li>
+<li>Open Command Prompt.</li>
+<li>Run <code>cd</code> and note your location.</li>
+<li>Run <code>dir /B</code> and listen to the listing.</li>
+<li>Type <code>cd Documents</code> and press Enter.</li>
+<li>Run <code>cd</code> to confirm your new location.</li>
+<li>Run <code>dir /B</code> in this new location.</li>
 </ol>
-<p><strong>Goal:</strong> You should be comfortable knowing where you are and what’s around you</p>
+<p><strong>Goal:</strong> You know where you are and what is around you.</p>
 <h3 id="exercise-2-using-tab-completion"><a class="header" href="#exercise-2-using-tab-completion">Exercise 2: Using Tab Completion</a></h3>
 <ol>
-<li>In your home directory, type <code>cd D</code> (just the letter D)</li>
-<li>Press <strong>Tab</strong></li>
-<li>Command Prompt should auto-complete to a folder starting with D</li>
-<li>Repeat with other folder names</li>
-<li>Try typing a longer name: <code>cd Down</code> and Tab to <code>Downloads</code></li>
+<li>In your home directory, type <code>cd D</code> (just those two characters).</li>
+<li>Press <strong>Tab</strong>.</li>
+<li>Command Prompt should auto-complete to a folder starting with D.</li>
+<li>Repeat with other folder names.</li>
+<li>Try <code>cd Down</code> and Tab to <code>Downloads</code>.</li>
 </ol>
-<p><strong>Goal:</strong> Tab completion should feel natural</p>
+<p><strong>Goal:</strong> Tab completion feels natural.</p>
 <h3 id="exercise-3-creating-and-viewing-files"><a class="header" href="#exercise-3-creating-and-viewing-files">Exercise 3: Creating and Viewing Files</a></h3>
 <ol>
 <li>Create a file: <code>echo Test content &gt; test.txt</code></li>
@@ -470,66 +458,47 @@ Your screen reader announces:</p>
 <li>Create another: <code>echo Line 2 &gt; another.txt</code></li>
 <li>List both: <code>dir /B *.txt</code></li>
 </ol>
-<p><strong>Goal:</strong> You understand create, view, and list operations</p>
+<p><strong>Goal:</strong> You understand create, view, and list operations.</p>
 <h3 id="exercise-4-going-up-levels"><a class="header" href="#exercise-4-going-up-levels">Exercise 4: Going Up Levels</a></h3>
 <ol>
 <li>Navigate into several folders: <code>cd Documents</code>, then <code>cd folder1</code>, etc.</li>
-<li>From deep inside, use <code>cd ..</code> multiple times to go back up</li>
-<li>After each <code>cd ..</code>, run <code>cd</code> to confirm your location</li>
+<li>From inside, run <code>cd ..</code> multiple times to come back up.</li>
+<li>After each <code>cd ..</code>, run <code>cd</code> to confirm your location.</li>
 </ol>
-<p><strong>Goal:</strong> You understand relative navigation with <code>..</code></p>
+<p><strong>Goal:</strong> You are comfortable with relative navigation using <code>..</code></p>
 <h3 id="exercise-5-redirecting-output"><a class="header" href="#exercise-5-redirecting-output">Exercise 5: Redirecting Output</a></h3>
 <ol>
-<li>Create a list: <code>dir /B &gt; directorylist.txt</code></li>
+<li>Create a listing: <code>dir /B &gt; directorylist.txt</code></li>
 <li>Open it: <code>notepad.exe directorylist.txt</code></li>
-<li>Read it with your screen reader</li>
-<li>Close Notepad</li>
-<li>Verify the file exists: <code>dir /B | find "directory"</code></li>
+<li>Read it with your screen reader.</li>
+<li>Close Notepad.</li>
 </ol>
-<p><strong>Goal:</strong> You can save long outputs to files for easier reading</p>
+<p><strong>Goal:</strong> You can save long outputs to files for easier reading.</p>
 <hr>
 <h2 id="checkpoint-questions"><a class="header" href="#checkpoint-questions">Checkpoint Questions</a></h2>
-<p>After completing this lesson, you should be able to answer:</p>
+<p>After this lesson, you should be able to answer all ten with confidence:</p>
 <ol>
-<li>What does <code>cd</code> do?</li>
+<li>What does <code>cd</code> do with no arguments?</li>
 <li>What does <code>dir /B</code> do?</li>
 <li>Why do we use <code>/B</code> with <code>dir</code>?</li>
-<li>What path are you in right now?</li>
+<li>What is your current path right now?</li>
 <li>How do you navigate to a new folder?</li>
 <li>How do you go up one level?</li>
-<li>What’s the Tab key for?</li>
-<li>What does <code>echo "text" &gt; file.txt</code> do?</li>
-<li>How do you read a file back?</li>
-<li>How do you stop a command that’s running?</li>
+<li>What is the Tab key for?</li>
+<li>What does <code>echo text &gt; file.txt</code> do?</li>
+<li>How do you read a file back in the terminal?</li>
+<li>How do you stop a command that is running?</li>
 </ol>
-<p><strong>You should be able to answer all 10 with confidence before moving to CMD-0.</strong></p>
+<p><strong>Answer all 10 before moving to CMD-0.</strong></p>
 <hr>
 <h2 id="common-questions"><a class="header" href="#common-questions">Common Questions</a></h2>
-<p><strong>Q: Do I need to use Command Prompt? What about PowerShell?</strong>
-A: Command Prompt is simpler and great for beginners. PowerShell is more powerful. Both work well with screen readers. Start with whichever feels right for you.</p>
-<p><strong>Q: Why is my screen reader not reading the output?</strong>
-A: This is common. Use <code>command &gt; file.txt</code> to save output to a file, then open it with Notepad for reliable reading.</p>
-<p><strong>Q: What if I type something wrong?</strong>
-A: Just press <strong>Enter</strong> and you’ll see an error message. Type the correct command on the next line. No harm done!</p>
-<p><strong>Q: How do I get help with a command?</strong>
-A: Type <code>help command-name</code> (we’ll cover this in CMD-0)</p>
-<p><strong>Q: Can I make Command Prompt more accessible?</strong>
-A: Yes! Command Prompt works very well with screen readers as-is. Redirecting to files and using pauses helps a lot.</p>
+<p><strong>Q: Should I use Command Prompt or PowerShell?</strong><br>A: Command Prompt is simpler and a good starting point. PowerShell is more powerful. Both work well with all four screen readers covered in this curriculum. Start with whichever your curriculum pathway specifies.</p>
+<p><strong>Q: Why is my screen reader not reading the output?</strong><br>A: This is common. Use <code>command &gt; file.txt</code> to save output to a file, then open it with <code>notepad.exe file.txt</code> for reliable reading.</p>
+<p><strong>Q: What if I type something wrong?</strong><br>A: Press <strong>Enter</strong> and you will see an error message. Type the correct command on the next line. No harm done.</p>
+<p><strong>Q: How do I get help with a command?</strong><br>A: Type <code>help command-name</code> (for example, <code>help cd</code>). Or type <code>command /?</code> for built-in help (for example, <code>dir /?</code>).</p>
 <hr>
 <h2 id="next-steps"><a class="header" href="#next-steps">Next Steps</a></h2>
-<p>Once you’re comfortable with these basics:</p>
-<ul>
-<li>Move to <strong>CMD-0: Getting Started</strong> for deeper path understanding</li>
-<li>Then continue through CMD-1 through CMD-5 for full terminal mastery</li>
-</ul>
-<hr>
-<h2 id="resources"><a class="header" href="#resources">Resources</a></h2>
-<ul>
-<li><strong>Windows CMD Reference:</strong> https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands-glossary</li>
-<li><strong>NVDA Screen Reader:</strong> https://www.nvaccess.org/</li>
-<li><strong>JAWS Screen Reader:</strong> https://www.freedomscientific.com/products/software/jaws/</li>
-<li><strong>Windows Command Line:</strong> https://docs.microsoft.com/windows/</li>
-</ul>
+<p>Once comfortable with these basics, move to <strong>CMD-0: Getting Started</strong> for deeper path understanding, then continue through CMD-1 to CMD-5 for full terminal mastery.</p>
 <hr>
 <h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
 <div class="table-wrapper">
@@ -538,15 +507,25 @@ A: Yes! Command Prompt works very well with screen readers as-is. Redirecting to
 <tr><th>Issue</th><th>Solution</th></tr>
 </thead>
 <tbody>
-<tr><td>Command Prompt won’t open</td><td>Try searching Windows for “cmd”, or press Windows+R and type “cmd”</td></tr>
-<tr><td>Can’t hear the output</td><td>Try redirecting to a file: <code>command &gt; output.txt</code></td></tr>
-<tr><td>Tab completion not working</td><td>Make sure you typed at least one character before pressing Tab</td></tr>
-<tr><td>Command not found</td><td>Make sure you spelled it correctly; try <code>help</code> for available commands</td></tr>
+<tr><td>Command Prompt won’t open</td><td>Press Windows+R, type <code>cmd</code>, press Enter</td></tr>
+<tr><td>Cannot hear the output</td><td>Redirect to a file: <code>command &gt; output.txt</code>, then <code>notepad.exe output.txt</code></td></tr>
+<tr><td>Tab completion not working</td><td>Type at least one character before pressing Tab</td></tr>
+<tr><td>Command not found</td><td>Check spelling; try <code>help</code> for a list of available commands</td></tr>
 <tr><td>Stuck in a command</td><td>Press <strong>Ctrl+C</strong> to stop it</td></tr>
+<tr><td>JAWS stops working mid-session</td><td>If using JAWS demo: restart computer, demo sessions last ~40 minutes</td></tr>
 </tbody>
 </table>
 </div>
-<p><strong>Still stuck?</strong> The checkpoint questions and exercises are your best teacher. Work through them multiple times until comfortable.</p>
+<hr>
+<h2 id="resources"><a class="header" href="#resources">Resources</a></h2>
+<ul>
+<li><strong>NVDA:</strong> <a href="https://example.com">https://example.com</a></li>
+<li><strong>JAWS:</strong> <a href="https://example.com">https://example.com</a></li>
+<li><strong>Windows Narrator guide:</strong> <a href="https://example.com">https://example.com</a></li>
+<li><strong>Dolphin SuperNova:</strong> <a href="https://example.com">https://example.com</a></li>
+<li><strong>Windows CMD Reference:</strong> <a href="https://example.com">https://example.com</a></li>
+</ul>
+<!--pagebreak-->
 
                     </main>
 

@@ -1,0 +1,114 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{Introduction}{6}{chapter*.2}%
+\contentsline {chapter}{3D Design \& Printing Curriculum - Non-Visual Toolchain Edition}{13}{chapter*.25}%
+\contentsline {chapter}{Screen Reader Accessibility Guide for Command-Line Terminals}{27}{chapter*.64}%
+\contentsline {section}{Choosing a Screen Reader for Windows Command-Line Work}{40}{section*.115}%
+\contentsline {section}{Using a Braille Display with the Curriculum}{46}{section*.125}%
+\contentsline {section}{Editor Selection and Accessibility Setup Guide}{54}{section*.145}%
+\contentsline {chapter}{Command-Line Fundamentals - Choose Your Path}{68}{chapter*.181}%
+\contentsline {section}{PowerShell}{75}{section*.213}%
+\contentsline {subsection}{PowerShell for Screen Reader Users - Complete Curriculum Overview}{75}{section*.214}%
+\contentsline {subsection}{PS-Pre: Your First Terminal - Screen Reader Navigation Fundamentals}{84}{section*.268}%
+\contentsline {subsection}{PS-0: Getting Started - Layout, Paths, and the Shell}{92}{section*.300}%
+\contentsline {subsection}{PS-1: Navigation - Moving Around Your File System}{94}{section*.309}%
+\contentsline {subsection}{PS-2: File and Folder Manipulation}{98}{section*.321}%
+\contentsline {subsection}{PS-3: Input, Output, and Piping}{100}{section*.326}%
+\contentsline {subsection}{PS-4: Environment Variables, PATH, and Aliases}{104}{section*.340}%
+\contentsline {subsection}{PS-5: Filling in the Gaps - Control Flow, Profiles, and Useful Tricks}{106}{section*.345}%
+\contentsline {subsection}{PS-6: Advanced Terminal Techniques - Scripts, Functions \& Professional Workflows}{109}{section*.350}%
+\contentsline {subsection}{PowerShell Unit Test - Comprehensive Assessment}{121}{section*.392}%
+\contentsline {subsection}{Screen Reader Accessibility Guide for PowerShell}{126}{section*.404}%
+\contentsline {section}{Windows Command Line}{130}{section*.434}%
+\contentsline {subsection}{Windows Command Prompt (CMD) for Screen Reader Users - Complete Curriculum Overview}{130}{section*.435}%
+\contentsline {subsection}{CMD-Pre: Your First Terminal - Screen Reader Navigation Fundamentals}{137}{section*.469}%
+\contentsline {subsection}{CMD-0: Getting Started - Layout, Paths, and the Shell}{145}{section*.505}%
+\contentsline {subsection}{CMD-1: Navigation - Moving Around Your File System}{147}{section*.514}%
+\contentsline {subsection}{CMD-2: File and Folder Manipulation}{153}{section*.549}%
+\contentsline {subsection}{CMD-3: Input, Output, and Piping}{158}{section*.583}%
+\contentsline {subsection}{CMD-4: Environment Variables, PATH, and Aliases}{162}{section*.598}%
+\contentsline {subsection}{CMD-5: Filling in the Gaps - Control Flow, Startup Scripts, and Useful Tricks}{165}{section*.607}%
+\contentsline {subsection}{CMD-6: Advanced Terminal Techniques - Batch Scripts, Functions \& Professional Workflows}{167}{section*.616}%
+\contentsline {subsection}{CMD Unit Test - Comprehensive Assessment}{179}{section*.658}%
+\contentsline {subsection}{Screen Reader Accessibility Guide for Windows Command Prompt (CMD)}{185}{section*.670}%
+\contentsline {section}{Git Bash}{189}{section*.701}%
+\contentsline {subsection}{Git Bash Curriculum Overview}{189}{section*.702}%
+\contentsline {subsection}{Git Bash Introduction - Screen-Reader Friendly (JAWS/NVDA)}{203}{section*.769}%
+\contentsline {subsection}{Git Bash Tutorial}{206}{section*.782}%
+\contentsline {subsection}{Screen Reader Accessibility Guide for Git Bash}{210}{section*.805}%
+\contentsline {subsection}{GitBash-Pre: Your First Terminal - Screen Reader Navigation Fundamentals}{218}{section*.848}%
+\contentsline {subsection}{GitBash-0: Getting Started - Layout, Paths, and the Shell}{225}{section*.879}%
+\contentsline {subsection}{GitBash-1: Navigation - Moving Around Your File System}{227}{section*.888}%
+\contentsline {subsection}{GitBash-2: File and Folder Manipulation}{231}{section*.902}%
+\contentsline {subsection}{GitBash-3: Input, Output, and Piping}{233}{section*.911}%
+\contentsline {subsection}{GitBash-4: Environment Variables, PATH, and Aliases}{237}{section*.926}%
+\contentsline {subsection}{GitBash-5: Filling in the Gaps - Shell Profiles, History, and Useful Tricks}{240}{section*.935}%
+\contentsline {subsection}{GitBash-6: Advanced Terminal Techniques - Shell Scripts, Functions \& Professional Workflows}{242}{section*.944}%
+\contentsline {subsection}{GitBash Unit Test - Comprehensive Assessment}{255}{section*.986}%
+\contentsline {chapter}{3dMake Foundation - Using OpenSCAD for Accessible 3D Design}{261}{chapter*.998}%
+\contentsline {section}{Instructional Framework for 3DMake and OpenSCAD in Secondary STEM Education}{261}{section*.999}%
+\contentsline {section}{3D Make Foundation: Complete Curriculum Guide}{270}{section*.1021}%
+\contentsline {section}{3dmake: Non-Visual 3D Printing Tutorial}{282}{section*.1065}%
+\contentsline {section}{Lesson 1: Environmental Configuration and the Developer Workflow}{284}{section*.1077}%
+\contentsline {subsection}{3dMake Setup \& Workflow}{294}{section*.1101}%
+\contentsline {subsection}{VSCode Setup Guide}{306}{section*.1157}%
+\contentsline {subsection}{Navigating This Curriculum - mdBook Guide \{\#3dmake\_foundation\_lessons\_3dmake\_1-mdbook-navigation\}\}-guide\}}{312}{section*.1187}%
+\contentsline {subsection}{Screen Reader Coding Tips - NVDA \& JAWS}{316}{section*.1204}%
+\contentsline {subsection}{Your First Print - Guided Extension \{\#3dmake\_foundation\_lessons\_3dmake\_1-your-first\}\}-print\}\}\}}{321}{section*.1230}%
+\contentsline {subsection}{Your First Print - Student Documentation Template (Extension Project)}{324}{section*.1239}%
+\contentsline {subsection}{Your First Print - Teacher Template (Extension Project)}{326}{section*.1260}%
+\contentsline {section}{Lesson 2: Geometric Primitives and Constructive Solid Geometry}{329}{section*.1272}%
+\contentsline {subsection}{OpenSCAD\}\} Quick Reference - Cheat Sheet}{341}{section*.1296}%
+\contentsline {subsection}{Real-Life Problem Solver - Guided Extension \{\#3dmake\_foundation\_lessons\_3dmake\_2-your-second-print\}\}\}}{344}{section*.1309}%
+\contentsline {subsection}{Your Second Print - Student Documentation Template (Extension Project)}{345}{section*.1316}%
+\contentsline {subsection}{Your Second Print - Teacher Template (Extension Project)}{349}{section*.1342}%
+\contentsline {subsection}{Bonus Print - Guided Extension \{\#3dmake\_foundation\_lessons\_3dmake\_2-bonus-print\}\}\}}{351}{section*.1354}%
+\contentsline {subsection}{Bonus Print - Student Documentation Template (Extension Project)}{353}{section*.1361}%
+\contentsline {subsection}{Bonus Print - Teacher Template (Extension Project)}{354}{section*.1368}%
+\contentsline {section}{Lesson 3: Parametric Architecture and Modular Libraries}{355}{section*.1378}%
+\contentsline {section}{Lesson 4: AI-Enhanced Verification and Multimodal Feedback}{372}{section*.1402}%
+\contentsline {subsection}{Dice Design\}\} Workshop - Guided Extension}{374}{section*.1404}%
+\contentsline {subsection}{Dice, Dice, Dice - Student Documentation Template (Extension Project)}{376}{section*.1411}%
+\contentsline {subsection}{Dice, Dice, Dice - Teacher Template (Extension Project)}{378}{section*.1421}%
+\contentsline {section}{Lesson 5: Safety Protocols and the Physical Fabrication Interface}{379}{section*.1431}%
+\contentsline {subsection}{Safety Checklist for 3D Printing}{383}{section*.1439}%
+\contentsline {subsection}{Printer Maintenance Log}{385}{section*.1446}%
+\contentsline {section}{Lesson 6: Practical 3dm Commands and Text Embossing}{388}{section*.1461}%
+\contentsline {subsection}{Slicing Settings Quick Reference - PrusaSlicer \{\#3dmake\_foundation\_lessons\_3dmake\_6-slicing-settings-reference\}\}\}}{397}{section*.1474}%
+\contentsline {subsection}{Parametric Keychain - Extension Project \{\#3dmake\_foundation\_lessons\_3dmake\_6-parametric\}\}-keychain\}}{399}{section*.1481}%
+\contentsline {subsection}{Parametric Keychain - Student Documentation Template (Extension Project)}{403}{section*.1494}%
+\contentsline {subsection}{Parametric Keychain - Teacher Template (Extension Project)}{405}{section*.1503}%
+\contentsline {section}{Lesson 7: Parametric Transforms and the Phone Stand Project}{406}{section*.1513}%
+\contentsline {section}{Lesson 8: Advanced Parametric Design\}\} and Interlocking Features}{419}{section*.1537}%
+\contentsline {subsection}{Snap-Fit Clip Project}{432}{section*.1561}%
+\contentsline {subsection}{Snap-Fit Clip - Student Documentation Template (Extension Project)}{433}{section*.1563}%
+\contentsline {subsection}{Snap-Fit Clip - Teacher Template (Extension Project)}{435}{section*.1574}%
+\contentsline {section}{Lesson 9: Automation and 3dm Workflows}{436}{section*.1584}%
+\contentsline {section}{Lesson 10: Hands-On Practice Exercises and Troubleshooting}{449}{section*.1604}%
+\contentsline {subsection}{Diagnostic Checklist for 3D Printing}{465}{section*.1631}%
+\contentsline {subsection}{Measurement Calibration Guide}{472}{section*.1653}%
+\contentsline {subsection}{Measurement Worksheet}{478}{section*.1676}%
+\contentsline {subsection}{Common\}\} 3D Printing Issues and Solutions}{481}{section*.1686}%
+\contentsline {subsection}{Accessibility Audit - Extension Project}{486}{section*.1702}%
+\contentsline {subsection}{Accessibility Audit - Student Documentation Template (Extension Project)}{488}{section*.1709}%
+\contentsline {subsection}{Accessibility Audit - Teacher Template (Extension Project)}{490}{section*.1725}%
+\contentsline {section}{Lesson 11: Stakeholder-Centric Design\}\} and the Beaded Jewelry Project}{491}{section*.1735}%
+\contentsline {subsection}{Stakeholder Interview Template}{501}{section*.1763}%
+\contentsline {subsection}{Functional Requirements Template}{505}{section*.1783}%
+\contentsline {subsection}{Design\}\} Specification Template}{510}{section*.1818}%
+\contentsline {subsection}{Feedback Collection Template}{515}{section*.1844}%
+\contentsline {subsection}{Master Project Rubric - 0-9 Point Scale}{522}{section*.1881}%
+\contentsline {subsection}{Project 3: Beaded Jewelry - OpenSCAD\}\} Design\}\}}{524}{section*.1888}%
+\contentsline {section}{3dMake Foundation Final Exam}{527}{section*.1901}%
+\contentsline {section}{3dMake Foundation Quick Reference Guide}{535}{section*.1933}%
+\contentsline {chapter}{BackMatter}{545}{chapter*.1979}%
+\contentsline {section}{Appendices}{546}{section*.1982}%
+\contentsline {subsection}{Appendix A: Command Line (CMD/Batch) Integration for SCAD Workflows}{546}{section*.1984}%
+\contentsline {subsection}{Appendix B: PowerShell Integration for SCAD Workflows}{549}{section*.1997}%
+\contentsline {subsection}{Appendix C: Git Bash / POSIX Shell Integration for SCAD Workflows}{564}{section*.2038}%
+\contentsline {section}{Appendices}{567}{section*.2050}%
+\contentsline {subsection}{Appendix A: Comprehensive Slicing Guide - All Major Slicers}{567}{section*.2052}%
+\contentsline {subsection}{Appendix B: Material Properties \& Selection Guide}{581}{section*.2104}%
+\contentsline {subsection}{Appendix C: Tolerance Testing \& Quality Assurance Matrix}{593}{section*.2155}%
+\contentsline {subsection}{Appendix D: Advanced OpenSCAD Concepts}{603}{section*.2184}%
+\contentsline {subsection}{Glossary --- Organized by Topic}{617}{section*.2213}%
+\contentsline {section}{Further Reading}{620}{section*.2223}%

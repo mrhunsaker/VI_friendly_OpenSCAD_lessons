@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-d11bd641.js";
+            window.path_to_searchindex_js = "../../searchindex-d0af5d9e.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-19a5926f.js"></script>
+        <script src="../../toc-5b0c6224.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -221,9 +221,8 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="powershell_foundation_ps_6_advanced_techniques-ps_6_advanced_techniques"><a class="header" href="#powershell_foundation_ps_6_advanced_techniques-ps_6_advanced_techniques">PS-6: Advanced Terminal Techniques - Scripts, Functions &amp; Professional Workflows</a></h1>
-<p><strong>Duration:</strong> 4-4.5 hours (for screen reader users)<br><strong>Prerequisites:</strong> Complete PS-0 through PS-5<br><strong>Skill Level:</strong> Advanced intermediate</p>
+<p>Duration: 4-4.5 hours (for screen reader users)<br>Prerequisites: Complete PS-0 through PS-5<br>Skill Level: Advanced intermediate</p>
 <p>This lesson extends PowerShell skills to professional-level workflows. You’ll learn to automate complex tasks, write reusable code, and integrate tools for 3D printing workflows.</p>
-<hr>
 <h2 id="learning-objectives"><a class="header" href="#learning-objectives">Learning Objectives</a></h2>
 <p>By the end of this lesson, you will be able to:</p>
 <ul>
@@ -234,11 +233,10 @@
 <li>Debug scripts when something goes wrong</li>
 <li>Create professional workflows combining multiple tools</li>
 </ul>
-<hr>
 <h2 id="powershell-scripts-basics"><a class="header" href="#powershell-scripts-basics">PowerShell Scripts Basics</a></h2>
 <h3 id="whats-a-script"><a class="header" href="#whats-a-script">What’s a Script?</a></h3>
 <p>A script is a file containing PowerShell commands that run in sequence. Instead of typing commands one by one, you put them in a file and run them all at once.</p>
-<p><strong>Why use scripts?</strong></p>
+<p>Why use scripts?</p>
 <ul>
 <li>Repeatability: Run the same task 100 times identically</li>
 <li>Documentation: Commands are written down for reference</li>
@@ -246,48 +244,47 @@
 <li>Automation: Schedule scripts to run automatically</li>
 </ul>
 <h3 id="creating-your-first-script"><a class="header" href="#creating-your-first-script">Creating Your First Script</a></h3>
-<p><strong>Step 1: Open a text editor</strong></p>
+<p>Step 1: Open a text editor</p>
 <pre><code class="language-powershell">notepad.exe my-first-script.ps1
 </code></pre>
-<p><strong>Step 2: Type this script</strong></p>
+<p>Step 2: Type this script</p>
 <pre><code class="language-powershell"># This is a comment - screen readers will read it
 Write-Output "Script is running!"
 pwd
 ls -n
 Write-Output "Script is done!"
 </code></pre>
-<p><strong>Step 3: Save the file</strong></p>
+<p>Step 3: Save the file</p>
 <ul>
 <li>In Notepad: Ctrl+S</li>
 <li>Make sure filename ends in <code>.ps1</code></li>
 <li>Save in an easy-to-find location (like Documents)</li>
 </ul>
-<p><strong>Step 4: Run the script</strong></p>
+<p>Step 4: Run the script</p>
 <pre><code class="language-powershell">.\my-first-script.ps1
 </code></pre>
-<p><strong>What happens:</strong>
+<p>What happens:
 PowerShell runs each command in sequence and shows output.</p>
 <h3 id="important-script-execution-policy"><a class="header" href="#important-script-execution-policy">Important: Script Execution Policy</a></h3>
 <p>On some Windows systems, you might get an error about “execution policy”. This is a security feature.</p>
-<p><strong>To fix it temporarily:</strong></p>
+<p>To fix it temporarily:</p>
 <pre><code class="language-powershell">Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 </code></pre>
-<p><strong>Then try your script again:</strong></p>
+<p>Then try your script again:</p>
 <pre><code class="language-powershell">.\my-first-script.ps1
 </code></pre>
-<p><strong>Note for screen readers:</strong> Your screen reader will announce the error if there is one. Use <code>Get-Help Get-ExecutionPolicy</code> for more information.</p>
-<hr>
+<p>Note for screen readers: Your screen reader will announce the error if there is one. Use <code>Get-Help Get-ExecutionPolicy</code> for more information.</p>
 <h2 id="variables-and-parameters"><a class="header" href="#variables-and-parameters">Variables and Parameters</a></h2>
 <h3 id="using-variables"><a class="header" href="#using-variables">Using Variables</a></h3>
 <p>Variables store values you want to use later.</p>
-<p><strong>Example script:</strong></p>
+<p>Example script:</p>
 <pre><code class="language-powershell">$mypath = "C:\Users\YourName\Documents"
 cd $mypath
 Write-Output "I am now in:"
 pwd
 ls -n
 </code></pre>
-<p><strong>Breaking it down:</strong></p>
+<p>Breaking it down:</p>
 <ul>
 <li><code>$mypath</code> = variable name (always starts with <code>$</code>)</li>
 <li><code>=</code> = assign the value after this</li>
@@ -296,43 +293,39 @@ ls -n
 </ul>
 <h3 id="functions-with-parameters"><a class="header" href="#functions-with-parameters">Functions with Parameters</a></h3>
 <p>A function is reusable code that you can run with different inputs.</p>
-<p><strong>Example: A function that lists files in a folder</strong></p>
+<p>Example: A function that lists files in a folder</p>
 <pre><code class="language-powershell">function ListFolder {
     param(
         [string]$path
     )
-    
     Write-Output "Contents of: $path"
     cd $path
     ls -n
 }
-
 # Use the function:
 ListFolder -path "C:\Users\YourName\Documents"
 ListFolder -path "C:\Users\YourName\Downloads"
 </code></pre>
-<p><strong>What’s happening:</strong></p>
+<p>What’s happening:</p>
 <ul>
 <li><code>function ListFolder</code> = name of the function</li>
 <li><code>param([string]$path)</code> = the function accepts a parameter called <code>$path</code></li>
 <li>Inside the function, use <code>$path</code> like any variable</li>
 <li>Call the function with <code>-path "value"</code></li>
 </ul>
-<p><strong>Screen reader tip:</strong> When you call a function, PowerShell will announce the results just like any command.</p>
-<hr>
+<p>Screen reader tip: When you call a function, PowerShell will announce the results just like any command.</p>
 <h2 id="loops---repeating-tasks"><a class="header" href="#loops---repeating-tasks">Loops - Repeating Tasks</a></h2>
 <h3 id="loop-over-files"><a class="header" href="#loop-over-files">Loop Over Files</a></h3>
 <p>Imagine you have 10 SCAD files and want to print their contents. You could do it 10 times manually, or use a loop.</p>
-<p><strong>Example: Print every .scad file in a folder</strong></p>
+<p>Example: Print every .scad file in a folder</p>
 <pre><code class="language-powershell">$scadFiles = ls -n *.scad
-
 foreach ($file in $scadFiles) {
     Write-Output "=== File: $file ==="
     cat $file
     Write-Output ""
 }
 </code></pre>
-<p><strong>What’s happening:</strong></p>
+<p>What’s happening:</p>
 <ul>
 <li><code>$scadFiles = ls -n *.scad</code> = find all .scad files and store in variable</li>
 <li><code>foreach ($file in $scadFiles)</code> = for each file, do this:
@@ -343,22 +336,21 @@ foreach ($file in $scadFiles) {
 </ul>
 </li>
 </ul>
-<p><strong>Result:</strong> All files printed one after another, organized and readable.</p>
+<p>Result: All files printed one after another, organized and readable.</p>
 <h3 id="loop-with-a-counter"><a class="header" href="#loop-with-a-counter">Loop with a Counter</a></h3>
-<p><strong>Example: Do something 5 times</strong></p>
+<p>Example: Do something 5 times</p>
 <pre><code class="language-powershell">for ($i = 1; $i -le 5; $i++) {
     Write-Output "This is iteration number $i"
     # Do something here
 }
 </code></pre>
-<p><strong>What’s happening:</strong></p>
+<p>What’s happening:</p>
 <ul>
 <li><code>for ($i = 1; $i -le 5; $i++)</code> = loop from 1 to 5</li>
 <li><code>$i</code> = counter variable (starts at 1, increases each loop)</li>
 <li><code>-le</code> = “less than or equal to” (stop when $i &gt; 5)</li>
 <li><code>$i++</code> = add 1 to $i each time through</li>
 </ul>
-<hr>
 <h2 id="real-world-example---batch-processing-scad-files"><a class="header" href="#real-world-example---batch-processing-scad-files">Real-World Example - Batch Processing SCAD Files</a></h2>
 <h3 id="scenario"><a class="header" href="#scenario">Scenario</a></h3>
 <p>You have 10 OpenSCAD (.scad) files in a folder. You want to:</p>
@@ -369,28 +361,23 @@ foreach ($file in $scadFiles) {
 </ol>
 <h3 id="the-script"><a class="header" href="#the-script">The Script</a></h3>
 <pre><code class="language-powershell"># Batch Processing Script for SCAD Files
-
 $scadFolder = "C:\Users\YourName\Documents\3D_Projects"
 $scadFiles = ls $scadFolder -Filter *.scad -Name
-
 Write-Output "Processing SCAD files in: $scadFolder"
 Write-Output "Found $($scadFiles.Count) files"
 Write-Output ""
-
 foreach ($file in $scadFiles) {
     $fullPath = Join-Path -Path $scadFolder -ChildPath $file
-    
     if (Test-Path -Path $fullPath) {
         Write-Output " Found: $file"
     } else {
         Write-Output " Missing: $file"
     }
 }
-
 Write-Output ""
 Write-Output "Batch processing complete!"
 </code></pre>
-<p><strong>Breaking it down:</strong></p>
+<p>Breaking it down:</p>
 <ul>
 <li><code>$scadFolder</code> = where to look</li>
 <li><code>ls $scadFolder -Filter *.scad -Name</code> = find .scad files, show names only</li>
@@ -408,7 +395,7 @@ Write-Output "Batch processing complete!"
 </code></pre>
 </li>
 </ol>
-<p><strong>Screen reader output:</strong></p>
+<p>Screen reader output:</p>
 <pre><code>Processing SCAD files in: C:\Users\YourName\Documents\3D_Projects
 Found 10 files
 
@@ -418,11 +405,10 @@ Found 10 files
 [... more files ...]
 Batch processing complete!
 </code></pre>
-<hr>
 <h2 id="error-handling"><a class="header" href="#error-handling">Error Handling</a></h2>
 <h3 id="try-catch-blocks"><a class="header" href="#try-catch-blocks">Try-Catch Blocks</a></h3>
 <p>What if something goes wrong? Use try-catch:</p>
-<p><strong>Example:</strong></p>
+<p>Example:</p>
 <pre><code class="language-powershell">try {
     $file = "C:\nonexistent\path\file.txt"
     $content = cat $file
@@ -432,65 +418,59 @@ Batch processing complete!
     Write-Output "Details: $_"
 }
 </code></pre>
-<p><strong>What’s happening:</strong></p>
+<p>What’s happening:</p>
 <ul>
 <li><code>try</code> = run these commands</li>
 <li>If an error happens, PowerShell jumps to <code>catch</code></li>
 <li><code>catch</code> = handle the error gracefully</li>
 <li><code>$_</code> = the error message</li>
 </ul>
-<p><strong>Screen reader advantage:</strong> Errors are announced clearly instead of crashing silently.</p>
+<p>Screen reader advantage: Errors are announced clearly instead of crashing silently.</p>
 <h3 id="validating-input"><a class="header" href="#validating-input">Validating Input</a></h3>
-<p><strong>Example: Make sure a folder exists before processing</strong></p>
+<p>Example: Make sure a folder exists before processing</p>
 <pre><code class="language-powershell">function ProcessFolder {
     param([string]$folderPath)
-    
     if (-not (Test-Path -Path $folderPath)) {
         Write-Output "Error: Folder does not exist: $folderPath"
         return
     }
-    
     Write-Output "Processing folder: $folderPath"
     ls -n $folderPath
 }
-
 ProcessFolder -folderPath "C:\Users\YourName\Documents"
 </code></pre>
-<p><strong>What’s happening:</strong></p>
+<p>What’s happening:</p>
 <ul>
 <li><code>Test-Path</code> = check if folder exists</li>
 <li><code>-not</code> = if NOT true</li>
 <li><code>return</code> = exit the function early if error</li>
 </ul>
-<hr>
 <h2 id="debugging-scripts"><a class="header" href="#debugging-scripts">Debugging Scripts</a></h2>
 <h3 id="common-errors-and-solutions"><a class="header" href="#common-errors-and-solutions">Common Errors and Solutions</a></h3>
 <h4 id="error-1-command-not-found"><a class="header" href="#error-1-command-not-found">Error 1: “Command not found”</a></h4>
-<p><strong>Cause:</strong> Typo in command name</p>
-<p><strong>Fix:</strong> Check spelling</p>
+<p>Cause: Typo in command name</p>
+<p>Fix: Check spelling</p>
 <pre><code class="language-powershell"># Wrong:
 writ-output "hello"
-
 # Correct:
 Write-Output "hello"
 </code></pre>
 <h4 id="error-2-variable-is-null"><a class="header" href="#error-2-variable-is-null">Error 2: “Variable is null”</a></h4>
-<p><strong>Cause:</strong> Variable was never assigned</p>
-<p><strong>Fix:</strong> Make sure variable is set before using it</p>
+<p>Cause: Variable was never assigned</p>
+<p>Fix: Make sure variable is set before using it</p>
 <pre><code class="language-powershell">$myvar = "hello"  # Set first
 Write-Output $myvar  # Then use
 </code></pre>
 <h4 id="error-3-cannot-find-path"><a class="header" href="#error-3-cannot-find-path">Error 3: “Cannot find path”</a></h4>
-<p><strong>Cause:</strong> Wrong folder path</p>
-<p><strong>Fix:</strong> Verify path exists</p>
+<p>Cause: Wrong folder path</p>
+<p>Fix: Verify path exists</p>
 <pre><code class="language-powershell"># Check if path exists:
 Test-Path -Path "C:\Users\YourName\Documents"
-
 # If false, the path is wrong
 </code></pre>
 <h4 id="error-4-access-denied"><a class="header" href="#error-4-access-denied">Error 4: “Access denied”</a></h4>
-<p><strong>Cause:</strong> Don’t have permission</p>
-<p><strong>Fix:</strong> Run PowerShell as administrator</p>
+<p>Cause: Don’t have permission</p>
+<p>Fix: Run PowerShell as administrator</p>
 <ul>
 <li>Right-click PowerShell -&gt; Run as administrator</li>
 </ul>
@@ -498,83 +478,65 @@ Test-Path -Path "C:\Users\YourName\Documents"
 <p>Add <code>Write-Output</code> statements to track what’s happening:</p>
 <pre><code class="language-powershell">$path = "C:\Users\YourName\Documents"
 Write-Output "Starting script. Path is: $path"
-
 $files = ls -n $path
 Write-Output "Found $($files.Count) files"
-
 foreach ($file in $files) {
     Write-Output "Processing: $file"
     # Do something with $file
     Write-Output "Done with: $file"
 }
-
 Write-Output "Script complete"
 </code></pre>
 <p>Your screen reader will announce each step, so you know where errors happen.</p>
-<hr>
 <h2 id="creating-professional-workflows"><a class="header" href="#creating-professional-workflows">Creating Professional Workflows</a></h2>
 <h3 id="example-1-automated-project-setup"><a class="header" href="#example-1-automated-project-setup">Example 1: Automated Project Setup</a></h3>
-<p><strong>Scenario:</strong> You start a new 3D printing project regularly. Instead of creating folders manually:</p>
+<p>Scenario: You start a new 3D printing project regularly. Instead of creating folders manually:</p>
 <pre><code class="language-powershell">function SetupNewProject {
     param([string]$projectName)
-    
     $baseFolder = "C:\Users\YourName\Documents\3D_Projects"
     $projectFolder = Join-Path -Path $baseFolder -ChildPath $projectName
-    
     # Create folder structure
     mkdir $projectFolder -Force
     mkdir "$projectFolder\designs" -Force
     mkdir "$projectFolder\output" -Force
     mkdir "$projectFolder\notes" -Force
-    
     # Create a README
     $readmeContent = @"
 # $projectName
-
 Created: $(Get-Date)
-
 ## Designs
 All .scad files go here.
-
 ## Output
 STL and other exports go here.
-
 ## Notes
 Project notes and observations.
 "@
-    
     $readmeContent | Out-File -FilePath "$projectFolder\README.txt" -Encoding utf8
-    
     Write-Output "Project setup complete: $projectFolder"
 }
-
 # Use it:
 SetupNewProject -projectName "MyKeychain"
 SetupNewProject -projectName "PhoneStand"
 </code></pre>
-<p><strong>What it does:</strong></p>
+<p>What it does:</p>
 <ul>
 <li>Creates folder structure for a new project</li>
 <li>Sets up subfolders for designs, output, notes</li>
 <li>Creates a README file automatically</li>
 </ul>
 <h3 id="example-2-batch-file-verification"><a class="header" href="#example-2-batch-file-verification">Example 2: Batch File Verification</a></h3>
-<p><strong>Scenario:</strong> Before processing, verify all required files exist:</p>
+<p>Scenario: Before processing, verify all required files exist:</p>
 <pre><code class="language-powershell">function VerifyProjectFiles {
     param([string]$projectFolder)
-    
     $requiredFiles = @(
         "README.txt",
         "designs",
         "output",
         "notes"
     )
-    
     $allGood = $true
-    
     foreach ($item in $requiredFiles) {
         $path = Join-Path -Path $projectFolder -ChildPath $item
-        
         if (Test-Path -Path $path) {
             Write-Output " Found: $item"
         } else {
@@ -582,7 +544,6 @@ SetupNewProject -projectName "PhoneStand"
             $allGood = $false
         }
     }
-    
     if ($allGood) {
         Write-Output "All checks passed!"
         return $true
@@ -591,52 +552,46 @@ SetupNewProject -projectName "PhoneStand"
         return $false
     }
 }
-
 # Use it:
 $verified = VerifyProjectFiles -projectFolder "C:\Users\YourName\Documents\3D_Projects\MyKeychain"
 if ($verified) {
     Write-Output "Safe to proceed with processing"
 }
 </code></pre>
-<hr>
 <h2 id="screen-reader-tips-for-scripts"><a class="header" href="#screen-reader-tips-for-scripts">Screen Reader Tips for Scripts</a></h2>
 <h3 id="making-script-output-readable"><a class="header" href="#making-script-output-readable">Making Script Output Readable</a></h3>
-<p><strong>Problem:</strong> Script runs but output scrolls too fast or is hard to follow</p>
-<p><strong>Solution 1: Save to file</strong></p>
+<p>Problem: Script runs but output scrolls too fast or is hard to follow</p>
+<p>Solution 1: Save to file</p>
 <pre><code class="language-powershell">.\my-script.ps1 &gt; output.txt
 notepad.exe output.txt
 </code></pre>
-<p><strong>Solution 2: Use Write-Output with clear sections</strong></p>
+<p>Solution 2: Use Write-Output with clear sections</p>
 <pre><code class="language-powershell">Write-Output "========== STARTING =========="
 Write-Output ""
 # ... script ...
 Write-Output ""
 Write-Output "========== COMPLETE =========="
 </code></pre>
-<p><strong>Solution 3: Pause between major sections</strong></p>
+<p>Solution 3: Pause between major sections</p>
 <pre><code class="language-powershell">Write-Output "Pausing... Press Enter to continue"
 Read-Host
 </code></pre>
 <p>Your screen reader will announce the pause, give you time to read output.</p>
 <h3 id="announcing-progress"><a class="header" href="#announcing-progress">Announcing Progress</a></h3>
-<p><strong>For long-running scripts:</strong></p>
+<p>For long-running scripts:</p>
 <pre><code class="language-powershell">$files = ls -n *.scad
 $count = 0
-
 foreach ($file in $files) {
     $count++
     Write-Output "Processing $count of $($files.Count): $file"
-    
     # Do something with $file
 }
-
 Write-Output "All $count files processed!"
 </code></pre>
-<hr>
 <h2 id="practice-exercises"><a class="header" href="#practice-exercises">Practice Exercises</a></h2>
 <h3 id="exercise-1-your-first-script"><a class="header" href="#exercise-1-your-first-script">Exercise 1: Your First Script</a></h3>
-<p><strong>Goal:</strong> Create and run a simple script</p>
-<p><strong>Steps:</strong></p>
+<p>Goal: Create and run a simple script</p>
+<p>Steps:</p>
 <ol>
 <li>Create file: <code>notepad.exe hello.ps1</code></li>
 <li>Type:
@@ -647,10 +602,10 @@ ls -n
 </li>
 <li>Save and run: <code>.\hello.ps1</code></li>
 </ol>
-<p><strong>Checkpoint:</strong> You should see output for each command.</p>
+<p>Checkpoint: You should see output for each command.</p>
 <h3 id="exercise-2-script-with-a-variable"><a class="header" href="#exercise-2-script-with-a-variable">Exercise 2: Script with a Variable</a></h3>
-<p><strong>Goal:</strong> Use a variable to make the script flexible</p>
-<p><strong>Steps:</strong></p>
+<p>Goal: Use a variable to make the script flexible</p>
+<p>Steps:</p>
 <ol>
 <li>Create file: <code>notepad.exe smart-listing.ps1</code></li>
 <li>Type:
@@ -662,16 +617,15 @@ ls -n $targetFolder
 <li>Edit <code>$targetFolder</code> to a real folder on your computer</li>
 <li>Run: <code>.\smart-listing.ps1</code></li>
 </ol>
-<p><strong>Checkpoint:</strong> You should see listing of that specific folder.</p>
+<p>Checkpoint: You should see listing of that specific folder.</p>
 <h3 id="exercise-3-function"><a class="header" href="#exercise-3-function">Exercise 3: Function</a></h3>
-<p><strong>Goal:</strong> Create a reusable function</p>
-<p><strong>Steps:</strong></p>
+<p>Goal: Create a reusable function</p>
+<p>Steps:</p>
 <ol>
 <li>Create file: <code>notepad.exe navigate.ps1</code></li>
 <li>Type:
 <pre><code class="language-powershell">function GoTo {
     param([string]$path)
-    
     if (Test-Path -Path $path) {
         cd $path
         Write-Output "Now in: $(pwd)"
@@ -681,7 +635,6 @@ ls -n $targetFolder
         Write-Output "Path does not exist: $path"
     }
 }
-
 # Test the function:
 GoTo -path "C:\Users\YourName\Documents"
 GoTo -path "C:\Users\YourName\Downloads"
@@ -689,28 +642,26 @@ GoTo -path "C:\Users\YourName\Downloads"
 </li>
 <li>Run: <code>.\navigate.ps1</code></li>
 </ol>
-<p><strong>Checkpoint:</strong> Both commands should work, showing contents of each folder.</p>
+<p>Checkpoint: Both commands should work, showing contents of each folder.</p>
 <h3 id="exercise-4-loop"><a class="header" href="#exercise-4-loop">Exercise 4: Loop</a></h3>
-<p><strong>Goal:</strong> Use a loop to repeat an action</p>
-<p><strong>Steps:</strong></p>
+<p>Goal: Use a loop to repeat an action</p>
+<p>Steps:</p>
 <ol>
 <li>Create file: <code>notepad.exe repeat.ps1</code></li>
 <li>Type:
 <pre><code class="language-powershell">Write-Output "Demonstrating a loop:"
-
 for ($i = 1; $i -le 5; $i++) {
     Write-Output "Iteration $i: Hello!"
 }
-
 Write-Output "Loop complete!"
 </code></pre>
 </li>
 <li>Run: <code>.\repeat.ps1</code></li>
 </ol>
-<p><strong>Checkpoint:</strong> Should print “Iteration 1” through “Iteration 5”.</p>
+<p>Checkpoint: Should print “Iteration 1” through “Iteration 5”.</p>
 <h3 id="exercise-5-real-world-script"><a class="header" href="#exercise-5-real-world-script">Exercise 5: Real-World Script</a></h3>
-<p><strong>Goal:</strong> Create a useful script for a real task</p>
-<p><strong>Steps:</strong></p>
+<p>Goal: Create a useful script for a real task</p>
+<p>Steps:</p>
 <ol>
 <li>Create a folder: <code>mkdir C:\Users\YourName\Documents\TestFiles</code></li>
 <li>Create some test files:
@@ -723,7 +674,6 @@ echo "test" &gt; C:\Users\YourName\Documents\TestFiles\file3.txt
 <li>Type:
 <pre><code class="language-powershell">$folder = "C:\Users\YourName\Documents\TestFiles"
 $files = ls -n $folder
-
 Write-Output "=== FILE REPORT ==="
 Write-Output "Folder: $folder"
 Write-Output "Total files: $($files.Count)"
@@ -738,8 +688,7 @@ Write-Output "=== END REPORT ==="
 </li>
 <li>Run: <code>.\report.ps1</code></li>
 </ol>
-<p><strong>Checkpoint:</strong> Should show report of all files in the test folder.</p>
-<hr>
+<p>Checkpoint: Should show report of all files in the test folder.</p>
 <h2 id="quiz---lesson-ps-6"><a class="header" href="#quiz---lesson-ps-6">Quiz - Lesson PS-6</a></h2>
 <ol>
 <li>What is a PowerShell script?</li>
@@ -753,39 +702,36 @@ Write-Output "=== END REPORT ==="
 <li>When would you use <code>Try-Catch</code>?</li>
 <li>What technique makes script output readable for screen readers?</li>
 </ol>
-<hr>
 <h2 id="extension-problems"><a class="header" href="#extension-problems">Extension Problems</a></h2>
 <ol>
-<li><strong>Auto-Backup Script:</strong> Create a script that copies all files from one folder to another, announcing progress</li>
-<li><strong>File Counter:</strong> Write a function that counts files by extension (.txt, .scad, .stl, etc.)</li>
-<li><strong>Folder Cleaner:</strong> Script that deletes files older than 30 days (with user confirmation)</li>
-<li><strong>Project Template:</strong> Function that creates a complete project folder structure with all needed files</li>
-<li><strong>Batch Rename:</strong> Script that renames all files in a folder according to a pattern</li>
-<li><strong>Log Generator:</strong> Create a script that records what it does to a log file for later review</li>
-<li><strong>Scheduled Task:</strong> Set up a script to run automatically every day at a specific time</li>
-<li><strong>File Verifier:</strong> Check that all SCAD files in a folder have corresponding STL exports</li>
-<li><strong>Report Generator:</strong> Create a summary report of all projects in a folder</li>
-<li><strong>Error Tracker:</strong> Script that lists all commands that had errors in your recent history</li>
+<li>Auto-Backup Script: Create a script that copies all files from one folder to another, announcing progress</li>
+<li>File Counter: Write a function that counts files by extension (.txt, .scad, .stl, etc.)</li>
+<li>Folder Cleaner: Script that deletes files older than 30 days (with user confirmation)</li>
+<li>Project Template: Function that creates a complete project folder structure with all needed files</li>
+<li>Batch Rename: Script that renames all files in a folder according to a pattern</li>
+<li>Log Generator: Create a script that records what it does to a log file for later review</li>
+<li>Scheduled Task: Set up a script to run automatically every day at a specific time</li>
+<li>File Verifier: Check that all SCAD files in a folder have corresponding STL exports</li>
+<li>Report Generator: Create a summary report of all projects in a folder</li>
+<li>Error Tracker: Script that lists all commands that had errors in your recent history</li>
 </ol>
-<hr>
 <h2 id="important-notes"><a class="header" href="#important-notes">Important Notes</a></h2>
 <ul>
-<li><strong>Always test scripts on small sets of files first</strong> before running them on important data</li>
-<li><strong>Save your work regularly</strong> - use version control if possible</li>
-<li><strong>Test error handling</strong> - make sure errors don’t crash silently</li>
-<li><strong>Document your scripts</strong> - use comments so you remember what each part does</li>
-<li><strong>Backup before batch operations</strong> - if something goes wrong, you have the original</li>
+<li>Always test scripts on small sets of files first before running them on important data</li>
+<li>Save your work regularly - use version control if possible</li>
+<li>Test error handling - make sure errors don’t crash silently</li>
+<li>Document your scripts - use comments so you remember what each part does</li>
+<li>Backup before batch operations - if something goes wrong, you have the original</li>
 </ul>
-<hr>
 <h2 id="references"><a class="header" href="#references">References</a></h2>
 <ul>
-<li><strong>Microsoft PowerShell Scripting Guide:</strong> https://docs.microsoft.com/powershell/scripting/</li>
-<li><strong>Function Documentation:</strong> https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_functions_advanced</li>
-<li><strong>Error Handling:</strong> https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_error_handling</li>
-<li><strong>Loops:</strong> https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_foreach</li>
+<li>Microsoft PowerShell Scripting Guide: <a href="https://docs.microsoft.com/powershell/scripting/">https://docs.microsoft.com/powershell/scripting/</a></li>
+<li>Function Documentation: <a href="https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_functions_advanced">https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_functions_advanced</a></li>
+<li>Error Handling: <a href="https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_error_handling">https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_error_handling</a></li>
+<li>Loops: <a href="https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_foreach">https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_foreach</a></li>
 </ul>
-<hr>
-<p><strong>Next Steps:</strong> After mastering this lesson, explore PowerShell modules, remoting, and 3D printing integration in the main curriculum.</p>
+<p>Next Steps: After mastering this lesson, explore PowerShell modules, remoting, and 3D printing integration in the main curriculum.</p>
+<!--pagebreak-->
 
                     </main>
 

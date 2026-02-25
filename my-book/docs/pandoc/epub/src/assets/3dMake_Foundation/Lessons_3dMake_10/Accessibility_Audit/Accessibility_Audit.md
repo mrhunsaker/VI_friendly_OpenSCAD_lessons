@@ -1,6 +1,6 @@
 # Accessibility Audit - Extension Project {#assets_3dmake_foundation_lessons_3dmake_10_accessibility_audit-accessibility_audit}
 
-**Estimated time:** 2-4 hours
+Estimated time: 2-4 hours
 
 ## Learning Objectives
 

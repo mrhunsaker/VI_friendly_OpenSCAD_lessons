@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-d11bd641.js";
+            window.path_to_searchindex_js = "../../searchindex-d0af5d9e.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-19a5926f.js"></script>
+        <script src="../../toc-5b0c6224.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -227,13 +227,12 @@
 <li>Create reusable modules and import a library module into a project<sup class="footnote-reference" id="fr-2-1"><a href="#footnote-2">2</a></sup></li>
 <li>Produce and test low-resolution renders and export a working STL<sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">3</a></sup></li>
 </ul>
-<p><strong>Materials</strong></p>
+<p>Materials</p>
 <ul>
 <li>A 3dMake project scaffold with <code>src/main.scad</code></li>
 <li>Example library (e.g., BOSL) available in <code>lib/</code> or classroom assets</li>
 <li>Reference: <a href="../Lessons_3dMake_2/openscad-cheat-sheet.html">openscad-cheat-sheet.md</a> for parametric design patterns</li>
 </ul>
-<hr>
 <ol>
 <li>
 <p>Open <code>src/main.scad</code> and add three top-level parameters (with units) at the top of the file<sup class="footnote-reference" id="fr-3-2"><a href="#footnote-3">1</a></sup>.</p>
@@ -250,20 +249,18 @@ module bracket(w, h, t) {
   union(){
     // Base plate
     cube([w, h, t], center=false);
-    
     // Vertical support
     translate([0, h-5, 0])
       cube([t, 5, 20], center=false);
   }
 }
-
 // Use the module
 bracket(part_width, part_height, part_thickness);
 </code></pre>
 </li>
 <li>
 <p>Include a library module (e.g., <code>include &lt;bosl/constants.scad&gt;</code>) and call a small helper from it; run <code>3dm build</code> <sup class="footnote-reference" id="fr-2-3"><a href="#footnote-2">2</a></sup>.</p>
-<p><strong>Alternative: Create your own simple library module:</strong></p>
+<p>Alternative: Create your own simple library module:</p>
 <pre><code class="language-openscad">// Create lib/helpers.scad
 module simple_fillet(size, radius) {
   // Simple fillet using minkowski
@@ -273,9 +270,8 @@ module simple_fillet(size, radius) {
   }
 }
 </code></pre>
-<p><strong>Then in main.scad:</strong></p>
+<p>Then in main.scad:</p>
 <pre><code class="language-openscad">include &lt;lib/helpers.scad&gt;
-
 simple_fillet(20, 2){
   cube([20, 20, 20]);
 }
@@ -294,13 +290,12 @@ simple_fillet(20, 2){
 </ol>
 <h3 id="going-deeper-parametric-design-and-modular-thinking"><a class="header" href="#going-deeper-parametric-design-and-modular-thinking">Going Deeper: Parametric Design and Modular Thinking</a></h3>
 <p>Now that you’ve created simple modules, let’s explore <em>why</em> they matter for design at scale.</p>
-<h4 id="what-is-parametric-design"><a class="header" href="#what-is-parametric-design"><strong>What Is Parametric Design?</strong></a></h4>
-<p><strong>Parametric design</strong> means building your model around adjustable parameters so that a single change propagates automatically throughout your entire design. Instead of hardcoding a dimension like <code>50</code>, you store it in a variable:</p>
+<h4 id="what-is-parametric-design"><a class="header" href="#what-is-parametric-design">What Is Parametric Design?</a></h4>
+<p>Parametric design means building your model around adjustable parameters so that a single change propagates automatically throughout your entire design. Instead of hardcoding a dimension like <code>50</code>, you store it in a variable:</p>
 <pre><code class="language-openscad">// Non-parametric (fragile):
 cube([50, 50, 50]);
 translate([50, 0, 0]) cube([50, 50, 50]);
 translate([100, 0, 0]) cube([50, 50, 50]);
-
 // Parametric (flexible):
 box_size = 50;
 cube([box_size, box_size, box_size]);
@@ -308,111 +303,99 @@ translate([box_size, 0, 0]) cube([box_size, box_size, box_size]);
 translate([2*box_size, 0, 0]) cube([box_size, box_size, box_size]);
 </code></pre>
 <p>If you need to change the box size from 50 to 60 mm, the parametric version requires one change; the non-parametric version requires three edits.</p>
-<h4 id="modules-with-default-parameters"><a class="header" href="#modules-with-default-parameters"><strong>Modules with Default Parameters</strong></a></h4>
-<p>A module becomes even more powerful when you define <strong>default parameters</strong>:</p>
+<h4 id="modules-with-default-parameters"><a class="header" href="#modules-with-default-parameters">Modules with Default Parameters</a></h4>
+<p>A module becomes even more powerful when you define default parameters:</p>
 <pre><code class="language-openscad">// Define a module with defaults
 module storage_box(length = 40, width = 30, height = 20, wall = 2) {
     difference() {
         // Outer shell
         cube([length, width, height]);
-        
         // Inner hollow (remove inside, keep walls and bottom)
         translate([wall, wall, wall])
             cube([length - 2*wall, width - 2*wall, height]);
     }
 }
-
 // Call with defaults
 storage_box();
-
 // Call with one parameter changed
 storage_box(length = 60);
-
 // Call with all custom parameters
 storage_box(length = 80, width = 50, height = 30, wall = 3);
 </code></pre>
 <p>This approach creates a small, medium, and large box set:</p>
 <pre><code class="language-openscad">// Small box (all defaults)
 storage_box();
-
 // Medium box (positioned next to small)
 translate([45, 0, 0]) storage_box(length = 50, width = 40, height = 25);
-
 // Large box (positioned next to medium)
 translate([100, 0, 0]) storage_box(length = 70, width = 55, height = 35);
 </code></pre>
-<h4 id="the-dry-principle-dont-repeat-yourself"><a class="header" href="#the-dry-principle-dont-repeat-yourself"><strong>The DRY Principle: Don’t Repeat Yourself</strong></a></h4>
+<h4 id="the-dry-principle-dont-repeat-yourself"><a class="header" href="#the-dry-principle-dont-repeat-yourself">The DRY Principle: Don’t Repeat Yourself</a></h4>
 <p>When you copy-paste the same shape over and over, you create maintenance risk. If you later discover a bug in the shape, you must fix it in <em>every</em> copy. Modules eliminate this:</p>
-<p><strong>Without modules (DRY violation):</strong></p>
+<p>Without modules (DRY violation):</p>
 <pre><code class="language-openscad">// Bracket repeated 3 times (copy-paste)
 union(){ cube([10,10,10]); translate([0,20,0]) cube([2,30,10]); }
 translate([50, 0, 0]) union(){ cube([10,10,10]); translate([0,20,0]) cube([2,30,10]); }
 translate([100, 0, 0]) union(){ cube([10,10,10]); translate([0,20,0]) cube([2,30,10]); }
 </code></pre>
-<p><strong>With modules (DRY compliant):</strong></p>
+<p>With modules (DRY compliant):</p>
 <pre><code class="language-openscad">module bracket() {
     union(){
         cube([10,10,10]);
         translate([0,20,0]) cube([2,30,10]);
     }
 }
-
 bracket();
 translate([50, 0, 0]) bracket();
 translate([100, 0, 0]) bracket();
 </code></pre>
-<h4 id="scope-and-reusability"><a class="header" href="#scope-and-reusability"><strong>Scope and Reusability</strong></a></h4>
-<p>Parameters are <strong>scoped</strong> to their module, meaning you can’t access a module’s parameters from outside it. This is intentional-it prevents naming conflicts and makes modules truly reusable:</p>
+<h4 id="scope-and-reusability"><a class="header" href="#scope-and-reusability">Scope and Reusability</a></h4>
+<p>Parameters are scoped to their module, meaning you can’t access a module’s parameters from outside it. This is intentional-it prevents naming conflicts and makes modules truly reusable:</p>
 <pre><code class="language-openscad">module box(size = 10) {
     cube([size, size, size]);
 }
-
 // You can use 'size' in multiple contexts without conflict
 size = 100;  // Global size
 box();       // Calls box with its default size=10
 translate([size, 0, 0]) box(size = 50);  // Calls box with size=50
 </code></pre>
-<h4 id="importing-libraries-include-vs-use"><a class="header" href="#importing-libraries-include-vs-use"><strong>Importing Libraries: <code>include</code> vs <code>use</code></strong></a></h4>
+<h4 id="importing-libraries-include-vs-use"><a class="header" href="#importing-libraries-include-vs-use">Importing Libraries: <code>include</code> vs <code>use</code></a></h4>
 <p>Once you’ve written modules in <code>lib/helpers.scad</code>, you can share them with other projects:</p>
 <pre><code class="language-openscad">// Option 1: include (gives you all functions and modules)
 include &lt;lib/helpers.scad&gt;
-
 // Option 2: use (brings in functions but hides module definitions)
 use &lt;lib/helpers.scad&gt;
-
 // Now you can call any module from helpers.scad
 simple_fillet(20, 2) {
     cube([20, 20, 20]);
 }
 </code></pre>
 <p>For most classroom use, <code>include</code> is simpler to understand. For larger projects, <code>use</code> provides cleaner namespace isolation.</p>
-<h4 id="testing-your-modules"><a class="header" href="#testing-your-modules"><strong>Testing Your Modules</strong></a></h4>
+<h4 id="testing-your-modules"><a class="header" href="#testing-your-modules">Testing Your Modules</a></h4>
 <p>Before committing a module to your library, test it with:</p>
 <ol>
-<li><strong>Different parameter values:</strong> Call the module with minimum, maximum, and mid-range values</li>
-<li><strong>Default values:</strong> Verify that calling it with no parameters produces a reasonable result</li>
-<li><strong>Rendered output:</strong> Use <code>$fn = 32</code> to render the module and visually inspect for geometry issues</li>
-<li><strong>STL export:</strong> Export to STL and open in your slicer to check for non-manifold warnings</li>
+<li>Different parameter values: Call the module with minimum, maximum, and mid-range values</li>
+<li>Default values: Verify that calling it with no parameters produces a reasonable result</li>
+<li>Rendered output: Use <code>$fn = 32</code> to render the module and visually inspect for geometry issues</li>
+<li>STL export: Export to STL and open in your slicer to check for non-manifold warnings</li>
 </ol>
 <p>Checkpoints</p>
 <ul>
 <li>After step 2 you have a parametric module you can call with different arguments<sup class="footnote-reference" id="fr-3-4"><a href="#footnote-3">1</a></sup>.</li>
 <li>After this section, you should understand how to create modules with default parameters and why that matters for reusability.</li>
 </ul>
-<hr>
 <h2 id="advanced-technique-loops-and-repetition"><a class="header" href="#advanced-technique-loops-and-repetition">Advanced Technique: Loops and Repetition</a></h2>
 <p>Beyond creating individual modules, OpenSCAD allows you to create multiple copies using for loops. This is powerful for creating arrays, spirals, or radially symmetric designs.</p>
 <h3 id="example-creating-arrays-with-for-loops"><a class="header" href="#example-creating-arrays-with-for-loops">Example: Creating Arrays with For Loops</a></h3>
 <p>The <code>for()</code> function iterates over a range and creates multiple copies of geometry:</p>
 <pre><code class="language-openscad">// Simple 3x3 array of cubes
 $fn = 32;
-
 for (x = [0:20:40])
   for (y = [0:20:40])
     translate([x, y, 0])
       cube([10, 10, 10]);
 </code></pre>
-<p><strong>What it does:</strong></p>
+<p>What it does:</p>
 <ul>
 <li><code>x = [0:20:40]</code> creates x positions: 0, 20, 40</li>
 <li>Nested <code>y</code> loop creates 9 positions total (3 x 3)</li>
@@ -422,17 +405,14 @@ for (x = [0:20:40])
 <p>This real-world example from the <em>Simplifying 3D Printing</em> textbook demonstrates using for loops to create radially symmetric fins around a cylinder:</p>
 <pre><code class="language-openscad">// Parametric Fin Can - demonstrates for loops and radial arrays
 $fn = 100;
-
 // Parameters
 height = 70;
 diameter = 43.5;
 thickness = 1.2;
 guide_diameter = 3;
 fins = 3;  // Number of fins to create
-
 // Define the fin profile as a 2D polygon
 fin_shape = [[0, 0], [height, 0], [100, 35], [100, 45], [35, 35]];
-
 // Module to create a single fin
 module create_fin(angle = 0) {
     rotate([0, 0, angle])
@@ -441,19 +421,16 @@ module create_fin(angle = 0) {
     linear_extrude(height = thickness, center = true)
       polygon(fin_shape);
 }
-
 // Main assembly
 module generate_fin_can() {
     difference() {
         union() {
             // Central cylinder
             cylinder(h = height, d = diameter + thickness);
-            
             // Create fins using a for loop
             for (i = [0 : fins - 1]) {
                 create_fin(i * (360 / fins));
             }
-            
             // Guide post
             rotate([0, 0, 180 / fins])
             translate([diameter/2 + guide_diameter/2 + thickness/2, 0, 0])
@@ -466,11 +443,10 @@ module generate_fin_can() {
         cylinder(h = 1000, d = diameter, center = true);
     }
 }
-
 // Render the complete assembly
 generate_fin_can();
 </code></pre>
-<p><strong>Key points:</strong></p>
+<p>Key points:</p>
 <ul>
 <li>The <code>for (i = [0 : fins - 1])</code> loop creates a fin at each angle: 0deg, 120deg, 240deg</li>
 <li>The angle is calculated as <code>i * (360 / fins)</code> to distribute fins evenly</li>
@@ -497,16 +473,14 @@ fins = 4;           // Try 4, 5, or 6 fins
 height = 100;       // Make it taller
 diameter = 60;      // Make it wider
 thickness = 2;      // Make fins thicker
-
 // The for loop automatically distributes the fins evenly around the cylinder
 </code></pre>
-<p><strong>Checkpoint</strong>: After this section, you can:</p>
+<p>Checkpoint: After this section, you can:</p>
 <ul>
-<li>Use for loops to create arrays of objects</li>
+<li>Use <code>for</code> loops to create arrays of objects</li>
 <li>Calculate rotation angles for radial symmetry</li>
 <li>Combine loops with modules to create parametric families of designs</li>
 </ul>
-<hr>
 <h2 id="advanced-programming-concepts"><a class="header" href="#advanced-programming-concepts">Advanced Programming Concepts</a></h2>
 <p>Beyond basic modules, professional OpenSCAD code uses conditional logic, type checking, and advanced data structures. These techniques enable robust, flexible, and maintainable designs.</p>
 <h3 id="1-conditional-logic-with-if-else-statements"><a class="header" href="#1-conditional-logic-with-if-else-statements">1. Conditional Logic with If-Else Statements</a></h3>
@@ -514,37 +488,31 @@ thickness = 2;      // Make fins thicker
 <pre><code class="language-openscad">// Parametric phone stand with optional features
 phone_width = 75;
 include_cable_holder = true;  // Toggle feature with parameter
-
 module phone_stand() {
   // Always create the base
   cube([phone_width + 20, 100, 5]);
-  
   // Conditionally add cable holder
   if (include_cable_holder) {
     translate([phone_width + 10, 20, 5])
       cube([10, 15, 20]);  // Cable management slot
   }
 }
-
 phone_stand();
 </code></pre>
-<p><strong>Practical Example: Parametric Bracket with Optional Features</strong></p>
+<p>Practical Example: Parametric Bracket with Optional Features</p>
 <pre><code class="language-openscad">// Advanced bracket with conditional features
 bracket_size = 50;
 include_mounting_holes = true;
 include_reinforcement = true;
 hole_diameter = 3;
-
 module bracket() {
   // Main body (always created)
   difference() {
     cube([bracket_size, bracket_size, 10]);
-    
     // Hollow interior
     translate([5, 5, 5])
       cube([bracket_size - 10, bracket_size - 10, 10]);
   }
-  
   // Optional: Add mounting holes
   if (include_mounting_holes) {
     for (x = [10, bracket_size - 10])
@@ -552,23 +520,20 @@ module bracket() {
         translate([x, y, -5])
           cylinder(h=20, d=hole_diameter, $fn=16);
   }
-  
   // Optional: Add diagonal reinforcement
   if (include_reinforcement) {
     rotate([45, 0, 0])
       cube([bracket_size - 10, 5, 5], center=true);
   }
 }
-
 bracket();
 </code></pre>
-<p><strong>Key Patterns:</strong></p>
+<p>Key Patterns:</p>
 <pre><code class="language-openscad">// Simple conditional
 if (parameter) {
   // Create this if parameter is true
   cube([10, 10, 10]);
 }
-
 // If-else conditional
 if (parameter &gt; 50) {
   // Create large version
@@ -577,7 +542,6 @@ if (parameter &gt; 50) {
   // Create small version
   cube([50, 50, 50]);
 }
-
 // Multiple conditions
 if (enable_feature_a &amp;&amp; enable_feature_b) {
   // Both features enabled
@@ -592,7 +556,6 @@ if (enable_feature_a &amp;&amp; enable_feature_b) {
 <h3 id="2-type-testing-and-validation"><a class="header" href="#2-type-testing-and-validation">2. Type Testing and Validation</a></h3>
 <p>Before using parameters, test their type to avoid errors. This makes modules robust and user-friendly:</p>
 <pre><code class="language-openscad">// Type testing functions: is_number(), is_string(), is_list(), is_bool(), is_undef()
-
 // Example: Create a function that accepts either a single number or list
 module create_array(size) {
   if (is_number(size)) {
@@ -612,19 +575,17 @@ module create_array(size) {
     echo("ERROR: size must be number or list");
   }
 }
-
 // Both work:
 create_array(10);           // Creates 10x10x10 cubes
 create_array([15, 15, 20]); // Creates 15x15x20 cubes
 </code></pre>
-<p><strong>Practical Validation Example:</strong></p>
+<p>Practical Validation Example:</p>
 <pre><code class="language-openscad">// Robust parametric keycap with validation
 module keycap(size, height, letter) {
   // Validate inputs before using
   valid_size = is_number(size) &amp;&amp; size &gt; 5 &amp;&amp; size &lt; 50;
   valid_height = is_number(height) &amp;&amp; height &gt; 3 &amp;&amp; height &lt; 20;
   valid_letter = is_string(letter) &amp;&amp; len(letter) == 1;
-  
   if (valid_size &amp;&amp; valid_height &amp;&amp; valid_letter) {
     // All parameters valid: create keycap
     difference() {
@@ -632,7 +593,6 @@ module keycap(size, height, letter) {
       translate([size/2, size/2, size/2 - 1])
         cube([size - 4, size - 4, height], center=true);
     }
-    
     // Add embossed letter
     translate([size/2, size/2, height - 0.5])
       linear_extrude(0.8)
@@ -644,10 +604,8 @@ module keycap(size, height, letter) {
     if (!valid_letter) echo("ERROR: letter must be single character");
   }
 }
-
 // These work:
 keycap(14, 10, "A");
-
 // These will fail gracefully with error messages:
 // keycap(-5, 10, "A");      // Invalid size
 // keycap(14, 10, "ABC");    // Invalid letter
@@ -655,36 +613,30 @@ keycap(14, 10, "A");
 <h3 id="3-list-comprehensions-and-advanced-data-structures"><a class="header" href="#3-list-comprehensions-and-advanced-data-structures">3. List Comprehensions and Advanced Data Structures</a></h3>
 <p>List comprehensions create new lists by transforming or filtering existing lists. This enables sophisticated parametric designs:</p>
 <pre><code class="language-openscad">// Basic list comprehension syntax: [for (x = list) ... x ... ]
-
 // Example 1: Create list of squares
 squares = [for (x = [1:5]) x*x];
 // Result: [1, 4, 9, 16, 25]
-
 // Example 2: Filter list (keep only even numbers)
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 evens = [for (x = numbers) if (x % 2 == 0) x];
 // Result: [2, 4, 6, 8, 10]
-
 // Example 3: Create array of positions for mounting holes
 hole_positions = [for (i = [0:3]) [i*20, i*20, 0]];
 // Creates: [[0,0,0], [20,20,0], [40,40,0], [60,60,0]]
 </code></pre>
-<p><strong>Practical Example: Parametric Grid of Features</strong></p>
+<p>Practical Example: Parametric Grid of Features</p>
 <pre><code class="language-openscad">// Create parametric grid of mounting holes using list comprehension
 bracket_width = 100;
 bracket_depth = 80;
 hole_spacing = 20;  // mm between holes
 hole_diameter = 3;  // mm
-
 // Generate hole positions automatically
 hole_x_positions = [for (i = [0:(bracket_width/hole_spacing)]) i * hole_spacing];
 hole_y_positions = [for (i = [0:(bracket_depth/hole_spacing)]) i * hole_spacing];
-
 module bracket_with_holes() {
   difference() {
     // Base plate
     cube([bracket_width, bracket_depth, 5]);
-    
     // Subtract holes using comprehension
     for (x = hole_x_positions)
       for (y = hole_y_positions)
@@ -692,7 +644,6 @@ module bracket_with_holes() {
           cylinder(h=15, d=hole_diameter, $fn=16);
   }
 }
-
 bracket_with_holes();
 </code></pre>
 <h3 id="4-special-variables-preview-children-fn"><a class="header" href="#4-special-variables-preview-children-fn">4. Special Variables: $preview, $children, $fn</a></h3>
@@ -700,42 +651,36 @@ bracket_with_holes();
 <pre><code class="language-openscad">// $preview: Detects if in preview (F5) or render (F6) mode
 module adaptive_quality() {
   quality = $preview ? 16 : 64;  // Low res in preview, high in render
-  
   for (i = [0:360/quality:360])
     rotate([0, 0, i])
       translate([50, 0, 0])
         sphere(r=5, $fn=quality);
 }
-
 // $children: Number of child objects passed to module
 module repeat_with_offset(count) {
   for (i = [0:count-1])
     translate([i*20, 0, 0])
       children();  // Render each child at new position
 }
-
 // Usage:
 repeat_with_offset(3)
   cube([10, 10, 10]);
 // Creates 3 cubes in a row, spaced 20mm apart
-
 // $fn, $fa, $fs: Global resolution parameters
 // $fn = 32;  // Number of segments (0 disables, uses $fa/$fs)
 // $fa = 12;  // Angle per segment (degrees)
 // $fs = 2;   // Minimum segment length (mm)
 </code></pre>
-<p><strong>Practical Example: Adaptive Quality Module</strong></p>
+<p>Practical Example: Adaptive Quality Module</p>
 <pre><code class="language-openscad">// Module that renders efficiently in preview but beautifully in export
 module rounded_box(w, h, d, radius) {
   // Automatically adjust quality based on render mode
   fn = $preview ? 8 : 32;  // Fast preview, quality export
-  
   minkowski() {
     cube([w - 2*radius, h - 2*radius, d - 2*radius], center=true);
     cylinder(r=radius, h=0.01, $fn=fn);
   }
 }
-
 // Use normally; quality automatically adapts
 rounded_box(50, 50, 50, 3);
 </code></pre>
@@ -745,38 +690,30 @@ rounded_box(50, 50, 50, 3);
 module box(w, h, d) {
   cube([w, h, d]);
 }
-
 // FUNCTION: Computes and returns a value (no geometry)
 function box_volume(w, h, d) = w * h * d;
-
 // Usage:
 box(50, 50, 50);                    // Creates 50x50x50 cube
 volume = box_volume(50, 50, 50);    // Calculates: 125000
 echo(volume);                        // Prints: 125000
-
 // ============================================
-
 // Practical Example: Recursive function for power calculation
 function power(base, exp) = 
   exp == 0 ? 1 :                    // Base case: anything^0 = 1
   base * power(base, exp - 1);      // Recursive case
-
 // Calculate 2^5
 result = power(2, 5);
 echo(result);  // Prints: 32
-
 // ============================================
-
 // Another Example: Distance between two points
 function distance(p1, p2) =
   sqrt((p2[0] - p1[0])^2 + (p2[1] - p1[1])^2 + (p2[2] - p1[2])^2);
-
 point_a = [0, 0, 0];
 point_b = [3, 4, 0];
 dist = distance(point_a, point_b);
 echo(dist);  // Prints: 5 (Pythagorean triple)
 </code></pre>
-<p><strong>Key Differences:</strong></p>
+<p>Key Differences:</p>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -791,33 +728,28 @@ echo(dist);  // Prints: 5 (Pythagorean triple)
 </tbody>
 </table>
 </div>
-<p><strong>Practical Combined Example:</strong></p>
+<p>Practical Combined Example:</p>
 <pre><code class="language-openscad">// Use function to calculate, module to create
-
 // Function: Calculate optimal wall thickness based on size
 function optimal_wall_thickness(size) =
   size &lt; 20 ? 1.0 :
   size &lt; 50 ? 1.5 :
   size &lt; 100 ? 2.0 :
   2.5;
-
 // Module: Create parametric container
 module container(width, height) {
   wall = optimal_wall_thickness(width);
-  
   difference() {
     cube([width, width, height]);
     translate([wall, wall, wall])
       cube([width - 2*wall, width - 2*wall, height]);
   }
 }
-
 // Usage
 container(30, 40);   // 1mm walls automatically
 container(75, 100);  // 1.5mm walls automatically
 container(120, 150); // 2mm walls automatically
 </code></pre>
-<hr>
 <h2 id="quiz---lesson-3dmake3-10-questions"><a class="header" href="#quiz---lesson-3dmake3-10-questions">Quiz - Lesson 3dMake.3 (10 questions)</a></h2>
 <ol>
 <li>What is a parametric module and why is it useful<sup class="footnote-reference" id="fr-3-5"><a href="#footnote-3">1</a></sup>?</li>
@@ -847,43 +779,36 @@ container(120, 150); // 2mm walls automatically
 <h2 id="supplemental-resources"><a class="header" href="#supplemental-resources">Supplemental Resources</a></h2>
 <p>For deeper exploration of parametric design and module creation, explore these resources:</p>
 <ul>
-<li><strong><a href="../../assets/Programming_with_OpenSCAD.epub">Programming with OpenSCAD EPUB Textbook</a></strong> - Comprehensive guide to modules, parametric design, and library creation</li>
-<li><strong><a href="https://github.com/ProgrammingWithOpenSCAD/CodeSolutions/tree/main/5_Modules">CodeSolutions: Modules</a></strong> - Working examples of module definition, parameter passing, and reusable components</li>
-<li><strong><a href="https://github.com/BelfrySCAD/BOSL2">BOSL2 Library</a></strong> - Professional OpenSCAD library with hundreds of reusable modules for common operations</li>
+<li><a href="../../assets/Programming_with_OpenSCAD.epub">Programming with OpenSCAD EPUB Textbook</a> - Comprehensive guide to modules, parametric design, and library creation</li>
+<li><a href="https://github.com/ProgrammingWithOpenSCAD/CodeSolutions/tree/main/5_Modules">CodeSolutions: Modules</a> - Working examples of module definition, parameter passing, and reusable components</li>
+<li><a href="https://github.com/BelfrySCAD/BOSL2">BOSL2 Library</a> - Professional OpenSCAD library with hundreds of reusable modules for common operations</li>
 </ul>
 <h2 id="starter-templates"><a class="header" href="#starter-templates">Starter Templates</a></h2>
 <h3 id="parametric-template"><a class="header" href="#parametric-template">Parametric Template</a></h3>
 <pre><code class="language-openscad">// Parametric Design Template
 // Demonstrates how to create designs that adapt to different inputs
 // This pattern allows you to quickly generate variations
-
 // ============================================
 // CUSTOMIZABLE PARAMETERS
 // ============================================
-
 // Box dimensions (change these to regenerate different sizes)
 boxwidth = 40;
 boxdepth = 40;
 boxheight = 30;
-
 // Feature sizing (scales with box size)
 cornerradius = 3;
 wallthickness = 2;
-
 // Boolean flags for feature toggling
 includelid = true;
 includefeet = true;
 hollowinterior = true;
-
 // ============================================
 // QUALITY SETTINGS
 // ============================================
 $fn = 30;  // Fragment quality
-
 // ============================================
 // PARAMETRIC MODULES
 // ============================================
-
 // Simple box with rounded corners
 module roundedbox(width, depth, height, radius) {
     hull() {
@@ -906,7 +831,6 @@ module roundedbox(width, depth, height, radius) {
             sphere(r = radius);
     }
 }
-
 // Use the module
 roundedbox(boxwidth, boxdepth, boxheight, cornerradius);
 </code></pre>
@@ -914,25 +838,19 @@ roundedbox(boxwidth, boxdepth, boxheight, cornerradius);
 <pre><code class="language-openscad">// Module Design Pattern Template
 // Demonstrates best practices for organizing code with reusable modules
 // Modules promote code reuse, clarity, and maintainability
-
 // ============================================
 // CONFIGURATION SECTION
 // ============================================
-
 $fn = 32;
-
 // Component dimensions
 connectordiameter = 8;
 connectorlength = 15;
 connectorwall = 1.5;
-
 basesize = 50;
 baseheight = 5;
-
 // ============================================
 // UTILITY MODULES (General Purpose)
 // ============================================
-
 // Create a hollow cylinder (tube/connector)
 module hollowcylinder(od, id, height) {
     difference() {
@@ -940,22 +858,18 @@ module hollowcylinder(od, id, height) {
         cylinder(h = height + 1, d = id, center = true);
     }
 }
-
 // Create a flat base/mounting plate
 module flatbase(size, thickness) {
     cube([size, size, thickness], center = true);
 }
-
 // Create corner supports for strengthening
 module cornersupport(size, height) {
     linearextrude(height = height, center = true)
         polygon(points = [[0, 0], [size, 0], [0, size]]);
 }
-
 // ============================================
 // ASSEMBLY
 // ============================================
-
 // Combine modules for a complete design
 union(){
     flatbase(basesize, baseheight);
@@ -966,16 +880,16 @@ union(){
 <hr>
 <ol class="footnote-definition">
 <li id="footnote-3">
-<p>OpenSCAD Modules - https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Modules <a href="#fr-3-1">↩</a> <a href="#fr-3-2">↩2</a> <a href="#fr-3-3">↩3</a> <a href="#fr-3-4">↩4</a> <a href="#fr-3-5">↩5</a> <a href="#fr-3-6">↩6</a> <a href="#fr-3-7">↩7</a> <a href="#fr-3-8">↩8</a> <a href="#fr-3-9">↩9</a> <a href="#fr-3-10">↩10</a></p>
+<p>OpenSCAD Modules - <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Modules">https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Modules</a> <a href="#fr-3-1">↩</a> <a href="#fr-3-2">↩2</a> <a href="#fr-3-3">↩3</a> <a href="#fr-3-4">↩4</a> <a href="#fr-3-5">↩5</a> <a href="#fr-3-6">↩6</a> <a href="#fr-3-7">↩7</a> <a href="#fr-3-8">↩8</a> <a href="#fr-3-9">↩9</a> <a href="#fr-3-10">↩10</a></p>
 </li>
 <li id="footnote-2">
-<p>BOSL - OpenSCAD Standard Library - https://github.com/BelfrySCAD/BOSL2 <a href="#fr-2-1">↩</a> <a href="#fr-2-2">↩2</a> <a href="#fr-2-3">↩3</a> <a href="#fr-2-4">↩4</a> <a href="#fr-2-5">↩5</a></p>
+<p>BOSL - OpenSCAD Standard Library - <a href="https://github.com/BelfrySCAD/BOSL2">https://github.com/BelfrySCAD/BOSL2</a> <a href="#fr-2-1">↩</a> <a href="#fr-2-2">↩2</a> <a href="#fr-2-3">↩3</a> <a href="#fr-2-4">↩4</a> <a href="#fr-2-5">↩5</a></p>
 </li>
 <li id="footnote-1">
-<p>3DMake GitHub - https://github.com/tdeck/3dmake <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a></p>
+<p>3DMake GitHub - <a href="https://github.com/tdeck/3dmake">https://github.com/tdeck/3dmake</a> <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a></p>
 </li>
 <li id="footnote-4">
-<p>OpenSCAD Review - Worth learning? - CadHub, accessed February 18, 2026, https://learn.cadhub.xyz/blog/openscad-review/ <a href="#fr-4-1">↩</a> <a href="#fr-4-2">↩2</a></p>
+<p>OpenSCAD Review - Worth learning? - CadHub, accessed February 18, 2026, <a href="https://learn.cadhub.xyz/blog/openscad-review/">https://learn.cadhub.xyz/blog/openscad-review/</a> <a href="#fr-4-1">↩</a> <a href="#fr-4-2">↩2</a></p>
 </li>
 </ol>
 

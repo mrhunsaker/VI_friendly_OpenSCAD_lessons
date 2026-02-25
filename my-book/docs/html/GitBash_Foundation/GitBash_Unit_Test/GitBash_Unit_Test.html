@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-d11bd641.js";
+            window.path_to_searchindex_js = "../../searchindex-d0af5d9e.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-19a5926f.js"></script>
+        <script src="../../toc-5b0c6224.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -220,8 +220,316 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="gitbash_foundation_gitbash_unit_test-gitbash_unit_test"><a class="header" href="#gitbash_foundation_gitbash_unit_test-gitbash_unit_test">GitBash Unit Test &amp; Practice</a></h1>
-<p>Comprehensive assessment and practice for all Git Bash skills.</p>
+                        <h1 id="gitbash-unit-test---comprehensive-assessment"><a class="header" href="#gitbash-unit-test---comprehensive-assessment">GitBash Unit Test - Comprehensive Assessment</a></h1>
+<p>Estimated time: 60-90 minutes</p>
+<h2 id="key-learning-outcomes-assessed"><a class="header" href="#key-learning-outcomes-assessed">Key Learning Outcomes Assessed</a></h2>
+<p>By completing this unit test, you will demonstrate:</p>
+<ol>
+<li>Understanding of file system navigation and path concepts</li>
+<li>Proficiency with file and folder manipulation commands</li>
+<li>Ability to redirect and pipe command output</li>
+<li>Knowledge of environment variables and aliases</li>
+<li>Screen-reader accessibility best practices in terminal environments</li>
+<li>Problem-solving and command chaining skills</li>
+</ol>
+<h2 id="target-audience"><a class="header" href="#target-audience">Target Audience</a></h2>
+<p>Users who have completed GitBash-0 through GitBash-6 and need to demonstrate mastery of Git Bash fundamentals.</p>
+<h2 id="instructions"><a class="header" href="#instructions">Instructions</a></h2>
+<p>Complete all sections below. For multiple choice, select the best answer. For short answers, write one to two sentences. For hands-on tasks, capture evidence (screenshots or output files) and submit alongside your answers.</p>
+<hr>
+<h2 id="part-a-multiple-choice-questions-20-questions"><a class="header" href="#part-a-multiple-choice-questions-20-questions">Part A: Multiple Choice Questions (20 questions)</a></h2>
+<p>Select the best answer for each question. Each question is worth 1 point.</p>
+<ol>
+<li>
+<p>What is the primary purpose of the <code>PATH</code> environment variable?</p>
+<ul>
+<li>A) Store your home directory location</li>
+<li>B) Tell the shell where to find executable programs</li>
+<li>C) Configure the visual appearance of the terminal</li>
+<li>D) Store the current working directory name</li>
+</ul>
+</li>
+<li>
+<p>Which command prints your current working directory in Git Bash?</p>
+<ul>
+<li>A) <code>ls -1</code></li>
+<li>B) <code>cd</code></li>
+<li>C) <code>pwd</code></li>
+<li>D) <code>whoami</code></li>
+</ul>
+</li>
+<li>
+<p>What does the <code>~</code> symbol represent in Git Bash paths?</p>
+<ul>
+<li>A) The root directory</li>
+<li>B) The current directory</li>
+<li>C) The parent directory</li>
+<li>D) The home directory</li>
+</ul>
+</li>
+<li>
+<p>How do you list only file names (not full details) in a way that is screen-reader friendly?</p>
+<ul>
+<li>A) <code>ls</code></li>
+<li>B) <code>ls -1</code></li>
+<li>C) <code>ls -l</code></li>
+<li>D) <code>cat -1</code></li>
+</ul>
+</li>
+<li>
+<p>Which command creates a new empty file in Git Bash?</p>
+<ul>
+<li>A) <code>mkdir filename</code></li>
+<li>B) <code>touch filename</code></li>
+<li>C) <code>new filename</code></li>
+<li>D) <code>echo filename</code></li>
+</ul>
+</li>
+<li>
+<p>What is the difference between <code>&gt;</code> and <code>&gt;&gt;</code>?</p>
+<ul>
+<li>A) <code>&gt;</code> redirects to file, <code>&gt;&gt;</code> displays on screen</li>
+<li>B) <code>&gt;</code> overwrites a file, <code>&gt;&gt;</code> appends to a file</li>
+<li>C) They do the same thing</li>
+<li>D) <code>&gt;</code> is for text, <code>&gt;&gt;</code> is for binary</li>
+</ul>
+</li>
+<li>
+<p>What does the pipe operator <code>|</code> do?</p>
+<ul>
+<li>A) Creates a folder</li>
+<li>B) Sends the output of one command to the input of another</li>
+<li>C) Deletes files matching a pattern</li>
+<li>D) Lists all processes</li>
+</ul>
+</li>
+<li>
+<p>Which command copies a file in Git Bash?</p>
+<ul>
+<li>A) <code>mv</code></li>
+<li>B) <code>rm</code></li>
+<li>C) <code>cp</code></li>
+<li>D) <code>cd</code></li>
+</ul>
+</li>
+<li>
+<p>How do you rename a file from <code>oldname.txt</code> to <code>newname.txt</code> in Git Bash?</p>
+<ul>
+<li>A) <code>cp oldname.txt newname.txt</code></li>
+<li>B) <code>mv oldname.txt newname.txt</code></li>
+<li>C) <code>rename oldname.txt newname.txt</code></li>
+<li>D) <code>rn oldname.txt newname.txt</code></li>
+</ul>
+</li>
+<li>
+<p>What is the purpose of <code>grep</code> in Git Bash piping?</p>
+<ul>
+<li>A) Find files in a directory</li>
+<li>B) Search for text patterns within output or files</li>
+<li>C) Select a string to copy to clipboard</li>
+<li>D) Select which shell to use</li>
+</ul>
+</li>
+<li>
+<p>Which key allows you to autocomplete a path in Git Bash?</p>
+<ul>
+<li>A) <code>Ctrl + A</code></li>
+<li>B) <code>Ctrl + E</code></li>
+<li>C) <code>Tab</code></li>
+<li>D) <code>Space</code></li>
+</ul>
+</li>
+<li>
+<p>How do you copy text to the Windows clipboard from Git Bash?</p>
+<ul>
+<li>A) <code>cat filename &gt; clipboard</code></li>
+<li>B) <code>cat filename | clip</code></li>
+<li>C) <code>copy filename</code></li>
+<li>D) <code>cat filename | paste</code></li>
+</ul>
+</li>
+<li>
+<p>What does <code>which openscad</code> do?</p>
+<ul>
+<li>A) Opens the OpenSCAD application</li>
+<li>B) Gets help about the openscad command</li>
+<li>C) Locates the full path of the openscad executable</li>
+<li>D) Lists all available commands</li>
+</ul>
+</li>
+<li>
+<p>Which wildcard matches any single character in Git Bash?</p>
+<ul>
+<li>A) <code>*</code></li>
+<li>B) <code>?</code></li>
+<li>C) <code>%</code></li>
+<li>D) <code>#</code></li>
+</ul>
+</li>
+<li>
+<p>What is the purpose of <code>./</code> before a script name?</p>
+<ul>
+<li>A) Run a script in the current directory</li>
+<li>B) Execute all commands in parallel</li>
+<li>C) Combine multiple commands</li>
+<li>D) Create an alias</li>
+</ul>
+</li>
+<li>
+<p>How do you create a temporary alias in Git Bash?</p>
+<ul>
+<li>A) <code>set-alias preview='openscad'</code></li>
+<li>B) <code>alias preview='openscad'</code></li>
+<li>C) <code>new-alias preview openscad</code></li>
+<li>D) <code>preview = openscad</code></li>
+</ul>
+</li>
+<li>
+<p>Where is a Git Bash alias typically stored to persist across sessions?</p>
+<ul>
+<li>A) <code>C:\Program Files\Git\profile.sh</code></li>
+<li>B) In the <code>~/.bashrc</code> file</li>
+<li>C) <code>~/bash_profile</code></li>
+<li>D) Aliases cannot be made permanent</li>
+</ul>
+</li>
+<li>
+<p>How do you abort a long-running command in Git Bash?</p>
+<ul>
+<li>A) Press <code>Escape</code></li>
+<li>B) Press <code>Ctrl + X</code></li>
+<li>C) Press <code>Ctrl + C</code></li>
+<li>D) Press <code>Alt + F4</code></li>
+</ul>
+</li>
+<li>
+<p>What command shows the history of previously run commands in Git Bash?</p>
+<ul>
+<li>A) <code>history</code></li>
+<li>B) <code>get-history</code></li>
+<li>C) <code>show-history</code></li>
+<li>D) <code>bash-history</code></li>
+</ul>
+</li>
+<li>
+<p>How do you reload your <code>.bashrc</code> without restarting Git Bash?</p>
+<ul>
+<li>A) Use <code>reload ~/.bashrc</code> in the terminal</li>
+<li>B) Use <code>source ~/.bashrc</code></li>
+<li>C) Use the Windows Control Panel</li>
+<li>D) <code>.bashrc</code> reloads automatically</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="part-b-short-answer-questions-10-questions"><a class="header" href="#part-b-short-answer-questions-10-questions">Part B: Short Answer Questions (10 questions)</a></h2>
+<p>Answer each question in one to two sentences. Each question is worth 2 points.</p>
+<ol>
+<li>
+<p>Explain the difference between absolute and relative paths. Give one example of each.</p>
+</li>
+<li>
+<p>Why is <code>ls -1</code> preferred over <code>ls</code> for screen reader users? Describe what flag combination you would use to list only directories.</p>
+</li>
+<li>
+<p>What is the purpose of redirecting output to a file, and give an example of when you would use <code>&gt;</code> instead of <code>&gt;&gt;</code>?</p>
+</li>
+<li>
+<p>Describe what would happen if you ran <code>rm -r ~/Documents/my_folder</code> and why this command should be used carefully.</p>
+</li>
+<li>
+<p>How would you search for all files with a <code>.scad</code> extension in your current directory? Write the command.</p>
+</li>
+<li>
+<p>Explain what happens when you pipe the output of <code>ls -1</code> into <code>clip</code>. What would you do next?</p>
+</li>
+<li>
+<p>What is an environment variable, and give one example of how you might use it in Git Bash.</p>
+</li>
+<li>
+<p>If a program is not in your <code>PATH</code>, what two methods could you use to run it from Git Bash?</p>
+</li>
+<li>
+<p>Describe how you would open a file in Notepad and also add a line to it from Git Bash.</p>
+</li>
+<li>
+<p>What is one strategy you would use if your screen reader stops announcing terminal output while using Git Bash?</p>
+</li>
+</ol>
+<hr>
+<h2 id="part-c-hands-on-tasks-10-tasks"><a class="header" href="#part-c-hands-on-tasks-10-tasks">Part C: Hands-On Tasks (10 tasks)</a></h2>
+<p>Complete each task and capture evidence (screenshots, output files, or command transcripts). Each task is worth 3 points.</p>
+<h3 id="tasks-1-5-file-system-and-navigation"><a class="header" href="#tasks-1-5-file-system-and-navigation">Tasks 1-5: File System and Navigation</a></h3>
+<ol>
+<li>
+<p>Create a folder structure <code>~/Documents/GitBash_Assessment/Projects</code> using a single command. Capture the <code>ls -1</code> output showing the creation.</p>
+</li>
+<li>
+<p>Create five files named <code>project_1.scad</code>, <code>project_2.scad</code>, <code>project_3.txt</code>, <code>notes_1.txt</code>, and <code>notes_2.txt</code> inside the <code>Projects</code> folder. Use wildcards to list only <code>.scad</code> files, then capture the output.</p>
+</li>
+<li>
+<p>Copy the entire <code>Projects</code> folder to <code>Projects_Backup</code> using <code>cp -r</code>. Capture the <code>ls -1</code> output showing both folders exist.</p>
+</li>
+<li>
+<p>Move (rename) <code>project_1.scad</code> to <code>project_1_final.scad</code>. Capture the <code>ls -1</code> output showing the renamed file.</p>
+</li>
+<li>
+<p>Delete <code>notes_1.txt</code> and <code>notes_2.txt</code> using a single <code>rm</code> command with wildcards. Capture the final <code>ls -1</code> output.</p>
+</li>
+</ol>
+<h3 id="tasks-6-10-advanced-operations-and-scripting"><a class="header" href="#tasks-6-10-advanced-operations-and-scripting">Tasks 6-10: Advanced Operations and Scripting</a></h3>
+<ol start="6">
+<li>
+<p>Create a file called <code>my_data.txt</code> with at least four lines using <code>echo</code> and <code>&gt;&gt;</code>. Then read it with <code>cat my_data.txt</code> and capture the output.</p>
+</li>
+<li>
+<p>Use <code>grep</code> to search for a keyword (e.g., “project”) in <code>my_data.txt</code> and pipe the results to <code>clip</code>. Paste the results into Notepad and capture a screenshot.</p>
+</li>
+<li>
+<p>List all files in the <code>Projects</code> folder and redirect the output to <code>projects_list.txt</code>. Open it in Notepad and capture a screenshot of the file.</p>
+</li>
+<li>
+<p>Create a temporary alias called <code>myls</code> that runs <code>ls -1</code>, test it, and capture the output. Then explain what would be required to make it persistent.</p>
+</li>
+<li>
+<p>Run <code>man ls</code> (or <code>ls --help</code>) and redirect the output to <code>help_output.txt</code>. Open the file in Notepad and capture a screenshot showing at least the first page of help content.</p>
+</li>
+</ol>
+<hr>
+<h2 id="grading-rubric"><a class="header" href="#grading-rubric">Grading Rubric</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Section</th><th>Questions</th><th>Points Each</th><th>Total</th></tr>
+</thead>
+<tbody>
+<tr><td>Multiple Choice</td><td>20</td><td>1</td><td>20</td></tr>
+<tr><td>Short Answer</td><td>10</td><td>2</td><td>20</td></tr>
+<tr><td>Hands-On Tasks</td><td>10</td><td>3</td><td>30</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>40</strong></td><td>-</td><td><strong>70</strong></td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>Passing Score:</strong> 49 points (70%)</p>
+<hr>
+<h2 id="helpful-resources-for-review"><a class="header" href="#helpful-resources-for-review">Helpful Resources for Review</a></h2>
+<ul>
+<li><a href="https://git-scm.com/book/en/v2">Git Bash Command Reference</a></li>
+<li><a href="https://linuxcommand.org/lc3lts0020.php">Navigation and File System</a></li>
+<li><a href="https://www.gnu.org/software/grep/manual/grep.html">Using Pipes and Filtering</a></li>
+<li><a href="https://www.gnu.org/software/bash/manual/htmlnode/Bash-Startup-Files.html">Bash Profile and Aliases</a></li>
+<li><a href="https://www.nvaccess.org/documentation/">Screen Reader Accessibility Tips</a></li>
+</ul>
+<hr>
+<h2 id="submission-checklist"><a class="header" href="#submission-checklist">Submission Checklist</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"> All 20 multiple choice questions answered</li>
+<li><input disabled="" type="checkbox"> All 10 short answer questions answered (1-2 sentences each)</li>
+<li><input disabled="" type="checkbox"> All 10 hands-on tasks completed with evidence captured</li>
+<li><input disabled="" type="checkbox"> Files/screenshots organized and labeled clearly</li>
+<li><input disabled="" type="checkbox"> Submission includes this checklist</li>
+</ul>
+<!--pagebreak-->
 
                     </main>
 

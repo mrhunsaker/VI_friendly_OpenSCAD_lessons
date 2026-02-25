@@ -1,0 +1,99 @@
+# Glossary — Organized by Topic
+
+This glossary groups and alphabetizes terms by topic. It includes core 3D design and printing vocabulary, OpenSCAD-specific terms, command-line and coding terms, and accessibility/tooling references.
+
+---
+
+## **General**
+
+- Additive manufacturing: Processes that build objects by adding material layer by layer (3D printing).
+- CAD (Computer-Aided Design): Software for creating 2D/3D models; OpenSCAD is a CAD tool focused on programmatic modeling.
+- Design: An OpenSCAD program or other model created for fabrication or simulation.
+- Parameter / parametric design: Designing with variables so a model can be changed by altering inputs.
+- Preview: Fast, approximate model view (OpenSCAD `F5`).
+- Render: Full evaluation of geometry (OpenSCAD `F6`) used before export.
+
+## **3D Printing**
+
+- Bed adhesion: Methods to keep the first layer attached to the build plate (tape, glue, heated bed).
+- Brim: A single-layer flat ring around a model to improve adhesion.
+- Filament: Thermoplastic material (PLA, PETG, ABS, TPU) used by FDM printers.
+- G-code: The machine instructions that drive a printer (moves, extrusion, temps).
+- Infill: Internal lattice/pattern inside a print, expressed as a percentage.
+- Layer height: Vertical thickness of each printed layer; impacts quality and time.
+- Nozzle / Hot end: The heated tip that melts and extrudes filament.
+- Overhang: Model area with little/no support underneath; often needs support structures.
+- Slicer: Software that converts 3D models (STL) into G-code for a specific printer.
+- Support structures: Temporary scaffolding printed to support overhangs.
+- STL: Common 3D model file format for printing (triangle mesh).
+- Warping: Distortion from uneven cooling that lifts part edges.
+
+## **OpenSCAD — Language & Modeling**
+
+- CSG (Constructive Solid Geometry): Building complex shapes by combining primitives with boolean ops.
+- Children / children(): The nested block passed into a module; accessible with `children()`.
+- Linear extrusion: `linear_extrude()` — creates 3D geometry from a 2D profile.
+- Module: A named reusable block of OpenSCAD code defined with `module name() {}`.
+- Parameter: Named values used to control geometry and behavior inside modules/functions.
+- Primitive: Built-in shapes such as `cube()`, `cylinder()`, `sphere()`, `polyhedron()`.
+- Preview vs Render: Preview (`F5`) is fast; Render (`F6`) evaluates final geometry.
+- rotate() / translate() / scale(): Common transforms to orient and place geometry.
+- union() / difference() / intersection(): Boolean operations for combining or subtracting solids.
+- $fn: Special variable controlling polygonal approximation (number of faces) for rounded primitives.
+
+## **3dMake / Build Automation (CLI-based toolchain)**
+
+- Artifact: Any generated file from the build pipeline (STL, G-code, logs).
+- Automation / Headless render: Running builds or OpenSCAD without a GUI, typically via scripts or CI.
+- Build script: Script that automates rendering, exporting, slicing, and packaging.
+- Parameter file: External JSON/TOML providing parameters for reproducible builds.
+- Pipeline: Ordered steps from source to final artifact (render → export → slice → G-code).
+
+## **PowerShell & Automation**
+
+- Cmdlet: Lightweight PowerShell command (e.g., `Get-ChildItem`).
+- Execution policy: Controls whether PowerShell scripts are allowed to run on the machine.
+- Object: PowerShell passes rich objects (not text) between cmdlets.
+- Pipeline (PowerShell): Passing output of one cmdlet as input to another using `|`.
+- Remote session: Running PowerShell commands on a remote host via `Enter-PSSession` or `Invoke-Command`.
+
+## **Command-Line & Shell**
+
+- Argument / Flag: Values or options passed to a command (e.g., `-r`, `--verbose`).
+- Bash: A common Unix shell used interactively and in scripts; many curriculum examples reference Git Bash on Windows.
+- CLI (Command-Line Interface): Text-based interface for interacting with programs via commands.
+- Environment variable: Named values available to processes (e.g., `PATH`, `HOME`).
+- Exit code: Numeric status returned by a command (0 = success conventionally).
+- Pipe (`|`): Send stdout of one command to stdin of another.
+- Redirection: `>` and `>>` to write stdout to files; `2>` for stderr.
+- Shell script: A file of shell commands (Bash: `.sh`) executed by a shell.
+- Standard streams: `stdin`, `stdout`, `stderr` for input, normal output, and error output.
+- SSH / SCP: Secure remote shell/file copy tools for remote management and transfer.
+- grep / sed / awk / jq: Common command-line text processing and JSON tools.
+
+## **Coding & Programming Terms**
+
+- API (Application Programming Interface): A defined interface for interacting with software or web services.
+- Array / List: Ordered collection of values.
+- Commit / Branch / Repository (git): Version control concepts: commits are snapshots, branches hold parallel work, repo stores history.
+- CI (Continuous Integration): Automated builds and tests triggered by changes to source code.
+- Function: Named reusable block of code that returns a value or performs an action.
+- JSON / TOML / YAML: Common structured data formats used for configuration and parameter files.
+- Library / Package / Module: Reusable code collections that your code can import.
+- Linting: Static analysis to detect style issues or simple bugs in code.
+- Loop / Conditional: Control flow constructs (for, while, if/else) used to repeat or branch logic.
+- Regex (Regular expression): Pattern syntax for searching and transforming text.
+- Unit test / Integration test: Automated tests that validate small units or integrated components.
+- Virtual environment: Isolated Python environment (venv, virtualenv) to manage dependencies.
+
+## **Tools & Resources**
+
+- 3DMake: CLI workflow tool referenced in the curriculum for headless builds and automation.
+- Git / GitHub: Version control and hosting used for code, examples, and CodeSolutions.
+- Notable docs: NVDA, OpenSCAD, PrusaSlicer, and vendor sites are referenced throughout—links are in the Further Reading section.
+
+## **Accessibility (a11y)**
+
+- Screen reader: Software that reads text aloud (NVDA, JAWS) or provides braille output.
+- Braille display: Hardware that renders text as tactile braille cells.
+- Keyboard navigation: Ensuring tools and web content are usable without a mouse.

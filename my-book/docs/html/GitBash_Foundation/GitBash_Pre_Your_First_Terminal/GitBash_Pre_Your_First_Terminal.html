@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-d11bd641.js";
+            window.path_to_searchindex_js = "../../searchindex-d0af5d9e.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-19a5926f.js"></script>
+        <script src="../../toc-5b0c6224.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -221,11 +221,14 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="gitbash_foundation_gitbash_pre_your_first_terminal-gitbash_pre_your_first_terminal"><a class="header" href="#gitbash_foundation_gitbash_pre_your_first_terminal-gitbash_pre_your_first_terminal">GitBash-Pre: Your First Terminal - Screen Reader Navigation Fundamentals</a></h1>
-<p><strong>Duration:</strong> 1.5-2 hours (for screen reader users)<br><strong>Prerequisites:</strong> None - this is the starting point<br><strong>Accessibility Note:</strong> This lesson is designed specifically for screen reader users (NVDA, JAWS)<br><strong>Important:</strong> Git Bash uses Unix/bash commands, different from Windows CMD/PowerShell</p>
-<hr>
+<p>Duration: 1.5-2 hours (for screen reader users)<br>Prerequisites: None - this is the starting point<br>Accessibility Note: This lesson is designed specifically for screen reader users (NVDA, JAWS)</p>
+<blockquote class="blockquote-tag blockquote-tag-important">
+<p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Important</p>
+<p>Git Bash uses Unix/bash commands, different from Windows CMD/PowerShell</p>
+</blockquote>
 <h2 id="what-is-git-bash"><a class="header" href="#what-is-git-bash">What is Git Bash?</a></h2>
 <p>Git Bash is a Unix/Linux shell running on Windows. It gives you bash commands (same as macOS and Linux) while staying on your Windows computer.</p>
-<p><strong>Why learn this?</strong></p>
+<p>Why learn this?</p>
 <ul>
 <li>Faster and more precise work (especially for 3D printing scripts and automation)</li>
 <li>Essential for programming and using tools like OpenSCAD</li>
@@ -233,39 +236,38 @@
 <li>Transferable: Same commands work on macOS and Linux</li>
 <li>Industry-standard: Professional developers use this everywhere</li>
 </ul>
-<hr>
 <h2 id="installing-and-opening-git-bash"><a class="header" href="#installing-and-opening-git-bash">Installing and Opening Git Bash</a></h2>
 <h3 id="installation-if-not-already-installed"><a class="header" href="#installation-if-not-already-installed">Installation (If Not Already Installed)</a></h3>
 <ol>
-<li>Download from: https://git-scm.com/download/win</li>
+<li>Download from: <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></li>
 <li>Run the installer</li>
 <li>Accept defaults (all options work fine)</li>
 <li>Installation takes ~5 minutes</li>
 </ol>
 <h3 id="opening-git-bash"><a class="header" href="#opening-git-bash">Opening Git Bash</a></h3>
-<p><strong>Method 1: Search (Easiest)</strong></p>
+<p>Method 1: Search (Easiest)</p>
 <ol>
-<li>Press the <strong>Windows key</strong> alone</li>
+<li>Press the Windows key alone</li>
 <li>You should hear “Search”</li>
 <li>Type: <code>Git Bash</code></li>
 <li>You’ll hear search results appear</li>
-<li>Press <strong>Enter</strong> to open</li>
+<li>Press Enter to open</li>
 </ol>
-<p><strong>Method 2: From File Explorer</strong></p>
+<p>Method 2: From File Explorer</p>
 <ol>
 <li>Open File Explorer</li>
 <li>Navigate to any folder</li>
 <li>Right-click on the folder</li>
 <li>Look for “Git Bash Here”</li>
-<li>Press <strong>Enter</strong></li>
+<li>Press Enter</li>
 </ol>
 <h3 id="first-connection-understanding-the-prompt"><a class="header" href="#first-connection-understanding-the-prompt">First Connection: Understanding the Prompt</a></h3>
-<p>When Git Bash opens, your screen reader will announce the window title and then the <strong>prompt</strong>.</p>
-<p><strong>What you’ll hear (typical example):</strong></p>
+<p>When Git Bash opens, your screen reader will announce the window title and then the prompt.</p>
+<p>What you’ll hear (typical example):</p>
 <pre><code>user@computer MINGW64 ~
 $
 </code></pre>
-<p><strong>What this means:</strong></p>
+<p>What this means:</p>
 <ul>
 <li><code>user</code> = Your username</li>
 <li><code>@computer</code> = Your computer name</li>
@@ -273,20 +275,22 @@ $
 <li><code>~</code> = Your current location (home directory)</li>
 <li><code>$</code> = The prompt is ready for your input</li>
 </ul>
-<p><strong>Important:</strong> Your cursor is blinking right after the <code>$</code>. This is where you type.</p>
-<hr>
+<blockquote class="blockquote-tag blockquote-tag-important">
+<p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Important</p>
+<p>Your cursor is blinking right after the <code>$</code>. This is where you type.</p>
+</blockquote>
 <h2 id="your-first-commands-screen-reader-edition"><a class="header" href="#your-first-commands-screen-reader-edition">Your First Commands (Screen Reader Edition)</a></h2>
 <h3 id="command-1-where-am-i---pwd"><a class="header" href="#command-1-where-am-i---pwd">Command 1: “Where Am I?” - <code>pwd</code></a></h3>
-<p><strong>What it does:</strong> Tells you your current location</p>
-<p><strong>Type this:</strong></p>
+<p>What it does: Tells you your current location</p>
+<p>Type this:</p>
 <pre><code class="language-bash">pwd
 </code></pre>
-<p><strong>Press Enter</strong></p>
-<p><strong>What you’ll hear:</strong>
+<p>Press Enter</p>
+<p>What you’ll hear:
 Your screen reader will announce the current path, something like:</p>
 <pre><code>/c/Users/YourName
 </code></pre>
-<p><strong>Understanding paths in Git Bash:</strong></p>
+<p>Understanding paths in Git Bash:</p>
 <ul>
 <li>Paths use forward slashes: <code>/c/Users/YourName/Documents</code></li>
 <li><code>/c/</code> means the C: drive (Windows drive)</li>
@@ -294,25 +298,25 @@ Your screen reader will announce the current path, something like:</p>
 <li>Think of it like folders inside folders: <code>/c/</code> (main drive) -&gt; <code>Users</code> -&gt; <code>YourName</code> -&gt; <code>Documents</code></li>
 </ul>
 <h3 id="command-2-whats-here---ls"><a class="header" href="#command-2-whats-here---ls">Command 2: “What’s Here?” - <code>ls</code></a></h3>
-<p><strong>What it does:</strong> Lists all files and folders in your current location</p>
-<p><strong>Type this:</strong></p>
+<p>What it does: Lists all files and folders in your current location</p>
+<p>Type this:</p>
 <pre><code class="language-bash">ls
 </code></pre>
-<p><strong>Press Enter</strong></p>
-<p><strong>What you’ll hear:</strong>
+<p>Press Enter</p>
+<p>What you’ll hear:
 Your screen reader will announce a list of file and folder names, one per line. Perfect for screen readers!</p>
 <h3 id="command-3-go-there---cd-documents"><a class="header" href="#command-3-go-there---cd-documents">Command 3: “Go There” - <code>cd Documents</code></a></h3>
-<p><strong>What it does:</strong> Changes your location (navigates to a folder)</p>
-<p><strong>Type this:</strong></p>
+<p>What it does: Changes your location (navigates to a folder)</p>
+<p>Type this:</p>
 <pre><code class="language-bash">cd Documents
 </code></pre>
-<p><strong>Press Enter</strong></p>
-<p><strong>What you’ll hear:</strong>
+<p>Press Enter</p>
+<p>What you’ll hear:
 The prompt changes to show your new location. You might hear something like:</p>
 <pre><code>user@computer MINGW64 ~/Documents
 $
 </code></pre>
-<p><strong>Practice navigation:</strong></p>
+<p>Practice navigation:</p>
 <ol>
 <li>Run <code>pwd</code> to confirm you’re in Documents</li>
 <li>Run <code>ls</code> to see what files are in Documents</li>
@@ -320,32 +324,30 @@ $
 <li>Run <code>pwd</code> again to confirm</li>
 <li>Go back to Documents: <code>cd Documents</code></li>
 </ol>
-<hr>
 <h2 id="creating-and-viewing-files"><a class="header" href="#creating-and-viewing-files">Creating and Viewing Files</a></h2>
 <h3 id="create-a-simple-file"><a class="header" href="#create-a-simple-file">Create a Simple File</a></h3>
-<p><strong>Type this:</strong></p>
+<p>Type this:</p>
 <pre><code class="language-bash">echo "Hello, Git Bash!" &gt; hello.txt
 </code></pre>
-<p><strong>What this does:</strong></p>
+<p>What this does:</p>
 <ul>
 <li><code>echo</code> sends text to the screen (or file)</li>
 <li><code>"Hello, Git Bash!"</code> is the text</li>
 <li><code>&gt;</code> redirects it to a file called <code>hello.txt</code></li>
 </ul>
 <h3 id="read-the-file-back"><a class="header" href="#read-the-file-back">Read the File Back</a></h3>
-<p><strong>Type this:</strong></p>
+<p>Type this:</p>
 <pre><code class="language-bash">cat hello.txt
 </code></pre>
-<p><strong>What you’ll hear:</strong>
+<p>What you’ll hear:
 Your screen reader announces:</p>
 <pre><code>Hello, Git Bash!
 </code></pre>
 <h3 id="open-and-edit-the-file"><a class="header" href="#open-and-edit-the-file">Open and Edit the File</a></h3>
-<p><strong>Type this:</strong></p>
+<p>Type this:</p>
 <pre><code class="language-bash">notepad.exe hello.txt
 </code></pre>
 <p>This opens the file in Notepad where you can edit it with your screen reader.</p>
-<hr>
 <h2 id="essential-keyboard-shortcuts"><a class="header" href="#essential-keyboard-shortcuts">Essential Keyboard Shortcuts</a></h2>
 <p>These work in Git Bash and are crucial for screen reader users:</p>
 <div class="table-wrapper">
@@ -354,65 +356,63 @@ Your screen reader announces:</p>
 <tr><th>Key Combination</th><th>What It Does</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Up Arrow</strong></td><td>Shows your previous command (press again to go further back)</td></tr>
-<tr><td><strong>Down Arrow</strong></td><td>Shows your next command (if you went back)</td></tr>
-<tr><td><strong>Tab</strong></td><td>Auto-completes folder/file names</td></tr>
-<tr><td><strong>Ctrl+C</strong></td><td>Stops a running command</td></tr>
-<tr><td><strong>Ctrl+L</strong></td><td>Clears the screen</td></tr>
-<tr><td><strong>Ctrl+A</strong></td><td>Go to beginning of line</td></tr>
-<tr><td><strong>Ctrl+E</strong></td><td>Go to end of line</td></tr>
-<tr><td><strong>Enter</strong></td><td>Runs the command</td></tr>
+<tr><td>Up Arrow</td><td>Shows your previous command (press again to go further back)</td></tr>
+<tr><td>Down Arrow</td><td>Shows your next command (if you went back)</td></tr>
+<tr><td>Tab</td><td>Auto-completes folder/file names</td></tr>
+<tr><td>Ctrl+C</td><td>Stops a running command</td></tr>
+<tr><td>Ctrl+L</td><td>Clears the screen</td></tr>
+<tr><td>Ctrl+A</td><td>Go to beginning of line</td></tr>
+<tr><td>Ctrl+E</td><td>Go to end of line</td></tr>
+<tr><td>Enter</td><td>Runs the command</td></tr>
 </tbody>
 </table>
 </div>
-<p><strong>Screen reader tip:</strong> These all work perfectly with your screen reader. Try them!</p>
-<hr>
+<p>Screen reader tip: These all work perfectly with your screen reader. Try them!</p>
 <h2 id="screen-reader-specific-tips"><a class="header" href="#screen-reader-specific-tips">Screen Reader-Specific Tips</a></h2>
 <h3 id="nvda-users"><a class="header" href="#nvda-users">NVDA Users</a></h3>
 <ol>
 <li>
-<p><strong>Reading Command Output:</strong></p>
+<p>Reading Command Output:</p>
 <ul>
-<li>Use <strong>NVDA+Home</strong> to read the current line</li>
-<li>Use <strong>NVDA+Down Arrow</strong> to read to the end of the screen</li>
-<li>Use <strong>NVDA+Page Down</strong> to read the next page</li>
+<li>Use NVDA+Home to read the current line</li>
+<li>Use NVDA+Down Arrow to read to the end of the screen</li>
+<li>Use NVDA+Page Down to read the next page</li>
 </ul>
 </li>
 <li>
-<p><strong>Reviewing Text:</strong></p>
+<p>Reviewing Text:</p>
 <ul>
-<li>Use <strong>NVDA+Shift+Page Up</strong> to review text above</li>
+<li>Use NVDA+Shift+Page Up to review text above</li>
 </ul>
 </li>
 </ol>
 <h3 id="jaws-users"><a class="header" href="#jaws-users">JAWS Users</a></h3>
 <ol>
 <li>
-<p><strong>Reading Output:</strong></p>
+<p>Reading Output:</p>
 <ul>
-<li>Use <strong>Insert+Down Arrow</strong> to read line-by-line</li>
-<li>Use <strong>Insert+Page Down</strong> to read by page</li>
-<li>Use <strong>Insert+End</strong> to jump to the end of text</li>
+<li>Use Insert+Down Arrow to read line-by-line</li>
+<li>Use Insert+Page Down to read by page</li>
+<li>Use Insert+End to jump to the end of text</li>
 </ul>
 </li>
 <li>
-<p><strong>Reading All Text:</strong></p>
+<p>Reading All Text:</p>
 <ul>
-<li>Use <strong>Insert+Down Arrow</strong> repeatedly</li>
-<li>Or use <strong>Insert+Ctrl+Down</strong> to read to the end</li>
+<li>Use Insert+Down Arrow repeatedly</li>
+<li>Or use Insert+Ctrl+Down to read to the end</li>
 </ul>
 </li>
 </ol>
 <h3 id="common-issue-i-cant-hear-the-output"><a class="header" href="#common-issue-i-cant-hear-the-output">Common Issue: “I Can’t Hear the Output”</a></h3>
-<p><strong>Problem:</strong> You run a command but don’t hear the output</p>
-<p><strong>Solutions:</strong></p>
+<p>Problem: You run a command but don’t hear the output</p>
+<p>Solutions:</p>
 <ol>
-<li>Make sure your cursor is at the prompt (try pressing <strong>End</strong> or <strong>Ctrl+E</strong>)</li>
-<li>Use <strong>Up Arrow</strong> to go back to your previous command and review it</li>
+<li>Make sure your cursor is at the prompt (try pressing End or Ctrl+E)</li>
+<li>Use Up Arrow to go back to your previous command and review it</li>
 <li>Try redirecting to a file: <code>command &gt; output.txt</code> then open the file</li>
-<li>In NVDA: Try pressing <strong>NVDA+F7</strong> to open the Review Mode viewer</li>
+<li>In NVDA: Try pressing NVDA+F7 to open the Review Mode viewer</li>
 </ol>
-<hr>
 <h2 id="practice-exercises"><a class="header" href="#practice-exercises">Practice Exercises</a></h2>
 <p>Complete these in order. Take your time with each one:</p>
 <h3 id="exercise-1-basic-navigation"><a class="header" href="#exercise-1-basic-navigation">Exercise 1: Basic Navigation</a></h3>
@@ -424,16 +424,16 @@ Your screen reader announces:</p>
 <li>Run <code>pwd</code> to confirm your new location</li>
 <li>Run <code>ls</code> in this new location</li>
 </ol>
-<p><strong>Goal:</strong> You should be comfortable knowing where you are and what’s around you</p>
+<p>Goal: You should be comfortable knowing where you are and what’s around you</p>
 <h3 id="exercise-2-using-tab-completion"><a class="header" href="#exercise-2-using-tab-completion">Exercise 2: Using Tab Completion</a></h3>
 <ol>
 <li>In your home directory, type <code>cd D</code> (just the letter D)</li>
-<li>Press <strong>Tab</strong></li>
+<li>Press Tab</li>
 <li>Git Bash should auto-complete to a folder starting with D</li>
 <li>Repeat with other folder names</li>
 <li>Try typing a longer name: <code>cd Down</code> and Tab</li>
 </ol>
-<p><strong>Goal:</strong> Tab completion should feel natural</p>
+<p>Goal: Tab completion should feel natural</p>
 <h3 id="exercise-3-creating-and-viewing-files"><a class="header" href="#exercise-3-creating-and-viewing-files">Exercise 3: Creating and Viewing Files</a></h3>
 <ol>
 <li>Create a file: <code>echo "Test content" &gt; test.txt</code></li>
@@ -441,14 +441,14 @@ Your screen reader announces:</p>
 <li>Create another: <code>echo "Line 2" &gt; another.txt</code></li>
 <li>List both: <code>ls *.txt</code></li>
 </ol>
-<p><strong>Goal:</strong> You understand create, view, and list operations</p>
+<p>Goal: You understand create, view, and list operations</p>
 <h3 id="exercise-4-going-up-levels"><a class="header" href="#exercise-4-going-up-levels">Exercise 4: Going Up Levels</a></h3>
 <ol>
 <li>Navigate into several folders: <code>cd Documents</code>, then <code>cd folder1</code>, etc.</li>
 <li>From deep inside, use <code>cd ..</code> multiple times to go back up</li>
 <li>After each <code>cd ..</code>, run <code>pwd</code> to confirm your location</li>
 </ol>
-<p><strong>Goal:</strong> You understand relative navigation with <code>..</code></p>
+<p>Goal: You understand relative navigation with <code>..</code></p>
 <h3 id="exercise-5-redirecting-output"><a class="header" href="#exercise-5-redirecting-output">Exercise 5: Redirecting Output</a></h3>
 <ol>
 <li>Create a list: <code>ls &gt; directorylist.txt</code></li>
@@ -457,8 +457,7 @@ Your screen reader announces:</p>
 <li>Close Notepad</li>
 <li>Verify the file exists: <code>ls | grep directory</code></li>
 </ol>
-<p><strong>Goal:</strong> You can save long outputs to files for easier reading</p>
-<hr>
+<p>Goal: You can save long outputs to files for easier reading</p>
 <h2 id="checkpoint-questions"><a class="header" href="#checkpoint-questions">Checkpoint Questions</a></h2>
 <p>After completing this lesson, you should be able to answer:</p>
 <ol>
@@ -473,20 +472,18 @@ Your screen reader announces:</p>
 <li>How do you read a file back?</li>
 <li>How do you stop a command that’s running?</li>
 </ol>
-<p><strong>You should be able to answer all 10 with confidence before moving to GitBash-0.</strong></p>
-<hr>
+<p>You should be able to answer all 10 with confidence before moving to GitBash-0.</p>
 <h2 id="common-questions"><a class="header" href="#common-questions">Common Questions</a></h2>
-<p><strong>Q: Is Git Bash the same as Command Prompt or PowerShell?</strong>
+<p>Q: Is Git Bash the same as Command Prompt or PowerShell?
 A: No. Git Bash uses Unix/bash commands. CMD and PowerShell use Windows commands. This curriculum teaches bash (Unix) style.</p>
-<p><strong>Q: Why is my screen reader not reading the output?</strong>
+<p>Q: Why is my screen reader not reading the output?
 A: This is common. Use <code>command &gt; file.txt</code> to save output to a file, then open it with Notepad for reliable reading.</p>
-<p><strong>Q: What if I type something wrong?</strong>
-A: Just press <strong>Enter</strong> and you’ll see an error message. Type the correct command on the next line. No harm done!</p>
-<p><strong>Q: How do I get help with a command?</strong>
+<p>Q: What if I type something wrong?
+A: Just press Enter and you’ll see an error message. Type the correct command on the next line. No harm done!</p>
+<p>Q: How do I get help with a command?
 A: Type <code>man command-name</code> (we’ll cover this in GitBash-0)</p>
-<p><strong>Q: Why do paths look different in Git Bash?</strong>
+<p>Q: Why do paths look different in Git Bash?
 A: Git Bash uses Unix-style paths with forward slashes, not Windows backslashes. Don’t worry - you’ll get used to it quickly.</p>
-<hr>
 <h2 id="path-comparison-windows-vs-git-bash"><a class="header" href="#path-comparison-windows-vs-git-bash">Path Comparison: Windows vs Git Bash</a></h2>
 <div class="table-wrapper">
 <table>
@@ -494,8 +491,8 @@ A: Git Bash uses Unix-style paths with forward slashes, not Windows backslashes.
 <tr><th>Style</th><th>Example</th><th>Where Used</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Windows</strong></td><td><code>C:\Users\Name\Documents</code></td><td>CMD, PowerShell, Windows Explorer</td></tr>
-<tr><td><strong>Git Bash</strong></td><td><code>/c/Users/Name/Documents</code></td><td>Git Bash, macOS Terminal, Linux</td></tr>
+<tr><td>Windows</td><td><code>C:\Users\Name\Documents</code></td><td>CMD, PowerShell, Windows Explorer</td></tr>
+<tr><td>Git Bash</td><td><code>/c/Users/Name/Documents</code></td><td>Git Bash, macOS Terminal, Linux</td></tr>
 </tbody>
 </table>
 </div>
@@ -505,22 +502,19 @@ A: Git Bash uses Unix-style paths with forward slashes, not Windows backslashes.
 <li>Backslashes <code>\</code> become forward slashes <code>/</code></li>
 <li>Otherwise identical</li>
 </ul>
-<hr>
 <h2 id="next-steps"><a class="header" href="#next-steps">Next Steps</a></h2>
 <p>Once you’re comfortable with these basics:</p>
 <ul>
-<li>Move to <strong>GitBash-0: Getting Started</strong> for deeper path understanding</li>
+<li>Move to GitBash-0: Getting Started for deeper path understanding</li>
 <li>Then continue through GitBash-1 through GitBash-5 for full terminal mastery</li>
 </ul>
-<hr>
 <h2 id="resources"><a class="header" href="#resources">Resources</a></h2>
 <ul>
-<li><strong>Git Bash Installation Guide:</strong> https://git-scm.com/book/en/v2/Getting-Started-Installing-Git</li>
-<li><strong>Bash Basics:</strong> https://www.gnu.org/software/bash/manual/bash.html#Basic-Shell-Features</li>
-<li><strong>NVDA Screen Reader:</strong> https://www.nvaccess.org/</li>
-<li><strong>JAWS Screen Reader:</strong> https://www.freedomscientific.com/products/software/jaws/</li>
+<li>Git Bash Installation Guide: <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">https://git-scm.com/book/en/v2/Getting-Started-Installing-Git</a></li>
+<li>Bash Basics: <a href="https://www.gnu.org/software/bash/manual/bash.html#Basic-Shell-Features">https://www.gnu.org/software/bash/manual/bash.html#Basic-Shell-Features</a></li>
+<li>NVDA Screen Reader: <a href="https://www.nvaccess.org/">https://www.nvaccess.org/</a></li>
+<li>JAWS Screen Reader: <a href="https://www.freedomscientific.com/products/software/jaws/">https://www.freedomscientific.com/products/software/jaws/</a></li>
 </ul>
-<hr>
 <h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
 <div class="table-wrapper">
 <table>
@@ -532,11 +526,14 @@ A: Git Bash uses Unix-style paths with forward slashes, not Windows backslashes.
 <tr><td>Can’t hear the output</td><td>Try redirecting to a file: <code>command &gt; output.txt</code></td></tr>
 <tr><td>Tab completion not working</td><td>Make sure you typed at least one character before pressing Tab</td></tr>
 <tr><td>Command not found</td><td>Make sure you spelled it correctly; try <code>man</code> for available commands</td></tr>
-<tr><td>Stuck in a command</td><td>Press <strong>Ctrl+C</strong> to stop it</td></tr>
+<tr><td>Stuck in a command</td><td>Press Ctrl+C to stop it</td></tr>
 </tbody>
 </table>
 </div>
-<p><strong>Still stuck?</strong> The checkpoint questions and exercises are your best teacher. Work through them multiple times until comfortable.</p>
+<p>Still stuck? The checkpoint questions and exercises are your best teacher. Work through them multiple times until comfortable.</p>
+<p>Other Screen Readers</p>
+<p>Dolphin SuperNova (commercial) and Windows Narrator (built-in) are also supported; the workflows and recommendations in this document apply to them. See <a href="https://example.com">https://example.com</a> and <a href="https://example.com">https://example.com</a> for vendor documentation.</p>
+<!--pagebreak-->
 
                     </main>
 

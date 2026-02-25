@@ -1,12 +1,10 @@
 # Project 3: Beaded Jewelry - OpenSCAD Design {#assets_3dmake_foundation_lessons_3dmake_11_beaded_jewelry_unit-project_3}
 
-**Accessibility:** When including images or diagrams, add short alt-text and provide a comment-based walkthrough for any `.scad` examples so screen-reader users can follow the design steps.
+Accessibility: When including images or diagrams, add short alt-text and provide a comment-based walkthrough for any `.scad` examples so screen-reader users can follow the design steps.
 
-**Unit:** 3 - Open-Ended Projects
-**Estimated Duration:** 1 week (self-paced: plan milestones below)
-**Deliverables due:** End of week (see milestones)
-
----
+Unit: 3 - Open-Ended Projects
+Estimated Duration: 1 week (self-paced: plan milestones below)
+Deliverables due: End of week (see milestones)
 
 ## Project Brief
 
@@ -19,16 +17,12 @@ Design and produce a wearable beaded jewelry piece that includes at least eight 
 - Use at least two different bead shapes in the final assembly.
 - The final piece must be wearable and assembled - not just a set of loose beads.
 
----
-
 ## Learning Objectives
 
 - Create parametric OpenSCAD modules for repeated geometry
 - Combine modular parts into a coherent assembled object
 - Document design decisions and printing notes for reproducibility
 - Evaluate designs against measurable functional requirements
-
----
 
 ## StepbyStep Milestones
 
@@ -51,8 +45,6 @@ Design and produce a wearable beaded jewelry piece that includes at least eight 
 
 - Print final beads, assemble the piece, photograph the result, and prepare the deliverables.
 
----
-
 ## Deliverables
 
 Submit both digitally and physically as instructed:
@@ -65,8 +57,6 @@ Submit both digitally and physically as instructed:
   - Photos of final prototype (multiple views)
 - Physical turn-in: one assembled piece (if required by instructor)
 
----
-
 ## Functional Requirements (examples - adapt to your design)
 
 - The bead module must allow a hole diameter adjustable in 0.1 mm increments between 2.0-4.0 mm.
@@ -74,16 +64,12 @@ Submit both digitally and physically as instructed:
 - The OpenSCAD file must be parameterized such that changing a single `scale` parameter adjusts bead size consistently.
 - The assembled piece must not have sharp edges that would injure skin under normal use.
 
----
-
 ## Grading Rubric (simplified, 0-9 scale)
 
 - Implementation & parametric code: 3 points
 - Functionality & wearability: 3 points
 - Documentation & print notes: 2 points
 - Presentation & photos: 1 point
-
----
 
 ## Quiz - Project 3: Beaded Jewelry (10 questions)
 
@@ -106,8 +92,6 @@ Answer key (instructor use):
 4. Nozzle diameter and extrusion multiplier; also bridging/cooling.
 5. Note the parameter change, reproduce the print settings, measure and record fit, update Design Notes.
 
----
-
 ## Extension Problems (apply project skills)
 
 1. Design an interlocking bead (snap-fit) and describe the tolerances required.
@@ -121,19 +105,13 @@ Answer key (instructor use):
 9. Investigate material effects: print the same bead in 2+ materials; compare durability, aesthetic, and wearability.
 10. Develop a parametric customization guide: enable users to modify size, spacing, color (if multi-material), and aesthetics through top-level variables.
 
----
-
 ## Submission Instructions
 
 Upload your digital deliverables to the course Drive folder and email the instructor with the link; bring the printed prototype to class on the due date.
 
----
-
 ## Accessibility
 
 Provide alt-text for photos and a short written walkthrough of how your `.scad` file generates the bead shapes so screen-reader users can understand the sequence and parameters.
-
----
 
 ## Notes
 

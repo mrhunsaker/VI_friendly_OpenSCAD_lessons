@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-d11bd641.js";
+            window.path_to_searchindex_js = "../../searchindex-d0af5d9e.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-19a5926f.js"></script>
+        <script src="../../toc-5b0c6224.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -221,36 +221,34 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="powershell_foundation_ps_pre_your_first_terminal-ps_pre_your_first_terminal"><a class="header" href="#powershell_foundation_ps_pre_your_first_terminal-ps_pre_your_first_terminal">PS-Pre: Your First Terminal - Screen Reader Navigation Fundamentals</a></h1>
-<p><strong>Duration:</strong> 1.5-2 hours (for screen reader users)<br><strong>Prerequisites:</strong> None - this is the starting point<br><strong>Accessibility Note:</strong> This lesson is designed specifically for screen reader users (NVDA, JAWS)</p>
-<hr>
+<p>Duration: 1.5-2 hours (for screen reader users)<br>Prerequisites: None - this is the starting point<br>Accessibility Note: This lesson is designed specifically for screen reader users (NVDA, JAWS)</p>
 <h2 id="what-is-a-terminal"><a class="header" href="#what-is-a-terminal">What is a Terminal?</a></h2>
 <p>A terminal (also called a command line or shell) is a text-based interface where you type commands instead of clicking buttons. Think of it like sending written instructions to your computer instead of pointing and clicking.</p>
-<p><strong>Why learn this?</strong></p>
+<p>Why learn this?</p>
 <ul>
 <li>Faster and more precise work (especially for 3D printing scripts and automation)</li>
 <li>Essential for programming and using tools like OpenSCAD</li>
 <li>Accessibility: Many command line tools work perfectly with screen readers</li>
 <li>Scripting: Automate repetitive tasks</li>
 </ul>
-<hr>
 <h2 id="opening-powershell-for-the-first-time"><a class="header" href="#opening-powershell-for-the-first-time">Opening PowerShell for the First Time</a></h2>
 <h3 id="on-windows"><a class="header" href="#on-windows">On Windows</a></h3>
-<p><strong>Method 1: Search (Easiest)</strong></p>
+<p>Method 1: Search (Easiest)</p>
 <ol>
-<li>Press the <strong>Windows key</strong> alone</li>
+<li>Press the Windows key alone</li>
 <li>You should hear “Search”</li>
 <li>Type: <code>PowerShell</code></li>
 <li>You’ll hear search results appear</li>
-<li>Press <strong>Enter</strong> to open the first result (Windows PowerShell)</li>
+<li>Press Enter to open the first result (Windows PowerShell)</li>
 <li>PowerShell will open in a new window</li>
 </ol>
-<p><strong>Method 2: Using the Start Menu</strong></p>
+<p>Method 2: Using the Start Menu</p>
 <ol>
-<li>Press <strong>Windows key + X</strong> (opens the Quick Link menu)</li>
+<li>Press Windows key + X (opens the Quick Link menu)</li>
 <li>Look for “Windows PowerShell” or “Terminal”</li>
-<li>Press <strong>Enter</strong></li>
+<li>Press Enter</li>
 </ol>
-<p><strong>Method 3: From File Explorer</strong></p>
+<p>Method 3: From File Explorer</p>
 <ol>
 <li>Open File Explorer</li>
 <li>Navigate to any folder</li>
@@ -258,42 +256,44 @@
 <li>PowerShell opens in that folder location</li>
 </ol>
 <h3 id="first-connection-understanding-the-prompt"><a class="header" href="#first-connection-understanding-the-prompt">First Connection: Understanding the Prompt</a></h3>
-<p>When PowerShell opens, your screen reader will announce the window title and then the <strong>prompt</strong>. The prompt is where you type commands.</p>
-<p><strong>What you’ll hear:</strong></p>
+<p>When PowerShell opens, your screen reader will announce the window title and then the prompt. The prompt is where you type commands.</p>
+<p>What you’ll hear:</p>
 <pre><code>PS C:\Users\YourName&gt;
 </code></pre>
-<p><strong>What this means:</strong></p>
+<p>What this means:</p>
 <ul>
 <li><code>PS</code> = “PowerShell” indicator</li>
 <li><code>C:\Users\YourName</code> = Your current location (the “path”)</li>
 <li><code>&gt;</code> = The prompt is ready for your input</li>
 </ul>
-<p><strong>Important:</strong> Your cursor is blinking right after the <code>&gt;</code>. This is where you type.</p>
-<hr>
+<blockquote class="blockquote-tag blockquote-tag-important">
+<p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Important</p>
+<p>Your cursor is blinking right after the <code>&gt;</code>. This is where you type.</p>
+</blockquote>
 <h2 id="your-first-commands-screen-reader-edition"><a class="header" href="#your-first-commands-screen-reader-edition">Your First Commands (Screen Reader Edition)</a></h2>
 <h3 id="command-1-where-am-i---pwd"><a class="header" href="#command-1-where-am-i---pwd">Command 1: “Where Am I?” - <code>pwd</code></a></h3>
-<p><strong>What it does:</strong> Tells you your current location</p>
-<p><strong>Type this:</strong></p>
+<p>What it does: Tells you your current location</p>
+<p>Type this:</p>
 <pre><code class="language-powershell">pwd
 </code></pre>
-<p><strong>Press Enter</strong></p>
-<p><strong>What you’ll hear:</strong>
+<p>Press Enter</p>
+<p>What you’ll hear:
 Your screen reader will announce the current path, something like:</p>
 <pre><code>C:\Users\YourName
 </code></pre>
-<p><strong>Understanding paths:</strong></p>
+<p>Understanding paths:</p>
 <ul>
 <li>Paths show your location in the file system (like a mailing address)</li>
 <li>Windows paths use backslashes: <code>C:\Users\YourName\Documents</code></li>
 <li>Think of it like folders inside folders: <code>C:\</code> (main drive) -&gt; <code>Users</code> -&gt; <code>YourName</code> -&gt; <code>Documents</code></li>
 </ul>
 <h3 id="command-2-whats-here---ls--n"><a class="header" href="#command-2-whats-here---ls--n">Command 2: “What’s Here?” - <code>ls -n</code></a></h3>
-<p><strong>What it does:</strong> Lists all files and folders in your current location. The <code>-n</code> flag makes it screen-reader friendly (names only, one per line)</p>
-<p><strong>Type this:</strong></p>
+<p>What it does: Lists all files and folders in your current location. The <code>-n</code> flag makes it screen-reader friendly (names only, one per line)</p>
+<p>Type this:</p>
 <pre><code class="language-powershell">ls -n
 </code></pre>
-<p><strong>Press Enter</strong></p>
-<p><strong>What you’ll hear:</strong>
+<p>Press Enter</p>
+<p>What you’ll hear:
 Your screen reader will announce each file and folder name, one per line:</p>
 <pre><code>Desktop
 Documents
@@ -302,22 +302,22 @@ Music
 Pictures
 ...
 </code></pre>
-<p><strong>Why <code>-n</code>?</strong></p>
+<p>Why <code>-n</code>?</p>
 <ul>
 <li>Without <code>-n</code>, PowerShell shows files in columns (hard to read with a screen reader)</li>
 <li>With <code>-n</code>, each file/folder is on its own line (perfect for screen readers)</li>
 </ul>
 <h3 id="command-3-go-there---cd-documents"><a class="header" href="#command-3-go-there---cd-documents">Command 3: “Go There” - <code>cd Documents</code></a></h3>
-<p><strong>What it does:</strong> Changes your location (navigates to a folder)</p>
-<p><strong>Type this:</strong></p>
+<p>What it does: Changes your location (navigates to a folder)</p>
+<p>Type this:</p>
 <pre><code class="language-powershell">cd Documents
 </code></pre>
-<p><strong>Press Enter</strong></p>
-<p><strong>What you’ll hear:</strong>
+<p>Press Enter</p>
+<p>What you’ll hear:
 The prompt changes to show your new location. You might hear something like:</p>
 <pre><code>PS C:\Users\YourName\Documents&gt;
 </code></pre>
-<p><strong>Practice navigation:</strong></p>
+<p>Practice navigation:</p>
 <ol>
 <li>Run <code>pwd</code> to confirm you’re in Documents</li>
 <li>Run <code>ls -n</code> to see what files are in Documents</li>
@@ -325,69 +325,66 @@ The prompt changes to show your new location. You might hear something like:</p>
 <li>Run <code>pwd</code> again to confirm</li>
 <li>Go back to Documents: <code>cd Documents</code></li>
 </ol>
-<hr>
 <h2 id="reading-screen-reader-output-critical-skills"><a class="header" href="#reading-screen-reader-output-critical-skills">Reading Screen Reader Output (Critical Skills)</a></h2>
 <h3 id="dealing-with-long-lists"><a class="header" href="#dealing-with-long-lists">Dealing with Long Lists</a></h3>
 <p>When you run <code>ls -n</code> in a folder with many files, the list might be very long. Your screen reader might announce 50+ items rapidly.</p>
-<p><strong>Solution 1: Save to a File</strong></p>
+<p>Solution 1: Save to a File</p>
 <pre><code class="language-powershell">ls -n &gt; list.txt
 notepad.exe list.txt
 </code></pre>
 <p>This saves the list to a file and opens it in Notepad where you can read it more slowly.</p>
-<p><strong>Solution 2: Search Within the Output</strong></p>
+<p>Solution 2: Search Within the Output</p>
 <pre><code class="language-powershell">ls -n | findstr "search-term"
 </code></pre>
 <p>Example: If you’re looking for files containing “scad”, type:</p>
 <pre><code class="language-powershell">ls -n | findstr "scad"
 </code></pre>
 <h3 id="navigating-tab-completion"><a class="header" href="#navigating-tab-completion">Navigating Tab Completion</a></h3>
-<p>One of the most powerful screen reader tricks is <strong>Tab completion</strong>:</p>
-<p><strong>How it works:</strong></p>
+<p>One of the most powerful screen reader tricks is Tab completion:</p>
+<p>How it works:</p>
 <ol>
 <li>Type the first few letters of a folder or file name</li>
-<li>Press <strong>Tab</strong></li>
+<li>Press Tab</li>
 <li>PowerShell automatically completes the rest</li>
 </ol>
-<p><strong>Example:</strong></p>
+<p>Example:</p>
 <ol>
 <li>You’re in <code>C:\Users\YourName&gt;</code></li>
 <li>Type: <code>cd Doc</code></li>
-<li>Press <strong>Tab</strong></li>
+<li>Press Tab</li>
 <li>PowerShell auto-completes it to: <code>cd Documents</code></li>
-<li>Press <strong>Enter</strong> to go there</li>
+<li>Press Enter to go there</li>
 </ol>
-<p><strong>With a screen reader:</strong></p>
+<p>With a screen reader:</p>
 <ol>
 <li>As you type <code>Doc</code>, your screen reader announces each letter</li>
 <li>When you press Tab, PowerShell types the rest and your screen reader announces the full command</li>
 <li>This is much faster than typing the whole thing</li>
 </ol>
-<hr>
 <h2 id="creating-and-editing-files"><a class="header" href="#creating-and-editing-files">Creating and Editing Files</a></h2>
 <h3 id="create-a-simple-file"><a class="header" href="#create-a-simple-file">Create a Simple File</a></h3>
-<p><strong>Type this:</strong></p>
+<p>Type this:</p>
 <pre><code class="language-powershell">echo "Hello, PowerShell!" &gt; hello.txt
 </code></pre>
-<p><strong>What this does:</strong></p>
+<p>What this does:</p>
 <ul>
 <li><code>echo</code> sends text to the screen (or file)</li>
 <li><code>"Hello, PowerShell!"</code> is the text</li>
 <li><code>&gt;</code> redirects it to a file called <code>hello.txt</code></li>
 </ul>
 <h3 id="read-the-file-back"><a class="header" href="#read-the-file-back">Read the File Back</a></h3>
-<p><strong>Type this:</strong></p>
+<p>Type this:</p>
 <pre><code class="language-powershell">cat hello.txt
 </code></pre>
-<p><strong>What you’ll hear:</strong>
+<p>What you’ll hear:
 Your screen reader announces:</p>
 <pre><code>Hello, PowerShell!
 </code></pre>
 <h3 id="open-and-edit-the-file"><a class="header" href="#open-and-edit-the-file">Open and Edit the File</a></h3>
-<p><strong>Type this:</strong></p>
+<p>Type this:</p>
 <pre><code class="language-powershell">notepad.exe hello.txt
 </code></pre>
 <p>This opens the file in Notepad where you can edit it with your screen reader.</p>
-<hr>
 <h2 id="essential-keyboard-shortcuts"><a class="header" href="#essential-keyboard-shortcuts">Essential Keyboard Shortcuts</a></h2>
 <p>These work in PowerShell and are crucial for screen reader users:</p>
 <div class="table-wrapper">
@@ -396,63 +393,61 @@ Your screen reader announces:</p>
 <tr><th>Key Combination</th><th>What It Does</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Up Arrow</strong></td><td>Shows your previous command (press again to go further back)</td></tr>
-<tr><td><strong>Down Arrow</strong></td><td>Shows your next command (if you went back)</td></tr>
-<tr><td><strong>Tab</strong></td><td>Auto-completes folder/file names</td></tr>
-<tr><td><strong>Ctrl+C</strong></td><td>Stops a running command</td></tr>
-<tr><td><strong>Ctrl+L</strong></td><td>Clears the screen</td></tr>
-<tr><td><strong>Enter</strong></td><td>Runs the command</td></tr>
+<tr><td>Up Arrow</td><td>Shows your previous command (press again to go further back)</td></tr>
+<tr><td>Down Arrow</td><td>Shows your next command (if you went back)</td></tr>
+<tr><td>Tab</td><td>Auto-completes folder/file names</td></tr>
+<tr><td>Ctrl+C</td><td>Stops a running command</td></tr>
+<tr><td>Ctrl+L</td><td>Clears the screen</td></tr>
+<tr><td>Enter</td><td>Runs the command</td></tr>
 </tbody>
 </table>
 </div>
-<p><strong>Screen reader tip:</strong> These all work perfectly with your screen reader. Try them!</p>
-<hr>
+<p>Screen reader tip: These all work perfectly with your screen reader. Try them!</p>
 <h2 id="screen-reader-specific-tips"><a class="header" href="#screen-reader-specific-tips">Screen Reader-Specific Tips</a></h2>
 <h3 id="nvda-users"><a class="header" href="#nvda-users">NVDA Users</a></h3>
 <ol>
 <li>
-<p><strong>Reading Command Output:</strong></p>
+<p>Reading Command Output:</p>
 <ul>
-<li>Use <strong>NVDA+Home</strong> to read the current line</li>
-<li>Use <strong>NVDA+Down Arrow</strong> to read to the end of the screen</li>
-<li>Use <strong>NVDA+Page Down</strong> to read the next page</li>
+<li>Use NVDA+Home to read the current line</li>
+<li>Use NVDA+Down Arrow to read to the end of the screen</li>
+<li>Use NVDA+Page Down to read the next page</li>
 </ul>
 </li>
 <li>
-<p><strong>Reviewing Text:</strong></p>
+<p>Reviewing Text:</p>
 <ul>
-<li>Use <strong>NVDA+Shift+Page Up</strong> to review text above</li>
+<li>Use NVDA+Shift+Page Up to review text above</li>
 </ul>
 </li>
 </ol>
 <h3 id="jaws-users"><a class="header" href="#jaws-users">JAWS Users</a></h3>
 <ol>
 <li>
-<p><strong>Reading Output:</strong></p>
+<p>Reading Output:</p>
 <ul>
-<li>Use <strong>Insert+Down Arrow</strong> to read line-by-line</li>
-<li>Use <strong>Insert+Page Down</strong> to read by page</li>
-<li>Use <strong>Insert+End</strong> to jump to the end of text</li>
+<li>Use Insert+Down Arrow to read line-by-line</li>
+<li>Use Insert+Page Down to read by page</li>
+<li>Use Insert+End to jump to the end of text</li>
 </ul>
 </li>
 <li>
-<p><strong>Reading All Text:</strong></p>
+<p>Reading All Text:</p>
 <ul>
-<li>Use <strong>Insert+Down Arrow</strong> repeatedly</li>
-<li>Or use <strong>Insert+Ctrl+Down</strong> to read to the end</li>
+<li>Use Insert+Down Arrow repeatedly</li>
+<li>Or use Insert+Ctrl+Down to read to the end</li>
 </ul>
 </li>
 </ol>
 <h3 id="common-issue-i-cant-hear-the-output"><a class="header" href="#common-issue-i-cant-hear-the-output">Common Issue: “I Can’t Hear the Output”</a></h3>
-<p><strong>Problem:</strong> You run a command but don’t hear the output</p>
-<p><strong>Solutions:</strong></p>
+<p>Problem: You run a command but don’t hear the output</p>
+<p>Solutions:</p>
 <ol>
-<li>Make sure your cursor is at the prompt (try pressing <strong>End</strong> or <strong>Ctrl+End</strong>)</li>
-<li>Use <strong>Up Arrow</strong> to go back to your previous command and review it</li>
+<li>Make sure your cursor is at the prompt (try pressing End or Ctrl+End)</li>
+<li>Use Up Arrow to go back to your previous command and review it</li>
 <li>Try redirecting to a file: <code>command &gt; output.txt</code> then open the file</li>
-<li>In NVDA: Try pressing <strong>NVDA+F7</strong> to open the Review Mode viewer</li>
+<li>In NVDA: Try pressing NVDA+F7 to open the Review Mode viewer</li>
 </ol>
-<hr>
 <h2 id="practice-exercises"><a class="header" href="#practice-exercises">Practice Exercises</a></h2>
 <p>Complete these in order. Take your time with each one:</p>
 <h3 id="exercise-1-basic-navigation"><a class="header" href="#exercise-1-basic-navigation">Exercise 1: Basic Navigation</a></h3>
@@ -464,16 +459,16 @@ Your screen reader announces:</p>
 <li>Run <code>pwd</code> to confirm your new location</li>
 <li>Run <code>ls -n</code> in this new location</li>
 </ol>
-<p><strong>Goal:</strong> You should be comfortable knowing where you are and what’s around you</p>
+<p>Goal: You should be comfortable knowing where you are and what’s around you</p>
 <h3 id="exercise-2-using-tab-completion"><a class="header" href="#exercise-2-using-tab-completion">Exercise 2: Using Tab Completion</a></h3>
 <ol>
 <li>In your home directory, type <code>cd D</code> (just the letter D)</li>
-<li>Press <strong>Tab</strong></li>
+<li>Press Tab</li>
 <li>PowerShell should auto-complete to a folder starting with D</li>
 <li>Repeat with other folder names</li>
 <li>Try typing a longer name: <code>cd Down</code> and Tab to <code>Downloads</code></li>
 </ol>
-<p><strong>Goal:</strong> Tab completion should feel natural</p>
+<p>Goal: Tab completion should feel natural</p>
 <h3 id="exercise-3-creating-and-viewing-files"><a class="header" href="#exercise-3-creating-and-viewing-files">Exercise 3: Creating and Viewing Files</a></h3>
 <ol>
 <li>Create a file: <code>echo "Test content" &gt; test.txt</code></li>
@@ -481,14 +476,14 @@ Your screen reader announces:</p>
 <li>Create another: <code>echo "Line 2" &gt; another.txt</code></li>
 <li>List both: <code>ls -n</code></li>
 </ol>
-<p><strong>Goal:</strong> You understand create, view, and list operations</p>
+<p>Goal: You understand create, view, and list operations</p>
 <h3 id="exercise-4-going-up-levels"><a class="header" href="#exercise-4-going-up-levels">Exercise 4: Going Up Levels</a></h3>
 <ol>
 <li>Navigate into several folders: <code>cd Documents</code>, then <code>cd folder1</code>, etc.</li>
 <li>From deep inside, use <code>cd ..</code> multiple times to go back up</li>
 <li>After each <code>cd ..</code>, run <code>pwd</code> to confirm your location</li>
 </ol>
-<p><strong>Goal:</strong> You understand relative navigation with <code>..</code></p>
+<p>Goal: You understand relative navigation with <code>..</code></p>
 <h3 id="exercise-5-redirecting-output"><a class="header" href="#exercise-5-redirecting-output">Exercise 5: Redirecting Output</a></h3>
 <ol>
 <li>Create a list: <code>ls -n &gt; directory_list.txt</code></li>
@@ -497,8 +492,7 @@ Your screen reader announces:</p>
 <li>Close Notepad</li>
 <li>Verify the file exists: <code>ls -n | findstr "directory"</code></li>
 </ol>
-<p><strong>Goal:</strong> You can save long outputs to files for easier reading</p>
-<hr>
+<p>Goal: You can save long outputs to files for easier reading</p>
 <h2 id="checkpoint-questions"><a class="header" href="#checkpoint-questions">Checkpoint Questions</a></h2>
 <p>After completing this lesson, you should be able to answer:</p>
 <ol>
@@ -513,35 +507,31 @@ Your screen reader announces:</p>
 <li>How do you read a file back?</li>
 <li>How do you stop a command that’s running?</li>
 </ol>
-<p><strong>You should be able to answer all 10 with confidence before moving to PS-0.</strong></p>
-<hr>
+<p>You should be able to answer all 10 with confidence before moving to PS-0.</p>
 <h2 id="common-questions"><a class="header" href="#common-questions">Common Questions</a></h2>
-<p><strong>Q: Do I need to use PowerShell? Can I use Command Prompt (cmd.exe)?</strong>
+<p>Q: Do I need to use PowerShell? Can I use Command Prompt (cmd.exe)?
 A: PowerShell is more powerful and works better with modern tools. We recommend PowerShell, but Command Prompt basics are similar.</p>
-<p><strong>Q: Why is my screen reader not reading the output?</strong>
+<p>Q: Why is my screen reader not reading the output?
 A: This is common. Use <code>command &gt; file.txt</code> to save output to a file, then open it with Notepad for reliable reading.</p>
-<p><strong>Q: What if I type something wrong?</strong>
-A: Just press <strong>Enter</strong> and you’ll see an error message. Type the correct command on the next line. No harm done!</p>
-<p><strong>Q: How do I get help with a command?</strong>
+<p>Q: What if I type something wrong?
+A: Just press Enter and you’ll see an error message. Type the correct command on the next line. No harm done!</p>
+<p>Q: How do I get help with a command?
 A: Type <code>Get-Help command-name</code> (we’ll cover this in PS-0)</p>
-<p><strong>Q: Can I make PowerShell more accessible?</strong>
+<p>Q: Can I make PowerShell more accessible?
 A: Yes! We’ll cover customization in PS-5.</p>
-<hr>
 <h2 id="next-steps"><a class="header" href="#next-steps">Next Steps</a></h2>
 <p>Once you’re comfortable with these basics:</p>
 <ul>
-<li>Move to <strong>PS-0: Getting Started</strong> for deeper path understanding</li>
+<li>Move to PS-0: Getting Started for deeper path understanding</li>
 <li>Then continue through PS-1 through PS-5 for full terminal mastery</li>
 </ul>
-<hr>
 <h2 id="resources"><a class="header" href="#resources">Resources</a></h2>
 <ul>
-<li><strong>Microsoft PowerShell Docs:</strong> https://docs.microsoft.com/powershell/</li>
-<li><strong>NVDA Screen Reader:</strong> https://www.nvaccess.org/</li>
-<li><strong>JAWS Screen Reader:</strong> https://www.freedomscientific.com/products/software/jaws/</li>
-<li><strong>Windows Terminal Accessibility:</strong> https://docs.microsoft.com/windows/terminal/</li>
+<li>Microsoft PowerShell Docs: <a href="https://docs.microsoft.com/powershell/">https://docs.microsoft.com/powershell/</a></li>
+<li>NVDA Screen Reader: <a href="https://www.nvaccess.org/">https://www.nvaccess.org/</a></li>
+<li>JAWS Screen Reader: <a href="https://www.freedomscientific.com/products/software/jaws/">https://www.freedomscientific.com/products/software/jaws/</a></li>
+<li>Windows Terminal Accessibility: <a href="https://docs.microsoft.com/windows/terminal/">https://docs.microsoft.com/windows/terminal/</a></li>
 </ul>
-<hr>
 <h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
 <div class="table-wrapper">
 <table>
@@ -553,17 +543,20 @@ A: Yes! We’ll cover customization in PS-5.</p>
 <tr><td>Can’t hear the output</td><td>Try redirecting to a file: <code>command &gt; output.txt</code></td></tr>
 <tr><td>Tab completion not working</td><td>Make sure you typed at least one character before pressing Tab</td></tr>
 <tr><td>Command not found</td><td>Make sure you spelled it correctly; try <code>Get-Command</code> to see available commands</td></tr>
-<tr><td>Stuck in a command</td><td>Press <strong>Ctrl+C</strong> to stop it</td></tr>
+<tr><td>Stuck in a command</td><td>Press Ctrl+C to stop it</td></tr>
 </tbody>
 </table>
 </div>
-<p><strong>Still stuck?</strong> The checkpoint questions and exercises are your best teacher. Work through them multiple times until comfortable.</p>
+<p>Still stuck? The checkpoint questions and exercises are your best teacher. Work through them multiple times until comfortable.</p>
+<p>Other Screen Readers</p>
+<p>Dolphin SuperNova (commercial) and Windows Narrator (built-in) are also supported; the workflows and recommendations in this document apply to them. See <a href="https://example.com">https://example.com</a> and <a href="https://example.com">https://example.com</a> for vendor documentation.</p>
+<!--pagebreak-->
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../PowerShell_Foundation/Powershell_Introduction/Powershell_Introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../PowerShell_Foundation/PowerShell_Curriculum_Overview/PowerShell_Curriculum_Overview.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
@@ -577,7 +570,7 @@ A: Yes! We’ll cover customization in PS-5.</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../PowerShell_Foundation/Powershell_Introduction/Powershell_Introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../PowerShell_Foundation/PowerShell_Curriculum_Overview/PowerShell_Curriculum_Overview.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 

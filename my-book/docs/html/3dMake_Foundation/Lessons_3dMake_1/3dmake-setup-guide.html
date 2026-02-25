@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-d11bd641.js";
+            window.path_to_searchindex_js = "../../searchindex-d0af5d9e.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-19a5926f.js"></script>
+        <script src="../../toc-5b0c6224.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -220,9 +220,8 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="3dmake_foundation_lessons_3dmake_1-3dmake-setup-guide"><a class="header" href="#3dmake_foundation_lessons_3dmake_1-3dmake-setup-guide">3dMake Setup &amp; Workflow Guide (Comprehensive)</a></h1>
+                        <h1 id="3dmake_foundation_lessons_3dmake_1-3dmake-setup-guide"><a class="header" href="#3dmake_foundation_lessons_3dmake_1-3dmake-setup-guide">3dMake Setup &amp; Workflow</a></h1>
 <p>This guide walks you through installing 3dMake, creating projects, and managing your workflow efficiently.</p>
-<hr>
 <h2 id="installing-3dmake"><a class="header" href="#installing-3dmake">Installing 3dMake</a></h2>
 <h3 id="prerequisites"><a class="header" href="#prerequisites">Prerequisites</a></h3>
 <p>Before installing 3dMake, ensure you have:</p>
@@ -233,26 +232,26 @@
 <li>At least 100 MB of free disk space</li>
 </ul>
 <h3 id="platform-support"><a class="header" href="#platform-support">Platform Support</a></h3>
-<p><strong>Supported:</strong></p>
+<p>Supported:</p>
 <ul>
-<li><strong>Windows</strong> (32-bit and 64-bit)</li>
-<li><strong>Linux</strong> (x86-64 architecture)</li>
+<li>Windows (32-bit and 64-bit)</li>
+<li>Linux (x86-64 architecture)</li>
 </ul>
-<p><strong>Not Supported:</strong></p>
+<p>Not Supported:</p>
 <ul>
-<li><strong>macOS</strong> - Currently no macOS version is available</li>
+<li>macOS - Currently no macOS version is available</li>
 </ul>
 <h3 id="step-by-step-installation"><a class="header" href="#step-by-step-installation">Step-by-Step Installation</a></h3>
 <h4 id="step-1-download-3dmake-for-your-operating-system"><a class="header" href="#step-1-download-3dmake-for-your-operating-system">Step 1: Download 3dMake for Your Operating System</a></h4>
 <p>Visit the 3dMake releases page and download the appropriate version:</p>
-<p><strong>Windows:</strong></p>
+<p>Windows:</p>
 <ol>
 <li>Go to <a href="https://github.com/tdeck/3dmake/releases/latest/download/3dmakewindows.zip">3dMake Windows Download</a></li>
 <li>This downloads <code>3dmakewindows.zip</code> to your computer</li>
 <li>Right-click the file and select “Extract All…” (or use your preferred extraction tool)</li>
 <li>Remember where you extracted it (e.g., <code>C:\Users\YourName\3dmake</code> or <code>C:\Program Files\3dmake</code>)</li>
 </ol>
-<p><strong>Linux:</strong></p>
+<p>Linux:</p>
 <ol>
 <li>Go to <a href="https://github.com/tdeck/3dmake/releases/latest/download/3dmakelinux.tar.gz">3dMake Linux Download</a></li>
 <li>This downloads <code>3dmakelinux.tar.gz</code> to your computer</li>
@@ -260,30 +259,30 @@
 <li>Remember where you extracted it (e.g., <code>~/3dmake</code> or <code>/opt/3dmake</code>)</li>
 </ol>
 <h4 id="step-2-open-your-terminal"><a class="header" href="#step-2-open-your-terminal">Step 2: Open Your Terminal</a></h4>
-<p><strong>Windows:</strong></p>
+<p>Windows:</p>
 <ul>
 <li>Press <code>Win + X</code> and select “Windows PowerShell” or “Terminal”</li>
 <li>For screen reader users: Use <code>Alt + F2</code> and type <code>powershell</code> if needed</li>
 </ul>
-<p><strong>Linux:</strong></p>
+<p>Linux:</p>
 <ul>
 <li>Open your terminal application (Terminal, Konsole, GNOME Terminal, etc.)</li>
 </ul>
 <h4 id="step-3-navigate-to-3dmake-directory"><a class="header" href="#step-3-navigate-to-3dmake-directory">Step 3: Navigate to 3dMake Directory</a></h4>
 <p>Navigate to where you extracted 3dMake:</p>
-<p><strong>Windows:</strong></p>
+<p>Windows:</p>
 <pre><code class="language-powershell">cd C:\Users\YourName\3dmake
 </code></pre>
-<p><strong>Linux:</strong></p>
+<p>Linux:</p>
 <pre><code class="language-bash">cd ~/3dmake
 </code></pre>
 <p>For screen reader users: Use <code>pwd</code> (print working directory) to confirm your location.</p>
 <h4 id="step-4-run-the-setup-command"><a class="header" href="#step-4-run-the-setup-command">Step 4: Run the Setup Command</a></h4>
 <p>From inside the 3dMake directory, run:</p>
-<p><strong>Windows:</strong></p>
+<p>Windows:</p>
 <pre><code class="language-powershell">.\3dm setup
 </code></pre>
-<p><strong>Linux:</strong></p>
+<p>Linux:</p>
 <pre><code class="language-bash">./3dm setup
 </code></pre>
 <p>Follow the prompts to configure:</p>
@@ -295,7 +294,7 @@
 </ul>
 <h4 id="step-5-complete-installation"><a class="header" href="#step-5-complete-installation">Step 5: Complete Installation</a></h4>
 <p>After setup finishes, 3dMake will be available from any directory. You can now use the <code>3dm</code> command from your terminal.</p>
-<p><strong>Do not delete the original 3dMake directory</strong> where you extracted the files, as 3dMake needs to reference it.</p>
+<p>Do not delete the original 3dMake directory where you extracted the files, as 3dMake needs to reference it.</p>
 <h4 id="step-6-verify-installation"><a class="header" href="#step-6-verify-installation">Step 6: Verify Installation</a></h4>
 <pre><code class="language-bash">3dm --version
 </code></pre>
@@ -309,39 +308,38 @@
 <pre><code class="language-bash">3dm help
 </code></pre>
 <p>This displays all available 3dMake commands.</p>
-<hr>
 <h2 id="creating-and-managing-projects"><a class="header" href="#creating-and-managing-projects">Creating and Managing Projects</a></h2>
 <h3 id="what-is-a-3dmake-project"><a class="header" href="#what-is-a-3dmake-project">What Is a 3dMake Project?</a></h3>
 <p>A 3dMake project is a folder structure that organizes:</p>
 <ul>
-<li><strong>src/</strong> folder - contains your OpenSCAD (.scad) files</li>
-<li><strong>build/</strong> folder - stores outputs that 3dMake generates (STL files, sliced GCODE, etc.)</li>
-<li><strong>3dmake.toml</strong> file - project configuration and settings</li>
-<li><strong>README.md</strong> - project documentation</li>
+<li>src/ folder - contains your OpenSCAD (.scad) files</li>
+<li>build/ folder - stores outputs that 3dMake generates (STL files, sliced GCODE, etc.)</li>
+<li>3dmake.toml file - project configuration and settings</li>
+<li>README.md - project documentation</li>
 </ul>
 <h3 id="creating-your-first-project"><a class="header" href="#creating-your-first-project">Creating Your First Project</a></h3>
 <h4 id="step-1-choose-or-create-a-project-directory"><a class="header" href="#step-1-choose-or-create-a-project-directory">Step 1: Choose or Create a Project Directory</a></h4>
 <p>Decide where you want your project. Examples:</p>
-<p><strong>Windows:</strong></p>
+<p>Windows:</p>
 <pre><code class="language-powershell">C:\Users\YourName\Documents\3d-projects\
 C:\Users\YourName\Desktop\MyProject\
 </code></pre>
-<p><strong>Linux:</strong></p>
+<p>Linux:</p>
 <pre><code class="language-bash">~/3d-projects/
 ~/Documents/3d-projects/
 </code></pre>
 <p>Create the directory if it doesn’t exist:</p>
-<p><strong>Windows:</strong></p>
+<p>Windows:</p>
 <pre><code class="language-powershell">mkdir C:\Users\YourName\Documents\3d-projects\FirstProject
 </code></pre>
-<p><strong>Linux:</strong></p>
+<p>Linux:</p>
 <pre><code class="language-bash">mkdir -p ~/3d-projects/FirstProject
 </code></pre>
 <h4 id="step-2-navigate-into-your-project-directory"><a class="header" href="#step-2-navigate-into-your-project-directory">Step 2: Navigate Into Your Project Directory</a></h4>
-<p><strong>Windows:</strong></p>
+<p>Windows:</p>
 <pre><code class="language-powershell">cd C:\Users\YourName\Documents\3d-projects\FirstProject
 </code></pre>
-<p><strong>Linux:</strong></p>
+<p>Linux:</p>
 <pre><code class="language-bash">cd ~/3d-projects/FirstProject
 </code></pre>
 <p>For screen reader users: Use <code>pwd</code> (print working directory) to confirm you’re in the right folder.</p>
@@ -357,14 +355,13 @@ C:\Users\YourName\Desktop\MyProject\
 </code></pre>
 <p>The <code>src/main.scad</code> file is created as a starting template.</p>
 <h4 id="step-4-verify-project-creation"><a class="header" href="#step-4-verify-project-creation">Step 4: Verify Project Creation</a></h4>
-<p><strong>Windows:</strong></p>
+<p>Windows:</p>
 <pre><code class="language-powershell">Get-ChildItem -Force
 </code></pre>
-<p><strong>Linux:</strong></p>
+<p>Linux:</p>
 <pre><code class="language-bash">ls -la
 </code></pre>
 <p>You should see the <code>src/</code>, <code>build/</code>, <code>3dmake.toml</code>, and <code>README.md</code> files listed.</p>
-<hr>
 <h2 id="working-with-your-project"><a class="header" href="#working-with-your-project">Working With Your Project</a></h2>
 <h3 id="creating-openscad-models"><a class="header" href="#creating-openscad-models">Creating OpenSCAD Models</a></h3>
 <h4 id="step-1-create-or-edit-openscad-files"><a class="header" href="#step-1-create-or-edit-openscad-files">Step 1: Create or Edit OpenSCAD Files</a></h4>
@@ -376,7 +373,7 @@ C:\Users\YourName\Desktop\MyProject\
 <pre><code class="language-bash">3dm edit-model -m mymodel
 </code></pre>
 <p>This opens <code>src/mymodel.scad</code>.</p>
-<p><strong>Manual File Creation:</strong></p>
+<p>Manual File Creation:</p>
 <p>You can also create <code>.scad</code> files directly in the <code>src/</code> folder using your preferred text editor:</p>
 <ul>
 <li>Visual Studio Code</li>
@@ -399,13 +396,13 @@ C:\Users\YourName\Desktop\MyProject\
 </code></pre>
 <p>Output includes:</p>
 <ul>
-<li><strong>Bounding box</strong> - dimensions (X, Y, Z in millimeters)</li>
-<li><strong>Volume</strong> - cubic millimeters of material</li>
-<li><strong>Face count</strong> - total triangles in the mesh</li>
-<li><strong>Manifold status</strong> - whether model is watertight (printable)</li>
+<li>Bounding box - dimensions (X, Y, Z in millimeters)</li>
+<li>Volume - cubic millimeters of material</li>
+<li>Face count - total triangles in the mesh</li>
+<li>Manifold status - whether model is watertight (printable)</li>
 </ul>
-<p><strong>Example output:</strong></p>
-<pre><code>Volume: 1234.56 mm
+<p>Example output:</p>
+<pre><code class="language-plaintext">Volume: 1234.56 mm
 Bounding Box: 50.0 x 40.0 x 30.0 mm
 Faces: 2048
 Manifold: Yes 
@@ -420,7 +417,7 @@ Manifold: Yes
 </code></pre>
 <p>Available preview types:</p>
 <ul>
-<li><code>3sil</code> - Three silhouettes (front, left, top) - <strong>default</strong></li>
+<li><code>3sil</code> - Three silhouettes (front, left, top) - default</li>
 <li><code>frontsil</code> - Front-facing silhouette only</li>
 <li><code>topsil</code> - Top-down silhouette only</li>
 </ul>
@@ -445,7 +442,6 @@ Manifold: Yes
 <pre><code class="language-bash">3dm build print
 </code></pre>
 <p>(The <code>print</code> command automatically includes slicing)</p>
-<hr>
 <h2 id="managing-multiple-projects"><a class="header" href="#managing-multiple-projects">Managing Multiple Projects</a></h2>
 <h3 id="switching-between-projects"><a class="header" href="#switching-between-projects">Switching Between Projects</a></h3>
 <h4 id="method-1-navigate-via-terminal"><a class="header" href="#method-1-navigate-via-terminal">Method 1: Navigate via Terminal</a></h4>
@@ -459,7 +455,7 @@ pwd  # Verify you're in the right place
 <p>For screen reader users, always use <code>pwd</code> after navigating to confirm your location.</p>
 <h4 id="method-2-create-a-projects-directory-structure"><a class="header" href="#method-2-create-a-projects-directory-structure">Method 2: Create a Projects Directory Structure</a></h4>
 <p>Create a central folder for all projects:</p>
-<pre><code>3d-projects/
+<pre><code class="language-plaintext">3d-projects/
 +------ FirstProject/
 |   +------ src/
 |   +------ build/
@@ -476,103 +472,102 @@ pwd  # Verify you're in the right place
 
 ## Project List
 
-1. **FirstProject** - My initial test models
+1. FirstProject - My initial test models
    - Location: `./FirstProject/src/`
    - Status: In progress
    - Latest model: `main.scad`
 
-2. **SecondProject** - Parametric keychain designs
+2. SecondProject - Parametric keychain designs
    - Location: `./SecondProject/src/`
    - Status: Complete
    - Latest model: `keychain.scad`
 
-3. **ThirdProject** - Functional brackets for printing
+3. ThirdProject - Functional brackets for printing
    - Location: `./ThirdProject/src/`
    - Status: In progress
    - Latest model: `bracketassembly.scad`
 </code></pre>
 <h3 id="building-from-all-projects"><a class="header" href="#building-from-all-projects">Building from All Projects</a></h3>
 <p>To build models from all projects:</p>
-<p><strong>Windows:</strong></p>
+<p>Windows:</p>
 <pre><code class="language-powershell">Get-ChildItem -Directory | ForEach-Object {
     cd $.FullName
     3dm build
     cd ..
 }
 </code></pre>
-<p><strong>Linux/Bash:</strong></p>
+<p>Linux/Bash:</p>
 <pre><code class="language-bash">for project in */; do
     cd "$project"
     3dm build
     cd ..
 done
 </code></pre>
-<hr>
 <h2 id="workflow-best-practices"><a class="header" href="#workflow-best-practices">Workflow Best Practices</a></h2>
 <h3 id="file-naming-conventions"><a class="header" href="#file-naming-conventions">File Naming Conventions</a></h3>
 <p>Use clear, descriptive names for your <code>.scad</code> files:</p>
-<p><strong>Good:</strong></p>
+<p>Good:</p>
 <ul>
 <li><code>cube5cm.scad</code></li>
 <li><code>parametricboxv2.scad</code></li>
 <li><code>bracketformotor.scad</code></li>
 <li><code>main.scad</code> (default project model)</li>
 </ul>
-<p><strong>Avoid:</strong></p>
+<p>Avoid:</p>
 <ul>
 <li><code>test.scad</code></li>
 <li><code>model1.scad</code></li>
 <li><code>finalfinalFINAL.scad</code></li>
 </ul>
 <h3 id="understanding-toml-configuration-files"><a class="header" href="#understanding-toml-configuration-files">Understanding TOML Configuration Files</a></h3>
-<p><strong>What is TOML?</strong></p>
+<p>What is TOML?</p>
 <p>TOML (Tom’s Obvious, Minimal Language) is a human-readable configuration file format. It’s designed to be simple and clear, making it easy to read and edit in any text editor.</p>
-<p><strong>Basic TOML Formatting Rules:</strong></p>
+<p>Basic TOML Formatting Rules:</p>
 <ol>
 <li>
-<p><strong>Key-value pairs</strong> - Each setting has a name and value separated by an equals sign:</p>
+<p>Key-value pairs - Each setting has a name and value separated by an equals sign:</p>
 <pre><code class="language-toml">projectname = "My Project"
 </code></pre>
 </li>
 <li>
-<p><strong>Strings use quotes</strong> - Text values must be wrapped in double quotes:</p>
+<p>Strings use quotes - Text values must be wrapped in double quotes:</p>
 <pre><code class="language-toml">editor = "code"
 printerprofile = "prusaMK4"
 </code></pre>
 </li>
 <li>
-<p><strong>Numbers don’t need quotes</strong> - Numeric values stand alone:</p>
+<p>Numbers don’t need quotes - Numeric values stand alone:</p>
 <pre><code class="language-toml">scale = 1.05
 copies = 3
 </code></pre>
 </li>
 <li>
-<p><strong>Boolean values are true or false</strong> - Lowercase, no quotes:</p>
+<p>Boolean values are true or false - Lowercase, no quotes:</p>
 <pre><code class="language-toml">autostartprints = true
 editinbackground = false
 </code></pre>
 </li>
 <li>
-<p><strong>Arrays use square brackets</strong> - Lists of values separated by commas:</p>
+<p>Arrays use square brackets - Lists of values separated by commas:</p>
 <pre><code class="language-toml">overlays = ["supports", "PETG"]
 libraries = ["bosl", "braille-chars"]
 </code></pre>
 </li>
 <li>
-<p><strong>One setting per line</strong> - Each configuration on its own line</p>
+<p>One setting per line - Each configuration on its own line</p>
 </li>
 <li>
-<p><strong>Comments start with #</strong> - Use for notes (not processed):</p>
+<p>Comments start with # - Use for notes (not processed):</p>
 <pre><code class="language-toml"># This is my default printer
 printerprofile = "prusaMK4"
 </code></pre>
 </li>
 </ol>
-<p><strong>How 3dMake Uses TOML:</strong></p>
+<p>How 3dMake Uses TOML:</p>
 <p>3dMake has two TOML configuration files:</p>
 <ul>
-<li><strong>Global config</strong> (<code>defaults.toml</code>) - Settings for all your projects (run <code>3dm edit-global-config</code> to edit)</li>
-<li><strong>Project config</strong> (<code>3dmake.toml</code>) - Settings specific to one project (located in your project root)</li>
+<li>Global config (<code>defaults.toml</code>) - Settings for all your projects (run <code>3dm edit-global-config</code> to edit)</li>
+<li>Project config (<code>3dmake.toml</code>) - Settings specific to one project (located in your project root)</li>
 </ul>
 <p>Project settings override global settings. For example, if your global config says <code>printerprofile = "prusaMK4"</code> but your project’s <code>3dmake.toml</code> says <code>printerprofile = "bambu"</code>, the project setting wins.</p>
 <h3 id="project-configuration-3dmaketoml"><a class="header" href="#project-configuration-3dmaketoml">Project Configuration (3dmake.toml)</a></h3>
@@ -589,8 +584,8 @@ editor = "code"
 <p>This opens your configuration file in your text editor.</p>
 <h3 id="version-control-optional"><a class="header" href="#version-control-optional">Version Control (Optional)</a></h3>
 <p>If you’re using Git, add a <code>.gitignore</code> to avoid committing large build files:</p>
-<p><strong>Create <code>.gitignore</code> in your project root:</strong></p>
-<pre><code>build/
+<p>Create <code>.gitignore</code> in your project root:</p>
+<pre><code class="language-plaintext">build/
 *.stl
 *.gcode
 *.png
@@ -604,10 +599,10 @@ git commit -m "Initial project setup"
 </code></pre>
 <h3 id="backup-strategy"><a class="header" href="#backup-strategy">Backup Strategy</a></h3>
 <p>Regularly backup your <code>src/</code> folder:</p>
-<p><strong>Windows:</strong></p>
+<p>Windows:</p>
 <pre><code class="language-powershell">Copy-Item -Path "src" -Destination "backups/src$(Get-Date -Format 'yyyy-MM-dd')" -Recurse
 </code></pre>
-<p><strong>Linux:</strong></p>
+<p>Linux:</p>
 <pre><code class="language-bash">cp -r src backups/src$(date +%Y-%m-%d)
 </code></pre>
 <h3 id="documentation"><a class="header" href="#documentation">Documentation</a></h3>
@@ -615,45 +610,44 @@ git commit -m "Initial project setup"
 <pre><code class="language-markdown"># Models in This Project
 
 ## main.scad
-- **Purpose:** Primary design for this project
-- **Parameters:** width, height, depth
-- **Last modified:** 2026-02-20
-- **Notes:** Standard model for printing
+- Purpose: Primary design for this project
+- Parameters: width, height, depth
+- Last modified: 2026-02-20
+- Notes: Standard model for printing
 
 ## alternate.scad
-- **Purpose:** Alternative design variant
-- **Parameters:** width, height, depth, wallthickness
-- **Last modified:** 2026-02-15
-- **Notes:** Experimental version with snap-fit features
+- Purpose: Alternative design variant
+- Parameters: width, height, depth, wallthickness
+- Last modified: 2026-02-15
+- Notes: Experimental version with snap-fit features
 </code></pre>
 <h3 id="configuring-your-text-editor"><a class="header" href="#configuring-your-text-editor">Configuring Your Text Editor</a></h3>
 <p>By default, 3dMake uses:</p>
 <ul>
-<li><strong>Windows:</strong> Notepad</li>
-<li><strong>Linux:</strong> Nano (or your EDITOR environment variable)</li>
+<li>Windows: Notepad</li>
+<li>Linux: Nano (or your EDITOR environment variable)</li>
 </ul>
 <p>To use a different editor, edit your global configuration:</p>
 <pre><code class="language-bash">3dm edit-global-config
 </code></pre>
 <p>Add or modify the <code>editor</code> line. Examples:</p>
-<p><strong>Windows (Visual Studio Code):</strong></p>
+<p>Windows (Visual Studio Code):</p>
 <pre><code class="language-toml">editor = "code"
 </code></pre>
-<p><strong>Windows (Notepad++):</strong></p>
+<p>Windows (Notepad++):</p>
 <pre><code class="language-toml">editor = '''C:\Program Files (x86)\Notepad++\notepad++.exe'''
 </code></pre>
-<p><strong>Linux (Visual Studio Code):</strong></p>
+<p>Linux (Visual Studio Code):</p>
 <pre><code class="language-toml">editor = "code"
 </code></pre>
-<p><strong>Linux (Gedit):</strong></p>
+<p>Linux (Gedit):</p>
 <pre><code class="language-toml">editor = "gedit"
 </code></pre>
-<hr>
 <h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
 <h3 id="common-issues"><a class="header" href="#common-issues">Common Issues</a></h3>
 <h4 id="3dm-command-not-found"><a class="header" href="#3dm-command-not-found">“3dm command not found”</a></h4>
-<p><strong>Cause:</strong> 3dMake isn’t in your PATH or you haven’t completed setup.</p>
-<p><strong>Solution:</strong></p>
+<p>Cause: 3dMake isn’t in your PATH or you haven’t completed setup.</p>
+<p>Solution:</p>
 <ol>
 <li>Verify you extracted 3dMake and completed <code>3dm setup</code></li>
 <li>Restart your terminal completely (close and reopen)</li>
@@ -661,8 +655,8 @@ git commit -m "Initial project setup"
 <li>On Linux, ensure you’re using <code>./3dm</code> if 3dMake isn’t in your PATH yet</li>
 </ol>
 <h4 id="no-such-file-or-directory-srcmainscad"><a class="header" href="#no-such-file-or-directory-srcmainscad">“No such file or directory: src/main.scad”</a></h4>
-<p><strong>Cause:</strong> You’re not in a valid 3dMake project directory.</p>
-<p><strong>Solution:</strong></p>
+<p>Cause: You’re not in a valid 3dMake project directory.</p>
+<p>Solution:</p>
 <p>Verify you’re in the project directory:</p>
 <pre><code class="language-bash">pwd
 ls -la
@@ -671,8 +665,8 @@ ls -la
 <pre><code class="language-bash">3dm new
 </code></pre>
 <h4 id="openscad-error-syntax-error-at-line-5"><a class="header" href="#openscad-error-syntax-error-at-line-5">“OpenSCAD error: syntax error at line 5”</a></h4>
-<p><strong>Cause:</strong> Your <code>.scad</code> file has incorrect OpenSCAD syntax.</p>
-<p><strong>Solution:</strong></p>
+<p>Cause: Your <code>.scad</code> file has incorrect OpenSCAD syntax.</p>
+<p>Solution:</p>
 <ol>
 <li>Open your model file: <code>3dm edit-model</code></li>
 <li>Check the line number mentioned in the error</li>
@@ -680,31 +674,31 @@ ls -la
 <li>Save and try building again: <code>3dm build</code></li>
 </ol>
 <h4 id="model-wont-render-or-build"><a class="header" href="#model-wont-render-or-build">“Model won’t render or build”</a></h4>
-<p><strong>Checklist:</strong></p>
+<p>Checklist:</p>
 <ul>
 <li><input disabled="" type="checkbox"> File is saved with <code>.scad</code> extension</li>
 <li><input disabled="" type="checkbox"> File is in the <code>src/</code> folder</li>
 <li><input disabled="" type="checkbox"> File has valid OpenSCAD syntax</li>
 <li><input disabled="" type="checkbox"> Build output has a specific error message (check line number)</li>
 </ul>
-<p><strong>Debug mode:</strong></p>
+<p>Debug mode:</p>
 <pre><code class="language-bash">3dm build --debug
 </code></pre>
 <p>This provides more detailed error messages.</p>
 <h4 id="screen-reader-isnt-reading-3dmake-output-clearly"><a class="header" href="#screen-reader-isnt-reading-3dmake-output-clearly">Screen reader isn’t reading 3dMake output clearly</a></h4>
-<p><strong>Solution:</strong> Use the <code>--debug</code> flag for more verbose output:</p>
+<p>Solution: Use the <code>--debug</code> flag for more verbose output:</p>
 <pre><code class="language-bash">3dm build --debug
 </code></pre>
 <p>This logs each step, making it easier for screen readers to follow.</p>
 <h4 id="permission-denied-error-linux"><a class="header" href="#permission-denied-error-linux">“Permission denied” error (Linux)</a></h4>
-<p><strong>Cause:</strong> 3dMake executable doesn’t have run permissions.</p>
-<p><strong>Solution:</strong></p>
+<p>Cause: 3dMake executable doesn’t have run permissions.</p>
+<p>Solution:</p>
 <pre><code class="language-bash">chmod +x 3dm
 ./3dm setup
 </code></pre>
 <h4 id="cannot-connect-to-printer"><a class="header" href="#cannot-connect-to-printer">Cannot connect to printer</a></h4>
-<p><strong>Cause:</strong> OctoPrint or Bambu printer settings not configured correctly.</p>
-<p><strong>Solution:</strong></p>
+<p>Cause: OctoPrint or Bambu printer settings not configured correctly.</p>
+<p>Solution:</p>
 <ol>
 <li>Verify printer is running and connected to network</li>
 <li>Edit configuration: <code>3dm edit-global-config</code></li>
@@ -717,7 +711,6 @@ ls -la
 </li>
 <li>Test connection: <code>3dm build print</code> (without actually printing first)</li>
 </ol>
-<hr>
 <h2 id="quick-reference"><a class="header" href="#quick-reference">Quick Reference</a></h2>
 <h3 id="essential-commands"><a class="header" href="#essential-commands">Essential Commands</a></h3>
 <div class="table-wrapper">
@@ -745,7 +738,7 @@ ls -la
 </table>
 </div>
 <h3 id="directory-structure-reference"><a class="header" href="#directory-structure-reference">Directory Structure Reference</a></h3>
-<pre><code>YourProject/
+<pre><code class="language-plaintext">YourProject/
 +------ src/                 &lt;- Place .scad files here
 +------ build/               &lt;- Built STL, GCODE auto-save here
 +------ 3dmake.toml          &lt;- Project settings
@@ -760,16 +753,15 @@ overlays = ["supports"]          # Default slicing overlays
 editor = "code"                  # Text editor to use
 </code></pre>
 <p>For full configuration options, see the GitHub repository: <a href="https://github.com/tdeck/3dmake">https://github.com/tdeck/3dmake</a></p>
-<hr>
 <h2 id="next-steps"><a class="header" href="#next-steps">Next Steps</a></h2>
 <p>Once you’re comfortable with basic projects:</p>
 <ol>
-<li><strong>Learn parametric design</strong> - Make reusable models with variables</li>
-<li><strong>Explore modules</strong> - Organize code into reusable functions</li>
-<li><strong>Add libraries</strong> - Use pre-built OpenSCAD libraries (BOSL, etc.)</li>
-<li><strong>Optimize workflows</strong> - Chain commands (<code>3dm build slice print</code>)</li>
-<li><strong>Automate models</strong> - Use loops and conditionals in OpenSCAD</li>
-<li><strong>Collaborate</strong> - Use Git to share projects with others</li>
+<li>Learn parametric design - Make reusable models with variables</li>
+<li>Explore modules - Organize code into reusable functions</li>
+<li>Add libraries - Use pre-built OpenSCAD libraries (BOSL, etc.)</li>
+<li>Optimize workflows - Chain commands (<code>3dm build slice print</code>)</li>
+<li>Automate models - Use loops and conditionals in OpenSCAD</li>
+<li>Collaborate - Use Git to share projects with others</li>
 </ol>
 <p>For advanced topics, see:</p>
 <ul>
@@ -777,7 +769,6 @@ editor = "code"                  # Text editor to use
 <li><a href="https://github.com/tdeck/3dmake">3dMake GitHub Documentation</a></li>
 <li><a href="https://github.com/revarbat/BOSL/wiki">BOSL Library Documentation</a></li>
 </ul>
-<hr>
 <h2 id="sources"><a class="header" href="#sources">Sources</a></h2>
 <p>3dMake GitHub Repository. (2026). <em>3dMake - Non-visual 3D design and printing</em>. Retrieved from <a href="https://github.com/tdeck/3dmake">https://github.com/tdeck/3dmake</a></p>
 <p>3dMake Documentation. (2026). <em>Terminal quick start guide</em>. Retrieved from <a href="https://github.com/tdeck/3dmake/blob/main/docs/terminalquickstart.md">https://github.com/tdeck/3dmake/blob/main/docs/terminalquickstart.md</a></p>

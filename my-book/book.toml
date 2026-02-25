@@ -5,18 +5,20 @@ language = "en"
 description = "An introduction to 3D printing for blind and visually impaired learners, using OpenSCAD and 3DMake to create accessible 3D models."
 src = "src"
 
-[output.html]
-additional-css = ["src/assets/custom.css"]
-default-theme = "rust"
-site-url = "https://github.com/mrhunsaker/VI_3DMake_OpenSCAD_Curriculum"
-theme = "theme"
+[preprocessor.index]
+[preprocessor.links]
 
 [build]
 build-dir = "docs"
 create-missing = true
 use-default-preprocessors = true
 
-# Enables the search feature
+[output.html]
+additional-css = ["src/assets/custom.css"]
+default-theme = "rust"
+site-url = "https://github.com/mrhunsaker/VI_3DMake_OpenSCAD_Curriculum"
+theme = "theme"
+
 [output.html.search]
 enable = true
 limit-results = 30
@@ -28,25 +30,19 @@ boost-paragraph = 1
 expand = true
 heading-split-level = 3
 
-# Fold sections in the sidebar by default for easier navigation
 [output.html.fold]
 enable = true
 level = 1
 
-[preprocessor.index]
-[preprocessor.links]
-
 [output.pandoc]
-
-
 [output.pandoc.profile.pdf]
 output-file = "OpenSCAD_Curriculum.pdf"
 to = "latex"
 number-sections = false
 toc = true
 toc-depth = 3
-include-before-body = ["E:/VI_friendly_OpenSCAD_lessons/my-book/src/Cover.tex"]
-template = "E:/VI_friendly_OpenSCAD_lessons/my-book/src/template.tex"
+include-before-body = ["src/Cover.tex"]
+template = "src/template.tex"
 
 [output.pandoc.profile.pdf.variables]
 secnumdepth = 2
@@ -61,15 +57,26 @@ fontsize = "11pt"
 maketitle = false
 header-includes = "\\usepackage{url}"
 
-
 [output.pandoc.profile.epub]
-output-file = "output.epub"
+output-file = "OpenSCAD_Curriculum.epub"
 to = "epub"
 number-sections = false
 toc-depth = 3
-include-before-body = ["E:/VI_friendly_OpenSCAD_lessons/my-book/src/Cover.html"]
+include-before-body = ["src/Cover.html"]
 
 [output.pandoc.profile.epub.variables]
+date = "2026-02-24"
+title-meta = "3D Printing Course for Blind and Visually Impaired Learners"
+author-meta = "Michael Ryan Hunsaker, M.Ed., Ph.D."
+
+[output.pandoc.profile.latex]
+output-file = "OpenSCAD_Curriculum.tex"
+to = "latex"
+number-sections = false
+toc-depth = 3
+include-before-body = ["src/Cover.tex"]
+
+[output.pandoc.profile.latex.variables]
 date = "2026-02-24"
 title-meta = "3D Printing Course for Blind and Visually Impaired Learners"
 author-meta = "Michael Ryan Hunsaker, M.Ed., Ph.D."

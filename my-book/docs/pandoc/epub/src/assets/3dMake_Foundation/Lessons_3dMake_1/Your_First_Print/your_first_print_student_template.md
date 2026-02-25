@@ -4,8 +4,6 @@
 - Date:
 - Description: Select a simple 3D model, configure slicer settings, and complete your first independent print job.
 
----
-
 ## Ideas and Concept
 
 ### Model Selection
@@ -21,21 +19,19 @@
 - Expected challenges (overhangs, thin features, supports needed):
 - Why is this model appropriate for a first print?
 
----
-
 ## Measurements and Printer Configuration
 
 ### Printer Setup Log
 
-| Parameter | Value |
-| ----------- | ------- |
-| Printer model |  |
-| Nozzle diameter |  |
-| Bed temperature |  |
-| Nozzle temperature |  |
-| Layer height |  |
-| Infill percentage |  |
-| Support settings |  |
+| Parameter          | Value |
+|--------------------|-------|
+| Printer model      |       |
+| Nozzle diameter    |       |
+| Bed temperature    |       |
+| Nozzle temperature |       |
+| Layer height       |       |
+| Infill percentage  |       |
+| Support settings   |       |
 
 ### Safety Checks (Completed)
 
@@ -45,8 +41,6 @@
 - [ ] Nozzle at correct height
 - [ ] Print area clear of obstructions
 - [ ] Buildplate secured
-
----
 
 ## Object Notes
 
@@ -60,18 +54,16 @@
 ### Printed Part Measurements (After Cooling)
 
 | Feature | Model Spec (mm) | Printed (mm) | Deviation | Notes |
-| --------- | --------------- | ------------- | ---------- | ------- |
-|           |                 |               |            |         |
-|           |                 |               |            |         |
-|           |                 |               |            |         |
+|---------|-----------------|--------------|-----------|-------|
+|         |                 |              |           |       |
+|         |                 |              |           |       |
+|         |                 |              |           |       |
 
 ### Use and Assembly Notes
 
 - How does the print feel and look compared to the model?
 - Did any features fail or print poorly?
 - If there were issues, what do you suspect caused them?
-
----
 
 ## Reflections
 
@@ -94,8 +86,6 @@
 - What variables (temperature, layer height, infill) do you think most affected the outcome?
 - How would you test that hypothesis?
 
----
-
 ## Attachments
 
 - [ ] Exported `.stl` model file (or link to source)
@@ -104,20 +94,16 @@
 - [ ] Safety checklist (signed/dated)
 - [ ] Print log with timestamps (if available from printer)
 
----
-
 ## Teacher Feedback
 
-| Category | Score | Notes |
-| ---------- | ------- | ------- |
-| Problem & Solution (0-3) |   |       |
-| Design & Code Quality (0-3) |   |       |
-| Documentation (0-3) |   |       |
-| **Total (0-9)** | **  **  |       |
+| Category                    | Score | Notes |
+|-----------------------------|-------|-------|
+| Problem & Solution (0-3)    |       |       |
+| Design & Code Quality (0-3) |       |       |
+| Documentation (0-3)         |       |       |
+| Total (0-9)                 |       |       |
 
-**Feedback:**
-
----
+Feedback:
 
 ## Resubmission (if applicable)
 
@@ -126,9 +112,9 @@
 
 ### Revised Score
 
-| Category | Revised Score | Notes |
-| ---------- | --------------- | ------- |
-| Problem & Solution (0-3) |   |       |
-| Design & Code Quality (0-3) |   |       |
-| Documentation (0-3) |   |       |
-| **Total (0-9)** | **  **  |       |
+| Category                    | Revised Score | Notes |
+|-----------------------------|---------------|-------|
+| Problem & Solution (0-3)    |               |       |
+| Design & Code Quality (0-3) |               |       |
+| Documentation (0-3)         |               |       |
+| Total (0-9)                 |               |       |

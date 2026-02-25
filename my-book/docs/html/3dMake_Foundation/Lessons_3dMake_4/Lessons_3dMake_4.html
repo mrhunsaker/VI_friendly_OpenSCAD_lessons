@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-d11bd641.js";
+            window.path_to_searchindex_js = "../../searchindex-d0af5d9e.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-19a5926f.js"></script>
+        <script src="../../toc-5b0c6224.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -221,66 +221,66 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="3dmake_foundation_lessons_3dmake_4-lessons_3dmake_4"><a class="header" href="#3dmake_foundation_lessons_3dmake_4-lessons_3dmake_4">Lesson 4: AI-Enhanced Verification and Multimodal Feedback</a></h1>
-<p>Estimated time: 45-60 minutes</p>
-<p><strong>Learning Objectives</strong></p>
+<p>Estimated time}}: 45-60 minutes</p>
+<p>Learning Objectives</p>
 <ul>
 <li>Run <code>3dm info</code> to collect deterministic renders and AI diagnostics (if configured)<sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">1</a></sup> <sup class="footnote-reference" id="fr-10-1"><a href="#footnote-10">2</a></sup></li>
 <li>Compare AI suggestions with renderer and slicer outputs and prioritize deterministic fixes<sup class="footnote-reference" id="fr-8-1"><a href="#footnote-8">3</a></sup></li>
 <li>Record and sanitize AI prompts and outputs for reproducibility and data governance<sup class="footnote-reference" id="fr-8-2"><a href="#footnote-8">3</a></sup></li>
 </ul>
-<p><strong>Materials</strong></p>
+<p>Materials</p>
 <ul>
 <li>3dMake configured with an LLM API key (optional)</li>
-<li>Example project with renderable geometry</li>
+<li>Example project with renderable geometry}}</li>
 </ul>
 <p>Step-by-step Tasks</p>
 <ol>
-<li>Verify API configuration (if used) or run <code>3dm info --dry-run</code> to confirm render pipeline works locally<sup class="footnote-reference" id="fr-1-2"><a href="#footnote-1">1</a></sup>.</li>
+<li>Verify API configuration (if used) or run}} <code>3dm info --dry-run</code> to confirm render pipeline works locally<sup class="footnote-reference" id="fr-1-2"><a href="#footnote-1">1</a></sup>.</li>
 <li>Run <code>3dm info</code> and save the produced images and textual report to <code>build/</code> <sup class="footnote-reference" id="fr-1-3"><a href="#footnote-1">1</a></sup>.</li>
 <li>Inspect deterministic outputs (render warnings, slicer preview) and compare them to AI recommendations; prioritize deterministic issues<sup class="footnote-reference" id="fr-8-3"><a href="#footnote-8">3</a></sup> <sup class="footnote-reference" id="fr-10-2"><a href="#footnote-10">2</a></sup>.</li>
-<li>Iterate prompt engineering (in <code>3dmake.toml</code> or via <code>--prompt</code>) with precise technical primitives and re-run <code>3dm info</code> to examine changes<sup class="footnote-reference" id="fr-8-4"><a href="#footnote-8">3</a></sup>.</li>
+<li>Iterate prompt engineering (in <code>3dmake.toml</code> or via <code>--prompt</code>) with precise technical primitives and re-run}} <code>3dm info</code> to examine changes<sup class="footnote-reference" id="fr-8-4"><a href="#footnote-8">3</a></sup>.</li>
 <li>Document all prompts, AI outputs, and deterministic validation steps in <code>AI-notes.md</code> within the project<sup class="footnote-reference" id="fr-8-5"><a href="#footnote-8">3</a></sup>.</li>
 </ol>
 <p>Checkpoints</p>
 <ul>
-<li>After step 2 you have stored render images and the AI report in <code>build/</code> <sup class="footnote-reference" id="fr-1-4"><a href="#footnote-1">1</a></sup>.</li>
+<li>After step 2 you}} have stored render images and the AI report in <code>build/</code> <sup class="footnote-reference" id="fr-1-4"><a href="#footnote-1">1</a></sup>.</li>
 </ul>
 <h2 id="quiz---lesson-3dmake4-10-questions"><a class="header" href="#quiz---lesson-3dmake4-10-questions">Quiz - Lesson 3dMake.4 (10 questions)</a></h2>
 <ol>
-<li>What command generates AI diagnostics and model renders<sup class="footnote-reference" id="fr-1-5"><a href="#footnote-1">1</a></sup>?</li>
+<li>What command}} generates AI diagnostics and model renders<sup class="footnote-reference" id="fr-1-5"><a href="#footnote-1">1</a></sup>?</li>
 <li>Why must AI outputs be validated against renderer/slicer results<sup class="footnote-reference" id="fr-8-6"><a href="#footnote-8">3</a></sup> <sup class="footnote-reference" id="fr-10-3"><a href="#footnote-10">2</a></sup>?</li>
-<li>Name one privacy or governance concern when sending models/images to an API<sup class="footnote-reference" id="fr-8-7"><a href="#footnote-8">3</a></sup>.</li>
+<li>Name one}} privacy or governance concern when sending models/images to an API<sup class="footnote-reference" id="fr-8-7"><a href="#footnote-8">3</a></sup>.</li>
 <li>What is an example of a technical primitive to include in a prompt<sup class="footnote-reference" id="fr-8-8"><a href="#footnote-8">3</a></sup>?</li>
-<li>Where should you record prompts and AI outputs in the project<sup class="footnote-reference" id="fr-8-9"><a href="#footnote-8">3</a></sup>?</li>
+<li>Where should you}} record prompts and AI outputs in the project<sup class="footnote-reference" id="fr-8-9"><a href="#footnote-8">3</a></sup>?</li>
 <li>True or False: AI-generated suggestions should always be implemented without verification.</li>
-<li>Describe what “deterministic validation” means in the context of AI-assisted 3D design.</li>
-<li>Explain how you would use <code>3dm info</code> to validate AI suggestions against your actual model.</li>
-<li>What steps would you take if the AI suggests a design change that conflicts with your requirements?</li>
-<li>How would you document AI-assisted decisions in your project for reproducibility and transparency?</li>
+<li>Describe what “deterministic validation” means in the context of AI-assisted 3D design}}.</li>
+<li>Explain how you}} would use <code>3dm info</code> to validate AI suggestions against your actual model.</li>
+<li>What steps would you}} take if the AI suggests a design}} change that conflicts with your requirements?</li>
+<li>How would you}} document AI-assisted decisions in your project for reproducibility and transparency?</li>
 </ol>
 <p>Extension Problems (10)</p>
 <ol>
-<li>Create an <code>AI-notes.md</code> documenting three prompts and the AI’s responses; indicate which suggestions you acted on<sup class="footnote-reference" id="fr-8-10"><a href="#footnote-8">3</a></sup>.</li>
-<li>Simulate a false-positive AI warning: describe how you validated and rejected it using deterministic checks<sup class="footnote-reference" id="fr-10-4"><a href="#footnote-10">2</a></sup>.</li>
+<li>Create an <code>AI-notes.md</code> documenting three prompts and the AI’s responses; indicate which suggestions you}} acted on<sup class="footnote-reference" id="fr-8-10"><a href="#footnote-8">3</a></sup>.</li>
+<li>Simulate a false-positive AI warning: describe how you}} validated and rejected it using}} deterministic checks<sup class="footnote-reference" id="fr-10-4"><a href="#footnote-10">2</a></sup>.</li>
 <li>Generate a short prompt that requests the top three structural risks and record the results<sup class="footnote-reference" id="fr-8-11"><a href="#footnote-8">3</a></sup>.</li>
-<li>Create a short checklist for sanitizing uploads before sending to an API<sup class="footnote-reference" id="fr-8-12"><a href="#footnote-8">3</a></sup>.</li>
-<li>Re-run <code>3dm info</code> after a code fix and compare the differences in the AI report<sup class="footnote-reference" id="fr-1-6"><a href="#footnote-1">1</a></sup>.</li>
-<li>Design a verification workflow: use AI suggestions + manual validation + physical testing to validate design decisions.</li>
+<li>Create a short checklist for sanitizing uploads before}} sending to an API<sup class="footnote-reference" id="fr-8-12"><a href="#footnote-8">3</a></sup>.</li>
+<li>Re-run}} <code>3dm info</code> after a code}} fix and compare the differences in the AI report<sup class="footnote-reference" id="fr-1-6"><a href="#footnote-1">1</a></sup>.</li>
+<li>Design}} a verification workflow}}: use AI suggestions + manual validation + physical testing to validate design}} decisions.</li>
 <li>Create a transparency log for AI-assisted features: document all AI interactions, suggestions adopted, and decisions made.</li>
-<li>Build an AI-assisted design case study: from initial prompt through final print; document the entire decision process.</li>
-<li>Develop guidelines for trustworthy AI use in 3D printing: when to trust AI, when to verify, and how to validate recommendations.</li>
-<li>Write an accessibility guide for using AI features in 3DMake: how to interpret AI suggestions non-visually and understand confidence levels.</li>
+<li>Build an AI-assisted design}} case study: from initial prompt through final print}}; document the entire decision process.</li>
+<li>Develop guidelines for trustworthy AI use in 3D printing}}: when to trust AI, when to verify, and how to validate recommendations.</li>
+<li>Write an accessibility}} guide for using}} AI features in 3DMake}}: how to interpret AI suggestions non-visually and understand confidence levels.</li>
 </ol>
 <hr>
 <ol class="footnote-definition">
 <li id="footnote-1">
-<p>3DMake GitHub - https://github.com/tdeck/3dmake <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a> <a href="#fr-1-3">↩3</a> <a href="#fr-1-4">↩4</a> <a href="#fr-1-5">↩5</a> <a href="#fr-1-6">↩6</a></p>
+<p>3DMake}} GitHub}} - <a href="https://github.com/tdeck/3dmake">https://github.com/tdeck/3dmake</a> <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a> <a href="#fr-1-3">↩3</a> <a href="#fr-1-4">↩4</a> <a href="#fr-1-5">↩5</a> <a href="#fr-1-6">↩6</a></p>
 </li>
 <li id="footnote-10">
-<p>Deterministic Validation in Design - https://www.nist.gov/publications <a href="#fr-10-1">↩</a> <a href="#fr-10-2">↩2</a> <a href="#fr-10-3">↩3</a> <a href="#fr-10-4">↩4</a></p>
+<p>Deterministic Validation in Design}} - <a href="https://www.nist.gov/publications">https://www.nist.gov/publications</a> <a href="#fr-10-1">↩</a> <a href="#fr-10-2">↩2</a> <a href="#fr-10-3">↩3</a> <a href="#fr-10-4">↩4</a></p>
 </li>
 <li id="footnote-8">
-<p>AI Output Validation - Best Practices for Prompt Engineering - https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language <a href="#fr-8-1">↩</a> <a href="#fr-8-2">↩2</a> <a href="#fr-8-3">↩3</a> <a href="#fr-8-4">↩4</a> <a href="#fr-8-5">↩5</a> <a href="#fr-8-6">↩6</a> <a href="#fr-8-7">↩7</a> <a href="#fr-8-8">↩8</a> <a href="#fr-8-9">↩9</a> <a href="#fr-8-10">↩10</a> <a href="#fr-8-11">↩11</a> <a href="#fr-8-12">↩12</a></p>
+<p>AI Output Validation - Best Practices for Prompt Engineering - <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language">https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language</a> <a href="#fr-8-1">↩</a> <a href="#fr-8-2">↩2</a> <a href="#fr-8-3">↩3</a> <a href="#fr-8-4">↩4</a> <a href="#fr-8-5">↩5</a> <a href="#fr-8-6">↩6</a> <a href="#fr-8-7">↩7</a> <a href="#fr-8-8">↩8</a> <a href="#fr-8-9">↩9</a> <a href="#fr-8-10">↩10</a> <a href="#fr-8-11">↩11</a> <a href="#fr-8-12">↩12</a></p>
 </li>
 </ol>
 

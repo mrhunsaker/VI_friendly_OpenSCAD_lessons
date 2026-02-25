@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-d11bd641.js";
+            window.path_to_searchindex_js = "../../searchindex-d0af5d9e.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-19a5926f.js"></script>
+        <script src="../../toc-5b0c6224.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -221,7 +221,7 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="setup_screen_reader_accessibility_guide-screen_reader_accessibility_guide"><a class="header" href="#setup_screen_reader_accessibility_guide-screen_reader_accessibility_guide">Screen Reader Accessibility Guide for Command-Line Terminals</a></h1>
-<p><strong>Target Users:</strong> NVDA, JAWS, and other screen reader users using PowerShell, CMD, or Git Bash<br><strong>Last Updated:</strong> 2026</p>
+<p><strong>Target Users:</strong> NVDA, JAWS, Windows Narrator, and Dolphin SuperNova users using PowerShell, CMD, or Git Bash<br><strong>Last Updated:</strong> February 2026</p>
 <p>This guide is used throughout the Command-Line Foundation curriculum (PowerShell, CMD, and Git Bash pathways) to help screen reader users navigate and work efficiently with the terminal.</p>
 <hr>
 <h2 id="table-of-contents"><a class="header" href="#table-of-contents">Table of Contents</a></h2>
@@ -230,6 +230,8 @@
 <li><a href="#getting-started">Getting Started with Screen Readers</a></li>
 <li><a href="#nvda-tips">NVDA-Specific Tips</a></li>
 <li><a href="#jaws-tips">JAWS-Specific Tips</a></li>
+<li><a href="#narrator-tips">Windows Narrator-Specific Tips</a></li>
+<li><a href="#dolphin-tips">Dolphin SuperNova-Specific Tips</a></li>
 <li><a href="#general-terminal">General Terminal Accessibility</a></li>
 <li><a href="#long-output">Working with Long Output</a></li>
 <li><a href="#shortcuts">Keyboard Shortcuts Reference</a></li>
@@ -238,7 +240,7 @@
 </ol>
 <hr>
 <h2 id="which-terminal"><a class="header" href="#which-terminal">Which Terminal Should I Use?</a></h2>
-<p>All three command-line shells (PowerShell, CMD, Git Bash) work equally well with screen readers. Choose the one that best fits your setup:</p>
+<p>All three command-line shells (PowerShell, CMD, Git Bash) work well with screen readers. Choose the one that best fits your setup:</p>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -257,32 +259,32 @@
 <hr>
 <h2 id="getting-started"><a class="header" href="#getting-started">Getting Started with Screen Readers</a></h2>
 <h3 id="which-screen-reader-should-i-use"><a class="header" href="#which-screen-reader-should-i-use">Which Screen Reader Should I Use?</a></h3>
-<p>Both NVDA and JAWS work equally well with all three shells (PowerShell, CMD, and Git Bash):</p>
+<p>NVDA, JAWS, Windows Narrator, and Dolphin SuperNova all work with the three shells covered in this curriculum. Here is a brief comparison:</p>
 <div class="table-wrapper">
 <table>
 <thead>
-<tr><th>Feature</th><th>NVDA</th><th>JAWS</th></tr>
+<tr><th>Feature</th><th>NVDA</th><th>JAWS</th><th>Windows Narrator</th><th>Dolphin SuperNova</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Cost</strong></td><td>Free</td><td>Commercial (paid)</td></tr>
-<tr><td><strong>Installation</strong></td><td>Simple</td><td>Complex but thorough</td></tr>
-<tr><td><strong>Terminal Support</strong></td><td>Excellent (all shells)</td><td>Excellent (all shells)</td></tr>
-<tr><td><strong>Learning Curve</strong></td><td>Gentle</td><td>Steeper</td></tr>
-<tr><td><strong>Customization</strong></td><td>Good</td><td>Extensive</td></tr>
+<tr><td><strong>Cost</strong></td><td>Free (open-source)</td><td>Commercial (paid)</td><td>Free (built into Windows)</td><td>Commercial (paid)</td></tr>
+<tr><td><strong>Installation</strong></td><td>Simple download</td><td>Complex but thorough</td><td>Already installed</td><td>Standard installer</td></tr>
+<tr><td><strong>Terminal Support</strong></td><td>Excellent (all shells)</td><td>Excellent (all shells)</td><td>Good (all shells)</td><td>Good (all shells)</td></tr>
+<tr><td><strong>Learning Curve</strong></td><td>Gentle</td><td>Steeper</td><td>Minimal</td><td>Moderate</td></tr>
+<tr><td><strong>Customization</strong></td><td>Good (add-ons)</td><td>Extensive (scripts)</td><td>Limited</td><td>Good</td></tr>
 </tbody>
 </table>
 </div>
-<p><strong>Recommendation:</strong> Start with NVDA if you’re new to screen readers. Both will work perfectly for this curriculum.</p>
+<p><strong>Recommendation:</strong> If you are new to screen readers, start with NVDA (free, well-documented, good community support) or Windows Narrator (already on your computer, no installation needed). JAWS and Dolphin SuperNova are excellent choices if you already own a license or your organization provides one.</p>
 <h3 id="before-you-start"><a class="header" href="#before-you-start">Before You Start</a></h3>
 <ol>
-<li>Make sure your screen reader is running before opening your terminal</li>
-<li>Open your terminal (PowerShell, CMD, or Git Bash) and let your screen reader read the title and prompt</li>
-<li>If you don’t hear anything, press <strong>Alt+Tab</strong> to cycle windows and find your terminal</li>
-<li>Use your screen reader’s screen review features to understand the layout</li>
+<li>Make sure your screen reader is running <strong>before</strong> opening your terminal.</li>
+<li>Open your terminal (PowerShell, CMD, or Git Bash) and let your screen reader read the title and prompt.</li>
+<li>If you do not hear anything, press <strong>Alt+Tab</strong> to cycle windows and find your terminal.</li>
+<li>Use your screen reader’s review/virtual cursor to understand the layout.</li>
 </ol>
 <hr>
 <h2 id="nvda-tips"><a class="header" href="#nvda-tips">NVDA-Specific Tips</a></h2>
-<p>NVDA is free and available from https://www.nvaccess.org/</p>
+<p>NVDA is free and available from <a href="https://example.com">https://example.com</a></p>
 <p>These tips work across all shells: PowerShell, CMD, and Git Bash.</p>
 <h3 id="key-commands-for-terminals"><a class="header" href="#key-commands-for-terminals">Key Commands for Terminals</a></h3>
 <div class="table-wrapper">
@@ -292,37 +294,42 @@
 </thead>
 <tbody>
 <tr><td><strong>NVDA+Home</strong></td><td>Read the current line (your command or output)</td></tr>
-<tr><td><strong>NVDA+Down Arrow</strong></td><td>Read from cursor to end of screen</td></tr>
-<tr><td><strong>NVDA+Up Arrow</strong></td><td>Read from top to cursor</td></tr>
+<tr><td><strong>NVDA+Down Arrow</strong></td><td>Read from cursor position to end of screen</td></tr>
+<tr><td><strong>NVDA+Up Arrow</strong></td><td>Read from top of screen to cursor</td></tr>
 <tr><td><strong>NVDA+Page Down</strong></td><td>Read next page</td></tr>
 <tr><td><strong>NVDA+Page Up</strong></td><td>Read previous page</td></tr>
-<tr><td><strong>NVDA+F7</strong></td><td>Open the Review Mode viewer (can scroll through text)</td></tr>
+<tr><td><strong>NVDA+F7</strong></td><td>Open the Elements List / Review Mode viewer</td></tr>
 <tr><td><strong>NVDA+Shift+Right Arrow</strong></td><td>Read next word</td></tr>
-<tr><td><strong>NVDA+Shift+Down Arrow</strong></td><td>Read entire screen</td></tr>
+<tr><td><strong>NVDA+Shift+Down Arrow</strong></td><td>Read entire visible screen</td></tr>
 <tr><td><strong>NVDA+End</strong></td><td>Jump to end of line</td></tr>
 <tr><td><strong>NVDA+Home</strong></td><td>Jump to start of line</td></tr>
+<tr><td><strong>NVDA+Numpad 5</strong></td><td>Announce the character under the review cursor</td></tr>
+<tr><td><strong>NVDA+Shift+Numpad 5</strong></td><td>Announce the word under the review cursor</td></tr>
 </tbody>
 </table>
 </div>
+<blockquote>
+<p><strong>Note on NVDA key:</strong> On desktop keyboards the NVDA modifier is typically the <strong>Insert</strong> key. On laptops without a numpad the NVDA key is often <strong>CapsLock</strong>. You can change this in NVDA Preferences → Keyboard.</p>
+</blockquote>
 <h3 id="example-reading-long-output"><a class="header" href="#example-reading-long-output">Example: Reading Long Output</a></h3>
-<p><strong>Scenario:</strong> You ran a command and it listed 50 files. You can’t hear them all.</p>
+<p><strong>Scenario:</strong> You ran a command and it listed 50 files. You cannot hear them all at once.</p>
 <p><strong>Solution with NVDA:</strong></p>
 <ol>
-<li>After the command finishes, press <strong>NVDA+Home</strong> to read the current line</li>
-<li>Press <strong>NVDA+Down Arrow</strong> repeatedly to read all output</li>
-<li>Or press <strong>NVDA+F7</strong> to open Review Mode and use arrow keys to scroll</li>
+<li>After the command finishes, press <strong>NVDA+Home</strong> to read the current line.</li>
+<li>Press <strong>NVDA+Down Arrow</strong> repeatedly to read all output line by line.</li>
+<li>Or redirect to a file first: <code>command &gt; output.txt</code>, then open with <code>notepad output.txt</code> for more comfortable reading.</li>
 </ol>
 <h3 id="nvda-settings-for-terminals"><a class="header" href="#nvda-settings-for-terminals">NVDA Settings for Terminals</a></h3>
-<p><strong>Enable verbosity for better feedback:</strong></p>
 <ol>
-<li>Press <strong>NVDA+Ctrl+V</strong> to open NVDA menu</li>
-<li>Go to Preferences -&gt; Settings</li>
-<li>Under “Speech”, increase verbosity</li>
-<li>Look for “Report font changes” and enable it (helps with code)</li>
+<li>Press <strong>NVDA+N</strong> to open the NVDA menu.</li>
+<li>Go to <strong>Preferences → Settings → Speech</strong>.</li>
+<li>Increase or decrease verbosity to taste.</li>
+<li>Under <strong>Document Formatting</strong>, enable <strong>“Report indentation”</strong> (important for reading code).</li>
+<li>Under <strong>Terminal</strong>, enable <strong>“Speak typed characters”</strong> so you hear each key as you type.</li>
 </ol>
 <hr>
 <h2 id="jaws-tips"><a class="header" href="#jaws-tips">JAWS-Specific Tips</a></h2>
-<p>JAWS is a commercial screen reader available from https://www.freedomscientific.com/</p>
+<p>JAWS is a commercial screen reader available from <a href="https://example.com">https://example.com</a></p>
 <p>These tips work across all shells: PowerShell, CMD, and Git Bash.</p>
 <h3 id="key-commands-for-terminals-1"><a class="header" href="#key-commands-for-terminals-1">Key Commands for Terminals</a></h3>
 <div class="table-wrapper">
@@ -331,35 +338,132 @@
 <tr><th>Command</th><th>What It Does</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Insert+Down Arrow</strong></td><td>Read line by line downward</td></tr>
-<tr><td><strong>Insert+Up Arrow</strong></td><td>Read line by line upward</td></tr>
-<tr><td><strong>Insert+Page Down</strong></td><td>Read next page of text</td></tr>
-<tr><td><strong>Insert+Page Up</strong></td><td>Read previous page of text</td></tr>
+<tr><td><strong>Insert+Down Arrow</strong></td><td>Read all / say all from cursor downward</td></tr>
+<tr><td><strong>Insert+Up Arrow</strong></td><td>Re-read current line</td></tr>
+<tr><td><strong>Insert+Page Down</strong></td><td>Read next page of terminal output</td></tr>
+<tr><td><strong>Insert+Page Up</strong></td><td>Read previous page of terminal output</td></tr>
 <tr><td><strong>Insert+End</strong></td><td>Jump to end of text on screen</td></tr>
 <tr><td><strong>Insert+Home</strong></td><td>Jump to start of text on screen</td></tr>
 <tr><td><strong>Insert+Ctrl+Down</strong></td><td>Read to end of screen</td></tr>
 <tr><td><strong>Insert+Ctrl+Up</strong></td><td>Read to beginning of screen</td></tr>
 <tr><td><strong>Insert+Shift+Page Down</strong></td><td>Select and read next page</td></tr>
 <tr><td><strong>Insert+F3</strong></td><td>Open JAWS menu</td></tr>
+<tr><td><strong>Insert+Z</strong></td><td>Toggle JAWS virtual cursor on/off</td></tr>
+<tr><td><strong>Insert+F2</strong></td><td>Open JAWS Manager (Settings Center)</td></tr>
 </tbody>
 </table>
 </div>
+<blockquote>
+<p><strong>Note on JAWS key:</strong> The JAWS modifier is typically <strong>Insert</strong> on a standard keyboard. On laptops, JAWS can be configured to use <strong>CapsLock</strong> as the modifier instead.</p>
+</blockquote>
 <h3 id="example-reading-long-output-1"><a class="header" href="#example-reading-long-output-1">Example: Reading Long Output</a></h3>
 <p><strong>Scenario:</strong> You ran a command and saved output to a file.</p>
 <p><strong>Solution with JAWS:</strong></p>
 <ol>
-<li>Open the file with your text editor (e.g., <code>notepad file.txt</code> in PowerShell, <code>notepad file.txt</code> in CMD)</li>
-<li>In the editor, press <strong>Insert+Ctrl+Down</strong> to hear all content</li>
-<li>Use <strong>Insert+Down Arrow</strong> to read line by line at your own pace</li>
+<li>Open the file in Notepad: <code>notepad file.txt</code></li>
+<li>In Notepad, press <strong>Insert+Ctrl+Down</strong> to hear all content from the top.</li>
+<li>Use <strong>Insert+Down Arrow</strong> to read line by line at your own pace.</li>
+<li>Use <strong>Insert+F</strong> (JAWS Find) to search for specific text within the file.</li>
 </ol>
 <h3 id="jaws-settings-for-terminals"><a class="header" href="#jaws-settings-for-terminals">JAWS Settings for Terminals</a></h3>
-<p><strong>Enable specific settings for terminals:</strong></p>
 <ol>
-<li>Press <strong>Insert+F3</strong> to open JAWS menu</li>
-<li>Go to “Options” -&gt; “Settings Manager”</li>
-<li>Search for “terminal” or “console”</li>
-<li>Enable “Announce output” and “Speak when program speaks”</li>
+<li>Press <strong>Insert+F3</strong> to open the JAWS menu.</li>
+<li>Go to <strong>Options → Settings Center</strong> (or <strong>Utilities → Settings Manager</strong> in older versions).</li>
+<li>Search for <strong>“terminal”</strong> or <strong>“console”</strong>.</li>
+<li>Enable <strong>“Announce output”</strong> and verify <strong>“Speak when program speaks”</strong> is on.</li>
+<li>For indent reporting, search for <strong>“Indent”</strong> and set to <strong>“Tones”</strong> or <strong>“Tones and Speech”</strong>.</li>
 </ol>
+<hr>
+<h2 id="narrator-tips"><a class="header" href="#narrator-tips">Windows Narrator-Specific Tips</a></h2>
+<p>Windows Narrator is built into Windows 10 and Windows 11 at no extra cost. Enable it via <strong>Settings → Accessibility → Narrator</strong> or press <strong>Windows+Ctrl+Enter</strong>.</p>
+<p>These tips work across all shells: PowerShell, CMD, and Git Bash.</p>
+<h3 id="key-commands-for-terminals-2"><a class="header" href="#key-commands-for-terminals-2">Key Commands for Terminals</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Command</th><th>What It Does</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Narrator+D</strong></td><td>Read current line</td></tr>
+<tr><td><strong>Narrator+M</strong></td><td>Read next line</td></tr>
+<tr><td><strong>Narrator+I</strong></td><td>Read current item or focused element</td></tr>
+<tr><td><strong>Narrator+R</strong></td><td>Read from cursor / read all from here</td></tr>
+<tr><td><strong>Narrator+Ctrl+R</strong></td><td>Read page / read all</td></tr>
+<tr><td><strong>Narrator+Left/Right Arrow</strong></td><td>Move to previous/next item</td></tr>
+<tr><td><strong>Narrator+Up/Down Arrow</strong></td><td>Move to previous/next line in scan mode</td></tr>
+<tr><td><strong>Narrator+Enter</strong></td><td>Activate/interact with current item</td></tr>
+<tr><td><strong>Narrator+Space</strong></td><td>Toggle Narrator scan mode (browse vs. type mode)</td></tr>
+<tr><td><strong>Narrator+F1</strong></td><td>Open Narrator help</td></tr>
+<tr><td><strong>Windows+Ctrl+Enter</strong></td><td>Start or stop Narrator</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p><strong>Note on Narrator key:</strong> The Narrator modifier is <strong>CapsLock</strong> or <strong>Insert</strong> by default. You can change this in <strong>Settings → Accessibility → Narrator → Keyboard shortcuts</strong>.</p>
+</blockquote>
+<h3 id="working-with-terminals-using-narrator"><a class="header" href="#working-with-terminals-using-narrator">Working with Terminals Using Narrator</a></h3>
+<p>Narrator works well in <strong>focus mode</strong> (the default when a terminal is active). In focus mode, arrow keys move through command history and output rather than triggering Narrator navigation.</p>
+<p><strong>Tips:</strong></p>
+<ul>
+<li>After running a command, press <strong>Narrator+D</strong> to read the current line.</li>
+<li>Use <strong>Narrator+R</strong> to read all output from the current position.</li>
+<li>For long outputs, always redirect to a file: <code>command &gt; output.txt</code>, then open in Notepad where Narrator’s reading experience is more comfortable.</li>
+<li>In Windows Terminal, enable <strong>“Accessible terminal”</strong> mode in Windows Terminal settings for better Narrator integration.</li>
+</ul>
+<h3 id="narrator-settings-for-terminals"><a class="header" href="#narrator-settings-for-terminals">Narrator Settings for Terminals</a></h3>
+<ol>
+<li>Open <strong>Settings → Accessibility → Narrator</strong>.</li>
+<li>Under <strong>“Change what you hear when typing”</strong>, enable <strong>“Hear characters as you type”</strong>.</li>
+<li>Under <strong>“Change what Narrator reads”</strong>, enable <strong>“Read hints for controls and buttons”</strong>.</li>
+<li>Set verbosity level to <strong>3 or 4</strong> for a good balance of detail.</li>
+<li>Under <strong>“Choose a Narrator voice”</strong>, select a voice you find comfortable for extended use.</li>
+</ol>
+<p><strong>Known limitation:</strong> Narrator has fewer customization options than JAWS or NVDA for advanced terminal work. If you find Narrator insufficient for complex workflows, consider switching to NVDA (free) or JAWS.</p>
+<hr>
+<h2 id="dolphin-tips"><a class="header" href="#dolphin-tips">Dolphin SuperNova-Specific Tips</a></h2>
+<p>Dolphin SuperNova is a commercial screen reader (with optional magnification) available from <a href="https://example.com">https://example.com</a></p>
+<p>These tips work across all shells: PowerShell, CMD, and Git Bash.</p>
+<h3 id="key-commands-for-terminals-3"><a class="header" href="#key-commands-for-terminals-3">Key Commands for Terminals</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Command</th><th>What It Does</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Caps Lock+Down Arrow</strong> (or NumPad 2)</td><td>Read current line</td></tr>
+<tr><td><strong>Caps Lock+Numpad 5</strong></td><td>Read current word</td></tr>
+<tr><td><strong>Caps Lock+Numpad 6</strong></td><td>Read next word</td></tr>
+<tr><td><strong>Caps Lock+Numpad 4</strong></td><td>Read previous word</td></tr>
+<tr><td><strong>Caps Lock+Numpad 8</strong></td><td>Read from cursor to top</td></tr>
+<tr><td><strong>Caps Lock+Numpad 2</strong></td><td>Read from cursor to bottom</td></tr>
+<tr><td><strong>Caps Lock+Numpad Plus</strong></td><td>Say all / read all from current position</td></tr>
+<tr><td><strong>Caps Lock+L</strong></td><td>Re-read current line</td></tr>
+<tr><td><strong>Caps Lock+Right Arrow</strong></td><td>Read next character</td></tr>
+<tr><td><strong>Caps Lock+Left Arrow</strong></td><td>Read previous character</td></tr>
+<tr><td><strong>Caps Lock+Page Down</strong></td><td>Jump to end of document or screen</td></tr>
+<tr><td><strong>Caps Lock+Page Up</strong></td><td>Jump to start of document or screen</td></tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<p><strong>Note on Dolphin key:</strong> Dolphin SuperNova typically uses <strong>Caps Lock</strong> as its modifier key (referred to as the “Dolphin key”). This can be changed in <strong>SuperNova Control Panel → Keyboard</strong>.</p>
+</blockquote>
+<h3 id="working-with-terminals-using-dolphin-supernova"><a class="header" href="#working-with-terminals-using-dolphin-supernova">Working with Terminals Using Dolphin SuperNova</a></h3>
+<ol>
+<li>Open SuperNova <strong>before</strong> opening your terminal application.</li>
+<li>Dolphin SuperNova automatically tracks focus as you move between the editor, terminal, and file explorer.</li>
+<li>In the terminal, use the <strong>Dolphin key+Numpad Plus</strong> (say all) to have the screen read after running a command.</li>
+<li>For complex output, redirect to a file and open in Notepad: <code>command &gt; output.txt</code>, then <code>notepad output.txt</code>.</li>
+</ol>
+<h3 id="dolphin-supernova-settings-for-terminals"><a class="header" href="#dolphin-supernova-settings-for-terminals">Dolphin SuperNova Settings for Terminals</a></h3>
+<ol>
+<li>Open <strong>SuperNova Control Panel</strong> (press Caps Lock+SpaceBar, or click the SuperNova icon).</li>
+<li>Go to <strong>Speech → Verbosity</strong> and set a comfortable level (3 or 4 recommended for terminal work).</li>
+<li>Go to <strong>Speech → Text Processing → Indentation</strong> and enable indentation announcement (important for code).</li>
+<li>Go to <strong>Braille → Settings</strong> if you are using a braille display alongside speech.</li>
+<li>In <strong>General → Application Settings</strong>, you can set terminal-specific verbosity so SuperNova behaves differently in your terminal versus other programs.</li>
+</ol>
+<p><strong>Note:</strong> Dolphin SuperNova’s magnification features can be helpful if you have some remaining vision. Terminal text can be magnified while still receiving speech output.</p>
 <hr>
 <h2 id="general-terminal"><a class="header" href="#general-terminal">General Terminal Accessibility</a></h2>
 <h3 id="understanding-the-terminal-layout"><a class="header" href="#understanding-the-terminal-layout">Understanding the Terminal Layout</a></h3>
@@ -373,81 +477,61 @@
 <h3 id="navigation-sequence"><a class="header" href="#navigation-sequence">Navigation Sequence</a></h3>
 <p><strong>When you open any terminal:</strong></p>
 <ol>
-<li>Your screen reader announces the window title</li>
-<li>Then it announces the prompt line</li>
-<li>Anything before the prompt is previous output</li>
-<li>Anything after the prompt is where new output will appear</li>
+<li>Your screen reader announces the window title.</li>
+<li>Then it announces the prompt line.</li>
+<li>Anything before the prompt is previous output.</li>
+<li>Anything after the prompt is where new output will appear.</li>
 </ol>
 <h3 id="reading-output-effectively"><a class="header" href="#reading-output-effectively">Reading Output Effectively</a></h3>
 <p><strong>Strategy 1: Immediate Output (Small Amount)</strong></p>
 <ul>
-<li>Run a command</li>
-<li>Your screen reader announces output immediately</li>
-<li>This works well for short outputs (a few lines)</li>
+<li>Run a command.</li>
+<li>Your screen reader announces output immediately.</li>
+<li>This works well for short outputs (a few lines).</li>
 </ul>
 <p><strong>Strategy 2: Large Output (Many Lines)</strong></p>
 <ul>
 <li>Redirect to a file: <code>command &gt; output.txt</code></li>
-<li>Open the file: <code>notepad output.txt</code> (works in all shells)</li>
-<li>Read in Notepad (easier for long text)</li>
+<li>Open the file: <code>notepad output.txt</code> (works in all shells on Windows)</li>
+<li>Read in Notepad — easier and more controllable for all screen readers.</li>
 </ul>
-<p><strong>Strategy 3: Searching Output</strong></p>
+<p><strong>Strategy 3: Filtering Output</strong></p>
 <ul>
-<li>Use filtering commands to reduce output</li>
-<li>PowerShell: <code>command | findstr "pattern"</code> or <code>command | Select-String "pattern"</code></li>
+<li>Use filtering commands to reduce output.</li>
+<li>PowerShell: <code>command | Select-String "pattern"</code></li>
 <li>CMD: <code>command | find "pattern"</code></li>
 <li>Git Bash: <code>command | grep "pattern"</code></li>
 </ul>
 <hr>
 <h2 id="long-output"><a class="header" href="#long-output">Working with Long Output</a></h2>
 <p>This is one of the most common challenges for screen reader users. Here are proven solutions:</p>
-<h3 id="solution-1-redirect-to-a-file"><a class="header" href="#solution-1-redirect-to-a-file">Solution 1: Redirect to a File</a></h3>
-<p><strong>Command:</strong></p>
-<pre><code class="language-powershell">ls -n &gt; list.txt
+<h3 id="solution-1-redirect-to-a-file-recommended"><a class="header" href="#solution-1-redirect-to-a-file-recommended">Solution 1: Redirect to a File (Recommended)</a></h3>
+<pre><code>command &gt; output.txt
+notepad output.txt
 </code></pre>
-<p><strong>Then open:</strong></p>
-<pre><code class="language-powershell">notepad.exe list.txt
-</code></pre>
-<p><strong>Advantages:</strong></p>
-<ul>
-<li>Easy to navigate at your own pace</li>
-<li>Works with all screen readers</li>
-<li>Output doesn’t scroll away</li>
-<li>You can save it for later</li>
-</ul>
+<p><strong>Advantages:</strong> Easy to navigate at your own pace, works with all screen readers, output does not scroll away, you can save it for later reference.</p>
 <h3 id="solution-2-use-pagination"><a class="header" href="#solution-2-use-pagination">Solution 2: Use Pagination</a></h3>
-<p><strong>Command:</strong></p>
-<pre><code class="language-powershell">ls -n | more
+<pre><code>command | more
 </code></pre>
-<p><strong>How to use:</strong></p>
-<ul>
-<li>Press <strong>Space</strong> to see next page</li>
-<li>Press <strong>Q</strong> to quit</li>
-<li><strong>Note:</strong> Some screen readers struggle with <code>more</code>, so Solution 1 is preferred</li>
-</ul>
+<p>Press <strong>Space</strong> to see the next page, <strong>Q</strong> to quit. Note: some screen readers struggle with <code>more</code>; Solution 1 is generally preferred.</p>
 <h3 id="solution-3-filter-output"><a class="header" href="#solution-3-filter-output">Solution 3: Filter Output</a></h3>
-<p><strong>Example: Find only .scad files</strong></p>
-<pre><code class="language-powershell">ls -n | findstr "\.scad"
+<pre><code># PowerShell
+ls | Select-String "\.scad"
+
+# CMD
+dir | find ".scad"
+
+# Git Bash
+ls -la | grep ".scad"
 </code></pre>
-<p><strong>How it works:</strong></p>
-<ul>
-<li><code>findstr</code> searches for a pattern</li>
-<li><code>\.scad</code> means “files ending in .scad”</li>
-<li>Only matching items are displayed</li>
-</ul>
 <h3 id="solution-4-count-before-displaying"><a class="header" href="#solution-4-count-before-displaying">Solution 4: Count Before Displaying</a></h3>
-<p><strong>Command:</strong></p>
-<pre><code class="language-powershell">(ls -n).Count
+<pre><code class="language-powershell"># PowerShell
+(ls).Count
 </code></pre>
-<p><strong>What it does:</strong></p>
-<ul>
-<li>Tells you how many items there are</li>
-<li>Helps you know if you should redirect to file</li>
-<li>If count &gt; 20, probably use file method</li>
-</ul>
+<p>This tells you how many items there are before deciding whether to redirect to a file.</p>
 <hr>
 <h2 id="shortcuts"><a class="header" href="#shortcuts">Keyboard Shortcuts Reference</a></h2>
-<h3 id="all-users-works-in-powershell-regardless-of-screen-reader"><a class="header" href="#all-users-works-in-powershell-regardless-of-screen-reader">All Users (Works in PowerShell regardless of screen reader)</a></h3>
+<h3 id="shell-navigation-works-regardless-of-screen-reader"><a class="header" href="#shell-navigation-works-regardless-of-screen-reader">Shell Navigation (Works Regardless of Screen Reader)</a></h3>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -456,48 +540,51 @@
 <tbody>
 <tr><td><strong>Up Arrow</strong></td><td>Show previous command</td><td>Repeat commands without retyping</td></tr>
 <tr><td><strong>Down Arrow</strong></td><td>Show next command</td><td>Navigate through history</td></tr>
-<tr><td><strong>Tab</strong></td><td>Auto-complete</td><td>Faster than typing full names</td></tr>
+<tr><td><strong>Tab</strong></td><td>Auto-complete path or command name</td><td>Faster and more accurate</td></tr>
 <tr><td><strong>Shift+Tab</strong></td><td>Cycle backward through completions</td><td>If Tab went too far</td></tr>
-<tr><td><strong>Home</strong></td><td>Jump to start of line</td><td>Edit beginning of command</td></tr>
-<tr><td><strong>End</strong></td><td>Jump to end of line</td><td>Edit end of command</td></tr>
-<tr><td><strong>Ctrl+A</strong></td><td>Select all</td><td>Copy entire command line</td></tr>
-<tr><td><strong>Ctrl+C</strong></td><td>Stop command</td><td>Abort long-running tasks</td></tr>
-<tr><td><strong>Ctrl+L</strong></td><td>Clear screen</td><td>Start fresh</td></tr>
-<tr><td><strong>Ctrl+K</strong></td><td>Clear all</td><td>(Alternative to Ctrl+L)</td></tr>
+<tr><td><strong>Home</strong></td><td>Jump to start of command line</td><td>Edit beginning of a command</td></tr>
+<tr><td><strong>End</strong></td><td>Jump to end of command line</td><td>Edit end of a command</td></tr>
+<tr><td><strong>Ctrl+A</strong></td><td>Select all text on line</td><td>Copy entire command</td></tr>
+<tr><td><strong>Ctrl+C</strong></td><td>Stop / interrupt running command</td><td>Abort long-running tasks</td></tr>
+<tr><td><strong>Ctrl+L</strong></td><td>Clear screen</td><td>Start fresh visually</td></tr>
 <tr><td><strong>Enter</strong></td><td>Run command</td><td>Execute what you typed</td></tr>
 </tbody>
 </table>
 </div>
-<h3 id="screen-reader-navigation"><a class="header" href="#screen-reader-navigation">Screen Reader Navigation</a></h3>
+<h3 id="screen-reader-navigation-quick-reference"><a class="header" href="#screen-reader-navigation-quick-reference">Screen Reader Navigation Quick Reference</a></h3>
 <div class="table-wrapper">
 <table>
 <thead>
-<tr><th>Key</th><th>NVDA Action</th><th>JAWS Action</th></tr>
+<tr><th>Task</th><th>NVDA</th><th>JAWS</th><th>Windows Narrator</th><th>Dolphin SuperNova</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Up/Down</strong></td><td>Move through line (native)</td><td>Move through line (native)</td></tr>
-<tr><td><strong>Numpad+</strong></td><td>Start/stop review mode</td><td>(Not needed in JAWS)</td></tr>
-<tr><td><strong>Function+Home</strong></td><td>Read current line</td><td>Read current line</td></tr>
-<tr><td><strong>Function+Page Down</strong></td><td>Read next page</td><td>Read next page</td></tr>
-<tr><td><strong>Alt+Tab</strong></td><td>Switch windows (works in any app)</td><td>Switch windows (works in any app)</td></tr>
+<tr><td>Read current line</td><td>NVDA+Home</td><td>Insert+Up Arrow</td><td>Narrator+D</td><td>CapsLock+L</td></tr>
+<tr><td>Read all from here</td><td>NVDA+Down Arrow</td><td>Insert+Ctrl+Down</td><td>Narrator+R</td><td>CapsLock+Numpad Plus</td></tr>
+<tr><td>Read next line</td><td>Down Arrow (review)</td><td>Insert+Down Arrow</td><td>Narrator+M</td><td>CapsLock+Numpad 2</td></tr>
+<tr><td>Read previous line</td><td>Up Arrow (review)</td><td>Insert+Up Arrow</td><td>Narrator+Up Arrow</td><td>CapsLock+Numpad 8</td></tr>
+<tr><td>Jump to end of output</td><td>NVDA+End</td><td>Insert+End</td><td>Narrator+End</td><td>CapsLock+Page Down</td></tr>
+<tr><td>Jump to start of output</td><td>NVDA+Home</td><td>Insert+Home</td><td>Narrator+Home</td><td>CapsLock+Page Up</td></tr>
+<tr><td>Stop reading</td><td>Ctrl</td><td>Ctrl</td><td>Ctrl</td><td>Ctrl</td></tr>
 </tbody>
 </table>
 </div>
 <hr>
 <h2 id="shell-differences"><a class="header" href="#shell-differences">Shell-Specific Differences</a></h2>
-<p>While all three shells work equally well with screen readers, there are some differences in commands and syntax:</p>
-<h3 id="file-listing--navigation"><a class="header" href="#file-listing--navigation">File Listing &amp; Navigation</a></h3>
+<p>While all three shells work equally well with screen readers, there are differences in commands and syntax:</p>
+<h3 id="file-listing-and-navigation"><a class="header" href="#file-listing-and-navigation">File Listing and Navigation</a></h3>
 <div class="table-wrapper">
 <table>
 <thead>
 <tr><th>Task</th><th>PowerShell</th><th>CMD</th><th>Git Bash</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>List files</strong></td><td><code>ls -n</code> or <code>dir</code></td><td><code>dir</code></td><td><code>ls -la</code></td></tr>
+<tr><td><strong>List files</strong></td><td><code>ls</code> or <code>Get-ChildItem</code></td><td><code>dir</code></td><td><code>ls -la</code></td></tr>
+<tr><td><strong>List names only</strong></td><td><code>ls -Name</code></td><td><code>dir /B</code></td><td><code>ls -1</code></td></tr>
 <tr><td><strong>Change directory</strong></td><td><code>cd path</code></td><td><code>cd path</code></td><td><code>cd path</code></td></tr>
 <tr><td><strong>Current location</strong></td><td><code>pwd</code></td><td><code>cd</code> (no args)</td><td><code>pwd</code></td></tr>
 <tr><td><strong>Create folder</strong></td><td><code>mkdir foldername</code></td><td><code>mkdir foldername</code></td><td><code>mkdir foldername</code></td></tr>
-<tr><td><strong>Delete file</strong></td><td><code>Remove-Item file.txt</code> or <code>rm file.txt</code></td><td><code>del file.txt</code></td><td><code>rm file.txt</code></td></tr>
+<tr><td><strong>Delete file</strong></td><td><code>Remove-Item file.txt</code></td><td><code>del file.txt</code></td><td><code>rm file.txt</code></td></tr>
+<tr><td><strong>Home directory</strong></td><td><code>$HOME</code> or <code>~</code></td><td><code>%USERPROFILE%</code></td><td><code>~</code></td></tr>
 </tbody>
 </table>
 </div>
@@ -510,12 +597,12 @@
 <tbody>
 <tr><td><strong>Save to file</strong></td><td><code>command &gt; file.txt</code></td><td><code>command &gt; file.txt</code></td><td><code>command &gt; file.txt</code></td></tr>
 <tr><td><strong>Append to file</strong></td><td><code>command &gt;&gt; file.txt</code></td><td><code>command &gt;&gt; file.txt</code></td><td><code>command &gt;&gt; file.txt</code></td></tr>
-<tr><td><strong>Filter output</strong></td><td><code>command | findstr "text"</code> or <code>| Select-String</code></td><td><code>command | find "text"</code></td><td><code>command | grep "text"</code></td></tr>
-<tr><td><strong>Open file</strong></td><td><code>notepad file.txt</code></td><td><code>notepad file.txt</code></td><td><code>notepad file.txt</code> (Windows) or <code>nano file.txt</code> (macOS/Linux)</td></tr>
+<tr><td><strong>Filter output</strong></td><td><code>command | Select-String "text"</code></td><td><code>command | find "text"</code></td><td><code>command | grep "text"</code></td></tr>
+<tr><td><strong>Open file</strong></td><td><code>notepad file.txt</code></td><td><code>notepad file.txt</code></td><td><code>notepad file.txt</code> (Windows)</td></tr>
 </tbody>
 </table>
 </div>
-<h3 id="scripting--automation"><a class="header" href="#scripting--automation">Scripting &amp; Automation</a></h3>
+<h3 id="scripting-and-automation"><a class="header" href="#scripting-and-automation">Scripting and Automation</a></h3>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -523,208 +610,70 @@
 </thead>
 <tbody>
 <tr><td><strong>File extension</strong></td><td><code>.ps1</code></td><td><code>.bat</code></td><td><code>.sh</code></td></tr>
-<tr><td><strong>Comment</strong></td><td><code>#</code></td><td><code>REM</code></td><td><code>#</code></td></tr>
-<tr><td><strong>Variable</strong></td><td><code>$var = value</code></td><td><code>set var=value</code></td><td><code>var=value</code></td></tr>
-<tr><td><strong>Echo text</strong></td><td><code>echo text</code> or <code>Write-Host</code></td><td><code>echo text</code></td><td><code>echo text</code></td></tr>
-<tr><td><strong>Conditional</strong></td><td><code>if</code> statement</td><td><code>if</code> statement</td><td><code>if</code> statement</td></tr>
+<tr><td><strong>Comment</strong></td><td><code>#</code></td><td><code>REM</code> or <code>::</code></td><td><code>#</code></td></tr>
+<tr><td><strong>Variable</strong></td><td><code>$var = "value"</code></td><td><code>set var=value</code></td><td><code>var=value</code></td></tr>
+<tr><td><strong>Echo text</strong></td><td><code>Write-Host "text"</code></td><td><code>echo text</code></td><td><code>echo text</code></td></tr>
+<tr><td><strong>Get help</strong></td><td><code>Get-Help command</code></td><td><code>help command</code></td><td><code>man command</code></td></tr>
 </tbody>
 </table>
 </div>
-<h3 id="key-point-for-learners"><a class="header" href="#key-point-for-learners">Key Point for Learners</a></h3>
-<p><strong>Choose ONE pathway and stick with it.</strong> Each curriculum (PowerShell, CMD, Git Bash) teaches you the concepts using that specific shell’s syntax. The accessibility experience is virtually identical-only the command syntax differs. By the end of your chosen curriculum, you’ll understand the principles well enough to adapt to another shell if needed.</p>
+<p><strong>Choose ONE pathway and stick with it.</strong> Each curriculum teaches you the concepts using that specific shell’s syntax. The accessibility experience is virtually identical across all four screen readers in all three shells — only the command syntax differs.</p>
 <hr>
 <h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
 <h3 id="problem-1-i-cant-hear-the-output-after-running-a-command"><a class="header" href="#problem-1-i-cant-hear-the-output-after-running-a-command">Problem 1: “I Can’t Hear the Output After Running a Command”</a></h3>
-<p><strong>Causes &amp; Solutions:</strong></p>
+<p><strong>Causes and Solutions:</strong></p>
 <ol>
-<li>
-<p><strong>Cursor not at prompt</strong></p>
-<ul>
-<li>Solution: Press <strong>End</strong> or <strong>Ctrl+End</strong> to go to the end of text</li>
-<li>Then use <strong>Up Arrow</strong> or screen reader commands to review</li>
-</ul>
-</li>
-<li>
-<p><strong>Output scrolled off-screen</strong></p>
-<ul>
-<li>Solution: Redirect to file: <code>command &gt; output.txt</code></li>
-<li>Then read file: <code>notepad output.txt</code></li>
-</ul>
-</li>
-<li>
-<p><strong>Screen reader focus on window title, not content</strong></p>
-<ul>
-<li>Solution: Press <strong>Tab</strong> or arrow keys to move to the content area</li>
-<li>Then use screen reader commands to read</li>
-</ul>
-</li>
-<li>
-<p><strong>Large amount of output overwhelming screen reader</strong></p>
-<ul>
-<li>Solution: Use filtering to reduce output</li>
-<li>PowerShell: <code>ls -n | findstr "pattern"</code></li>
-<li>CMD: <code>dir | find "pattern"</code></li>
-<li>Git Bash: <code>ls -la | grep "pattern"</code></li>
-</ul>
-</li>
+<li><strong>Cursor is not at the prompt</strong> — Press <strong>End</strong> or <strong>Ctrl+End</strong> to go to the end of text, then use screen reader commands to review.</li>
+<li><strong>Output scrolled off-screen</strong> — Redirect to file: <code>command &gt; output.txt</code>, then <code>notepad output.txt</code>.</li>
+<li><strong>Screen reader focus is on window title, not content</strong> — Press <strong>Tab</strong> or arrow keys to move into the content area.</li>
+<li><strong>Large output overwhelming screen reader</strong> — Use filtering: <code>command | grep "pattern"</code> (Git Bash), <code>command | find "text"</code> (CMD), or <code>command | Select-String "text"</code> (PowerShell).</li>
 </ol>
 <h3 id="problem-2-tab-completion-isnt-working"><a class="header" href="#problem-2-tab-completion-isnt-working">Problem 2: “Tab Completion Isn’t Working”</a></h3>
-<p><strong>Causes &amp; Solutions:</strong></p>
 <ol>
-<li>
-<p><strong>Need at least one character</strong></p>
-<ul>
-<li>Wrong: Type <code>cd</code> then Tab (won’t work without a path)</li>
-<li>Right: Type <code>cd D</code> then Tab</li>
-</ul>
-</li>
-<li>
-<p><strong>Exact path needed</strong></p>
-<ul>
-<li>If folder is “Documents”, typing <code>cd Doc</code> and Tab works</li>
-<li>But typing <code>cd X</code> won’t find “Documents”</li>
-</ul>
-</li>
-<li>
-<p><strong>Check if item exists</strong></p>
-<ul>
-<li>PowerShell: Use <code>ls -n</code> to see available items</li>
-<li>CMD: Use <code>dir</code> to see available items</li>
-<li>Git Bash: Use <code>ls -la</code> to see available items</li>
-<li>Then Tab-complete to them</li>
-</ul>
-</li>
+<li>You must type at least one character before pressing Tab.</li>
+<li>The folder or file must exist — run <code>dir</code> (CMD), <code>ls</code> (PowerShell/Git Bash) to check.</li>
+<li>If multiple matches exist, press Tab again to cycle through them.</li>
 </ol>
-<h3 id="problem-3-screen-reader-says-access-denied-or-permission-denied"><a class="header" href="#problem-3-screen-reader-says-access-denied-or-permission-denied">Problem 3: “Screen Reader Says ‘Access Denied’ or ‘Permission Denied’”</a></h3>
-<p><strong>Causes &amp; Solutions:</strong></p>
+<h3 id="problem-3-access-denied-or-permission-denied"><a class="header" href="#problem-3-access-denied-or-permission-denied">Problem 3: “Access Denied or Permission Denied”</a></h3>
 <ol>
-<li>
-<p><strong>Need admin rights (Windows)</strong></p>
-<ul>
-<li>Close your terminal</li>
-<li>Right-click the terminal app -&gt; Run as administrator</li>
-<li>Confirm the UAC prompt</li>
-</ul>
-</li>
-<li>
-<p><strong>File is in use</strong></p>
-<ul>
-<li>Close any programs using the file</li>
-<li>Try the command again</li>
-</ul>
-</li>
-<li>
-<p><strong>File path contains spaces</strong></p>
-<ul>
-<li>Use quotes: <code>cd "Program Files"</code></li>
-<li>Or use Tab completion (handles spaces automatically)</li>
-</ul>
-</li>
+<li>Close your terminal, right-click it, and choose <strong>Run as administrator</strong>. Confirm the UAC prompt.</li>
+<li>If the file is in use by another program, close that program and try again.</li>
+<li>If the path contains spaces, use quotes: <code>cd "Program Files"</code>.</li>
 </ol>
-<h3 id="problem-4-command-runs-forever-and-wont-stop"><a class="header" href="#problem-4-command-runs-forever-and-wont-stop">Problem 4: “Command Runs Forever and Won’t Stop”</a></h3>
-<p><strong>Solution:</strong> Press <strong>Ctrl+C</strong></p>
-<p><strong>Examples of long-running commands:</strong></p>
-<ul>
-<li><code>ping google.com</code> (will ping forever until stopped)</li>
-<li>Connecting to a slow server</li>
-<li>Large file operations</li>
-</ul>
-<p><strong>Always press Ctrl+C when a command seems stuck.</strong></p>
+<h3 id="problem-4-a-command-runs-forever-and-wont-stop"><a class="header" href="#problem-4-a-command-runs-forever-and-wont-stop">Problem 4: “A Command Runs Forever and Won’t Stop”</a></h3>
+<p>Press <strong>Ctrl+C</strong> to interrupt any running command.</p>
 <h3 id="problem-5-i-need-to-edit-my-last-command"><a class="header" href="#problem-5-i-need-to-edit-my-last-command">Problem 5: “I Need to Edit My Last Command”</a></h3>
-<p><strong>Solutions:</strong></p>
 <ol>
-<li><strong>Press Up Arrow</strong> to show previous command</li>
-<li><strong>Use arrow keys</strong> to move through it</li>
-<li><strong>Edit</strong> the command as needed</li>
-<li><strong>Press Enter</strong> to run the modified version</li>
+<li>Press <strong>Up Arrow</strong> to recall the previous command.</li>
+<li>Use <strong>Left/Right Arrow</strong> keys to move through it.</li>
+<li>Edit as needed and press <strong>Enter</strong> to run the modified version.</li>
 </ol>
-<p><strong>Example:</strong></p>
+<h3 id="problem-6-screen-reader-is-not-announcing-indentation"><a class="header" href="#problem-6-screen-reader-is-not-announcing-indentation">Problem 6: Screen Reader is Not Announcing Indentation</a></h3>
+<p>Proper indent announcement is critical for reading code. Enable it for your screen reader:</p>
 <ul>
-<li>You typed: <code>cd Document</code> (missing the ‘s’)</li>
-<li>Press Up Arrow to show it again</li>
-<li>Press End to go to the end</li>
-<li>Type <code>s</code> to make it <code>cd Documents</code></li>
-<li>Press Enter to run it</li>
+<li><strong>NVDA:</strong> NVDA Menu → Preferences → Settings → Document Formatting → enable <strong>“Report indentation”</strong>, set to <strong>“Tones and speech”</strong>.</li>
+<li><strong>JAWS:</strong> Settings Center → search <strong>“Indent”</strong> → enable <strong>“Announce Indentation”</strong>, set mode to <strong>“Tones”</strong> or <strong>“Tones and Speech”</strong>.</li>
+<li><strong>Windows Narrator:</strong> Settings → Accessibility → Narrator → Advanced Options → enable <strong>“Report indentation”</strong> (limited options compared to NVDA/JAWS).</li>
+<li><strong>Dolphin SuperNova:</strong> SuperNova Control Panel → Speech → Text Processing → Indentation → enable and set preferred announcement style.</li>
 </ul>
-<h3 id="problem-6-my-screen-reader-keeps-interrupting"><a class="header" href="#problem-6-my-screen-reader-keeps-interrupting">Problem 6: “My Screen Reader Keeps Interrupting”</a></h3>
-<p><strong>Causes &amp; Solutions:</strong></p>
-<ol>
-<li>
-<p><strong>NVDA verbosity too high</strong></p>
-<ul>
-<li>Press <strong>NVDA+Ctrl+V</strong> to open menu</li>
-<li>Go to Settings -&gt; Speech</li>
-<li>Lower the verbosity level</li>
-</ul>
-</li>
-<li>
-<p><strong>Multiple applications speaking</strong></p>
-<ul>
-<li>Use <strong>Alt+Tab</strong> to make your terminal the active window</li>
-<li>Minimize other programs</li>
-</ul>
-</li>
-<li>
-<p><strong>JAWS reading too fast</strong></p>
-<ul>
-<li>Press <strong>Insert+F3</strong> to open JAWS menu</li>
-<li>Look for “Verbosity” or “Speech Rate” settings</li>
-<li>Slow down the speech rate</li>
-</ul>
-</li>
-</ol>
 <hr>
 <h2 id="pro-tips-for-efficiency"><a class="header" href="#pro-tips-for-efficiency">Pro Tips for Efficiency</a></h2>
-<h3 id="1-create-shortcuts-aliases-for-frequently-used-commands"><a class="header" href="#1-create-shortcuts-aliases-for-frequently-used-commands">1. Create Shortcuts (Aliases) for Frequently Used Commands</a></h3>
-<p><strong>PowerShell:</strong></p>
-<pre><code class="language-powershell">Set-Alias -Name la -Value "ls -n -ad"
+<h3 id="create-aliases-for-frequently-used-commands"><a class="header" href="#create-aliases-for-frequently-used-commands">Create Aliases for Frequently Used Commands</a></h3>
+<p><strong>PowerShell:</strong> <code>Set-Alias -Name ll -Value "Get-ChildItem -Name"</code><br><strong>CMD:</strong> Create a <code>.bat</code> file in a folder on your PATH.<br><strong>Git Bash:</strong> <code>alias ll='ls -la'</code> (add to <code>~/.bashrc</code> to make permanent)</p>
+<h3 id="use-command-history"><a class="header" href="#use-command-history">Use Command History</a></h3>
+<p>All shells support <strong>Up/Down Arrow</strong> to navigate history. In PowerShell, <code>history</code> shows a numbered list and <code>Invoke-History 5</code> reruns command number 5. In Git Bash, <code>history</code> and <code>!5</code> work similarly.</p>
+<h3 id="redirect-everything-to-files-for-accessibility"><a class="header" href="#redirect-everything-to-files-for-accessibility">Redirect Everything to Files for Accessibility</a></h3>
+<p>If a command produces output, save it:</p>
+<pre><code class="language-plaintext">command &gt; results.txt
+notepad results.txt
 </code></pre>
-<p><strong>CMD:</strong> (Create a batch file instead)</p>
-<pre><code class="language-batch">@echo off
-echo "Your command here"
-</code></pre>
-<p><strong>Git Bash:</strong></p>
-<pre><code class="language-bash">alias la='ls -la'
-</code></pre>
-<p>Now you can type just <code>la</code> instead of the full command.</p>
-<h3 id="2-use-command-history-effectively"><a class="header" href="#2-use-command-history-effectively">2. Use Command History Effectively</a></h3>
-<p><strong>All shells support Up/Down arrow keys to navigate history.</strong></p>
-<p>PowerShell specific:</p>
-<pre><code class="language-powershell">history
-Invoke-History 5  # Runs the 5th command
-</code></pre>
-<h3 id="3-redirect-everything-to-files-for-accessibility"><a class="header" href="#3-redirect-everything-to-files-for-accessibility">3. Redirect Everything to Files for Accessibility</a></h3>
-<p><strong>If a command produces output, save it:</strong></p>
-<pre><code>command-name &gt; results.txt
-notepad results.txt  # Works in all shells
-</code></pre>
-<p>This is always more accessible than reading from terminal.</p>
-<h3 id="4-create-a-readme-for-yourself"><a class="header" href="#4-create-a-readme-for-yourself">4. Create a README for Yourself</a></h3>
-<p><strong>Create a simple help file (works in all shells):</strong></p>
-<pre><code>echo "cd means change directory" &gt; my-notes.txt
-echo "ls lists files" &gt;&gt; my-notes.txt
-notepad my-notes.txt
-</code></pre>
-<p>Come back to it whenever you forget something.</p>
-<hr>
-<h2 id="recommended-workflow"><a class="header" href="#recommended-workflow">Recommended Workflow</a></h2>
-<p><strong>For every new task:</strong></p>
-<ol>
-<li><strong>Know where you are:</strong> <code>pwd</code> (or <code>cd</code> with no args in CMD)</li>
-<li><strong>See what’s around:</strong> <code>ls -n</code> (PowerShell), <code>dir</code> (CMD), or <code>ls -la</code> (Git Bash)</li>
-<li><strong>Plan your next step:</strong> Think before typing</li>
-<li><strong>Run the command:</strong> Type and press Enter</li>
-<li><strong>Check the output:</strong> Use screen reader or redirect to file</li>
-<li><strong>Move forward:</strong> Next command or <code>cd</code> to next folder</li>
-</ol>
-<p><strong>This workflow keeps you oriented and prevents errors.</strong></p>
+<p>This is always more accessible than reading from the terminal directly.</p>
 <hr>
 <h2 id="quick-reference-card"><a class="header" href="#quick-reference-card">Quick Reference Card</a></h2>
-<p><strong>Print or save this:</strong></p>
-<pre><code>EVERY SESSION STARTS WITH:
-1. pwd (where am I?)
-2. dir/ls (what's here?)
-3. cd path (go there)
+<pre><code class="language-plaintext">EVERY SESSION STARTS WITH:
+1. pwd / cd            (where am I?)
+2. dir / ls            (what is here?)
+3. cd path             (go there)
 
 LONG OUTPUT?
 -&gt; command &gt; file.txt
@@ -735,32 +684,24 @@ STUCK?
 
 WANT TO REPEAT?
 -&gt; Up Arrow
--&gt; Command history
 
 NEED HELP?
--&gt; PowerShell: Get-Help command-name
--&gt; CMD: help command-name
--&gt; Bash: man command-name
+-&gt; PowerShell:  `Get-Help command-name`
+-&gt; CMD:         `help command-name`
+-&gt; Git Bash:    `man command-name`
 </code></pre>
 <hr>
 <h2 id="additional-resources"><a class="header" href="#additional-resources">Additional Resources</a></h2>
 <ul>
-<li><strong>NVDA Documentation:</strong> https://www.nvaccess.org/documentation/</li>
-<li><strong>JAWS Documentation:</strong> https://www.freedomscientific.com/support/</li>
-<li><strong>PowerShell Docs:</strong> https://docs.microsoft.com/powershell/</li>
-<li><strong>CMD Documentation:</strong> https://docs.microsoft.com/windows-server/administration/windows-commands/windows-commands-glossary</li>
-<li><strong>Git Bash Guide:</strong> https://git-scm.com/</li>
-<li><strong>Accessibility Best Practices:</strong> https://www.w3.org/WAI/</li>
+<li><strong>NVDA:</strong> <a href="https://example.com">https://example.com</a></li>
+<li><strong>JAWS:</strong> <a href="https://example.com">https://example.com</a></li>
+<li><strong>Windows Narrator:</strong> <a href="https://example.com">https://example.com</a></li>
+<li><strong>Dolphin SuperNova:</strong> <a href="https://example.com">https://example.com</a></li>
+<li><strong>PowerShell Docs:</strong> <a href="https://example.com">https://example.com</a></li>
+<li><strong>CMD Documentation:</strong> <a href="https://example.com">https://example.com</a></li>
+<li><strong>Git Bash / Git for Windows:</strong> <a href="https://example.com">https://example.com</a></li>
+<li><strong>Accessibility Best Practices:</strong> <a href="https://example.com">https://example.com</a></li>
 </ul>
-<hr>
-<h2 id="feedback"><a class="header" href="#feedback">Feedback</a></h2>
-<p>This guide is meant to help YOU. If something isn’t clear:</p>
-<ul>
-<li>Try a different approach from the “Solutions” sections</li>
-<li>Reach out to instructors with specific questions</li>
-<li>Share what worked for you with classmates</li>
-</ul>
-<p>Remember: Using a terminal with a screen reader is absolutely possible. These tools and techniques will help you master it.</p>
 
                     </main>
 

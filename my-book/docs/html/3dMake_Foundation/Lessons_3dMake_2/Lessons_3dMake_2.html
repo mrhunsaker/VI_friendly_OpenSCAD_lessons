@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-d11bd641.js";
+            window.path_to_searchindex_js = "../../searchindex-d0af5d9e.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-19a5926f.js"></script>
+        <script src="../../toc-5b0c6224.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -227,44 +227,38 @@
 <li>Apply CSG operators (<code>union</code>, <code>difference</code>, <code>intersection</code>) safely and diagnose common numerical issues<sup class="footnote-reference" id="fr-3-1"><a href="#footnote-3">2</a></sup></li>
 <li>Use quick diagnostic renders and validate geometry in a slicer<sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">3</a></sup></li>
 </ul>
-<p><strong>Materials</strong></p>
+<p>Materials</p>
 <ul>
 <li>3dMake project scaffold with <code>src/main.scad</code></li>
 <li>Example primitive snippets (provided in assets)</li>
 <li>Reference: <a href="openscad-cheat-sheet.html">openscad-cheat-sheet.md</a> for syntax quick-reference</li>
 </ul>
-<hr>
 <ol>
 <li>
 <p>Open <code>src/main.scad</code>; identify and run simple examples using <code>cube()</code>, <code>sphere()</code>, and <code>cylinder()</code> <sup class="footnote-reference" id="fr-2-2"><a href="#footnote-2">1</a></sup>.</p>
-<p><strong>Example primitives:</strong></p>
+<p>Example primitives:</p>
 <pre><code class="language-openscad">// Primitive shapes - uncomment one to try
-
 // Cube (x, y, z dimensions)
 cube([20, 20, 20]);
-
 // Sphere (radius, resolution)
 // sphere(r=10, $fn=32);
-
 // Cylinder (radius, height, resolution)
 // cylinder(r=10, h=20, $fn=32);
 </code></pre>
 </li>
 <li>
 <p>Create three short examples demonstrating <code>union()</code>, <code>difference()</code>, and <code>intersection()</code> and render with reduced <code>$fn</code>. Review CSG best practices<sup class="footnote-reference" id="fr-3-2"><a href="#footnote-3">2</a></sup>.</p>
-<p><strong>Example CSG operations:</strong></p>
+<p>Example CSG operations:</p>
 <pre><code class="language-openscad">// UNION - Combine multiple shapes
 union(){
   cube([20, 20, 20]);
   translate([15, 0, 0]) sphere(r=10, $fn=32);
 }
-
 // DIFFERENCE - Subtract shapes
 // difference(){
 //   cube([20, 20, 20]);
 //   translate([10, 10, 10]) sphere(r=8, $fn=32);
 // }
-
 // INTERSECTION - Keep only overlapping volumes
 // intersection(){
 //   cube([20, 20, 20]);
@@ -274,7 +268,7 @@ union(){
 </li>
 <li>
 <p>Reproduce a failing <code>difference()</code> case and apply the 0.001 offset strategy to the subtractor; re-render and confirm fix. This technique addresses common manifold issues<sup class="footnote-reference" id="fr-4-1"><a href="#footnote-4">4</a></sup>.</p>
-<p><strong>Fix technique:</strong></p>
+<p>Fix technique:</p>
 <pre><code class="language-openscad">// Problem: Coincident faces cause non-manifold issues
 difference(){
   cube([20, 20, 20], center=true);
@@ -291,80 +285,71 @@ difference(){
 </li>
 </ol>
 <h2 id="modifier-characters-for-advanced-debugging"><a class="header" href="#modifier-characters-for-advanced-debugging">Modifier Characters for Advanced Debugging</a></h2>
-<p>OpenSCAD includes special <strong>modifier characters</strong> that help you isolate and debug specific parts of your model. These single-character prefixes (placed before module/shape names) change how that object is rendered without affecting the underlying code.</p>
+<p>OpenSCAD includes special modifier characters that help you isolate and debug specific parts of your model. These single-character prefixes (placed before module/shape names) change how that object is rendered without affecting the underlying code.</p>
 <h3 id="the-four-modifier-characters"><a class="header" href="#the-four-modifier-characters">The Four Modifier Characters</a></h3>
-<h4 id="1-the--character-show-only"><a class="header" href="#1-the--character-show-only"><strong>1. The <code>!</code> Character (Show Only)</strong></a></h4>
-<p>Use <code>!</code> to render <strong>only</strong> the marked object and hide everything else. This is essential for isolating geometry when debugging complex models:</p>
+<h4 id="1-the--character-show-only"><a class="header" href="#1-the--character-show-only">1. The <code>!</code> Character (Show Only)</a></h4>
+<p>Use <code>!</code> to render only the marked object and hide everything else. This is essential for isolating geometry when debugging complex models:</p>
 <pre><code class="language-openscad">module base() {
   cube([50, 50, 5]);
 }
-
 module stand() {
   translate([0, 0, 5])
     rotate([60, 0, 0])
     cube([50, 5, 40]);
 }
-
 module lip() {
   translate([0, 50, 45])
     cube([50, 8, 15]);
 }
-
 // Show all parts
 base();
 stand();
 lip();
-
 // DEBUG: Show only the stand by adding !
 // !stand();
 </code></pre>
-<p><strong>When to use:</strong> You’re debugging a multi-part assembly and want to see one component in isolation</p>
-<h4 id="2-the--character-highlight"><a class="header" href="#2-the--character-highlight"><strong>2. The <code>#</code> Character (Highlight)</strong></a></h4>
-<p>Use <code>#</code> to render the marked object <strong>and highlight it in red</strong> (in preview mode). This helps you see which part corresponds to which code:</p>
+<p>When to use: You’re debugging a multi-part assembly and want to see one component in isolation</p>
+<h4 id="2-the--character-highlight"><a class="header" href="#2-the--character-highlight">2. The <code>#</code> Character (Highlight)</a></h4>
+<p>Use <code>#</code> to render the marked object and highlight it in red (in preview mode). This helps you see which part corresponds to which code:</p>
 <pre><code class="language-openscad">difference() {
   cube([30, 30, 30], center=true);
-  
   // Highlight the subtracted sphere in red
   #sphere(r=15, $fn=32);
 }
 </code></pre>
-<p><strong>When to use:</strong> Identifying which boolean operation is creating problems or validating that two objects overlap correctly</p>
-<h4 id="3-the--character-transparentghost"><a class="header" href="#3-the--character-transparentghost"><strong>3. The <code>%</code> Character (Transparent/Ghost)</strong></a></h4>
-<p>Use <code>%</code> to render the marked object as <strong>transparent/ghosted</strong> (shown as semi-transparent geometry). This helps you see what’s “underneath” without removing the code:</p>
+<p>When to use: Identifying which boolean operation is creating problems or validating that two objects overlap correctly</p>
+<h4 id="3-the--character-transparentghost"><a class="header" href="#3-the--character-transparentghost">3. The <code>%</code> Character (Transparent/Ghost)</a></h4>
+<p>Use <code>%</code> to render the marked object as transparent/ghosted (shown as semi-transparent geometry). This helps you see what’s “underneath” without removing the code:</p>
 <pre><code class="language-openscad">module outer_shell() {
   difference() {
     cube([50, 50, 50], center=true);
     cube([44, 44, 44], center=true);  // Wall thickness of 3mm
   }
 }
-
 module internal_support() {
   translate([0, 0, -10])
     cube([20, 20, 10], center=true);
 }
-
 // Show shell normally and support as ghosted
 outer_shell();
 %internal_support();  // Transparent - see where it sits relative to shell
 </code></pre>
-<p><strong>When to use:</strong> Visualizing assembly relationships or checking alignment of internal vs external features</p>
-<h4 id="4-the--character-disable"><a class="header" href="#4-the--character-disable"><strong>4. The <code>*</code> Character (Disable)</strong></a></h4>
-<p>Use <code>*</code> to <strong>disable rendering</strong> of a marked object entirely. It’s like commenting it out but without modifying the code:</p>
+<p>When to use: Visualizing assembly relationships or checking alignment of internal vs external features</p>
+<h4 id="4-the--character-disable"><a class="header" href="#4-the--character-disable">4. The <code>*</code> Character (Disable)</a></h4>
+<p>Use <code>*</code> to disable rendering of a marked object entirely. It’s like commenting it out but without modifying the code:</p>
 <pre><code class="language-openscad">module component_a() { cube([30, 30, 30]); }
 module component_b() { sphere(r=20, $fn=32); }
 module component_c() { cylinder(h=40, r=15, $fn=32); }
-
 component_a();
 *component_b();  // Disabled - won't render
 component_c();
 </code></pre>
-<p><strong>When to use:</strong> Testing whether a component is causing rendering errors or print failures without deleting code</p>
+<p>When to use: Testing whether a component is causing rendering errors or print failures without deleting code</p>
 <h3 id="practical-debugging-workflow-using-modifiers"><a class="header" href="#practical-debugging-workflow-using-modifiers">Practical Debugging Workflow Using Modifiers</a></h3>
-<p><strong>Scenario:</strong> Your phone stand model has three parts, but it’s rendering very slowly. You suspect one part is the problem.</p>
+<p>Scenario: Your phone stand model has three parts, but it’s rendering very slowly. You suspect one part is the problem.</p>
 <pre><code class="language-openscad">module base() {
   cube([100, 100, 5]);
 }
-
 module stand() {
   // Complex geometry with many $fn values
   translate([0, 0, 5])
@@ -374,28 +359,22 @@ module stand() {
       cylinder(r=5, h=0.01, $fn=64);  // This might be slow!
     }
 }
-
 module lip() {
   translate([0, 100, 45])
     cube([100, 10, 15]);
 }
-
 // DEBUGGING STEPS:
-
 // Step 1: Show all parts (original speed problem)
 base();
 stand();
 lip();
-
 // Step 2: Disable stand to test if it's the culprit
 // base();
 // *stand();
 // lip();
 // Result: If still slow, problem is elsewhere. If fast, stand() is the issue.
-
 // Step 3: If stand() is slow, highlight just that part
 // !#stand();  // Shows only stand in red - can now debug its geometry
-
 // Step 4: Reduce resolution in stand() and test again
 // (modify the $fn=64 to $fn=16 and see if faster)
 </code></pre>
@@ -413,7 +392,10 @@ lip();
 </tbody>
 </table>
 </div>
-<p><strong>Important:</strong> Modifiers only affect the visual preview/render. They do <strong>not</strong> change the exported STL file. When you export, all objects are included normally (unless you’ve actually deleted or commented them out).</p>
+<blockquote class="blockquote-tag blockquote-tag-important">
+<p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Important</p>
+<p>Modifiers only affect the visual preview/render. They do not change the exported STL file. When you export, all objects are included normally (unless you’ve actually deleted or commented them out).</p>
+</blockquote>
 <h3 id="practice-exercise-modifier-workflow"><a class="header" href="#practice-exercise-modifier-workflow">Practice Exercise: Modifier Workflow</a></h3>
 <p>Create a file with three overlapping shapes and practice:</p>
 <ol>
@@ -423,63 +405,54 @@ lip();
 <li>Use <code>*</code> to disable all shapes one at a time</li>
 </ol>
 <pre><code class="language-openscad">// Practice: Multi-part assembly debugging
-
 module bottom_part() {
   cube([50, 50, 10], center=true);
 }
-
 module middle_part() {
   translate([0, 0, 15])
     cylinder(h=20, r=20, $fn=32);
 }
-
 module top_part() {
   translate([0, 0, 40])
     sphere(r=15, $fn=32);
 }
-
 // Test 1: Show only middle
 // !middle_part();
-
 // Test 2: Highlight bottom
 // #bottom_part();
 // middle_part();
 // top_part();
-
 // Test 3: Ghost top
 // bottom_part();
 // middle_part();
 // %top_part();
-
 // Test 4: Disable one at a time
 // *bottom_part();
 // middle_part();
 // top_part();
 </code></pre>
-<hr>
 <h3 id="debugging-resolution-and-common-issues"><a class="header" href="#debugging-resolution-and-common-issues">Debugging, Resolution, and Common Issues</a></h3>
 <p>As your OpenSCAD models become more complex, you’ll encounter rendering errors, non-manifold geometry, or slow previews. Learning to debug efficiently is essential for productive design work.</p>
-<h4 id="understanding-openscad-console-errors"><a class="header" href="#understanding-openscad-console-errors"><strong>Understanding OpenSCAD Console Errors</strong></a></h4>
-<p>When you press <strong>F5</strong> to preview or <strong>F6</strong> to render your model, OpenSCAD displays warnings and errors in the console at the bottom of the editor. Here’s what to look for:</p>
+<h4 id="understanding-openscad-console-errors"><a class="header" href="#understanding-openscad-console-errors">Understanding OpenSCAD Console Errors</a></h4>
+<p>When you press F5 to preview or F6 to render your model, OpenSCAD displays warnings and errors in the console at the bottom of the editor. Here’s what to look for:</p>
 <ul>
-<li><strong>Error Line Numbers:</strong> The console message tells you the exact line where the problem was detected. Look for missing semicolons, unmatched braces, or undefined variables</li>
-<li><strong>Syntax Errors:</strong> These prevent the model from rendering at all (common causes: missing <code>;</code>, unclosed <code>{</code> or <code>[</code>, typos in function names)</li>
-<li><strong>Warnings (Non-Manifold Geometry):</strong> Your geometry is <em>technically</em> valid but has internal inconsistencies that may prevent printing</li>
+<li>Error Line Numbers: The console message tells you the exact line where the problem was detected. Look for missing semicolons, unmatched braces, or undefined variables</li>
+<li>Syntax Errors: These prevent the model from rendering at all (common causes: missing <code>;</code>, unclosed <code>{</code> or <code>[</code>, typos in function names)</li>
+<li>Warnings (Non-Manifold Geometry): Your geometry is <em>technically</em> valid but has internal inconsistencies that may prevent printing</li>
 </ul>
-<p><strong>Example Console Output:</strong></p>
+<p>Example Console Output:</p>
 <pre><code>ERROR: Unexpected token 'sphere' at line 15, column 5
   Expected one of: } ) ]
 </code></pre>
 <p>This tells you that line 15 has a syntax issue-likely a missing closing bracket on the previous line.</p>
-<h4 id="the-0001-offset-strategy-revisited"><a class="header" href="#the-0001-offset-strategy-revisited"><strong>The 0.001 Offset Strategy (Revisited)</strong></a></h4>
-<p>One of the most common issues with CSG operations is <strong>coincident faces</strong>-when two shapes touch exactly at their boundaries. This creates a non-manifold geometry that slicer tools flag as unprintable.</p>
-<p><strong>The Fix:</strong> Add a tiny offset (0.001 mm or smaller) to move one surface slightly:</p>
+<h4 id="the-0001-offset-strategy-revisited"><a class="header" href="#the-0001-offset-strategy-revisited">The 0.001 Offset Strategy (Revisited)</a></h4>
+<p>One of the most common issues with CSG operations is coincident faces-when two shapes touch exactly at their boundaries. This creates a non-manifold geometry that slicer tools flag as unprintable.</p>
+<p>The Fix: Add a tiny offset (0.001 mm or smaller) to move one surface slightly:</p>
 <pre><code class="language-openscad">// BEFORE (problematic):
 difference(){
   cube([20, 20, 20], center=true);
   sphere(r=10, $fn=32);
 }
-
 // AFTER (fixed):
 difference(){
   cube([20, 20, 20], center=true);
@@ -487,33 +460,33 @@ difference(){
 }
 </code></pre>
 <p>This 0.001 mm offset is invisible to the human eye but fixes the non-manifold warning and makes the model printable.</p>
-<h4 id="using-fn-to-balance-speed-and-quality"><a class="header" href="#using-fn-to-balance-speed-and-quality"><strong>Using <code>$fn</code> to Balance Speed and Quality</strong></a></h4>
+<h4 id="using-fn-to-balance-speed-and-quality"><a class="header" href="#using-fn-to-balance-speed-and-quality">Using <code>$fn</code> to Balance Speed and Quality</a></h4>
 <p>The <code>$fn</code> parameter controls the resolution of curved surfaces (spheres, cylinders, etc.). It represents the number of polygonal faces used to approximate the curve:</p>
 <ul>
-<li><strong><code>$fn = 12</code></strong> - Very fast preview, coarse geometry (useful for quick testing)</li>
-<li><strong><code>$fn = 32</code></strong> - Good balance for most designs (default for many situations)</li>
-<li><strong><code>$fn = 100+</code></strong> - High quality but slow to render; use only for final export</li>
+<li><code>$fn = 12</code> - Very fast preview, coarse geometry (useful for quick testing)</li>
+<li><code>$fn = 32</code> - Good balance for most designs (default for many situations)</li>
+<li><code>$fn = 100+</code> - High quality but slow to render; use only for final export</li>
 </ul>
-<p><strong>Debugging Workflow:</strong></p>
+<p>Debugging Workflow:</p>
 <ol>
 <li>During design iteration: Use <code>$fn = 12</code> or <code>$fn = 20</code> for quick feedback</li>
 <li>Before export: Increase to <code>$fn = 32</code> or higher for final quality</li>
 <li>For complex assemblies: Keep <code>$fn</code> low during iteration to save preview time</li>
 </ol>
-<h4 id="incremental-rendering-the-f5f6-workflow"><a class="header" href="#incremental-rendering-the-f5f6-workflow"><strong>Incremental Rendering: The F5/F6 Workflow</strong></a></h4>
+<h4 id="incremental-rendering-the-f5f6-workflow"><a class="header" href="#incremental-rendering-the-f5f6-workflow">Incremental Rendering: The F5/F6 Workflow</a></h4>
 <ul>
-<li><strong>F5 (Preview):</strong> Quick render to check overall geometry and catch layout errors</li>
-<li><strong>F6 (Full Render):</strong> Slower but more accurate; use before export</li>
-<li><strong>Strategy:</strong> Press F5 frequently while editing to get immediate feedback, then F6 once before exporting</li>
+<li>F5 (Preview): Quick render to check overall geometry and catch layout errors</li>
+<li>F6 (Full Render): Slower but more accurate; use before export</li>
+<li>Strategy: Press F5 frequently while editing to get immediate feedback, then F6 once before exporting</li>
 </ul>
 <p>This workflow catches errors early and saves you from spending 10 minutes rendering only to discover a syntax error.</p>
-<h4 id="diagnosing-non-manifold-geometry"><a class="header" href="#diagnosing-non-manifold-geometry"><strong>Diagnosing Non-Manifold Geometry</strong></a></h4>
+<h4 id="diagnosing-non-manifold-geometry"><a class="header" href="#diagnosing-non-manifold-geometry">Diagnosing Non-Manifold Geometry</a></h4>
 <p>A model might render in OpenSCAD but still be unprintable. The slicer will report errors like “non-manifold edges” or “holes in surface.” Common causes:</p>
 <ol>
-<li><strong>Coincident Faces</strong> -&gt; Use small offsets (0.001 mm)</li>
-<li><strong>Zero-Thickness Walls</strong> -&gt; Ensure all walls are at least 0.8-1.0 mm</li>
-<li><strong>Gaps Between Shapes</strong> -&gt; Check that boolean operations have no small gaps; use <code>minkowski()</code> for rounded edges if needed</li>
-<li><strong>Inside-Out Geometry</strong> -&gt; A shape might be flipped; use <code>scale([1, 1, -1])</code> to flip normals if needed</li>
+<li>Coincident Faces -&gt; Use small offsets (0.001 mm)</li>
+<li>Zero-Thickness Walls -&gt; Ensure all walls are at least 0.8-1.0 mm</li>
+<li>Gaps Between Shapes -&gt; Check that boolean operations have no small gaps; use <code>minkowski()</code> for rounded edges if needed</li>
+<li>Inside-Out Geometry -&gt; A shape might be flipped; use <code>scale([1, 1, -1])</code> to flip normals if needed</li>
 </ol>
 <p>When your slicer reports non-manifold issues, use the slicer’s visualization to locate the problem, then reference the line numbers in your OpenSCAD code and test fixes incrementally using F5/F6.</p>
 <p>Checkpoints</p>
@@ -534,39 +507,35 @@ difference(){
 <li>How would you diagnose and fix a non-manifold issue in your model?</li>
 <li>When validating geometry in a slicer, what specific issues should you look for?</li>
 </ol>
-<hr>
 <h2 id="lesson-2-assets--projects"><a class="header" href="#lesson-2-assets--projects">Lesson 2 Assets &amp; Projects</a></h2>
 <p>Your Lesson 2 assets are located in the centralized assets folder:</p>
 <ul>
-<li><strong>Lesson 2 Asset Overview</strong> (<a href="../../assets/3dMake_Foundation/Lessons_3dMake_2/README.html">assets/Lessons_3dMake_2/README.md</a>) - Folder contents and learning resources</li>
-<li><strong>Your Second Print Project</strong> (<a href="../../assets/3dMake_Foundation/Lessons_3dMake_2/Your_Second_Print/">assets/Lessons_3dMake_2/Your_Second_Print/</a>) - Adapt models to real-world needs</li>
-<li><strong>Bonus Print Project</strong> (<a href="../../assets/3dMake_Foundation/Lessons_3dMake_2/Bonus_Print/">assets/Lessons_3dMake_2/Bonus_Print/</a>) - Practice resizing and parametric variation</li>
+<li>Lesson 2 Asset Overview (<a href="../../assets/3dMake_Foundation/Lessons_3dMake_2/README.html">assets/Lessons_3dMake_2/README.md</a>) - Folder contents and learning resources</li>
+<li>Your Second Print Project (<a href="../../assets/3dMake_Foundation/Lessons_3dMake_2/Your_Second_Print/">assets/Lessons_3dMake_2/Your_Second_Print/</a>) - Adapt models to real-world needs</li>
+<li>Bonus Print Project (<a href="../../assets/3dMake_Foundation/Lessons_3dMake_2/Bonus_Print/">assets/Lessons_3dMake_2/Bonus_Print/</a>) - Practice resizing and parametric variation</li>
 </ul>
 <p>These projects reinforce the boolean operations and CSG concepts you learned in this lesson.</p>
-<hr>
 <h2 id="advanced-example-rotational-and-linear-extrusion"><a class="header" href="#advanced-example-rotational-and-linear-extrusion">Advanced Example: Rotational and Linear Extrusion</a></h2>
 <p>Beyond basic primitives and boolean operations, OpenSCAD provides powerful 2D-to-3D operations. Here are practical examples from real-world designs:</p>
 <h3 id="example-1-rotating-2d-shapes-with-rotate_extrude"><a class="header" href="#example-1-rotating-2d-shapes-with-rotate_extrude">Example 1: Rotating 2D Shapes with <code>rotate_extrude()</code></a></h3>
 <p>The <code>rotate_extrude()</code> function spins a 2D profile around the Z-axis, creating axially symmetric objects like vases, bowls, or cones:</p>
 <pre><code class="language-openscad">// Simple Vase - Rotating a 2D profile
 $fn = 100;
-
 rotate_extrude(angle = 360, convexity = 4)
 {
   translate([20, 0, 0])
   square([8, 50], center=false);
 }
 </code></pre>
-<p><strong>What it does:</strong></p>
+<p>What it does:</p>
 <ul>
 <li>Draws a 2D square 20 units from the center</li>
 <li>Rotates it 360deg around the Z-axis</li>
 <li>Creates a hollow cylindrical vase</li>
 </ul>
-<p><strong>Try this variation:</strong></p>
+<p>Try this variation:</p>
 <pre><code class="language-openscad">// Vase with a curved profile
 $fn = 100;
-
 rotate_extrude(angle = 360, convexity = 4)
 {
   // Profile shape: wider at top, narrower at bottom
@@ -587,19 +556,18 @@ linear_extrude(height = 5, convexity = 10)
        halign = "center", valign = "center");
 }
 </code></pre>
-<p><strong>What it does:</strong></p>
+<p>What it does:</p>
 <ul>
 <li>Creates 2D text outline</li>
 <li>Pulls it 5 mm upward</li>
 <li>Creates a 3D embossed nameplate</li>
 </ul>
-<p><strong>Complete nameplate with backing:</strong></p>
+<p>Complete nameplate with backing:</p>
 <pre><code class="language-openscad">// Name plate with base and embossed text
 union()
 {
   // Base plate
   cube([120, 40, 3], center = true);
-  
   // Embossed text
   translate([0, 0, 2])
   linear_extrude(height = 2)
@@ -613,7 +581,6 @@ union()
 <p>This real-world example creates a wall mount hook by rotating a 2D profile:</p>
 <pre><code class="language-openscad">// Wall Mount Hook
 $fn = 100;
-
 difference()
 {
   // Outer hook profile - rotated 360deg
@@ -622,13 +589,12 @@ difference()
     translate([25, 0, 0])
     square([8, 60], center = false);
   }
-  
   // Hollow center
   translate([0, 0, -5])
   cylinder(h = 70, d = 40);
 }
 </code></pre>
-<p><strong>Key observations:</strong></p>
+<p>Key observations:</p>
 <ul>
 <li>The 2D square is positioned 25 units from the Z-axis</li>
 <li>Rotating it creates a thick-walled hollow cylinder</li>
@@ -648,7 +614,7 @@ difference()
 </tbody>
 </table>
 </div>
-<p><strong>Checkpoint</strong>: After this section, you can:</p>
+<p>Checkpoint: After this section, you can:</p>
 <ul>
 <li>Use <code>linear_extrude()</code> to create embossed text and flat designs</li>
 <li>Use <code>rotate_extrude()</code> to create axially symmetric 3D shapes</li>
@@ -670,24 +636,24 @@ difference()
 <h2 id="supplemental-resources"><a class="header" href="#supplemental-resources">Supplemental Resources</a></h2>
 <p>For additional examples and practice with 3D primitives and boolean operations, explore these resources:</p>
 <ul>
-<li><strong><a href="../../assets/Programming_with_OpenSCAD.epub">Programming with OpenSCAD EPUB Textbook</a></strong> - Comprehensive guide to primitives, boolean operations, and CSG fundamentals</li>
-<li><strong><a href="https://github.com/ProgrammingWithOpenSCAD/CodeSolutions/tree/main/1_3D-Shapes">CodeSolutions: 3D Primitives</a></strong> - Working examples of cube, sphere, cylinder, and other 3D shapes</li>
-<li><strong><a href="https://github.com/ProgrammingWithOpenSCAD/CodeSolutions/tree/main/AppendixB_OpenSCAD-Visual-Reference">CodeSolutions: Combining Shapes</a></strong> - Examples of union, difference, intersection, and hull operations</li>
-<li><strong><a href="https://programmingwithopenscad.github.io/learning.html">Practice Worksheets: 3D Shapes</a></strong> - Visualization and decomposition exercises</li>
+<li><a href="../../assets/Programming_with_OpenSCAD.epub">Programming with OpenSCAD EPUB Textbook</a> - Comprehensive guide to primitives, boolean operations, and CSG fundamentals</li>
+<li><a href="https://github.com/ProgrammingWithOpenSCAD/CodeSolutions/tree/main/1_3D-Shapes">CodeSolutions: 3D Primitives</a> - Working examples of cube, sphere, cylinder, and other 3D shapes</li>
+<li><a href="https://github.com/ProgrammingWithOpenSCAD/CodeSolutions/tree/main/AppendixB_OpenSCAD-Visual-Reference">CodeSolutions: Combining Shapes</a> - Examples of union, difference, intersection, and hull operations</li>
+<li><a href="https://programmingwithopenscad.github.io/learning.html">Practice Worksheets: 3D Shapes</a> - Visualization and decomposition exercises</li>
 </ul>
 <hr>
 <ol class="footnote-definition">
 <li id="footnote-2">
-<p>OpenSCAD Manual - Primitives and Transforms - https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_the_2D_Subsystem <a href="#fr-2-1">↩</a> <a href="#fr-2-2">↩2</a> <a href="#fr-2-3">↩3</a> <a href="#fr-2-4">↩4</a></p>
+<p>OpenSCAD Manual - Primitives and Transforms - <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_the_2D_Subsystem">https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_the_2D_Subsystem</a> <a href="#fr-2-1">↩</a> <a href="#fr-2-2">↩2</a> <a href="#fr-2-3">↩3</a> <a href="#fr-2-4">↩4</a></p>
 </li>
 <li id="footnote-3">
 <p>Gonzalez Avila, J. F., Pietrzak, T., &amp; Casiez, G. (2024). <em>Understanding the challenges of OpenSCAD users for 3D printing</em>. Proceedings of the ACM Symposium on User Interface Software and Technology. <a href="#fr-3-1">↩</a> <a href="#fr-3-2">↩2</a> <a href="#fr-3-3">↩3</a> <a href="#fr-3-4">↩4</a> <a href="#fr-3-5">↩5</a></p>
 </li>
 <li id="footnote-1">
-<p>Slicer Validation - PrusaSlicer Documentation - https://docs.prusa3d.com/en/guide/39012-validation-tools/ <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a> <a href="#fr-1-3">↩3</a> <a href="#fr-1-4">↩4</a></p>
+<p>Slicer Validation - PrusaSlicer Documentation - <a href="https://docs.prusa3d.com/en/guide/39012-validation-tools/">https://docs.prusa3d.com/en/guide/39012-validation-tools/</a> <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a> <a href="#fr-1-3">↩3</a> <a href="#fr-1-4">↩4</a></p>
 </li>
 <li id="footnote-4">
-<p>Google. (2025). <em>Vertex AI Gemini 3 Pro Preview: Getting started with generative AI</em>. https://docs.cloud.google.com/vertex-ai/generative-ai/docs/start/get-started-with-gemini-3 <a href="#fr-4-1">↩</a> <a href="#fr-4-2">↩2</a> <a href="#fr-4-3">↩3</a> <a href="#fr-4-4">↩4</a> <a href="#fr-4-5">↩5</a></p>
+<p>Google. (2025). <em>Vertex AI Gemini 3 Pro Preview: Getting started with generative AI</em>. <a href="https://docs.cloud.google.com/vertex-ai/generative-ai/docs/start/get-started-with-gemini-3">https://docs.cloud.google.com/vertex-ai/generative-ai/docs/start/get-started-with-gemini-3</a> <a href="#fr-4-1">↩</a> <a href="#fr-4-2">↩2</a> <a href="#fr-4-3">↩3</a> <a href="#fr-4-4">↩4</a> <a href="#fr-4-5">↩5</a></p>
 </li>
 </ol>
 

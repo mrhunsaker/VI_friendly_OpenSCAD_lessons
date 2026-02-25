@@ -1,4 +1,11 @@
-[Header 2 ("assets_3dmake_foundation-readme", [], []) [Str "3dMake Foundation Code Examples & Assets"], Para [Str "This directory contains all OpenSCAD code examples and supporting materials for the 3dMake Foundation curriculum (Lessons 1-11)."], Header 3 ("folder-structure", ["unnumbered", "unlisted"], []) [Str "Folder Structure"], CodeBlock ("", ["plaintext"], []) "assets/3dMake_Foundation/
+# 3dMake Foundation Code Examples & Assets {#assets_3dmake_foundation-readme}
+
+This directory contains all OpenSCAD code examples and supporting materials for the 3dMake Foundation curriculum (Lessons 1-11).
+
+## Folder Structure
+
+```plaintext
+assets/3dMake_Foundation/
 +------ README.md (this file)
 +------ Lessons_3dMake_6/
 |   +------ README.md
@@ -9,47 +16,215 @@
 +------ Lessons_3dMake_8/
     +------ README.md
     +------ stackable_bins.scad
-", Header 3 ("code-examples-by-lesson", ["unnumbered", "unlisted"], []) [Str "Code Examples by Lesson"], Header 4 ("lesson-6-practical-3dm-commands-and-text-embossing", ["unnumbered", "unlisted"], []) [Str "Lesson 6: Practical 3dm Commands and Text Embossing"], Para [Strong [Str "Folder"], Str ": ", Code ("", [], []) "Lessons_3dMake_6/", LineBreak, Strong [Str "File"], Str ": ", Code ("", [], []) "cube_keycap.scad", LineBreak, Strong [Str "Level"], Str ": Beginner", LineBreak, Strong [Str "Skills"], Str ": Text embossing, boolean operations, parametric design"], Para [Str "A simple keycap with embossed text. Great for learning:"], BulletList [[Plain [Str "How to use ", Code ("", [], []) "linearextrude()", Str " and ", Code ("", [], []) "text()"]], [Plain [Str "Creating hollow structures with ", Code ("", [], []) "difference()"]], [Plain [Str "Running 3dm commands (", Code ("", [], []) "describe", Str ", ", Code ("", [], []) "preview", Str ", ", Code ("", [], []) "orient", Str ", ", Code ("", [], []) "slice", Str ")"]]], Para [Str "See ", Code ("", [], []) "Lessons_3dMake_6/README.md", Str " for detailed learning guide."], HorizontalRule, Header 4 ("lesson-7-parametric-transforms-and-the-phone-stand-project", ["unnumbered", "unlisted"], []) [Str "Lesson 7: Parametric Transforms and the Phone Stand Project"], Para [Strong [Str "Folder"], Str ": ", Code ("", [], []) "Lessons_3dMake_7/", LineBreak, Strong [Str "File"], Str ": ", Code ("", [], []) "phone_stand.scad", LineBreak, Strong [Str "Level"], Str ": Intermediate", LineBreak, Strong [Str "Skills"], Str ": Transforms, Minkowski operations, multi-part assemblies"], Para [Str "A functional phone stand combining:"], BulletList [[Plain [Code ("", [], []) "rotate()", Str ", ", Code ("", [], []) "translate()", Str ", and ", Code ("", [], []) "scale()", Str " transforms"]], [Plain [Str "Minkowski operations for rounded edges"]], [Plain [Str "Multi-part assembly with ", Code ("", [], []) "union()"]], [Plain [Str "Parametric customization for different phone sizes"]]], Para [Str "See ", Code ("", [], []) "Lessons_3dMake_7/README.md", Str " for detailed learning guide."], HorizontalRule, Header 4 ("lesson-8-advanced-parametric-design-and-interlocking-features", ["unnumbered", "unlisted"], []) [Str "Lesson 8: Advanced Parametric Design and Interlocking Features"], Para [Strong [Str "Folder"], Str ": ", Code ("", [], []) "Lessons_3dMake_8/", LineBreak, Strong [Str "File"], Str ": ", Code ("", [], []) "stackable_bins.scad", LineBreak, Strong [Str "Level"], Str ": Advanced", LineBreak, Strong [Str "Skills"], Str ": Tolerance design, interlocking features, multi-part validation"], Para [Str "Stackable storage bins demonstrating:"], BulletList [[Plain [Str "Precise clearance design (tolerance stack-up)"]], [Plain [Str "Interlocking rims for assembly without fasteners"]], [Plain [Str "Chamfered edges for print quality"]], [Plain [Str "Parametric variation for different sizes"]]], Para [Str "See ", Code ("", [], []) "Lessons_3dMake_8/README.md", Str " for detailed learning guide."], HorizontalRule, Header 3 ("how-to-use-these-files", ["unnumbered", "unlisted"], []) [Str "How to Use These Files"], Header 4 ("option-1-direct-import-into-openscad", ["unnumbered", "unlisted"], []) [Str "Option 1: Direct Import into OpenSCAD"], OrderedList (1, DefaultStyle, DefaultDelim) [[Plain [Str "Download or locate the ", Code ("", [], []) ".scad", Str " file"]], [Plain [Str "Open in OpenSCAD"]], [Plain [Str "Review comments for parameter explanations"]], [Plain [Str "Modify top-level parameters to experiment"]], [Plain [Str "Press F5 for preview; F6 for full render"]], [Plain [Str "Export as STL when ready"]]], Header 4 ("option-2-use-with-3dmake-project", ["unnumbered", "unlisted"], []) [Str "Option 2: Use with 3dMake Project"], OrderedList (1, DefaultStyle, DefaultDelim) [[Plain [Str "Copy the ", Code ("", [], []) ".scad", Str " file into your 3dMake project's ", Code ("", [], []) "src/", Str " folder"]], [Plain [Str "Use ", Code ("", [], []) "3dm edit-model filename.scad", Str " to open in editor"]], [Plain [Str "Run ", Code ("", [], []) "3dm build", Str " to generate STL"]], [Plain [Str "Use ", Code ("", [], []) "3dm describe", Str " and ", Code ("", [], []) "3dm preview", Str " for accessibility features"]], [Plain [Str "Run ", Code ("", [], []) "3dm slice", Str " to generate G-code for printing"]]], Header 4 ("option-3-reference-while-learning", ["unnumbered", "unlisted"], []) [Str "Option 3: Reference While Learning"], BulletList [[Plain [Str "Keep the ", Code ("", [], []) ".scad", Str " file open alongside the corresponding lesson markdown"]], [Plain [Str "Compare code with lesson explanations"]], [Plain [Str "Trace through module definitions and understand how they work"]], [Plain [Str "Modify parameters in real-time to see effects"]]], Header 3 ("design-pattern-reference", ["unnumbered", "unlisted"], []) [Str "Design Pattern Reference"], Header 4 ("pattern-1-parametric-customization-lesson-6", ["unnumbered", "unlisted"], []) [Str "Pattern 1: Parametric Customization (Lesson 6)"], CodeBlock ("", ["openscad"], []) "// Top-level parameters (easy to customize)
-parametername = value;  // unit description
+```
 
+## Code Examples by Lesson
+
+### Lesson 6: Practical 3dm Commands and Text Embossing
+
+Folder: `Lessons_3dMake_6/`  
+File: `cube_keycap.scad`  
+Level: Beginner  
+Skills: Text embossing, boolean operations, parametric design
+
+A simple keycap with embossed text. Great for learning:
+
+- How to use `linearextrude()` and `text()`
+- Creating hollow structures with `difference()`
+- Running 3dm commands (`describe`, `preview`, `orient`, `slice`)
+
+See `Lessons_3dMake_6/README.md` for detailed learning guide.
+
+### Lesson 7: Parametric Transforms and the Phone Stand Project
+
+Folder: `Lessons_3dMake_7/`  
+File: `phone_stand.scad`  
+Level: Intermediate  
+Skills: Transforms, Minkowski operations, multi-part assemblies
+
+A functional phone stand combining:
+
+- `rotate()`, `translate()`, and `scale()` transforms
+- Minkowski operations for rounded edges
+- Multi-part assembly with `union()`
+- Parametric customization for different phone sizes
+
+See `Lessons_3dMake_7/README.md` for detailed learning guide.
+
+### Lesson 8: Advanced Parametric Design and Interlocking Features
+
+Folder: `Lessons_3dMake_8/`  
+File: `stackable_bins.scad`  
+Level: Advanced  
+Skills: Tolerance design, interlocking features, multi-part validation
+
+Stackable storage bins demonstrating:
+
+- Precise clearance design (tolerance stack-up)
+- Interlocking rims for assembly without fasteners
+- Chamfered edges for print quality
+- Parametric variation for different sizes
+
+See `Lessons_3dMake_8/README.md` for detailed learning guide.
+
+## How to Use These Files
+
+### Option 1: Direct Import into OpenSCAD
+
+1. Download or locate the `.scad` file
+2. Open in OpenSCAD
+3. Review comments for parameter explanations
+4. Modify top-level parameters to experiment
+5. Press F5 for preview; F6 for full render
+6. Export as STL when ready
+
+### Option 2: Use with 3dMake Project
+
+1. Copy the `.scad` file into your 3dMake project's `src/` folder
+2. Use `3dm edit-model filename.scad` to open in editor
+3. Run `3dm build` to generate STL
+4. Use `3dm describe` and `3dm preview` for accessibility features
+5. Run `3dm slice` to generate G-code for printing
+
+### Option 3: Reference While Learning
+
+- Keep the `.scad` file open alongside the corresponding lesson markdown
+- Compare code with lesson explanations
+- Trace through module definitions and understand how they work
+- Modify parameters in real-time to see effects
+
+## Design Pattern Reference
+
+### Pattern 1: Parametric Customization (Lesson 6)
+
+```openscad
+// Top-level parameters (easy to customize)
+parametername = value;  // unit description
 // Modules for organization
 module feature() {
   // Implementation
 }
-
 // Final assembly
 union() {
   feature();
 }
-", Header 4 ("pattern-2-multi-part-assembly-with-transforms-lesson-7", ["unnumbered", "unlisted"], []) [Str "Pattern 2: Multi-Part Assembly with Transforms (Lesson 7)"], CodeBlock ("", ["openscad"], []) "// Base parameters
-size = 100;
+```
 
+### Pattern 2: Multi-Part Assembly with Transforms (Lesson 7)
+
+```openscad
+// Base parameters
+size = 100;
 // Component modules
 module part1() { ... }
 module part2() { ... }
-
 // Positioning with transforms
 translate([x, y, z])
 rotate([rx, ry, rz])
   part1();
-
 // Assembly
 union() {
   part1();
   part2();
 }
-", Header 4 ("pattern-3-tolerance-aware-design-lesson-8", ["unnumbered", "unlisted"], []) [Str "Pattern 3: Tolerance-Aware Design (Lesson 8)"], CodeBlock ("", ["openscad"], []) "// Critical parameters for tolerance
+```
+
+### Pattern 3: Tolerance-Aware Design (Lesson 8)
+
+```openscad
+// Critical parameters for tolerance
 outerdim = 100;
 wallthickness = 2;
 clearance = 0.6;  // Small gap for fit
-
 innerdim = outerdim - 2*wallthickness - 2*clearance;
-
 module outershell() { cube([outerdim, outerdim, height]); }
 module innercavity() { cube([innerdim, innerdim, height]); }
-
 difference() {
   outershell();
   innercavity();
 }
-", Header 3 ("learning-progression", ["unnumbered", "unlisted"], []) [Str "Learning Progression"], OrderedList (1, DefaultStyle, DefaultDelim) [[Para [Strong [Str "Start with Lesson 6"], Str " (cube_keycap.scad)"], BulletList [[Plain [Str "Learn text embossing"]], [Plain [Str "Understand module organization"]], [Plain [Str "Apply basic 3dm commands"]]]], [Para [Strong [Str "Move to Lesson 7"], Str " (phone_stand.scad)"], BulletList [[Plain [Str "Practice with transforms"]], [Plain [Str "Combine multiple parts"]], [Plain [Str "Use Minkowski for rounded edges"]]]], [Para [Strong [Str "Progress to Lesson 8"], Str " (stackable_bins.scad)"], BulletList [[Plain [Str "Design with tolerances"]], [Plain [Str "Test and iterate"]], [Plain [Str "Validate with measurements"]], [Plain [Str "Print multiple variants"]]]]], Header 3 ("customization-exercises", ["unnumbered", "unlisted"], []) [Str "Customization Exercises"], Header 4 ("exercise-set-a-modify-individual-parameters", ["unnumbered", "unlisted"], []) [Str "Exercise Set A: Modify Individual Parameters"], Para [Str "For each code example, try changing:"], BulletList [[Plain [Str "Dimensions (size, height, width)"]], [Plain [Str "Visual properties (letter, number of parts)"]], [Plain [Str "Assembly properties (angle, spacing)"]]], Header 4 ("exercise-set-b-create-variants", ["unnumbered", "unlisted"], []) [Str "Exercise Set B: Create Variants"], Para [Str "Extend each design:"], BulletList [[Plain [Str "Add new features alongside the main design"]], [Plain [Str "Create smaller/larger versions"]], [Plain [Str "Change decorative elements"]]], Header 4 ("exercise-set-c-combine-patterns", ["unnumbered", "unlisted"], []) [Str "Exercise Set C: Combine Patterns"], Para [Str "After learning each pattern:"], BulletList [[Plain [Str "Mix text embossing with transforms"]], [Plain [Str "Add tolerance design to assembled parts"]], [Plain [Str "Create a complex multi-part design"]]], Header 3 ("reference-links", ["unnumbered", "unlisted"], []) [Str "Reference Links"], BulletList [[Plain [Strong [Str "Lesson 6"], Str ": ", Link ("", [], []) [Str "Practical 3dm Commands and Text Embossing"] ("docs%5Cpandoc%5Cepub%5Csrc%5C3dMake_Foundation%5CLessons_3dMake_6%5CLessons_3dMake_6.md#3dmake_foundation_lessons_3dmake_6-lessons_3dmake_6", "")]], [Plain [Strong [Str "Lesson 7"], Str ": ", Link ("", [], []) [Str "Parametric Transforms and the Phone Stand"] ("docs%5Cpandoc%5Cepub%5Csrc%5C3dMake_Foundation%5CLessons_3dMake_7%5CLessons_3dMake_7.md#3dmake_foundation_lessons_3dmake_7-lessons_3dmake_7", "")]], [Plain [Strong [Str "Lesson 8"], Str ": ", Link ("", [], []) [Str "Advanced Parametric Design"] ("docs%5Cpandoc%5Cepub%5Csrc%5C3dMake_Foundation%5CLessons_3dMake_8%5CLessons_3dMake_8.md#3dmake_foundation_lessons_3dmake_8-lessons_3dmake_8", "")]], [Plain [Strong [Str "OpenSCAD Cheat Sheet"], Str ": ", Link ("", [], []) [Str "Syntax Quick Reference"] ("docs%5Cpandoc%5Cepub%5Csrc%5C3dMake_Foundation%5CLessons_3dMake_2%5Copenscad-cheat-sheet.md#3dmake_foundation_lessons_3dmake_2-openscad-cheat-sheet", "")]], [Plain [Strong [Str "3dMake Setup Guide"], Str ": ", Link ("", [], []) [Str "Commands & Workflow"] ("docs%5Cpandoc%5Cepub%5Csrc%5C3dMake_Foundation%5CLessons_3dMake_1%5C3dmake-setup-guide.md#3dmake_foundation_lessons_3dmake_1-3dmake-setup-guide", "")]]], Header 3 ("troubleshooting", ["unnumbered", "unlisted"], []) [Str "Troubleshooting"], Para [Strong [Str "File not found when opening in OpenSCAD"]], BulletList [[Plain [Str "Ensure file paths are correct"]], [Plain [Str "Use absolute paths or place files in current working directory"]], [Plain [Str "Check that ", Code ("", [], []) ".scad", Str " extension is present"]]], Para [Strong [Str "Model doesn't preview or renders incorrectly"]], BulletList [[Plain [Str "Check for syntax errors (mismatched brackets, missing semicolons)"]], [Plain [Str "Verify all module definitions are complete"]], [Plain [Str "Use OpenSCAD's \"Show Errors\" to debug"]]], Para [Strong [Str "Parameters don't change the design"]], BulletList [[Plain [Str "Ensure you modified top-level parameters (not inside comments)"]], [Plain [Str "Save the file and re-preview (F5)"]], [Plain [Str "Check that parameter names are spelled correctly throughout code"]]], Header 3 ("tips-for-success", ["unnumbered", "unlisted"], []) [Str "Tips for Success"], OrderedList (1, DefaultStyle, DefaultDelim) [[Plain [Strong [Str "Start Simple"], Str ": Begin with Lesson 6 example before moving to advanced projects"]], [Plain [Strong [Str "Read Comments"], Str ": Every ", Code ("", [], []) ".scad", Str " file includes explanatory comments"]], [Plain [Strong [Str "Experiment"], Str ": Try different parameter values to understand effects"]], [Plain [Strong [Str "Print Small"], Str ": Test-print with small parameters first to save material"]], [Plain [Strong [Str "Measure & Iterate"], Str ": Use calipers to validate and adjust designs (Lesson 8)"]], [Plain [Strong [Str "Document Changes"], Str ": Keep notes on what parameters worked for your use case"]]], HorizontalRule, Para [Strong [Str "Last Updated"], Str ": February 20, 2026", LineBreak, Strong [Str "Status"], Str ": Complete - All code examples integrated and documented"]]
+```
+
+## Learning Progression
+
+1. Start with Lesson 6 (cube_keycap.scad)
+   - Learn text embossing
+   - Understand module organization
+   - Apply basic 3dm commands
+
+2. Move to Lesson 7 (phone_stand.scad)
+   - Practice with transforms
+   - Combine multiple parts
+   - Use Minkowski for rounded edges
+
+3. Progress to Lesson 8 (stackable_bins.scad)
+   - Design with tolerances
+   - Test and iterate
+   - Validate with measurements
+   - Print multiple variants
+
+## Customization Exercises
+
+### Exercise Set A: Modify Individual Parameters
+
+For each code example, try changing:
+
+- Dimensions (size, height, width)
+- Visual properties (letter, number of parts)
+- Assembly properties (angle, spacing)
+
+### Exercise Set B: Create Variants
+
+Extend each design:
+
+- Add new features alongside the main design
+- Create smaller/larger versions
+- Change decorative elements
+
+### Exercise Set C: Combine Patterns
+
+After learning each pattern:
+
+- Mix text embossing with transforms
+- Add tolerance design to assembled parts
+- Create a complex multi-part design
+
+## Reference Links
+
+- Lesson 6: [Practical 3dm Commands and Text Embossing](../../3dMake_Foundation/Lessons_3dMake_6/Lessons_3dMake_6.md)
+- Lesson 7: [Parametric Transforms and the Phone Stand](../../3dMake_Foundation/Lessons_3dMake_7/Lessons_3dMake_7.md)
+- Lesson 8: [Advanced Parametric Design](../../3dMake_Foundation/Lessons_3dMake_8/Lessons_3dMake_8.md)
+- OpenSCAD Cheat Sheet: [Syntax Quick Reference](../../3dMake_Foundation/Lessons_3dMake_2/openscad-cheat-sheet.md)
+- 3dMake Setup Guide: [Commands & Workflow](../../3dMake_Foundation/Lessons_3dMake_1/3dmake-setup-guide.md)
+
+## Troubleshooting
+
+File not found when opening in OpenSCAD
+
+- Ensure file paths are correct
+- Use absolute paths or place files in current working directory
+- Check that `.scad` extension is present
+
+Model doesn't preview or renders incorrectly
+
+- Check for syntax errors (mismatched brackets, missing semicolons)
+- Verify all module definitions are complete
+- Use OpenSCAD's "Show Errors" to debug
+
+Parameters don't change the design
+
+- Ensure you modified top-level parameters (not inside comments)
+- Save the file and re-preview (F5)
+- Check that parameter names are spelled correctly throughout code
+
+## Tips for Success
+
+1. Start Simple: Begin with Lesson 6 example before moving to advanced projects
+2. Read Comments: Every `.scad` file includes explanatory comments
+3. Experiment: Try different parameter values to understand effects
+4. Print Small: Test-print with small parameters first to save material
+5. Measure & Iterate: Use calipers to validate and adjust designs (Lesson 8)
+6. Document Changes: Keep notes on what parameters worked for your use case
+
+Last Updated: February 20, 2026  
+Status: Complete - All code examples integrated and documented

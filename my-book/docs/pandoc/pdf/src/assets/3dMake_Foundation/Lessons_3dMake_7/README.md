@@ -2,7 +2,7 @@
 
 ## Files
 
-- **phone_stand.scad** - Intermediate-level example of transforms and Minkowski operations in a multi-part assembly
+- phone_stand.scad - Intermediate-level example of transforms and Minkowski operations in a multi-part assembly
 
 ## Learning Objectives
 
@@ -26,11 +26,11 @@
 
 ## Key Concepts
 
-- **Transforms**: How `rotate()`, `translate()`, and `scale()` position objects
-- **Minkowski Operations**: Creating rounded edges by combining shapes
-- **Multi-Part Assembly**: Combining multiple modules with `union()`
-- **Coordinate System Visualization**: Understanding how transforms work in 3D space
-- **Parametric Variation**: Quickly create different sizes by changing variables
+- Transforms: How `rotate()`, `translate()`, and `scale()` position objects
+- Minkowski Operations: Creating rounded edges by combining shapes
+- Multi-Part Assembly: Combining multiple modules with `union()`
+- Coordinate System Visualization: Understanding how transforms work in 3D space
+- Parametric Variation: Quickly create different sizes by changing variables
 
 ## Customization Ideas
 
@@ -41,14 +41,14 @@
 
 ## Common Issues & Solutions
 
-**Problem**: Base and back don't align  
-**Solution**: Check `translate()` coordinates; ensure they sum correctly
+Problem: Base and back don't align  
+Solution: Check `translate()` coordinates; ensure they sum correctly
 
-**Problem**: Edges are sharp instead of rounded  
-**Solution**: Verify `filletr` value is positive; increase `$fn` for smoother curves
+Problem: Edges are sharp instead of rounded  
+Solution: Verify `filletr` value is positive; increase `$fn` for smoother curves
 
-**Problem**: Phone doesn't fit in stand  
-**Solution**: Reduce `lipheight` or adjust `width`/`depth` parameters
+Problem: Phone doesn't fit in stand  
+Solution: Reduce `lipheight` or adjust `width`/`depth` parameters
 
 ## Related Files
 

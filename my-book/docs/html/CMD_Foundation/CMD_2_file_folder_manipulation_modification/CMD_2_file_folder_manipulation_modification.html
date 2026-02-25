@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-d11bd641.js";
+            window.path_to_searchindex_js = "../../searchindex-d0af5d9e.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-19a5926f.js"></script>
+        <script src="../../toc-5b0c6224.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -227,149 +227,176 @@
 <li>Create, copy, move, and delete files and folders safely</li>
 <li>Use wildcards to operate on multiple files</li>
 <li>Understand dangerous operations and how to stay safe</li>
-<li>Rename files and understand extensions</li>
+<li>Rename files and understand file extensions</li>
 </ul>
 <hr>
 <h2 id="core-file-manipulation-commands"><a class="header" href="#core-file-manipulation-commands">Core File Manipulation Commands</a></h2>
 <h3 id="create-folders-mkdir"><a class="header" href="#create-folders-mkdir">Create Folders: <code>mkdir</code></a></h3>
-<pre><code class="language-cmd">mkdir FolderName           :: Create a single folder
-mkdir Folder1 Folder2      :: Create multiple folders
+<pre><code class="language-cmd">mkdir FolderName                     :: Create a single folder
+mkdir Folder1 Folder2 Folder3        :: Create multiple folders at once
+mkdir A\B\C                          :: Create nested folders (A, then B inside A, then C inside B)
 </code></pre>
-<h3 id="create-files-echo-and-redirection"><a class="header" href="#create-files-echo-and-redirection">Create Files: <code>echo</code> and Redirection</a></h3>
-<pre><code class="language-cmd">echo This is content &gt; filename.txt    :: Create file with content
-type &gt; filename.txt                    :: Create empty file (then press Ctrl+Z, Enter)
+<h3 id="create-files-echo-with-redirection"><a class="header" href="#create-files-echo-with-redirection">Create Files: <code>echo</code> with Redirection</a></h3>
+<pre><code class="language-cmd">echo This is some content &gt; filename.txt    :: Create a file with text content
+echo. &gt; emptyfile.txt                       :: Create an empty file
 </code></pre>
+<p>Note: <code>echo.</code> (echo followed immediately by a period, no space) creates an empty file. <code>echo</code> with a space would put a space character in the file.</p>
 <h3 id="copy-files-copy"><a class="header" href="#copy-files-copy">Copy Files: <code>copy</code></a></h3>
-<pre><code class="language-cmd">copy source.txt destination.txt        :: Copy file
-copy *.txt backup/                     :: Copy all .txt files to backup folder
+<pre><code class="language-cmd">copy source.txt destination.txt          :: Copy a file to a new name
+copy source.txt backup\                  :: Copy a file into a folder
+copy *.txt backup\                       :: Copy all .txt files to backup folder
 </code></pre>
-<h3 id="moverename-files-move"><a class="header" href="#moverename-files-move">Move/Rename Files: <code>move</code></a></h3>
-<pre><code class="language-cmd">move oldname.txt newname.txt           :: Rename a file
-move file.txt folder/                  :: Move file to folder
+<h3 id="copy-folders-xcopy"><a class="header" href="#copy-folders-xcopy">Copy Folders: <code>xcopy</code></a></h3>
+<pre><code class="language-cmd">xcopy sourcefolder destinationfolder /E /I    :: Copy a folder and all its contents
 </code></pre>
-<h3 id="delete-files-del-careful"><a class="header" href="#delete-files-del-careful">Delete Files: <code>del</code> (CAREFUL!)</a></h3>
-<pre><code class="language-cmd">del filename.txt                       :: Delete one file
-del *.txt                              :: Delete all .txt files
+<ul>
+<li><code>/E</code> copies all subdirectories including empty ones.</li>
+<li><code>/I</code> treats the destination as a folder (not a file) if it doesn’t exist.</li>
+</ul>
+<h3 id="move-and-rename-move"><a class="header" href="#move-and-rename-move">Move and Rename: <code>move</code></a></h3>
+<pre><code class="language-cmd">move oldname.txt newname.txt             :: Rename a file
+move file.txt folder\                    :: Move a file into a folder
+move *.txt archive\                      :: Move all .txt files to archive folder
 </code></pre>
-<h3 id="delete-folders-rmdir-careful"><a class="header" href="#delete-folders-rmdir-careful">Delete Folders: <code>rmdir</code> (CAREFUL!)</a></h3>
-<pre><code class="language-cmd">rmdir folder-name                      :: Delete empty folder
-rmdir /s /q folder-name                :: Delete folder and all contents
+<p><code>move</code> renames when both source and destination are in the same folder. It moves when the destination is a different folder.</p>
+<h3 id="delete-files-del"><a class="header" href="#delete-files-del">Delete Files: <code>del</code></a></h3>
+<pre><code class="language-cmd">del filename.txt                         :: Delete one specific file
+del *.txt                                :: Delete all .txt files in current folder
+del /Q *.tmp                             :: Delete quietly (no confirmation prompt)
 </code></pre>
+<p><strong>Warning:</strong> <code>del</code> does not send files to the Recycle Bin. Deleted files are gone immediately.</p>
+<h3 id="delete-folders-rmdir"><a class="header" href="#delete-folders-rmdir">Delete Folders: <code>rmdir</code></a></h3>
+<pre><code class="language-cmd">rmdir foldername                         :: Delete an empty folder
+rmdir /S /Q foldername                   :: Delete a folder and ALL its contents (no undo)
+</code></pre>
+<p><strong>Warning:</strong> <code>rmdir /S</code> is permanent. Always verify the folder name before running this command.</p>
 <hr>
 <h2 id="safe-file-operations"><a class="header" href="#safe-file-operations">Safe File Operations</a></h2>
-<h3 id="rule-1-always-check-before-deleting"><a class="header" href="#rule-1-always-check-before-deleting">RULE 1: Always Check Before Deleting</a></h3>
-<pre><code class="language-cmd">dir /B                    :: See what's here
-del filename.txt          :: Then delete
+<h3 id="rule-1-always-check-before-deleting"><a class="header" href="#rule-1-always-check-before-deleting">Rule 1: Always Check Before Deleting</a></h3>
+<pre><code class="language-cmd">dir /B                   :: See exactly what is here
+dir /B *.txt             :: See exactly which .txt files exist
+del *.txt                :: Only then delete
 </code></pre>
-<h3 id="rule-2-make-backups-first"><a class="header" href="#rule-2-make-backups-first">RULE 2: Make Backups First</a></h3>
+<h3 id="rule-2-make-backups-first"><a class="header" href="#rule-2-make-backups-first">Rule 2: Make Backups First</a></h3>
 <pre><code class="language-cmd">mkdir backup
-copy *.txt backup\        :: Backup all .txt files
-del *.txt                 :: Now safe to delete
+copy *.txt backup\       :: Copy all .txt files to a backup folder first
+del *.txt                :: Now safe to delete originals
 </code></pre>
-<h3 id="rule-3-test-on-small-operations"><a class="header" href="#rule-3-test-on-small-operations">RULE 3: Test on Small Operations</a></h3>
-<pre><code class="language-cmd">copy test.txt test-backup.txt    :: Copy one file to test
-del test-backup.txt               :: Delete one file to test
+<h3 id="rule-3-test-on-one-file-first"><a class="header" href="#rule-3-test-on-one-file-first">Rule 3: Test on One File First</a></h3>
+<pre><code class="language-cmd">del test-one-file.txt    :: Test deletion on a single file
+dir /B                   :: Confirm it is gone
 </code></pre>
+<p>Only then proceed with bulk operations.</p>
 <hr>
 <h2 id="using-wildcards"><a class="header" href="#using-wildcards">Using Wildcards</a></h2>
-<p>Wildcards let you operate on multiple files at once.</p>
-<h3 id="-wildcard-match-multiple-characters"><a class="header" href="#-wildcard-match-multiple-characters"><code>*</code> Wildcard (Match Multiple Characters)</a></h3>
-<pre><code class="language-cmd">dir /B *.txt               :: List all .txt files
-copy *.scad backup/        :: Copy all .scad files
-del *.tmp                  :: Delete all .tmp files
+<p>Wildcards let you operate on multiple files matching a pattern.</p>
+<h3 id="-wildcard-match-any-number-of-characters"><a class="header" href="#-wildcard-match-any-number-of-characters"><code>*</code> Wildcard (Match Any Number of Characters)</a></h3>
+<pre><code class="language-cmd">dir /B *.txt             :: List all files ending in .txt
+copy *.scad backup\      :: Copy all .scad files to backup
+del *.tmp                :: Delete all .tmp files
 </code></pre>
-<h3 id="-wildcard-match-single-character"><a class="header" href="#-wildcard-match-single-character"><code>?</code> Wildcard (Match Single Character)</a></h3>
-<pre><code class="language-cmd">dir /B file?.txt           :: List file1.txt, file2.txt, etc.
-copy model?.scad models/   :: Copy model1.scad, model2.scad, etc.
+<h3 id="-wildcard-match-exactly-one-character"><a class="header" href="#-wildcard-match-exactly-one-character"><code>?</code> Wildcard (Match Exactly One Character)</a></h3>
+<pre><code class="language-cmd">dir /B file?.txt         :: Matches file1.txt, file2.txt, filea.txt, etc.
+copy model?.scad models\ :: Copy model1.scad, model2.scad, etc.
 </code></pre>
 <hr>
 <h2 id="practical-examples"><a class="header" href="#practical-examples">Practical Examples</a></h2>
 <h3 id="example-1-create-a-project-structure"><a class="header" href="#example-1-create-a-project-structure">Example 1: Create a Project Structure</a></h3>
 <pre><code class="language-cmd">mkdir 3DProjects
 cd 3DProjects
-mkdir Models
-mkdir Prints
-mkdir Documentation
+mkdir Models Prints Documentation Backups
 dir /B /A:D
 </code></pre>
 <h3 id="example-2-backup-before-editing"><a class="header" href="#example-2-backup-before-editing">Example 2: Backup Before Editing</a></h3>
-<pre><code class="language-cmd">copy project.scad project-backup.scad    :: Create backup
-:: Edit project.scad
-copy project.scad project-v2.scad        :: Save new version
+<pre><code class="language-cmd">copy project.scad project-backup.scad    :: Create a backup copy
+:: (edit project.scad)
+copy project.scad project-v2.scad        :: Save a new versioned copy
 </code></pre>
-<h3 id="example-3-organize-files"><a class="header" href="#example-3-organize-files">Example 3: Organize Files</a></h3>
-<pre><code class="language-cmd">mkdir old-files
-copy *.old old-files/         :: Copy old files to folder
-del *.old                     :: Delete old files
+<h3 id="example-3-organize-files-by-type"><a class="header" href="#example-3-organize-files-by-type">Example 3: Organize Files by Type</a></h3>
+<pre><code class="language-cmd">mkdir scad-files
+mkdir text-files
+move *.scad scad-files\
+move *.txt text-files\
+dir /B /A:D
 </code></pre>
 <hr>
 <h2 id="practice-exercises"><a class="header" href="#practice-exercises">Practice Exercises</a></h2>
-<h3 id="exercise-1-create-folder-structure"><a class="header" href="#exercise-1-create-folder-structure">Exercise 1: Create Folder Structure</a></h3>
+<h3 id="exercise-1-create-a-folder-structure"><a class="header" href="#exercise-1-create-a-folder-structure">Exercise 1: Create a Folder Structure</a></h3>
 <ol>
-<li>Create: <code>mkdir practice-session</code></li>
-<li>Change: <code>cd practice-session</code></li>
-<li>Create folders: <code>mkdir files documents models</code></li>
-<li>List: <code>dir /B /A:D</code></li>
+<li><code>mkdir practice-session</code></li>
+<li><code>cd practice-session</code></li>
+<li><code>mkdir files documents models</code></li>
+<li><code>dir /B /A:D</code></li>
 </ol>
-<p><strong>Goal:</strong> Create organized folder structures.</p>
+<p><strong>Goal:</strong> Create organized folder structures confidently.</p>
 <h3 id="exercise-2-create-and-copy-files"><a class="header" href="#exercise-2-create-and-copy-files">Exercise 2: Create and Copy Files</a></h3>
 <ol>
-<li>Create: <code>echo Hello &gt; test.txt</code></li>
-<li>View: <code>type test.txt</code></li>
-<li>Copy: <code>copy test.txt test-backup.txt</code></li>
-<li>List: <code>dir /B *.txt</code></li>
-<li>View backup: <code>type test-backup.txt</code></li>
+<li><code>echo Hello World &gt; test.txt</code></li>
+<li><code>type test.txt</code></li>
+<li><code>copy test.txt test-backup.txt</code></li>
+<li><code>dir /B *.txt</code></li>
+<li><code>type test-backup.txt</code></li>
 </ol>
-<p><strong>Goal:</strong> Create and copy files confidently.</p>
-<h3 id="exercise-3-safe-deletion"><a class="header" href="#exercise-3-safe-deletion">Exercise 3: Safe Deletion</a></h3>
+<p><strong>Goal:</strong> Create and copy files without errors.</p>
+<h3 id="exercise-3-safe-deletion-practice"><a class="header" href="#exercise-3-safe-deletion-practice">Exercise 3: Safe Deletion Practice</a></h3>
 <ol>
-<li>Create multiple test files: <code>echo test &gt; file1.txt</code> (repeat for file2, file3)</li>
-<li>List them: <code>dir /B *.txt</code></li>
-<li>Verify: <code>dir /B *.txt</code> again</li>
-<li>Delete one: <code>del file1.txt</code></li>
-<li>Verify deletion: <code>dir /B *.txt</code></li>
+<li><code>echo content &gt; file1.txt</code></li>
+<li><code>echo content &gt; file2.txt</code></li>
+<li><code>echo content &gt; file3.txt</code></li>
+<li><code>dir /B *.txt</code> (confirm all three exist)</li>
+<li><code>del file1.txt</code> (delete just one)</li>
+<li><code>dir /B *.txt</code> (confirm only two remain)</li>
 </ol>
-<p><strong>Goal:</strong> Practice safe deletion patterns.</p>
-<h3 id="exercise-4-using-wildcards"><a class="header" href="#exercise-4-using-wildcards">Exercise 4: Using Wildcards</a></h3>
+<p><strong>Goal:</strong> Practice the “check, then delete” pattern.</p>
+<h3 id="exercise-4-wildcard-operations"><a class="header" href="#exercise-4-wildcard-operations">Exercise 4: Wildcard Operations</a></h3>
 <ol>
-<li>Create: <code>echo content &gt; document1.txt</code></li>
-<li>Create: <code>echo content &gt; document2.txt</code></li>
-<li>Create: <code>echo content &gt; document3.txt</code></li>
-<li>List all: <code>dir /B *.txt</code></li>
-<li>Copy all: <code>mkdir archive</code> then <code>copy *.txt archive\</code></li>
-<li>Verify: <code>cd archive</code> then <code>dir /B *.txt</code></li>
+<li>Create three files: <code>echo a &gt; doc1.txt</code>, <code>echo b &gt; doc2.txt</code>, <code>echo c &gt; doc3.txt</code></li>
+<li><code>dir /B *.txt</code></li>
+<li><code>mkdir archive</code></li>
+<li><code>copy *.txt archive\</code></li>
+<li><code>cd archive</code></li>
+<li><code>dir /B *.txt</code></li>
 </ol>
-<p><strong>Goal:</strong> Comfortable with wildcard operations.</p>
+<p><strong>Goal:</strong> Comfortable using wildcards for bulk operations.</p>
+<hr>
+<h2 id="screen-reader-tips"><a class="header" href="#screen-reader-tips">Screen Reader Tips</a></h2>
+<h3 id="nvda-users"><a class="header" href="#nvda-users">NVDA Users</a></h3>
+<p>After file operations, run <code>dir /B</code> and press <strong>NVDA+Down Arrow</strong> to verify results. Redirect output to a file for complex verification: <code>dir /B &gt; check.txt</code>, then <code>notepad.exe check.txt</code>.</p>
+<h3 id="jaws-users"><a class="header" href="#jaws-users">JAWS Users</a></h3>
+<p>After file operations, run <code>dir /B</code> and press <strong>Insert+Down Arrow</strong> to read results. For complex output: <code>dir /B &gt; check.txt</code>, then <code>notepad.exe check.txt</code>.</p>
+<h3 id="windows-narrator-users"><a class="header" href="#windows-narrator-users">Windows Narrator Users</a></h3>
+<p>After file operations, run <code>dir /B</code> and press <strong>Narrator+R</strong> to read from the current position. Redirect to a file and open in Notepad for long output.</p>
+<h3 id="dolphin-supernova-users"><a class="header" href="#dolphin-supernova-users">Dolphin SuperNova Users</a></h3>
+<p>After file operations, run <code>dir /B</code> and press <strong>CapsLock+Numpad Plus</strong> to read results. For long output: <code>dir /B &gt; check.txt</code>, then <code>notepad.exe check.txt</code>.</p>
+<h3 id="general-tip-for-all-screen-readers"><a class="header" href="#general-tip-for-all-screen-readers">General Tip for All Screen Readers</a></h3>
+<p>After any <code>copy</code>, <code>move</code>, or <code>del</code> operation, always verify with <code>dir /B</code> to confirm the expected result. Never assume an operation worked without checking.</p>
 <hr>
 <h2 id="checkpoint-questions"><a class="header" href="#checkpoint-questions">Checkpoint Questions</a></h2>
 <ol>
 <li>How do you create a folder?</li>
 <li>How do you copy a file?</li>
 <li>How do you rename a file?</li>
-<li>How do you delete a file safely?</li>
-<li>What does <code>*</code> match in a wildcard?</li>
-<li>What does <code>?</code> match in a wildcard?</li>
+<li>How do you delete a file safely (checking first)?</li>
+<li>What does <code>*</code> match in a wildcard pattern?</li>
+<li>What does <code>?</code> match in a wildcard pattern?</li>
 <li>How would you copy all .scad files to a backup folder?</li>
 <li>What should you always do before deleting?</li>
-<li>How do you delete a folder with contents?</li>
-<li>Why would you create a backup before editing?</li>
+<li>How do you delete a folder and all its contents?</li>
+<li>Why is it important to create a backup before editing?</li>
 </ol>
 <hr>
 <h2 id="extension-problems"><a class="header" href="#extension-problems">Extension Problems</a></h2>
 <ol>
-<li>Create a nested folder structure (5+ levels) using single command: <code>mkdir A\B\C\D\E</code></li>
-<li>Create 10 files and organize them into subfolders using <code>move</code></li>
-<li>Create a backup strategy: copy all files to dated backup folder</li>
-<li>Use wildcards to select specific file types and perform operations</li>
-<li>Create a file renaming pattern (file001, file002, etc.) and move them</li>
+<li>Create a nested folder structure (5+ levels) using a single <code>mkdir</code> command with backslashes.</li>
+<li>Create 10 files and organize them into subfolders using <code>move</code> with wildcards.</li>
+<li>Create a date-based backup strategy: copy all files to a folder named with today’s date.</li>
+<li>Use wildcards to select specific file types and copy them to separate organized folders.</li>
+<li>Create a file-renaming system (file001.txt, file002.txt, etc.) and practice moving them between folders.</li>
 </ol>
 <hr>
 <h2 id="next-steps"><a class="header" href="#next-steps">Next Steps</a></h2>
-<ul>
-<li>Complete all exercises</li>
-<li>Pass checkpoint questions</li>
-<li>Move to <strong>CMD-3: Input, Output &amp; Redirection</strong></li>
-</ul>
+<p>Complete all exercises, pass the checkpoint questions, then move to <strong>CMD-3: Input, Output &amp; Redirection</strong>.</p>
+<!--pagebreak-->
 
                     </main>
 

@@ -1,94 +1,84 @@
-# Design Specification Template {#3dmake_foundation_lessons_3dmake_11-design_specification_template}
+# Design}} Specification Template {#3dmake_foundation_lessons_3dmake_11-design_specification_template}
 
-Technical design document specifying how requirements will be implemented.
+Technical design}} document specifying how requirements will be implemented.
 
-## Design Document Information
+## Design}} Document Information
 
-- **Project:** _
-- **Design Version:** _
-- **Date:** _
-- **Designed By:** _
-- **Reviewed By:** _
+- Project: _
+- Design}} Version: _
+- Date: _
+- Designed By: _
+- Reviewed By: _
 
----
+## Design}} Overview
 
-## Design Overview
-
-**Problem Statement:**
+Problem Statement:
 (What are we solving?)
 _
 
-**Solution Approach:**
+Solution Approach:
 (High-level how we'll solve it)
 _
 
-**Key Design Decisions:**
+Key Design}} Decisions:
 1. 
 2. 
 3. 
-
----
 
 ## Component Breakdown
 
 ### Component 1: [Component Name]
 
-**Purpose:**
+Purpose:
 _
 
-**Specifications:**
+Specifications:
 - Dimensions: 
 - Material: 
 - Quantity: 
 
-**Design Rationale:**
+Design}} Rationale:
 (Why this approach?)
 _
 
-**Related Components:**
+Related Components:
 - Connects to: _
 - Interfaces with: 
 
-**Manufacturing Considerations:**
+Manufacturing Considerations:
 - Support structures needed: _
-- Orientation for print: _
-- Estimated print time: _
-
----
+- Orientation for print}}: _
+- Estimated print}} time}}: _
 
 ### Component 2: [Component Name]
-(Repeat structure for each component)
+(Repeat structure for each}} component)
 
----
+## Assembly Design}}
 
-## Assembly Design
-
-**Overall Assembly Structure:**
+Overall Assembly Structure:
 (How components fit together)
 _
 
-**Assembly Sequence:**
+Assembly Sequence:
 1. 
 2. 
 3. 
 
-**Fastening Methods:**
+Fastening Methods:
 - [ ] Snap fits (location: _)
 - [ ] Threaded inserts (quantity: )
 - [ ] Glue/adhesive (type: )
 - [ ] Other: _
 
-**Assembly Challenges & Solutions:**
+Assembly Challenges & Solutions:
 - Challenge: _
   Solution: 
 
----
-
 ## Material Selection
 
-**Primary Material:** 
+Primary Material: 
 
-**Why this material?**
+Why this material}}?
 | Property     | Requirement | Selected Material | Alternative |
 |--------------|-------------|-------------------|-------------|
 | Strength     |             |                   |             |
@@ -97,164 +87,148 @@ _
 | Cost         |             |                   |             |
 | Availability |             |                   |             |
 
-**Material Properties:**
-- Nozzle temperature: 
-- Bed temperature: 
+Material Properties:
+- Nozzle}} temperature: 
+- Bed}} temperature: 
 - Print speed: _
 - Support required: 
 - Post-processing: 
 
-**Material Alternatives & Trade-offs:**
+Material Alternatives & Trade-offs:
 - Option 1: _
 - Option 2: _
 - Selected option rationale: _
 
----
-
-## Design Features
+## Design}} Features
 
 ### Feature 1: [Feature Name]
 
-**Purpose:**
+Purpose:
 _
 
-**Design Details:**
+Design}} Details:
 - Dimensions: 
 - Placement: _
 - Tolerances: 
 
-**Rationale:**
+Rationale:
 (Why designed this way?)
 _
 
-**Related Requirement:**
+Related Requirement:
 (Which requirement does this fulfill?)
 _
 
----
-
 ### Feature 2: [Feature Name]
-(Repeat for each significant feature)
-
----
+(Repeat for each}} significant feature)
 
 ## Tolerance & Fit Analysis
 
-**Critical Dimensions:**
+Critical Dimensions:
 
 | Dimension | Tolerance | Rationale | Risk |
 |-----------|-----------|-----------|------|
 |           | +/-_mm    |           |      |
 |           | +/-_mm    |           |      |
 
-**Fit Relationships:**
+Fit Relationships:
 - Part A to Part B: _
 - Part B to Part C: _
 
-**Validation Plan:**
-- [ ] Print test version before production
+Validation Plan:
+- [ ] Print test}} version before}} production
 - [ ] Measure critical dimensions
 - [ ] Test assembly fit
-- [ ] Perform functional test
-
----
+- [ ] Perform functional test}}
 
 ## Manufacturing Planning
 
 ### Print Parameters
 
-**Slicer Settings:**
-- Layer height: 
+Slicer}} Settings:
+- Layer height}}: 
 - Infill: 
-- Support material: 
+- Support material}}: 
 - Raft/brim: _
 
-**Print Time & Material:**
-- Estimated time: 
+Print Time & Material:
+- Estimated time}}: 
 - Material weight: _
 - Cost estimate: _
 
-**Orientation Strategy:**
-(How will this be oriented during printing?)
+Orientation Strategy:
+(How will this be oriented during printing}}?)
 - Rationale: _
 - Risks: _
 - Mitigation: 
 
 ### Post-Processing
 
-**Cleanup:**
+Cleanup:
 - [ ] Remove supports (method: )
 - [ ] Remove raft/brim (method: _)
 - [ ] Sand edges (grit: _)
 - [ ] Smooth surfaces (method: )
 
-**Finishing:**
+Finishing:
 - [ ] Paint/coat (type: )
 - [ ] Treat for durability: 
-- [ ] Inspect quality: 
+- [ ] Inspect quality}}: 
 
-**Assembly Work:**
+Assembly Work:
 - [ ] Insert threaded nuts/inserts
 - [ ] Assemble components
 - [ ] Test functionality
 
-**Estimated Total Time:**  hours
-
----
+Estimated Total Time:  hours
 
 ## Testing Plan
 
-**Functionality Tests:**
+Functionality Tests:
 
 | Test | Method | Pass Criteria | Status |
 |------|--------|---------------|--------|
 |      |        |               |        |
 |      |        |               |        |
 
-**Durability Tests:**
-- Stress test: _
+Durability Tests:
+- Stress test}}: _
 - Environmental exposure: 
-- Lifecycle test: _
+- Lifecycle test}}: _
 
-**Tolerance Verification:**
+Tolerance Verification:
 - Measure key dimensions
 - Compare to specification
 - Document variance
 
----
+## Design}} Risks & Mitigation
 
-## Design Risks & Mitigation
-
-**Risk 1:**
+Risk 1:
 - Description: _
 - Probability: [ ] High  [ ] Medium  [ ] Low
 - Impact: [ ] Critical  [ ] Major  [ ] Minor
 - Mitigation: 
 - Contingency: _
 
-**Risk 2:**
+Risk 2:
 (Continue for identified risks)
 
----
+## Design}} Alternatives Considered
 
-## Design Alternatives Considered
-
-**Alternative 1:**
+Alternative 1:
 - Approach: _
 - Pros: 
 - Cons: 
 - Why not selected: 
 
-**Alternative 2:**
-(Continue for each alternative considered)
-
----
+Alternative 2:
+(Continue for each}} alternative considered)
 
 ## Technical Specifications
 
 ### Dimensional Drawing Reference
 (Attach or describe detailed drawings/models)
-- CAD file: 
+- CAD file}}: 
 - Drawing revision: 
 
 ### Performance Specifications
@@ -262,8 +236,6 @@ _
 - Temperature range: _
 - Lifespan: 
 - Accuracy/precision: 
-
----
 
 ## Bill of Materials (BOM)
 
@@ -273,11 +245,9 @@ _
 |                      |        |          |           |       |
 |                      |        |          |           |       |
 
-**Total Material Cost:** $
+Total Material Cost: $
 
----
-
-## Design Verification Checklist
+## Design}} Verification Checklist
 
 Before manufacturing:
 - [ ] All components specified
@@ -289,21 +259,17 @@ Before manufacturing:
 - [ ] Risks documented
 - [ ] Cost estimates calculated
 - [ ] Timeline realistic
-- [ ] Design approved by stakeholders
+- [ ] Design}} approved by stakeholders
 
----
-
-## Design Change Log
+## Design}} Change Log
 
 | Change # | Date | Description | Reason | Impact |
 |----------|------|-------------|--------|--------|
 |          |      |             |        |        |
 
----
-
 ## Sign-Off
 
-**Design Approval:**
+Design}} Approval:
 
 | Role        | Name | Signature | Date |
 |-------------|------|-----------|------|
@@ -311,12 +277,10 @@ Before manufacturing:
 | Reviewer    |      |           |      |
 | Stakeholder |      |           |      |
 
-**Status:**
+Status:
 - [ ]  Approved - Ready for manufacturing
 - [ ]  Approved with conditions: 
 - [ ]  Not approved - Revisions needed: 
-
----
 
 ## Appendices
 

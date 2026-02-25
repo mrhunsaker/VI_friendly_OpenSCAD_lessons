@@ -4,9 +4,9 @@
 
 Students conduct a comprehensive accessibility audit of 3D printing workflows and tools. This project emphasizes universal design principles, accessibility testing, and inclusive documentation.
 
-**Key Learning:** Accessibility as a design practice; testing with assistive technology; inclusive documentation.
+Key Learning: Accessibility as a design practice; testing with assistive technology; inclusive documentation.
 
-**Real-world Connection:** Universal design benefits all users. Accessibility is increasingly a legal and ethical requirement in professional contexts.
+Real-world Connection: Universal design benefits all users. Accessibility is increasingly a legal and ethical requirement in professional contexts.
 
 ## Constraints
 - Audit must cover at least three tools or workflows (editor, slicer, terminal)
@@ -39,10 +39,8 @@ Testing methodology is rigorous. Findings are specific and well-documented.
 ### Category 3: Documentation (0-3)
 Audit template complete. Recommendations prioritized. Action plan clear.
 
----
-
 ## Assessment Notes
 
-- **Strong submissions:** Show rigorous testing methodology, specific barrier descriptions, prioritized recommendations, and sincere reflection on inclusion
-- **Reinforce:** Accessibility is everyone's responsibility; small improvements compound
-- **Extension:** Implementation of recommended improvements; follow-up testing
+- Strong submissions: Show rigorous testing methodology, specific barrier descriptions, prioritized recommendations, and sincere reflection on inclusion
+- Reinforce: Accessibility is everyone's responsibility; small improvements compound
+- Extension: Implementation of recommended improvements; follow-up testing

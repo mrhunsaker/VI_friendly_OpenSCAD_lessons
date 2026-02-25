@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-d11bd641.js";
+            window.path_to_searchindex_js = "../../searchindex-d0af5d9e.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-19a5926f.js"></script>
+        <script src="../../toc-5b0c6224.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -221,9 +221,8 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="screen-reader-accessibility-guide-for-git-bash"><a class="header" href="#screen-reader-accessibility-guide-for-git-bash">Screen Reader Accessibility Guide for Git Bash</a></h1>
-<p><strong>Target Users:</strong> NVDA, JAWS, and other screen reader users<br><strong>Last Updated:</strong> 2026</p>
+<p>Target Users: NVDA, JAWS, and other screen reader users<br>Last Updated: 2026</p>
 <p>This guide is used throughout the Git Bash Foundation curriculum to help screen reader users navigate and work efficiently with the terminal.</p>
-<hr>
 <h2 id="table-of-contents"><a class="header" href="#table-of-contents">Table of Contents</a></h2>
 <ol>
 <li><a href="#getting-started">Getting Started with Screen Readers</a></li>
@@ -234,8 +233,7 @@
 <li><a href="#shortcuts">Keyboard Shortcuts Reference</a></li>
 <li><a href="#troubleshooting">Troubleshooting</a></li>
 </ol>
-<hr>
-<h2 id="getting-started-with-screen-readers"><a class="header" href="#getting-started-with-screen-readers">Getting Started with Screen Readers</a></h2>
+<h2 id="getting-started"><a class="header" href="#getting-started">Getting Started with Screen Readers</a></h2>
 <h3 id="which-screen-reader-should-i-use"><a class="header" href="#which-screen-reader-should-i-use">Which Screen Reader Should I Use?</a></h3>
 <p>Both NVDA and JAWS work well with Git Bash, but they have different strengths:</p>
 <div class="table-wrapper">
@@ -244,27 +242,27 @@
 <tr><th>Feature</th><th>NVDA</th><th>JAWS</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Cost</strong></td><td>Free</td><td>Commercial (paid)</td></tr>
-<tr><td><strong>Installation</strong></td><td>Simple</td><td>Complex but thorough</td></tr>
-<tr><td><strong>Git Bash Support</strong></td><td>Excellent</td><td>Excellent</td></tr>
-<tr><td><strong>Learning Curve</strong></td><td>Gentle</td><td>Steeper</td></tr>
-<tr><td><strong>Customization</strong></td><td>Good</td><td>Extensive</td></tr>
+<tr><td>Cost</td><td>Free</td><td>Commercial (paid)</td></tr>
+<tr><td>Installation</td><td>Simple</td><td>Complex but thorough</td></tr>
+<tr><td>Git Bash Support</td><td>Excellent</td><td>Excellent</td></tr>
+<tr><td>Learning Curve</td><td>Gentle</td><td>Steeper</td></tr>
+<tr><td>Customization</td><td>Good</td><td>Extensive</td></tr>
 </tbody>
 </table>
 </div>
-<p><strong>Recommendation:</strong> Start with NVDA if you’re new to screen readers. Both will work for this curriculum.</p>
+<p>Recommendation: Start with NVDA if you’re new to screen readers. Both will work for this curriculum.</p>
+<p>Additional options: Dolphin SuperNova is a commercial screen reader/ magnifier popular in some education settings; Windows Narrator is built into Windows and useful for quick access without installing additional software. Choose based on availability and personal preference.</p>
 <h3 id="before-you-start"><a class="header" href="#before-you-start">Before You Start</a></h3>
 <ol>
 <li>Make sure your screen reader is running before opening Git Bash</li>
 <li>Open Git Bash and let your screen reader read the window title and prompt</li>
-<li>If you don’t hear anything, press <strong>Alt+Tab</strong> to cycle windows and find Git Bash</li>
+<li>If you don’t hear anything, press Alt+Tab to cycle windows and find Git Bash</li>
 <li>Use your screen reader’s screen review features to understand the layout</li>
 </ol>
 <h3 id="what-is-git-bash"><a class="header" href="#what-is-git-bash">What is Git Bash?</a></h3>
-<p>Git Bash is a terminal application for Windows that provides a Unix-style command-line experience (Bash shell). It is installed as part of <strong>Git for Windows</strong>, which is free software available at https://git-scm.com/. When you open Git Bash, you get the same <code>bash</code>, <code>ls</code>, <code>grep</code>, <code>cat</code>, and other Unix tools used on Linux and macOS - but running on your Windows computer.</p>
-<hr>
-<h2 id="nvda-specific-tips"><a class="header" href="#nvda-specific-tips">NVDA-Specific Tips</a></h2>
-<p>NVDA is free and available from https://www.nvaccess.org/</p>
+<p>Git Bash is a terminal application for Windows that provides a Unix-style command-line experience (Bash shell). It is installed as part of Git for Windows, which is free software available at <a href="https://git-scm.com/">https://git-scm.com/</a>. When you open Git Bash, you get the same <code>bash</code>, <code>ls</code>, <code>grep</code>, <code>cat</code>, and other Unix tools used on Linux and macOS - but running on your Windows computer.</p>
+<h2 id="nvda-tips"><a class="header" href="#nvda-tips">NVDA-Specific Tips</a></h2>
+<p>NVDA is free and available from <a href="https://www.nvaccess.org/">https://www.nvaccess.org/</a></p>
 <h3 id="key-commands-for-git-bash"><a class="header" href="#key-commands-for-git-bash">Key Commands for Git Bash</a></h3>
 <div class="table-wrapper">
 <table>
@@ -272,32 +270,35 @@
 <tr><th>Command</th><th>What It Does</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>NVDA+Home</strong></td><td>Read the current line (your command or output)</td></tr>
-<tr><td><strong>NVDA+Down Arrow</strong></td><td>Read from cursor to end of screen</td></tr>
-<tr><td><strong>NVDA+Up Arrow</strong></td><td>Read from top to cursor</td></tr>
-<tr><td><strong>NVDA+Page Down</strong></td><td>Read next page</td></tr>
-<tr><td><strong>NVDA+Page Up</strong></td><td>Read previous page</td></tr>
-<tr><td><strong>NVDA+F7</strong></td><td>Open the Review Mode viewer (can scroll through text)</td></tr>
-<tr><td><strong>NVDA+Shift+Right Arrow</strong></td><td>Read next word</td></tr>
-<tr><td><strong>NVDA+Shift+Down Arrow</strong></td><td>Read entire screen</td></tr>
-<tr><td><strong>NVDA+End</strong></td><td>Jump to end of line</td></tr>
-<tr><td><strong>NVDA+Home</strong></td><td>Jump to start of line</td></tr>
+<tr><td>NVDA+Home</td><td>Read the current line (your command or output)</td></tr>
+<tr><td>NVDA+Down Arrow</td><td>Read from cursor to end of screen</td></tr>
+<tr><td>NVDA+Up Arrow</td><td>Read from top to cursor</td></tr>
+<tr><td>NVDA+Page Down</td><td>Read next page</td></tr>
+<tr><td>NVDA+Page Up</td><td>Read previous page</td></tr>
+<tr><td>NVDA+F7</td><td>Open the Review Mode viewer (can scroll through text)</td></tr>
+<tr><td>NVDA+Shift+Right Arrow</td><td>Read next word</td></tr>
+<tr><td>NVDA+Shift+Down Arrow</td><td>Read entire screen</td></tr>
+<tr><td>NVDA+End</td><td>Jump to end of line</td></tr>
+<tr><td>NVDA+Home</td><td>Jump to start of line</td></tr>
 </tbody>
 </table>
 </div>
 <h3 id="example-reading-long-output"><a class="header" href="#example-reading-long-output">Example: Reading Long Output</a></h3>
-<p><strong>Scenario:</strong> You ran <code>ls</code> and it listed 50 files.</p>
-<p><strong>Solution with NVDA:</strong></p>
+<p>Scenario: You ran <code>ls</code> and it listed 50 files.</p>
+<p>Solution with NVDA:</p>
 <ol>
-<li>After the command finishes, press <strong>NVDA+Home</strong> to read the current line</li>
-<li>Press <strong>NVDA+Down Arrow</strong> repeatedly to read all output</li>
-<li>Or press <strong>NVDA+F7</strong> to open Review Mode and use arrow keys to scroll</li>
+<li>After the command finishes, press NVDA+Home to read the current line</li>
+<li>Press NVDA+Down Arrow repeatedly to read all output</li>
+<li>Or press NVDA+F7 to open Review Mode and use arrow keys to scroll</li>
 </ol>
 <h3 id="tip-use-ls--1-for-screen-reader-friendly-listings"><a class="header" href="#tip-use-ls--1-for-screen-reader-friendly-listings">Tip: Use <code>ls -1</code> for Screen Reader Friendly Listings</a></h3>
 <p>By default, <code>ls</code> in Git Bash may display files in columns. Use <code>ls -1</code> (the number one, not the letter L) to display one file per line - much easier to follow with a screen reader.</p>
-<hr>
-<h2 id="jaws-specific-tips"><a class="header" href="#jaws-specific-tips">JAWS-Specific Tips</a></h2>
-<p>JAWS is a commercial screen reader available from https://www.freedomscientific.com/</p>
+<h2 id="jaws-tips"><a class="header" href="#jaws-tips">JAWS-Specific Tips</a></h2>
+<p>JAWS is a commercial screen reader available from <a href="https://www.freedomscientific.com/">https://www.freedomscientific.com/</a></p>
+<h3 id="dolphin-supernova"><a class="header" href="#dolphin-supernova">Dolphin SuperNova</a></h3>
+<p>Dolphin SuperNova (commercial): <a href="https://example.com">https://example.com</a> — provides speech and braille support and tightly integrated magnification. Refer to vendor docs for keyboard mappings; many users rely on review-mode features similar to NVDA/JAWS.</p>
+<h3 id="windows-narrator"><a class="header" href="#windows-narrator">Windows Narrator</a></h3>
+<p>Windows Narrator (built-in): <a href="https://example.com">https://example.com</a> — good for quick checks and lightweight usage; Narrator command keys differ by Windows version (use Narrator key + arrow keys to read). Add Narrator to your workflow when a full third-party screen reader isn’t available.</p>
 <h3 id="key-commands-for-git-bash-1"><a class="header" href="#key-commands-for-git-bash-1">Key Commands for Git Bash</a></h3>
 <div class="table-wrapper">
 <table>
@@ -305,39 +306,38 @@
 <tr><th>Command</th><th>What It Does</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Insert+Down Arrow</strong></td><td>Read line by line downward</td></tr>
-<tr><td><strong>Insert+Up Arrow</strong></td><td>Read line by line upward</td></tr>
-<tr><td><strong>Insert+Page Down</strong></td><td>Read next page of text</td></tr>
-<tr><td><strong>Insert+Page Up</strong></td><td>Read previous page of text</td></tr>
-<tr><td><strong>Insert+End</strong></td><td>Jump to end of text on screen</td></tr>
-<tr><td><strong>Insert+Home</strong></td><td>Jump to start of text on screen</td></tr>
-<tr><td><strong>Insert+Ctrl+Down</strong></td><td>Read to end of screen</td></tr>
-<tr><td><strong>Insert+Ctrl+Up</strong></td><td>Read to beginning of screen</td></tr>
-<tr><td><strong>Insert+F3</strong></td><td>Open JAWS menu</td></tr>
+<tr><td>Insert+Down Arrow</td><td>Read line by line downward</td></tr>
+<tr><td>Insert+Up Arrow</td><td>Read line by line upward</td></tr>
+<tr><td>Insert+Page Down</td><td>Read next page of text</td></tr>
+<tr><td>Insert+Page Up</td><td>Read previous page of text</td></tr>
+<tr><td>Insert+End</td><td>Jump to end of text on screen</td></tr>
+<tr><td>Insert+Home</td><td>Jump to start of text on screen</td></tr>
+<tr><td>Insert+Ctrl+Down</td><td>Read to end of screen</td></tr>
+<tr><td>Insert+Ctrl+Up</td><td>Read to beginning of screen</td></tr>
+<tr><td>Insert+F3</td><td>Open JAWS menu</td></tr>
 </tbody>
 </table>
 </div>
 <h3 id="example-reading-long-output-1"><a class="header" href="#example-reading-long-output-1">Example: Reading Long Output</a></h3>
-<p><strong>Scenario:</strong> You ran <code>ls &gt; list.txt</code> and saved output to a file.</p>
-<p><strong>Solution with JAWS:</strong></p>
+<p>Scenario: You ran <code>ls &gt; list.txt</code> and saved output to a file.</p>
+<p>Solution with JAWS:</p>
 <ol>
 <li>Open the file: <code>notepad list.txt</code></li>
-<li>In Notepad, press <strong>Insert+Ctrl+Down</strong> to hear all content</li>
-<li>Use <strong>Insert+Down Arrow</strong> to read line by line at your own pace</li>
+<li>In Notepad, press Insert+Ctrl+Down to hear all content</li>
+<li>Use Insert+Down Arrow to read line by line at your own pace</li>
 </ol>
-<hr>
-<h2 id="general-terminal-accessibility"><a class="header" href="#general-terminal-accessibility">General Terminal Accessibility</a></h2>
+<h2 id="general-terminal"><a class="header" href="#general-terminal">General Terminal Accessibility</a></h2>
 <h3 id="understanding-the-git-bash-layout"><a class="header" href="#understanding-the-git-bash-layout">Understanding the Git Bash Layout</a></h3>
 <p>The Git Bash window contains:</p>
 <ol>
-<li><strong>Title bar:</strong> Window name (e.g., “MINGW64:/c/Users/YourName”)</li>
-<li><strong>Content area:</strong> Command history and output</li>
-<li><strong>Prompt:</strong> Where you type (e.g., <code>YourName@COMPUTER MINGW64 ~$</code>)</li>
+<li>Title bar: Window name (e.g., “MINGW64:/c/Users/YourName”)</li>
+<li>Content area: Command history and output</li>
+<li>Prompt: Where you type (e.g., <code>YourName@COMPUTER MINGW64 ~$</code>)</li>
 </ol>
-<p><strong>Your screen reader reads from top to bottom, but focus is at the prompt (bottom).</strong></p>
+<p>Your screen reader reads from top to bottom, but focus is at the prompt (bottom).</p>
 <h3 id="the-git-bash-prompt"><a class="header" href="#the-git-bash-prompt">The Git Bash Prompt</a></h3>
 <p>The default Git Bash prompt looks like:</p>
-<pre><code>YourName@COMPUTERNAME MINGW64 ~/Documents
+<pre><code class="language-bash">YourName@COMPUTERNAME MINGW64 ~/Documents
 $
 </code></pre>
 <ul>
@@ -347,9 +347,9 @@ $
 <li><code>~/Documents</code> = your current location</li>
 <li><code>$</code> = ready for input</li>
 </ul>
-<p><strong>Note:</strong> Paths in Git Bash use forward slashes (<code>/</code>) and your Windows <code>C:\Users\YourName</code> folder appears as <code>/c/Users/YourName</code> or simply <code>~</code>.</p>
+<p>Note: Paths in Git Bash use forward slashes (<code>/</code>) and your Windows <code>C:\Users\YourName</code> folder appears as <code>/c/Users/YourName</code> or simply <code>~</code>.</p>
 <h3 id="navigation-sequence"><a class="header" href="#navigation-sequence">Navigation Sequence</a></h3>
-<p><strong>When you open Git Bash:</strong></p>
+<p>When you open Git Bash:</p>
 <ol>
 <li>Your screen reader announces the window title</li>
 <li>Then it announces the prompt line</li>
@@ -357,28 +357,30 @@ $
 <li>Anything after the prompt is where new output will appear</li>
 </ol>
 <h3 id="reading-output-effectively"><a class="header" href="#reading-output-effectively">Reading Output Effectively</a></h3>
-<p><strong>Strategy 1: Immediate Output (Small Amount)</strong></p>
+<p>Strategy 1: Immediate Output (Small Amount)</p>
 <ul>
 <li>Run a command</li>
 <li>Your screen reader announces output immediately</li>
 <li>This works well for short outputs (a few lines)</li>
 </ul>
-<p><strong>Strategy 2: Large Output (Many Lines)</strong></p>
+<p>Strategy 2: Large Output (Many Lines)</p>
 <ul>
 <li>Redirect to a file: <code>command &gt; output.txt</code></li>
 <li>Open the file: <code>notepad output.txt</code></li>
 <li>Read in Notepad (easier for long text)</li>
 </ul>
-<p><strong>Strategy 3: Searching Output</strong></p>
+<p>Strategy 3: Searching Output</p>
 <ul>
-<li>Use <code>grep</code> to filter:
+<li>
+<p>Use <code>grep</code> to filter:</p>
 <pre><code class="language-bash">ls | grep "pattern"
 </code></pre>
 </li>
-<li>Only results matching “pattern” are shown</li>
+<li>
+<p>Only results matching “pattern” are shown</p>
+</li>
 </ul>
-<hr>
-<h2 id="working-with-long-output"><a class="header" href="#working-with-long-output">Working with Long Output</a></h2>
+<h2 id="long-output"><a class="header" href="#long-output">Working with Long Output</a></h2>
 <h3 id="solution-1-redirect-to-a-file"><a class="header" href="#solution-1-redirect-to-a-file">Solution 1: Redirect to a File</a></h3>
 <pre><code class="language-bash">ls -1 &gt; list.txt
 notepad list.txt
@@ -387,9 +389,9 @@ notepad list.txt
 <pre><code class="language-bash">ls | less
 </code></pre>
 <ul>
-<li>Press <strong>Space</strong> to see next page</li>
-<li>Press <strong>Q</strong> to quit</li>
-<li><strong>Note:</strong> Some screen readers struggle with <code>less</code>, so Solution 1 is preferred</li>
+<li>Press Space to see next page</li>
+<li>Press Q to quit</li>
+<li>Note: Some screen readers struggle with <code>less</code>, so Solution 1 is preferred</li>
 </ul>
 <h3 id="solution-3-filter-output"><a class="header" href="#solution-3-filter-output">Solution 3: Filter Output</a></h3>
 <pre><code class="language-bash">ls | grep "\.scad"
@@ -398,8 +400,7 @@ notepad list.txt
 <pre><code class="language-bash">ls | wc -l
 </code></pre>
 <p>Tells you how many items there are. If the count is over 20, use the file method.</p>
-<hr>
-<h2 id="keyboard-shortcuts-reference"><a class="header" href="#keyboard-shortcuts-reference">Keyboard Shortcuts Reference</a></h2>
+<h2 id="shortcuts"><a class="header" href="#shortcuts">Keyboard Shortcuts Reference</a></h2>
 <h3 id="all-users-works-in-git-bash-regardless-of-screen-reader"><a class="header" href="#all-users-works-in-git-bash-regardless-of-screen-reader">All Users (Works in Git Bash Regardless of Screen Reader)</a></h3>
 <div class="table-wrapper">
 <table>
@@ -407,34 +408,33 @@ notepad list.txt
 <tr><th>Key</th><th>Action</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Up Arrow</strong></td><td>Show previous command</td></tr>
-<tr><td><strong>Down Arrow</strong></td><td>Show next command</td></tr>
-<tr><td><strong>Tab</strong></td><td>Auto-complete file/folder names</td></tr>
-<tr><td><strong>Shift+Tab</strong></td><td>Cycle backward through completions</td></tr>
-<tr><td><strong>Home</strong></td><td>Jump to start of line</td></tr>
-<tr><td><strong>End</strong></td><td>Jump to end of line</td></tr>
-<tr><td><strong>Ctrl+A</strong></td><td>Jump to start of line (alternate)</td></tr>
-<tr><td><strong>Ctrl+E</strong></td><td>Jump to end of line (alternate)</td></tr>
-<tr><td><strong>Ctrl+C</strong></td><td>Stop command</td></tr>
-<tr><td><strong>Ctrl+L</strong></td><td>Clear screen</td></tr>
-<tr><td><strong>Enter</strong></td><td>Run command</td></tr>
-<tr><td><strong>Ctrl+R</strong></td><td>Search command history interactively</td></tr>
+<tr><td>Up Arrow</td><td>Show previous command</td></tr>
+<tr><td>Down Arrow</td><td>Show next command</td></tr>
+<tr><td>Tab</td><td>Auto-complete file/folder names</td></tr>
+<tr><td>Shift+Tab</td><td>Cycle backward through completions</td></tr>
+<tr><td>Home</td><td>Jump to start of line</td></tr>
+<tr><td>End</td><td>Jump to end of line</td></tr>
+<tr><td>Ctrl+A</td><td>Jump to start of line (alternate)</td></tr>
+<tr><td>Ctrl+E</td><td>Jump to end of line (alternate)</td></tr>
+<tr><td>Ctrl+C</td><td>Stop command</td></tr>
+<tr><td>Ctrl+L</td><td>Clear screen</td></tr>
+<tr><td>Enter</td><td>Run command</td></tr>
+<tr><td>Ctrl+R</td><td>Search command history interactively</td></tr>
 </tbody>
 </table>
 </div>
-<hr>
 <h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
 <h3 id="problem-1-i-cant-hear-the-output-after-running-a-command"><a class="header" href="#problem-1-i-cant-hear-the-output-after-running-a-command">Problem 1: “I Can’t Hear the Output After Running a Command”</a></h3>
 <ol>
-<li><strong>Redirect to file:</strong> <code>command &gt; output.txt</code> then <code>notepad output.txt</code></li>
-<li><strong>Press End</strong> or <strong>Ctrl+End</strong> to go to end of text</li>
-<li><strong>Use Up Arrow</strong> to review previous command</li>
+<li>Redirect to file: <code>command &gt; output.txt</code> then <code>notepad output.txt</code></li>
+<li>Press End or Ctrl+End to go to end of text</li>
+<li>Use Up Arrow to review previous command</li>
 </ol>
 <h3 id="problem-2-tab-completion-isnt-working"><a class="header" href="#problem-2-tab-completion-isnt-working">Problem 2: “Tab Completion Isn’t Working”</a></h3>
 <ol>
-<li><strong>Need at least one character</strong> - type <code>cd D</code> then Tab (not just <code>cd</code> then Tab)</li>
-<li><strong>Check if item exists</strong> - use <code>ls</code> first to see available items</li>
-<li><strong>Multiple matches</strong> - press Tab twice to list all options</li>
+<li>Need at least one character - type <code>cd D</code> then Tab (not just <code>cd</code> then Tab)</li>
+<li>Check if item exists - use <code>ls</code> first to see available items</li>
+<li>Multiple matches - press Tab twice to list all options</li>
 </ol>
 <h3 id="problem-3-command-not-found-error"><a class="header" href="#problem-3-command-not-found-error">Problem 3: “‘Command Not Found’ Error”</a></h3>
 <ol>
@@ -450,15 +450,14 @@ notepad list.txt
 </ul>
 <p>Both refer to the same location. When opening files in Windows apps (like Notepad), you may need to use the Windows path format.</p>
 <h3 id="problem-5-command-runs-forever-and-wont-stop"><a class="header" href="#problem-5-command-runs-forever-and-wont-stop">Problem 5: “Command Runs Forever and Won’t Stop”</a></h3>
-<p>Press <strong>Ctrl+C</strong></p>
+<p>Press Ctrl+C</p>
 <h3 id="problem-6-i-need-to-edit-my-last-command"><a class="header" href="#problem-6-i-need-to-edit-my-last-command">Problem 6: “I Need to Edit My Last Command”</a></h3>
 <ol>
-<li>Press <strong>Up Arrow</strong> to show previous command</li>
-<li>Use <strong>arrow keys</strong> to move through it</li>
+<li>Press Up Arrow to show previous command</li>
+<li>Use arrow keys to move through it</li>
 <li>Edit the command</li>
-<li>Press <strong>Enter</strong> to run the modified version</li>
+<li>Press Enter to run the modified version</li>
 </ol>
-<hr>
 <h2 id="pro-tips-for-efficiency"><a class="header" href="#pro-tips-for-efficiency">Pro Tips for Efficiency</a></h2>
 <h3 id="1-use-ls--1-for-screen-reader-friendly-listings"><a class="header" href="#1-use-ls--1-for-screen-reader-friendly-listings">1. Use <code>ls -1</code> for Screen Reader Friendly Listings</a></h3>
 <pre><code class="language-bash">ls -1
@@ -487,20 +486,18 @@ notepad results.txt
 echo "cd means change directory" &gt;&gt; my-notes.txt
 notepad my-notes.txt
 </code></pre>
-<hr>
 <h2 id="recommended-workflow"><a class="header" href="#recommended-workflow">Recommended Workflow</a></h2>
-<p><strong>For every new task:</strong></p>
+<p>For every new task:</p>
 <ol>
-<li><strong>Know where you are:</strong> <code>pwd</code></li>
-<li><strong>See what’s around:</strong> <code>ls -1</code></li>
-<li><strong>Plan your next step:</strong> Think before typing</li>
-<li><strong>Run the command:</strong> Type and press Enter</li>
-<li><strong>Check the output:</strong> Use screen reader or redirect to file</li>
-<li><strong>Move forward:</strong> Next command or <code>cd</code> to next folder</li>
+<li>Know where you are: <code>pwd</code></li>
+<li>See what’s around: <code>ls -1</code></li>
+<li>Plan your next step: Think before typing</li>
+<li>Run the command: Type and press Enter</li>
+<li>Check the output: Use screen reader or redirect to file</li>
+<li>Move forward: Next command or <code>cd</code> to next folder</li>
 </ol>
-<hr>
 <h2 id="quick-reference-card"><a class="header" href="#quick-reference-card">Quick Reference Card</a></h2>
-<pre><code>EVERY COMMAND STARTS WITH:
+<pre><code class="language-plaintext">EVERY COMMAND STARTS WITH:
 1. pwd (where am I?)
 2. ls -1 (what's here?)
 3. cd path (go there)
@@ -519,14 +516,14 @@ WANT TO REPEAT?
 NEED HELP?
 -&gt; man command-name  (or: command --help)
 </code></pre>
-<hr>
 <h2 id="additional-resources"><a class="header" href="#additional-resources">Additional Resources</a></h2>
 <ul>
-<li><strong>NVDA Documentation:</strong> https://www.nvaccess.org/documentation/</li>
-<li><strong>JAWS Documentation:</strong> https://www.freedomscientific.com/support/</li>
-<li><strong>Git for Windows (includes Git Bash):</strong> https://git-scm.com/</li>
-<li><strong>Bash Manual:</strong> https://www.gnu.org/software/bash/manual/</li>
+<li>NVDA Documentation: <a href="https://www.nvaccess.org/documentation/">https://www.nvaccess.org/documentation/</a></li>
+<li>JAWS Documentation: <a href="https://www.freedomscientific.com/support/">https://www.freedomscientific.com/support/</a></li>
+<li>Git for Windows (includes Git Bash): <a href="https://git-scm.com/">https://git-scm.com/</a></li>
+<li>Bash Manual: <a href="https://www.gnu.org/software/bash/manual/">https://www.gnu.org/software/bash/manual/</a></li>
 </ul>
+<!--pagebreak-->
 
                     </main>
 

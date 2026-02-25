@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-d11bd641.js";
+            window.path_to_searchindex_js = "../../searchindex-d0af5d9e.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-19a5926f.js"></script>
+        <script src="../../toc-5b0c6224.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -220,90 +220,81 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="cmd_foundation_cmd_4_environment_variables_aliases-cmd_4_environment_variables_aliases"><a class="header" href="#cmd_foundation_cmd_4_environment_variables_aliases-cmd_4_environment_variables_aliases">CMD-4: Environment Variables &amp; Aliases</a></h1>
-<p><strong>Duration:</strong> 2 hours (for screen reader users)<br><strong>Prerequisites:</strong> CMD-Pre through CMD-3</p>
-<p><strong>Learning Objectives:</strong></p>
+                        <h1 id="cmd-4-environment-variables-path-and-aliases"><a class="header" href="#cmd-4-environment-variables-path-and-aliases">CMD-4: Environment Variables, PATH, and Aliases</a></h1>
+<p>Estimated time: 30-45 minutes</p>
+<h2 id="learning-objectives"><a class="header" href="#learning-objectives">Learning Objectives</a></h2>
 <ul>
-<li>Understand environment variables</li>
-<li>Use variables in commands</li>
-<li>Create custom shortcuts</li>
-<li>Manage system paths</li>
+<li>Read environment variables with <code>%VARNAME%</code></li>
+<li>Inspect and verify programs in the <code>PATH</code></li>
+<li>Create temporary aliases with <code>doskey</code> and understand making them persistent via a startup script</li>
 </ul>
-<hr>
-<h2 id="environment-variables"><a class="header" href="#environment-variables">Environment Variables</a></h2>
-<p>Environment variables store information your system and programs use.</p>
-<h3 id="common-variables"><a class="header" href="#common-variables">Common Variables</a></h3>
-<pre><code class="language-cmd">%USERPROFILE%          :: Your home directory
-%USERNAME%             :: Your username
-%COMPUTERNAME%         :: Your computer name
-%TEMP%                 :: Temporary folder
-%PATH%                 :: Where system looks for executables
-</code></pre>
-<h3 id="using-variables"><a class="header" href="#using-variables">Using Variables</a></h3>
-<pre><code class="language-cmd">cd %USERPROFILE%       :: Go to home directory
-echo %USERNAME%        :: Show your username
-dir %TEMP%             :: Show temp folder
-</code></pre>
-<h3 id="viewing-all-variables"><a class="header" href="#viewing-all-variables">Viewing All Variables</a></h3>
-<pre><code class="language-cmd">set                    :: List all environment variables
-set | find "USER"      :: Find variables containing "USER"
-</code></pre>
-<hr>
-<h2 id="creating-shortcuts-with-doskey"><a class="header" href="#creating-shortcuts-with-doskey">Creating Shortcuts with Doskey</a></h2>
-<p>Create command aliases:</p>
-<pre><code class="language-cmd">doskey ll=dir /B
-doskey home=cd %USERPROFILE%
-doskey myproject=cd C:\Users\%USERNAME%\Documents\MyProject
-</code></pre>
-<p>Now you can use:</p>
-<pre><code class="language-cmd">ll                     :: Instead of dir /B
-home                   :: Instead of cd %USERPROFILE%
-myproject              :: Go directly to project folder
-</code></pre>
-<hr>
-<h2 id="batch-files-for-shortcuts"><a class="header" href="#batch-files-for-shortcuts">Batch Files for Shortcuts</a></h2>
-<p>Create a <code>.bat</code> file for complex shortcuts:</p>
-<p><strong>File: go-to-project.bat</strong></p>
-<pre><code class="language-batch">@echo off
-cd C:\Users\%USERNAME%\Documents\3DProjects
-dir /B
-</code></pre>
-<p>Run it:</p>
-<pre><code class="language-cmd">go-to-project.bat
-</code></pre>
-<hr>
-<h2 id="practice-exercises"><a class="header" href="#practice-exercises">Practice Exercises</a></h2>
-<h3 id="exercise-1-use-variables"><a class="header" href="#exercise-1-use-variables">Exercise 1: Use Variables</a></h3>
-<ol>
-<li>Run: <code>echo %USERPROFILE%</code></li>
-<li>Run: <code>cd %USERPROFILE%</code></li>
-<li>Run: <code>echo %USERNAME%</code></li>
-<li>Run: <code>dir %USERPROFILE%\Documents</code></li>
-</ol>
-<p><strong>Goal:</strong> Comfortable using variables.</p>
-<h3 id="exercise-2-create-shortcuts"><a class="header" href="#exercise-2-create-shortcuts">Exercise 2: Create Shortcuts</a></h3>
-<ol>
-<li>Run: <code>doskey home=cd %USERPROFILE%</code></li>
-<li>Run: <code>home</code> (should take you to home directory)</li>
-<li>Create another: <code>doskey docs=cd %USERPROFILE%\Documents</code></li>
-<li>Run: <code>docs</code> (should go to Documents)</li>
-</ol>
-<p><strong>Goal:</strong> Create useful shortcuts.</p>
-<hr>
-<h2 id="checkpoint-questions"><a class="header" href="#checkpoint-questions">Checkpoint Questions</a></h2>
-<ol>
-<li>What is an environment variable?</li>
-<li>What does <code>%USERPROFILE%</code> represent?</li>
-<li>How do you view all environment variables?</li>
-<li>How do you create a doskey alias?</li>
-<li>Why are shortcuts useful?</li>
-</ol>
-<hr>
-<h2 id="next-steps"><a class="header" href="#next-steps">Next Steps</a></h2>
+<h2 id="materials"><a class="header" href="#materials">Materials</a></h2>
 <ul>
-<li>Complete exercises</li>
-<li>Move to <strong>CMD-5: Filling in the Gaps</strong></li>
+<li>Command Prompt</li>
 </ul>
+<h2 id="step-by-step-tasks"><a class="header" href="#step-by-step-tasks">Step-by-step Tasks</a></h2>
+<ol>
+<li>Show your username and home path with <code>echo %USERNAME%</code> and <code>echo %USERPROFILE%</code>.</li>
+<li>Inspect <code>echo %PATH%</code> and identify whether <code>openscad</code> or <code>code</code> would be found.</li>
+<li>Run <code>where openscad</code> and note the result.</li>
+<li>Create a temporary alias: <code>doskey preview=openscad $*</code> and test <code>preview myfile.scad</code>.</li>
+<li>Open your startup script (<code>notepad.exe autorun.bat</code>) and add the doskey line to make it persistent (advanced).</li>
+</ol>
+<h2 id="checkpoints"><a class="header" href="#checkpoints">Checkpoints</a></h2>
+<ul>
+<li>After step 3 you can determine whether a program will be found by <code>PATH</code>.</li>
+</ul>
+<h2 id="quiz---lesson-cmd4"><a class="header" href="#quiz---lesson-cmd4">Quiz - Lesson CMD.4</a></h2>
+<ol>
+<li>How do you print an environment variable?</li>
+<li>What is the purpose of <code>PATH</code>?</li>
+<li>How do you check whether <code>openscad</code> is available?</li>
+<li>How do you create a temporary alias in CMD?</li>
+<li>Where would you make an alias permanent?</li>
+<li>True or False: Environment variable names in CMD are case-sensitive.</li>
+<li>Explain why having a program in your PATH is useful compared to always using its full file path.</li>
+<li>Write a command that would create a doskey alias called <code>slicer</code> for the OpenSCAD executable.</li>
+<li>What file or technique would you use to make a doskey alias persist across CMD sessions?</li>
+<li>Describe a practical benefit of using the <code>%TEMP%</code> directory for temporary files in a 3D printing workflow.</li>
+<li>You have a custom batch script at <code>C:\Scripts\backup_models.bat</code> that you want to run from anywhere as <code>backup-now</code>. What steps would you take to make this work?</li>
+<li>Explain the difference between setting an environment variable in the current session with <code>set</code> vs. using <code>setx</code> for permanence.</li>
+<li>Design a strategy for managing multiple 3D printing projects, each with different tool paths and directories; show how to structure environment variables for each.</li>
+<li>If a program is not found by <code>where</code>, what are the possible reasons, and how would you troubleshoot?</li>
+<li>Describe how you would verify that your CMD autorun script is loading correctly and how to debug issues if aliases or environment variables don’t appear after opening a new CMD session.</li>
+</ol>
+<h2 id="extension-problems"><a class="header" href="#extension-problems">Extension Problems</a></h2>
+<ol>
+<li>Add a folder to PATH for a test program (describe steps; do not change system PATH without admin).</li>
+<li>Create a short autorun snippet that sets two aliases and test re-opening CMD.</li>
+<li>Use <code>where</code> to list the path for several common programs.</li>
+<li>Explore <code>%TEMP%</code> and create a file there.</li>
+<li>Save a copy of your current PATH to a text file and examine it in your editor.</li>
+<li>Create a CMD autorun script that loads custom aliases and environment variables for your 3D printing workflow; test it in a new session.</li>
+<li>Build a “project profile” batch script that sets environment variables for CAD, slicing, and print directories; switch between profiles for different projects.</li>
+<li>Write a batch script that audits your current environment variables and creates a summary report of what’s set and why.</li>
+<li>Design a custom alias system using doskey for common 3D printing commands; document the aliases and their purposes.</li>
+<li>Create a profile migration guide: document how to export and import your CMD aliases and variables across machines for consistent workflows.</li>
+<li>Implement a safe PATH modification script: create a utility that allows you to add/remove directories from PATH for the current session only; show how to make it permanent with <code>setx</code>.</li>
+<li>Build a comprehensive autorun framework: create separate <code>.bat</code> files for aliases, environment variables, and helper macros; have your main autorun load all of them.</li>
+<li>Develop an environment validation tool: write a batch script that checks whether all required programs (OpenSCAD, slicers, etc.) are accessible via PATH; report findings and suggest fixes.</li>
+<li>Create a project-switching alias system: design a batch script that changes all environment variables and aliases based on the current project; test switching between multiple projects.</li>
+<li>Build a troubleshooting guide: create a batch script that exports your current environment state (variables, aliases, PATH) to a timestamped file, allowing you to compare states before and after changes.</li>
+</ol>
+<h2 id="references"><a class="header" href="#references">References</a></h2>
+<ul>
+<li>Microsoft. (2024). <em>Environment variables in CMD</em>. <a href="https://example.com">https://example.com</a></li>
+<li>Microsoft. (2024). <em>DOSKEY command reference</em>. <a href="https://example.com">https://example.com</a></li>
+<li>Microsoft. (2024). <em>WHERE command reference</em>. <a href="https://example.com">https://example.com</a></li>
+</ul>
+<h2 id="helpful-resources"><a class="header" href="#helpful-resources">Helpful Resources</a></h2>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/set">Environment Variables in CMD</a></li>
+<li><a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/path">Understanding the PATH Variable</a></li>
+<li><a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/doskey">DOSKEY Alias Reference</a></li>
+<li><a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/where">WHERE Command for Locating Programs</a></li>
+<li><a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/setx">SETX for Permanent Variables</a></li>
+</ul>
+<!--pagebreak-->
 
                     </main>
 

@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-d11bd641.js";
+            window.path_to_searchindex_js = "../../searchindex-d0af5d9e.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-19a5926f.js"></script>
+        <script src="../../toc-5b0c6224.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -220,293 +220,170 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="gitbash_foundation_gitbash_1_navigation-gitbash_1_navigation"><a class="header" href="#gitbash_foundation_gitbash_1_navigation-gitbash_1_navigation">GitBash-1: Navigation - Moving Around Your File System</a></h1>
-<p><strong>Duration:</strong> 1.5-2 hours (for screen reader users)<br><strong>Prerequisites:</strong> GitBash-Pre and GitBash-0<br><strong>Learning Objectives:</strong></p>
+                        <h1 id="gitbash-1-navigation---moving-around-your-file-system"><a class="header" href="#gitbash-1-navigation---moving-around-your-file-system">GitBash-1: Navigation - Moving Around Your File System</a></h1>
+<p><strong>Duration:</strong> 1 class period
+<strong>Prerequisite:</strong> GitBash-0 (Getting Started)</p>
+<h2 id="learning-objectives"><a class="header" href="#learning-objectives">Learning Objectives</a></h2>
+<p>By the end of this lesson, you will be able to:</p>
 <ul>
-<li>Navigate confidently to any folder location</li>
-<li>Understand and use relative vs absolute paths</li>
-<li>Use shortcuts to move between common folders</li>
-<li>Organize your file system logically</li>
+<li>Use <code>pwd</code> to print your current location</li>
+<li>Use <code>cd</code> to move between directories</li>
+<li>Use <code>ls</code> (and its flags) to list files and folders</li>
+<li>Use wildcards <code>*</code> and <code>?</code> to filter listings</li>
+<li>Navigate relative vs. absolute paths</li>
+<li>Search for files by name and extension</li>
+</ul>
+<h2 id="materials"><a class="header" href="#materials">Materials</a></h2>
+<ul>
+<li>Git Bash</li>
+<li>Text editor (Notepad or VS Code)</li>
 </ul>
 <hr>
-<h2 id="core-navigation-commands"><a class="header" href="#core-navigation-commands">Core Navigation Commands</a></h2>
-<h3 id="command-cd-change-directory"><a class="header" href="#command-cd-change-directory">Command: <code>cd</code> (Change Directory)</a></h3>
-<p>The most important navigation command.</p>
-<p><strong>Basic usage:</strong></p>
-<pre><code class="language-bash">cd FolderName          # Go into a folder
-cd ..                  # Go up one level
-cd /                   # Go to root
-cd ~                   # Go to home directory
-cd -                   # Go to previous directory
-</code></pre>
-<h3 id="command-ls-list-contents"><a class="header" href="#command-ls-list-contents">Command: <code>ls</code> (List Contents)</a></h3>
-<p><strong>What it does:</strong> Shows files and folders in current location</p>
-<pre><code class="language-bash">ls                     # List all
-ls -l                  # List with details
-ls -la                 # List all including hidden files
-ls *.txt               # List only .txt files
-</code></pre>
-<h3 id="command-pwd-print-working-directory"><a class="header" href="#command-pwd-print-working-directory">Command: <code>pwd</code> (Print Working Directory)</a></h3>
-<p><strong>What it does:</strong> Shows current path</p>
-<pre><code class="language-bash">pwd                    # Shows current location
-</code></pre>
+<h2 id="commands-covered-in-this-lesson"><a class="header" href="#commands-covered-in-this-lesson">Commands Covered in This Lesson</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Command</th><th>What It Does</th></tr>
+</thead>
+<tbody>
+<tr><td><code>pwd</code></td><td>Print Working Directory - shows where you are</td></tr>
+<tr><td><code>cd path</code></td><td>Change Directory - move to a new location</td></tr>
+<tr><td><code>ls</code></td><td>List - shows files and folders in current location</td></tr>
+<tr><td><code>ls -1</code></td><td>List names only, one per line (screen reader friendly)</td></tr>
+<tr><td><code>ls -1 -F</code></td><td>List names with type indicators (/ for directories)</td></tr>
+<tr><td><code>ls *.extension</code></td><td>List files matching a pattern</td></tr>
+</tbody>
+</table>
+</div>
 <hr>
-<h2 id="understanding-paths-in-git-bash"><a class="header" href="#understanding-paths-in-git-bash">Understanding Paths in Git Bash</a></h2>
-<h3 id="absolute-paths-full-address"><a class="header" href="#absolute-paths-full-address">Absolute Paths (Full Address)</a></h3>
-<p>An absolute path starts from the root and shows the complete location:</p>
-<pre><code>/c/Users/YourName/Documents/3DPrinting
+<h2 id="pwd---where-am-i"><a class="header" href="#pwd---where-am-i"><code>pwd</code> - Where Am I?</a></h2>
+<p>Type <code>pwd</code> and press <code>Enter</code>. Git Bash prints the full path to your current location.</p>
+<pre><code class="language-bash">pwd
+# Output: /c/Users/YourName
 </code></pre>
-<p><strong>Breaking it down:</strong></p>
-<ul>
-<li><code>/c/</code> = The C: drive (root)</li>
-<li><code>Users</code> = First folder</li>
-<li><code>YourName</code> = Your user folder</li>
-<li><code>Documents</code> = Documents folder</li>
-<li><code>3DPrinting</code> = Your 3D printing folder</li>
-</ul>
-<p><strong>To navigate to it:</strong></p>
-<pre><code class="language-bash">cd /c/Users/YourName/Documents/3DPrinting
-</code></pre>
-<h3 id="relative-paths-short-directions"><a class="header" href="#relative-paths-short-directions">Relative Paths (Short Directions)</a></h3>
-<p>A relative path is like giving directions from where you are now:</p>
-<pre><code>cd Documents/3DPrinting
+<p><strong>When to use:</strong> Always run this if you’re unsure of your current location.</p>
+<hr>
+<h2 id="cd---changing-directories"><a class="header" href="#cd---changing-directories"><code>cd</code> - Changing Directories</a></h2>
+<p><code>cd</code> stands for “change directory.”</p>
+<pre><code class="language-bash"># Go to Documents
+cd Documents
+
+# Go up one level to parent directory
 cd ..
-cd ../..
+
+# Go to root of file system
+cd /
+
+# Go to home directory
+cd ~
+
+# Go to a specific path
+cd /c/Users/YourName/Documents/3D_Projects
+
+# Go to previous directory
+cd -
 </code></pre>
-<p><strong>Shortcuts:</strong></p>
+<hr>
+<h2 id="ls---listing-files-and-folders"><a class="header" href="#ls---listing-files-and-folders"><code>ls</code> - Listing Files and Folders</a></h2>
+<p>Use <code>ls -1</code> for screen reader compatibility — names only, one per line.</p>
+<pre><code class="language-bash"># List all files and folders (names only, one per line)
+ls -1
+
+# List only files (no hidden, no directories)
+ls -1 -p | grep -v /
+
+# List only directories
+ls -1 -d */
+</code></pre>
+<hr>
+<h2 id="wildcards---finding-files-by-pattern"><a class="header" href="#wildcards---finding-files-by-pattern">Wildcards - Finding Files by Pattern</a></h2>
+<p>Wildcards help you find files without typing the full name.</p>
+<p><strong><code>*</code> (asterisk)</strong> matches any number of characters:</p>
+<pre><code class="language-bash"># List all .scad files
+ls *.scad
+
+# List all files starting with "part"
+ls part*
+
+# List all files ending with "_final"
+ls *_final*
+</code></pre>
+<p><strong><code>?</code> (question mark)</strong> matches exactly one character:</p>
+<pre><code class="language-bash"># Find files like model1.scad, model2.scad (but not model12.scad)
+ls model?.scad
+</code></pre>
+<hr>
+<h2 id="step-by-step-practice"><a class="header" href="#step-by-step-practice">Step-by-step Practice</a></h2>
+<ol>
+<li>Run <code>pwd</code> and confirm your location</li>
+<li>Move to <code>Documents</code>: <code>cd Documents</code></li>
+<li>Confirm you moved: <code>pwd</code></li>
+<li>List files and folders: <code>ls -1</code></li>
+<li>List only files: <code>ls -1 -p | grep -v /</code></li>
+<li>Go back up: <code>cd ..</code></li>
+<li>Search for files: <code>ls *.txt</code></li>
+</ol>
+<hr>
+<h2 id="checkpoints"><a class="header" href="#checkpoints">Checkpoints</a></h2>
+<p>After this lesson, you should be able to:</p>
 <ul>
-<li><code>.</code> = Current folder</li>
-<li><code>..</code> = Parent folder (up one level)</li>
-<li><code>~</code> = Home folder</li>
-<li><code>-</code> = Previous directory</li>
+<li><input disabled="" type="checkbox"> Navigate to any folder using <code>cd</code></li>
+<li><input disabled="" type="checkbox"> Confirm your location with <code>pwd</code></li>
+<li><input disabled="" type="checkbox"> List files and folders with <code>ls -1</code></li>
+<li><input disabled="" type="checkbox"> Use wildcards to find files by pattern</li>
+<li><input disabled="" type="checkbox"> Move between absolute and relative paths confidently</li>
 </ul>
-<h3 id="benefits-of-relative-paths"><a class="header" href="#benefits-of-relative-paths">Benefits of Relative Paths</a></h3>
-<ul>
-<li><strong>Shorter to type</strong></li>
-<li><strong>Better for portability</strong> (scripts work on different computers)</li>
-<li><strong>Easy to navigate hierarchies</strong></li>
-</ul>
-<hr>
-<h2 id="common-navigation-patterns"><a class="header" href="#common-navigation-patterns">Common Navigation Patterns</a></h2>
-<h3 id="pattern-1-navigating-down-into-folders"><a class="header" href="#pattern-1-navigating-down-into-folders">Pattern 1: Navigating Down (Into Folders)</a></h3>
-<pre><code class="language-bash">/c/Users/YourName&gt;cd Documents
-/c/Users/YourName/Documents&gt;cd 3DModels
-/c/Users/YourName/Documents/3DModels&gt;
-</code></pre>
-<p>Each <code>cd FolderName</code> goes into that folder.</p>
-<h3 id="pattern-2-navigating-up-out-of-folders"><a class="header" href="#pattern-2-navigating-up-out-of-folders">Pattern 2: Navigating Up (Out of Folders)</a></h3>
-<pre><code class="language-bash">/c/Users/YourName/Documents/3DModels&gt;cd ..
-/c/Users/YourName/Documents&gt;cd ..
-/c/Users/YourName&gt;cd ..
-/c/Users&gt;
-</code></pre>
-<p>Each <code>cd ..</code> goes up one level.</p>
-<h3 id="pattern-3-jumping-to-a-known-path"><a class="header" href="#pattern-3-jumping-to-a-known-path">Pattern 3: Jumping to a Known Path</a></h3>
-<pre><code class="language-bash">/c/Users/YourName/Documents/DeepFolder/Another/Level&gt;cd /c/Users/YourName
-/c/Users/YourName&gt;
-</code></pre>
-<p>Type the full path and go there directly.</p>
-<h3 id="pattern-4-going-home"><a class="header" href="#pattern-4-going-home">Pattern 4: Going Home</a></h3>
-<pre><code class="language-bash">cd ~                   # Go to your home folder (Any location)
-cd                     # Also goes to home directory
-</code></pre>
-<hr>
-<h2 id="special-folders-and-shortcuts"><a class="header" href="#special-folders-and-shortcuts">Special Folders and Shortcuts</a></h2>
-<h3 id="key-directories"><a class="header" href="#key-directories">Key Directories</a></h3>
-<pre><code class="language-bash">~                      # Your home folder (e.g., /c/Users/YourName)
-~/Desktop             # Your Desktop
-~/Documents           # Your Documents
-~/Downloads           # Your Downloads
-/c/Program Files      # Program Files folder
-/                     # Root of entire system
-</code></pre>
-<h3 id="using-these-shortcuts"><a class="header" href="#using-these-shortcuts">Using These Shortcuts</a></h3>
-<pre><code class="language-bash">cd ~/Documents/3DModels
-cd ~/Desktop
-cd /c/Program Files
-</code></pre>
-<hr>
-<h2 id="tab-completion-essential-skill"><a class="header" href="#tab-completion-essential-skill">Tab Completion (Essential Skill!)</a></h2>
-<p>Tab completion saves typing and is perfect for screen readers.</p>
-<p><strong>How it works:</strong></p>
+<h2 id="quiz---lesson-gitbash1"><a class="header" href="#quiz---lesson-gitbash1">Quiz - Lesson GitBash.1</a></h2>
 <ol>
-<li>Type first few characters of a folder name</li>
-<li>Press <strong>Tab</strong></li>
-<li>Git Bash completes it</li>
+<li>What does <code>pwd</code> show?</li>
+<li>How do you list directories only with <code>ls</code>?</li>
+<li>What wildcard matches any number of characters?</li>
+<li>How do you list files with the <code>.scad</code> extension?</li>
+<li>Give an example of an absolute path and a relative path.</li>
+<li>True or False: The <code>*</code> wildcard matches exactly one character.</li>
+<li>Explain the difference between <code>ls -1</code> and <code>ls -1 -d */</code>.</li>
+<li>Write a command that would list all <code>.txt</code> files in your Documents folder using a wildcard.</li>
+<li>How would you search for files containing “part” in their name across multiple files?</li>
+<li>Describe a practical scenario where using wildcards saves time in a 3D printing workflow.</li>
+<li>What happens when you use <code>ls model?.scad</code> versus <code>ls model*.scad</code>?</li>
+<li>How would you navigate to a folder whose name contains both spaces and special characters?</li>
+<li>If you’re in <code>~/Documents/Projects/3D</code> and you want to go to <code>~/Documents/Resources</code>, what command would you use?</li>
+<li>Write a command sequence that navigates to the Downloads folder, lists only files, then returns to home.</li>
+<li>Explain the purpose of using <code>ls -1</code> specifically in a screen reader context.</li>
 </ol>
-<h3 id="example-tab-completion-in-action"><a class="header" href="#example-tab-completion-in-action">Example: Tab Completion in Action</a></h3>
-<pre><code>/c/Users/YourName&gt;cd Doc  [then press Tab]
-/c/Users/YourName&gt;cd Documents
-</code></pre>
-<p>Git Bash filled in the rest. Press <strong>Enter</strong> to go there.</p>
-<h3 id="tab-completion-tips"><a class="header" href="#tab-completion-tips">Tab Completion Tips</a></h3>
-<ul>
-<li><strong>Screen reader hears the whole completed command</strong></li>
-<li><strong>Faster and more accurate</strong> than typing full names</li>
-<li><strong>Works with file names too</strong></li>
-<li><strong>Press Tab multiple times</strong> to cycle through options if multiple matches</li>
-</ul>
-<hr>
-<h2 id="screen-reader-tips-for-navigation"><a class="header" href="#screen-reader-tips-for-navigation">Screen Reader Tips for Navigation</a></h2>
-<h3 id="for-nvda-users"><a class="header" href="#for-nvda-users">For NVDA Users</a></h3>
-<p>When navigating:</p>
-<ol>
-<li>After each <code>cd</code> command, run <code>pwd</code> to confirm new location</li>
-<li>Run <code>ls | less</code> to see contents one page at a time</li>
-<li>Use <strong>NVDA+Down</strong> to read output after commands</li>
-</ol>
-<h3 id="for-jaws-users"><a class="header" href="#for-jaws-users">For JAWS Users</a></h3>
-<p>When navigating:</p>
-<ol>
-<li>After each <code>cd</code> command, run <code>pwd</code> to confirm location</li>
-<li>Use <strong>Insert+Down Arrow</strong> to read output</li>
-<li>Use <code>ls &gt; file.txt</code> then open in Notepad for complex listings</li>
-</ol>
-<h3 id="best-practice"><a class="header" href="#best-practice">Best Practice</a></h3>
-<p>Always confirm your location:</p>
-<pre><code class="language-bash">cd FolderName
-pwd                    # Run this to verify
-</code></pre>
-<hr>
-<h2 id="practice-exercises"><a class="header" href="#practice-exercises">Practice Exercises</a></h2>
-<h3 id="exercise-1-basic-down-navigation"><a class="header" href="#exercise-1-basic-down-navigation">Exercise 1: Basic Down Navigation</a></h3>
-<ol>
-<li>Start at home: <code>cd ~</code></li>
-<li>Run <code>pwd</code> to see your location</li>
-<li>List contents: <code>ls</code></li>
-<li>Navigate into a folder: <code>cd Documents</code></li>
-<li>Run <code>pwd</code> to confirm</li>
-<li>List contents: <code>ls</code></li>
-</ol>
-<p><strong>Goal:</strong> Feel comfortable going into folders and confirming location.</p>
-<h3 id="exercise-2-using-tab-completion"><a class="header" href="#exercise-2-using-tab-completion">Exercise 2: Using Tab Completion</a></h3>
-<ol>
-<li>Start at: <code>cd ~</code></li>
-<li>Type: <code>cd D</code> (just that letter)</li>
-<li>Press <strong>Tab</strong> (let Git Bash complete it)</li>
-<li>Press <strong>Enter</strong></li>
-<li>Run <code>pwd</code> to confirm you’re in Documents</li>
-</ol>
-<p><strong>Goal:</strong> Tab completion feels natural and fast.</p>
-<h3 id="exercise-3-navigating-up"><a class="header" href="#exercise-3-navigating-up">Exercise 3: Navigating Up</a></h3>
-<ol>
-<li>Navigate into several folders: <code>cd Documents</code>, <code>cd folder1</code>, <code>cd subfolder</code>, etc.</li>
-<li>From deep down, run <code>pwd</code> to see your full path</li>
-<li>Use <code>cd ..</code> to go up one level</li>
-<li>Run <code>pwd</code> to confirm</li>
-<li>Repeat <code>cd ..</code> several more times</li>
-</ol>
-<p><strong>Goal:</strong> Comfortable moving back up through the hierarchy.</p>
-<h3 id="exercise-4-absolute-path-navigation"><a class="header" href="#exercise-4-absolute-path-navigation">Exercise 4: Absolute Path Navigation</a></h3>
-<ol>
-<li>Navigate deep into folders (3+ levels)</li>
-<li>From there, type: <code>cd ~</code> (absolute path to home)</li>
-<li>Run <code>pwd</code> to confirm you’re home</li>
-<li>From home, type the full path to another location you know</li>
-<li>Navigate there directly</li>
-</ol>
-<p><strong>Goal:</strong> Understand absolute paths work from anywhere.</p>
-<h3 id="exercise-5-creating-a-navigation-path"><a class="header" href="#exercise-5-creating-a-navigation-path">Exercise 5: Creating a Navigation Path</a></h3>
-<ol>
-<li>Create a folder structure:
-<pre><code class="language-bash">mkdir 3DPractice
-cd 3DPractice
-mkdir Models
-cd Models
-mkdir OpenSCAD
-cd OpenSCAD
-</code></pre>
-</li>
-<li>Run <code>pwd</code> at each level</li>
-<li>Save your location: <code>pwd &gt; location.txt</code></li>
-<li>Navigate back up using only <code>cd ..</code></li>
-</ol>
-<p><strong>Goal:</strong> Build and navigate your own folder structure.</p>
-<hr>
-<h2 id="checkpoint-questions"><a class="header" href="#checkpoint-questions">Checkpoint Questions</a></h2>
-<p>After this lesson, you should be able to answer:</p>
-<ol>
-<li>What’s the difference between <code>cd Documents</code> and <code>cd /c/Users/YourName/Documents</code>?</li>
-<li>What does <code>cd ..</code> do?</li>
-<li>How do you go directly to your home folder?</li>
-<li>What’s an absolute path? Give an example.</li>
-<li>What’s a relative path? Give an example.</li>
-<li>How do you confirm your current location?</li>
-<li>What does Tab completion do?</li>
-<li>How would you navigate 3 levels deep, then back home?</li>
-<li>What’s the difference between <code>.</code> and <code>..</code>?</li>
-<li>If you’re lost, what command should you run first?</li>
-</ol>
-<p><strong>Answer all 10 confidently before moving to GitBash-2.</strong></p>
-<hr>
 <h2 id="extension-problems"><a class="header" href="#extension-problems">Extension Problems</a></h2>
 <ol>
-<li>Create a folder with spaces in the name (e.g., <code>My Projects</code>) and navigate to it</li>
-<li>Use Tab completion to navigate into 5+ levels of folders without typing full paths</li>
-<li>Create a script that documents your navigation (save <code>pwd</code> output at each level)</li>
-<li>Navigate using absolute paths from different starting locations to the same destination</li>
-<li>Build a complex folder tree and practice navigating it using only relative paths</li>
-<li>Create a “favorites” list: document the full paths to folders you use often</li>
-<li>Time yourself: navigate to 10 different locations using the fastest method possible</li>
-<li>Create folders named with numbers (01Folder, 02Folder, etc.) and practice Tab completion</li>
-<li>Navigate to a destination, save the path, navigate away, then navigate back using the saved path</li>
-<li>Challenge: Navigate to a destination using only relative paths without using <code>pwd</code> to check location (navigate “blind”)</li>
+<li>Write a one-line command that lists <code>.scad</code> files and saves to <code>scad_list.txt</code>.</li>
+<li>Use <code>ls -1 ~/Documents | less</code> to page through long listings.</li>
+<li>Combine <code>ls</code> with <code>grep</code> to search for a filename pattern.</li>
+<li>Create a shortcut alias in the session for a long path and test it.</li>
+<li>Practice tab-completion in a directory with many similarly named files.</li>
+<li>Build a bash script that recursively lists all <code>.scad</code> and <code>.stl</code> files in a directory tree; save the results to a file.</li>
+<li>Compare the output of <code>ls</code>, <code>ls -1</code>, <code>ls -la</code>, and <code>ls -1 -d */</code> to understand the flags; document what each command does.</li>
+<li>Create a filtering command that displays only files modified in the last 7 days; test it on your documents folder.</li>
+<li>Write a non-visual guide to Git Bash navigation; include descriptions of common patterns and how to verify directory contents audibly.</li>
+<li>Develop a navigation workflow for a typical 3D printing project: move between CAD, slicing, and print-log folders efficiently; document the commands.</li>
+<li>Create a complex wildcard search: find all files in a folder and subfolders that match multiple patterns (e.g., <code>*_v1.*</code> or <code>*_final.*</code>).</li>
+<li>Build a script that navigates through a folder tree, counts files at each level, and reports the structure.</li>
+<li>Document the output differences between <code>ls</code>, <code>ls -1</code>, <code>ls -la</code>, and <code>ls -1 -d */</code>; explain when to use each.</li>
+<li>Create a navigation “cheat sheet” as a bash script that prints common paths and how to navigate to them.</li>
+<li>Design a project folder structure on your computer, document each path, then create a script that validates all folders exist.</li>
 </ol>
-<hr>
-<h2 id="common-issues"><a class="header" href="#common-issues">Common Issues</a></h2>
-<h3 id="no-such-file-or-directory"><a class="header" href="#no-such-file-or-directory">“No such file or directory”</a></h3>
-<p><strong>Problem:</strong> <code>cd FolderName</code> says the folder doesn’t exist</p>
-<p><strong>Solutions:</strong></p>
-<ol>
-<li>Check spelling carefully (bash is case-sensitive!)</li>
-<li>Run <code>ls</code> to see correct folder names</li>
-<li>Use Tab completion instead of typing</li>
-<li>Use absolute path: <code>cd /c/Users/YourName/Documents</code> (get exact path and type it)</li>
-</ol>
-<h3 id="im-lost---dont-know-where-i-am"><a class="header" href="#im-lost---dont-know-where-i-am">“I’m lost - don’t know where I am”</a></h3>
-<p><strong>Solution - Always run this:</strong></p>
-<pre><code class="language-bash">pwd
-</code></pre>
-<p>This shows your current location.</p>
-<h3 id="tab-completion-isnt-working"><a class="header" href="#tab-completion-isnt-working">Tab completion isn’t working</a></h3>
-<p><strong>Problem:</strong> You press Tab but nothing happens</p>
-<p><strong>Solutions:</strong></p>
-<ol>
-<li>Make sure you typed at least one character</li>
-<li>Make sure the folder actually exists (run <code>ls</code> to check)</li>
-<li>If multiple matches exist, press Tab again to cycle through them</li>
-<li>Just type the full name manually if Tab isn’t cooperating</li>
-</ol>
-<hr>
-<h2 id="quick-reference---navigation-commands"><a class="header" href="#quick-reference---navigation-commands">Quick Reference - Navigation Commands</a></h2>
-<pre><code class="language-bash">pwd                         # Show current location
-cd FolderName               # Go into a folder
-cd ..                       # Go up one level
-cd ../..                    # Go up two levels
-cd /                        # Go to root
-cd ~                        # Go to home folder
-cd -                        # Go to previous folder
-ls                          # List folder contents
-ls -l                       # List with details
-ls -la                      # List including hidden files
-</code></pre>
-<hr>
-<h2 id="screen-reader-accessibility-notes"><a class="header" href="#screen-reader-accessibility-notes">Screen Reader Accessibility Notes</a></h2>
+<h2 id="references"><a class="header" href="#references">References</a></h2>
 <ul>
-<li>Git Bash output is naturally linear, perfect for screen readers</li>
-<li>Use <code>ls</code> for clean, one-per-line listings</li>
-<li>Use <code>| less</code> to pause output between screens: <code>ls | less</code></li>
-<li>Save complex listings to files: <code>ls &gt; output.txt</code></li>
-<li>Always run <code>pwd</code> after moving to confirm your new location</li>
-<li>Use <code>notepad.exe filename</code> to open files for editing</li>
+<li>GNU. (2024). <em>ls command reference</em>. <a href="https://example.com">https://example.com</a></li>
+<li>GNU. (2024). <em>Bash wildcards and globbing</em>. <a href="https://example.com">https://example.com</a></li>
+<li>GNU. (2024). <em>Navigation best practices in Bash</em>. <a href="https://example.com">https://example.com</a></li>
 </ul>
-<hr>
-<h2 id="next-steps"><a class="header" href="#next-steps">Next Steps</a></h2>
+<h2 id="helpful-resources"><a class="header" href="#helpful-resources">Helpful Resources</a></h2>
 <ul>
-<li>Complete all practice exercises</li>
-<li>Pass the checkpoint questions</li>
-<li>Move to <strong>GitBash-2: File &amp; Folder Manipulation</strong></li>
+<li><a href="https://www.gnu.org/software/coreutils/manual/html_node/ls-invocation.html">ls Command Reference</a></li>
+<li><a href="https://www.gnu.org/software/bash/manual/htmlnode/Pattern-Matching.html">Bash Wildcards and Globbing</a></li>
+<li><a href="https://linuxcommand.org/lc3lts0020.php">Navigation Best Practices</a></li>
+<li><a href="https://linuxize.com/post/linux-cd-command/">Relative and Absolute Paths in Bash</a></li>
+<li><a href="https://www.nvaccess.org/documentation/">Screen Reader Tips for Git Bash</a></li>
 </ul>
+<!--pagebreak-->
 
                     </main>
 

@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-d11bd641.js";
+            window.path_to_searchindex_js = "../../searchindex-d0af5d9e.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-19a5926f.js"></script>
+        <script src="../../toc-5b0c6224.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -222,16 +222,16 @@
                     <main>
                         <h1 id="gitbash_foundation_gitbash_tutorial-gitbash_tutorial"><a class="header" href="#gitbash_foundation_gitbash_tutorial-gitbash_tutorial">Git Bash Tutorial</a></h1>
 <p>Estimated time: 30-45 minutes</p>
-<p><strong>Learning Objectives</strong></p>
+<p>Learning Objectives</p>
 <ul>
 <li>Launch Git Bash and identify the prompt</li>
 <li>Understand and use basic path notation (<code>~</code>, <code>./</code>, <code>../</code>)</li>
 <li>Use <code>pwd</code>, <code>ls -1</code>, and <code>cd</code> to navigate the filesystem</li>
 <li>Open files in an external editor and run simple commands</li>
 </ul>
-<p><strong>Materials</strong></p>
+<p>Materials</p>
 <ul>
-<li>A computer with Git Bash installed (install via https://git-scm.com/)</li>
+<li>A computer with Git Bash installed (install via <a href="https://git-scm.com/">https://git-scm.com/</a>)</li>
 <li>Access to a text editor (Notepad, VS Code)</li>
 </ul>
 <h2 id="pre-requisite-knowledge"><a class="header" href="#pre-requisite-knowledge">Pre-Requisite Knowledge</a></h2>
@@ -240,9 +240,8 @@
 <li>Familiarity with file/folder concepts and basic OS navigation</li>
 <li>Basic screen-reading familiarity (if applicable)</li>
 </ul>
-<hr>
 <h2 id="what-is-git-bash"><a class="header" href="#what-is-git-bash">What is Git Bash?</a></h2>
-<p>Git Bash is a free terminal application for Windows that provides a <strong>Bash</strong> (Unix shell) environment. It is installed as part of <strong>Git for Windows</strong>. When you open Git Bash, you can use Unix commands like <code>ls</code>, <code>cat</code>, <code>grep</code>, and <code>echo</code> - the same commands used on Linux and macOS - right on your Windows computer.</p>
+<p>Git Bash is a free terminal application for Windows that provides a Bash (Unix shell) environment. It is installed as part of Git for Windows. When you open Git Bash, you can use Unix commands like <code>ls</code>, <code>cat</code>, <code>grep</code>, and <code>echo</code> - the same commands used on Linux and macOS - right on your Windows computer.</p>
 <p>Git Bash is useful for:</p>
 <ul>
 <li>Running CLI programs (like OpenSCAD, slicers, or 3DMake)</li>
@@ -250,10 +249,8 @@
 <li>Automating repetitive tasks with scripts</li>
 <li>Accessibility: works cleanly with NVDA, JAWS, and other screen readers</li>
 </ul>
-<hr>
 <h2 id="what-well-do-and-why"><a class="header" href="#what-well-do-and-why">What We’ll Do and Why</a></h2>
 <p>You’ll use Git Bash to run CLI programs, navigate the filesystem, and manipulate files - tasks that are especially efficient when using a keyboard or a screen reader.</p>
-<hr>
 <h2 id="quick-tutorial--core-concepts"><a class="header" href="#quick-tutorial--core-concepts">Quick Tutorial &amp; Core Concepts</a></h2>
 <h3 id="paths-and-navigation"><a class="header" href="#paths-and-navigation">Paths and Navigation</a></h3>
 <ul>
@@ -262,7 +259,7 @@
 <li><code>..</code> - parent directory</li>
 <li><code>./</code> - current directory shortcut (used to run scripts: <code>./script.sh</code>)</li>
 <li><code>../</code> - parent directory shortcut</li>
-<li>Use <strong>Tab</strong> to autocomplete files and folders</li>
+<li>Use Tab to autocomplete files and folders</li>
 </ul>
 <p>Git Bash uses forward slashes (<code>/</code>) for paths, just like Linux. Your Windows <code>C:\Users\YourName</code> folder is accessible as <code>/c/Users/YourName</code> or simply <code>~</code>.</p>
 <h3 id="useful-commands-examples"><a class="header" href="#useful-commands-examples">Useful Commands (Examples)</a></h3>
@@ -277,7 +274,6 @@ whoami             # current user
 <li><code>?</code> matches a single character</li>
 </ul>
 <p>Use <code>ls *.scad</code> to filter by extension, for example.</p>
-<hr>
 <h2 id="common-operations"><a class="header" href="#common-operations">Common Operations</a></h2>
 <h3 id="file-and-folder-manipulation"><a class="header" href="#file-and-folder-manipulation">File and Folder Manipulation</a></h3>
 <pre><code class="language-bash">mkdir my-folder          # create folder
@@ -301,14 +297,12 @@ code file.txt            # open in VS Code (if in PATH)
 ./script.sh              # run a script in the current directory
 chmod +x script.sh       # make a script executable
 </code></pre>
-<hr>
 <h2 id="screen-reader-friendly-tips"><a class="header" href="#screen-reader-friendly-tips">Screen-Reader Friendly Tips</a></h2>
 <ul>
 <li>Prefer <code>ls -1</code> for name-only, one-per-line output.</li>
 <li>Filter lists with <code>grep</code>: <code>ls -1 ~/Documents | grep "\.scad$"</code> (files only ending in .scad).</li>
 <li>Redirect very long outputs to a file and open it in an editor.</li>
 </ul>
-<hr>
 <h2 id="error-handling-and-control"><a class="header" href="#error-handling-and-control">Error Handling and Control</a></h2>
 <ul>
 <li>Abort a running command: <code>Ctrl+C</code></li>
@@ -316,7 +310,6 @@ chmod +x script.sh       # make a script executable
 <li>Clear screen: <code>clear</code> (or <code>Ctrl+L</code>)</li>
 <li>If an error is long, read the first few lines for the gist and copy short snippets into a file to examine.</li>
 </ul>
-<hr>
 <h2 id="environment-variables--path"><a class="header" href="#environment-variables--path">Environment Variables &amp; PATH</a></h2>
 <p>Environment variables configure your session. <code>PATH</code> tells the shell where to find executables.</p>
 <pre><code class="language-bash">echo $PATH
@@ -327,7 +320,6 @@ echo $USER
 <pre><code class="language-bash">export PATH="$PATH:/path/to/my/tools"
 </code></pre>
 <p>To make it permanent, add that line to <code>~/.bashrc</code>.</p>
-<hr>
 <h2 id="running-cli-applications-and-archives"><a class="header" href="#running-cli-applications-and-archives">Running CLI Applications and Archives</a></h2>
 <p>To extract ZIP archives in Git Bash:</p>
 <pre><code class="language-bash"># Unzip a file
@@ -336,7 +328,6 @@ unzip file.zip -d destinationfolder
 # Or use Windows' built-in tool (from Git Bash):
 powershell.exe Expand-Archive -Path file.zip -DestinationPath folder
 </code></pre>
-<hr>
 <h2 id="aliases-and-cross-platform-notes"><a class="header" href="#aliases-and-cross-platform-notes">Aliases and Cross-Platform Notes</a></h2>
 <p>Git Bash provides Unix commands that work identically on Linux and macOS. This means your Git Bash skills transfer directly if you ever work on a Mac or Linux system.</p>
 <p>Useful aliases to add to <code>~/.bashrc</code>:</p>
@@ -345,7 +336,6 @@ alias la='ls -1a'
 alias ..='cd ..'
 alias ...='cd ../..'
 </code></pre>
-<hr>
 <h2 id="step-by-step-tasks-hands-on"><a class="header" href="#step-by-step-tasks-hands-on">Step-by-step Tasks (Hands-On)</a></h2>
 <ol>
 <li>Open Git Bash; listen for the prompt and current path.</li>
@@ -359,7 +349,6 @@ alias ...='cd ../..'
 <li>After step 3 you should be able to state your current directory.</li>
 <li>After step 5 you should be able to create and open a text file from Git Bash.</li>
 </ul>
-<hr>
 <h2 id="quick-quiz-10-questions"><a class="header" href="#quick-quiz-10-questions">Quick Quiz (10 questions)</a></h2>
 <ol>
 <li>What command prints your current directory?</li>
@@ -373,7 +362,6 @@ alias ...='cd ../..'
 <li>Describe how you would handle a very long command output when using a screen reader.</li>
 <li>What does the <code>PATH</code> environment variable do, and why is it important when running programs like OpenSCAD?</li>
 </ol>
-<hr>
 <h2 id="extension-problems"><a class="header" href="#extension-problems">Extension Problems</a></h2>
 <ol>
 <li>Create a folder <code>OpenSCADProjects</code> in Documents and verify its contents.</li>
@@ -387,12 +375,11 @@ alias ...='cd ../..'
 <li>Develop a workflow automation script: combines multiple Git Bash concepts (folders, aliases, piping) to solve a real 3D printing task.</li>
 <li>Create a Git Bash proficiency self-assessment: list all concepts covered, provide test commands for each, and reflect on what you learned.</li>
 </ol>
-<hr>
 <h2 id="references"><a class="header" href="#references">References</a></h2>
 <ul>
-<li>Git for Windows. (2024). <em>Git Bash</em>. https://gitforwindows.org/</li>
-<li>GNU. (2024). <em>Bash reference manual</em>. https://www.gnu.org/software/bash/manual/bash.html</li>
-<li>The Linux Documentation Project. (2024). <em>Bash Beginners Guide</em>. https://tldp.org/LDP/Bash-Beginners-Guide/html/</li>
+<li>Git for Windows. (2024). <em>Git Bash</em>. <a href="https://gitforwindows.org/">https://gitforwindows.org/</a></li>
+<li>GNU. (2024). <em>Bash reference manual</em>. <a href="https://www.gnu.org/software/bash/manual/bash.html">https://www.gnu.org/software/bash/manual/bash.html</a></li>
+<li>The Linux Documentation Project. (2024). <em>Bash Beginners Guide</em>. <a href="https://tldp.org/LDP/Bash-Beginners-Guide/html/">https://tldp.org/LDP/Bash-Beginners-Guide/html/</a></li>
 </ul>
 <h2 id="helpful-resources"><a class="header" href="#helpful-resources">Helpful Resources</a></h2>
 <ul>
@@ -401,6 +388,9 @@ alias ...='cd ../..'
 <li><a href="https://tldp.org/LDP/Bash-Beginners-Guide/html/">Bash Beginners Guide</a></li>
 <li><a href="https://www.gnu.org/software/coreutils/manual/">GNU Coreutils</a></li>
 </ul>
+<p>Other Screen Readers</p>
+<p>Dolphin SuperNova (commercial) and Windows Narrator (built-in) are also supported; the workflows and recommendations in this document apply to them. See <a href="https://example.com">https://example.com</a> and <a href="https://example.com">https://example.com</a> for vendor documentation.</p>
+<!--pagebreak-->
 
                     </main>
 

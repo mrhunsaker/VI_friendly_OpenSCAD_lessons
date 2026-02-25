@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-d11bd641.js";
+            window.path_to_searchindex_js = "../../searchindex-d0af5d9e.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-19a5926f.js"></script>
+        <script src="../../toc-5b0c6224.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -220,8 +220,83 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="gitbash_foundation_gitbash_5_filling_in_the_gaps-gitbash_5_filling_in_the_gaps"><a class="header" href="#gitbash_foundation_gitbash_5_filling_in_the_gaps-gitbash_5_filling_in_the_gaps">GitBash-5: Filling in the Gaps</a></h1>
-<p>Covers bash profiles, command history, debugging, and bash-specific features.</p>
+                        <h1 id="gitbash-5-filling-in-the-gaps---shell-profiles-history-and-useful-tricks"><a class="header" href="#gitbash-5-filling-in-the-gaps---shell-profiles-history-and-useful-tricks">GitBash-5: Filling in the Gaps - Shell Profiles, History, and Useful Tricks</a></h1>
+<p>Estimated time: 30-45 minutes</p>
+<h2 id="learning-objectives"><a class="header" href="#learning-objectives">Learning Objectives</a></h2>
+<ul>
+<li>Use history and abort commands (<code>history</code>, <code>Ctrl+R</code>, <code>Ctrl+C</code>)</li>
+<li>Inspect and edit your <code>.bashrc</code> profile for persistent settings</li>
+<li>Run programs by full path using <code>./</code> or absolute paths</li>
+<li>Handle common screen reader edge cases when using the terminal</li>
+</ul>
+<h2 id="materials"><a class="header" href="#materials">Materials</a></h2>
+<ul>
+<li>Git Bash and an editor (Notepad/VS Code)</li>
+</ul>
+<h2 id="step-by-step-tasks"><a class="header" href="#step-by-step-tasks">Step-by-step Tasks</a></h2>
+<ol>
+<li>Run several simple commands (e.g., <code>pwd</code>, <code>ls -1</code>, <code>echo hi</code>) then run <code>history</code> to view them.</li>
+<li>Use <code>!&lt;n&gt;</code> to re-run a previous command by its history number (replace <code>&lt;n&gt;</code> with a history number).</li>
+<li>Practice aborting a long-running command with <code>Ctrl + C</code> (for example, <code>ping google.com</code>).</li>
+<li>Open your profile: <code>notepad.exe ~/.bashrc</code>; if it doesn’t exist, create it: <code>touch ~/.bashrc</code>.</li>
+<li>Add a persistent alias line to your profile (example: <code>alias preview='openscad'</code>), save, and run <code>source ~/.bashrc</code> or reopen Git Bash to verify.</li>
+</ol>
+<h2 id="checkpoints"><a class="header" href="#checkpoints">Checkpoints</a></h2>
+<ul>
+<li>After step 2 you can re-run a recent command by history number.</li>
+<li>After step 5 your alias should persist across sessions.</li>
+</ul>
+<h2 id="quiz---lesson-gitbash5"><a class="header" href="#quiz---lesson-gitbash5">Quiz - Lesson GitBash.5</a></h2>
+<ol>
+<li>How do you view the command history in Git Bash?</li>
+<li>Which key combination aborts a running command?</li>
+<li>What does <code>echo $BASH_VERSION</code> show?</li>
+<li>How does <code>./</code> help run scripts and executables in the current directory?</li>
+<li>What is one strategy if terminal output stops being announced by your screen reader?</li>
+<li>True or False: Using <code>Ctrl+C</code> permanently deletes any files created by the command you abort.</li>
+<li>Explain the difference between <code>history</code> and <code>Ctrl+R</code> (reverse history search) in Git Bash.</li>
+<li>If you add an alias to <code>.bashrc</code> but it doesn’t take effect after opening a new Git Bash window, what should you verify?</li>
+<li>Write a command that would run a script at the path <code>~/scripts/openscad_runner.sh</code> directly.</li>
+<li>Describe a practical workflow scenario where having keyboard shortcuts (aliases) in your <code>.bashrc</code> would save time.</li>
+<li>Explain how to re-run the 5th command from your history using <code>!5</code>, and what would happen if that command had file operations (creates/deletes).</li>
+<li>Design a <code>.bashrc</code> initialization strategy that separates utilities for different projects; explain how you would switch between them.</li>
+<li>Walk through a troubleshooting workflow: your screen reader stops announcing output after running a long command. What steps would you take to diagnose and resolve the issue?</li>
+<li>Create a safety checkpoint system: before any destructive operation (mass delete, overwrite), how would you use <code>.bashrc</code> functions and history to verify the command is correct?</li>
+<li>Develop a comprehensive capstone scenario: integrate everything from GitBash-0 through GitBash-5 (navigation, file operations, piping, environment setup, history) to design an automated 3D printing project workflow with error handling and logging.</li>
+</ol>
+<h2 id="extension-problems"><a class="header" href="#extension-problems">Extension Problems</a></h2>
+<ol>
+<li>Add an alias and an environment variable change to your <code>.bashrc</code> and document the behavior after reopening Git Bash.</li>
+<li>Create a short bash script that automates creating a project folder and an initial <code>.scad</code> file.</li>
+<li>Experiment with running OpenSCAD by full path using <code>./</code> and by placing it in PATH; compare results.</li>
+<li>Practice redirecting <code>man ls</code> output to a file and reading it in Notepad for screen reader clarity.</li>
+<li>Document three screen reader troubleshooting steps you used and when they helped.</li>
+<li>Build a comprehensive <code>.bashrc</code> that includes aliases, environment variables, and helper functions for your 3D printing workflow.</li>
+<li>Create a bash script that troubleshoots common Git Bash issues (module loading, permission errors, command not found); test at least three scenarios.</li>
+<li>Write a bash function that coordinates multiple tasks: creates a project folder, starts OpenSCAD, and opens a notes file.</li>
+<li>Design a screen-reader accessibility guide for Git Bash: document commands, outputs, and accessible navigation patterns.</li>
+<li>Develop an advanced Git Bash workflow: implement error handling, logging, and confirmation prompts for risky operations.</li>
+<li>Implement an “undo” system using history: create a function that logs destructive commands (<code>rm</code>, <code>mv</code>, <code>cp</code>) and allows you to review the last operation.</li>
+<li>Build a <code>.bashrc</code> debugger: create a script that compares two Git Bash sessions’ environment states (variables, aliases, functions) to identify what loaded/failed to load.</li>
+<li>Develop a multi-project profile manager: design a system where you can switch entire environments (paths, aliases, variables) for different 3D printing projects by running a single command.</li>
+<li>Create a comprehensive accessibility analyzer: write a bash script that tests whether key Git Bash commands produce screen-reader-friendly output; document workarounds for commands that don’t.</li>
+<li>Design a complete capstone project: build an integrated automation suite that manages a 3D printing workflow (project setup, file organization, CAD/slicing tool automation, output logging, error recovery, and audit trails) with full error handling and documentation.</li>
+</ol>
+<h2 id="references"><a class="header" href="#references">References</a></h2>
+<ul>
+<li>GNU. (2024). <em>Bash history and recall functionality</em>. <a href="https://example.com">https://example.com</a></li>
+<li>GNU. (2024). <em>Understanding and creating Bash profiles</em>. <a href="https://example.com">https://example.com</a></li>
+<li>GNU. (2024). <em>Running scripts and executables in Bash</em>. <a href="https://example.com">https://example.com</a></li>
+</ul>
+<h2 id="helpful-resources"><a class="header" href="#helpful-resources">Helpful Resources</a></h2>
+<ul>
+<li><a href="https://www.gnu.org/software/bash/manual/htmlnode/Bash-History-Facilities.html">Bash History and Recall</a></li>
+<li><a href="https://www.gnu.org/software/bash/manual/htmlnode/Bash-Startup-Files.html">Understanding .bashrc</a></li>
+<li><a href="https://www.gnu.org/software/bash/manual/htmlnode/Bash-History-Builtins.html">history Command Reference</a></li>
+<li><a href="https://www.gnu.org/software/bash/manual/htmlnode/Executing-Scripts.html">Running Scripts with ./</a></li>
+<li><a href="https://www.nvaccess.org/documentation/">Screen Reader Tips and Tricks</a></li>
+</ul>
+<!--pagebreak-->
 
                     </main>
 

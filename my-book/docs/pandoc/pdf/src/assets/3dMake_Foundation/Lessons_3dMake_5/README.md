@@ -1,14 +1,14 @@
 # Lesson 5: Safety Protocols and the Physical Fabrication Interface {#3dmake_foundation-lessons_3dmake_5-filament-comparison-table} {#assets_3dmake_foundation_lessons_3dmake_5-readme}
 
-**Estimated time:** 60-75 minutes
+Estimated time: 60-75 minutes
 
 ## Folder Contents
 
 This folder contains supporting materials for Lesson 5:
 
-- **Safety Checklists:** Pre-print, operation, and post-print verification templates
-- **Reference Materials:** Material properties, printer documentation, maintenance schedules
-- **Templates:** Print logs, incident reports, and maintenance records
+- Safety Checklists: Pre-print, operation, and post-print verification templates
+- Reference Materials: Material properties, printer documentation, maintenance schedules
+- Templates: Print logs, incident reports, and maintenance records
 
 ## Learning Objectives
 
@@ -31,8 +31,6 @@ This folder contains supporting materials for Lesson 5:
 - `maintenancelog.md` - Printer maintenance tracking template
 - `material_properties_quick_reference.md` - Quick-access material data
 
----
-
 ## Quick Start
 
 1. Read Lesson 5 on safety protocols
@@ -41,6 +39,4 @@ This folder contains supporting materials for Lesson 5:
 4. Use maintenancelog to track printer upkeep
 5. Consult Appendix B for detailed material properties
 
----
-
-**For navigation:** See [3dMake_Foundation Asset Index](README.md)
+For navigation: See [3dMake_Foundation Asset Index](README.md)

@@ -2,7 +2,7 @@
 
 ## Files
 
-- **cube_keycap.scad** - Beginner-level example of text embossing with parametric design
+- cube_keycap.scad - Beginner-level example of text embossing with parametric design
 
 ## Learning Objectives
 
@@ -25,10 +25,10 @@
 
 ## Key Concepts
 
-- **Text Embossing**: Using `linearextrude()` to raise text on a surface
-- **Parametric Customization**: All dimensions controlled by variables
-- **Boolean Operations**: Using `difference()` to create hollow structures
-- **Modular Design**: Separating `shell()` and `emboss()` modules for clarity
+- Text Embossing: Using `linearextrude()` to raise text on a surface
+- Parametric Customization: All dimensions controlled by variables
+- Boolean Operations: Using `difference()` to create hollow structures
+- Modular Design: Separating `shell()` and `emboss()` modules for clarity
 
 ## Customization Ideas
 

@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-d11bd641.js";
+            window.path_to_searchindex_js = "../../searchindex-d0af5d9e.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-19a5926f.js"></script>
+        <script src="../../toc-5b0c6224.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -224,186 +224,161 @@
 <p><strong>Duration:</strong> 1.5-2 hours (for screen reader users)<br><strong>Prerequisites:</strong> CMD-Pre and CMD-0<br><strong>Learning Objectives:</strong></p>
 <ul>
 <li>Navigate confidently to any folder location</li>
-<li>Understand and use relative vs absolute paths</li>
+<li>Understand and use relative versus absolute paths</li>
 <li>Use shortcuts to move between common folders</li>
 <li>Organize your file system logically</li>
 </ul>
 <hr>
 <h2 id="core-navigation-commands"><a class="header" href="#core-navigation-commands">Core Navigation Commands</a></h2>
 <h3 id="command-cd-change-directory"><a class="header" href="#command-cd-change-directory">Command: <code>cd</code> (Change Directory)</a></h3>
-<p>The most important navigation command.</p>
-<p><strong>Basic usage:</strong></p>
 <pre><code class="language-cmd">cd FolderName          :: Go into a folder
 cd ..                  :: Go up one level
-cd \                   :: Go to root of C: drive
+cd \                   :: Go to root of current drive (e.g., C:\)
 cd %USERPROFILE%       :: Go to home directory
 </code></pre>
 <h3 id="command-dir-b-list-contents"><a class="header" href="#command-dir-b-list-contents">Command: <code>dir /B</code> (List Contents)</a></h3>
-<p><strong>What it does:</strong> Shows files and folders in current location</p>
-<pre><code class="language-cmd">dir /B                 :: List all (screen-reader friendly)
+<pre><code class="language-cmd">dir /B                 :: List all names (one per line, screen-reader friendly)
 dir /B /A:D            :: List only directories/folders
 dir /B /A:F            :: List only files
 </code></pre>
-<h3 id="command-pwd-equivalent---just-run-cd"><a class="header" href="#command-pwd-equivalent---just-run-cd">Command: <code>pwd</code> equivalent - Just run <code>cd</code></a></h3>
-<pre><code class="language-cmd">cd                     :: Shows current path
+<h3 id="command-show-current-location"><a class="header" href="#command-show-current-location">Command: Show Current Location</a></h3>
+<pre><code class="language-cmd">cd                     :: Running cd with no arguments shows current path
 </code></pre>
 <hr>
 <h2 id="understanding-paths"><a class="header" href="#understanding-paths">Understanding Paths</a></h2>
 <h3 id="absolute-paths-full-address"><a class="header" href="#absolute-paths-full-address">Absolute Paths (Full Address)</a></h3>
 <p>An absolute path starts from the root and shows the complete location:</p>
-<pre><code>C:\Users\YourName\Documents\3DPrinting
+<pre><code class="language-cmd">C:\Users\YourName\Documents\3DPrinting
 </code></pre>
-<p><strong>Breaking it down:</strong></p>
 <ul>
-<li><code>C:\</code> = The hard drive (C drive, root)</li>
-<li><code>Users</code> = First folder</li>
-<li><code>YourName</code> = Your user folder</li>
-<li><code>Documents</code> = Documents folder</li>
-<li><code>3DPrinting</code> = Your 3D printing folder</li>
+<li><code>C:\</code> — The C drive root</li>
+<li><code>Users</code> — First folder</li>
+<li><code>YourName</code> — Your user folder</li>
+<li><code>Documents</code> — Documents folder</li>
+<li><code>3DPrinting</code> — Your 3D printing folder</li>
 </ul>
-<p><strong>To navigate to it:</strong></p>
+<p><strong>Navigate there directly:</strong></p>
 <pre><code class="language-cmd">cd C:\Users\YourName\Documents\3DPrinting
 </code></pre>
-<h3 id="relative-paths-short-directions"><a class="header" href="#relative-paths-short-directions">Relative Paths (Short Directions)</a></h3>
-<p>A relative path is like giving directions from where you are now:</p>
-<pre><code>cd Documents\3DPrinting
-cd ..
-cd ..\..
+<h3 id="relative-paths-directions-from-here"><a class="header" href="#relative-paths-directions-from-here">Relative Paths (Directions From Here)</a></h3>
+<pre><code class="language-cmd">cd Documents\3DPrinting    :: Go into Documents, then into 3DPrinting
+cd ..                      :: Go up one level
+cd ..\..                   :: Go up two levels
 </code></pre>
 <p><strong>Shortcuts:</strong></p>
 <ul>
 <li><code>.</code> = Current folder</li>
 <li><code>..</code> = Parent folder (up one level)</li>
-<li><code>~</code> = Home folder (in Command Prompt: use <code>%USERPROFILE%</code>)</li>
-</ul>
-<h3 id="benefits-of-relative-paths"><a class="header" href="#benefits-of-relative-paths">Benefits of Relative Paths</a></h3>
-<ul>
-<li><strong>Shorter to type</strong></li>
-<li><strong>Better for portability</strong> (scripts work on different computers)</li>
-<li><strong>Easy to navigate hierarchies</strong></li>
+<li><code>%USERPROFILE%</code> = Your home folder</li>
 </ul>
 <hr>
 <h2 id="common-navigation-patterns"><a class="header" href="#common-navigation-patterns">Common Navigation Patterns</a></h2>
-<h3 id="pattern-1-navigating-down-into-folders"><a class="header" href="#pattern-1-navigating-down-into-folders">Pattern 1: Navigating Down (Into Folders)</a></h3>
+<h3 id="pattern-1-navigating-down"><a class="header" href="#pattern-1-navigating-down">Pattern 1: Navigating Down</a></h3>
 <pre><code class="language-cmd">C:\&gt;cd Users
 C:\Users&gt;cd YourName
 C:\Users\YourName&gt;cd Documents
 C:\Users\YourName\Documents&gt;
 </code></pre>
-<p>Each <code>cd FolderName</code> goes into that folder.</p>
-<h3 id="pattern-2-navigating-up-out-of-folders"><a class="header" href="#pattern-2-navigating-up-out-of-folders">Pattern 2: Navigating Up (Out of Folders)</a></h3>
+<h3 id="pattern-2-navigating-up"><a class="header" href="#pattern-2-navigating-up">Pattern 2: Navigating Up</a></h3>
 <pre><code class="language-cmd">C:\Users\YourName\Documents&gt;cd ..
 C:\Users\YourName&gt;cd ..
 C:\Users&gt;cd ..
 C:\&gt;
 </code></pre>
-<p>Each <code>cd ..</code> goes up one level.</p>
-<h3 id="pattern-3-jumping-to-a-known-path"><a class="header" href="#pattern-3-jumping-to-a-known-path">Pattern 3: Jumping to a Known Path</a></h3>
-<pre><code class="language-cmd">C:\Users\YourName\Documents\DeepFolder\Another\Level&gt;cd C:\Users\YourName
+<h3 id="pattern-3-jump-to-a-known-path"><a class="header" href="#pattern-3-jump-to-a-known-path">Pattern 3: Jump to a Known Path</a></h3>
+<pre><code class="language-cmd">C:\Deep\Folder\Somewhere&gt;cd C:\Users\YourName
 C:\Users\YourName&gt;
 </code></pre>
-<p>Type the full path and go there directly.</p>
 <h3 id="pattern-4-going-home"><a class="header" href="#pattern-4-going-home">Pattern 4: Going Home</a></h3>
-<pre><code class="language-cmd">cd %USERPROFILE%          :: Go to your home folder (Any location)
+<pre><code class="language-cmd">cd %USERPROFILE%
 </code></pre>
 <hr>
 <h2 id="special-folders-and-shortcuts"><a class="header" href="#special-folders-and-shortcuts">Special Folders and Shortcuts</a></h2>
-<h3 id="key-directories"><a class="header" href="#key-directories">Key Directories</a></h3>
-<pre><code class="language-cmd">%USERPROFILE%            :: Your home folder (e.g., C:\Users\YourName)
-%USERPROFILE%\Desktop    :: Your Desktop
-%USERPROFILE%\Documents  :: Your Documents
-%USERPROFILE%\Downloads  :: Your Downloads
-%ProgramFiles%           :: Program Files folder
-C:\                      :: Root of C: drive
-</code></pre>
-<h3 id="using-these-shortcuts"><a class="header" href="#using-these-shortcuts">Using These Shortcuts</a></h3>
-<pre><code class="language-cmd">cd %USERPROFILE%\Documents\3DModels
-cd %USERPROFILE%\Desktop
+<pre><code class="language-cmd">%USERPROFILE%              :: Your home folder
+%USERPROFILE%\Desktop      :: Your Desktop
+%USERPROFILE%\Documents    :: Your Documents
+%USERPROFILE%\Downloads    :: Your Downloads
+%ProgramFiles%             :: Program Files folder
+C:\                        :: Root of C drive
 </code></pre>
 <hr>
-<h2 id="tab-completion-essential-skill"><a class="header" href="#tab-completion-essential-skill">Tab Completion (Essential Skill!)</a></h2>
-<p>Tab completion saves typing and is perfect for screen readers.</p>
-<p><strong>How it works:</strong></p>
+<h2 id="tab-completion-essential-skill"><a class="header" href="#tab-completion-essential-skill">Tab Completion (Essential Skill)</a></h2>
 <ol>
-<li>Type first few characters of a folder name</li>
-<li>Press <strong>Tab</strong></li>
-<li>Command Prompt completes it</li>
+<li>Type the first few characters of a folder name.</li>
+<li>Press <strong>Tab</strong>.</li>
+<li>Command Prompt completes it.</li>
 </ol>
-<h3 id="example-tab-completion-in-action"><a class="header" href="#example-tab-completion-in-action">Example: Tab Completion in Action</a></h3>
-<pre><code>C:\Users\YourName&gt;cd Doc  [then press Tab]
+<p><strong>Example:</strong></p>
+<pre><code class="language-cmd">C:\Users\YourName&gt;cd Doc  [press Tab]
 C:\Users\YourName&gt;cd Documents
 </code></pre>
-<p>Command Prompt filled in the rest. Press <strong>Enter</strong> to go there.</p>
-<h3 id="tab-completion-tips"><a class="header" href="#tab-completion-tips">Tab Completion Tips</a></h3>
 <ul>
-<li><strong>Screen reader hears the whole completed command</strong></li>
-<li><strong>Faster and more accurate</strong> than typing full names</li>
-<li><strong>Works with file names too</strong></li>
-<li><strong>Press Tab multiple times</strong> to cycle through options if multiple matches</li>
+<li>Your screen reader announces the completed name immediately.</li>
+<li>Press <strong>Tab</strong> multiple times to cycle through all matches.</li>
 </ul>
 <hr>
 <h2 id="screen-reader-tips-for-navigation"><a class="header" href="#screen-reader-tips-for-navigation">Screen Reader Tips for Navigation</a></h2>
-<h3 id="for-nvda-users"><a class="header" href="#for-nvda-users">For NVDA Users</a></h3>
-<p>When navigating:</p>
+<h3 id="nvda-users"><a class="header" href="#nvda-users">NVDA Users</a></h3>
 <ol>
-<li>After each <code>cd</code> command, run <code>cd</code> to confirm new location</li>
-<li>Run <code>dir /B | more</code> to see contents one page at a time</li>
-<li>Use <strong>NVDA+Down</strong> to read output after commands</li>
+<li>After each <code>cd</code> command, run <code>cd</code> alone to confirm location. Press <strong>NVDA+Home</strong> (Insert+Home) to read the current line.</li>
+<li>Press <strong>NVDA+Down Arrow</strong> to read through <code>dir /B</code> output.</li>
+<li>For long listings: <code>dir /B &gt; listing.txt</code>, then <code>notepad.exe listing.txt</code>.</li>
 </ol>
-<h3 id="for-jaws-users"><a class="header" href="#for-jaws-users">For JAWS Users</a></h3>
-<p>When navigating:</p>
+<h3 id="jaws-users"><a class="header" href="#jaws-users">JAWS Users</a></h3>
 <ol>
-<li>After each <code>cd</code> command, run <code>cd</code> to confirm location</li>
-<li>Use <strong>Insert+Down Arrow</strong> to read output</li>
-<li>Use <code>dir /B &gt; file.txt</code> then open in Notepad for complex listings</li>
+<li>After each <code>cd</code> command, press <strong>Insert+Up Arrow</strong> to re-read the current line.</li>
+<li>Press <strong>Insert+Down Arrow</strong> repeatedly to read output line by line.</li>
+<li>For long listings: <code>dir /B &gt; listing.txt</code>, then <code>notepad.exe listing.txt</code>.</li>
 </ol>
-<h3 id="best-practice"><a class="header" href="#best-practice">Best Practice</a></h3>
-<p>Always confirm your location:</p>
+<h3 id="windows-narrator-users"><a class="header" href="#windows-narrator-users">Windows Narrator Users</a></h3>
+<ol>
+<li>After each <code>cd</code> command, press <strong>Narrator+D</strong> (CapsLock+D) to read the current line.</li>
+<li>Press <strong>Narrator+R</strong> to read output from the current position.</li>
+<li>For long listings, always redirect to a file and open in Notepad — Notepad is more comfortable for Narrator users than reading directly from the terminal buffer.</li>
+</ol>
+<h3 id="dolphin-supernova-users"><a class="header" href="#dolphin-supernova-users">Dolphin SuperNova Users</a></h3>
+<ol>
+<li>After each <code>cd</code> command, press <strong>CapsLock+L</strong> to read the current line.</li>
+<li>Press <strong>CapsLock+Numpad Plus</strong> (say all) to read all output from the current position.</li>
+<li>For long listings: <code>dir /B &gt; listing.txt</code>, then <code>notepad.exe listing.txt</code>.</li>
+</ol>
+<h3 id="best-practice-for-all-screen-readers"><a class="header" href="#best-practice-for-all-screen-readers">Best Practice for All Screen Readers</a></h3>
+<p>Always confirm your location after moving:</p>
 <pre><code class="language-cmd">cd FolderName
-cd                        :: Run this to verify
+cd                        :: Verify your new location
 </code></pre>
 <hr>
 <h2 id="practice-exercises"><a class="header" href="#practice-exercises">Practice Exercises</a></h2>
 <h3 id="exercise-1-basic-down-navigation"><a class="header" href="#exercise-1-basic-down-navigation">Exercise 1: Basic Down Navigation</a></h3>
 <ol>
-<li>Start at home: <code>cd %USERPROFILE%</code></li>
-<li>Run <code>cd</code> to see your location</li>
-<li>List contents: <code>dir /B</code></li>
-<li>Navigate into a folder: <code>cd Documents</code></li>
-<li>Run <code>cd</code> to confirm</li>
-<li>List contents: <code>dir /B</code></li>
+<li><code>cd %USERPROFILE%</code></li>
+<li>Run <code>cd</code> to see location.</li>
+<li><code>dir /B</code></li>
+<li><code>cd Documents</code></li>
+<li>Run <code>cd</code> to confirm.</li>
+<li><code>dir /B</code></li>
 </ol>
-<p><strong>Goal:</strong> Feel comfortable going into folders and confirming location.</p>
 <h3 id="exercise-2-using-tab-completion"><a class="header" href="#exercise-2-using-tab-completion">Exercise 2: Using Tab Completion</a></h3>
 <ol>
-<li>Start at: <code>cd %USERPROFILE%</code></li>
-<li>Type: <code>cd Doc</code> (just those letters)</li>
-<li>Press <strong>Tab</strong> (let Command Prompt complete it)</li>
-<li>Press <strong>Enter</strong></li>
-<li>Run <code>cd</code> to confirm you’re in Documents</li>
+<li><code>cd %USERPROFILE%</code></li>
+<li>Type <code>cd Doc</code> then press <strong>Tab</strong>.</li>
+<li>Press <strong>Enter</strong>.</li>
+<li>Run <code>cd</code> to confirm.</li>
 </ol>
-<p><strong>Goal:</strong> Tab completion feels natural and fast.</p>
 <h3 id="exercise-3-navigating-up"><a class="header" href="#exercise-3-navigating-up">Exercise 3: Navigating Up</a></h3>
 <ol>
-<li>Navigate into several folders: <code>cd Documents</code>, <code>cd folder1</code>, <code>cd subfolder</code>, etc.</li>
-<li>From deep down, run <code>cd</code> to see your full path</li>
-<li>Use <code>cd ..</code> to go up one level</li>
-<li>Run <code>cd</code> to confirm</li>
-<li>Repeat <code>cd ..</code> several more times</li>
+<li>Navigate several levels deep.</li>
+<li>Run <code>cd</code> to see full path.</li>
+<li>Use <code>cd ..</code> to go up one level at a time.</li>
+<li>Run <code>cd</code> after each step.</li>
 </ol>
-<p><strong>Goal:</strong> Comfortable moving back up through the hierarchy.</p>
 <h3 id="exercise-4-absolute-path-navigation"><a class="header" href="#exercise-4-absolute-path-navigation">Exercise 4: Absolute Path Navigation</a></h3>
 <ol>
-<li>Navigate deep into folders (3+ levels)</li>
-<li>From there, type: <code>cd %USERPROFILE%</code> (absolute path)</li>
-<li>Run <code>cd</code> to confirm you’re home</li>
-<li>From home, type the full path to another location you know</li>
-<li>Navigate there directly</li>
+<li>Navigate deep (3+ levels).</li>
+<li>Run <code>cd %USERPROFILE%</code> to jump home.</li>
+<li>Run <code>cd</code> to confirm.</li>
 </ol>
-<p><strong>Goal:</strong> Understand absolute paths work from anywhere.</p>
-<h3 id="exercise-5-creating-a-navigation-path"><a class="header" href="#exercise-5-creating-a-navigation-path">Exercise 5: Creating a Navigation Path</a></h3>
-<ol>
-<li>Create a folder structure:
+<h3 id="exercise-5-creating-and-navigating-a-structure"><a class="header" href="#exercise-5-creating-and-navigating-a-structure">Exercise 5: Creating and Navigating a Structure</a></h3>
 <pre><code class="language-cmd">mkdir 3DPractice
 cd 3DPractice
 mkdir Models
@@ -411,69 +386,56 @@ cd Models
 mkdir OpenSCAD
 cd OpenSCAD
 </code></pre>
-</li>
-<li>Run <code>cd</code> at each level</li>
-<li>Save your location: <code>cd &gt; location.txt</code></li>
-<li>Navigate back up using only <code>cd ..</code></li>
-</ol>
-<p><strong>Goal:</strong> Build and navigate your own folder structure.</p>
+<p>Run <code>cd</code> at each level. Then navigate back up using only <code>cd ..</code>.</p>
 <hr>
 <h2 id="checkpoint-questions"><a class="header" href="#checkpoint-questions">Checkpoint Questions</a></h2>
-<p>After this lesson, you should be able to answer:</p>
+<p>Answer all 10 before moving to CMD-2:</p>
 <ol>
-<li>What’s the difference between <code>cd Documents</code> and <code>cd \</code>?</li>
+<li>What is the difference between <code>cd Documents</code> and <code>cd \</code>?</li>
 <li>What does <code>cd ..</code> do?</li>
-<li>How do you go directly to your home folder?</li>
-<li>What’s an absolute path? Give an example.</li>
-<li>What’s a relative path? Give an example.</li>
+<li>How do you go to your home folder from anywhere?</li>
+<li>What is an absolute path? Give an example.</li>
+<li>What is a relative path? Give an example.</li>
 <li>How do you confirm your current location?</li>
 <li>What does Tab completion do?</li>
 <li>How would you navigate 3 levels deep, then back home?</li>
-<li>What’s the difference between <code>.</code> and <code>..</code>?</li>
-<li>If you’re lost, what command should you run first?</li>
+<li>What is the difference between <code>.</code> and <code>..</code>?</li>
+<li>If you are lost, what command should you run first?</li>
 </ol>
-<p><strong>Answer all 10 confidently before moving to CMD-2.</strong></p>
 <hr>
 <h2 id="extension-problems"><a class="header" href="#extension-problems">Extension Problems</a></h2>
 <ol>
-<li>Create a folder with spaces in the name (e.g., <code>My Projects</code>) and navigate to it</li>
-<li>Use Tab completion to navigate into 5+ levels of folders without typing full paths</li>
-<li>Create a script that documents your navigation (save <code>cd</code> output at each level)</li>
-<li>Navigate using absolute paths from different starting locations to the same destination</li>
-<li>Build a complex folder tree and practice navigating it using only relative paths</li>
-<li>Create a “favorites” list: document the full paths to folders you use often</li>
-<li>Time yourself: navigate to 10 different locations using the fastest method possible</li>
-<li>Create folders named with numbers (01Folder, 02Folder, etc.) and practice Tab completion</li>
-<li>Navigate to a folder, save the path, navigate away, then navigate back using the saved path</li>
-<li>Challenge: Navigate to a destination using only relative paths without using <code>cd</code> alone to check location (navigate “blind”)</li>
+<li>Create a folder with spaces in the name (e.g., <code>My Projects</code>) and navigate to it using quotes.</li>
+<li>Use Tab completion to navigate 5+ levels deep without typing full names.</li>
+<li>Create a script that saves <code>cd</code> output at each level to a log file.</li>
+<li>Navigate to the same destination using both absolute and relative paths from different starting locations.</li>
+<li>Build a complex folder tree (5+ levels) and navigate using only relative paths.</li>
+<li>Document the full paths to your 5 most-used folders.</li>
+<li>Create folders named <code>01Folder</code>, <code>02Folder</code>, etc. and practice Tab completion through them.</li>
+<li>Navigate to a folder, save the path with <code>cd &gt; mypath.txt</code>, navigate away, then return using the saved path.</li>
+<li>Challenge: navigate to a destination using only relative paths without running <code>cd</code> to check at each step.</li>
+<li>Create a batch file that navigates to a project folder and lists its contents in one step.</li>
 </ol>
 <hr>
 <h2 id="common-issues"><a class="header" href="#common-issues">Common Issues</a></h2>
-<h3 id="cant-find-the-path-specified"><a class="header" href="#cant-find-the-path-specified">“Can’t find the path specified”</a></h3>
-<p><strong>Problem:</strong> <code>cd FolderName</code> says the folder doesn’t exist</p>
-<p><strong>Solutions:</strong></p>
-<ol>
-<li>Check spelling (Command Prompt is not case-sensitive, but spelling matters)</li>
-<li>Run <code>dir /B</code> to see correct folder names</li>
-<li>Use Tab completion instead of typing</li>
-<li>Use absolute path: <code>cd C:\Users\YourName\Documents</code> (get the exact path and type it)</li>
-</ol>
-<h3 id="im-lost---dont-know-where-i-am"><a class="header" href="#im-lost---dont-know-where-i-am">“I’m lost - don’t know where I am”</a></h3>
-<p><strong>Solution - Always run this:</strong></p>
+<h3 id="the-system-cannot-find-the-path-specified"><a class="header" href="#the-system-cannot-find-the-path-specified">“The system cannot find the path specified”</a></h3>
+<ul>
+<li>Check spelling with <code>dir /B</code> to see correct folder names.</li>
+<li>Use Tab completion to avoid typos.</li>
+<li>Use the absolute path: <code>cd C:\Users\YourName\Documents</code>.</li>
+</ul>
+<h3 id="im-lost"><a class="header" href="#im-lost">“I’m lost”</a></h3>
 <pre><code class="language-cmd">cd
 </code></pre>
-<p>This shows your current location.</p>
-<h3 id="tab-completion-isnt-working"><a class="header" href="#tab-completion-isnt-working">Tab completion isn’t working</a></h3>
-<p><strong>Problem:</strong> You press Tab but nothing happens</p>
-<p><strong>Solutions:</strong></p>
-<ol>
-<li>Make sure you typed at least one character</li>
-<li>Make sure the folder actually exists (run <code>dir /B</code> to check)</li>
-<li>If multiple matches exist, press Tab again to cycle to the next one</li>
-<li>Just type the full name manually if Tab isn’t cooperating</li>
-</ol>
+<p>This always shows your current location.</p>
+<h3 id="tab-completion-not-working"><a class="header" href="#tab-completion-not-working">Tab Completion Not Working</a></h3>
+<ul>
+<li>Type at least one character before pressing Tab.</li>
+<li>Confirm the folder exists with <code>dir /B</code>.</li>
+<li>Press Tab again to cycle through multiple matches.</li>
+</ul>
 <hr>
-<h2 id="quick-reference---navigation-commands"><a class="header" href="#quick-reference---navigation-commands">Quick Reference - Navigation Commands</a></h2>
+<h2 id="quick-reference"><a class="header" href="#quick-reference">Quick Reference</a></h2>
 <pre><code class="language-cmd">cd                         :: Show current location
 cd FolderName              :: Go into a folder
 cd ..                      :: Go up one level
@@ -485,21 +447,9 @@ dir /B /A:D                :: List only folders
 dir /B /A:F                :: List only files
 </code></pre>
 <hr>
-<h2 id="screen-reader-accessibility-notes"><a class="header" href="#screen-reader-accessibility-notes">Screen Reader Accessibility Notes</a></h2>
-<ul>
-<li>Command Prompt output is naturally linear, perfect for screen readers</li>
-<li>Use <code>dir /B</code> for clean, one-per-line listings</li>
-<li>Use <code>| more</code> to pause output between screens: <code>dir /B | more</code></li>
-<li>Save complex listings to files: <code>dir /B &gt; output.txt</code></li>
-<li>Always run <code>cd</code> after moving to confirm your new location</li>
-</ul>
-<hr>
 <h2 id="next-steps"><a class="header" href="#next-steps">Next Steps</a></h2>
-<ul>
-<li>Complete all practice exercises</li>
-<li>Pass the checkpoint questions</li>
-<li>Move to <strong>CMD-2: File &amp; Folder Manipulation</strong></li>
-</ul>
+<p>Complete all exercises, pass the checkpoint questions, then move to <strong>CMD-2: File &amp; Folder Manipulation</strong>.</p>
+<!--pagebreak-->
 
                     </main>
 

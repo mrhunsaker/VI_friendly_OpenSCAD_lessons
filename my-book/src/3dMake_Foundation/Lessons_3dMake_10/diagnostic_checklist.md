@@ -1,6 +1,6 @@
 # Diagnostic Checklist for 3D Printing {#3dmake_foundation_lessons_3dmake_10-diagnostic_checklist}
 
-Use this comprehensive checklist to systematically diagnose and troubleshoot printing issues.
+Use this comprehensive checklist to systematically diagnose and troubleshoot printing}} issues.
 
 ## Quick Diagnosis Flowchart
 
@@ -28,53 +28,48 @@ Print Problem?
    +---- Warped -> CHECK: Bed temperature, cooling rate, material
 ```
 
----
-
 ## Pre-Print Diagnostics
 
 ### Category A: Power & Connectivity
 
-**Checklist:**
+Checklist:
 
 - [ ] Printer powered on
 - [ ] LED indicators showing normal status
 - [ ] USB cable connected (if applicable)
-- [ ] No error codes displaying
+- [ ] No error}} codes displaying
 - [ ] Display/interface responding to input
 
-**If failed:**
+If failed:
 
 1. Check power outlet and cable
 2. Verify power supply specifications (voltage, current)
 3. Test with different power outlet
 4. Try power-cycling (off 30 sec, on)
-5. Check for blown fuses inside printer
-
----
+5. Check for blown fuses inside printer}}
 
 ### Category B: Temperature System
 
-**Heating Element Status:**
+Heating Element Status:
 
 - [ ] Hot end temperature rises when heating commanded
-- [ ] Bed temperature rises when heating commanded
+- [ ] Bed}} temperature rises when heating commanded
 - [ ] Temperature readings stable (not fluctuating 5C+)
-- [ ] No error messages during heating
+- [ ] No error}} messages during heating
 
-**Measurement Method:**
+Measurement Method:
 
 ```plaintext
 1. Set hot end to 200C, observe rise
    - Expected time to reach: 2-4 minutes
    - Steady rise without plateau:  Good
    - Plateau before reaching:  Problem (see below)
-
 2. Set bed to 60C, observe rise
    - Expected time to reach: 5-10 minutes
    - Stable at target:  Good
 ```
 
-**If heating slow/incomplete:**
+If heating slow/incomplete:
 
 - [ ] Verify target temperature was set
 - [ ] Check heating element firmware settings
@@ -82,14 +77,13 @@ Print Problem?
 - [ ] Inspect heating element for damage
 - [ ] Measure electrical resistance of heaters
 
-**Temperature Stability Test:**
+Temperature Stability Test:
 
 ```plaintext
 1. Heat to target temperature
 2. Wait 10 minutes for stabilization
 3. Record temperature every minute
 4. Calculate range (max - min)
-
 Results:
 - +/-2C range:  Excellent
 - +/-5C range:  Acceptable  
@@ -97,13 +91,11 @@ Results:
 - >+/-10C range:  Problem
 ```
 
----
-
 ### Category C: Mechanical Systems
 
-**Movement Diagnostics:**
+Movement Diagnostics:
 
-**Manual Axis Movement:**
+Manual Axis Movement:
 
 ```plaintext
 1. Disable motors (if possible)
@@ -114,9 +106,9 @@ Results:
    - Z-axis:  (smooth/rough/stuck)
 ```
 
-**Expected results:** Smooth, no grinding sounds
+Expected results: Smooth, no grinding sounds
 
-**If rough/stuck:**
+If rough/stuck:
 
 - [ ] Check for visible obstructions
 - [ ] Inspect rails for debris
@@ -124,7 +116,7 @@ Results:
 - [ ] Check belt tension (if accessible)
 - [ ] Lubricate dry joints
 
-**Powered Movement Test:**
+Powered Movement Test:
 
 ```plaintext
 1. Position nozzle at center
@@ -134,13 +126,11 @@ Results:
 5. Check for skipping or missed steps
 ```
 
----
-
 ### Category D: Leveling & Alignment
 
-**Build Plate Leveling Test:**
+Build Plate Leveling Test:
 
-**Paper Method (Most Common):**
+Paper Method (Most Common}}):
 
 ```plaintext
 1. Heat bed to printing temperature
@@ -150,31 +140,28 @@ Results:
 5. Move to next corner and repeat
 6. Repeat for all 4-9 corners
 7. Do center point check last
-
 Target: Consistent slight paper drag all points
 ```
 
-**Leveling Validation:**
+Leveling Validation:
 
 - [ ] Level at 4 corners
-- [ ] Level at bed center
+- [ ] Level at bed}} center
 - [ ] No high/low points
-- [ ] Nozzle doesn't hit bed at any point
-- [ ] Consistent first-layer appearance across bed
-
----
+- [ ] Nozzle}} doesn't hit bed}} at any point
+- [ ] Consistent first}}-layer}} appearance across bed}}
 
 ### Category E: Filament & Extruder
 
-**Filament Quality Check:**
+Filament Quality Check:
 
 - [ ] Filament diameter consistent (visually inspect ~50cm)
 - [ ] No visible cracks or damage
 - [ ] Spool rotates freely without binding
 - [ ] Filament path clear to extruder
-- [ ] No tangles in filament path
+- [ ] No tangles in filament}} path
 
-**Extruder Test:**
+Extruder Test:
 
 ```plaintext
 1. Heat to printing temperature
@@ -182,63 +169,54 @@ Target: Consistent slight paper drag all points
 3. Push 10-20mm of filament through manually
 4. Feel resistance during push
 5. Observe material exits cleanly
-
 Expected: Smooth push, consistent extrusion
 ```
 
----
-
 ## Filament Loading Test
 
-**Test Sequence:**
+Test Sequence:
 
 ```plaintext
 1. Heat extruder to material temp
 2. Load filament into extruder
 3. Watch for material at nozzle tip
-
 Timeline:
 - 0-10 sec: Filament engaging
 - 10-30 sec: Moving through hot end
 - 30-60 sec: Should appear at nozzle tip
 - >60 sec: Possible partial clog
-
 If fails:
 -> See "Filament Won't Load" troubleshooting
 ```
-
----
 
 ## First Layer Diagnostics
 
 ### Layer Appearance Test
 
-**After printing first 5-10 layer heights, evaluate:**
+After printing}} first}} 5-10 layer}} heights, evaluate:
 
-| Appearance              | Issue                      | Action                   |
-|-------------------------|----------------------------|--------------------------|
-| Wavy/embossed           | Bed not level or too close | Relevel bed              |
-| Gaps between lines      | Nozzle too high            | Lower Z-offset           |
-| Completely squished     | Nozzle too low             | Raise Z-offset           |
-| Partial adhesion        | Bed too cool or dirty      | Clean bed, increase temp |
-| Consistent squish/lines | Correct                    | Continue print           |
-
----
+| Appearance              | Issue                        | Action                     |
+|-------------------------|------------------------------|----------------------------|
+| Wavy/embossed           | Bed}} not level or too close | Relevel bed}}              |
+| Gaps between}} lines    | Nozzle}} too high            | Lower Z-offset             |
+| Completely squished     | Nozzle}} too low             | Raise Z-offset             |
+| Partial adhesion        | Bed}} too cool or dirty      | Clean bed}}, increase temp |
+| Consistent squish/lines | Correct                      | Continue print}}           |
 
 ## Mid-Print Issue Diagnostics
 
 ### Extrusion Failure Checklist
 
-**When extrusion stops during print:**
+When extrusion stops during print}}:
 
-**Immediate Actions:**
+Immediate Actions:
 
-- [ ] Pause print (don't stop)
+- [ ] Pause print}} (don't stop)
 - [ ] Listen for extruder sounds (grinding = jam)
 - [ ] Feel nozzle carefully (if cooled slightly)
-- [ ] Observe filament in extruder (is it feeding?)
+- [ ] Observe filament}} in extruder (is it feeding?)
 
-**Diagnostic Decision:**
+Diagnostic Decision:
 
 ```plaintext
 Is filament stuck in extruder?
@@ -252,20 +230,18 @@ Is filament stuck in extruder?
          -> Is drive gear slipping? -> Clean/tension drive gear
 ```
 
----
-
 ### Mechanical Issue Diagnostics
 
-**When movement sounds wrong:**
+When movement sounds wrong:
 
-**Listen for:**
+Listen for:
 
 - Grinding/grating: Bearing issue or obstruction
 - Clicking/skipping: Lost steps or over-torque
 - Squealing: Lubrication needed
 - Silence (but no movement): Stalled motor
 
-**Diagnosis Method:**
+Diagnosis Method:
 
 ```plaintext
 1. Pause print
@@ -277,13 +253,11 @@ Is filament stuck in extruder?
 4. Visually inspect that axis
 ```
 
----
-
 ## Layer Quality Diagnostics
 
 ### Visual Inspection During Print
 
-**Every 30 minutes of printing, check:**
+Every 30 minutes of printing}}, check:
 
 ```plaintext
 [ ] Layer alignment (no X/Y shifting)
@@ -294,31 +268,27 @@ Is filament stuck in extruder?
 [ ] Consistent layer heights visible
 ```
 
----
-
 ## Dimensional Accuracy Diagnostics
 
-**After print completes and cools (24 hours):**
+After print}} completes and cools (24 hours):
 
 ### Precision Measurement
 
-**Materials Needed:**
+Materials Needed:
 
 - Digital calipers (+/-0.05mm accuracy)
 - Ruler (for larger dimensions)
 - Notepad for recording
 
-**Measurement Protocol:**
+Measurement Protocol:
 
 ```plaintext
 1. Measure each dimension 3 times at different locations
 2. Calculate average
 3. Compare to design dimension
 4. Calculate deviation percentage
-
 Formula:
 Deviation % = ((Measured - Design) / Design) x 100%
-
 Example:
 - Design: 20.0mm
 - Measured: 19.8mm
@@ -333,22 +303,20 @@ Example:
 | +/-0.5-1mm         | MARGINAL  | Document and monitor    |
 | >+/-1mm            | FAIL      | Adjust flow/calibration |
 
----
-
 ## Environmental Diagnostics
 
-**When quality varies between prints:**
+When quality}} varies between}} prints:
 
-**Check Conditions:**
+Check Conditions:
 
 - [ ] Room temperature stable (+/-5C?)
 - [ ] Humidity reasonable (30-60%?)
-- [ ] No drafts from windows/AC near printer
+- [ ] No drafts from windows/AC near printer}}
 - [ ] Consistent vibration level (no external impact)
-- [ ] Same filament spool/batch used
+- [ ] Same filament}} spool/batch used
 - [ ] Same slicer settings applied
 
-**Environmental Log:**
+Environmental Log:
 
 ```plaintext
 Date:     Time:     Temp: C    Humidity: %
@@ -356,11 +324,9 @@ Print Duration:     Result Quality: Poor/Fair/Good/Excellent
 Notes: 
 ```
 
----
-
 ## Troubleshooting Decision Tree
 
-**Start here for systematic diagnosis:**
+Start here for systematic diagnosis:
 
 ```plaintextv
 +---- Printer won't start?
@@ -393,21 +359,17 @@ Notes:
    +---- Check: Flow rate calibration, printer accuracy limits
 ```
 
----
-
 ## Diagnostic Report Template
 
-**Use when seeking help:**
+Use when seeking help:
 
 ```plaintext
 DIAGNOSTIC REPORT
 ================
-
 Printer Model: 
 Problem Description: 
 When it occurs: (always/sometimes/first 5 layers, etc) 
 Recent changes: 
-
 DIAGNOSTICS PERFORMED:
 [ ] Power/connectivity verified
 [ ] Temperatures verified  
@@ -416,21 +378,16 @@ DIAGNOSTICS PERFORMED:
 [ ] Filament loading tested
 [ ] First layer inspected
 [ ] Print quality evaluated
-
 Key Findings:
 1. 
 2. 
 3. 
-
 Attempted Solutions:
 1. 
 2. 
-
 Result: (Solved/Partial/Ongoing) 
 ```
 
----
-
-**Last Diagnostic Date:**
-**Issue Resolved:**  
-**Diagnostic Performed By:**
+Last Diagnostic Date:
+Issue Resolved:  
+Diagnostic Performed By:

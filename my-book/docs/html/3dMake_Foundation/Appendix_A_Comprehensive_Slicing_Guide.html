@@ -81,10 +81,10 @@
             const path_to_root = "../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-d11bd641.js";
+            window.path_to_searchindex_js = "../searchindex-d0af5d9e.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-19a5926f.js"></script>
+        <script src="../toc-5b0c6224.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -221,7 +221,7 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="3dmake_foundation-appendix_a_comprehensive_slicing_guide"><a class="header" href="#3dmake_foundation-appendix_a_comprehensive_slicing_guide">Appendix A: Comprehensive Slicing Guide - All Major Slicers</a></h1>
-<p>This appendix covers settings, workflows, and troubleshooting for <strong>7 major 3D printer slicers</strong>. Each slicer is represented with:</p>
+<p>This appendix covers settings, workflows, and troubleshooting for 7 major 3D printer slicers. Each slicer is represented with:</p>
 <ul>
 <li>Recommended settings for beginners</li>
 <li>Screen-reader-accessible settings explanation</li>
@@ -229,10 +229,9 @@
 <li>Accessibility features built-in</li>
 <li>Command-line usage (for PowerShell integration)</li>
 </ul>
-<p><strong>Referenced in:</strong> Lessons 5 (Safety), 8 (Design), 10 (Verification)</p>
-<hr>
+<p>Referenced in: Lessons 5 (Safety), 8 (Design), 10 (Verification)</p>
 <h2 id="overview-what-is-slicing"><a class="header" href="#overview-what-is-slicing">Overview: What is Slicing?</a></h2>
-<p><strong>Slicing</strong> converts a 3D model into printer instructions:</p>
+<p>Slicing converts a 3D model into printer instructions:</p>
 <pre><code>SCAD Design (bracelet_holder.scad)
    v
 Export to STL (3D shape file)
@@ -254,39 +253,38 @@ Physical part
 <tr><th>Parameter</th><th>What It Does</th><th>Typical Range</th><th>Impact</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Nozzle Temp</strong></td><td>Filament melting heat</td><td>200-250C</td><td>Too cold -&gt; weak; too hot -&gt; oozing</td></tr>
-<tr><td><strong>Bed Temp</strong></td><td>Build plate heat</td><td>50-110C</td><td>Helps adhesion; prevents warping</td></tr>
-<tr><td><strong>Layer Height</strong></td><td>Z-axis precision</td><td>0.1-0.4mm</td><td>Finer = slower, better detail</td></tr>
-<tr><td><strong>Print Speed</strong></td><td>Movement velocity</td><td>30-150 mm/s</td><td>Faster = worse quality; slower = stronger</td></tr>
-<tr><td><strong>Infill %</strong></td><td>Interior density</td><td>10-100%</td><td>Higher = stronger + heavier</td></tr>
-<tr><td><strong>Support</strong></td><td>Temporary scaffolding</td><td>On/Off</td><td>Required for overhangs &gt;45</td></tr>
-<tr><td><strong>Bed Adhesion</strong></td><td>First layer stickiness</td><td>Brim/Raft/Skirt</td><td>Prevents parts lifting mid-print</td></tr>
+<tr><td>Nozzle Temp</td><td>Filament melting heat</td><td>200-250C</td><td>Too cold -&gt; weak; too hot -&gt; oozing</td></tr>
+<tr><td>Bed Temp</td><td>Build plate heat</td><td>50-110C</td><td>Helps adhesion; prevents warping</td></tr>
+<tr><td>Layer Height</td><td>Z-axis precision</td><td>0.1-0.4mm</td><td>Finer = slower, better detail</td></tr>
+<tr><td>Print Speed</td><td>Movement velocity</td><td>30-150 mm/s</td><td>Faster = worse quality; slower = stronger</td></tr>
+<tr><td>Infill %</td><td>Interior density</td><td>10-100%</td><td>Higher = stronger + heavier</td></tr>
+<tr><td>Support</td><td>Temporary scaffolding</td><td>On/Off</td><td>Required for overhangs &gt;45</td></tr>
+<tr><td>Bed Adhesion</td><td>First layer stickiness</td><td>Brim/Raft/Skirt</td><td>Prevents parts lifting mid-print</td></tr>
 </tbody>
 </table>
 </div>
-<hr>
 <h2 id="1-prusaslicer-prusa"><a class="header" href="#1-prusaslicer-prusa">1. PrusaSlicer (Prusa)</a></h2>
 <h3 id="overview"><a class="header" href="#overview">Overview</a></h3>
 <ul>
-<li><strong>Developer:</strong> Prusa Research (Czech company)</li>
-<li><strong>Platforms:</strong> Windows, Mac, Linux (open-source)</li>
-<li><strong>Best For:</strong> Beginner-friendly, excellent support, strong community</li>
-<li><strong>Download:</strong> https://www.prusa3d.com/page/prusaslicer_410/</li>
-<li><strong>Accessibility:</strong> Good font sizes, text-based profiles</li>
+<li>Developer: Prusa Research (Czech company)</li>
+<li>Platforms: Windows, Mac, Linux (open-source)</li>
+<li>Best For: Beginner-friendly, excellent support, strong community</li>
+<li>Download: <a href="https://www.prusa3d.com/page/prusaslicer_410/">https://www.prusa3d.com/page/prusaslicer_410/</a></li>
+<li>Accessibility: Good font sizes, text-based profiles</li>
 </ul>
 <h3 id="quick-setup-for-beginners"><a class="header" href="#quick-setup-for-beginners">Quick Setup for Beginners</a></h3>
-<p><strong>Step 1: Install &amp; Select Your Printer</strong></p>
+<p>Step 1: Install &amp; Select Your Printer</p>
 <pre><code>1. Open PrusaSlicer
 2. Go to "Help" -&gt; "Check for Updates"
 3. When prompted, select your printer model
 4. Choose default profile (matches printer exactly)
 </code></pre>
-<p><strong>Step 2: Load Your STL</strong></p>
+<p>Step 2: Load Your STL</p>
 <pre><code>1. Click "File" -&gt; "Open STL Model"
 2. Select your bracelet_holder.stl
 3. Model appears in 3D view
 </code></pre>
-<p><strong>Step 3: Essential Settings</strong></p>
+<p>Step 3: Essential Settings</p>
 <p>These are the most important adjustments:</p>
 <div class="table-wrapper">
 <table>
@@ -294,16 +292,16 @@ Physical part
 <tr><th>Setting</th><th>Location</th><th>Beginner Value</th><th>Why</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Layer Height</strong></td><td>Print Settings</td><td>0.15mm</td><td>Balance speed &amp; quality</td></tr>
-<tr><td><strong>Infill</strong></td><td>Print Settings</td><td>20%</td><td>Enough strength; fast print</td></tr>
-<tr><td><strong>Support</strong></td><td>Print Settings</td><td>Yes (if needed)</td><td>For overhangs &gt;45</td></tr>
-<tr><td><strong>Nozzle Temp</strong></td><td>Filament Settings</td><td>210C</td><td>Default for PLA</td></tr>
-<tr><td><strong>Bed Temp</strong></td><td>Filament Settings</td><td>60C</td><td>Standard PLA adhesion</td></tr>
-<tr><td><strong>Print Speed</strong></td><td>Print Settings</td><td>150 mm/s</td><td>Balanced quality</td></tr>
+<tr><td>Layer Height</td><td>Print Settings</td><td>0.15mm</td><td>Balance speed &amp; quality</td></tr>
+<tr><td>Infill</td><td>Print Settings</td><td>20%</td><td>Enough strength; fast print</td></tr>
+<tr><td>Support</td><td>Print Settings</td><td>Yes (if needed)</td><td>For overhangs &gt;45</td></tr>
+<tr><td>Nozzle Temp</td><td>Filament Settings</td><td>210C</td><td>Default for PLA</td></tr>
+<tr><td>Bed Temp</td><td>Filament Settings</td><td>60C</td><td>Standard PLA adhesion</td></tr>
+<tr><td>Print Speed</td><td>Print Settings</td><td>150 mm/s</td><td>Balanced quality</td></tr>
 </tbody>
 </table>
 </div>
-<p><strong>Step 4: Preview &amp; Export</strong></p>
+<p>Step 4: Preview &amp; Export</p>
 <pre><code>1. Click "Slice now" (or G-code icon)
 2. Left panel shows preview of each layer
 3. Look for issues:
@@ -315,43 +313,41 @@ Physical part
 </code></pre>
 <h3 id="accessible-parameter-explanations"><a class="header" href="#accessible-parameter-explanations">Accessible Parameter Explanations</a></h3>
 <p>When adjusting settings, use these descriptions to understand what each does:</p>
-<p><strong>Layer Height (0.1-0.4mm)</strong></p>
+<p>Layer Height (0.1-0.4mm)</p>
 <ul>
-<li><strong>Lower (0.1mm):</strong> Smoother surface, more layers, slower (best for detail)</li>
-<li><strong>Higher (0.4mm):</strong> Faster, rougher surface (best for speed)</li>
-<li><strong>Recommendation:</strong> 0.15mm for balanced quality</li>
+<li>Lower (0.1mm): Smoother surface, more layers, slower (best for detail)</li>
+<li>Higher (0.4mm): Faster, rougher surface (best for speed)</li>
+<li>Recommendation: 0.15mm for balanced quality</li>
 </ul>
-<p><strong>Infill Percentage (10-100%)</strong></p>
+<p>Infill Percentage (10-100%)</p>
 <ul>
-<li><strong>10%:</strong> Fast, uses less filament, weaker (good for prototypes)</li>
-<li><strong>20%:</strong> Good balance (recommended for most prints)</li>
-<li><strong>50%:</strong> Stronger, slower, heavier</li>
-<li><strong>100%:</strong> Solid interior, strongest, slowest (waste of plastic)</li>
+<li>10%: Fast, uses less filament, weaker (good for prototypes)</li>
+<li>20%: Good balance (recommended for most prints)</li>
+<li>50%: Stronger, slower, heavier</li>
+<li>100%: Solid interior, strongest, slowest (waste of plastic)</li>
 </ul>
-<p><strong>Support Type</strong></p>
+<p>Support Type</p>
 <ul>
-<li><strong>None:</strong> Fast, good surface finish, but risky if overhangs exist</li>
-<li><strong>Linear (Default):</strong> Good balance-easy to remove, provides support</li>
-<li><strong>Grid:</strong> Extra strong support, takes longer to remove</li>
+<li>None: Fast, good surface finish, but risky if overhangs exist</li>
+<li>Linear (Default): Good balance-easy to remove, provides support</li>
+<li>Grid: Extra strong support, takes longer to remove</li>
 </ul>
-<p><strong>First Layer</strong></p>
+<p>First Layer</p>
 <ul>
-<li><strong>Brim:</strong> Adds border to help adhesion (recommended for beginners)</li>
-<li><strong>Raft:</strong> Sacrificial platform (good if bed isn’t level)</li>
-<li><strong>Skirt:</strong> Just outline, doesn’t help adhesion (fastest)</li>
+<li>Brim: Adds border to help adhesion (recommended for beginners)</li>
+<li>Raft: Sacrificial platform (good if bed isn’t level)</li>
+<li>Skirt: Just outline, doesn’t help adhesion (fastest)</li>
 </ul>
 <h3 id="command-line-usage-powershell-integration"><a class="header" href="#command-line-usage-powershell-integration">Command-Line Usage (PowerShell Integration)</a></h3>
 <pre><code class="language-powershell"># Slice a model automatically with PrusaSlicer
 $model = "C:\Models\bracelet_holder.stl"
 $output = "C:\GCode\bracelet_holder.gcode"
 $config = "default"  # Use default printer profile
-
 # Run PrusaSlicer in batch mode
 &amp; "C:\Program Files\Prusa3D\PrusaSlicer\prusa-slicer.exe" `
     --load-config-file "$config" `
     --export-gcode "$output" `
     "$model"
-
 Write-Host "Slicing complete: $output"
 </code></pre>
 <h3 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h3>
@@ -369,64 +365,66 @@ Write-Host "Slicing complete: $output"
 </tbody>
 </table>
 </div>
-<hr>
 <h2 id="2-bambu-studio-bambu-lab"><a class="header" href="#2-bambu-studio-bambu-lab">2. Bambu Studio (Bambu Lab)</a></h2>
 <h3 id="overview-1"><a class="header" href="#overview-1">Overview</a></h3>
 <ul>
-<li><strong>Developer:</strong> Bambu Lab (printer manufacturer)</li>
-<li><strong>Platforms:</strong> Windows, Mac, Linux</li>
-<li><strong>Best For:</strong> Modern X1-series printers, excellent speed, AMS support</li>
-<li><strong>Download:</strong> https://bambulab.com/en/download/studio</li>
-<li><strong>Accessibility:</strong> Good contrast, keyboard navigation</li>
+<li>Developer: Bambu Lab (printer manufacturer)</li>
+<li>Platforms: Windows, Mac, Linux</li>
+<li>Best For: Modern X1-series printers, excellent speed, AMS support</li>
+<li>Download: <a href="https://bambulab.com/en/download/studio">https://bambulab.com/en/download/studio</a></li>
+<li>Accessibility: Good contrast, keyboard navigation</li>
 </ul>
 <h3 id="quick-setup"><a class="header" href="#quick-setup">Quick Setup</a></h3>
-<p><strong>Step 1: Create Account &amp; Connect Printer</strong></p>
-<pre><code>1. Launch Bambu Studio
-2. Sign in with Bambu Lab account
-3. Select printer from network
-4. Studio auto-detects printer settings
-</code></pre>
-<p><strong>Step 2: Load Model &amp; Configure</strong></p>
-<pre><code>1. Drag STL into workspace
-2. Auto-arranges on bed plate
-3. Default profile applied automatically
-</code></pre>
-<p><strong>Step 3: Key Settings (Bambu-Specific)</strong></p>
+<p>Step 1: Create Account &amp; Connect Printer</p>
+<ol>
+<li>Launch Bambu Studio</li>
+<li>Sign in with Bambu Lab account</li>
+<li>Select printer from network</li>
+<li>Studio auto-detects printer settings</li>
+</ol>
+<p>Step 2: Load Model &amp; Configure</p>
+<ol>
+<li>Drag STL into workspace</li>
+<li>Auto-arranges on bed plate</li>
+<li>Default profile applied automatically</li>
+</ol>
+<p>Step 3: Key Settings (Bambu-Specific)</p>
 <div class="table-wrapper">
 <table>
 <thead>
 <tr><th>Setting</th><th>Default</th><th>Adjustment</th><th>Why</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>AMS Multi-Color</strong></td><td>Off</td><td>On (if AMS attached)</td><td>Auto-switch filament</td></tr>
-<tr><td><strong>Auto-Leveling</strong></td><td>Enabled</td><td>Keep On</td><td>Bambu feature-very reliable</td></tr>
-<tr><td><strong>Nozzle Temp</strong></td><td>220C</td><td>Keep unless specified</td><td>Bambu-optimized</td></tr>
-<tr><td><strong>Layer Height</strong></td><td>0.2mm</td><td>0.15mm for detail</td><td>Balance speed/quality</td></tr>
-<tr><td><strong>Bed Temp</strong></td><td>65C</td><td>60C for PLA</td><td>Standard adhesion</td></tr>
+<tr><td>AMS Multi-Color</td><td>Off</td><td>On (if AMS attached)</td><td>Auto-switch filament</td></tr>
+<tr><td>Auto-Leveling</td><td>Enabled</td><td>Keep On</td><td>Bambu feature-very reliable</td></tr>
+<tr><td>Nozzle Temp</td><td>220C</td><td>Keep unless specified</td><td>Bambu-optimized</td></tr>
+<tr><td>Layer Height</td><td>0.2mm</td><td>0.15mm for detail</td><td>Balance speed/quality</td></tr>
+<tr><td>Bed Temp</td><td>65C</td><td>60C for PLA</td><td>Standard adhesion</td></tr>
 </tbody>
 </table>
 </div>
-<p><strong>Step 4: Send to Printer</strong></p>
-<pre><code>1. Click "Prepare" (bottom right)
-2. Review preview
-3. Click "Send to Device"
-4. Printer receives over WiFi
-5. Start print from printer screen
-</code></pre>
+<p>Step 4: Send to Printer</p>
+<ol>
+<li>Click “Prepare” (bottom right)</li>
+<li>Review preview</li>
+<li>Click “Send to Device”</li>
+<li>Printer receives over WiFi</li>
+<li>Start print from printer screen</li>
+</ol>
 <h3 id="accessible-parameter-explanations-1"><a class="header" href="#accessible-parameter-explanations-1">Accessible Parameter Explanations</a></h3>
-<p><strong>Auto-Leveling</strong></p>
+<p>Auto-Leveling</p>
 <ul>
 <li>Bambu printers automatically level the nozzle before every print</li>
 <li>Explanation: Saves manual calibration; extremely reliable</li>
 <li>For VI users: Provides confidence that bed is properly prepared</li>
 </ul>
-<p><strong>Filament Calibration</strong></p>
+<p>Filament Calibration</p>
 <ul>
 <li>Before first use of new filament color, run “Filament Calibration”</li>
 <li>This optimizes temperature and speed for that specific filament</li>
 <li>Explanation: Ensures consistent color and strength</li>
 </ul>
-<p><strong>Multi-Material (AMS)</strong></p>
+<p>Multi-Material (AMS)</p>
 <ul>
 <li>If you have Auto Material System (AMS):
 <ul>
@@ -440,14 +438,11 @@ Write-Host "Slicing complete: $output"
 <pre><code class="language-powershell"># Slice with Bambu Studio (command-line interface)
 $model = "C:\Models\bracelet_holder.stl"
 $output = "C:\GCode\bracelet_holder.3mf"  # Bambu uses .3mf format
-
 # Bambu Studio CLI
 &amp; "C:\Program Files\BambuStudio\bambu-studio.exe" `
     --output "$output" `
     "$model"
-
 Write-Host "Slice saved: $output"
-
 # Send to printer directly
 # (Requires API key-see Bambu documentation)
 </code></pre>
@@ -465,68 +460,70 @@ Write-Host "Slice saved: $output"
 </tbody>
 </table>
 </div>
-<hr>
 <h2 id="3-cura-ultimaker"><a class="header" href="#3-cura-ultimaker">3. Cura (Ultimaker)</a></h2>
 <h3 id="overview-2"><a class="header" href="#overview-2">Overview</a></h3>
 <ul>
-<li><strong>Developer:</strong> Ultimaker (Dutch company, open-source)</li>
-<li><strong>Platforms:</strong> Windows, Mac, Linux</li>
-<li><strong>Best For:</strong> Broad printer support, user-friendly, good documentation</li>
-<li><strong>Download:</strong> https://ultimaker.com/software/ultimaker-cura</li>
-<li><strong>Accessibility:</strong> Clear UI, good contrast</li>
+<li>Developer: Ultimaker (Dutch company, open-source)</li>
+<li>Platforms: Windows, Mac, Linux</li>
+<li>Best For: Broad printer support, user-friendly, good documentation</li>
+<li>Download: <a href="https://ultimaker.com/software/ultimaker-cura">https://ultimaker.com/software/ultimaker-cura</a></li>
+<li>Accessibility: Clear UI, good contrast</li>
 </ul>
 <h3 id="quick-setup-1"><a class="header" href="#quick-setup-1">Quick Setup</a></h3>
-<p><strong>Step 1: Add Your Printer</strong></p>
-<pre><code>1. Launch Cura
-2. Go to "Settings" (top-right)
-3. Click "Printers" -&gt; "Add Printer"
-4. Select your printer model from list
-5. Confirm network connection
-</code></pre>
-<p><strong>Step 2: Load &amp; Prepare Model</strong></p>
-<pre><code>1. Drag STL into workspace
-2. Model auto-scales if needed (confirm size)
-3. Right-click -&gt; "Support" (if overhangs need support)
-</code></pre>
-<p><strong>Step 3: Recommended Settings</strong></p>
+<p>Step 1: Add Your Printer</p>
+<ol>
+<li>Launch Cura</li>
+<li>Go to “Settings” (top-right)</li>
+<li>Click “Printers” -&gt; “Add Printer”</li>
+<li>Select your printer model from list</li>
+<li>Confirm network connection</li>
+</ol>
+<p>Step 2: Load &amp; Prepare Model</p>
+<ol>
+<li>Drag STL into workspace</li>
+<li>Model auto-scales if needed (confirm size)</li>
+<li>Right-click -&gt; “Support” (if overhangs need support)</li>
+</ol>
+<p>Step 3: Recommended Settings</p>
 <div class="table-wrapper">
 <table>
 <thead>
 <tr><th>Setting</th><th>Value</th><th>Notes</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Profile</strong></td><td>Standard</td><td>Good balance for most prints</td></tr>
-<tr><td><strong>Layer Height</strong></td><td>0.2mm</td><td>Default; change to 0.15mm for detail</td></tr>
-<tr><td><strong>Infill</strong></td><td>20%</td><td>100% waste for solid parts</td></tr>
-<tr><td><strong>Support Angle</strong></td><td>50</td><td>Auto-generates support for overhangs</td></tr>
-<tr><td><strong>Build Plate Adhesion</strong></td><td>Brim</td><td>Helps first layer stick</td></tr>
-<tr><td><strong>Nozzle Temp</strong></td><td>200C</td><td>Standard PLA</td></tr>
-<tr><td><strong>Bed Temp</strong></td><td>60C</td><td>Standard PLA</td></tr>
+<tr><td>Profile</td><td>Standard</td><td>Good balance for most prints</td></tr>
+<tr><td>Layer Height</td><td>0.2mm</td><td>Default; change to 0.15mm for detail</td></tr>
+<tr><td>Infill</td><td>20%</td><td>100% waste for solid parts</td></tr>
+<tr><td>Support Angle</td><td>50</td><td>Auto-generates support for overhangs</td></tr>
+<tr><td>Build Plate Adhesion</td><td>Brim</td><td>Helps first layer stick</td></tr>
+<tr><td>Nozzle Temp</td><td>200C</td><td>Standard PLA</td></tr>
+<tr><td>Bed Temp</td><td>60C</td><td>Standard PLA</td></tr>
 </tbody>
 </table>
 </div>
-<p><strong>Step 4: Print</strong></p>
-<pre><code>1. Click "Slice" (bottom right)
-2. Review layer-by-layer preview
-3. Click "Print Over Network" or "Print to File"
-4. Model sends to printer or saves as .gcode
-</code></pre>
+<p>Step 4: Print</p>
+<ol>
+<li>Click “Slice” (bottom right)</li>
+<li>Review layer-by-layer preview</li>
+<li>Click “Print Over Network” or “Print to File”</li>
+<li>Model sends to printer or saves as .gcode</li>
+</ol>
 <h3 id="accessible-settings-explanation"><a class="header" href="#accessible-settings-explanation">Accessible Settings Explanation</a></h3>
-<p><strong>Combing Mode</strong></p>
+<p>Combing Mode</p>
 <ul>
-<li><strong>Off:</strong> Nozzle retracts on every travel (quality)</li>
-<li><strong>All:</strong> Never retracts (faster, possible stringing)</li>
-<li><strong>Not in Skin:</strong> Smart compromise</li>
+<li>Off: Nozzle retracts on every travel (quality)</li>
+<li>All: Never retracts (faster, possible stringing)</li>
+<li>Not in Skin: Smart compromise</li>
 <li>For VI users: Retraction prevents nozzle oozing on visible surfaces</li>
 </ul>
-<p><strong>Z-Offset (Z Clearance)</strong></p>
+<p>Z-Offset (Z Clearance)</p>
 <ul>
 <li>Adjusts first-layer distance</li>
 <li>Too low -&gt; nozzle scrapes bed (bad)</li>
 <li>Too high -&gt; filament doesn’t stick (bad)</li>
 <li>Correct -&gt; thin line of plastic sticks to bed</li>
 </ul>
-<p><strong>Gradual Infill</strong></p>
+<p>Gradual Infill</p>
 <ul>
 <li>Automatically reduces infill strength away from surface</li>
 <li>Saves filament while maintaining strength</li>
@@ -537,13 +534,11 @@ Write-Host "Slice saved: $output"
 $model = "C:\Models\bracelet_holder.stl"
 $output = "C:\GCode\bracelet_holder.gcode"
 $config = "default.cfg"
-
 # Requires Cura to be installed; command-line slicing
 &amp; "C:\Program Files\Ultimaker Cura\CuraEngine.exe" `
     -c "$config" `
     -o "$output" `
     "$model"
-
 Write-Host "Sliced: $output"
 </code></pre>
 <h3 id="troubleshooting-2"><a class="header" href="#troubleshooting-2">Troubleshooting</a></h3>
@@ -560,15 +555,14 @@ Write-Host "Sliced: $output"
 </tbody>
 </table>
 </div>
-<hr>
 <h2 id="4-superslicer-modification-of-prusa"><a class="header" href="#4-superslicer-modification-of-prusa">4. SuperSlicer (Modification of Prusa)</a></h2>
 <h3 id="overview-3"><a class="header" href="#overview-3">Overview</a></h3>
 <ul>
-<li><strong>Developer:</strong> Community fork of PrusaSlicer</li>
-<li><strong>Platforms:</strong> Windows, Mac, Linux</li>
-<li><strong>Best For:</strong> Advanced users wanting more control than Prusa offers</li>
-<li><strong>Download:</strong> https://github.com/supermerill/SuperSlicer</li>
-<li><strong>Accessibility:</strong> Similar to Prusa, more advanced options</li>
+<li>Developer: Community fork of PrusaSlicer</li>
+<li>Platforms: Windows, Mac, Linux</li>
+<li>Best For: Advanced users wanting more control than Prusa offers</li>
+<li>Download: <a href="https://github.com/supermerill/SuperSlicer">https://github.com/supermerill/SuperSlicer</a></li>
+<li>Accessibility: Similar to Prusa, more advanced options</li>
 </ul>
 <h3 id="key-differences-from-prusa"><a class="header" href="#key-differences-from-prusa">Key Differences from Prusa</a></h3>
 <div class="table-wrapper">
@@ -577,10 +571,10 @@ Write-Host "Sliced: $output"
 <tr><th>Feature</th><th>PrusaSlicer</th><th>SuperSlicer</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Arachne Engine</strong></td><td>No</td><td>Yes-better edges</td></tr>
-<tr><td><strong>Seam Position</strong></td><td>Limited options</td><td>Full control</td></tr>
-<tr><td><strong>Pressure Equalization</strong></td><td>No</td><td>Yes-better bridging</td></tr>
-<tr><td><strong>Stealth Mode</strong></td><td>No</td><td>Yes-quieter/higher quality</td></tr>
+<tr><td>Arachne Engine</td><td>No</td><td>Yes-better edges</td></tr>
+<tr><td>Seam Position</td><td>Limited options</td><td>Full control</td></tr>
+<tr><td>Pressure Equalization</td><td>No</td><td>Yes-better bridging</td></tr>
+<tr><td>Stealth Mode</td><td>No</td><td>Yes-quieter/higher quality</td></tr>
 </tbody>
 </table>
 </div>
@@ -591,42 +585,42 @@ Write-Host "Sliced: $output"
 <li>Familiar with PrusaSlicer already and want more power</li>
 </ul>
 <h3 id="quick-start"><a class="header" href="#quick-start">Quick Start</a></h3>
-<pre><code>1. Download SuperSlicer from GitHub
-2. Export profile from PrusaSlicer (if you have it)
-3. Import into SuperSlicer
-4. All settings are compatible with PrusaSlicer
-</code></pre>
+<ol>
+<li>Download SuperSlicer from GitHub</li>
+<li>Export profile from PrusaSlicer (if you have it)</li>
+<li>Import into SuperSlicer</li>
+<li>All settings are compatible with PrusaSlicer</li>
+</ol>
 <h3 id="advanced-settings-for-superslicer"><a class="header" href="#advanced-settings-for-superslicer">Advanced Settings for SuperSlicer</a></h3>
-<p><strong>Arachne Engine</strong></p>
+<p>Arachne Engine</p>
 <ul>
 <li>Enables finer edges on walls</li>
 <li>Results in cleaner, more accurate prints</li>
 <li>Takes slightly longer to slice but worth it</li>
 </ul>
-<p><strong>Seam Positioning</strong></p>
+<p>Seam Positioning</p>
 <ul>
-<li><strong>Random:</strong> Hides seams (good for aesthetic)</li>
-<li><strong>Aligned:</strong> Consistent location (good for debugging)</li>
-<li><strong>Rear:</strong> Always at back (recommended)</li>
+<li>Random: Hides seams (good for aesthetic)</li>
+<li>Aligned: Consistent location (good for debugging)</li>
+<li>Rear: Always at back (recommended)</li>
 </ul>
-<p><strong>Pressure Equalization</strong></p>
+<p>Pressure Equalization</p>
 <ul>
 <li>Helps with bridging (printing across gaps)</li>
 <li>Reduces sagging on overhangs</li>
 <li>Recommended: Enable for complex designs</li>
 </ul>
-<hr>
 <h2 id="5-orcaslicer-modern-bamboo-alternative"><a class="header" href="#5-orcaslicer-modern-bamboo-alternative">5. OrcaSlicer (Modern Bamboo Alternative)</a></h2>
 <h3 id="overview-4"><a class="header" href="#overview-4">Overview</a></h3>
 <ul>
-<li><strong>Developer:</strong> Community (independent open-source)</li>
-<li><strong>Platforms:</strong> Windows, Mac, Linux</li>
-<li><strong>Best For:</strong> Users who want Bambu features without Bambu printer</li>
-<li><strong>Download:</strong> https://github.com/SoftFever/OrcaSlicer</li>
-<li><strong>Accessibility:</strong> Modern UI, good keyboard support</li>
+<li>Developer: Community (independent open-source)</li>
+<li>Platforms: Windows, Mac, Linux</li>
+<li>Best For: Users who want Bambu features without Bambu printer</li>
+<li>Download: <a href="https://github.com/SoftFever/OrcaSlicer">https://github.com/SoftFever/OrcaSlicer</a></li>
+<li>Accessibility: Modern UI, good keyboard support</li>
 </ul>
 <h3 id="why-orca"><a class="header" href="#why-orca">Why Orca?</a></h3>
-<p>OrcaSlicer brings Bambu Studio’s best features to <strong>any printer</strong>:</p>
+<p>OrcaSlicer brings Bambu Studio’s best features to any printer:</p>
 <ul>
 <li>Excellent defaults</li>
 <li>Fast slicing</li>
@@ -634,11 +628,12 @@ Write-Host "Sliced: $output"
 <li>Modern interface</li>
 </ul>
 <h3 id="quick-setup-2"><a class="header" href="#quick-setup-2">Quick Setup</a></h3>
-<pre><code>1. Download OrcaSlicer
-2. Select your printer (not just Bambu models)
-3. Load STL
-4. Uses good defaults-usually ready to print
-</code></pre>
+<ol>
+<li>Download OrcaSlicer</li>
+<li>Select your printer (not just Bambu models)</li>
+<li>Load STL</li>
+<li>Uses good defaults-usually ready to print</li>
+</ol>
 <h3 id="key-settings"><a class="header" href="#key-settings">Key Settings</a></h3>
 <div class="table-wrapper">
 <table>
@@ -646,39 +641,38 @@ Write-Host "Sliced: $output"
 <tr><th>Setting</th><th>Value</th><th>Why</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Wall Loops</strong></td><td>2</td><td>Strong walls, visible detail</td></tr>
-<tr><td><strong>Internal Solid Layer</strong></td><td>4</td><td>Strength for brackets/connectors</td></tr>
-<tr><td><strong>Infill Pattern</strong></td><td>Grid</td><td>Balanced strength</td></tr>
-<tr><td><strong>Line Width</strong></td><td>Auto</td><td>Matches nozzle diameter</td></tr>
-<tr><td><strong>Speed</strong></td><td>80 mm/s</td><td>Balanced quality/speed</td></tr>
+<tr><td>Wall Loops</td><td>2</td><td>Strong walls, visible detail</td></tr>
+<tr><td>Internal Solid Layer</td><td>4</td><td>Strength for brackets/connectors</td></tr>
+<tr><td>Infill Pattern</td><td>Grid</td><td>Balanced strength</td></tr>
+<tr><td>Line Width</td><td>Auto</td><td>Matches nozzle diameter</td></tr>
+<tr><td>Speed</td><td>80 mm/s</td><td>Balanced quality/speed</td></tr>
 </tbody>
 </table>
 </div>
 <h3 id="accessible-features"><a class="header" href="#accessible-features">Accessible Features</a></h3>
-<p><strong>Filament Manager</strong></p>
+<p>Filament Manager</p>
 <ul>
 <li>Track filament type, color, weight used</li>
 <li>Explanation: Know when to buy new filament</li>
 </ul>
-<p><strong>Print Time Estimation</strong></p>
+<p>Print Time Estimation</p>
 <ul>
 <li>Accurate prediction of print duration</li>
 <li>Updates during slicing</li>
 </ul>
-<p><strong>Material Presets</strong></p>
+<p>Material Presets</p>
 <ul>
 <li>Pre-configured settings for common filaments</li>
 <li>Just select material type; settings auto-apply</li>
 </ul>
-<hr>
 <h2 id="6-ideamaker-raise3d"><a class="header" href="#6-ideamaker-raise3d">6. IdeaMaker (Raise3D)</a></h2>
 <h3 id="overview-5"><a class="header" href="#overview-5">Overview</a></h3>
 <ul>
-<li><strong>Developer:</strong> Raise3D</li>
-<li><strong>Platforms:</strong> Windows, Mac, Linux</li>
-<li><strong>Best For:</strong> Raise3D printer users; advanced features</li>
-<li><strong>Download:</strong> https://www.raise3d.com/ideamaker</li>
-<li><strong>Accessibility:</strong> Professional UI, detailed settings</li>
+<li>Developer: Raise3D</li>
+<li>Platforms: Windows, Mac, Linux</li>
+<li>Best For: Raise3D printer users; advanced features</li>
+<li>Download: <a href="https://www.raise3d.com/ideamaker">https://www.raise3d.com/ideamaker</a></li>
+<li>Accessibility: Professional UI, detailed settings</li>
 </ul>
 <h3 id="when-to-use"><a class="header" href="#when-to-use">When to Use</a></h3>
 <ul>
@@ -687,65 +681,65 @@ Write-Host "Sliced: $output"
 <li>Want dual-extrusion (2-color) printing</li>
 </ul>
 <h3 id="quick-start-1"><a class="header" href="#quick-start-1">Quick Start</a></h3>
-<pre><code>1. Launch IdeaMaker
-2. Add printer (Raise3D models have built-in profiles)
-3. Load STL
-4. Adjust layer height and infill
-5. Slice and send to printer
-</code></pre>
+<ol>
+<li>Launch IdeaMaker</li>
+<li>Add printer (Raise3D models have built-in profiles)</li>
+<li>Load STL</li>
+<li>Adjust layer height and infill</li>
+<li>Slice and send to printer</li>
+</ol>
 <h3 id="key-features"><a class="header" href="#key-features">Key Features</a></h3>
-<p><strong>Dual Extrusion</strong></p>
+<p>Dual Extrusion</p>
 <ul>
 <li>Two nozzles = two colors in one print</li>
 <li>Useful for: Bracelets (core + colored rim)</li>
 <li>Requires: Coordinating two materials</li>
 </ul>
-<p><strong>Advanced Support</strong></p>
+<p>Advanced Support</p>
 <ul>
 <li>Tree support (uses less material)</li>
 <li>Grid support (stronger for larger parts)</li>
 </ul>
-<p><strong>Print Balancing</strong></p>
+<p>Print Balancing</p>
 <ul>
 <li>Optimizes nozzle movement for efficiency</li>
 <li>Reduces print time without sacrificing quality</li>
 </ul>
-<hr>
 <h2 id="7-fusion-360-cad--slicer"><a class="header" href="#7-fusion-360-cad--slicer">7. Fusion 360 (CAD + Slicer)</a></h2>
 <h3 id="overview-6"><a class="header" href="#overview-6">Overview</a></h3>
 <ul>
-<li><strong>Developer:</strong> Autodesk</li>
-<li><strong>Platforms:</strong> Windows, Mac</li>
-<li><strong>Best For:</strong> If you already use Fusion 360 for CAD</li>
-<li><strong>Download:</strong> https://www.autodesk.com/products/fusion-360</li>
-<li><strong>Accessibility:</strong> Integrated environment; good for learning CAD+Slicing together</li>
+<li>Developer: Autodesk</li>
+<li>Platforms: Windows, Mac</li>
+<li>Best For: If you already use Fusion 360 for CAD</li>
+<li>Download: <a href="https://www.autodesk.com/products/fusion-360">https://www.autodesk.com/products/fusion-360</a></li>
+<li>Accessibility: Integrated environment; good for learning CAD+Slicing together</li>
 </ul>
 <h3 id="why-integrate-cad--slicing"><a class="header" href="#why-integrate-cad--slicing">Why Integrate CAD + Slicing?</a></h3>
 <p>Traditional workflow:</p>
-<pre><code>Design in CAD -&gt; Export to STL -&gt; Open in Slicer -&gt; Slice -&gt; Print
+<pre><code class="language-plaintext">Design in CAD -&gt; Export to STL -&gt; Open in Slicer -&gt; Slice -&gt; Print
 </code></pre>
 <p>Fusion 360 workflow:</p>
-<pre><code>Design in Fusion -&gt; Run Print Preparation -&gt; Slice -&gt; Print
+<pre><code class="language-plaintext">Design in Fusion -&gt; Run Print Preparation -&gt; Slice -&gt; Print
 </code></pre>
-<p><strong>Advantage:</strong> Stay in one program; no format conversion</p>
+<p>Advantage: Stay in one program; no format conversion</p>
 <h3 id="quick-start-2"><a class="header" href="#quick-start-2">Quick Start</a></h3>
-<pre><code>1. Design in Fusion 360 (or import STL)
-2. Select part
-3. Go to "3D Print" tab
-4. Click "Print Preparation"
-5. View auto-generated support and alignment
-6. Adjust layer height, infill, etc.
-7. Slice and export G-code
-</code></pre>
+<ol>
+<li>Design in Fusion 360 (or import STL)</li>
+<li>Select part</li>
+<li>Go to “3D Print” tab</li>
+<li>Click “Print Preparation”</li>
+<li>View auto-generated support and alignment</li>
+<li>Adjust layer height, infill, etc.</li>
+<li>Slice and export G-code</li>
+</ol>
 <h3 id="integration-with-3dmake"><a class="header" href="#integration-with-3dmake">Integration with 3dMake</a></h3>
 <p>If using Fusion 360 for CAD:</p>
-<pre><code># Export SCAD design to STL
-3dm export-stl src/main.scad output/main.stl
-
-# Then import into Fusion 360
-# For more complex designs that need refinement
-</code></pre>
-<hr>
+<ol>
+<li>Export SCAD design to STL</li>
+<li>3dm export-stl src/main.scad output/main.stl</li>
+<li>Then import into Fusion 360</li>
+<li>For more complex designs that need refinement</li>
+</ol>
 <h2 id="universal-troubleshooting-guide"><a class="header" href="#universal-troubleshooting-guide">Universal Troubleshooting Guide</a></h2>
 <div class="table-wrapper">
 <table>
@@ -753,24 +747,23 @@ Write-Host "Sliced: $output"
 <tr><th>Problem</th><th>Diagnosis</th><th>Solution</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Print won’t stick to bed</strong></td><td>Bed temperature too low</td><td>Raise bed temp +5C; check bed level</td></tr>
+<tr><td>Print won’t stick to bed</td><td>Bed temperature too low</td><td>Raise bed temp +5C; check bed level</td></tr>
 <tr><td></td><td>Bed not level</td><td>Manual leveling procedure (printer manual)</td></tr>
 <tr><td></td><td>Build plate dirty</td><td>Clean with isopropyl alcohol</td></tr>
-<tr><td><strong>Nozzle hits model mid-print</strong></td><td>Z-offset wrong</td><td>Adjust Z-offset; re-level bed</td></tr>
+<tr><td>Nozzle hits model mid-print</td><td>Z-offset wrong</td><td>Adjust Z-offset; re-level bed</td></tr>
 <tr><td></td><td>Model placed too low on bed</td><td>Use “Arrange on Bed” tool in slicer</td></tr>
-<tr><td><strong>Supports won’t remove</strong></td><td>Too much support generated</td><td>Reduce support density or angle</td></tr>
+<tr><td>Supports won’t remove</td><td>Too much support generated</td><td>Reduce support density or angle</td></tr>
 <tr><td></td><td>Support too strong</td><td>Reduce support material percentage</td></tr>
-<tr><td><strong>Stringy/Oozing</strong></td><td>Nozzle too hot</td><td>Reduce temp by 5-10C</td></tr>
+<tr><td>Stringy/Oozing</td><td>Nozzle too hot</td><td>Reduce temp by 5-10C</td></tr>
 <tr><td></td><td>Retraction disabled</td><td>Enable retraction in settings</td></tr>
 <tr><td></td><td>Travel speed too fast</td><td>Reduce travel speed</td></tr>
-<tr><td><strong>Layer shifting (X/Y)</strong></td><td>Belt tension off</td><td>Check belt tension (printer manual)</td></tr>
+<tr><td>Layer shifting (X/Y)</td><td>Belt tension off</td><td>Check belt tension (printer manual)</td></tr>
 <tr><td></td><td>Stepper motor power issue</td><td>Firmware issue-check printer logs</td></tr>
-<tr><td><strong>Model prints poorly but slices look good</strong></td><td>Filament quality issue</td><td>Try different filament batch</td></tr>
+<tr><td>Model prints poorly but slices look good</td><td>Filament quality issue</td><td>Try different filament batch</td></tr>
 <tr><td></td><td>Nozzle clogged</td><td>Unclog nozzle (heat -&gt; purge -&gt; clean)</td></tr>
 </tbody>
 </table>
 </div>
-<hr>
 <h2 id="recommended-slicer-for-each-situation"><a class="header" href="#recommended-slicer-for-each-situation">Recommended Slicer for Each Situation</a></h2>
 <div class="table-wrapper">
 <table>
@@ -778,71 +771,57 @@ Write-Host "Sliced: $output"
 <tr><th>Scenario</th><th>Best Slicer</th><th>Why</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>I’m a beginner</strong></td><td>PrusaSlicer</td><td>Clear defaults, excellent UI</td></tr>
-<tr><td><strong>I have a Bambu printer</strong></td><td>Bambu Studio</td><td>Native, best features</td></tr>
-<tr><td><strong>I have an Ultimaker</strong></td><td>Cura</td><td>Official support, broad compatibility</td></tr>
-<tr><td><strong>I have a Raise3D</strong></td><td>IdeaMaker</td><td>Official, dual-extrusion support</td></tr>
-<tr><td><strong>I want advanced control</strong></td><td>SuperSlicer</td><td>Maximum customization</td></tr>
-<tr><td><strong>I want modern/fast slicing</strong></td><td>OrcaSlicer</td><td>Great defaults, any printer</td></tr>
-<tr><td><strong>I use Fusion 360 for CAD</strong></td><td>Fusion 360 Print Prep</td><td>Integrated workflow</td></tr>
+<tr><td>I’m a beginner</td><td>PrusaSlicer</td><td>Clear defaults, excellent UI</td></tr>
+<tr><td>I have a Bambu printer</td><td>Bambu Studio</td><td>Native, best features</td></tr>
+<tr><td>I have an Ultimaker</td><td>Cura</td><td>Official support, broad compatibility</td></tr>
+<tr><td>I have a Raise3D</td><td>IdeaMaker</td><td>Official, dual-extrusion support</td></tr>
+<tr><td>I want advanced control</td><td>SuperSlicer</td><td>Maximum customization</td></tr>
+<tr><td>I want modern/fast slicing</td><td>OrcaSlicer</td><td>Great defaults, any printer</td></tr>
+<tr><td>I use Fusion 360 for CAD</td><td>Fusion 360 Print Prep</td><td>Integrated workflow</td></tr>
 </tbody>
 </table>
 </div>
-<hr>
 <h2 id="powershell-integration-batch-slicing"><a class="header" href="#powershell-integration-batch-slicing">PowerShell Integration: Batch Slicing</a></h2>
 <h3 id="slice-multiple-files-automatically"><a class="header" href="#slice-multiple-files-automatically">Slice Multiple Files Automatically</a></h3>
 <pre><code class="language-powershell"># Batch slice all SCAD designs in a project
-
 $scadDir = "C:\Projects\3dMake\src"
 $slicerConfig = "default.cfg"
 $outputDir = "C:\Projects\3dMake\gcode"
-
 # Find all SCAD files
 $scadFiles = Get-ChildItem -Path $scadDir -Filter "*.scad" -Recurse
-
 foreach ($scadFile in $scadFiles) {
     $stlFile = $scadFile.FullName -replace ".scad$", ".stl"
     $gcodeFile = Join-Path $outputDir ($scadFile.BaseName + ".gcode")
-    
     # Export SCAD to STL
     Write-Host "Exporting: $($scadFile.Name)"
     &amp; "C:\Program Files\OpenSCAD\openscad.exe" -o "$stlFile" "$($scadFile.FullName)"
-    
     # Slice STL
     Write-Host "Slicing: $($scadFile.Name)"
     &amp; "C:\Program Files\Prusa3D\PrusaSlicer\prusa-slicer.exe" `
         --load-config-file "$slicerConfig" `
         --export-gcode "$gcodeFile" `
         "$stlFile"
-    
     Write-Host "Complete: $gcodeFile"
 }
-
 Write-Host "Batch slicing finished."
 </code></pre>
 <h3 id="monitor-printing-progress"><a class="header" href="#monitor-printing-progress">Monitor Printing Progress</a></h3>
 <pre><code class="language-powershell"># Connect to printer API and monitor print status
 # (Requires printer to support API-check documentation)
-
 $printerIP = "192.168.1.100"  # Your printer's IP
 $printerPort = 8080            # Typical API port
-
 # Get current print status
-$status = Invoke-WebRequest -Uri "http://$printerIP:$printerPort/api/printer" `
+$status = Invoke-WebRequest -Uri "[https://example.com](https://example.com) `
     -UseBasicParsing | ConvertFrom-Json
-
 Write-Host "State: $($status.state.text)"
 Write-Host "Progress: $($status.progress.completion)%"
 Write-Host "Time remaining: $($status.progress.printTimeLeft) seconds"
 </code></pre>
-<hr>
 <h2 id="accessibility-best-practices-for-slicing"><a class="header" href="#accessibility-best-practices-for-slicing">Accessibility Best Practices for Slicing</a></h2>
 <h3 id="describing-sliced-models"><a class="header" href="#describing-sliced-models">Describing Sliced Models</a></h3>
-<pre><code class="language-bash"># Use 3dm describe to understand the slicer's output
+<pre><code class="language-powershell"># Use 3dm describe to understand the slicer's output
 # (Best practice: describe after slicing to verify settings)
-
 3dm describe output/bracelet_holder.stl
-
 # Output includes:
 # - Number of parts
 # - Dimensions
@@ -852,7 +831,7 @@ Write-Host "Time remaining: $($status.progress.printTimeLeft) seconds"
 <h3 id="testing-sliced-parts"><a class="header" href="#testing-sliced-parts">Testing Sliced Parts</a></h3>
 <ol>
 <li>
-<p><strong>Weight Check:</strong></p>
+<p>Weight Check:</p>
 <ul>
 <li>Calculate expected weight from volume + material density</li>
 <li>Compare to actual printed weight</li>
@@ -860,7 +839,7 @@ Write-Host "Time remaining: $($status.progress.printTimeLeft) seconds"
 </ul>
 </li>
 <li>
-<p><strong>Dimensional Check:</strong></p>
+<p>Dimensional Check:</p>
 <ul>
 <li>Use calipers to verify critical dimensions</li>
 <li>Compare to SCAD parameters</li>
@@ -868,7 +847,7 @@ Write-Host "Time remaining: $($status.progress.printTimeLeft) seconds"
 </ul>
 </li>
 <li>
-<p><strong>Functional Test:</strong></p>
+<p>Functional Test:</p>
 <ul>
 <li>Assemble with other parts</li>
 <li>Test strength by loading with known weight</li>
@@ -876,7 +855,6 @@ Write-Host "Time remaining: $($status.progress.printTimeLeft) seconds"
 </ul>
 </li>
 </ol>
-<hr>
 <h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
 <p>This appendix provides:</p>
 <ul>
@@ -887,7 +865,7 @@ Write-Host "Time remaining: $($status.progress.printTimeLeft) seconds"
 <li>[YES] Batch processing automation examples</li>
 <li>[YES] Accessibility best practices</li>
 </ul>
-<p><strong>Use this guide whenever you:</strong></p>
+<p>Use this guide whenever you:</p>
 <ul>
 <li>Start a new print</li>
 <li>Switch slicers</li>
@@ -900,7 +878,7 @@ Write-Host "Time remaining: $($status.progress.printTimeLeft) seconds"
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../Appendices/Appendices.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../Appendices/3dMake_Appendices.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
@@ -914,7 +892,7 @@ Write-Host "Time remaining: $($status.progress.printTimeLeft) seconds"
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../Appendices/Appendices.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../Appendices/3dMake_Appendices.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 

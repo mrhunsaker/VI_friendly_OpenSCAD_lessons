@@ -4,9 +4,9 @@
 
 Students design a snap-fit connector that joins two 3D-printed parts without fasteners. This project emphasizes tolerance engineering, material properties, and mechanical design validation.
 
-**Key Learning:** Tolerance engineering; snap-fit mechanics; non-destructive assembly testing.
+Key Learning: Tolerance engineering; snap-fit mechanics; non-destructive assembly testing.
 
-**Real-world Connection:** Snap-fits are ubiquitous in consumer products. Designing them requires understanding material stress, geometry precision, and repeated-use durability.
+Real-world Connection: Snap-fits are ubiquitous in consumer products. Designing them requires understanding material stress, geometry precision, and repeated-use durability.
 
 ## Constraints
 - Snap-fit must connect two printed parts without external fasteners
@@ -38,10 +38,8 @@ Code shows tolerance thinking. Design is mechanically sound.
 ### Category 3: Documentation (0-3)
 Assembly testing documented. Tolerance rationale explained.
 
----
-
 ## Assessment Notes
 
-- **Strong submissions:** Show evidence of tolerance testing, multiple assembly cycles documented, and reflection on material limits
-- **Reinforce:** Snap-fit design principles; tolerancing for manufacturability
-- **Extension:** Material property analysis; cost-benefit comparisons
+- Strong submissions: Show evidence of tolerance testing, multiple assembly cycles documented, and reflection on material limits
+- Reinforce: Snap-fit design principles; tolerancing for manufacturability
+- Extension: Material property analysis; cost-benefit comparisons

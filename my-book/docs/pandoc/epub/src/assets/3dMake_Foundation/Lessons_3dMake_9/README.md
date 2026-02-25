@@ -1,14 +1,14 @@
 # Lesson 9: Automation and 3dm Workflows {#assets_3dmake_foundation_lessons_3dmake_9-readme}
 
-**Estimated time:** 60-90 minutes
+Estimated time: 60-90 minutes
 
 ## Folder Contents
 
 This folder contains supporting materials for Lesson 9:
 
-- **Script Templates:** Batch build scripts, automation examples
-- **Reference Materials:** PowerShell integration guide, command references
-- **Example Workflows:** Multi-model pipelines, variant generation
+- Script Templates: Batch build scripts, automation examples
+- Reference Materials: PowerShell integration guide, command references
+- Example Workflows: Multi-model pipelines, variant generation
 
 ## Learning Objectives
 
@@ -29,8 +29,6 @@ This folder contains supporting materials for Lesson 9:
 - `test_variants.sh` - Build and test parameter variations
 - `export_batch.ps1` - PowerShell export automation
 
----
-
 ## Quick Start
 
 1. Complete Lesson 9 on automation concepts
@@ -39,6 +37,4 @@ This folder contains supporting materials for Lesson 9:
 4. Create custom scripts for your projects
 5. Test scripts on small projects before scaling
 
----
-
-**For navigation:** See [3dMake_Foundation Asset Index](../README.md)
+For navigation: See [3dMake_Foundation Asset Index](../README.md)

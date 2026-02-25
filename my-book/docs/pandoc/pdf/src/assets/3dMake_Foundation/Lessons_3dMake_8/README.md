@@ -2,7 +2,7 @@
 
 ## Files
 
-- **stackable_bins.scad** - Advanced example of tolerance design, interlocking features, and multi-part assemblies
+- stackable_bins.scad - Advanced example of tolerance design, interlocking features, and multi-part assemblies
 
 ## Learning Objectives
 
@@ -28,11 +28,11 @@
 
 ## Key Concepts
 
-- **Tolerance Stack-Up**: How small errors compound in multi-part assemblies
-- **Interlocking Features**: Creating rims that allow parts to nest without fasteners
-- **Clearance Design**: Intentional small gaps for assembly without friction
-- **Chamfers**: Beveled edges that improve print quality and handling
-- **Hollow Box Construction**: Using `difference()` to create wall thickness
+- Tolerance Stack-Up: How small errors compound in multi-part assemblies
+- Interlocking Features: Creating rims that allow parts to nest without fasteners
+- Clearance Design: Intentional small gaps for assembly without friction
+- Chamfers: Beveled edges that improve print quality and handling
+- Hollow Box Construction: Using `difference()` to create wall thickness
 
 ## Customization Ideas
 
@@ -43,18 +43,18 @@
 
 ## Manufacturing Considerations
 
-- **Print Orientation**: Place bins on largest face to minimize support
-- **Slicing Settings**: Use tree supports to reduce waste
-- **Post-Print**: Measure actual dimensions against design; adjust `stackclear` if needed
-- **Multiple Prints**: Batch print several bins at once to save material
+- Print Orientation: Place bins on largest face to minimize support
+- Slicing Settings: Use tree supports to reduce waste
+- Post-Print: Measure actual dimensions against design; adjust `stackclear` if needed
+- Multiple Prints: Batch print several bins at once to save material
 
 ## Tolerance Testing Workflow
 
-1. **Print Test Piece**: Print one bin with designed dimensions
-2. **Measure Dimensions**: Use calipers on all critical dimensions
-3. **Calculate Shrinkage**: Compare actual to designed; typically 0.3-0.5% for PLA
-4. **Adjust Clearance**: If bins stack too tight, increase `stackclear`; if too loose, decrease it
-5. **Print Final**: Update parameters based on test results and print final version
+1. Print Test Piece: Print one bin with designed dimensions
+2. Measure Dimensions: Use calipers on all critical dimensions
+3. Calculate Shrinkage: Compare actual to designed; typically 0.3-0.5% for PLA
+4. Adjust Clearance: If bins stack too tight, increase `stackclear`; if too loose, decrease it
+5. Print Final: Update parameters based on test results and print final version
 
 ## Related Files
 

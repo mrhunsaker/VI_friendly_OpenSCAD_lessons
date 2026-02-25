@@ -11,8 +11,6 @@ A comprehensive, accessible 3D design and printing curriculum organized into:
 - Screen reader friendly (All text-based, measurement-based verification)
 - 2 supplemental EPUB textbooks (Programming with OpenSCAD, Simplifying 3D Printing)
 
----
-
 ## Quick Start
 
 ### For Students
@@ -41,11 +39,7 @@ A comprehensive, accessible 3D design and printing curriculum organized into:
 3. [SUMMARY.md](SUMMARY.md) - Navigation structure
 4. [Resource Integration Map](RESOURCEINTEGRATIONMAP.md) - Complete resource ecosystem
 
----
-
 ## Curriculum Structure
-
----
 
 ### PowerShell Foundation (Prerequisite)
 
@@ -58,8 +52,6 @@ Before starting 3dMake Lesson 9, complete the PowerShell Foundation curriculum:
 
 Time commitment: ~6 hours  
 Note: PowerShell is foundation for Lesson 9+, doesn't block starting Lessons 1-8
-
----
 
 ### Foundations (Lessons 1-3 | ~3 hours)
 
@@ -141,8 +133,6 @@ Complete automation guide for PowerShell + 3dMake
 - Content: Parametric sweeps, batch processing, print logging, printer communication
 - Use when: Automating tasks, testing variations, batch printing, building print queues
 
----
-
 ## Learning Paths
 
 ### Path 1: Sequential (Recommended)
@@ -172,8 +162,6 @@ All Lessons -> All Appendices + All Projects + Appendix D scripts
 
 Best for: Instructors, professional makers, automation enthusiasts
 
----
-
 ## Setup Requirements
 
 ### Minimum Installation
@@ -196,8 +184,6 @@ Best for: Instructors, professional makers, automation enthusiasts
 - [VSCode Setup Guide](Reference_Materials/vscode-setup-guide.md)
 - [Course Setup Guide](Reference_Materials/course-setup-guide.md)
 
----
-
 ## How to Navigate
 
 ### Starting Points
@@ -217,8 +203,6 @@ Best for: Instructors, professional makers, automation enthusiasts
 | Automation scripts  | [Appendix D](3dMake_Foundation/Appendix_D_PowerShell_Integration.md)        |
 | Learning objectives | [Curriculum Guide](3dMake_Foundation/3dMake_Foundation_Curriculum_Guide.md) |
 | Assessment rubrics  | [Teacher Templates](3dMake_Foundation/Templates/Teacher/)                   |
-
----
 
 ## Complete Directory Structure
 
@@ -289,8 +273,6 @@ Best for: Instructors, professional makers, automation enthusiasts
     +------ Simplifying3DPrintingwithOpenSCAD.epub
 ```
 
----
-
 ## Welcome
 
 You're now ready to start learning 3D design and printing using accessible, screen reader-friendly methods.
@@ -298,8 +280,6 @@ You're now ready to start learning 3D design and printing using accessible, scre
 For students: Begin with [Lesson 1: Environmental Configuration](3dMake_Foundation/Lessons_3dMake_1/Lessons_3dMake_1.md)
 
 For instructors: Start with [Curriculum Guide](3dMake_Foundation/3dMake_Foundation_Curriculum_Guide.md)
-
----
 
 ## Installation & Build Instructions
 
@@ -346,7 +326,7 @@ cd my-book
 mdbook serve -p 3000
 ```
 
-The book will be available at `http://localhost:3000` and will auto-reload when you make changes.
+The book will be available at `[http://localhost:3000`](http://localhost:3000`) and will auto-reload when you make changes.
 
 Press `Ctrl+C` to stop the server.
 

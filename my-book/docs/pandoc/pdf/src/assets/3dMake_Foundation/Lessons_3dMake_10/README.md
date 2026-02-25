@@ -1,14 +1,14 @@
 # Lesson 10: Hands-On Practice Exercises and Troubleshooting {#assets_3dmake_foundation_lessons_3dmake_10-readme}
 
-**Estimated time:** 120-150 minutes (multiple activities)
+Estimated time: 120-150 minutes (multiple activities)
 
 ## Folder Contents
 
 This folder contains supporting materials for Lesson 10:
 
-- **Extension Projects:** Accessibility_Audit for inclusive design assessment
-- **Reference Materials:** Troubleshooting guides, QA matrices, measurement worksheets
-- **Assessment Tools:** Rubrics and evaluation templates
+- Extension Projects: Accessibility_Audit for inclusive design assessment
+- Reference Materials: Troubleshooting guides, QA matrices, measurement worksheets
+- Assessment Tools: Rubrics and evaluation templates
 
 ## Learning Objectives
 
@@ -30,30 +30,26 @@ This folder contains supporting materials for Lesson 10:
 
 ### Accessibility_Audit
 
-**Purpose:** Practical exercise in improving designs for non-visual users; assess accessibility
+Purpose: Practical exercise in improving designs for non-visual users; assess accessibility
 
-**Time:** 4-6 hours
+Time: 4-6 hours
 
-**Skills Developed:**
+Skills Developed:
 - Accessibility-first design thinking
 - Non-visual validation methods
 - Inclusive design principles
 - Documentation for diverse users
 
-**Key Deliverables:**
+Key Deliverables:
 - Accessibility assessment of an existing design
 - Recommendations for improvement
 - Accessible documentation examples
-
----
 
 ## Troubleshooting Resources
 
 - `common_issues_and_solutions.md` - Quick reference for typical problems
 - `measurement_calibration_guide.md` - How to verify tools and measurement accuracy
 - `diagnostic_checklist.md` - Systematic troubleshooting workflow
-
----
 
 ## Quick Start
 
@@ -63,6 +59,4 @@ This folder contains supporting materials for Lesson 10:
 4. Use Appendix C for comprehensive QA procedures
 5. Document all lessons learned
 
----
-
-**For navigation:** See [3dMake_Foundation Asset Index](../README.md)
+For navigation: See [3dMake_Foundation Asset Index](../README.md)

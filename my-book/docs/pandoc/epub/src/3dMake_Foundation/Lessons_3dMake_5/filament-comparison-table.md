@@ -1,36 +1,32 @@
-# Filament Comparison Table {#3dmake_foundation-lessons_3dmake_5-filament-comparison-table}
+# Filament Comparison Table {#3dmake_foundation-lessons_3dmake_5-filament}}-comparison-table}
 
-*Quick reference for choosing the right filament. All temperature values are typical ranges - always check the label on your specific spool.*
-
----
+*Quick reference}} for choosing the right filament}}. All temperature values are typical ranges - always check the label on your specific}} spool.*
 
 ## Side-by-Side Comparison
 
-| Property | PLA | PETG | TPU (Flex) | ABS |
-| ---------- | ----- | ------ | ----------- | ----- |
-| **Difficulty** |  Easiest |  Moderate |  Hard |  Very Hard |
-| **Nozzle temp** | 190-220C | 230-250C | 220-240C | 230-250C |
-| **Bed temp** | 50-60C | 70-85C | 30-60C | 90-110C |
-| **Enclosure needed?** | No | No | No | Yes |
-| **Rigidity** | High | Medium | None - flexible | High |
-| **Impact resistance** | Low (brittle) | Medium | Very high | Medium |
-| **Heat resistance** | Low (~60C) | Medium (~80C) | Medium | High (~100C) |
-| **Flexibility** | None | Slight | Rubber-like | None |
-| **Moisture sensitivity** | Low | Medium | High | Medium |
-| **Fume concern** | Lowest | Low | Moderate | High |
-| **Bed adhesion** | Easy | Use glue stick on PEI | Easy | Requires enclosure + glue |
-| **Print speed** | Normal | Normal | Slow (20-30 mm/s) | Normal |
-| **Stringing tendency** | Low | Medium-High | High | Low |
-| **Approximate cost** | $15-25/kg | $15-30/kg | $20-40/kg | $15-25/kg |
-| **Recommended for beginners?** | [YES] Yes | After PLA | After experience | [NO] No |
-
----
+| Property                   | PLA           | PETG                  | TPU (Flex)        | ABS                       |
+|----------------------------|---------------|-----------------------|-------------------|---------------------------|
+| Difficulty                 | Easiest       | Moderate              | Hard              | Very Hard                 |
+| Nozzle}} temp              | 190-220C      | 230-250C              | 220-240C          | 230-250C                  |
+| Bed}} temp                 | 50-60C        | 70-85C                | 30-60C            | 90-110C                   |
+| Enclosure needed?          | No            | No                    | No                | Yes                       |
+| Rigidity                   | High          | Medium                | None - flexible   | High                      |
+| Impact resistance          | Low (brittle) | Medium                | Very high         | Medium                    |
+| Heat resistance            | Low (~60C)    | Medium (~80C)         | Medium            | High (~100C)              |
+| Flexibility                | None          | Slight                | Rubber-like       | None                      |
+| Moisture sensitivity       | Low           | Medium                | High              | Medium                    |
+| Fume concern               | Lowest        | Low                   | Moderate          | High                      |
+| Bed}} adhesion             | Easy          | Use glue stick on PEI | Easy              | Requires enclosure + glue |
+| Print speed                | Normal        | Normal                | Slow (20-30 mm/s) | Normal                    |
+| Stringing tendency         | Low           | Medium-High           | High              | Low                       |
+| Approximate cost           | $15-25/kg     | $15-30/kg             | $20-40/kg         | $15-25/kg                 |
+| Recommended for beginners? | [YES] Yes     | After PLA             | After experience  | [NO] No                   |
 
 ## When to Use Each Material
 
 ### PLA - Use for
 
-- Prototypes and test prints
+- Prototypes and test}} prints
 - Classroom projects
 - Decorative objects
 - Tactile models and markers
@@ -42,21 +38,17 @@
 - Parts that need to flex or bend without breaking
 - High-impact applications
 
----
-
 ### PETG - Use for
 
 - Functional parts that need to be tougher than PLA
 - Parts exposed to mild heat or moisture
 - Mechanical components (brackets, clips, mounts)
-- Food-contact applications (check your specific brand's food-safe certification)
+- Food-contact applications (check your specific}} brand's food-safe certification)
 
 ### PETG - Avoid for
 
 - Very fine detail (it strings more than PLA)
-- Projects where you need the easiest possible print
-
----
+- Projects where you}} need the easiest possible print}}
 
 ### TPU / Flexible - Use for
 
@@ -70,9 +62,7 @@
 
 - Fine detail
 - Printing on Bowden extruder setups (the flex causes jams - direct drive only)
-- Your first few prints while still learning
-
----
+- Your first}} few prints while still learning
 
 ### ABS - Use for
 
@@ -84,40 +74,34 @@
 
 - Classroom settings without dedicated ventilation
 - Beginners
-- Any print where warping would be a problem
+- Any}} print}} where warping would be a problem
 
----
+## Slicer}} Profile Quick Reference
 
-## Slicer Profile Quick Reference
-
-| Filament | PrusaSlicer Profile Name | Key Changes from PLA Default |
-| --------- | ------------------------ | ------------------------------ |
-| PLA | Generic PLA | - (baseline) |
-| PETG | Generic PETG | Higher temps; slower cooling; use glue stick on PEI |
-| TPU | Generic Flex | Lower speed (20-30 mm/s); reduced retraction |
-| ABS | Generic ABS | Higher temps; enclosure; disable cooling fan |
-
----
+| Filament | PrusaSlicer Profile Name | Key Changes from PLA Default                        |
+|----------|--------------------------|-----------------------------------------------------|
+| PLA      | Generic PLA              | - (baseline)                                        |
+| PETG     | Generic PETG             | Higher temps; slower cooling; use glue stick on PEI |
+| TPU      | Generic Flex             | Lower speed (20-30 mm/s); reduced retraction        |
+| ABS      | Generic ABS              | Higher temps; enclosure; disable cooling fan        |
 
 ## Storage Tips
 
-All filament absorbs moisture from the air over time, which causes poor print quality (bubbling, stringing, weak layer bonds).
+All filament}} absorbs moisture from the air over time}}, which causes poor print}} quality}} (bubbling, stringing, weak layer}} bonds).
 
-| Filament | Moisture Sensitivity | Storage Recommendation |
-| --------- | --------------------- | ---------------------- |
-| PLA | Low | Sealed bag with desiccant when not in use |
-| PETG | Medium | Sealed bag with desiccant; dry before use if stored open |
-| TPU | High | Always store sealed; dry in oven (65C for 4-6 hrs) if it has absorbed moisture |
-| ABS | Medium | Sealed bag with desiccant |
+| Filament | Moisture Sensitivity | Storage Recommendation                                                         |
+|----------|----------------------|--------------------------------------------------------------------------------|
+| PLA      | Low                  | Sealed bag with desiccant when not in use                                      |
+| PETG     | Medium               | Sealed bag with desiccant; dry before}} use if stored open                     |
+| TPU      | High                 | Always store sealed; dry in oven (65C for 4-6 hrs) if it has absorbed moisture |
+| ABS      | Medium               | Sealed bag with desiccant                                                      |
 
-Signs of wet filament: popping or crackling sounds during printing, bubbles in extruded plastic, excessive stringing, weak or brittle prints.
-
----
+Signs of wet filament}}: popping or crackling sounds during printing}}, bubbles in extruded plastic, excessive stringing, weak or brittle prints.
 
 ## Sources
 
-All3DP. (2025). *All 3D printing filament types explained*. [https://all3dp.com/1/3d-printer-filament-types-3d-printing-3d-filament/](https://all3dp.com/1/3d-printer-filament-types-3d-printing-3d-filament/)
+All3DP. (2025). *All 3D printing}} filament}} types explained*. [https://all3dp.com/1/3d-printer}}-filament}}-types-3d-printing}}-3d-filament}}/](https://all3dp.com/1/3d-printer}}-filament}}-types-3d-printing}}-3d-filament}}/)
 
-MatterHackers. (n.d.). *3D printer filament compare*. [https://www.matterhackers.com/3d-printer-filament-compare](https://www.matterhackers.com/3d-printer-filament-compare)
+MatterHackers. (n.d.). *3D printer}} filament}} compare*. [https://www.matterhackers.com/3d-printer}}-filament}}-compare](https://www.matterhackers.com/3d-printer}}-filament}}-compare)
 
 Prusa Research. (2023). *Materials guide*. [https://help.prusa3d.com/materials](https://help.prusa3d.com/materials)

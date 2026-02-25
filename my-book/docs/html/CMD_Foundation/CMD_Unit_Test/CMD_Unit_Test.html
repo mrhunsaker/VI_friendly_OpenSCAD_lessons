@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-d11bd641.js";
+            window.path_to_searchindex_js = "../../searchindex-d0af5d9e.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-19a5926f.js"></script>
+        <script src="../../toc-5b0c6224.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -220,234 +220,316 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="cmd_foundation_cmd_unit_test-cmd_unit_test"><a class="header" href="#cmd_foundation_cmd_unit_test-cmd_unit_test">CMD Unit Test &amp; Practice - Comprehensive Assessment</a></h1>
-<p><strong>Duration:</strong> 2.5-4 hours (for screen reader users)<br><strong>Prerequisites:</strong> All CMD lessons (CMD-Pre through CMD-6)</p>
-<p><strong>Purpose:</strong> Comprehensive practice and self-assessment of all Command Prompt skills</p>
-<hr>
-<h2 id="practical-skills-assessment"><a class="header" href="#practical-skills-assessment">Practical Skills Assessment</a></h2>
-<h3 id="navigation--directory-operations"><a class="header" href="#navigation--directory-operations">Navigation &amp; Directory Operations</a></h3>
+                        <h1 id="cmd-unit-test---comprehensive-assessment"><a class="header" href="#cmd-unit-test---comprehensive-assessment">CMD Unit Test - Comprehensive Assessment</a></h1>
+<p>Estimated time: 60-90 minutes</p>
+<h2 id="key-learning-outcomes-assessed"><a class="header" href="#key-learning-outcomes-assessed">Key Learning Outcomes Assessed</a></h2>
+<p>By completing this unit test, you will demonstrate:</p>
 <ol>
-<li>Navigate to your home directory and verify location</li>
-<li>Create a folder structure: <code>Project\Models\Designs</code></li>
-<li>Navigate through all levels using different methods</li>
-<li>Navigate back home using an absolute path</li>
-<li>List all files and folders at each level</li>
+<li>Understanding of file system navigation and path concepts</li>
+<li>Proficiency with file and folder manipulation commands</li>
+<li>Ability to redirect and pipe command output</li>
+<li>Knowledge of environment variables and aliases</li>
+<li>Screen-reader accessibility best practices in terminal environments</li>
+<li>Problem-solving and command chaining skills</li>
 </ol>
-<h3 id="file-operations"><a class="header" href="#file-operations">File Operations</a></h3>
-<ol>
-<li>Create 5 text files with different names</li>
-<li>Copy them to a backup folder</li>
-<li>Rename one file</li>
-<li>Move one file to a different folder</li>
-<li>Delete one file safely</li>
-<li>Verify all operations succeeded</li>
-</ol>
-<h3 id="output-redirection"><a class="header" href="#output-redirection">Output Redirection</a></h3>
-<ol>
-<li>Save a directory listing to a file</li>
-<li>Append additional information to the file</li>
-<li>Open and read the file in Notepad</li>
-<li>Redirect help output to a file</li>
-<li>Verify all saved files are correct</li>
-</ol>
-<h3 id="batch-file-creation"><a class="header" href="#batch-file-creation">Batch File Creation</a></h3>
-<ol>
-<li>Create a batch file that creates a project structure</li>
-<li>Add comments explaining what it does</li>
-<li>Use at least two variables</li>
-<li>Test the batch file works correctly</li>
-<li>Modify it and test changes</li>
-</ol>
+<h2 id="target-audience"><a class="header" href="#target-audience">Target Audience</a></h2>
+<p>Users who have completed CMD-0 through CMD-6 and need to demonstrate mastery of Command Prompt fundamentals.</p>
+<h2 id="instructions"><a class="header" href="#instructions">Instructions</a></h2>
+<p>Complete all sections below. For multiple choice, select the best answer. For short answers, write one to two sentences. For hands-on tasks, capture evidence (screenshots or output files) and submit alongside your answers.</p>
 <hr>
-<h2 id="quiz---comprehensive-command-prompt"><a class="header" href="#quiz---comprehensive-command-prompt">Quiz - Comprehensive Command Prompt</a></h2>
-<h3 id="navigation-5-questions"><a class="header" href="#navigation-5-questions">Navigation (5 questions)</a></h3>
-<ol>
-<li>How do you navigate to your home directory from anywhere?</li>
-<li>What path would you use to go to Documents?</li>
-<li>Explain the difference between <code>..</code> and <code>C:\</code></li>
-<li>How does Tab completion work?</li>
-<li>If you’re at <code>C:\Users\Name\Documents\Deep\Folder</code>, how do you go back to <code>C:\Users\Name</code>?</li>
-</ol>
-<h3 id="file-operations-5-questions"><a class="header" href="#file-operations-5-questions">File Operations (5 questions)</a></h3>
-<ol start="6">
-<li>Write the command to create a folder called “archive”</li>
-<li>Write the command to copy all <code>.txt</code> files to a backup folder</li>
-<li>Write the command to safely delete one specific file</li>
-<li>What wildcard would match files named file1, file2, file3?</li>
-<li>How do you rename a file from <code>old.txt</code> to <code>new.txt</code>?</li>
-</ol>
-<h3 id="redirection-5-questions"><a class="header" href="#redirection-5-questions">Redirection (5 questions)</a></h3>
-<ol start="11">
-<li>Write a command to save a directory listing to a file</li>
-<li>What’s the difference between <code>&gt;</code> and <code>&gt;&gt;</code>?</li>
-<li>How would you append the current path to an existing file?</li>
-<li>Write a command to save help output to a file</li>
-<li>Why is saving output to files important for screen readers?</li>
-</ol>
-<h3 id="batch-files-5-questions"><a class="header" href="#batch-files-5-questions">Batch Files (5 questions)</a></h3>
-<ol start="16">
-<li>What does <code>@echo off</code> do?</li>
-<li>Write a batch file line that creates a backup folder</li>
-<li>How do you use variables in batch files?</li>
-<li>What does <code>REM</code> do in a batch file?</li>
-<li>Write a complete batch file that creates a project structure and lists it</li>
-</ol>
-<hr>
-<h2 id="practical-challenges"><a class="header" href="#practical-challenges">Practical Challenges</a></h2>
-<h3 id="challenge-1-project-setup-intermediate"><a class="header" href="#challenge-1-project-setup-intermediate">Challenge 1: Project Setup (Intermediate)</a></h3>
-<p>Create a batch file that:</p>
-<ul>
-<li>Creates a new folder with the name you provide</li>
-<li>Inside it, creates Models, Prints, and Documentation folders</li>
-<li>Saves a listing to a log file</li>
-<li>Shows completion message</li>
-</ul>
-<p><strong>Test it</strong> by running and verifying the structure.</p>
-<h3 id="challenge-2-file-organization-intermediate"><a class="header" href="#challenge-2-file-organization-intermediate">Challenge 2: File Organization (Intermediate)</a></h3>
-<p>Create a batch file that:</p>
-<ul>
-<li>Finds all <code>.txt</code> files in Documents</li>
-<li>Copies them to a new “TextFiles” folder</li>
-<li>Saves a list of copied files</li>
-<li>Shows the results</li>
-</ul>
-<p><strong>Test it</strong> with actual files.</p>
-<h3 id="challenge-3-backup-system-advanced"><a class="header" href="#challenge-3-backup-system-advanced">Challenge 3: Backup System (Advanced)</a></h3>
-<p>Create a batch file that:</p>
-<ul>
-<li>Creates a backup folder with today’s date in the name</li>
-<li>Copies all <code>.scad</code> files to the backup</li>
-<li>Saves a detailed log of what was copied</li>
-<li>Shows success/error messages</li>
-</ul>
-<p><strong>Test thoroughly</strong> before using with real files.</p>
-<hr>
-<h2 id="self-assessment-checklist"><a class="header" href="#self-assessment-checklist">Self-Assessment Checklist</a></h2>
-<p>After completing all assessments, check off what you can do:</p>
-<p><strong>Navigation:</strong></p>
-<ul>
-<li><input disabled="" type="checkbox"> Navigate to any folder using relative paths</li>
-<li><input disabled="" type="checkbox"> Navigate to any folder using absolute paths</li>
-<li><input disabled="" type="checkbox"> Use Tab completion effectively</li>
-<li><input disabled="" type="checkbox"> Confirm my current location</li>
-<li><input disabled="" type="checkbox"> Understand folder hierarchy</li>
-</ul>
-<p><strong>File Operations:</strong></p>
-<ul>
-<li><input disabled="" type="checkbox"> Create files and folders</li>
-<li><input disabled="" type="checkbox"> Copy files safely</li>
-<li><input disabled="" type="checkbox"> Move files to different locations</li>
-<li><input disabled="" type="checkbox"> Rename files</li>
-<li><input disabled="" type="checkbox"> Delete files safely</li>
-<li><input disabled="" type="checkbox"> Use wildcards effectively</li>
-</ul>
-<p><strong>Output Redirection:</strong></p>
-<ul>
-<li><input disabled="" type="checkbox"> Save command output to files</li>
-<li><input disabled="" type="checkbox"> Append to files</li>
-<li><input disabled="" type="checkbox"> Open and read saved files</li>
-<li><input disabled="" type="checkbox"> Understand when to use redirection</li>
-</ul>
-<p><strong>Batch Files:</strong></p>
-<ul>
-<li><input disabled="" type="checkbox"> Create a simple batch file</li>
-<li><input disabled="" type="checkbox"> Run a batch file</li>
-<li><input disabled="" type="checkbox"> Use variables in batch files</li>
-<li><input disabled="" type="checkbox"> Write comments</li>
-<li><input disabled="" type="checkbox"> Understand basic logic</li>
-</ul>
-<p><strong>Screen Reader Integration:</strong></p>
-<ul>
-<li><input disabled="" type="checkbox"> Use Command Prompt effectively with screen reader</li>
-<li><input disabled="" type="checkbox"> Solve common accessibility issues</li>
-<li><input disabled="" type="checkbox"> Save output for easier reading</li>
-<li><input disabled="" type="checkbox"> Navigate using keyboard only</li>
-</ul>
-<hr>
-<h2 id="troubleshooting-challenge"><a class="header" href="#troubleshooting-challenge">Troubleshooting Challenge</a></h2>
-<p>You encounter these situations. How would you solve each?</p>
+<h2 id="part-a-multiple-choice-questions-20-questions"><a class="header" href="#part-a-multiple-choice-questions-20-questions">Part A: Multiple Choice Questions (20 questions)</a></h2>
+<p>Select the best answer for each question. Each question is worth 1 point.</p>
 <ol>
 <li>
-<p>“I can’t remember what folder I’m in”</p>
+<p>What is the primary purpose of the <code>PATH</code> environment variable?</p>
 <ul>
-<li><strong>Solution:</strong></li>
+<li>A) Store your home directory location</li>
+<li>B) Tell the shell where to find executable programs</li>
+<li>C) Configure the visual appearance of the terminal</li>
+<li>D) Store the current working directory name</li>
 </ul>
 </li>
 <li>
-<p>“I accidentally started deleting files with a wildcard”</p>
+<p>Which command shows your current working directory in CMD?</p>
 <ul>
-<li><strong>Solution:</strong></li>
+<li>A) <code>dir /B</code></li>
+<li>B) <code>cd</code> (with no arguments)</li>
+<li>C) <code>pwd</code></li>
+<li>D) <code>whoami</code></li>
 </ul>
 </li>
 <li>
-<p>“The output scrolled by too fast to read”</p>
+<p>What does <code>%USERPROFILE%</code> represent in CMD?</p>
 <ul>
-<li><strong>Solution:</strong></li>
+<li>A) The root directory</li>
+<li>B) The current directory</li>
+<li>C) The parent directory</li>
+<li>D) Your home directory</li>
 </ul>
 </li>
 <li>
-<p>“Tab completion isn’t working for a folder”</p>
+<p>How do you list only file names (not full details) in a screen-reader-friendly way?</p>
 <ul>
-<li><strong>Solution:</strong></li>
+<li>A) <code>dir</code></li>
+<li>B) <code>dir /B</code></li>
+<li>C) <code>dir /L</code></li>
+<li>D) <code>type /B</code></li>
 </ul>
 </li>
 <li>
-<p>“My batch file created an extra folder I didn’t want”</p>
+<p>Which command creates a new empty file in CMD?</p>
 <ul>
-<li><strong>Solution:</strong></li>
+<li>A) <code>mkdir filename</code></li>
+<li>B) <code>echo. &gt; filename</code></li>
+<li>C) <code>touch filename</code></li>
+<li>D) <code>new filename</code></li>
+</ul>
+</li>
+<li>
+<p>What is the difference between <code>&gt;</code> and <code>&gt;&gt;</code>?</p>
+<ul>
+<li>A) <code>&gt;</code> redirects to file, <code>&gt;&gt;</code> displays on screen</li>
+<li>B) <code>&gt;</code> overwrites a file, <code>&gt;&gt;</code> appends to a file</li>
+<li>C) They do the same thing</li>
+<li>D) <code>&gt;</code> is for text, <code>&gt;&gt;</code> is for binary</li>
+</ul>
+</li>
+<li>
+<p>What does the pipe operator <code>|</code> do?</p>
+<ul>
+<li>A) Creates a folder</li>
+<li>B) Sends the output of one command to the input of another</li>
+<li>C) Deletes files matching a pattern</li>
+<li>D) Lists all processes</li>
+</ul>
+</li>
+<li>
+<p>Which command copies a file in CMD?</p>
+<ul>
+<li>A) <code>move</code></li>
+<li>B) <code>del</code></li>
+<li>C) <code>copy</code></li>
+<li>D) <code>cd</code></li>
+</ul>
+</li>
+<li>
+<p>How do you rename a file from <code>oldname.txt</code> to <code>newname.txt</code> in CMD?</p>
+<ul>
+<li>A) <code>copy oldname.txt newname.txt</code></li>
+<li>B) <code>move oldname.txt newname.txt</code></li>
+<li>C) <code>rename oldname.txt newname.txt</code></li>
+<li>D) Both B and C are correct</li>
+</ul>
+</li>
+<li>
+<p>What is the purpose of <code>find</code> in CMD piping?</p>
+<ul>
+<li>A) Find files in a directory</li>
+<li>B) Search for text patterns within output</li>
+<li>C) Find a string to copy to clipboard</li>
+<li>D) Find which shell to use</li>
+</ul>
+</li>
+<li>
+<p>Which key allows you to autocomplete a path in CMD?</p>
+<ul>
+<li>A) <code>Ctrl + A</code></li>
+<li>B) <code>Ctrl + E</code></li>
+<li>C) <code>Tab</code></li>
+<li>D) <code>Space</code></li>
+</ul>
+</li>
+<li>
+<p>How do you copy text to the Windows clipboard from CMD?</p>
+<ul>
+<li>A) <code>type filename &gt; clipboard</code></li>
+<li>B) <code>type filename | clip</code></li>
+<li>C) <code>copy filename</code></li>
+<li>D) <code>type filename | paste</code></li>
+</ul>
+</li>
+<li>
+<p>What does <code>where openscad</code> do?</p>
+<ul>
+<li>A) Opens the OpenSCAD application</li>
+<li>B) Gets help about the openscad command</li>
+<li>C) Locates the full path of the openscad executable</li>
+<li>D) Lists all available commands</li>
+</ul>
+</li>
+<li>
+<p>Which wildcard matches any single character?</p>
+<ul>
+<li>A) <code>*</code></li>
+<li>B) <code>?</code></li>
+<li>C) <code>%</code></li>
+<li>D) <code>#</code></li>
+</ul>
+</li>
+<li>
+<p>What is the purpose of the <code>start</code> command?</p>
+<ul>
+<li>A) Run a script or executable, optionally in a new window</li>
+<li>B) Execute all commands in parallel</li>
+<li>C) Combine multiple commands</li>
+<li>D) Create an alias</li>
+</ul>
+</li>
+<li>
+<p>How do you create a temporary alias (macro) in CMD?</p>
+<ul>
+<li>A) <code>alias preview='openscad'</code></li>
+<li>B) <code>doskey preview=openscad $*</code></li>
+<li>C) <code>set preview=openscad</code></li>
+<li>D) <code>macro preview openscad</code></li>
+</ul>
+</li>
+<li>
+<p>How can doskey macros be made to persist across CMD sessions?</p>
+<ul>
+<li>A) They are automatically saved</li>
+<li>B) By adding them to a startup batch script registered as an autorun</li>
+<li>C) By using the Windows Control Panel</li>
+<li>D) Doskey macros cannot be made permanent</li>
+</ul>
+</li>
+<li>
+<p>How do you abort a long-running command in CMD?</p>
+<ul>
+<li>A) Press <code>Escape</code></li>
+<li>B) Press <code>Ctrl + X</code></li>
+<li>C) Press <code>Ctrl + C</code></li>
+<li>D) Press <code>Alt + F4</code></li>
+</ul>
+</li>
+<li>
+<p>What command shows the history of previously run commands in CMD?</p>
+<ul>
+<li>A) <code>history</code></li>
+<li>B) <code>doskey /history</code></li>
+<li>C) <code>F7</code> (opens history popup)</li>
+<li>D) Both B and C are correct</li>
+</ul>
+</li>
+<li>
+<p>How do you make an environment variable permanent in CMD (for all future sessions)?</p>
+<ul>
+<li>A) Use <code>set</code> in the terminal every time</li>
+<li>B) Use <code>setx</code> to write it to the registry</li>
+<li>C) Use the Windows Control Panel only</li>
+<li>D) Environment variables cannot be made permanent in CMD</li>
 </ul>
 </li>
 </ol>
 <hr>
-<h2 id="extension-projects"><a class="header" href="#extension-projects">Extension Projects</a></h2>
-<p>If you’ve completed all above, try these:</p>
+<h2 id="part-b-short-answer-questions-10-questions"><a class="header" href="#part-b-short-answer-questions-10-questions">Part B: Short Answer Questions (10 questions)</a></h2>
+<p>Answer each question in one to two sentences. Each question is worth 2 points.</p>
 <ol>
-<li><strong>3D Model Organizer</strong>: Create a batch file that sorts <code>.scad</code> files by date or name</li>
-<li><strong>Automated Reports</strong>: Create a batch file that generates a detailed file inventory</li>
-<li><strong>Multi-Folder Backup</strong>: Create a batch file that backs up multiple project folders</li>
-<li><strong>File Validator</strong>: Create a batch file that checks if required files exist</li>
-<li><strong>Custom Shortcuts</strong>: Create 5 custom shortcuts for your workflow</li>
+<li>
+<p>Explain the difference between absolute and relative paths. Give one example of each.</p>
+</li>
+<li>
+<p>Why is <code>dir /B</code> preferred over <code>dir</code> for screen reader users? Describe what flag you would add to list only files.</p>
+</li>
+<li>
+<p>What is the purpose of redirecting output to a file, and give an example of when you would use <code>&gt;</code> instead of <code>&gt;&gt;</code>?</p>
+</li>
+<li>
+<p>Describe what would happen if you ran <code>rmdir /S /Q C:\Documents\my_folder</code> and why this command should be used carefully.</p>
+</li>
+<li>
+<p>How would you search for all files with a <code>.scad</code> extension in your current directory? Write the command.</p>
+</li>
+<li>
+<p>Explain what happens when you pipe the output of <code>dir /B</code> into <code>clip</code>. What would you do next?</p>
+</li>
+<li>
+<p>What is an environment variable, and give one example of how you might use it in CMD.</p>
+</li>
+<li>
+<p>If a program is not in your <code>PATH</code>, what two methods could you use to run it from CMD?</p>
+</li>
+<li>
+<p>Describe how you would open a file in Notepad and also add a line to it from CMD.</p>
+</li>
+<li>
+<p>What is one strategy you would use if your screen reader stops announcing terminal output while using CMD?</p>
+</li>
 </ol>
 <hr>
-<h2 id="next-steps-after-this-assessment"><a class="header" href="#next-steps-after-this-assessment">Next Steps After This Assessment</a></h2>
-<h3 id="if-you-passed-the-core-quiz-geq-80"><a class="header" href="#if-you-passed-the-core-quiz-geq-80">If You Passed the Core Quiz (\geq 80%):</a></h3>
-<ul>
-<li>Celebrate! You understand CMD fundamentals</li>
-<li>Move on to <strong>3D Printing Integration</strong> lessons</li>
-<li>Review extension projects for deeper skills</li>
-</ul>
-<h3 id="if-you-need-more-practice-50-80"><a class="header" href="#if-you-need-more-practice-50-80">If You Need More Practice (50-80%):</a></h3>
-<ul>
-<li>Review the specific lesson for each missed question</li>
-<li>Redo practice exercises</li>
-<li>Take the quiz again</li>
-</ul>
-<h3 id="if-youre-still-struggling-50"><a class="header" href="#if-youre-still-struggling-50">If You’re Still Struggling (&lt;50%):</a></h3>
-<ul>
-<li>Go back to CMD-Pre</li>
-<li>Work through each lesson carefully</li>
-<li>Do all exercises</li>
-<li>Get help from an instructor</li>
-</ul>
-<hr>
-<h2 id="final-reflection"><a class="header" href="#final-reflection">Final Reflection</a></h2>
-<p>After completing this assessment:</p>
+<h2 id="part-c-hands-on-tasks-10-tasks"><a class="header" href="#part-c-hands-on-tasks-10-tasks">Part C: Hands-On Tasks (10 tasks)</a></h2>
+<p>Complete each task and capture evidence (screenshots, output files, or command transcripts). Each task is worth 3 points.</p>
+<h3 id="tasks-1-5-file-system-and-navigation"><a class="header" href="#tasks-1-5-file-system-and-navigation">Tasks 1-5: File System and Navigation</a></h3>
 <ol>
-<li>What was your biggest achievement?</li>
-<li>What area do you feel most confident about?</li>
-<li>What area would you like more practice with?</li>
-<li>How will you use Command Prompt in your 3D printing workflow?</li>
-<li>What questions do you still have?</li>
+<li>
+<p>Create a folder structure <code>%USERPROFILE%\Documents\CMD_Assessment\Projects</code> using a single command. Capture the <code>dir /B</code> output showing the creation.</p>
+</li>
+<li>
+<p>Create five files named <code>project_1.scad</code>, <code>project_2.scad</code>, <code>project_3.txt</code>, <code>notes_1.txt</code>, and <code>notes_2.txt</code> inside the <code>Projects</code> folder. Use wildcards to list only <code>.scad</code> files, then capture the output.</p>
+</li>
+<li>
+<p>Copy the entire <code>Projects</code> folder to <code>Projects_Backup</code> using <code>xcopy /E /I</code>. Capture the <code>dir /B</code> output showing both folders exist.</p>
+</li>
+<li>
+<p>Move (rename) <code>project_1.scad</code> to <code>project_1_final.scad</code>. Capture the <code>dir /B</code> output showing the renamed file.</p>
+</li>
+<li>
+<p>Delete <code>notes_1.txt</code> and <code>notes_2.txt</code> using a single <code>del</code> command with wildcards. Capture the final <code>dir /B</code> output.</p>
+</li>
+</ol>
+<h3 id="tasks-6-10-advanced-operations-and-scripting"><a class="header" href="#tasks-6-10-advanced-operations-and-scripting">Tasks 6-10: Advanced Operations and Scripting</a></h3>
+<ol>
+<li>
+<p>Create a file called <code>my_data.txt</code> with at least four lines using <code>echo</code> and <code>&gt;&gt;</code>. Then read it with <code>type my_data.txt</code> and capture the output.</p>
+</li>
+<li>
+<p>Use <code>find</code> to search for a keyword (e.g., “project”) in <code>my_data.txt</code> and pipe the results to <code>clip</code>. Paste the results into Notepad and capture a screenshot.</p>
+</li>
+<li>
+<p>List all files in the <code>Projects</code> folder and redirect the output to <code>projects_list.txt</code>. Open it in Notepad and capture a screenshot of the file.</p>
+</li>
+<li>
+<p>Create a temporary <code>doskey</code> alias called <code>mydir</code> that runs <code>dir /B</code>, test it, and capture the output. Then explain what would be required to make it persistent.</p>
+</li>
+<li>
+<p>Run <code>help dir</code> and redirect the output to <code>help_output.txt</code>. Open the file in Notepad and capture a screenshot showing at least the first page of help content.</p>
+</li>
 </ol>
 <hr>
-<h2 id="resources-for-continued-learning"><a class="header" href="#resources-for-continued-learning">Resources for Continued Learning</a></h2>
+<h2 id="grading-rubric"><a class="header" href="#grading-rubric">Grading Rubric</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Section</th><th>Questions</th><th>Points Each</th><th>Total</th></tr>
+</thead>
+<tbody>
+<tr><td>Multiple Choice</td><td>20</td><td>1</td><td>20</td></tr>
+<tr><td>Short Answer</td><td>10</td><td>2</td><td>20</td></tr>
+<tr><td>Hands-On Tasks</td><td>10</td><td>3</td><td>30</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>40</strong></td><td>-</td><td><strong>70</strong></td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>Passing Score:</strong> 49 points (70%)</p>
+<hr>
+<h2 id="helpful-resources-for-review"><a class="header" href="#helpful-resources-for-review">Helpful Resources for Review</a></h2>
 <ul>
-<li><strong>Windows Command Reference</strong>: https://docs.microsoft.com/windows-server/administration/windows-commands/</li>
-<li><strong>Batch File Scripting Guide</strong>: https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/</li>
-<li><strong>Advanced Command Prompt</strong>: Search “Windows batch scripting tutorial”</li>
+<li><a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands-glossary">CMD Command Reference</a></li>
+<li><a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cd">Navigation and File System</a></li>
+<li><a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/find">Using Pipes and Filtering</a></li>
+<li><a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/doskey">DOSKEY and Aliases</a></li>
+<li><a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/">Screen Reader Accessibility Tips</a></li>
 </ul>
 <hr>
-<p><strong>Congratulations on completing the Command Prompt curriculum!</strong></p>
+<h2 id="submission-checklist"><a class="header" href="#submission-checklist">Submission Checklist</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"> All 20 multiple choice questions answered</li>
+<li><input disabled="" type="checkbox"> All 10 short answer questions answered (1-2 sentences each)</li>
+<li><input disabled="" type="checkbox"> All 10 hands-on tasks completed with evidence captured</li>
+<li><input disabled="" type="checkbox"> Files/screenshots organized and labeled clearly</li>
+<li><input disabled="" type="checkbox"> Submission includes this checklist</li>
+</ul>
+<!--pagebreak-->
 
                     </main>
 
@@ -457,7 +539,7 @@
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="../../GitBash_Foundation/Part_1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../CMD_Foundation/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -471,7 +553,7 @@
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="../../GitBash_Foundation/Part_1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../CMD_Foundation/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>

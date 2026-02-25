@@ -81,10 +81,10 @@
             const path_to_root = "../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-d11bd641.js";
+            window.path_to_searchindex_js = "../searchindex-d0af5d9e.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-19a5926f.js"></script>
+        <script src="../toc-5b0c6224.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -221,61 +221,57 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="3dmake_foundation-3dmake_foundation_curriculum_guide"><a class="header" href="#3dmake_foundation-3dmake_foundation_curriculum_guide">3D Make Foundation: Complete Curriculum Guide</a></h1>
-<p><strong>A comprehensive, hands-on, screenreader accessible introduction to programmatic 3D design using OpenSCAD and 3DMake</strong></p>
-<hr>
+<p>A comprehensive, hands-on, screenreader accessible introduction to programmatic 3D design using OpenSCAD and 3DMake</p>
 <h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
-<p>This <strong>11-lesson curriculum + 4 reference appendices</strong> teaches non-visual 3D modeling, parametric design principles, and the complete 3D printing workflow through integrated projects. Each lesson builds on prior knowledge, introducing real-world examples and hands-on activities.</p>
-<p><strong>Target Audience:</strong> High school and early undergraduate students, makers, and anyone interested in programmatic CAD and 3D printing</p>
-<p><strong>Estimated Total Time:</strong> 30-40 hours (11 lessons + 4 appendices + projects)</p>
-<p><strong>Contents:</strong></p>
+<p>This 11-lesson curriculum + 4 reference appendices teaches non-visual 3D modeling, parametric design principles, and the complete 3D printing workflow through integrated projects. Each lesson builds on prior knowledge, introducing real-world examples and hands-on activities.</p>
+<p>Target Audience: High school and early undergraduate students, makers, and anyone interested in programmatic CAD and 3D printing</p>
+<p>Estimated Total Time: 30-40 hours (11 lessons + 4 appendices + projects)</p>
+<p>Contents:</p>
 <ul>
 <li>11 progressive lessons (Foundations -&gt; Leadership)</li>
 <li>9 hands-on projects (integrated into lessons)</li>
 <li>4 comprehensive reference appendices (1,200-1,500 lines each)</li>
 <li>Complete learning paths for different skill levels</li>
 </ul>
-<hr>
 <h2 id="lesson-structure"><a class="header" href="#lesson-structure">Lesson Structure</a></h2>
 <h3 id="lesson-1-environmental-configuration-and-the-developer-workflow"><a class="header" href="#lesson-1-environmental-configuration-and-the-developer-workflow">Lesson 1: Environmental Configuration and the Developer Workflow</a></h3>
-<p><strong>Duration:</strong> 2.5-3.5 hours | <strong>Level:</strong> Beginner</p>
+<p>Duration: 2.5-3.5 hours | Level: Beginner</p>
 <p>Learn to install and configure 3dMake, create a project scaffold, and run your first build. This lesson establishes the foundation for all subsequent work.</p>
-<p><strong>Key Topics:</strong></p>
+<p>Key Topics:</p>
 <ul>
-<li>Installation and tool verification (<code>which 3dm</code>, <code>which openscad</code>)</li>
+<li>Installation and tool verification (<code>3dm</code>, <code>openscad</code>)</li>
 <li>Project structure (<code>src/</code>, <code>build/</code>, <code>3dmake.toml</code>)</li>
 <li>Parametric design philosophy</li>
 <li>The <code>3dm build</code> command</li>
 </ul>
-<p><strong>Hands-On Activity:</strong></p>
+<p>Hands-On Activity:</p>
 <ul>
 <li>Create a 3dMake project</li>
 <li>Write a simple parametric cube model</li>
 <li>Build and inspect the generated STL</li>
 </ul>
-<p><strong>Checkpoint:</strong> You can initialize a project, edit a parametric model, and generate an STL file</p>
-<hr>
+<p>Checkpoint: You can initialize a project, edit a parametric model, and generate an STL file</p>
 <h3 id="lesson-2-geometric-primitives-and-constructive-solid-geometry"><a class="header" href="#lesson-2-geometric-primitives-and-constructive-solid-geometry">Lesson 2: Geometric Primitives and Constructive Solid Geometry</a></h3>
-<p><strong>Duration:</strong> 60 minutes | <strong>Level:</strong> Beginner</p>
+<p>Duration: 60 minutes | Level: Beginner</p>
 <p>Discover how to combine basic shapes (cube, sphere, cylinder) using boolean operations (union, difference, intersection). This lesson introduces the mathematical foundation of 3D modeling.</p>
-<p><strong>Key Topics:</strong></p>
+<p>Key Topics:</p>
 <ul>
 <li>Primitive shapes: <code>cube()</code>, <code>sphere()</code>, <code>cylinder()</code></li>
 <li>CSG operations: <code>union()</code>, <code>difference()</code>, <code>intersection()</code></li>
 <li>The 0.001 offset rule for avoiding non-manifold geometry</li>
 <li>Low-resolution renders for faster debugging</li>
 </ul>
-<p><strong>Hands-On Activity:</strong></p>
+<p>Hands-On Activity:</p>
 <ul>
 <li>Build three simple CSG examples</li>
 <li>Diagnose and fix a failing boolean operation</li>
 <li>Validate geometry in a slicer</li>
 </ul>
-<p><strong>Checkpoint:</strong> You understand CSG operations and can diagnose common geometry issues</p>
-<hr>
+<p>Checkpoint: You understand CSG operations and can diagnose common geometry issues</p>
 <h3 id="lesson-3-parametric-architecture-and-modular-libraries"><a class="header" href="#lesson-3-parametric-architecture-and-modular-libraries">Lesson 3: Parametric Architecture and Modular Libraries</a></h3>
-<p><strong>Duration:</strong> 2.5 hours | <strong>Level:</strong> Beginner+</p>
+<p>Duration: 2.5 hours | Level: Beginner+</p>
 <p>Learn to create reusable modules and organize code into libraries. This lesson introduces the “don’t repeat yourself” (DRY) principle for code reuse.</p>
-<p><strong>Key Topics:</strong></p>
+<p>Key Topics:</p>
 <ul>
 <li>Module definitions with parameters</li>
 <li>Derived calculations from parameters</li>
@@ -283,18 +279,17 @@
 <li>Using external libraries (BOSL2)</li>
 <li>Low-resolution testing with <code>$fn</code></li>
 </ul>
-<p><strong>Hands-On Activity:</strong></p>
+<p>Hands-On Activity:</p>
 <ul>
 <li>Create a parametric bracket module</li>
 <li>Build variants by changing parameters</li>
 <li>Move a module into a reusable library</li>
 </ul>
-<p><strong>Checkpoint:</strong> You can create parametric modules and organize code into libraries</p>
-<hr>
+<p>Checkpoint: You can create parametric modules and organize code into libraries</p>
 <h3 id="lesson-4-ai-enhanced-verification-and-multimodal-feedback"><a class="header" href="#lesson-4-ai-enhanced-verification-and-multimodal-feedback">Lesson 4: AI-Enhanced Verification and Multimodal Feedback</a></h3>
-<p><strong>Duration:</strong> 2-2.5 hours | <strong>Level:</strong> Intermediate</p>
+<p>Duration: 2-2.5 hours | Level: Intermediate</p>
 <p>Use <code>3dm info</code> to generate AI diagnostics and validate designs. This lesson covers verification workflows and the strengths/limitations of AI in design.</p>
-<p><strong>Key Topics:</strong></p>
+<p>Key Topics:</p>
 <ul>
 <li>The <code>3dm info</code> command for model analysis</li>
 <li>AI-generated model descriptions</li>
@@ -302,18 +297,17 @@
 <li>Privacy and governance considerations</li>
 <li>Prompt engineering basics</li>
 </ul>
-<p><strong>Hands-On Activity:</strong></p>
+<p>Hands-On Activity:</p>
 <ul>
 <li>Run <code>3dm info</code> on a sample model</li>
 <li>Compare AI suggestions to slicer analysis</li>
 <li>Document an AI-assisted design decision</li>
 </ul>
-<p><strong>Checkpoint:</strong> You can use AI tools to supplement your design validation</p>
-<hr>
+<p>Checkpoint: You can use AI tools to supplement your design validation</p>
 <h3 id="lesson-5-safety-protocols-and-the-physical-fabrication-interface"><a class="header" href="#lesson-5-safety-protocols-and-the-physical-fabrication-interface">Lesson 5: Safety Protocols and the Physical Fabrication Interface</a></h3>
-<p><strong>Duration:</strong> 2.5-3.5 hours | <strong>Level:</strong> Intermediate</p>
+<p>Duration: 2.5-3.5 hours | Level: Intermediate</p>
 <p>Transition from digital design to physical printing. Learn safety procedures, environmental controls, and the complete print workflow.</p>
-<p><strong>Key Topics:</strong></p>
+<p>Key Topics:</p>
 <ul>
 <li>Hierarchy of Controls (elimination, engineering, administrative, PPE)</li>
 <li>Chemical and particulate emissions from printing</li>
@@ -321,19 +315,18 @@
 <li>Post-print inspection and measurement</li>
 <li>Spool metadata and documentation</li>
 </ul>
-<p><strong>Hands-On Activity:</strong></p>
+<p>Hands-On Activity:</p>
 <ul>
 <li>Conduct a safety briefing</li>
 <li>Verify environmental controls</li>
 <li>Perform a pre-print checklist</li>
 <li>Monitor and measure a completed print</li>
 </ul>
-<p><strong>Checkpoint:</strong> You understand safety procedures and can safely conduct supervised prints</p>
-<hr>
+<p>Checkpoint: You understand safety procedures and can safely conduct supervised prints</p>
 <h3 id="lesson-6-practical-3dm-commands-and-text-embossing"><a class="header" href="#lesson-6-practical-3dm-commands-and-text-embossing">Lesson 6: Practical 3dm Commands and Text Embossing</a></h3>
-<p><strong>Duration:</strong> 2.5-3.5 hours | <strong>Level:</strong> Intermediate</p>
+<p>Duration: 2.5-3.5 hours | Level: Intermediate</p>
 <p>Master the key 3dm commands by building a practical project-a customizable keycap with embossed text. This lesson ties together design and verification.</p>
-<p><strong>Key Topics:</strong></p>
+<p>Key Topics:</p>
 <ul>
 <li><code>3dm describe</code>: Text-based model analysis</li>
 <li><code>3dm preview</code>: Generating 2D tactile prints</li>
@@ -341,18 +334,17 @@
 <li><code>3dm slice</code>: Generating G-code</li>
 <li>Text embossing with <code>linear_extrude()</code> and <code>text()</code></li>
 </ul>
-<p><strong>Project: Parametric Cube Keycap</strong></p>
+<p>Project: Parametric Cube Keycap</p>
 <ul>
 <li>Customize <code>key_size</code>, <code>letter</code>, and <code>emboss_depth</code></li>
 <li>Generate 3+ variants (small, medium, large)</li>
 <li>Test emboss quality in slicer preview</li>
 </ul>
-<p><strong>Checkpoint:</strong> You can generate keycaps with embossed text and understand all major 3dm commands</p>
-<hr>
+<p>Checkpoint: You can generate keycaps with embossed text and understand all major 3dm commands</p>
 <h3 id="lesson-7-parametric-transforms-and-the-phone-stand-project"><a class="header" href="#lesson-7-parametric-transforms-and-the-phone-stand-project">Lesson 7: Parametric Transforms and the Phone Stand Project</a></h3>
-<p><strong>Duration:</strong> 3-3.5 hours | <strong>Level:</strong> Intermediate+</p>
+<p>Duration: 3-3.5 hours | Level: Intermediate+</p>
 <p>Apply transforms (translate, rotate, scale) to build a multi-part assembly. This lesson covers spatial positioning and practical product design.</p>
-<p><strong>Key Topics:</strong></p>
+<p>Key Topics:</p>
 <ul>
 <li>Transform operations: <code>translate()</code>, <code>rotate()</code>, <code>scale()</code></li>
 <li>Minkowski sum for edge rounding</li>
@@ -360,19 +352,18 @@
 <li>Parametric angle and position variations</li>
 <li>Testing and validation</li>
 </ul>
-<p><strong>Project: Parametric Phone Stand</strong></p>
+<p>Project: Parametric Phone Stand</p>
 <ul>
 <li>Design base, back, and lip components</li>
 <li>Create configurations for phones, tablets, documents</li>
 <li>Test orientation with <code>3dm orient</code></li>
 <li>Validate angles and friction after printing</li>
 </ul>
-<p><strong>Checkpoint:</strong> You can design multi-part assemblies with positioned components</p>
-<hr>
+<p>Checkpoint: You can design multi-part assemblies with positioned components</p>
 <h3 id="lesson-8-advanced-parametric-design-and-interlocking-features"><a class="header" href="#lesson-8-advanced-parametric-design-and-interlocking-features">Lesson 8: Advanced Parametric Design and Interlocking Features</a></h3>
-<p><strong>Duration:</strong> 90-120 minutes | <strong>Level:</strong> Advanced</p>
+<p>Duration: 90-120 minutes | Level: Advanced</p>
 <p>Design tolerance-critical assemblies where parts snap together. This lesson covers precision manufacturing principles.</p>
-<p><strong>Key Topics:</strong></p>
+<p>Key Topics:</p>
 <ul>
 <li>Tolerance and clearance management</li>
 <li>Stack-up and cumulative tolerances</li>
@@ -380,7 +371,7 @@
 <li>Chamfers for quality finishing</li>
 <li>Tolerance sensitivity testing</li>
 </ul>
-<p><strong>Project: Stackable Storage Bins</strong></p>
+<p>Project: Stackable Storage Bins</p>
 <ul>
 <li>Design bins with interlocking rims</li>
 <li>Test different <code>stack_clear</code> values</li>
@@ -388,12 +379,11 @@
 <li>Add optional dividers</li>
 <li>Document tolerance data</li>
 </ul>
-<p><strong>Checkpoint:</strong> You understand tolerance management and can design stackable assemblies</p>
-<hr>
+<p>Checkpoint: You understand tolerance management and can design stackable assemblies</p>
 <h3 id="lesson-9-automation-and-3dm-workflows"><a class="header" href="#lesson-9-automation-and-3dm-workflows">Lesson 9: Automation and 3dm Workflows</a></h3>
-<p><strong>Duration:</strong> 2.5-3.5 hours | <strong>Level:</strong> Advanced</p>
+<p>Duration: 2.5-3.5 hours | Level: Advanced</p>
 <p>Automate design workflows using shell scripts. This lesson teaches batch processing and continuous integration concepts.</p>
-<p><strong>Key Topics:</strong></p>
+<p>Key Topics:</p>
 <ul>
 <li>Chaining 3dm commands with <code>&amp;&amp;</code></li>
 <li>Shell script basics for batch processing</li>
@@ -401,65 +391,62 @@
 <li>Variant testing matrices</li>
 <li>Production build workflows</li>
 </ul>
-<p><strong>Activities:</strong></p>
+<p>Activities:</p>
 <ul>
 <li>Create a batch build script</li>
 <li>Automate parameter variant testing</li>
 <li>Generate production build reports</li>
 <li>Learn library management</li>
 </ul>
-<p><strong>Checkpoint:</strong> You can automate design workflows and manage parametric variants at scale</p>
-<hr>
+<p>Checkpoint: You can automate design workflows and manage parametric variants at scale</p>
 <h3 id="lesson-10-hands-on-practice-exercises-and-troubleshooting"><a class="header" href="#lesson-10-hands-on-practice-exercises-and-troubleshooting">Lesson 10: Hands-On Practice Exercises and Troubleshooting</a></h3>
-<p><strong>Duration:</strong> 5-6 hours | <strong>Level:</strong> Advanced</p>
+<p>Duration: 5-6 hours | Level: Advanced</p>
 <p>Complete integrated projects and learn to diagnose and fix common issues. This capstone lesson synthesizes all prior learning.</p>
-<p><strong>Exercise Sets:</strong></p>
-<p><strong>Set A: Guided Projects</strong></p>
+<p>Exercise Sets:</p>
+<p>Set A: Guided Projects</p>
 <ol>
 <li>Phone Stand (Beginner): Parametric design with weight constraints</li>
 <li>Keycap Set (Intermediate): Family of 5+ customizable caps</li>
 <li>Storage System (Advanced): Stackable bins with tolerance management</li>
 </ol>
-<p><strong>Set B: Problem Diagnosis</strong></p>
+<p>Set B: Problem Diagnosis</p>
 <ul>
 <li>Non-manifold geometry detection and fixes</li>
 <li>Print failure prevention</li>
 <li>Dimensional accuracy troubleshooting</li>
 </ul>
-<p><strong>Set C: Validation &amp; Documentation</strong></p>
+<p>Set C: Validation &amp; Documentation</p>
 <ul>
 <li>Design review checklists</li>
 <li>Troubleshooting documentation templates</li>
 <li>Quality assurance workflows</li>
 </ul>
-<p><strong>Checkpoint:</strong> You can complete real projects from concept to verified print</p>
-<hr>
+<p>Checkpoint: You can complete real projects from concept to verified print</p>
 <h2 id="learning-progressions"><a class="header" href="#learning-progressions">Learning Progressions</a></h2>
 <h3 id="by-skill-level"><a class="header" href="#by-skill-level">By Skill Level</a></h3>
-<p><strong>Beginner Track</strong> (Lessons 1-3):</p>
+<p>Beginner Track (Lessons 1-3):</p>
 <ul>
 <li>Learn tools and project structure</li>
 <li>Understand geometric primitives and boolean operations</li>
 <li>Create your first parametric modules</li>
 </ul>
-<p><strong>Intermediate Track</strong> (Lessons 4-6):</p>
+<p>Intermediate Track (Lessons 4-6):</p>
 <ul>
 <li>Explore verification and safety</li>
 <li>Master 3dm commands</li>
 <li>Build your first complete project (keycap)</li>
 </ul>
-<p><strong>Advanced Track</strong> (Lessons 7-10):</p>
+<p>Advanced Track (Lessons 7-10):</p>
 <ul>
 <li>Design complex assemblies</li>
 <li>Manage tolerances precisely</li>
 <li>Automate workflows and troubleshoot professionally</li>
 </ul>
 <h3 id="by-project-focus"><a class="header" href="#by-project-focus">By Project Focus</a></h3>
-<p><strong>Design &amp; Modeling:</strong> Lessons 1-3, 7-8
-<strong>Verification &amp; Validation:</strong> Lessons 4, 6, 10
-<strong>Safety &amp; Printing:</strong> Lesson 5, 10
-<strong>Automation:</strong> Lesson 9</p>
-<hr>
+<p>Design &amp; Modeling: Lessons 1-3, 7-8
+Verification &amp; Validation: Lessons 4, 6, 10
+Safety &amp; Printing: Lesson 5, 10
+Automation: Lesson 9</p>
 <h2 id="practice-exercises-quick-reference"><a class="header" href="#practice-exercises-quick-reference">Practice Exercises Quick Reference</a></h2>
 <h3 id="structured-exercises-by-lesson"><a class="header" href="#structured-exercises-by-lesson">Structured Exercises by Lesson</a></h3>
 <div class="table-wrapper">
@@ -481,15 +468,13 @@
 </tbody>
 </table>
 </div>
-<hr>
 <h2 id="code-examples-repository"><a class="header" href="#code-examples-repository">Code Examples Repository</a></h2>
 <p>All code examples from lessons are provided as:</p>
 <ol>
-<li><strong>Inline OpenSCAD code blocks</strong> in each lesson (copy-paste ready)</li>
-<li><strong>Shell script examples</strong> for automation tasks</li>
-<li><strong>Documentation templates</strong> for reproducible workflows</li>
+<li>Inline OpenSCAD code blocks in each lesson (copy-paste ready)</li>
+<li>Shell script examples for automation tasks</li>
+<li>Documentation templates for reproducible workflows</li>
 </ol>
-<hr>
 <h2 id="accessibility-features"><a class="header" href="#accessibility-features">Accessibility Features</a></h2>
 <p>This curriculum is designed for non-visual learners:</p>
 <ul>
@@ -500,30 +485,28 @@
 <li>Parametric organization for clear understanding</li>
 <li>Measurement-based validation without visual inspection</li>
 </ul>
-<hr>
 <h2 id="recommended-reading-order"><a class="header" href="#recommended-reading-order">Recommended Reading Order</a></h2>
 <h3 id="option-1-linear-complete-foundation"><a class="header" href="#option-1-linear-complete-foundation">Option 1: Linear (Complete Foundation)</a></h3>
 <p>Lesson 1 -&gt; 2 -&gt; 3 -&gt; 4 -&gt; 5 -&gt; 6 -&gt; 7 -&gt; 8 -&gt; 9 -&gt; 10</p>
-<p><strong>Best for:</strong> First-time learners wanting comprehensive understanding</p>
+<p>Best for: First-time learners wanting comprehensive understanding</p>
 <h3 id="option-2-fast-track-design-focus"><a class="header" href="#option-2-fast-track-design-focus">Option 2: Fast Track (Design Focus)</a></h3>
 <p>Lesson 1 -&gt; 2 -&gt; 3 -&gt; 6 -&gt; 7 -&gt; 8 -&gt; 9</p>
-<p><strong>Best for:</strong> Experienced designers new to programmatic CAD</p>
+<p>Best for: Experienced designers new to programmatic CAD</p>
 <h3 id="option-3-project-based"><a class="header" href="#option-3-project-based">Option 3: Project-Based</a></h3>
 <p>Lesson 1 -&gt; 2 -&gt; 3 -&gt; 6 (Keycap Project)
 Then: Lesson 7 (Phone Stand)
 Then: Lesson 8 (Storage Bins)
 Then: Lesson 9 (Automation)</p>
-<p><strong>Best for:</strong> Learning by doing with integrated projects</p>
-<hr>
+<p>Best for: Learning by doing with integrated projects</p>
 <h2 id="assessment-and-completion"><a class="header" href="#assessment-and-completion">Assessment and Completion</a></h2>
 <h3 id="lesson-completion-criteria"><a class="header" href="#lesson-completion-criteria">Lesson Completion Criteria</a></h3>
 <p>Each lesson includes:</p>
 <ul>
-<li><strong>Learning objectives</strong> (concepts you’ll understand)</li>
-<li><strong>Step-by-step tasks</strong> (hands-on activities)</li>
-<li><strong>Checkpoints</strong> (verification milestones)</li>
-<li><strong>Quiz</strong> (10 self-assessment questions)</li>
-<li><strong>Extension problems</strong> (10 advanced challenges)</li>
+<li>Learning objectives (concepts you’ll understand)</li>
+<li>Step-by-step tasks (hands-on activities)</li>
+<li>Checkpoints (verification milestones)</li>
+<li>Quiz (10 self-assessment questions)</li>
+<li>Extension problems (10 advanced challenges)</li>
 </ul>
 <h3 id="project-completion-tracking"><a class="header" href="#project-completion-tracking">Project Completion Tracking</a></h3>
 <div class="table-wrapper">
@@ -538,7 +521,6 @@ Then: Lesson 9 (Automation)</p>
 </tbody>
 </table>
 </div>
-<hr>
 <h2 id="troubleshooting-guide"><a class="header" href="#troubleshooting-guide">Troubleshooting Guide</a></h2>
 <h3 id="common-issues-and-references"><a class="header" href="#common-issues-and-references">Common Issues and References</a></h3>
 <div class="table-wrapper">
@@ -556,17 +538,15 @@ Then: Lesson 9 (Automation)</p>
 </tbody>
 </table>
 </div>
-<hr>
 <h2 id="next-steps-after-completion"><a class="header" href="#next-steps-after-completion">Next Steps After Completion</a></h2>
 <p>Upon completing this curriculum, you’re ready for:</p>
 <ol>
-<li><strong>Advanced 3D Design:</strong> Explore BOSL2 library features, parametric assemblies</li>
-<li><strong>Multi-Material Printing:</strong> Design parts for different materials (TPU, Nylon, etc.)</li>
-<li><strong>Functional Design:</strong> Create mechanical assemblies with bearings, gears, mechanisms</li>
-<li><strong>Community Contribution:</strong> Share your designs and libraries with OpenSCAD community</li>
-<li><strong>Professional Applications:</strong> Apply skills to product design, prototyping, manufacturing</li>
+<li>Advanced 3D Design: Explore BOSL2 library features, parametric assemblies</li>
+<li>Multi-Material Printing: Design parts for different materials (TPU, Nylon, etc.)</li>
+<li>Functional Design: Create mechanical assemblies with bearings, gears, mechanisms</li>
+<li>Community Contribution: Share your designs and libraries with OpenSCAD community</li>
+<li>Professional Applications: Apply skills to product design, prototyping, manufacturing</li>
 </ol>
-<hr>
 <h2 id="resources-and-references"><a class="header" href="#resources-and-references">Resources and References</a></h2>
 <h3 id="official-documentation"><a class="header" href="#official-documentation">Official Documentation</a></h3>
 <ul>
@@ -591,11 +571,10 @@ Then: Lesson 9 (Automation)</p>
 <li><a href="https://community.prusa3d.com/">Prusa Community</a></li>
 <li><a href="https://www.reddit.com/r/3Dprinting/">Reddit r/3Dprinting</a></li>
 </ul>
-<hr>
 <h2 id="lesson-11-stakeholder-centric-design-and-the-beaded-jewelry-project"><a class="header" href="#lesson-11-stakeholder-centric-design-and-the-beaded-jewelry-project">Lesson 11: Stakeholder-Centric Design and the Beaded Jewelry Project</a></h2>
-<p><strong>Duration:</strong> 3.5-4.5 hours | <strong>Level:</strong> Advanced/Leadership</p>
+<p>Duration: 3.5-4.5 hours | Level: Advanced/Leadership</p>
 <p>The final lesson teaches you to design for real users, not just yourself. You’ll learn to conduct stakeholder interviews, extract functional requirements, and iterate based on real feedback. This bridges the gap between maker and design professional.</p>
-<p><strong>Key Topics:</strong></p>
+<p>Key Topics:</p>
 <ul>
 <li>Stakeholder identification and interview techniques</li>
 <li>Open-ended questioning strategies</li>
@@ -604,7 +583,7 @@ Then: Lesson 9 (Automation)</p>
 <li>Design iteration based on user feedback</li>
 <li>Documentation for reproducibility and accessibility</li>
 </ul>
-<p><strong>Project:</strong> Beaded Jewelry Bracelet Holder</p>
+<p>Project: Beaded Jewelry Bracelet Holder</p>
 <ul>
 <li>Interview an actual stakeholder (or use provided scenario)</li>
 <li>Extract their specific needs and constraints</li>
@@ -612,12 +591,11 @@ Then: Lesson 9 (Automation)</p>
 <li>Test with actual bracelets and iterate based on feedback</li>
 <li>Document the complete design process</li>
 </ul>
-<p><strong>Checkpoint:</strong> You can conduct a real interview, translate needs into measurable requirements, and iterate a design based on user feedback</p>
-<hr>
+<p>Checkpoint: You can conduct a real interview, translate needs into measurable requirements, and iterate a design based on user feedback</p>
 <h2 id="3d-make-foundation-appendices"><a class="header" href="#3d-make-foundation-appendices">3D Make Foundation Appendices</a></h2>
 <h3 id="appendix-a-comprehensive-slicing-guide---all-major-slicers"><a class="header" href="#appendix-a-comprehensive-slicing-guide---all-major-slicers">Appendix A: Comprehensive Slicing Guide - All Major Slicers</a></h3>
 <p>A complete reference covering multiple major slicers (PrusaSlicer, Bambu Studio, Cura, SuperSlicer, OrcaSlicer, IdeaMaker, Fusion 360 built in slicer).</p>
-<p><strong>What You’ll Find:</strong></p>
+<p>What You’ll Find:</p>
 <ul>
 <li>Setup and workflow for each slicer</li>
 <li>Accessible parameter explanations (non-visual)</li>
@@ -625,11 +603,10 @@ Then: Lesson 9 (Automation)</p>
 <li>Troubleshooting guide for common problems</li>
 <li>Comparison table for choosing the right slicer</li>
 </ul>
-<p><strong>When to Use:</strong> Reference whenever slicing, switching slicers, or troubleshooting print quality</p>
-<hr>
+<p>When to Use: Reference whenever slicing, switching slicers, or troubleshooting print quality</p>
 <h3 id="appendix-b-material-properties--selection-guide"><a class="header" href="#appendix-b-material-properties--selection-guide">Appendix B: Material Properties &amp; Selection Guide</a></h3>
 <p>Comprehensive reference for 6 common filament materials (PLA, PETG, ABS, TPU, Polycarbonate, Nylon).</p>
-<p><strong>What You’ll Find:</strong></p>
+<p>What You’ll Find:</p>
 <ul>
 <li>Properties table (strength, flexibility, temperature, cost)</li>
 <li>Ideal projects and use cases for each material</li>
@@ -639,11 +616,10 @@ Then: Lesson 9 (Automation)</p>
 <li>Cost analysis and brand recommendations</li>
 <li>Material selection decision tree</li>
 </ul>
-<p><strong>When to Use:</strong> Reference when choosing material for a project or troubleshooting print quality issues</p>
-<hr>
+<p>When to Use: Reference when choosing material for a project or troubleshooting print quality issues</p>
 <h3 id="appendix-c-tolerance-testing--quality-assurance-matrix"><a class="header" href="#appendix-c-tolerance-testing--quality-assurance-matrix">Appendix C: Tolerance Testing &amp; Quality Assurance Matrix</a></h3>
 <p>Measurement-based QA methodology designed to be used non-visually (with calipers, scales, and functional tests).</p>
-<p><strong>What You’ll Find:</strong></p>
+<p>What You’ll Find:</p>
 <ul>
 <li>Essential measurement tools (digital calipers, scales, go/no-go gauges)</li>
 <li>Step-by-step measurement procedures for all common dimensions</li>
@@ -653,11 +629,10 @@ Then: Lesson 9 (Automation)</p>
 <li>QA checklist template</li>
 <li>Accessibility-focused best practices</li>
 </ul>
-<p><strong>When to Use:</strong> Reference when starting a new project (create test plan), after printing (verify dimensions), or when troubleshooting quality issues</p>
-<hr>
+<p>When to Use: Reference when starting a new project (create test plan), after printing (verify dimensions), or when troubleshooting quality issues</p>
 <h3 id="appendix-d-powershell-integration-for-scad-workflows"><a class="header" href="#appendix-d-powershell-integration-for-scad-workflows">Appendix D: PowerShell Integration for SCAD Workflows</a></h3>
 <p>Shows how to automate 3D design workflows using PowerShell scripts (from PowerShell_Foundation Lessons 1-6).</p>
-<p><strong>What You’ll Find:</strong></p>
+<p>What You’ll Find:</p>
 <ul>
 <li>Basic workflow automation (SCAD -&gt; STL -&gt; G-code)</li>
 <li>Parametric sweep (test 5, 10, or 100 design variations automatically)</li>
@@ -668,14 +643,13 @@ Then: Lesson 9 (Automation)</p>
 <li>PowerShell skills mapped to SCAD applications</li>
 <li>Accessibility considerations and best practices</li>
 </ul>
-<p><strong>When to Use:</strong> Reference when automating repetitive tasks, testing parameter variations, or building a batch of designs</p>
-<hr>
+<p>When to Use: Reference when automating repetitive tasks, testing parameter variations, or building a batch of designs</p>
 <h3 id="appendix-e-advanced-openscad-concepts"><a class="header" href="#appendix-e-advanced-openscad-concepts">Appendix E: Advanced OpenSCAD Concepts</a></h3>
 <p>Optional topics for experienced designers tackling specialized applications. Five in-depth modules with complete working examples.</p>
-<p><strong>What You’ll Find:</strong></p>
+<p>What You’ll Find:</p>
 <ol>
 <li>
-<p><strong>Gears and Mechanical Components</strong></p>
+<p>Gears and Mechanical Components</p>
 <ul>
 <li>Gear terminology and tooth geometry</li>
 <li>Involute gear algorithm</li>
@@ -684,7 +658,7 @@ Then: Lesson 9 (Automation)</p>
 </ul>
 </li>
 <li>
-<p><strong>Batch Processing and Statistical Analysis</strong></p>
+<p>Batch Processing and Statistical Analysis</p>
 <ul>
 <li>Automated parameter sweep generation</li>
 <li>Statistical summary scripts</li>
@@ -693,7 +667,7 @@ Then: Lesson 9 (Automation)</p>
 </ul>
 </li>
 <li>
-<p><strong>Performance Optimization</strong></p>
+<p>Performance Optimization</p>
 <ul>
 <li>Render time measurement and profiling</li>
 <li>Resolution parameter strategy</li>
@@ -702,7 +676,7 @@ Then: Lesson 9 (Automation)</p>
 </ul>
 </li>
 <li>
-<p><strong>Print Orientation and Support Structure Algorithms</strong></p>
+<p>Print Orientation and Support Structure Algorithms</p>
 <ul>
 <li>Strength orientation analysis</li>
 <li>Support material minimization</li>
@@ -711,7 +685,7 @@ Then: Lesson 9 (Automation)</p>
 </ul>
 </li>
 <li>
-<p><strong>Recursive Function Patterns</strong></p>
+<p>Recursive Function Patterns</p>
 <ul>
 <li>Basic recursion with base cases</li>
 <li>Fractal generation</li>
@@ -721,7 +695,7 @@ Then: Lesson 9 (Automation)</p>
 </ul>
 </li>
 </ol>
-<p><strong>When to Use:</strong></p>
+<p>When to Use:</p>
 <ul>
 <li>When working with mechanical systems requiring gears or synchronized motion</li>
 <li>When testing design variations systematically</li>
@@ -730,8 +704,7 @@ Then: Lesson 9 (Automation)</p>
 <li>When building fractal or deeply nested structures</li>
 <li>For advanced library and framework development</li>
 </ul>
-<p><strong>Accessibility:</strong> Each example includes comprehensive comments, starts with simplified versions before advanced techniques, and documents performance implications for both visual and non-visual users</p>
-<hr>
+<p>Accessibility: Each example includes comprehensive comments, starts with simplified versions before advanced techniques, and documents performance implications for both visual and non-visual users</p>
 <h2 id="curriculum-revision-history"><a class="header" href="#curriculum-revision-history">Curriculum Revision History</a></h2>
 <div class="table-wrapper">
 <table>
@@ -745,7 +718,6 @@ Then: Lesson 9 (Automation)</p>
 </tbody>
 </table>
 </div>
-<hr>
 <h2 id="feedback-and-contributions"><a class="header" href="#feedback-and-contributions">Feedback and Contributions</a></h2>
 <p>Have suggestions to improve this curriculum? Found an issue in a lesson or code example?</p>
 <p>Please reach out with:</p>
@@ -754,8 +726,7 @@ Then: Lesson 9 (Automation)</p>
 <li>Description of the issue or suggestion</li>
 <li>Proposed solution (if applicable)</li>
 </ul>
-<hr>
-<p>**Happy designing! **</p>
+<p>Happy designing!</p>
 
                     </main>
 

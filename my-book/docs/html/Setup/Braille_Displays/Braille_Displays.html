@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-d11bd641.js";
+            window.path_to_searchindex_js = "../../searchindex-d0af5d9e.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-19a5926f.js"></script>
+        <script src="../../toc-5b0c6224.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -221,59 +221,232 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="setup_braille_displays-braille_displays"><a class="header" href="#setup_braille_displays-braille_displays">Using a Braille Display with the Curriculum</a></h1>
-<p>Refreshingly, many blind and low-vision coders prefer tactile output in addition to speech. A refreshable braille display presents terminal text as tactile braille cells and can be used alongside or instead of spoken output while working through this curriculum.</p>
-<h2 id="braille-terminal-mode"><a class="header" href="#braille-terminal-mode">Braille terminal mode</a></h2>
-<p>Most modern braille displays support a “braille terminal” or “braille output” mode that exposes the active computer’s text output to the display over USB or Bluetooth. When the display is connected and the host computer’s screen reader is configured to use it, the display will show the current line, allow pan/scroll by cell or line, and often provide routing keys and function buttons for quick navigation.</p>
-<h2 id="practical-notes"><a class="header" href="#practical-notes">Practical notes</a></h2>
+<p>Many blind and low-vision programmers prefer tactile output alongside or instead of speech. A refreshable braille display presents terminal text as a row (or multiple rows) of braille cells and allows you to read at your own pace, re-read lines without interrupting speech, and work quietly. This page covers how to connect and configure a braille display with each screen reader used in this curriculum.</p>
+<hr>
+<h2 id="how-a-braille-display-works-with-a-terminal"><a class="header" href="#how-a-braille-display-works-with-a-terminal">How a Braille Display Works with a Terminal</a></h2>
+<p>A refreshable braille display uses small pins that rise and fall to form braille characters. When connected to a computer and paired with a screen reader, the display shows the line of text where the screen reader’s focus or review cursor is located. You can pan left and right across a long line or press routing buttons to move the screen reader cursor to a specific position.</p>
+<p>In a terminal environment:</p>
 <ul>
-<li><strong>Connection:</strong> Connect via USB or Bluetooth according to the device vendor’s instructions. Ensure the display’s power and pairing state are correct before opening your terminal. Some displays require a companion driver or vendor utility on the host.</li>
-<li><strong>Screen reader support:</strong> Configure your Windows or Linux screen reader to use the braille display. Most mainstream screen readers include braille support or can interoperate with system braille services; follow the vendor documentation for enabling braille output.</li>
-<li><strong>Terminal behavior:</strong> Braille displays reflect the terminal buffer and the current focus. Use your screen reader’s review/virtual cursor or the display’s pan keys to move through lines of terminal output, and use the shell history (Up arrow) to recall commands - the braille display will show the recalled command when the shell line is focused.</li>
+<li>The display shows the current command line (what you are typing).</li>
+<li>After running a command, you can use your screen reader’s review cursor and the display’s pan keys to read through the output line by line.</li>
+<li>Routing keys (small buttons above or below each braille cell) let you move the cursor directly to that point in the text — useful for re-running or editing commands from history.</li>
 </ul>
-<h2 id="compatibility-and-notetakers"><a class="header" href="#compatibility-and-notetakers">Compatibility and notetakers</a></h2>
+<hr>
+<h2 id="connecting-a-braille-display"><a class="header" href="#connecting-a-braille-display">Connecting a Braille Display</a></h2>
+<h3 id="usb-connection"><a class="header" href="#usb-connection">USB Connection</a></h3>
+<ol>
+<li>Plug the display’s USB cable into your computer.</li>
+<li>Windows will attempt to install drivers automatically. If the display is not recognized, install the vendor’s driver software first (see vendor links at the end of this page).</li>
+<li>Open your screen reader’s braille settings and select the connected display.</li>
+</ol>
+<h3 id="bluetooth-connection"><a class="header" href="#bluetooth-connection">Bluetooth Connection</a></h3>
+<ol>
+<li>Put the braille display into pairing mode (refer to the device’s quick-start guide).</li>
+<li>On Windows, go to <strong>Settings → Bluetooth &amp; devices → Add a device</strong> and pair the display.</li>
+<li>Once paired, open your screen reader’s braille settings and select the display.</li>
+</ol>
+<h3 id="before-opening-the-terminal"><a class="header" href="#before-opening-the-terminal">Before Opening the Terminal</a></h3>
+<p>Always confirm the display is connected and showing output before opening your terminal. A quick test: open Notepad, type a few words, and verify they appear on the display. This confirms the screen reader is routing output correctly before you add the complexity of a terminal session.</p>
+<hr>
+<h2 id="configuring-each-screen-reader-for-braille"><a class="header" href="#configuring-each-screen-reader-for-braille">Configuring Each Screen Reader for Braille</a></h2>
+<h3 id="nvda"><a class="header" href="#nvda">NVDA</a></h3>
+<p>NVDA includes built-in braille support for a wide range of displays without requiring separate vendor software for many devices.</p>
+<ol>
+<li>Connect your display via USB or Bluetooth.</li>
+<li>Open the NVDA menu: press <strong>NVDA+N</strong> (Insert+N or CapsLock+N depending on your modifier key setting).</li>
+<li>Go to <strong>Preferences → Settings → Braille</strong> (or press <strong>NVDA+Ctrl+B</strong> as a shortcut on some versions).</li>
+<li>In the <strong>“Braille display”</strong> dropdown, select your display from the list. NVDA supports automatic detection for many displays — you can also select <strong>“Automatic”</strong> and let NVDA detect it.</li>
+<li>Set your preferred <strong>braille output table</strong> (e.g., Unified English Braille Grade 1 or Grade 2, or your country’s national table).</li>
+<li>Set <strong>“Braille input table”</strong> if you want to type commands using the display’s braille keyboard (if equipped).</li>
+<li>Enable <strong>“Show cursor”</strong> so you can see the caret position on the display.</li>
+<li>Click <strong>OK</strong> and test by moving the cursor in Notepad.</li>
+</ol>
+<p><strong>Recommended NVDA braille settings for terminal work:</strong></p>
 <ul>
-<li><strong>Important:</strong> this curriculum and the <code>3dMake</code> tooling are tested on Windows and Linux. BrailleNote Touch+ and BrailleSense family devices run Android as their primary OS and are not supported as standalone authoring environments for <code>3dMake</code>.</li>
-<li><strong>Workaround:</strong> BrailleNote Touch+ and BrailleSense devices can function as a braille terminal when connected to a computer (USB or Bluetooth) and used with the host machine’s terminal and screen reader. In that configuration they present the same tactile output as other refreshable displays and work for coding workflows when the host system is supported.</li>
+<li>Output table: Unified English Braille Grade 1 (uncontracted) is recommended for reading code — contractions in Grade 2 can make code harder to read.</li>
+<li>Cursor shape: Dots 7 and 8 (underline) is a common choice.</li>
+<li>Enable <strong>“Word wrap”</strong> to avoid cutting words at the display’s edge.</li>
 </ul>
-<h2 id="troubleshooting-tips"><a class="header" href="#troubleshooting-tips">Troubleshooting tips</a></h2>
+<p><strong>NVDA braille keyboard shortcut reference (while braille display is active):</strong></p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Action</th><th>NVDA Command</th></tr>
+</thead>
+<tbody>
+<tr><td>Pan braille display right</td><td>Display’s right pan key</td></tr>
+<tr><td>Pan braille display left</td><td>Display’s left pan key</td></tr>
+<tr><td>Toggle braille tethered to focus/review</td><td>NVDA+Ctrl+T</td></tr>
+<tr><td>Move to previous braille line</td><td>NVDA+Shift+Up (or display key)</td></tr>
+<tr><td>Move to next braille line</td><td>NVDA+Shift+Down (or display key)</td></tr>
+<tr><td>Open braille settings</td><td>NVDA+Ctrl+B (some versions)</td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h3 id="jaws"><a class="header" href="#jaws">JAWS</a></h3>
+<p>JAWS supports a wide range of braille displays through its built-in braille manager and additional vendor drivers.</p>
+<ol>
+<li>Connect your display via USB or Bluetooth.</li>
+<li>Install the vendor’s display driver if required (check the vendor’s website — some displays work without a driver in JAWS, others need one).</li>
+<li>Open the JAWS menu: press <strong>Insert+F3</strong> (or your JAWS key+F3).</li>
+<li>Go to <strong>Options → Basics → Braille</strong> or use the <strong>JAWS Settings Center</strong> and search for <strong>“Braille”</strong>.</li>
+<li>In Braille Settings, select your display model from the list.</li>
+<li>Choose your <strong>braille translation table</strong> (e.g., English Unified Grade 1 for uncontracted, Grade 2 for contracted).</li>
+<li>Configure <strong>cursor routing</strong> so that pressing a routing button on the display moves the JAWS cursor to that position.</li>
+<li>Test in Notepad before moving to a terminal.</li>
+</ol>
+<p><strong>JAWS braille settings for terminal work:</strong></p>
 <ul>
-<li><strong>No output:</strong> verify the connection, power, and pairing; restart the terminal or screen reader, and consult vendor docs for drivers or firmware updates.</li>
-<li><strong>Navigation out of sync:</strong> try toggling the display’s terminal mode, restart the screen reader, or open the terminal in a different emulator (Windows Terminal, PowerShell, or a Linux terminal) to compare behavior.</li>
+<li>Use <strong>Grade 1 (uncontracted) braille</strong> for reading code and terminal output. Grade 2 contractions can make commands and file paths difficult to parse.</li>
+<li>Enable <strong>“Show active cursor”</strong> in JAWS braille settings.</li>
+<li>In the JAWS Settings Center, look for <strong>“Braille for Applications”</strong> — you can set different braille behavior for specific applications (e.g., a terminal vs. a word processor).</li>
 </ul>
-<p>This page aims to give a practical overview - follow your braille display vendor and screen reader documentation for device-specific setup and advanced configuration.</p>
-<h2 id="vendor-setup-pages"><a class="header" href="#vendor-setup-pages">Vendor setup pages</a></h2>
+<p><strong>Accessing braille settings:</strong></p>
 <ul>
-<li><a href="https://www.humanware.com">HumanWare</a> - Braille displays &amp; BrailleNote/BrailleSense products</li>
-<li><a href="https://www.freedomscientific.com">Freedom Scientific</a> - Focus Blue braille displays and related tools</li>
-<li><a href="https://hims-inc.com">HIMS</a> - BrailleSense family</li>
-<li><a href="https://www.dolphinuk.com">Dolphin</a> - SuperNova and related accessibility tools</li>
+<li><strong>Insert+F3</strong> → Options → Basics → Braille</li>
+<li>Or: <strong>Insert+F2</strong> (JAWS Manager) → Settings Center → search “braille”</li>
 </ul>
-<h2 id="connecting-a-braille-display-to-common-screen-readers-general-steps"><a class="header" href="#connecting-a-braille-display-to-common-screen-readers-general-steps">Connecting a braille display to common screen readers (general steps)</a></h2>
+<hr>
+<h3 id="windows-narrator"><a class="header" href="#windows-narrator">Windows Narrator</a></h3>
+<p>Windows Narrator supports braille output through the <strong>Windows braille service</strong> (Windows 10 version 1903 and later, and Windows 11).</p>
+<ol>
+<li>Connect your display via USB or Bluetooth.</li>
+<li>Install the vendor’s display driver if required.</li>
+<li>Open <strong>Settings → Accessibility → Narrator → Braille</strong> (Windows 11) or <strong>Settings → Ease of Access → Narrator → Use Braille</strong> (Windows 10).</li>
+<li>Turn on <strong>“Install braille”</strong> (first-time setup may require downloading the braille translation component — approximately 70 MB).</li>
+<li>Select your <strong>display brand and model</strong> from the list.</li>
+<li>Choose a <strong>braille table</strong> (Grade 1 recommended for terminal work).</li>
+<li>Test in Notepad before using in a terminal.</li>
+</ol>
+<p><strong>Important Narrator braille notes:</strong></p>
 <ul>
-<li><strong>JAWS:</strong> Connect the display via USB or Bluetooth, then open JAWS Settings Center and look for the Braille / Braille Settings area (or the Braille Manager). Select the connected display and enable braille output; test in a terminal window. If the display requires a vendor driver, install it first.</li>
-<li><strong>NVDA:</strong> Connect the display and open the NVDA menu -&gt; Preferences -&gt; Braille display (or use NVDA’s braille settings). NVDA generally detects many displays; choose the device and enable braille output. Install vendor drivers if needed.</li>
-<li><strong>Windows Narrator:</strong> Connect the display, then open Settings -&gt; Accessibility -&gt; Narrator -&gt; Braille (or related braille options) and enable braille output. Narrator will use the Windows braille services to route output to the display.</li>
-<li><strong>Dolphin / SuperNova:</strong> Connect the display via USB/Bluetooth, then open SuperNova settings and enable braille output, selecting the connected device. Dolphin provides driver/utility support for specific displays where required.</li>
+<li>Narrator’s braille support uses the <strong>BRLTTY</strong> back-end on Windows, which supports most mainstream displays.</li>
+<li>If your display is not listed, check for a Windows Update or visit the display vendor’s website for a Windows Narrator-compatible driver.</li>
+<li>Narrator’s braille customization is less extensive than NVDA’s or JAWS’s. If you need more control, consider using NVDA (free) for braille-heavy work.</li>
+<li>The <strong>braille display showing Narrator output</strong> does not change the fact that Narrator’s keyboard commands remain the same — your display shows what Narrator is currently reading.</li>
 </ul>
-<h2 id="notes"><a class="header" href="#notes">Notes</a></h2>
+<hr>
+<h3 id="dolphin-supernova"><a class="header" href="#dolphin-supernova">Dolphin SuperNova</a></h3>
+<p>Dolphin SuperNova includes integrated braille support as part of its screen reader editions (SuperNova Magnifier &amp; Speech and SuperNova Screen Reader).</p>
+<ol>
+<li>Connect your display via USB or Bluetooth.</li>
+<li>Install the vendor’s driver if required.</li>
+<li>Open the <strong>SuperNova Control Panel</strong>: press <strong>CapsLock+SpaceBar</strong> or click the SuperNova icon in the taskbar.</li>
+<li>Go to <strong>Braille → Display</strong> and select your display model from the list.</li>
+<li>Go to <strong>Braille → Translation</strong> and select your braille table (Grade 1 / uncontracted recommended for code).</li>
+<li>Go to <strong>Braille → Settings</strong> to configure cursor style, word wrap, and other options.</li>
+<li>Click <strong>Apply</strong> and test in Notepad.</li>
+</ol>
+<p><strong>Dolphin SuperNova braille tips for terminal work:</strong></p>
 <ul>
-<li>These instructions are intentionally high-level - vendor drivers, firmware, and exact setting names can vary. If a device is not detected, install or update the vendor’s drivers/utilities and consult the vendor setup pages listed above.</li>
-<li>When testing, open a terminal (Windows Terminal, Command Prompt, PowerShell, or a Linux terminal), run a few commands (for example <code>dir</code> / <code>ls</code>) and use the display’s pan keys or your screen reader’s review cursor to confirm tactile output and navigation.</li>
+<li>SuperNova supports a wide range of displays from Freedom Scientific (Focus), HumanWare (Brailliant, BrailleNote as terminal), HIMS, Optelec, and others.</li>
+<li>Use <strong>Grade 1 (uncontracted)</strong> braille for terminal and code work.</li>
+<li>SuperNova’s <strong>“Braille cursor tracking”</strong> setting determines whether the braille display follows the text cursor or the screen review cursor — set this to <strong>“Cursor”</strong> when working in a terminal.</li>
+<li>Dolphin provides a <strong>braille viewer</strong> on screen (a visual representation of what is on the braille display) — useful when setting up or troubleshooting.</li>
 </ul>
+<hr>
+<h2 id="using-the-braille-display-in-a-terminal"><a class="header" href="#using-the-braille-display-in-a-terminal">Using the Braille Display in a Terminal</a></h2>
+<p>Once your display is configured, here is how to work in a terminal:</p>
+<ol>
+<li><strong>Reading the prompt:</strong> The display shows your current prompt (e.g., <code>C:\Users\YourName&gt;</code> or <code>PS C:\&gt;</code>). Pan right if the prompt is longer than your display width.</li>
+<li><strong>Reading output:</strong> After running a command, use your screen reader’s review cursor commands (see the Screen Reader Accessibility Guide) to move through the output. The display shows one line at a time and updates as you move.</li>
+<li><strong>Redirecting long output:</strong> For long terminal output, redirect to a file and open in Notepad:
+<pre><code>command &gt; output.txt
+notepad output.txt
+</code></pre>
+In Notepad, you can pan through the braille display comfortably without the output scrolling away.</li>
+<li><strong>Using routing keys:</strong> Press the routing key above a word or character to move your cursor to that position. This is especially useful for editing commands recalled from shell history.</li>
+</ol>
+<hr>
+<h2 id="braille-grade-and-code"><a class="header" href="#braille-grade-and-code">Braille Grade and Code</a></h2>
+<p>For all screen readers, use <strong>Grade 1 (uncontracted) braille</strong> when working in terminals and with code. Contracted braille (Grade 2) uses abbreviations designed for reading prose, and those contractions will make command names, file paths, and code syntax difficult or impossible to read correctly.</p>
+<p>Example: In Grade 2, the letters “cd” might be represented as a contraction meaning something other than the Change Directory command. In Grade 1, <code>cd</code> is always shown as the letters c and d.</p>
+<hr>
+<h2 id="notetakers-and-braillenote--braillesense-devices"><a class="header" href="#notetakers-and-braillenote--braillesense-devices">Notetakers and BrailleNote / BrailleSense Devices</a></h2>
+<p>BrailleNote Touch+ (HumanWare) and BrailleSense (HIMS) devices run Android as their primary operating system. <strong>They cannot run <code>3dMake</code> or Windows-based terminal workflows natively.</strong> These devices are not supported as standalone authoring environments for this curriculum.</p>
+<p><strong>Workaround — using them as braille terminals:</strong> Both device families can function as a braille display when connected to a Windows computer via USB or Bluetooth. In that configuration:</p>
+<ul>
+<li>The device acts as a standard refreshable braille display.</li>
+<li>Your Windows screen reader (NVDA, JAWS, Narrator, or SuperNova) drives the output.</li>
+<li>Commands are typed on the Windows keyboard; the BrailleNote/BrailleSense shows the output as braille.</li>
+</ul>
+<p>To set this up, refer to your device’s documentation for “Terminal mode” or “PC connection mode” and then follow the screen reader braille configuration steps above for your chosen screen reader.</p>
+<hr>
 <h2 id="multiline-braille-displays"><a class="header" href="#multiline-braille-displays">Multiline Braille Displays</a></h2>
-<p>Multiline braille displays present several lines of braille at once (often 1-4 lines or more), which can greatly improve readability and code navigation compared with single-line displays. Seeing multiple lines simultaneously helps with indentation, matching braces, and maintaining context while reading or editing source files.</p>
-<h3 id="examples-short-notes"><a class="header" href="#examples-short-notes">Examples (short notes)</a></h3>
+<p>Standard refreshable braille displays show a single line of braille (typically 32, 40, or 80 cells). Multiline displays show several lines simultaneously, which can significantly improve the experience of reading code or terminal output because you can see context above and below the current line.</p>
+<h3 id="examples"><a class="header" href="#examples">Examples</a></h3>
+<p><strong>Monarch (APH / HumanWare partnership):</strong><br>A multiline braille device developed by the American Printing House for the Blind (APH) in partnership with HumanWare. It presents multiple lines of braille and supports graphical braille output, making it useful for reviewing blocks of code, diagrams, and structured text. Confirm current driver and screen reader compatibility before purchase.</p>
+<p><strong>DotPad (Dot Inc.):</strong><br>A multiline braille and tactile graphics display. Its multiline capability allows programmers to scan several lines of code or terminal output at once. Useful for reviewing structured output without panning repeatedly. Check current Windows compatibility and screen reader support status.</p>
+<p><strong>Graphiti and Graphiti Plus (Orbit Research):</strong><br>Multiline tactile displays from Orbit Research designed for reading text and tactile graphics. Their expanded line count helps with reading code structure and terminal output. Check current driver support for NVDA, JAWS, Narrator, and SuperNova.</p>
+<h3 id="considerations-for-multiline-displays"><a class="header" href="#considerations-for-multiline-displays">Considerations for Multiline Displays</a></h3>
 <ul>
-<li><strong>Monarch (AOPH / HumanWare):</strong> A multiline form factor intended for users who need a larger tactile viewport for text and code. Multiline displays like this are useful for reviewing blocks of code, comparing nearby lines, and reducing the need to pan frequently. Confirm vendor drivers and screen reader support for your platform.</li>
-<li><strong>DotPad X:</strong> A modern braille device that supports multiline braille output and notetaker features; it can be used as a terminal display when connected to a host. Its multiline capability helps programmers scan code and terminal output more quickly than single-line displays.</li>
-<li><strong>Graphitti line (Orgit Scientific):</strong> Orgit Scientific’s Graphitti/Graphitti-style multiline displays are designed for tactile reading with expanded line counts. Multiline displays from vendors like Orgit are helpful in development workflows where seeing surrounding lines improves comprehension.</li>
+<li><strong>Driver and screen reader support:</strong> Multiline displays are newer technology and support varies. Confirm that your chosen screen reader (NVDA, JAWS, Narrator, or SuperNova) has a driver for the specific device before purchase.</li>
+<li><strong>Size and portability:</strong> Multiline displays are larger and heavier than single-line models. Consider your workspace and whether you need portability.</li>
+<li><strong>Cost:</strong> Multiline displays are significantly more expensive than single-line displays. Evaluate whether the workflow benefit justifies the cost for your situation.</li>
+<li><strong>Learning curve:</strong> Using a multiline display effectively — navigating across lines, understanding the spatial layout — requires some practice beyond what is needed for single-line displays.</li>
 </ul>
-<h3 id="considerations-for-multiline-devices"><a class="header" href="#considerations-for-multiline-devices">Considerations for multiline devices</a></h3>
+<hr>
+<h2 id="troubleshooting"><a class="header" href="#troubleshooting">Troubleshooting</a></h2>
+<p><strong>Display shows nothing / no braille output:</strong></p>
 <ul>
-<li><strong>Drivers &amp; compatibility:</strong> Multiline displays sometimes require updated drivers or vendor utilities and may depend on BRLTTY or specific screen reader braille backends on Linux. On Windows, ensure your chosen screen reader and the device drivers are configured to expose multiline output.</li>
-<li><strong>Layout &amp; ergonomics:</strong> Multiline displays are larger and less portable than single-line models; check the physical layout (routing keys, panning buttons, and function keys) to ensure they meet your navigation preferences.</li>
-<li><strong>Cost:</strong> Multiline displays are typically more expensive than single-line displays. Factor budget and how much multiline reading will speed up your workflow when deciding.</li>
+<li>Verify the USB or Bluetooth connection and check that the display is powered on.</li>
+<li>In your screen reader’s braille settings, confirm the correct display model is selected.</li>
+<li>Try disconnecting and reconnecting. Restart the screen reader if needed.</li>
+<li>Install or reinstall the vendor’s display driver.</li>
 </ul>
+<p><strong>Display shows output but navigation is out of sync:</strong></p>
+<ul>
+<li>Toggle your screen reader’s braille mode off and on (usually in the braille settings).</li>
+<li>Restart the screen reader (not the whole computer) and reopen the terminal.</li>
+<li>Try a different terminal emulator (Windows Terminal, Command Prompt, PowerShell) to see if the issue is terminal-specific.</li>
+</ul>
+<p><strong>Display driver not found:</strong></p>
+<ul>
+<li>Go to the vendor’s website (links below) and download the latest driver for your operating system version.</li>
+<li>Some displays require firmware updates to work with newer Windows versions.</li>
+</ul>
+<p><strong>Routing keys not moving the cursor:</strong></p>
+<ul>
+<li>In your screen reader’s braille settings, confirm that cursor routing is enabled.</li>
+<li>In NVDA, this is under Preferences → Settings → Braille → enable “Move system cursor when routing review cursor”.</li>
+<li>In JAWS, check the routing settings in the JAWS braille configuration.</li>
+</ul>
+<hr>
+<h2 id="vendor-resources"><a class="header" href="#vendor-resources">Vendor Resources</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Vendor</th><th>Products</th><th>Support / Drivers</th></tr>
+</thead>
+<tbody>
+<tr><td>HumanWare</td><td>Brailliant, BrailleNote Touch+</td><td><a href="https://example.com">https://example.com</a></td></tr>
+<tr><td>Freedom Scientific</td><td>Focus Blue series</td><td><a href="https://example.com">https://example.com</a></td></tr>
+<tr><td>HIMS</td><td>BrailleSense, Braille EDGE, Smart Beetle</td><td><a href="https://example.com">https://example.com</a></td></tr>
+<tr><td>Optelec</td><td>Braille STAR, Easy Link</td><td><a href="https://example.com">https://example.com</a></td></tr>
+<tr><td>Orbit Research</td><td>Graphiti, Orbit 20/40</td><td><a href="https://example.com">https://example.com</a></td></tr>
+<tr><td>APH</td><td>Monarch</td><td><a href="https://example.com">https://example.com</a></td></tr>
+<tr><td>Dot Inc.</td><td>DotPad</td><td><a href="https://example.com">https://example.com</a></td></tr>
+<tr><td>Dolphin</td><td>GuideConnect, braille accessories</td><td><a href="https://example.com">https://example.com</a></td></tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="connecting-a-braille-display-summary-table"><a class="header" href="#connecting-a-braille-display-summary-table">Connecting a Braille Display: Summary Table</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Screen Reader</th><th>Where to Find Braille Settings</th><th>Recommended Braille Table for Code</th></tr>
+</thead>
+<tbody>
+<tr><td>NVDA</td><td>NVDA Menu → Preferences → Settings → Braille</td><td>Unified English Braille Grade 1</td></tr>
+<tr><td>JAWS</td><td>Insert+F3 → Options → Basics → Braille (or Settings Center)</td><td>English Braille Grade 1 (uncontracted)</td></tr>
+<tr><td>Windows Narrator</td><td>Settings → Accessibility → Narrator → Braille</td><td>English Grade 1 (uncontracted)</td></tr>
+<tr><td>Dolphin SuperNova</td><td>CapsLock+SpaceBar → Braille → Display and Translation</td><td>Grade 1 (uncontracted)</td></tr>
+</tbody>
+</table>
+</div>
+<p>This page gives a practical overview. Always consult your braille display vendor’s documentation and your screen reader’s braille guide for device-specific setup steps and advanced configuration options.</p>
 
                     </main>
 

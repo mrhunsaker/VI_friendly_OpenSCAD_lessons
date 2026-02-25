@@ -81,10 +81,10 @@
             const path_to_root = "../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-d11bd641.js";
+            window.path_to_searchindex_js = "../searchindex-d0af5d9e.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-19a5926f.js"></script>
+        <script src="../toc-5b0c6224.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -221,11 +221,10 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="3dmake_foundation-appendix_c_tolerance_qa"><a class="header" href="#3dmake_foundation-appendix_c_tolerance_qa">Appendix C: Tolerance Testing &amp; Quality Assurance Matrix</a></h1>
-<p>This appendix provides <strong>measurement-based testing methodology</strong> for verifying that 3D-printed parts meet design specifications. It’s designed to be used <strong>non-visually</strong>-focusing on calipers, scales, and functional tests rather than visual inspection.</p>
-<p><strong>Referenced in:</strong> Lessons 8-10 (Complex Design, Troubleshooting, Mastery)</p>
-<hr>
+<p>This appendix provides measurement-based testing methodology for verifying that 3D-printed parts meet design specifications. It’s designed to be used non-visually-focusing on calipers, scales, and functional tests rather than visual inspection.</p>
+<p>Referenced in: Lessons 8-10 (Complex Design, Troubleshooting, Mastery)</p>
 <h2 id="overview-what-is-tolerance"><a class="header" href="#overview-what-is-tolerance">Overview: What is Tolerance?</a></h2>
-<p><strong>Tolerance</strong> is the acceptable range of variation in dimensions:</p>
+<p>Tolerance is the acceptable range of variation in dimensions:</p>
 <pre><code class="language-plaintext">Design spec:  Hole diameter = 6mm
 Tolerance:    +/-0.5mm
 Acceptable range:  5.5mm to 6.5mm
@@ -234,96 +233,92 @@ or            7.2mm [NO] (exceeds tolerance)
 </code></pre>
 <h3 id="why-tolerance-matters"><a class="header" href="#why-tolerance-matters">Why Tolerance Matters</a></h3>
 <ol>
-<li><strong>Assembly:</strong> Parts must fit together</li>
-<li><strong>Function:</strong> Fit too tight = stuck; too loose = falls apart</li>
-<li><strong>Safety:</strong> Wrong tolerance = part failure</li>
-<li><strong>Cost:</strong> Tight tolerance = slower, more waste</li>
+<li>Assembly: Parts must fit together</li>
+<li>Function: Fit too tight = stuck; too loose = falls apart</li>
+<li>Safety: Wrong tolerance = part failure</li>
+<li>Cost: Tight tolerance = slower, more waste</li>
 </ol>
-<hr>
 <h2 id="essential-measurement-tools"><a class="header" href="#essential-measurement-tools">Essential Measurement Tools</a></h2>
 <h3 id="1-digital-calipers"><a class="header" href="#1-digital-calipers">1. Digital Calipers</a></h3>
-<p><strong>What they measure:</strong></p>
+<p>What they measure:</p>
 <ul>
 <li>Outside diameter (part width)</li>
 <li>Inside diameter (hole width)</li>
 <li>Depth</li>
 </ul>
-<p><strong>How to use non-visually:</strong></p>
-<pre><code class="language-plaintext">1. Gently close calipers until they barely touch the part
-2. Feel the resistance (should be light, not forced)
-3. Read digital display with audio feedback or manually
-4. Record three measurements at different locations
-5. Average the three measurements
-</code></pre>
-<p><strong>Accuracy:</strong> +/-0.05mm (very precise for 3D printing)</p>
+<p>How to use non-visually:</p>
+<ol>
+<li>Gently close calipers until they barely touch the part</li>
+<li>Feel the resistance (should be light, not forced)</li>
+<li>Read digital display with audio feedback or manually</li>
+<li>Record three measurements at different locations</li>
+<li>Average the three measurements</li>
+</ol>
+<p>Accuracy: +/-0.05mm (very precise for 3D printing)</p>
 <h3 id="2-digital-scale-kitchen-scale"><a class="header" href="#2-digital-scale-kitchen-scale">2. Digital Scale (Kitchen Scale)</a></h3>
-<p><strong>What it measures:</strong></p>
+<p>What it measures:</p>
 <ul>
 <li>Part weight (indicates infill, material type)</li>
 </ul>
-<p><strong>How to use non-visually:</strong></p>
-<pre><code class="language-plaintext">1. Place part on scale
-2. Wait for reading to stabilize (1-2 seconds)
-3. Read digital display (in grams)
-4. Compare to expected weight
-</code></pre>
-<p><strong>Accuracy:</strong> +/-1g (good enough for verification)</p>
-<p><strong>Why it matters:</strong></p>
+<p>How to use non-visually:</p>
+<ol>
+<li>Place part on scale</li>
+<li>Wait for reading to stabilize (1-2 seconds)</li>
+<li>Read digital display (in grams)</li>
+<li>Compare to expected weight</li>
+</ol>
+<p>Accuracy: +/-1g (good enough for verification)</p>
+<p>Why it matters:</p>
 <ul>
 <li>Too light = infill too low or void inside part</li>
 <li>Expected weight = indicates proper slicing</li>
 </ul>
 <h3 id="3-test-jig--gono-go-gauge"><a class="header" href="#3-test-jig--gono-go-gauge">3. Test Jig / Go/No-Go Gauge</a></h3>
-<p><strong>What it measures:</strong></p>
+<p>What it measures:</p>
 <ul>
 <li>Pass/fail tolerance testing without calipers</li>
 </ul>
-<p><strong>How to make:</strong></p>
+<p>How to make:</p>
 <pre><code class="language-openscad">// Go/No-Go gauge for bracelet peg holes
 // Tests if hole is within acceptable range
-
 pegdiameter = 6;        // Design spec
 tolerance = 0.5;         // Tolerance
 godiameter = pegdiameter - tolerance;     // Min acceptable (5.5)
 nogodiameter = pegdiameter + tolerance;  // Max acceptable (6.5)
-
 module gogauge() {
   // Part should fit through this easily
   cylinder(h=10, r=godiameter/2);
 }
-
 module nogogauge() {
   // Part should NOT fit through this
   cylinder(h=10, r=nogodiameter/2);
 }
-
 // Test jig with both gauges
 union() {
   translate([0, 0, 0]) gogauge();
   translate([0, 15, 0]) nogogauge();
 }
 </code></pre>
-<p><strong>Use non-visually:</strong></p>
+<p>Use non-visually:</p>
 <ul>
 <li>Try inserting peg into go-gauge -&gt; Should slide easily</li>
 <li>Try inserting peg into no-go-gauge -&gt; Should NOT fit</li>
 <li>If both tests pass = tolerance correct</li>
 </ul>
-<hr>
 <h2 id="quality-assurance-testing-matrix"><a class="header" href="#quality-assurance-testing-matrix">Quality Assurance Testing Matrix</a></h2>
 <h3 id="critical-dimensions-to-test"><a class="header" href="#critical-dimensions-to-test">Critical Dimensions to Test</a></h3>
-<p>Create a <strong>Test Plan</strong> before printing:</p>
+<p>Create a Test Plan before printing:</p>
 <div class="table-wrapper">
 <table>
 <thead>
 <tr><th>Part</th><th>Dimension</th><th>Spec</th><th>Tolerance</th><th>How to Test</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Bracelet Holder</strong></td><td>Base width</td><td>127mm</td><td>+/-2mm</td><td>Measure with calipers (multiple points)</td></tr>
+<tr><td>Bracelet Holder</td><td>Base width</td><td>127mm</td><td>+/-2mm</td><td>Measure with calipers (multiple points)</td></tr>
 <tr><td></td><td>Peg diameter</td><td>6mm</td><td>+/-0.5mm</td><td>Test fit with go/no-go gauge</td></tr>
 <tr><td></td><td>Peg spacing</td><td>8mm</td><td>+/-1mm</td><td>Measure distance between pegs</td></tr>
 <tr><td></td><td>Back wall height</td><td>120mm</td><td>+/-2mm</td><td>Measure with calipers</td></tr>
-<tr><td><strong>Phone Stand</strong></td><td>Slope angle</td><td>20</td><td>+/-3</td><td>Calculate from height/depth ratio</td></tr>
+<tr><td>Phone Stand</td><td>Slope angle</td><td>20</td><td>+/-3</td><td>Calculate from height/depth ratio</td></tr>
 <tr><td></td><td>Weight capacity</td><td>200g</td><td>150-250g</td><td>Load test (see below)</td></tr>
 <tr><td></td><td>Stability</td><td>N/A</td><td>Pass/fail</td><td>1-hour load test without tipping</td></tr>
 </tbody>
@@ -332,12 +327,12 @@ union() {
 <h3 id="pre-print-planning"><a class="header" href="#pre-print-planning">Pre-Print Planning</a></h3>
 <p>Before slicing, define:</p>
 <ol>
-<li><strong>Critical dimensions:</strong> Which measurements matter most?</li>
-<li><strong>Acceptable range:</strong> What tolerance is realistic?</li>
-<li><strong>Test method:</strong> How will you verify?</li>
-<li><strong>Pass/fail criteria:</strong> What does “success” look like?</li>
+<li>Critical dimensions: Which measurements matter most?</li>
+<li>Acceptable range: What tolerance is realistic?</li>
+<li>Test method: How will you verify?</li>
+<li>Pass/fail criteria: What does “success” look like?</li>
 </ol>
-<p><strong>Example Plan for Phone Stand:</strong></p>
+<p>Example Plan for Phone Stand:</p>
 <pre><code class="language-markdown"># Phone Stand - Quality Assurance Plan
 
 ## Critical Dimensions
@@ -361,25 +356,24 @@ union() {
 - Phone slides or part tips
 - Visible cracks
 </code></pre>
-<hr>
 <h2 id="measurement-procedures"><a class="header" href="#measurement-procedures">Measurement Procedures</a></h2>
 <h3 id="procedure-1-linear-dimension-width-height-depth"><a class="header" href="#procedure-1-linear-dimension-width-height-depth">Procedure 1: Linear Dimension (Width, Height, Depth)</a></h3>
-<p><strong>Equipment needed:</strong> Digital calipers</p>
-<p><strong>Steps:</strong></p>
-<pre><code class="language-plaintext">1. Place part on flat surface
-2. Position caliper jaws perpendicular to surface
-3. Gently close jaws until they just touch part
-4. Feel for light resistance (not forced)
-5. Read digital display
-6. Record measurement
-7. Repeat at 3 different locations
-8. Average the three readings
-9. Compare to design spec +/- tolerance
-</code></pre>
-<p><strong>Example:</strong></p>
+<p>Equipment needed: Digital calipers</p>
+<p>Steps:</p>
+<ol>
+<li>Place part on flat surface</li>
+<li>Position caliper jaws perpendicular to surface</li>
+<li>Gently close jaws until they just touch part</li>
+<li>Feel for light resistance (not forced)</li>
+<li>Read digital display</li>
+<li>Record measurement</li>
+<li>Repeat at 3 different locations</li>
+<li>Average the three readings</li>
+<li>Compare to design spec +/- tolerance</li>
+</ol>
+<p>Example:</p>
 <pre><code class="language-plaintext">Design spec: 127mm (bracelet holder width)
 Tolerance:   +/-2mm (acceptable: 125-129mm)
-
 Measurements:
   Location 1: 126.8mm
   Location 2: 127.1mm
@@ -387,59 +381,55 @@ Measurements:
   Average: 126.8mm [YES] (within tolerance)
 </code></pre>
 <h3 id="procedure-2-hole-or-peg-diameter"><a class="header" href="#procedure-2-hole-or-peg-diameter">Procedure 2: Hole or Peg Diameter</a></h3>
-<p><strong>Equipment needed:</strong> Digital calipers, Go/No-Go gauges (optional)</p>
-<p><strong>Method A: Direct Measurement</strong></p>
-<pre><code class="language-plaintext">1. Insert caliper jaws into hole/around peg
-2. Adjust jaws to gently touch surfaces
-3. Feel for light resistance on both sides
-4. Read digital display (inside measurement mode)
-5. Record three measurements
-6. Average the readings
-</code></pre>
-<p><strong>Method B: Go/No-Go Gauge</strong></p>
-<pre><code class="language-plaintext">1. Print test jigs (go &amp; no-go gauges)
-2. Attempt to insert peg/hole into go-gauge
-   -&gt; Should slide through easily with light resistance
-3. Attempt to insert peg/hole into no-go-gauge
-   -&gt; Should NOT fit or fit with visible resistance
-4. If both pass -&gt; dimension is acceptable
-</code></pre>
-<p><strong>Example: Peg Diameter</strong></p>
-<pre><code class="language-plaintext">Design spec: 6.0mm
+<p>Equipment needed: Digital calipers, Go/No-Go gauges (optional)</p>
+<p>Method A: Direct Measurement</p>
+<ol>
+<li>Insert caliper jaws into hole/around peg</li>
+<li>Adjust jaws to gently touch surfaces</li>
+<li>Feel for light resistance on both sides</li>
+<li>Read digital display (inside measurement mode)</li>
+<li>Record three measurements</li>
+<li>Average the readings</li>
+</ol>
+<p>Method B: Go/No-Go Gauge</p>
+<ol>
+<li>Print test jigs (go &amp; no-go gauges)</li>
+<li>Attempt to insert peg/hole into go-gauge
+-&gt; Should slide through easily with light resistance</li>
+<li>Attempt to insert peg/hole into no-go-gauge
+-&gt; Should NOT fit or fit with visible resistance</li>
+<li>If both pass -&gt; dimension is acceptable</li>
+</ol>
+<p>Example: Peg Diameter</p>
+<p>Design spec: 6.0mm
 Tolerance:   +/-0.5mm (acceptable: 5.5-6.5mm)
-
 Method A (Direct):
-  Measurement 1: 5.9mm
-  Measurement 2: 6.0mm
-  Measurement 3: 5.8mm
-  Average: 5.9mm [YES]
-
+Measurement 1: 5.9mm
+Measurement 2: 6.0mm
+Measurement 3: 5.8mm
+Average: 5.9mm [YES]
 Method B (Go/No-Go):
-  Slides through go-gauge (5.5mm) -&gt; [YES]
-  Doesn't fit no-go-gauge (6.5mm) -&gt; [YES]
-  Result: PASS
-</code></pre>
+Slides through go-gauge (5.5mm) -&gt; [YES]
+Doesn’t fit no-go-gauge (6.5mm) -&gt; [YES]
+Result: PASS</p>
 <h3 id="procedure-3-surface-finish--layer-quality"><a class="header" href="#procedure-3-surface-finish--layer-quality">Procedure 3: Surface Finish / Layer Quality</a></h3>
-<p><strong>Equipment needed:</strong> Caliper, ruler, touch/texture assessment</p>
-<p><strong>Step 1: Surface Texture</strong></p>
-<pre><code class="language-plaintext">Run fingers/hand over surface:
-  [YES] Smooth -&gt; Good quality
-   Slightly rough -&gt; Acceptable
-  [NO] Very rough/bumpy -&gt; Quality issue
-</code></pre>
-<p><strong>Step 2: Layer Line Visibility</strong></p>
-<pre><code class="language-plaintext">Feel horizontal ridges (layer lines):
-  [YES] Barely perceptible -&gt; Good (0.2mm layers)
-   Noticeable but even -&gt; OK (0.25mm layers)
-  [NO] Very pronounced -&gt; Quality issue
-</code></pre>
-<p><strong>Step 3: Dimensional Consistency</strong></p>
+<p>Equipment needed: Caliper, ruler, touch/texture assessment</p>
+<p>Step 1: Surface Texture</p>
+<p>Run fingers/hand over surface:
+[YES] Smooth -&gt; Good quality
+Slightly rough -&gt; Acceptable
+[NO] Very rough/bumpy -&gt; Quality issue</p>
+<p>Step 2: Layer Line Visibility</p>
+<p>Feel horizontal ridges (layer lines):
+[YES] Barely perceptible -&gt; Good (0.2mm layers)
+Noticeable but even -&gt; OK (0.25mm layers)
+[NO] Very pronounced -&gt; Quality issue</p>
+<p>Step 3: Dimensional Consistency</p>
 <pre><code class="language-plaintext">Measure thickness at multiple points:
   Design spec: 3mm wall thickness
   Measure at 5 locations
   Record all measurements
   All should be within +/-0.2mm of each other
-  
   Example:
     Pt 1: 3.0mm
     Pt 2: 3.1mm
@@ -449,27 +439,24 @@ Method B (Go/No-Go):
   Std Dev: 0.08mm [YES] (very consistent)
 </code></pre>
 <h3 id="procedure-4-weight-verification-confirms-infill"><a class="header" href="#procedure-4-weight-verification-confirms-infill">Procedure 4: Weight Verification (Confirms Infill)</a></h3>
-<p><strong>Equipment needed:</strong> Digital scale</p>
-<p><strong>Step 1: Calculate Expected Weight</strong></p>
-<pre><code class="language-plaintext">Expected weight = Volume x Density x Infill%
-
+<p>Equipment needed: Digital scale</p>
+<p>Step 1: Calculate Expected Weight</p>
+<p>Expected weight = Volume x Density x Infill%
 For bracelet holder (PLA):
 Volume = 127mm x 80mm x 120mm = 1,219,200 mm
-       = 1,219.2 cm
+= 1,219.2 cm
 PLA density = 1.24 g/cm
 Infill = 20%
-
 Expected weight = 1,219.2 x 1.24 x 0.20 = 302.4g
-
-Acceptable range: 290-315g (+/-5%)
-</code></pre>
-<p><strong>Step 2: Measure Actual Weight</strong></p>
-<pre><code class="language-plaintext">1. Place part on digital scale
-2. Wait for reading to stabilize (1-2 seconds)
-3. Read display in grams
-4. Compare to expected weight
-</code></pre>
-<p><strong>Step 3: Interpret Result</strong></p>
+Acceptable range: 290-315g (+/-5%)</p>
+<p>Step 2: Measure Actual Weight</p>
+<ol>
+<li>Place part on digital scale</li>
+<li>Wait for reading to stabilize (1-2 seconds)</li>
+<li>Read display in grams</li>
+<li>Compare to expected weight</li>
+</ol>
+<p>Step 3: Interpret Result</p>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -482,116 +469,104 @@ Acceptable range: 290-315g (+/-5%)
 </tbody>
 </table>
 </div>
-<hr>
 <h2 id="functional-testing"><a class="header" href="#functional-testing">Functional Testing</a></h2>
 <h3 id="test-1-load-testing-strength"><a class="header" href="#test-1-load-testing-strength">Test 1: Load Testing (Strength)</a></h3>
-<p><strong>Purpose:</strong> Verify part can hold weight without failure</p>
-<p><strong>Equipment needed:</strong></p>
+<p>Purpose: Verify part can hold weight without failure</p>
+<p>Equipment needed:</p>
 <ul>
 <li>Digital scale</li>
 <li>Test weights (or books, water jugs)</li>
 <li>Calipers (to check for deflection)</li>
 </ul>
-<p><strong>Procedure:</strong></p>
-<pre><code class="language-plaintext">1. Measure baseline dimensions (part unloaded)
-   Baseline height: 60mm
-
-2. Place test weight on part
-   Added weight: 200g
-
-3. Wait 5 minutes (allow part to settle)
-
-4. Measure dimensions again
-   New height: 59.8mm
-   Deflection: 0.2mm (acceptable)
-
-5. Observe for cracks (visual or tactile)
-   No cracks: [YES]
-
-6. Remove weight and wait 5 minutes
-
-7. Measure dimensions again (should return to baseline)
-   Height after unload: 60.0mm
-   Recovery: Complete [YES]
-
-Result: PASS (part handles load without permanent deformation)
-</code></pre>
-<p><strong>Acceptance Criteria for Phone Stand:</strong></p>
-<pre><code class="language-plaintext">[YES] PASS if:
-  - Deflection &lt;0.5mm under 200g load
-  - No cracks visible/felt
-  - Full recovery after load removed
-
-[NO] FAIL if:
-  - Deflection &gt;1mm
-  - Visible cracks
-  - Permanent deformation after unload
-</code></pre>
+<p>Procedure:</p>
+<ol>
+<li>Measure baseline dimensions (part unloaded)
+Baseline height: 60mm</li>
+<li>Place test weight on part
+Added weight: 200g</li>
+<li>Wait 5 minutes (allow part to settle)</li>
+<li>Measure dimensions again
+New height: 59.8mm
+Deflection: 0.2mm (acceptable)</li>
+<li>Observe for cracks (visual or tactile)
+No cracks: [YES]</li>
+<li>Remove weight and wait 5 minutes</li>
+<li>Measure dimensions again (should return to baseline)
+Height after unload: 60.0mm
+Recovery: Complete [YES]
+Result: PASS (part handles load without permanent deformation)</li>
+</ol>
+<p>Acceptance Criteria for Phone Stand:</p>
+<p>[YES] PASS if:</p>
+<ul>
+<li>Deflection &lt;0.5mm under 200g load</li>
+<li>No cracks visible/felt</li>
+<li>Full recovery after load removed
+[NO] FAIL if:</li>
+<li>Deflection &gt;1mm</li>
+<li>Visible cracks</li>
+<li>Permanent deformation after unload</li>
+</ul>
 <h3 id="test-2-assembly-testing"><a class="header" href="#test-2-assembly-testing">Test 2: Assembly Testing</a></h3>
-<p><strong>Purpose:</strong> Verify parts fit together as designed</p>
-<p><strong>Equipment needed:</strong></p>
+<p>Purpose: Verify parts fit together as designed</p>
+<p>Equipment needed:</p>
 <ul>
 <li>Calipers</li>
 <li>Go/No-Go gauges</li>
 </ul>
-<p><strong>Procedure for Multi-Part Assembly (e.g., Stackable Bins):</strong></p>
-<pre><code class="language-plaintext">Part A (Bin body) dimensions:
-  - Top opening: 50mm x 50mm +/-1mm
-  - Wall thickness: 2mm +/-0.2mm
-
-Part B (Stacking rim) dimensions:
-  - Base diameter: 50mm +/-0.5mm
-  - Should nest inside Part A
-
-Test procedure:
-1. Measure Part A opening: 50.1mm [YES]
-2. Measure Part B base: 49.8mm [YES]
-3. Attempt to nest Part B into Part A
-   -&gt; Should fit with light resistance
-   -&gt; Feel for smooth insertion (no catching)
-4. Check for rocking (part should sit stable)
-5. Apply 500g load (simulate stacking)
-   -&gt; Should hold without slipping
-</code></pre>
+<p>Procedure for Multi-Part Assembly (e.g., Stackable Bins):</p>
+<p>Part A (Bin body) dimensions:</p>
+<ul>
+<li>Top opening: 50mm x 50mm +/-1mm</li>
+<li>Wall thickness: 2mm +/-0.2mm
+Part B (Stacking rim) dimensions:</li>
+<li>Base diameter: 50mm +/-0.5mm</li>
+<li>Should nest inside Part A
+Test procedure:</li>
+</ul>
+<ol>
+<li>Measure Part A opening: 50.1mm [YES]</li>
+<li>Measure Part B base: 49.8mm [YES]</li>
+<li>Attempt to nest Part B into Part A
+-&gt; Should fit with light resistance
+-&gt; Feel for smooth insertion (no catching)</li>
+<li>Check for rocking (part should sit stable)</li>
+<li>Apply 500g load (simulate stacking)
+-&gt; Should hold without slipping</li>
+</ol>
 <h3 id="test-3-durability-testing-repeated-use"><a class="header" href="#test-3-durability-testing-repeated-use">Test 3: Durability Testing (Repeated Use)</a></h3>
-<p><strong>Purpose:</strong> Verify part doesn’t fail after repeated cycles</p>
-<p><strong>Example: Phone Stand Tilt Cycles</strong></p>
-<pre><code class="language-plaintext">1. Record baseline dimensions
-2. Cycle 1: Place phone, tilt to max angle, remove
-3. Inspect for cracks or damage
-4. Repeat cycle 10 times
-5. Measure dimensions again
-6. Compare to baseline: Should be &lt;0.1mm change
-
-If no damage after 10 cycles -&gt; Durable [YES]
-</code></pre>
-<hr>
+<p>Purpose: Verify part doesn’t fail after repeated cycles</p>
+<p>Example: Phone Stand Tilt Cycles</p>
+<ol>
+<li>Record baseline dimensions</li>
+<li>Cycle 1: Place phone, tilt to max angle, remove</li>
+<li>Inspect for cracks or damage</li>
+<li>Repeat cycle 10 times</li>
+<li>Measure dimensions again</li>
+<li>Compare to baseline: Should be &lt;0.1mm change
+If no damage after 10 cycles -&gt; Durable [YES]</li>
+</ol>
 <h2 id="tolerance-stack-up-multi-part-designs"><a class="header" href="#tolerance-stack-up-multi-part-designs">Tolerance Stack-Up (Multi-Part Designs)</a></h2>
 <p>When multiple parts are assembled, tolerances add:</p>
-<pre><code class="language-plaintext">Design:
-  Part A opening: 50mm +/-0.5mm
-  Part B base: 50mm +/-0.5mm
-
+<p>Design:
+Part A opening: 50mm +/-0.5mm
+Part B base: 50mm +/-0.5mm
 Worst-case fit:
-  Part A minimum: 49.5mm
-  Part B maximum: 50.5mm
-  Difference: 1.0mm (VERY TIGHT or won't fit!)
-
+Part A minimum: 49.5mm
+Part B maximum: 50.5mm
+Difference: 1.0mm (VERY TIGHT or won’t fit!)
 Solution: Increase tolerance on Part B to +/-0.3mm
-  Part B minimum: 49.7mm
-  Part B maximum: 50.3mm
-  Now fits inside Part A: 49.5-50.5mm [YES]
-</code></pre>
+Part B minimum: 49.7mm
+Part B maximum: 50.3mm
+Now fits inside Part A: 49.5-50.5mm [YES]</p>
 <h3 id="tolerance-stack-up-calculation"><a class="header" href="#tolerance-stack-up-calculation">Tolerance Stack-Up Calculation</a></h3>
 <p>For N parts in assembly:</p>
 <pre><code class="language-plaintext">Total tolerance = (tolerance + tolerance + ... + tolerance)
-
 Example with 3 parts (each +/-0.5mm):
 Total = (0.5 + 0.5 + 0.5)
       = 0.75
       = 0.87mm
 </code></pre>
-<hr>
 <h2 id="common-dimensional-problems--fixes"><a class="header" href="#common-dimensional-problems--fixes">Common Dimensional Problems &amp; Fixes</a></h2>
 <div class="table-wrapper">
 <table>
@@ -599,19 +574,18 @@ Total = (0.5 + 0.5 + 0.5)
 <tr><th>Problem</th><th>Typical Cause</th><th>How to Fix</th><th>Prevent Next Time</th></tr>
 </thead>
 <tbody>
-<tr><td><strong>Part too small (all dimensions off)</strong></td><td>Scale wrong in slicer</td><td>Scale STL up in CAD or slicer</td><td>Verify scale before slicing</td></tr>
-<tr><td><strong>Holes too small</strong></td><td>Compensation shrinkage</td><td>Increase hole diameter +0.5mm</td><td>Add shrinkage factor to design</td></tr>
-<tr><td><strong>Walls too thin</strong></td><td>Layer squishing</td><td>Check first layer height; may need recalibration</td><td>Measure first layer thickness</td></tr>
-<tr><td><strong>Infill showing through (loose fill)</strong></td><td>Infill too low</td><td>Increase infill % to 25-30%</td><td>Recalculate for part type</td></tr>
-<tr><td><strong>Inconsistent across print</strong></td><td>Nozzle clogging mid-print</td><td>Clean nozzle; check filament quality</td><td>Use quality filament; monitor print</td></tr>
-<tr><td>**Z-axis dimensions off</td><td>Z-axis uncalibrated</td><td>Run Z-calibration procedure</td><td>Calibrate before critical prints</td></tr>
-<tr><td><strong>Dimensions change between prints</strong></td><td>Thermal drift</td><td>Print in stable temperature</td><td>Use enclosed printer if possible</td></tr>
+<tr><td>Part too small (all dimensions off)</td><td>Scale wrong in slicer</td><td>Scale STL up in CAD or slicer</td><td>Verify scale before slicing</td></tr>
+<tr><td>Holes too small</td><td>Compensation shrinkage</td><td>Increase hole diameter +0.5mm</td><td>Add shrinkage factor to design</td></tr>
+<tr><td>Walls too thin</td><td>Layer squishing</td><td>Check first layer height; may need recalibration</td><td>Measure first layer thickness</td></tr>
+<tr><td>Infill showing through (loose fill)</td><td>Infill too low</td><td>Increase infill % to 25-30%</td><td>Recalculate for part type</td></tr>
+<tr><td>Inconsistent across print</td><td>Nozzle clogging mid-print</td><td>Clean nozzle; check filament quality</td><td>Use quality filament; monitor print</td></tr>
+<tr><td>Z-axis dimensions off</td><td>Z-axis uncalibrated</td><td>Run Z-calibration procedure</td><td>Calibrate before critical prints</td></tr>
+<tr><td>Dimensions change between prints</td><td>Thermal drift</td><td>Print in stable temperature</td><td>Use enclosed printer if possible</td></tr>
 </tbody>
 </table>
 </div>
-<hr>
 <h2 id="testing-checklist-template"><a class="header" href="#testing-checklist-template">Testing Checklist Template</a></h2>
-<p>Print this checklist <strong>before starting a new project</strong>:</p>
+<p>Print this checklist before starting a new project:</p>
 <pre><code class="language-markdown"># Quality Assurance Checklist: [Project Name]
 
 ## Design Specs
@@ -649,53 +623,43 @@ Total = (0.5 + 0.5 + 0.5)
 ## Notes
 [Space for observations]
 </code></pre>
-<hr>
 <h2 id="powershell-integration-track-quality-metrics"><a class="header" href="#powershell-integration-track-quality-metrics">PowerShell Integration: Track Quality Metrics</a></h2>
 <pre><code class="language-powershell"># Track print quality across multiple projects
-
 $qualityLog = @"
 ProjectName,Date,Material,PartCount,DimensionsPass,FunctionalPass,Weight(g),Notes
 "@
-
 # Log entries
 $qualityLog += "`nBraceletHolder,2024-01-15,PLA,1,PASS,PASS,302.1,Perfect fit"
 $qualityLog += "`nPhoneStand,2024-01-16,PETG,2,PASS,PASS,487.3,Strong joints"
 $qualityLog += "`nStackableBins,2024-01-17,PLA,3,FAIL,N/A,N/A,Holes too small reprint"
-
 # Save to CSV
 $qualityLog | Out-File "C:\Projects\quality-log.csv"
-
 # Analyze pass/fail rate
 $log = Import-Csv "C:\Projects\quality-log.csv"
 $passCount = ($log | Where-Object { $.DimensionsPass -eq "PASS" }).Count
 $totalCount = $log.Count
 $passRate = ($passCount / $totalCount) * 100
-
 Write-Host "Print success rate: $passRate%"
-
 # Show recent failures
 Write-Host "`nRecent issues:"
 $log | Where-Object { $.DimensionsPass -eq "FAIL" } | Select-Object ProjectName, Notes
 </code></pre>
-<hr>
 <h2 id="accessibility-focused-qa-best-practices"><a class="header" href="#accessibility-focused-qa-best-practices">Accessibility-Focused QA Best Practices</a></h2>
 <h3 id="why-measurement-based-testing-matters"><a class="header" href="#why-measurement-based-testing-matters">Why Measurement-Based Testing Matters</a></h3>
 <p>Traditional visual QA (looking at surface finish, checking dimensions by eye) is inherently inaccessible. This appendix prioritizes:</p>
 <ol>
-<li><strong>Caliper measurements:</strong> Objective, quantifiable</li>
-<li><strong>Weight verification:</strong> Numerical result</li>
-<li><strong>Functional testing:</strong> Pass/fail criteria</li>
-<li><strong>Go/No-Go gauges:</strong> Tactile pass/fail</li>
-<li><strong>Test jigs:</strong> Can be shared/standardized</li>
+<li>Caliper measurements: Objective, quantifiable</li>
+<li>Weight verification: Numerical result</li>
+<li>Functional testing: Pass/fail criteria</li>
+<li>Go/No-Go gauges: Tactile pass/fail</li>
+<li>Test jigs: Can be shared/standardized</li>
 </ol>
 <h3 id="screen-reader-integration"><a class="header" href="#screen-reader-integration">Screen Reader Integration</a></h3>
 <p>When documenting QA results:</p>
 <pre><code class="language-plaintext">[YES] GOOD: "Bracket width measured 49.8mm (spec 50+/-1mm)"
 [NO] AVOID: "Bracket looks good" (not measurable)
-
 [YES] GOOD: "Part weighs 298g (spec 300+/-10g)"
 [NO] AVOID: "Feels about right" (subjective)
-
 [YES] GOOD: "Slides through go-gauge, blocks no-go-gauge"
 [NO] AVOID: "Hole looks the right size" (visual only)
 </code></pre>
@@ -715,19 +679,18 @@ $log | Where-Object { $.DimensionsPass -eq "FAIL" } | Select-Object ProjectName,
 - [x] No permanent deformation after load removed
 
 ### Overall Result
-[YES] **PASS** - All dimensions within tolerance; functionally sound
+[YES] PASS - All dimensions within tolerance; functionally sound
 </code></pre>
-<hr>
 <h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
-<p><strong>Key Principles:</strong></p>
+<p>Key Principles:</p>
 <ol>
-<li><strong>Plan before printing:</strong> Define tolerances and test methods</li>
-<li><strong>Measure precisely:</strong> Use calibrated tools (digital calipers, scale)</li>
-<li><strong>Test functionally:</strong> Will parts assemble and work?</li>
-<li><strong>Document quantitatively:</strong> Use numbers, not adjectives</li>
-<li><strong>Iterate based on data:</strong> If test fails, adjust design or process</li>
+<li>Plan before printing: Define tolerances and test methods</li>
+<li>Measure precisely: Use calibrated tools (digital calipers, scale)</li>
+<li>Test functionally: Will parts assemble and work?</li>
+<li>Document quantitatively: Use numbers, not adjectives</li>
+<li>Iterate based on data: If test fails, adjust design or process</li>
 </ol>
-<p><strong>When to Use Each Test:</strong></p>
+<p>When to Use Each Test:</p>
 <div class="table-wrapper">
 <table>
 <thead>
@@ -742,8 +705,8 @@ $log | Where-Object { $.DimensionsPass -eq "FAIL" } | Select-Object ProjectName,
 </tbody>
 </table>
 </div>
-<p><strong>Accessibility Reminder:</strong></p>
-<p>All QA testing in this appendix is <strong>measurement-based and non-visual</strong>, making it equally accessible to all users. The goal is objective, quantifiable verification-not subjective assessment.</p>
+<p>Accessibility Reminder:</p>
+<p>All QA testing in this appendix is measurement-based and non-visual, making it equally accessible to all users. The goal is objective, quantifiable verification-not subjective assessment.</p>
 
                     </main>
 
@@ -753,7 +716,7 @@ $log | Where-Object { $.DimensionsPass -eq "FAIL" } | Select-Object ProjectName,
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="../3dMake_Foundation/Appendix_D_PowerShell_Integration.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../3dMake_Foundation/Appendix_D_Advanced_OpenSCAD_Concepts.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -767,7 +730,7 @@ $log | Where-Object { $.DimensionsPass -eq "FAIL" } | Select-Object ProjectName,
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="../3dMake_Foundation/Appendix_D_PowerShell_Integration.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../3dMake_Foundation/Appendix_D_Advanced_OpenSCAD_Concepts.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>

@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-d11bd641.js";
+            window.path_to_searchindex_js = "../../searchindex-d0af5d9e.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-19a5926f.js"></script>
+        <script src="../../toc-5b0c6224.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -220,69 +220,59 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="3dmake_foundation_lessons_3dmake_1-your-first-print"><a class="header" href="#3dmake_foundation_lessons_3dmake_1-your-first-print">Your First Print - Guided Extension</a></h1>
-<p>Estimated time: 2-4 hours (including setup and print monitoring)</p>
+                        <h1 id="your-first-print---guided-extension--3dmake_foundation_lessons_3dmake_1-your-first-print"><a class="header" href="#your-first-print---guided-extension--3dmake_foundation_lessons_3dmake_1-your-first-print">Your First Print - Guided Extension  {#3dmake_foundation_lessons_3dmake_1-your-first}}-print}}}</a></h1>
+<p>Estimated time}}: 2-4 hours (including setup and print}} monitoring)</p>
 <h2 id="learning-objectives"><a class="header" href="#learning-objectives">Learning Objectives</a></h2>
 <ul>
-<li>Select a simple ready-made model and evaluate its printability for a classroom printer</li>
-<li>Configure slicer settings for a short-duration print and prepare the printer safely</li>
-<li>Document print parameters and reflect on the physical outcome</li>
+<li>Select a simple ready-made model and evaluate its printability for a classroom printer}}</li>
+<li>Configure slicer settings for a short-duration print}} and prepare the printer}} safely</li>
+<li>Document print}} parameters}} and reflect on the physical outcome</li>
 </ul>
 <h2 id="materials"><a class="header" href="#materials">Materials</a></h2>
 <ul>
 <li>Computer with slicer and access to the online repository</li>
-<li>Prusa Mini+ or classroom-approved printer, filament spool</li>
+<li>Prusa Mini+ or classroom-approved printer}}, filament}} spool</li>
 </ul>
 <h2 id="step-by-step-tasks"><a class="header" href="#step-by-step-tasks">Step-by-step Tasks</a></h2>
 <ol>
-<li>Choose a simple model (&lt;2 hours print) from Thingiverse or Printables and save the STL.</li>
-<li>Inspect the model: note overhangs, thin features, and dimensions; write two short reasons why this model is appropriate for a first print.</li>
-<li>Load the model in your slicer, select the classroom profile, and adjust settings only if necessary (layer height, infill, supports). Record the final print time and filament estimate.</li>
-<li>Perform safety checks, start the print, and monitor the first 10 minutes for adhesion and extrusion problems.</li>
+<li>Choose a simple model (&lt;2 hours print}}) from Thingiverse or Printables and save the STL}}.</li>
+<li>Inspect the model: note overhangs, thin features, and dimensions; write}} two short reasons why this model is appropriate for a first}} print}}.</li>
+<li>Load the model in your slicer, select the classroom profile, and adjust settings only if necessary (layer}} height}}, infill, supports). Record the final print}} time}} and filament}} estimate.</li>
+<li>Perform safety checks, start the print}}, and monitor the first}} 10 minutes for adhesion and extrusion problems.</li>
 <li>After cooling, measure three critical dimensions and compare to the models stated dimensions; record deviations.</li>
 </ol>
 <h2 id="starter-code"><a class="header" href="#starter-code">Starter Code</a></h2>
-<p>You can use this basic project scaffold as your starting point:</p>
+<p>You can}} use this basic project scaffold as your starting point:</p>
 <pre><code class="language-openscad">// Basic Project Scaffold for 3D Printing
 // This template provides a starting point for beginner projects
 // Complete the TODO sections to create your own design
-
 // ============================================
 // PROJECT CONFIGURATION
 // ============================================
-
 // TODO: Set your project name
 projectname = "My First Project";
-
 // TODO: Define overall dimensions (mm)
 objectwidth = 50;
 objectdepth = 50;
 objectheight = 20;
-
 // Wall thickness for strength (2-3mm recommended)
 wallthickness = 2;
-
 // ============================================
 // MATERIAL PROPERTIES
 // ============================================
-
 // Print resolution (0.2mm layers recommended)
 $fn = 30;  // Fragment quality (higher = smoother curves, slower rendering)
-
 // ============================================
 // MAIN DESIGN
 // ============================================
-
 module baseshape() {
     // TODO: Replace this cube with your design
     cube([objectwidth, objectdepth, objectheight], center = true);
 }
-
 module hollowversion() {
     // Creates a hollow version by subtracting an inner cube
     difference() {
         baseshape();
-        
         // Inner void (adjust padding as needed)
         translate([0, 0, 0.5])
             cube([objectwidth - 2*wallthickness, 
@@ -291,46 +281,45 @@ module hollowversion() {
                  center = true);
     }
 }
-
 // Render the solid version for your first print
 baseshape();
 </code></pre>
 <h2 id="probing-questions"><a class="header" href="#probing-questions">Probing Questions</a></h2>
 <ul>
-<li>Why did you select this model? What risks did you anticipate and how did you mitigate them?</li>
-<li>Which slicer setting most affects print time for this model and why?</li>
-<li>If a thin feature failed, what minimal change would you make to ensure success next time?</li>
+<li>Why did you}} select this model? What risks did you}} anticipate and how did you}} mitigate them?</li>
+<li>Which slicer setting most affects print}} time}} for this model and why?</li>
+<li>If a thin feature failed, what minimal change would you}} make to ensure success next time}}?</li>
 </ul>
 <h2 id="quiz---your-first-print-10-questions"><a class="header" href="#quiz---your-first-print-10-questions">Quiz - Your First Print (10 questions)</a></h2>
 <ol>
-<li>What is the first-check you do after loading filament? (short answer)</li>
+<li>What is the first}}-check you}} do after loading filament}}? (short answer)</li>
 <li>Name two slicer settings that affect strength. (short answer)</li>
-<li>Why monitor the first layers of a print? (one sentence)</li>
-<li>How do you document filament used for reproducibility? (short answer)</li>
-<li>What is one sign of poor bed adhesion? (one sentence)</li>
-<li>True/False: Selecting a model with support requirements is not recommended for your first print. (Answer: True)</li>
-<li>Short answer: Describe two characteristics of a “printability-friendly” model that would be good for a beginner’s first print.</li>
-<li>Practical scenario: Your first print is showing stringing (thin lines between parts). What are two possible causes and how would you troubleshoot?</li>
-<li>Multiple choice: When measuring a printed dimension, where should you measure multiple times (three different spots) to account for print variation? (A) Never, measure once (B) Only if you suspect error (C) Always measure at least three locations - Answer: C</li>
-<li>Reflection: Explain why carefully selecting your first print model (simple, robust, known to work on your printer) is better than immediately attempting a complex design. What will you learn from success that prepares you for harder projects?</li>
+<li>Why monitor the first}} layers of a print}}? (one}} sentence)</li>
+<li>How do you}} document filament}} used for reproducibility? (short answer)</li>
+<li>What is one}} sign of poor bed}} adhesion? (one}} sentence)</li>
+<li>True/False: Selecting a model with support}} requirements is not recommended for your first}} print}}. (Answer: True)</li>
+<li>Short answer: Describe two characteristics of a “printability-friendly” model that would be good for a beginner’s first}} print}}.</li>
+<li>Practical scenario: Your first}} print}} is showing stringing (thin lines between}} parts). What are two possible causes and how would you}} troubleshoot?</li>
+<li>Multiple choice: When measuring a printed dimension, where should you}} measure multiple times (three different spots) to account for print}} variation? (A) Never, measure once (B) Only if you}} suspect error}} (C) Always measure at least three locations - Answer: C</li>
+<li>Reflection: Explain why carefully selecting your first}} print}} model (simple, robust, known to work}} on your printer}}) is better than immediately attempting a complex design}}. What will you}} learn from success that prepares you}} for harder projects?</li>
 </ol>
 <h2 id="extension-problems-10"><a class="header" href="#extension-problems-10">Extension Problems (10)</a></h2>
 <ol>
-<li>Re-slice the model with a finer layer height and compare surface finish and print time; document differences.</li>
-<li>Modify the model in OpenSCAD to thicken a failing feature and reprint a small test piece.</li>
-<li>Create a short checklist script (or text checklist) that verifies spool metadata and bed temperature before printing.</li>
-<li>Produce a one-page reflection that includes three lessons learned and one parameter you will change next time.</li>
+<li>Re-slice the model with a finer layer}} height}} and compare surface finish and print}} time}}; document differences.</li>
+<li>Modify the model in OpenSCAD}} to thicken a failing feature and reprint a small test}} piece.</li>
+<li>Create a short checklist script}} (or text}} checklist) that verifies spool metadata and bed}} temperature before}} printing}}.</li>
+<li>Produce a one}}-page reflection that includes three lessons learned and one}} parameter}} you}} will change next time}}.</li>
 <li>Share your measurements and photos in the class folder and give feedback on two peers’ prints.</li>
-<li>Conduct a post-print analysis: compare actual measurements to STL specifications; identify and document any deviations.</li>
+<li>Conduct a post-print}} analysis: compare actual measurements to STL}} specifications; identify and document any deviations.</li>
 <li>Print the same model in two different materials or with two different slicer profiles; compare durability, appearance, and accuracy.</li>
-<li>Create a detailed documentation package: CAD file, slicer settings, print log, measurements, and lessons learned.</li>
-<li>Design a quality assurance test: define pass/fail criteria and systematically verify your print meets all requirements.</li>
-<li>Write a “first print troubleshooting guide” based on your experience: common issues you encountered and how you solved them.</li>
+<li>Create a detailed documentation package: CAD file}}, slicer settings, print}} log, measurements, and lessons learned.</li>
+<li>Design}} a quality}} assurance test}}: define pass/fail criteria and systematically verify your print}} meets all requirements.</li>
+<li>Write a “first}} print}} troubleshooting guide” based on your experience: common}} issues you}} encountered and how you}} solved them.</li>
 </ol>
 <h2 id="deliverables"><a class="header" href="#deliverables">Deliverables</a></h2>
 <ul>
 <li>Short report: model chosen, key slicer settings, measured deviations, and answers to probing questions.</li>
-<li>Photos of the final print and the measured values table.</li>
+<li>Photos of the final print}} and the measured values table.</li>
 </ul>
 
                     </main>
