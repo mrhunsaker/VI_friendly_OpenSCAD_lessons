@@ -13,11 +13,14 @@ This section contains supplementary material and appendices that support the mai
   - [Appendix C: Tolerance Testing & Quality Assurance Matrix](../3dMake_Foundation/Appendix_C_Tolerance_QA.md)
   - [Appendix D: Advanced OpenSCAD Concepts](../3dMake_Foundation/Appendix_D_Advanced_OpenSCAD_Concepts.md)
 
+- ** Student Glossary** — a concise list of terms and definitions used throughout the book with applicatiuon examples.
+  - [Glossary](../Backmatter/glossary.md)
+
+- **Teacher Glossary** — a concise list of terms and definitions used throughout the book with instructional tips.
+  - [Glossary](../Backmatter/teacher-glossary.md)
+
 - **Further Reading** — curated list of books, articles, tools, and resources to continue learning.
   - [Further Reading](../Backmatter/Further_Reading.md)
-
-- **Glossary** — a concise list of terms and definitions used throughout the book.
-  - [Glossary](../Backmatter/Glossary.md)
 
 - **Index** — an alphabetical index of topics for quick lookup.
   - [Index](../Backmatter/Index.md)

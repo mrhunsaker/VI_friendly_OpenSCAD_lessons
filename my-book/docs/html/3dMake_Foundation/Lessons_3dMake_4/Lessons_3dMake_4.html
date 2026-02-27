@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-7e85ce75.js";
+            window.path_to_searchindex_js = "../../searchindex-eaf1c1cc.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-0b2574ce.js"></script>
+        <script src="../../toc-76b29a8d.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -220,67 +220,178 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="3dmake_foundation_lessons_3dmake_4-lessons_3dmake_4"><a class="header" href="#3dmake_foundation_lessons_3dmake_4-lessons_3dmake_4">Lesson 4: AI-Enhanced Verification and Multimodal Feedback</a></h1>
-<p>Estimated time: 45-60 minutes</p>
-<p>Learning Objectives</p>
+                        <h1 id="lesson-4-ai-enhanced-verification-and-multimodal-feedback"><a class="header" href="#lesson-4-ai-enhanced-verification-and-multimodal-feedback">Lesson 4: AI-Enhanced Verification and Multimodal Feedback</a></h1>
+<p>Estimated time: 90–120 minutes</p>
+<h2 id="learning-objectives"><a class="header" href="#learning-objectives">Learning Objectives</a></h2>
 <ul>
-<li>Run <code>3dm info</code> to collect deterministic renders and AI diagnostics (if configured)<sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">1</a></sup> <sup class="footnote-reference" id="fr-10-1"><a href="#footnote-10">2</a></sup></li>
-<li>Compare AI suggestions with renderer and slicer outputs and prioritize deterministic fixes<sup class="footnote-reference" id="fr-8-1"><a href="#footnote-8">3</a></sup></li>
-<li>Record and sanitize AI prompts and outputs for reproducibility and data governance<sup class="footnote-reference" id="fr-8-2"><a href="#footnote-8">3</a></sup></li>
+<li>Use <code>3dm describe</code> to generate AI-assisted descriptions of STL geometry</li>
+<li>Understand deterministic vs. AI-assisted validation</li>
+<li>Apply prompt engineering techniques for design feedback</li>
+<li>Recognize when to trust, question, or reject AI suggestions</li>
+<li>Understand data privacy considerations when using cloud AI tools</li>
 </ul>
-<p>Materials</p>
+<h2 id="materials"><a class="header" href="#materials">Materials</a></h2>
 <ul>
-<li>3dMake configured with an LLM API key (optional)</li>
-<li>Example project with renderable geometry</li>
+<li>3dMake project with a completed STL from Lessons 1–3</li>
+<li>Terminal</li>
+<li>Optional: AI chat interface (Claude, ChatGPT, or similar)</li>
 </ul>
-<p>Step-by-step Tasks</p>
-<ol>
-<li>Verify API configuration (if used) or run <code>3dm info --dry-run</code> to confirm render pipeline works locally<sup class="footnote-reference" id="fr-1-2"><a href="#footnote-1">1</a></sup>.</li>
-<li>Run <code>3dm info</code> and save the produced images and textual report to <code>build/</code> <sup class="footnote-reference" id="fr-1-3"><a href="#footnote-1">1</a></sup>.</li>
-<li>Inspect deterministic outputs (render warnings, slicer preview) and compare them to AI recommendations; prioritize deterministic issues<sup class="footnote-reference" id="fr-8-3"><a href="#footnote-8">3</a></sup> <sup class="footnote-reference" id="fr-10-2"><a href="#footnote-10">2</a></sup>.</li>
-<li>Iterate prompt engineering (in <code>3dmake.toml</code> or via <code>--prompt</code>) with precise technical primitives and re-run <code>3dm info</code> to examine changes<sup class="footnote-reference" id="fr-8-4"><a href="#footnote-8">3</a></sup>.</li>
-<li>Document all prompts, AI outputs, and deterministic validation steps in <code>AI-notes.md</code> within the project<sup class="footnote-reference" id="fr-8-5"><a href="#footnote-8">3</a></sup>.</li>
-</ol>
-<p>Checkpoints</p>
+<h2 id="step-by-step-tasks"><a class="header" href="#step-by-step-tasks">Step-by-step Tasks</a></h2>
+<h3 id="1-run-3dm-describe-on-your-current-model"><a class="header" href="#1-run-3dm-describe-on-your-current-model">1. Run 3dm describe on Your Current Model</a></h3>
+<p><code>3dm describe</code> sends your STL to an AI service and returns a natural-language description of the geometry. This is especially useful for non-visual validation.</p>
+<pre><code class="language-bash">3dm describe
+</code></pre>
+<p>Expected output (example):</p>
+<pre><code>Model: build/main.stl
+The model appears to be a rectangular box approximately 50mm x 30mm x 5mm.
+It has uniform wall thickness and no visible holes or undercuts.
+Suggested print orientation: flat on the largest face.
+</code></pre>
+<p>Review the description. Does it match your design intent? Note any discrepancies.</p>
+<h3 id="2-understand-deterministic-vs-ai-validation"><a class="header" href="#2-understand-deterministic-vs-ai-validation">2. Understand Deterministic vs. AI Validation</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Validation Type</th><th>What It Checks</th><th>Reliability</th></tr>
+</thead>
+<tbody>
+<tr><td>Slicer validation</td><td>Manifold geometry, wall thickness, overhang angles</td><td>Deterministic — same result every run</td></tr>
+<tr><td><code>3dm describe</code> (AI)</td><td>Human-readable shape description, print orientation suggestions</td><td>Non-deterministic — may vary slightly between runs</td></tr>
+<tr><td>Manual calipers</td><td>Printed part dimensions</td><td>Ground truth</td></tr>
+</tbody>
+</table>
+</div>
+<p>AI-assisted tools like <code>3dm describe</code> are useful for generating first-pass descriptions and spotting obvious issues, but they should not replace deterministic checks (slicer validation, geometry analysis).<sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">1</a></sup></p>
+<h3 id="3-craft-effective-verification-prompts"><a class="header" href="#3-craft-effective-verification-prompts">3. Craft Effective Verification Prompts</a></h3>
+<p>When using an AI assistant (Claude, GPT, etc.) to review OpenSCAD code, prompt quality determines output quality:</p>
+<p><strong>Weak prompt:</strong></p>
+<pre><code>Review my OpenSCAD code.
+</code></pre>
+<p><strong>Strong prompt:</strong></p>
+<pre><code>I have an OpenSCAD model that creates a parametric mounting bracket with two M3 holes.
+Parameters: width=40, height=30, depth=8, hole_r=3.2.
+Please review this code for:
+1. Correct use of the 0.001 offset rule in all difference() operations
+2. Manifold-safe geometry (no co-planar faces)
+3. Whether hole_r=3.2 is an appropriate M3 clearance hole diameter
+4. Any parameters that could produce invalid geometry if set to extreme values
+Respond with: issues found, severity (critical/warning/note), and suggested fix for each.
+</code></pre>
+<p>A structured prompt produces structured, actionable feedback.<sup class="footnote-reference" id="fr-2-1"><a href="#footnote-2">2</a></sup></p>
+<h3 id="4-validate-ai-suggestions-before-applying-them"><a class="header" href="#4-validate-ai-suggestions-before-applying-them">4. Validate AI Suggestions Before Applying Them</a></h3>
+<p>AI tools can produce plausible-sounding but incorrect recommendations. Always apply a verification step:</p>
+<pre><code>AI suggests: "Change hole_r to 3.0 for an M3 clearance hole"
+
+Verification steps:
+1. Check ISO standard: M3 clearance hole = 3.2mm (medium fit), 3.4mm (loose fit)
+2. AI recommendation of 3.0mm would be an interference fit, not a clearance hole
+3. Reject the suggestion; keep 3.2mm
+
+Conclusion: AI was wrong. Apply human domain knowledge.
+</code></pre>
+<p>Document your accept/reject decisions in your project notes for future reference.</p>
+<h3 id="5-apply-privacy-and-data-considerations"><a class="header" href="#5-apply-privacy-and-data-considerations">5. Apply Privacy and Data Considerations</a></h3>
+<p>When using cloud AI tools:</p>
 <ul>
-<li>After step 2 you have stored render images and the AI report in <code>build/</code> <sup class="footnote-reference" id="fr-1-4"><a href="#footnote-1">1</a></sup>.</li>
+<li><strong>Don’t upload proprietary designs</strong> to free-tier AI services without checking their data retention policies</li>
+<li><strong>Anonymize or simplify</strong> your model before requesting AI review if IP is a concern</li>
+<li><code>3dm describe</code> uses the same AI backend as configured in your 3dMake settings — check your instance’s privacy settings</li>
 </ul>
-<h2 id="quiz---lesson-3dmake4-10-questions"><a class="header" href="#quiz---lesson-3dmake4-10-questions">Quiz - Lesson 3dMake.4 (10 questions)</a></h2>
+<p>For classroom use, <code>3dm describe</code> on non-sensitive learning projects is appropriate. For professional designs, consult your organization’s data policy.<sup class="footnote-reference" id="fr-3-1"><a href="#footnote-3">3</a></sup></p>
+<h3 id="checkpoint"><a class="header" href="#checkpoint">Checkpoint</a></h3>
+<ul>
+<li>After step 2: You can articulate the difference between deterministic and AI-based validation.</li>
+<li>After step 3: Your AI prompt produces structured, reviewable output.</li>
+<li>After step 4: You have documented at least one accept or reject decision for an AI suggestion.</li>
+</ul>
+<h2 id="common-ai-validation-patterns"><a class="header" href="#common-ai-validation-patterns">Common AI Validation Patterns</a></h2>
+<h3 id="pattern-1-geometry-sanity-check"><a class="header" href="#pattern-1-geometry-sanity-check">Pattern 1: Geometry Sanity Check</a></h3>
+<pre><code class="language-bash"># Ask AI to describe what it "sees" in your model
+3dm describe
+
+# Then compare to your design checklist:
+# - Correct overall dimensions? ✓/✗
+# - Expected number of holes/features? ✓/✗
+# - No unexpected geometry? ✓/✗
+# - Print orientation makes sense? ✓/✗
+</code></pre>
+<h3 id="pattern-2-code-review-prompt-template"><a class="header" href="#pattern-2-code-review-prompt-template">Pattern 2: Code Review Prompt Template</a></h3>
+<p>Use this template when asking an AI to review OpenSCAD code:</p>
+<pre><code>Context: [describe what the part is and what it will be used for]
+Code: [paste your OpenSCAD code]
+Parameters: [list key parameter values]
+Review for:
+  - Boolean operation correctness (0.001 offsets where needed)
+  - Parameter range safety (will extreme values break geometry?)
+  - Printability (overhangs, thin walls, minimum feature size)
+  - Code clarity (variable names, comments)
+Output format: numbered list of issues, each with severity and fix
+</code></pre>
+<h3 id="pattern-3-iterative-improvement-loop"><a class="header" href="#pattern-3-iterative-improvement-loop">Pattern 3: Iterative Improvement Loop</a></h3>
+<pre><code>1. Write initial design
+2. Run 3dm build → fix compile errors
+3. Run slicer → fix geometry errors (deterministic)
+4. Run 3dm describe or AI review → address suggestions (with verification)
+5. Print test piece → compare to spec
+6. Iterate on parameters if needed
+</code></pre>
+<h2 id="quiz--lesson-3dmake4-15-questions"><a class="header" href="#quiz--lesson-3dmake4-15-questions">Quiz — Lesson 3dMake.4 (15 questions)</a></h2>
 <ol>
-<li>What command generates AI diagnostics and model renders<sup class="footnote-reference" id="fr-1-5"><a href="#footnote-1">1</a></sup>?</li>
-<li>Why must AI outputs be validated against renderer/slicer results<sup class="footnote-reference" id="fr-8-6"><a href="#footnote-8">3</a></sup> <sup class="footnote-reference" id="fr-10-3"><a href="#footnote-10">2</a></sup>?</li>
-<li>Name one privacy or governance concern when sending models/images to an API<sup class="footnote-reference" id="fr-8-7"><a href="#footnote-8">3</a></sup>.</li>
-<li>What is an example of a technical primitive to include in a prompt<sup class="footnote-reference" id="fr-8-8"><a href="#footnote-8">3</a></sup>?</li>
-<li>Where should you record prompts and AI outputs in the project<sup class="footnote-reference" id="fr-8-9"><a href="#footnote-8">3</a></sup>?</li>
-<li>True or False: AI-generated suggestions should always be implemented without verification.</li>
-<li>Describe what “deterministic validation” means in the context of AI-assisted 3D design.</li>
-<li>Explain how you would use <code>3dm info</code> to validate AI suggestions against your actual model.</li>
-<li>What steps would you take if the AI suggests a design change that conflicts with your requirements?</li>
-<li>How would you document AI-assisted decisions in your project for reproducibility and transparency?</li>
+<li>What does <code>3dm describe</code> do?</li>
+<li>What is the difference between deterministic validation and AI-based validation?</li>
+<li>Give two elements of a strong AI code review prompt that a weak prompt lacks.</li>
+<li>Why should you always verify AI suggestions before applying them? Give a specific example.</li>
+<li>What type of geometry errors does slicer validation catch that AI description does not?</li>
+<li>True or False: <code>3dm describe</code> will always produce identical output for the same STL file.</li>
+<li>What data privacy concern should you consider when uploading a design to a cloud AI service?</li>
+<li>In the iterative improvement loop described above, at which step should you run slicer validation?</li>
+<li>What does it mean for a model to be “non-deterministic” in the context of AI feedback?</li>
+<li>Describe one scenario where AI validation would be useful and one where you must rely on deterministic tools instead.</li>
+<li>What is “prompt engineering” and why does it matter when using AI for code review?</li>
+<li>If an AI tool suggests a geometry change that contradicts an ISO standard, what should you do?</li>
+<li>What is the NIST AI Risk Management Framework, and in what professional context would it be relevant to AI-assisted design validation?<sup class="footnote-reference" id="fr-4-1"><a href="#footnote-4">4</a></sup></li>
+<li>Describe two ways you could reduce IP exposure when using a cloud AI tool to review a proprietary design.</li>
+<li>In the validation table (deterministic vs. AI vs. calipers), which method provides “ground truth” and why?</li>
 </ol>
-<p>Extension Problems (10)</p>
+<h2 id="extension-problems-15"><a class="header" href="#extension-problems-15">Extension Problems (15)</a></h2>
 <ol>
-<li>Create an <code>AI-notes.md</code> documenting three prompts and the AI’s responses; indicate which suggestions you acted on<sup class="footnote-reference" id="fr-8-10"><a href="#footnote-8">3</a></sup>.</li>
-<li>Simulate a false-positive AI warning: describe how you validated and rejected it using deterministic checks<sup class="footnote-reference" id="fr-10-4"><a href="#footnote-10">2</a></sup>.</li>
-<li>Generate a short prompt that requests the top three structural risks and record the results<sup class="footnote-reference" id="fr-8-11"><a href="#footnote-8">3</a></sup>.</li>
-<li>Create a short checklist for sanitizing uploads before sending to an API<sup class="footnote-reference" id="fr-8-12"><a href="#footnote-8">3</a></sup>.</li>
-<li>Re-run <code>3dm info</code> after a code fix and compare the differences in the AI report<sup class="footnote-reference" id="fr-1-6"><a href="#footnote-1">1</a></sup>.</li>
-<li>Design a verification workflow: use AI suggestions + manual validation + physical testing to validate design decisions.</li>
-<li>Create a transparency log for AI-assisted features: document all AI interactions, suggestions adopted, and decisions made.</li>
-<li>Build an AI-assisted design case study: from initial prompt through final print; document the entire decision process.</li>
-<li>Develop guidelines for trustworthy AI use in 3D printing: when to trust AI, when to verify, and how to validate recommendations.</li>
-<li>Write an accessibility guide for using AI features in 3DMake: how to interpret AI suggestions non-visually and understand confidence levels.</li>
+<li>Design a validation checklist for a new 3D printed part. Include at least five items that are deterministic and three that benefit from AI assistance.</li>
+<li>Build a “prompt library” for three common design review scenarios: mounting brackets, enclosures, and text embossing. Test each prompt and document the output quality.</li>
+<li>Run <code>3dm describe</code> on the same STL five times. Document any variation in output. What does this tell you about reproducibility?</li>
+<li>Create a structured accept/reject log for one full design cycle (design → AI review → verification → decision). Share the log with a classmate for peer review.</li>
+<li>Research what “hallucination” means in the context of AI language models. Document two examples of how an AI might hallucinate in a design review context.</li>
+<li>Design an experiment to compare AI-suggested print orientation with slicer-suggested orientation for 10 different models. Tabulate the agreement rate.</li>
+<li>Write a one-page data privacy policy for an imaginary classroom 3D printing lab that uses cloud AI tools. Reference your school’s existing digital privacy guidelines.</li>
+<li>Create a set of deliberately flawed OpenSCAD files (missing 0.001 offsets, wrong hole sizes, thin walls) and test whether AI review catches all the flaws.</li>
+<li>Build a “verification script” using <code>3dm build</code> and slicer command-line tools that automates the deterministic validation steps in the iterative loop.</li>
+<li>Interview a classmate using the stakeholder interview technique from Lesson 11 to understand their mental model of AI validation. What assumptions do they have that might be incorrect?</li>
+<li>Research the difference between AI classification tasks (is this a manifold mesh?) and AI generation tasks (describe this mesh). Document why classification is more reliable for geometric validation.</li>
+<li>Build a comparison table: for each of five design features (holes, thin walls, overhangs, text, interlocking parts), list whether AI review, slicer validation, or physical test is most reliable.</li>
+<li>Write a “red teaming” exercise: intentionally try to get an AI tool to give you incorrect geometry advice. Document what prompts succeeded and what that means for how you use AI in design work.</li>
+<li>Create a lesson plan (5 minutes) explaining AI validation concepts to a fellow student who has never used an AI tool. Focus on the deterministic vs. non-deterministic distinction.</li>
+<li>Research and document the difference between “AI-assisted” and “AI-automated” workflows. At what point does removing the human from the validation loop become risky?</li>
 </ol>
+<h2 id="references-and-helpful-resources"><a class="header" href="#references-and-helpful-resources">References and Helpful Resources</a></h2>
+<h3 id="supplemental-resources"><a class="header" href="#supplemental-resources">Supplemental Resources</a></h3>
+<ul>
+<li><a href="https://github.com/tdeck/3dmake">3DMake GitHub Repository</a> — Source for <code>3dm describe</code> and other commands</li>
+<li><a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview">Anthropic Prompt Engineering Overview</a> — Prompting best practices</li>
+<li><a href="https://airc.nist.gov/Home">NIST AI RMF</a> — AI risk management in professional contexts</li>
+<li><a href="https://docs.prusa3d.com/en/">PrusaSlicer Documentation</a> — Deterministic slicer validation reference</li>
+</ul>
 <hr>
 <ol class="footnote-definition">
 <li id="footnote-1">
-<p>3DMake GitHub - <a href="https://github.com/tdeck/3dmake">https://github.com/tdeck/3dmake</a> <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a> <a href="#fr-1-3">↩3</a> <a href="#fr-1-4">↩4</a> <a href="#fr-1-5">↩5</a> <a href="#fr-1-6">↩6</a></p>
+<p>OpenSCAD User Manual — Manifold and Geometry Validation - <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language">https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language</a> <a href="#fr-1-1">↩</a></p>
 </li>
-<li id="footnote-10">
-<p>Deterministic Validation in Design - <a href="https://www.nist.gov/publications">https://www.nist.gov/publications</a> <a href="#fr-10-1">↩</a> <a href="#fr-10-2">↩2</a> <a href="#fr-10-3">↩3</a> <a href="#fr-10-4">↩4</a></p>
+<li id="footnote-2">
+<p>Anthropic Prompt Engineering Guide — <a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview">https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview</a>. Covers structured prompting techniques applicable to code review use cases. <a href="#fr-2-1">↩</a></p>
 </li>
-<li id="footnote-8">
-<p>AI Output Validation - Best Practices for Prompt Engineering - <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language">https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language</a> <a href="#fr-8-1">↩</a> <a href="#fr-8-2">↩2</a> <a href="#fr-8-3">↩3</a> <a href="#fr-8-4">↩4</a> <a href="#fr-8-5">↩5</a> <a href="#fr-8-6">↩6</a> <a href="#fr-8-7">↩7</a> <a href="#fr-8-8">↩8</a> <a href="#fr-8-9">↩9</a> <a href="#fr-8-10">↩10</a> <a href="#fr-8-11">↩11</a> <a href="#fr-8-12">↩12</a></p>
+<li id="footnote-3">
+<p>Data Privacy in AI-Assisted Tools — General guidance: review your AI provider’s terms of service and data retention policy before submitting proprietary or sensitive design files. <a href="#fr-3-1">↩</a></p>
+</li>
+<li id="footnote-4">
+<p>NIST AI Risk Management Framework (AI RMF 1.0) — National Institute of Standards and Technology, 2023. <a href="https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf">https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf</a>. Provides a structured framework for managing risks in AI-integrated workflows. <a href="#fr-4-1">↩</a></p>
 </li>
 </ol>
 

@@ -218,14 +218,14 @@ Multiline tactile displays from Orbit Research designed for reading text and tac
 
 | Vendor             | Products                                 | Support / Drivers                          |
 |--------------------|------------------------------------------|--------------------------------------------|
-| HumanWare          | Brailliant, BrailleNote Touch+           | [https://example.com](https://example.com) |
-| Freedom Scientific | Focus Blue series                        | [https://example.com](https://example.com) |
-| HIMS               | BrailleSense, Braille EDGE, Smart Beetle | [https://example.com](https://example.com) |
-| Optelec            | Braille STAR, Easy Link                  | [https://example.com](https://example.com) |
-| Orbit Research     | Graphiti, Orbit 20/40                    | [https://example.com](https://example.com) |
-| APH                | Monarch                                  | [https://example.com](https://example.com) |
-| Dot Inc.           | DotPad                                   | [https://example.com](https://example.com) |
-| Dolphin            | GuideConnect, braille accessories        | [https://example.com](https://example.com) |
+| HumanWare          | Brailliant, BrailleNote Touch+           | https://www.humanware.com/ |
+| Freedom Scientific | Focus Blue series                        | https://www.freedomscientific.com/Products/Blindness/FocusBlue/ |
+| HIMS               | BrailleSense, Braille EDGE, Smart Beetle | https://www.hims-inc.com/ |
+| Optelec            | Braille STAR, Easy Link                  | https://www.optelec.com/ |
+| Orbit Research     | Graphiti, Orbit 20/40                    | https://www.orbitresearch.com/ |
+| APH                | Monarch                                  | https://www.aph.org/ |
+| Dot Inc.           | DotPad                                   | https://dotincorp.com/ |
+| Dolphin            | GuideConnect, braille accessories        | https://yourdolphin.com/ |
 
 ---
 

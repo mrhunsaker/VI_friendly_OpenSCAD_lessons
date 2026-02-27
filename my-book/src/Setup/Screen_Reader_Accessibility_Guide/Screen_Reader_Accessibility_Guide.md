@@ -66,7 +66,7 @@ NVDA, JAWS, Windows Narrator, and Dolphin SuperNova all work with the three shel
 
 ## NVDA-Specific Tips {#nvda-tips}
 
-NVDA is free and available from [https://example.com](https://example.com)
+NVDA is free and available from [https://www.nvaccess.org/](https://www.nvaccess.org/)
 
 These tips work across all shells: PowerShell, CMD, and Git Bash.
 
@@ -110,7 +110,7 @@ These tips work across all shells: PowerShell, CMD, and Git Bash.
 
 ## JAWS-Specific Tips {#jaws-tips}
 
-JAWS is a commercial screen reader available from [https://example.com](https://example.com)
+JAWS is a commercial screen reader available from [https://www.freedomscientific.com/products/software/jaws/](https://www.freedomscientific.com/products/software/jaws/)
 
 These tips work across all shells: PowerShell, CMD, and Git Bash.
 
@@ -201,7 +201,7 @@ Narrator works well in **focus mode** (the default when a terminal is active). I
 
 ## Dolphin SuperNova-Specific Tips {#dolphin-tips}
 
-Dolphin SuperNova is a commercial screen reader (with optional magnification) available from [https://example.com](https://example.com)
+Dolphin SuperNova is a commercial screen reader (with optional magnification) available from [https://yourdolphin.com/supernova/](https://yourdolphin.com/supernova/)
 
 These tips work across all shells: PowerShell, CMD, and Git Bash.
 
@@ -494,10 +494,10 @@ NEED HELP?
 
 ## Additional Resources
 
-- **NVDA:** [https://example.com](https://example.com)
-- **JAWS:** [https://example.com](https://example.com)
-- **Windows Narrator:** [https://example.com](https://example.com)
-- **Dolphin SuperNova:** [https://example.com](https://example.com)
+- **NVDA:** [https://www.nvaccess.org/](https://www.nvaccess.org/)
+- **JAWS:** [https://www.freedomscientific.com/products/software/jaws/](https://www.freedomscientific.com/products/software/jaws/)
+- **Windows Narrator:** [https://support.microsoft.com/narrator](https://support.microsoft.com/narrator)
+- **Dolphin SuperNova:** [https://yourdolphin.com/supernova/](https://yourdolphin.com/supernova/)
 - **PowerShell Docs:** [https://example.com](https://example.com)
 - **CMD Documentation:** [https://example.com](https://example.com)
 - **Git Bash / Git for Windows:** [https://example.com](https://example.com)

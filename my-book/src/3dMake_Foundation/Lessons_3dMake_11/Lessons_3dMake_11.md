@@ -1,431 +1,248 @@
-# Lesson 11: Stakeholder-Centric Design and the Beaded Jewelry Project {#3dmake_foundation_lessons_3dmake_11-lessons_3dmake_11}
+# Lesson 10: Hands-On Practice Exercises and Troubleshooting
 
-Estimated time: 90-120 minutes | Level: Advanced
+Estimated time: 120–150 minutes
 
-Learning Objectives
+## Learning Objectives [^1]
+- Apply skills from Lessons 1–9 in three integrated design exercises
+- Use calipers to measure and validate printed parts against specifications
+- Diagnose and fix non-manifold geometry errors
+- Perform tolerance stack-up analysis
+- Use `3dm describe` for non-visual validation
 
-- Conduct stakeholder interviews to identify needs, wants, and constraints[^1]
-- Extract functional requirements from interview data[^1]
-- Design a product that meets explicit requirements (not assumptions)[^2]
-- Iterate design based on stakeholder feedback[^2]
-- Document design decisions for reproducibility and accessibility[^3]
+## Materials
+- 3dMake project
+- Printer and PLA filament
+- Digital calipers
+- Printed parts from previous lessons (or new prints from exercises below)
 
-Materials
+## Exercise Set A: Phone Stand Refinement
 
-- Interview worksheet (provided below)
-- Notebook/laptop for notes
-- Access to stakeholder (or use provided scenario)
-- 3dMake project scaffold
-- Calipers for measurement
-- Reference: [master-rubric.md](master-rubric.md) for design documentation standards
+### A1 — Measure and Iterate
 
-Extension Project: Complete [Beaded_Jewelry_Unit](beaded-jewelry.md) to apply stakeholder-centric design principles in a real project context.
-
-## Why This Matters: The Design Thinking Process
-
-Most design failures start before CAD. They happen because:
-
-- Assumption Problem: Designer assumes what users need without asking
-- Specification Problem: Unclear requirements lead to wasted iterations
-- Accessibility Problem: Features designed without considering all users
-
-This lesson flips the process: Listen First, Design Second [^1].
-
-### The Design Thinking Pipeline
-
-```plaintext
-1. Empathize (Listen to stakeholder)
-   v
-2. Define (Extract functional requirements)
-   v
-3. Ideate (Sketch/prototype solutions)
-   v
-4. Prototype (Build in CAD)
-   v
-5. Test (Get feedback)
-   v
-6. Iterate (Refine based on feedback)
-```
-
-## Stakeholder Interviews (20-30 minutes)
-
-### What is a Stakeholder?
-
-A stakeholder is anyone who will use, interact with, or be affected by your design. Examples:
-
-- End User: Person who directly uses the product
-- Maintenance Person: Someone who repairs/replaces parts
-- Budget Holder: Person responsible for cost
-- Safety Officer: Person ensuring regulatory compliance
-
-### Open-Ended Interview Questions
-
-Good interview questions:
-
-- [YES] Start with "What," "How," "Why"
-- [YES] Don't suggest answers
-- [YES] Follow up with "Tell me more..."
-- [YES] Listen for numbers, specific stories, pain points
-
-Bad interview questions:
-
-- [NO] "Do you like...?" (Yes/No - no detail)
-- [NO] "Would you prefer A or B?" (Forced choice)
-- [NO] "Don't you think...?" (Leading question)
-
-### Sample Interview Script (Beaded Jewelry)
-
-You're designing a custom beaded bracelet holder. Here's how to interview a stakeholder:
-
-```plaintext
-Opening:
-"Hi [name], I'm designing a way to store and display beaded 
-bracelets. I'd love to understand how YOU currently use bracelets 
-so I can design something that works for you. Is now a good time?"
-Question 1: "Tell me about your current bracelet collection. 
-How many do you have? What are they made of?"
-Question 2: "How do you currently store or display them? 
-What works well? What's frustrating?"
-Question 3: "If you could design the perfect bracelet holder, 
-what would it look like? What would it do?"
-Question 4: "Are there any constraints I should know about? 
-(Size of your space, colors, budget, etc.)"
-Question 5: "Who else might use this? How would their needs 
-differ from yours?"
-Closing:
-"Thank you for your time. I'll design based on what you've told me 
-and come back with a prototype for feedback."
-```
-
-### Step-by-Step Interview Task
-
-Duration: 15 minutes total
-
-1. Prepare (5 min):
-   - Choose your stakeholder or use the scenario below
-   - Write 4-6 questions using the template above
-   - Explain the project and get permission to take notes
-
-2. Conduct (10 min):
-   - Ask your prepared questions
-   - Write down specific details (numbers, names, quotes)
-   - Listen more than you talk
-   - Ask "Why?" when you hear interesting responses
-
-3. Document (Immediately after):
-   - Write a 2-3 sentence summary
-   - Extract 3-5 key needs/constraints
-   - Identify any questions that still need answers
-
-### Scenario: If You Don't Have a Real Stakeholder
-
-Scenario: Meet Sarah, a jewelry enthusiast
-
-Sarah has 15+ beaded bracelets but they're tangled in a drawer. She wants to:
-
-- Display them where she can see them
-- Keep them organized by color/style
-- Protect them from tangling
-- Fit in a small space on her desk
-
-Constraints:
-
-- Budget: $15 materials cost
-- Space: 6" x 6" footprint maximum
-- Aesthetic: Minimalist, natural wood preferred
-- Timeline: Needs it within 2 weeks
-
-## Extract Functional Requirements (20-30 minutes)
-
-### From Interview to Requirements
-
-A functional requirement is specific, measurable, and testable:
-
-| Interview Data                 | [NO] Bad Requirement | [YES] Good Requirement                      |
-|--------------------------------|----------------------|---------------------------------------------|
-| "I have 15 bracelets"          | Lots of storage      | Hold 15-20 bracelets without damage         |
-| "They're tangled in my drawer" | Keep organized       | Vertical hanging system to prevent tangling |
-| "I want to see them"           | Display feature      | Visible from above (no lid)                 |
-| "Minimalist, natural wood"     | Nice looking         | Wood construction,  2 colors, clean lines   |
-
-### Functional Requirements Template
-
-For your beaded jewelry holder, extract 5-8 requirements:
+Using calipers, measure your printed phone stand against the design specification:
 
 ```
-Functional Requirements:
-1. Capacity: Hold  bracelets
-2. Organization: Arrange by  (color/size/style)
-3. Protection: Prevent  (tangling/damage)
-4. Display: Visible from  (above/front/sides)
-5. Dimensions:  mm wide,  mm deep,  mm tall
-6. Material:  (wood/plastic/metal)
-7. Accessibility:  (non-visual inspection method)
-8. Durability: Withstand  (weight/use/time)
+Measurement checklist:
+[ ] Base width = phone_w + 20 ± 0.3 mm
+[ ] Base depth as calculated ± 0.5 mm
+[ ] Back support angle (measure with angle gauge or protractor)
+[ ] Lip depth = lip_h ± 0.3 mm
+[ ] Phone fits and is stable (functional test)
 ```
 
-### Measurable Acceptance Criteria
+For each out-of-spec dimension, calculate the correction and update the parameter in `src/main.scad`. Rebuild and reprint.
 
-For each requirement, define how you'll TEST it:
+### A2 — Tolerance Stack-Up Analysis [^2]
 
-| Requirement       | Measurement Method                                           |
-|-------------------|--------------------------------------------------------------|
-| Hold 15 bracelets | Count actual bracelets loaded; verify no deformation         |
-| Prevent tangling  | Manual inspection: no twisting/knotting after 1 week storage |
-| Dimensions        | Measure with calipers; compare to design parameters          |
-| Wood material     | Visual inspection; material weight check                     |
-| Withstand weight  | Load test: 2kg weight for 1 hour; check for deformation      |
+```
+Scenario: phone stand cradle with three stacked parts:
+- Base plate: designed 5mm, printed 5.12mm (+ 0.12mm)
+- Back brace: designed 60mm, printed 59.87mm (- 0.13mm)
+- Lip:        designed 15mm, printed 15.09mm (+ 0.09mm)
 
-## Design the Bracelet Holder (30-40 minutes)
+Total stack height: 5.12 + 59.87 + 15.09 = 80.08mm
+Design intent:      5 + 60 + 15            = 80.00mm
+Error:              80.08 - 80.00          = +0.08mm  (within 0.5mm spec — PASS)
 
-### Design Strategy
+Worst case (all errors same direction): 0.12 + 0.13 + 0.09 = 0.34mm — still within spec
+```
 
-Based on functional requirements, create a parametric SCAD model:
+Document your own measurements in a similar table.
+
+### A3 — Add a Cable Slot [^3]
+
+Extend your phone stand design with a cable slot through the base:
 
 ```openscad
-// Parametric Beaded Bracelet Holder
-// Designed for: [Stakeholder name]
-// Requirements: [List 3-5 key requirements]
-// === PARAMETERS (from stakeholder requirements) ===
-holderwidth = 150;      // mm - width for 15+ bracelets
-holderdepth = 80;       // mm - depth for stability
-holderheight = 120;     // mm - height for display
-numpegs = 16;           // Number of hanging pegs
-pegdiameter = 6;        // mm - bracelet hang diameter
-pegspacing = holderwidth / (numpegs + 1);
-// === DESIGN ===
-module base() {
-  // Wooden-look base plate
-  cube([holderwidth, holderdepth, 10]);
-}
-module backwall() {
-  // Back support for stability
-  translate([0, 0, 10])
-    cube([holderwidth, 5, holderheight]);
-}
-module hangingpegs() {
-  // Pegs for bracelets to hang
-  for (i = [1 : numpegs]) {
-    xpos = pegspacing * i;
-    translate([xpos, holderdepth/2, holderheight - 20])
-      cylinder(r=pegdiameter/2, h=30, $fn=16);
+cable_slot_w  = 12;   // mm
+cable_slot_d  = 5;    // mm
+cable_slot_z  = -0.001;
+
+// Add to main difference() block:
+translate([base_w/2 - cable_slot_w/2, 0, cable_slot_z])
+  cube([cable_slot_w, cable_slot_d, base_h + 0.002]);
+```
+
+## Exercise Set B: Keycap with Text
+
+### B1 — Build a Mechanical Keyboard Keycap
+
+```openscad
+// Parametric keycap
+key_w      = 18;
+key_d      = 18;
+key_h      = 7;
+stem_r     = 2.75;  // MX stem: 5.5mm diameter
+stem_h     = 3.8;
+wall       = 1.5;
+label_text = "A";
+
+module keycap() {
+  difference() {
+    // Keycap body with slight top curve
+    hull() {
+      cube([key_w, key_d, key_h - 2], center=true);
+      translate([0, 0, 1]) cube([key_w - 2, key_d - 2, key_h], center=true);
+    }
+    // Hollow inside
+    translate([0, 0, -wall])
+      cube([key_w - 2*wall, key_d - 2*wall, key_h], center=true);
+    // MX stem hole
+    translate([0, 0, -(key_h/2 + 0.001)])
+      cylinder(r=stem_r + 0.1, h=stem_h + 0.001, $fn=16);
   }
 }
-module braceletholder() {
-  // Combine all components
-  union() {
-    base();
-    backwall();
-    hangingpegs();
-  }
+
+module stem_mount() {
+  translate([0, 0, -(key_h/2 + stem_h)])
+    difference() {
+      cylinder(r=stem_r + wall, h=stem_h, $fn=16);
+      cylinder(r=stem_r, h=stem_h + 0.001, $fn=16);
+    }
 }
-// Main
-braceletholder();
+
+keycap();
+stem_mount();
+
+// Engrave label
+translate([0, 0, key_h/2 - 0.8])
+  linear_extrude(1.2)
+    text(label_text, size=8, font="Liberation Sans:style=Bold",
+         halign="center", valign="center", $fn=4);
 ```
 
-### Customization Based on Stakeholder Feedback
-
-Before printing, modify parameters:
-
-```
-Interview revealed:
-- "15 bracelets is about right"
-- "I like minimal spacing"
-- "Natural wood color"
-- "Small desk space - maybe 5 inches wide?"
-
-Updated parameters:
-numpegs = 15;           // Exact count for their collection
-holderwidth = 127;      // 5 inches in mm
-pegspacing = holderwidth / (numpegs + 1);
-```
-
-### Testing Non-Visually
+### B2 — Validate with 3dm describe
 
 ```bash
-# Describe the model to verify it matches requirements
-3dm describe src/main.scad
-
-# Expected output should mention:
-# - 15 hanging pegs arranged horizontally
-# - Base plate for stability
-# - Back wall for support
-# - Dimensions approximately 127mm x 80mm x 120mm
-
-# Generate preview for tactile inspection
-3dm preview src/main.scad
+3dm describe
 ```
 
-## Iterate Based on Feedback (20-30 minutes)
+Expected output should confirm the keycap geometry. Document what the AI description says and compare it to your design intent.
 
-### Feedback Loop
+### B3 — Print and Test
 
-After printing a test version:
+Print the keycap and test it on a Cherry MX switch (or compatible). If the stem is too tight, increase `stem_r + 0.1` to `stem_r + 0.15`. If too loose, decrease to `stem_r + 0.05`.
 
-1. Measure physical parts:
+## Exercise Set C: Stackable Bins
 
-   ```bash
-   # Use calipers to verify
-   - Actual width:  mm (design: 127mm)
-   - Actual peg diameter:  mm (design: 6mm)
-   - Actual spacing:  mm
-   ```
+### C1 — Build a Three-Size Bin Set
 
-2. Test with actual bracelets:
-   - Can 15 bracelets actually hang?
-   - Do they tangle?
-   - Do pegs support the weight?
-   - Is it stable on the desk?
+Using the stackable bin module from Lesson 8, generate three sizes:
 
-3. Document feedback:
+```openscad
+// Small bin
+translate([0, 0, 0])
+  bin_assembly(bin_w=60, bin_d=45, bin_h=30);
 
-   ```markdown
-   Test Results:
-   - [YES] Holds 15 bracelets comfortably
-   -  Pegs slightly too thin (bracelets slip)
-   - [YES] No tangling observed
-   -  Wobbles slightly - needs wider base
-   
-   Adjustments for v2:
-   - Increase pegdiameter: 6mm -> 8mm
-   - Increase basedepth: 80mm -> 100mm
-   ```
+// Medium bin
+translate([80, 0, 0])
+  bin_assembly(bin_w=80, bin_d=60, bin_h=40);
 
-4. Iterate:
-
-   ```openscad
-   // Modified parameters for v2
-   pegdiameter = 8;        // Thicker pegs (8mm instead of 6mm)
-   holderdepth = 100;      // Wider base (100mm instead of 80mm)
-   ```
-
-5. Reprint and test:
-   - Does v2 address the issues?
-   - Any new problems?
-   - Is it ready for final design?
-
-### Accessible Iteration Tracking
-
-Document all iterations in a spreadsheet or text file:
-
-```plaintext
-Version | Peg Size | Base Depth | Fits Bracelets | Stable | Notes
---------|----------|------------|----------------|--------|--------------------
-v1      | 6mm      | 80mm       | [YES] (14/15)  |        | Wobbles, pegs thin
-v2      | 8mm      | 100mm      | [YES] (15/15)  | [YES]  | Perfect fit, stable
-v3      | 8mm      | 100mm      | [YES] (15/15)  | [YES]  | With wood stain
+// Large bin
+translate([180, 0, 0])
+  bin_assembly(bin_w=100, bin_d=80, bin_h=50);
 ```
 
-## Complete Project: Beaded Jewelry Bracelet Holder
+### C2 — Diagnose and Fix Non-Manifold Geometry
 
-### Project Requirements
+Non-manifold geometry occurs when faces share edges inconsistently (T-junctions, missing faces, zero-thickness walls). Common causes:
 
-Objective: Design a customized bracelet holder based on an actual stakeholder's needs.
+```openscad
+// PROBLEM: two cubes share a face exactly — may produce non-manifold edge
+cube([20, 20, 10]);
+translate([20, 0, 0]) cube([20, 20, 10]);  // touching at x=20 — ambiguous edge
 
-Deliverables:
+// FIX 1: use union()
+union() {
+  cube([20, 20, 10]);
+  translate([20, 0, 0]) cube([20, 20, 10]);
+}
 
-1. Interview Documentation (1-2 pages)
-   - 4-6 interview questions asked
-   - Stakeholder's 3-5 key needs
-   - Extracted functional requirements
-   - Acceptance criteria for each requirement
+// FIX 2: overlap slightly
+cube([20.001, 20, 10]);
+translate([20, 0, 0]) cube([20, 20, 10]);
+```
 
-2. Design SCAD File (`braceletholder.scad`)
-   - Parametric design with all requirements
-   - Clear parameters at top (easily customizable)
-   - Well-commented modules
-   - Matches stakeholder dimensions
+Diagnosis tool:
+```bash
+3dm describe  # AI will often flag non-manifold geometry
+# Also open STL in slicer and enable "Check for geometry errors"
+```
 
-3. Iteration Log (2-3 pages)
-   - Version 1 test results
-   - Feedback from stakeholder
-   - Changes made for v2
-   - Final design specifications
+### C3 — Advanced Geometry: hull() and minkowski()
 
-4. Printed Prototype (physical)
-   - Demonstrates final design
-   - Holds actual bracelets from stakeholder
-   - Passes all acceptance criteria
+```openscad
+// hull() creates a convex envelope — useful for organic shapes
+module smooth_transition() {
+  hull() {
+    translate([0, 0, 0]) cylinder(r=15, h=5, $fn=64);
+    translate([0, 0, 30]) cylinder(r=5, h=2, $fn=64);
+  }
+}
 
-5. Final Documentation (1-2 pages)
-   - Design process summary
-   - Stakeholder feedback quotes
-   - Design decisions justified
-   - Lessons learned
+smooth_transition();
 
-### Assessment Rubric (0-9 scale)
+// minkowski() adds the shape of a small object to every surface point
+module rounded_hull() {
+  minkowski() {
+    hull() {
+      cylinder(r=10, h=3, $fn=8);      // octagonal prism
+      translate([30, 0, 0]) sphere(r=8, $fn=32);
+    }
+    sphere(r=2, $fn=16);  // rounds all edges by 2mm
+  }
+}
 
-Problem & Solution (0-3 points)
+rounded_hull();
+```
 
-- Stakeholder clearly identified and interviewed
-- Requirements extracted from interview (not assumptions)
-- Functional requirements are specific and measurable
+## Quiz — Lesson 3dMake.10 (15 questions)
 
-Design & Code Quality (0-3 points)
+1. What tool do you use to measure printed part dimensions against the design specification?
+2. What is tolerance stack-up, and why does it matter for multi-part assemblies?
+3. What causes non-manifold geometry in OpenSCAD, and how do you detect it?
+4. How does `hull()` differ from `union()`?
+5. What does `3dm describe` help you verify about your model?
+6. What does a Cherry MX stem measure in diameter, and what clearance would you add for a slip-fit keycap?
+7. True or False: `find -newer` is an event-driven file change detection method.
+8. If three parts each have ±0.15 mm tolerance, what is the worst-case total error for a three-part stack?
+9. What does the `$fn` parameter control in OpenSCAD?
+10. Describe two methods for fixing non-manifold geometry caused by two touching (but not overlapping) shapes.
+11. What is the difference between `hull()` and `minkowski()` for creating organic shapes? Give one use case for each.
+12. What does `resize([50, 0, 0])` do, and why might `resize()` behave unexpectedly for non-uniform scaling?
+13. When measuring a printed part with calipers, what is the difference between an inside measurement and an outside measurement, and when does that distinction matter for tolerance analysis?
+14. Describe the iterative design workflow for dialing in press-fit tolerances: what do you print, what do you measure, and how do you adjust?
+15. If `3dm describe` reports "the model appears non-manifold," what are three possible causes you would investigate in your OpenSCAD code?
 
-- SCAD code is parametric and well-organized
-- Design meets all extracted requirements
-- Iterations show thoughtful refinement based on feedback
+## Extension Problems (15)
 
-Documentation (0-3 points)
+1. Create a tolerance sensitivity study: build 5 keycaps with stem clearance from 0.05–0.25 mm in 0.05 mm increments, print them, and record which values fit your switches.
+2. Design a go/no-go gauge for a 10 mm nominal hole: a part with a "go" pin sized for slip-fit and a "no-go" pin sized for interference fit.
+3. Write a printer calibration SOP (standard operating procedure): bed leveling, first-layer calibration, and dimension verification. Include a measurement checklist.
+4. Build a three-tier stackable storage system for art supplies. Each tier has a different inner grid.
+5. Conduct a tolerance stack-up analysis for your stackable bin system. Calculate worst-case misalignment.
+6. Build a parametric test coupon that tests four different wall thicknesses (0.8, 1.2, 1.6, 2.0 mm) in a single print.
+7. Design a caliper stand: a holder that holds your digital calipers at a comfortable angle for one-handed operation.
+8. Build a non-manifold error catalog: intentionally create 5 different types of non-manifold geometry, document how each was created and how to fix it.
+9. Use `hull()` to design a smooth ergonomic tool handle and compare it to a simple cylinder handle.
+10. Create a printability checklist for new designs: overhangs, wall thickness, minimum feature size, support requirements. Apply it to your keycap and bin designs.
+11. Research the `resize()` function in OpenSCAD. Build an example showing how it behaves differently from `scale()` for non-uniform resizing.
+12. Design a multi-part assembly tutorial: a three-piece interlocking puzzle that teaches the concepts of tolerance, alignment, and slip-fit.
+13. Build a "measurement worksheet" template in OpenSCAD: render a flat sheet that lists all key dimensions of a part as text, for printing alongside the part.
+14. Create a chi-squared goodness-of-fit test for your printer's dimensional accuracy: measure 20 prints of the same part and determine if the errors are normally distributed.
+15. Write a comprehensive troubleshooting guide covering the 10 most common 3D printing failures you have encountered (or researched), with causes, prevention, and fixes.
 
-- Interview process clearly documented
-- Design decisions justified with stakeholder feedback
-- Iteration log shows testing methodology
-- Accessible description of design (3dm describe output)
+## References and Helpful Resources
 
-## Quiz - Lesson 3dMake.11 (10 questions)
+[^1]: OpenSCAD User Manual — Hull and Minkowski. [https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Minkowski_and_Hull](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Minkowski_and_Hull)
 
-1. What is the primary purpose of conducting stakeholder interviews before design[^1]?
-2. Give one example of an open-ended interview question and one bad (leading) question[^1].
-3. What is the difference between a "need" and a "want" in the design context[^1]?
-4. How do you convert interview data into functional requirements[^1]?
-5. What is an acceptance criterion and why is it important[^2]?
-6. Describe how you would test a bracelet holder's capacity non-visually using measurements[^2].
-7. True or False: You can design a good product without talking to the person who will use it.
-8. Explain why iteration based on real feedback is better than guessing[^2].
-9. How would you document design changes in a way that's accessible to non-visual users[^3]?
-10. What should you do if your prototype fails a stakeholder's test[^2]?
+[^2]: Digital Calipers Measurement Technique — General metrology reference. See also: [Measurement Worksheet Asset](../../assets/3dMake_Foundation/measurement_worksheet.md)
 
-## Extension Problems (10)
+[^3]: 3DMake GitHub Repository — Command reference including `3dm describe`. [https://github.com/tdeck/3dmake](https://github.com/tdeck/3dmake)
 
-1. Conduct interviews with 3 different stakeholders for the bracelet holder; compare their requirements[^1].
-2. Design 3 different bracelet holder variants for different stakeholder types (minimalist, maximalist, travel-focused)[^1].
-3. Create a complete functional requirements document with measurable acceptance criteria[^1].
-4. Build and test 2 iterations of the bracelet holder; document all changes[^2].
-5. Develop a design specification document that someone else could follow to recreate your design[^3].
-6. Conduct a "design review" with your stakeholder; document their feedback and your responses[^1].
-7. Create a manufacturing specification: tolerances, materials, assembly instructions, quality checks[^2].
-8. Build a customer feedback tracking system; document what works and what could be improved[^1].
-9. Design an accessibility checklist for the bracelet holder: non-visual inspection, measurement-based testing, assembly ease[^3].
-10. Write a comprehensive design case study: from initial interview through final product, including all iterations, feedback, and lessons learned[^1][^2][^3].
+### Supplemental Resources
 
-## Summary: From Interview to Design
-
-The 11 lessons have taken you from beginner to advanced designer. This final lesson shows you that the best designs start with listening, not assuming.
-
-### The Full Journey
-
-1. Lessons 1-3: Foundation (setup, primitives, parametric code)
-2. Lessons 4-5: Verification & Safety (AI checking, physical safety)
-3. Lessons 6-7: Applied Projects (keycap, phone stand)
-4. Lesson 8: Advanced Design (tolerance, interlocking, complex assemblies)
-5. Lesson 9: Automation (batch processing, scripting)
-6. Lesson 10: Mastery (troubleshooting, QA, testing)
-7. Lesson 11: Leadership (listening to stakeholders, designing for real users)
-
-### Next Steps After This Lesson
-
-You're now ready for:
-
-- [YES] Professional product design workflows
-- [YES] Customer-driven development
-- [YES] Small-batch manufacturing
-- [YES] Open-source design contributions
-- [YES] Teaching others these skills
-
-References
-
-[^1]: Design Thinking Process - IDEO - [https://www.ideo.com/perspectives/design-thinking](https://www.ideo.com/perspectives/design-thinking)
-[^2]: Functional Requirements in Product Design - [https://www.productschool.com/blog/requirements/](https://www.productschool.com/blog/requirements/)
-[^3]: Accessible Design Documentation - [https://www.a11y-101.com/design/inclusive-documentation](https://www.a11y-101.com/design/inclusive-documentation)
+- [Programming with OpenSCAD EPUB Textbook](../../assets/Programming_with_OpenSCAD.epub) — Troubleshooting and advanced geometry chapters
+- [CodeSolutions Repository](https://github.com/ProgrammingWithOpenSCAD/CodeSolutions) — Worked practice exercises
+- [OpenSCAD Quick Reference](https://programmingwithopenscad.github.io/quick-reference.html) — Function reference
+- [Master Rubric](../../assets/3dMake_Foundation/master-rubric.md) — Assessment criteria for practice exercises

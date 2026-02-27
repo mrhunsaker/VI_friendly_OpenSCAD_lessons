@@ -611,4 +611,4 @@ Checkpoint: Should show report of all files in the test folder.
 - Loops: [https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_foreach](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_foreach)
 
 Next Steps: After mastering this lesson, explore PowerShell modules, remoting, and 3D printing integration in the main curriculum.
-<!--pagebreak-->
+

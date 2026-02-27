@@ -48,4 +48,4 @@ cd %USERPROFILE%           :: Go to home folder
 dir /B                     :: List folder contents
 dir /B /A:D                :: List only folders
 dir /B /A:F                :: List only files
-", HorizontalRule, Header 4 ("next-steps", ["unnumbered", "unlisted"], []) [Str "Next Steps"], Para [Str "Complete all exercises, pass the checkpoint questions, then move to ", Strong [Str "CMD-2: File & Folder Manipulation"], Str "."], RawBlock (Format "html") "<!--pagebreak-->"]
+", HorizontalRule, Header 4 ("next-steps", ["unnumbered", "unlisted"], []) [Str "Next Steps"], Para [Str "Complete all exercises, pass the checkpoint questions, then move to ", Strong [Str "CMD-2: File & Folder Manipulation"], Str "."]]

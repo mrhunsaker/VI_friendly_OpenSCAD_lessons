@@ -24,11 +24,11 @@ NVDA is a free, open-source screen reader developed by NV Access. It is one of t
 - Advanced paid support is community-driven rather than available from a commercial vendor helpdesk.
 - Some edge-case compatibility differences compared to commercial readers.
 
-**Cost:** Free (donations welcomed at [https://example.com](https://example.com)).
+**Cost:** Free (donations welcomed at [https://www.nvaccess.org/](https://www.nvaccess.org/)).
 
 **Trial:** Not applicable — NVDA is always free.
 
-**Download:** [https://example.com](https://example.com)
+**Download:** [https://www.nvaccess.org/download/](https://www.nvaccess.org/download/)
 
 ---
 
@@ -48,11 +48,11 @@ JAWS is a commercial screen reader developed by Freedom Scientific (part of Visp
 - JAWS demo mode limits session length to approximately 40 minutes before requiring a computer restart or session reset to continue. This can be disruptive during extended practice sessions.
 - Some advanced customization (JAWS scripts) requires a learning curve.
 
-**Cost:** Commercial. Typical U.S. pricing is several hundred dollars per year for a software maintenance agreement (SMA), or a higher one-time perpetual license fee. Check [https://example.com](https://example.com) for current pricing.
+**Cost:** Commercial. Typical U.S. pricing is several hundred dollars per year for a software maintenance agreement (SMA), or a higher one-time perpetual license fee. Check [https://www.freedomscientific.com/products/software/jaws/](https://www.freedomscientific.com/products/software/jaws/) for current pricing.
 
 **Trial:** JAWS offers a time-limited demonstration mode (approximately 40 minutes per session). After the demo period expires, you must restart the computer to continue using JAWS without a license. This applies to the full JAWS installer — there is no separate shorter trial download.
 
-**Download:** [https://example.com](https://example.com)
+**Download:** [https://www.freedomscientific.com/downloads/jaws/](https://www.freedomscientific.com/downloads/jaws/)
 
 ---
 
@@ -97,11 +97,11 @@ Dolphin SuperNova (sometimes referred to as "Dolphin Screen Reader" or simply "S
 - Less widely used than NVDA or JAWS, so community resources and third-party documentation are more limited.
 - Configuration for some terminal workflows may require additional setup.
 
-**Cost:** Commercial. Pricing varies by edition (Magnifier only, Magnifier & Speech, or Screen Reader). Check [https://example.com](https://example.com) for current pricing. Expect costs broadly similar to other commercial screen readers.
+**Cost:** Commercial. Pricing varies by edition (Magnifier only, Magnifier & Speech, or Screen Reader). Check [https://yourdolphin.com/supernova/](https://yourdolphin.com/supernova/) for current pricing. Expect costs broadly similar to other commercial screen readers.
 
 **Trial:** Dolphin provides a full-featured 30-day trial license. This is more generous than JAWS's per-session demo and allows uninterrupted evaluation over a full month.
 
-**Download:** [https://example.com](https://example.com)
+**Download:** [https://yourdolphin.com/supernova/](https://yourdolphin.com/supernova/)
 
 ---
 
@@ -173,7 +173,7 @@ All four screen readers can perform the same tasks in the terminal. The table be
 
 | Screen Reader     | Official Documentation                     | Support / Help                             |
 |-------------------|--------------------------------------------|--------------------------------------------|
-| NVDA              | [https://example.com](https://example.com) | [https://example.com](https://example.com) |
-| JAWS              | [https://example.com](https://example.com) | [https://example.com](https://example.com) |
-| Windows Narrator  | [https://example.com](https://example.com) | [https://example.com](https://example.com) |
-| Dolphin SuperNova | [https://example.com](https://example.com) | [https://example.com](https://example.com) |
+| NVDA              | [https://www.nvaccess.org/](https://www.nvaccess.org/) | [https://www.nvaccess.org/download/](https://www.nvaccess.org/download/) |
+| JAWS              | [https://www.freedomscientific.com/products/software/jaws/](https://www.freedomscientific.com/products/software/jaws/) | [https://www.freedomscientific.com/downloads/jaws/](https://www.freedomscientific.com/downloads/jaws/) |
+| Windows Narrator  | [https://support.microsoft.com/narrator](https://support.microsoft.com/narrator) | [https://support.microsoft.com/narrator](https://support.microsoft.com/narrator) |
+| Dolphin SuperNova | [https://yourdolphin.com/supernova/](https://yourdolphin.com/supernova/) | [https://yourdolphin.com/supernova/](https://yourdolphin.com/supernova/) |

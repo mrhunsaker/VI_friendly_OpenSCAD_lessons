@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-7e85ce75.js";
+            window.path_to_searchindex_js = "../../searchindex-eaf1c1cc.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-0b2574ce.js"></script>
+        <script src="../../toc-76b29a8d.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -220,660 +220,220 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="3dmake_foundation_lessons_3dmake_10-lessons_3dmake_10"><a class="header" href="#3dmake_foundation_lessons_3dmake_10-lessons_3dmake_10">Lesson 10: Hands-On Practice Exercises and Troubleshooting</a></h1>
-<p>Estimated time: 120-150 minutes (multiple activities)</p>
-<p>Learning Objectives</p>
+                        <h1 id="lesson-10-hands-on-practice-exercises-and-troubleshooting"><a class="header" href="#lesson-10-hands-on-practice-exercises-and-troubleshooting">Lesson 10: Hands-On Practice Exercises and Troubleshooting</a></h1>
+<p>Estimated time: 120–150 minutes</p>
+<h2 id="learning-objectives-1"><a class="header" href="#learning-objectives-1">Learning Objectives <sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">1</a></sup></a></h2>
 <ul>
-<li>Apply all prior lessons in integrated projects<sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">1</a></sup></li>
-<li>Diagnose and fix common 3D printing and OpenSCAD issues<sup class="footnote-reference" id="fr-2-1"><a href="#footnote-2">2</a></sup></li>
-<li>Validate models using deterministic and AI-assisted inspection<sup class="footnote-reference" id="fr-3-1"><a href="#footnote-3">3</a></sup></li>
-<li>Document design decisions and troubleshooting processes<sup class="footnote-reference" id="fr-1-2"><a href="#footnote-1">1</a></sup></li>
+<li>Apply skills from Lessons 1–9 in three integrated design exercises</li>
+<li>Use calipers to measure and validate printed parts against specifications</li>
+<li>Diagnose and fix non-manifold geometry errors</li>
+<li>Perform tolerance stack-up analysis</li>
+<li>Use <code>3dm describe</code> for non-visual validation</li>
 </ul>
-<p>Materials</p>
+<h2 id="materials"><a class="header" href="#materials">Materials</a></h2>
 <ul>
-<li>3dMake project scaffold</li>
-<li>Printer for test prints (recommended)</li>
-<li>Measuring tools (calipers, protractor)</li>
-<li>Access to 3dm commands</li>
-<li>Reference: <a href="/Lessons_3dMake_11/master-rubric.html">master-rubric.md</a> for assessment criteria</li>
-<li>Reference: <a href="/Lessons_3dMake_5/filament-comparison-table.html">filament-comparison-table.md</a> for material properties</li>
+<li>3dMake project</li>
+<li>Printer and PLA filament</li>
+<li>Digital calipers</li>
+<li>Printed parts from previous lessons (or new prints from exercises below)</li>
 </ul>
-<p>Extension Projects: Complete <a href="/Lessons_3dMake_4/Dice_Dice_Dice.html">Dice_Dice_Dice</a> or <a href="../Lessons_3dMake_8/snap-fit-clip.html">Snap_Fit_Clip</a> to practice integrated validation workflows.</p>
-<h2 id="measurement-fundamentals"><a class="header" href="#measurement-fundamentals">Measurement Fundamentals</a></h2>
-<p>Before you can validate that your designs print correctly, you need to measure accurately. This section covers using calipers and interpreting measurement data.</p>
-<h3 id="understanding-digital-calipers"><a class="header" href="#understanding-digital-calipers">Understanding Digital Calipers</a></h3>
-<p>A digital caliper is a precision tool with three measurement modes:</p>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Mode</th><th>Use</th><th>Example</th></tr>
-</thead>
-<tbody>
-<tr><td>Outside jaws</td><td>Measure outer dimensions</td><td>Diameter of a cylinder, width of a part</td></tr>
-<tr><td>Inside jaws</td><td>Measure inner dimensions</td><td>Hole diameter, inside width of a box</td></tr>
-<tr><td>Depth rod</td><td>Measure depth or thickness</td><td>Depth of a recess, thickness of a part</td></tr>
-</tbody>
-</table>
-</div>
-<h3 id="measurement-best-practices"><a class="header" href="#measurement-best-practices">Measurement Best Practices</a></h3>
-<ol>
-<li>Zero the caliper: With jaws closed, press the ON/ZERO button to confirm it reads 0.0 mm</li>
-<li>Use gentle pressure: Tighten jaws just enough to hold the object; excessive force causes false readings</li>
-<li>Take three trials: Measure the same feature three times and calculate the average</li>
-<li>Record to 0.1 mm: Most printed parts can be reliably measured to one decimal place</li>
-</ol>
-<p>Example measurement sequence:</p>
-<pre><code>Object: 3D-printed cube
-Trial 1: 24.5 mm
-Trial 2: 24.2 mm
-Trial 3: 24.6 mm
-Average: (24.5 + 24.2 + 24.6) / 3 = 24.43 mm  24.4 mm
-
-Interpretation: Designed as 25.0 mm, printed as 24.4 mm
-Deviation: -0.6 mm (0.24% shrinkage, acceptable for PLA)
+<h2 id="exercise-set-a-phone-stand-refinement"><a class="header" href="#exercise-set-a-phone-stand-refinement">Exercise Set A: Phone Stand Refinement</a></h2>
+<h3 id="a1--measure-and-iterate"><a class="header" href="#a1--measure-and-iterate">A1 — Measure and Iterate</a></h3>
+<p>Using calipers, measure your printed phone stand against the design specification:</p>
+<pre><code>Measurement checklist:
+[ ] Base width = phone_w + 20 ± 0.3 mm
+[ ] Base depth as calculated ± 0.5 mm
+[ ] Back support angle (measure with angle gauge or protractor)
+[ ] Lip depth = lip_h ± 0.3 mm
+[ ] Phone fits and is stable (functional test)
 </code></pre>
-<h3 id="using-measurements-to-improve-design"><a class="header" href="#using-measurements-to-improve-design">Using Measurements to Improve Design</a></h3>
-<p>When you find a deviation between your designed and actual dimensions, you can adjust future prints:</p>
-<pre><code class="language-openscad">// Design parameter
-part_height = 50;  // Designed: 50 mm
-// After first print, measured: 49.7 mm
-// Shrinkage: ~0.6% (typical for PLA)
-// Adjustment for next print:
-// Option 1: Add 0.3 mm to compensate
-part_height = 50.3;  // Should now print ~50.0 mm
-// OR
-// Option 2: Scale the entire design by 1.006 (0.6% larger)
-scale([1.006, 1.006, 1.006])
-  main_model();
+<p>For each out-of-spec dimension, calculate the correction and update the parameter in <code>src/main.scad</code>. Rebuild and reprint.</p>
+<h3 id="a2--tolerance-stack-up-analysis-2"><a class="header" href="#a2--tolerance-stack-up-analysis-2">A2 — Tolerance Stack-Up Analysis <sup class="footnote-reference" id="fr-2-1"><a href="#footnote-2">2</a></sup></a></h3>
+<pre><code>Scenario: phone stand cradle with three stacked parts:
+- Base plate: designed 5mm, printed 5.12mm (+ 0.12mm)
+- Back brace: designed 60mm, printed 59.87mm (- 0.13mm)
+- Lip:        designed 15mm, printed 15.09mm (+ 0.09mm)
+
+Total stack height: 5.12 + 59.87 + 15.09 = 80.08mm
+Design intent:      5 + 60 + 15            = 80.00mm
+Error:              80.08 - 80.00          = +0.08mm  (within 0.5mm spec — PASS)
+
+Worst case (all errors same direction): 0.12 + 0.13 + 0.09 = 0.34mm — still within spec
 </code></pre>
-<h3 id="tolerance-stack-up-in-assemblies"><a class="header" href="#tolerance-stack-up-in-assemblies">Tolerance Stack-Up in Assemblies</a></h3>
-<p>When multiple parts fit together, measurement errors compound. This is called tolerance stack-up:</p>
-<pre><code>Example: Stackable bins
-Designed: Outer width = 80.0 mm, Rim clearance = 0.6 mm
+<p>Document your own measurements in a similar table.</p>
+<h3 id="a3--add-a-cable-slot-3"><a class="header" href="#a3--add-a-cable-slot-3">A3 — Add a Cable Slot <sup class="footnote-reference" id="fr-3-1"><a href="#footnote-3">3</a></sup></a></h3>
+<p>Extend your phone stand design with a cable slot through the base:</p>
+<pre><code class="language-openscad">cable_slot_w  = 12;   // mm
+cable_slot_d  = 5;    // mm
+cable_slot_z  = -0.001;
 
-If each part prints 0.3 mm undersized:
-Bin A actual: 79.7 mm outer
-Bin B actual: 79.7 mm outer
-
-Stack-up effect: Instead of 0.6 mm clearance, you get 0.9 mm
-Result: Bins stack loosely (might be acceptable or problematic depending on use)
-
-Solution: Design with 0.8 mm clearance initially, measure test prints,
-then adjust if needed.
+// Add to main difference() block:
+translate([base_w/2 - cable_slot_w/2, 0, cable_slot_z])
+  cube([cable_slot_w, cable_slot_d, base_h + 0.002]);
 </code></pre>
-<h3 id="creating-a-measurement-log"><a class="header" href="#creating-a-measurement-log">Creating a Measurement Log</a></h3>
-<p>For any parametric design project, maintain a measurement log:</p>
-<pre><code>Project: Phone Stand Variants
-Date: February 10, 2026
+<h2 id="exercise-set-b-keycap-with-text"><a class="header" href="#exercise-set-b-keycap-with-text">Exercise Set B: Keycap with Text</a></h2>
+<h3 id="b1--build-a-mechanical-keyboard-keycap"><a class="header" href="#b1--build-a-mechanical-keyboard-keycap">B1 — Build a Mechanical Keyboard Keycap</a></h3>
+<pre><code class="language-openscad">// Parametric keycap
+key_w      = 18;
+key_d      = 18;
+key_h      = 7;
+stem_r     = 2.75;  // MX stem: 5.5mm diameter
+stem_h     = 3.8;
+wall       = 1.5;
+label_text = "A";
 
-Part: Base (narrow variant, 60 mm)
-Design dimension: 60.0 mm width
-Trial 1: 59.7 mm
-Trial 2: 59.8 mm
-Trial 3: 59.9 mm
-Average: 59.8 mm
-Deviation: -0.2 mm
-Status:  Acceptable (within +/-0.5 mm tolerance)
-
-Part: Base (wide variant, 120 mm)
-Design dimension: 120.0 mm width
-Trial 1: 119.5 mm
-Trial 2: 119.6 mm
-Trial 3: 119.8 mm
-Average: 119.6 mm
-Deviation: -0.4 mm
-Status:  Acceptable
-
-Part: Lip (lip_height parameter: 15 mm)
-Design dimension: 15.0 mm
-Trial 1: 14.8 mm
-Trial 2: 14.9 mm
-Trial 3: 14.9 mm
-Average: 14.87 mm  14.9 mm
-Deviation: -0.1 mm
-Status:  Excellent
-</code></pre>
-<h3 id="reference-appendix-c"><a class="header" href="#reference-appendix-c">Reference: Appendix C</a></h3>
-<p>For comprehensive QA procedures, assembly testing, and durability validation, see Appendix C: Tolerance Testing &amp; QA Matrix, which covers:</p>
-<ul>
-<li>Go/no-go gauges for functional validation</li>
-<li>Multi-cycle durability testing (snap-fits, hinges)</li>
-<li>Stress testing procedures</li>
-<li>Complete measurement worksheets</li>
-</ul>
-<h2 id="exercise-set-a-guided-projects-with-real-world-constraints"><a class="header" href="#exercise-set-a-guided-projects-with-real-world-constraints">Exercise Set A: Guided Projects with Real-World Constraints</a></h2>
-<h3 id="exercise-a1-the-parametric-phone-stand-beginner"><a class="header" href="#exercise-a1-the-parametric-phone-stand-beginner">Exercise A1: The Parametric Phone Stand (Beginner)</a></h3>
-<p>Objective: Create a phone stand that works for 3+ phone models with different screen sizes.</p>
-<p>Requirements:</p>
-<ul>
-<li>Base must support 300g weight</li>
-<li>Angle must be adjustable (45-75)</li>
-<li>Width must accommodate phones 60-90mm wide</li>
-<li>All parameters at top of file</li>
-</ul>
-<p>Starter Code:</p>
-<pre><code class="language-openscad">// Parametric Phone Stand v1
-// Required parameters
-phone_width = 75;   // mm - adjust for different phones
-base_width = phone_width + 10;  // Add margin
-base_depth = 100;   // mm
-base_thickness = 5; // mm
-stand_angle = 60;   // degrees - adjust viewing angle
-lip_height = 15;    // mm - hold phone at top
-// Module definitions
-module base() {
-  cube([base_width, base_depth, base_thickness]);
-}
-module stand() {
-  rotate([stand_angle, 0, 0])
-    cube([base_width, base_depth, base_thickness]);
-}
-module lip() {
-  translate([0, base_depth - 8, base_thickness])
-    cube([base_width, 8, lip_height]);
-}
-// Assemble
-union() {
-  base();
-  stand();
-  lip();
-}
-</code></pre>
-<p>Tasks:</p>
-<ol>
-<li>Build the model and verify it’s manifold with <code>3dm describe</code></li>
-<li>Generate 3 variants: iPhone (60mm), iPad mini (100mm), Tablet (150mm)</li>
-<li>Test each variant by measuring critical dimensions</li>
-<li>Document which variant works best with real devices</li>
-</ol>
-<p>Success Criteria:</p>
-<ul>
-<li>All 3 variants build without errors</li>
-<li>Printed parts successfully hold test phones</li>
-<li>Dimensions match designs within 0.5mm</li>
-</ul>
-<h3 id="exercise-a2-the-customizable-keycap-set-intermediate"><a class="header" href="#exercise-a2-the-customizable-keycap-set-intermediate">Exercise A2: The Customizable Keycap Set (Intermediate)</a></h3>
-<p>Objective: Design a family of keycaps for a custom keyboard with text, icons, and different profiles.</p>
-<p>Requirements:</p>
-<ul>
-<li>5+ keycap sizes (mm 12-28)</li>
-<li>Support embossed text and numbers</li>
-<li>Optional: icon cutouts</li>
-<li>All printable without supports</li>
-</ul>
-<p>Challenge: Use parametric code to generate all 5 caps from a single design<sup class="footnote-reference" id="fr-1-3"><a href="#footnote-1">1</a></sup>:</p>
-<pre><code class="language-openscad">// Parametric Keycap Generator v1
-// PARAMETERS TO CUSTOMIZE
-cap_size = 18;      // mm - change for different key sizes
-cap_height = 12;    // mm
-wall = 1.2;         // mm
-text_char = "A";    // Character to emboss
-emboss_depth = 0.8; // mm
-// Derived calculations
-inner_size = cap_size - 2*wall;
 module keycap() {
-  // Hollow shell
   difference() {
-    cube([cap_size, cap_size, cap_height], center=false);
-    translate([wall, wall, wall])
-      cube([inner_size, inner_size, cap_height], center=false);
-  }
-}
-module emboss() {
-  translate([cap_size/2, cap_size/2, cap_height - 0.01])
-    linear_extrude(height=emboss_depth)
-      text(text_char, size=cap_size*0.5, 
-           halign="center", valign="center", $fn=32);
-}
-// Main assembly
-union() {
-  keycap();
-  emboss();
-}
-</code></pre>
-<p>Tasks:</p>
-<ol>
-<li>Create variants with <code>cap_size</code> = 12, 16, 18, 20, 24 mm</li>
-<li>Build each variant and verify emboss quality</li>
-<li>Test printability: print 2-3 variants</li>
-<li>Measure final dimensions and compare to design</li>
-</ol>
-<p>Documentation Required:</p>
-<ul>
-<li>Parameter table showing all 5 variants</li>
-<li>Print time estimates for each</li>
-<li>Post-processing notes (support removal, surface finishing)</li>
-</ul>
-<h3 id="exercise-a3-the-stackable-storage-system-advanced"><a class="header" href="#exercise-a3-the-stackable-storage-system-advanced">Exercise A3: The Stackable Storage System (Advanced)</a></h3>
-<p>Objective: Design a modular storage system where bins stack securely and dividers are customizable.</p>
-<p>Requirements:</p>
-<ul>
-<li>Bins must stack without binding</li>
-<li>Dividers must be optional and repositionable</li>
-<li>3+ configurations (small/medium/large)</li>
-<li>Tolerance management documented<sup class="footnote-reference" id="fr-1-4"><a href="#footnote-1">1</a></sup></li>
-</ul>
-<p>Key Features:</p>
-<pre><code class="language-openscad">// Advanced Stackable Bin System
-// PARAMETERS
-bin_width = 80;
-bin_depth = 120;
-bin_height = 60;
-wall_thick = 2;
-rim_height = 3;
-stack_clearance = 0.6;  // KEY TOLERANCE PARAMETER
-divider_thickness = 1.5;
-num_dividers = 2;       // 0 for no dividers
-// Tolerance-critical calculation
-rim_inner_width = bin_width - 2*(wall_thick + stack_clearance);
-rim_inner_depth = bin_depth - 2*(wall_thick + stack_clearance);
-module bin_body() {
-  difference() {
-    cube([bin_width, bin_depth, bin_height]);
-    translate([wall_thick, wall_thick, wall_thick])
-      cube([bin_width - 2*wall_thick, 
-            bin_depth - 2*wall_thick, 
-            bin_height - wall_thick]);
-  }
-}
-module stacking_rim() {
-  difference() {
-    translate([0, 0, bin_height]) 
-      cube([bin_width, bin_depth, rim_height]);
-    translate([wall_thick + stack_clearance, 
-               wall_thick + stack_clearance, 
-               bin_height])
-      cube([rim_inner_width, rim_inner_depth, rim_height]);
-  }
-}
-module dividers() {
-  if (num_dividers &gt; 0) {
-    for (i = [1 : num_dividers]) {
-      y = wall_thick + (i * (bin_depth - 2*wall_thick) / (num_dividers + 1));
-      translate([wall_thick, y, wall_thick])
-        cube([bin_width - 2*wall_thick, divider_thickness, bin_height - 2*wall_thick]);
-    }
-  }
-}
-// Main assembly
-union() {
-  bin_body();
-  stacking_rim();
-  dividers();
-}
-</code></pre>
-<p>Tasks:</p>
-<ol>
-<li>Print 2 identical bins and test stacking</li>
-<li>Create 3 configurations: Small (60x80x40), Medium (80x120x60), Large (120x160x80)</li>
-<li>Test with different <code>stack_clearance</code> values: 0.4, 0.6, 0.8mm</li>
-<li>Document which clearance works best in practice<sup class="footnote-reference" id="fr-1-5"><a href="#footnote-1">1</a></sup></li>
-<li>Print a large bin with 3 dividers and test storage capacity</li>
-</ol>
-<p>Documentation Required:</p>
-<ul>
-<li>Tolerance testing matrix with measurements</li>
-<li>Assembly instructions with photos/descriptions</li>
-<li>Recommendations for printer calibration</li>
-</ul>
-<h2 id="advanced-geometry-techniques-hull-and-minkowski-operations"><a class="header" href="#advanced-geometry-techniques-hull-and-minkowski-operations">Advanced Geometry Techniques: Hull and Minkowski Operations</a></h2>
-<p>Beyond basic primitives and boolean operations, professional designs often use hull and Minkowski operations to create smooth, rounded, and organic shapes. These are essential for creating high-quality, manufacturable designs.</p>
-<h3 id="example-1-hull-operations-for-organic-shapes"><a class="header" href="#example-1-hull-operations-for-organic-shapes">Example 1: Hull Operations for Organic Shapes</a></h3>
-<p>The <code>hull()</code> function creates the convex hull of shapes-imagine wrapping them in plastic wrap. This is perfect for creating smooth, organic forms:</p>
-<pre><code class="language-openscad">// Birdhouse using hull() - from Simplifying 3D Printing textbook
-// Demonstrates combining simple shapes into organic forms
-$fn = 100;
-module generate_bird_shape() {
+    // Keycap body with slight top curve
     hull() {
-        // Create organic shape by blending multiple spheres
-        translate([0, 0, 90])
-        resize([180, 180, 180])
-        minkowski() {
-            cube([10, 10, 10], center = true);
-            rotate([0, 0, 45])
-            cube([25, 25, 55], center = true);
-            cylinder(h = 40, d1 = 30, d2 = 2, center = true);
-        }
-        // Second shape - top of birdhouse
-        translate([0, 0, 150])
-        sphere(65);
+      cube([key_w, key_d, key_h - 2], center=true);
+      translate([0, 0, 1]) cube([key_w - 2, key_d - 2, key_h], center=true);
     }
+    // Hollow inside
+    translate([0, 0, -wall])
+      cube([key_w - 2*wall, key_d - 2*wall, key_h], center=true);
+    // MX stem hole
+    translate([0, 0, -(key_h/2 + 0.001)])
+      cylinder(r=stem_r + 0.1, h=stem_h + 0.001, $fn=16);
+  }
 }
-// Hollow out the interior
-module birdhouse_hollow() {
+
+module stem_mount() {
+  translate([0, 0, -(key_h/2 + stem_h)])
     difference() {
-        generate_bird_shape();
-        // Entrance hole
-        translate([0, 100, 120])
-        rotate([90, 0, 0])
-        cylinder(h = 200, d = 80, center = true, $fn = 64);
-        // Hollow interior
-        translate([0, 0, -2])
-        scale([0.95, 0.95, 1])
-        generate_bird_shape();
+      cylinder(r=stem_r + wall, h=stem_h, $fn=16);
+      cylinder(r=stem_r, h=stem_h + 0.001, $fn=16);
     }
 }
-birdhouse_hollow();
+
+keycap();
+stem_mount();
+
+// Engrave label
+translate([0, 0, key_h/2 - 0.8])
+  linear_extrude(1.2)
+    text(label_text, size=8, font="Liberation Sans:style=Bold",
+         halign="center", valign="center", $fn=4);
 </code></pre>
-<p>Key insights:</p>
-<ul>
-<li><code>hull()</code> automatically creates a smooth envelope around shapes</li>
-<li>Blending multiple spheres creates organic, curved surfaces</li>
-<li>Combining <code>hull()</code> with <code>minkowski()</code> creates sophisticated forms</li>
-<li>Great for product design, containers, and artistic shapes</li>
-</ul>
-<h3 id="example-2-minkowski-operations-for-rounded-edges"><a class="header" href="#example-2-minkowski-operations-for-rounded-edges">Example 2: Minkowski Operations for Rounded Edges</a></h3>
-<p>The <code>minkowski()</code> function adds a shape to every point of another shape. This is perfect for creating rounded edges and fillets without complex calculations:</p>
-<pre><code class="language-openscad">// Parametric Phone Stand with Minkowski Rounding
-// Demonstrates edge rounding for professional appearance
-$fn = 100;
-thickness = 4;
-width = 70;
-depth = 90;
-angle = 65;
-lipheight = 12;
-filletr = 6;  // Fillet radius
-module plate(w, d, t) {
-    cube([w, d, t], center = false);
-}
-module rounded_plate(w, d, t, r) {
-    // Use minkowski to add rounded edges
-    minkowski() {
-        cube([w - 2*r, d - 2*r, t], center = false);
-        cylinder(h = 0.01, r = r, $fn = 40);
-    }
-}
-// Base plate with rounded edges
-module base() {
-    rounded_plate(width, depth, thickness, filletr);
-}
-// Back plate at angle with rounded edges
-module back() {
-    rotate([angle, 0, 0])
-    rounded_plate(width, depth, thickness, filletr);
-}
-// Lip to hold device
-module lip() {
-    translate([0, depth - 8, thickness])
-    cube([width, 8, lipheight], center = false);
-}
-// Main assembly
+<h3 id="b2--validate-with-3dm-describe"><a class="header" href="#b2--validate-with-3dm-describe">B2 — Validate with 3dm describe</a></h3>
+<pre><code class="language-bash">3dm describe
+</code></pre>
+<p>Expected output should confirm the keycap geometry. Document what the AI description says and compare it to your design intent.</p>
+<h3 id="b3--print-and-test"><a class="header" href="#b3--print-and-test">B3 — Print and Test</a></h3>
+<p>Print the keycap and test it on a Cherry MX switch (or compatible). If the stem is too tight, increase <code>stem_r + 0.1</code> to <code>stem_r + 0.15</code>. If too loose, decrease to <code>stem_r + 0.05</code>.</p>
+<h2 id="exercise-set-c-stackable-bins"><a class="header" href="#exercise-set-c-stackable-bins">Exercise Set C: Stackable Bins</a></h2>
+<h3 id="c1--build-a-three-size-bin-set"><a class="header" href="#c1--build-a-three-size-bin-set">C1 — Build a Three-Size Bin Set</a></h3>
+<p>Using the stackable bin module from Lesson 8, generate three sizes:</p>
+<pre><code class="language-openscad">// Small bin
+translate([0, 0, 0])
+  bin_assembly(bin_w=60, bin_d=45, bin_h=30);
+
+// Medium bin
+translate([80, 0, 0])
+  bin_assembly(bin_w=80, bin_d=60, bin_h=40);
+
+// Large bin
+translate([180, 0, 0])
+  bin_assembly(bin_w=100, bin_d=80, bin_h=50);
+</code></pre>
+<h3 id="c2--diagnose-and-fix-non-manifold-geometry"><a class="header" href="#c2--diagnose-and-fix-non-manifold-geometry">C2 — Diagnose and Fix Non-Manifold Geometry</a></h3>
+<p>Non-manifold geometry occurs when faces share edges inconsistently (T-junctions, missing faces, zero-thickness walls). Common causes:</p>
+<pre><code class="language-openscad">// PROBLEM: two cubes share a face exactly — may produce non-manifold edge
+cube([20, 20, 10]);
+translate([20, 0, 0]) cube([20, 20, 10]);  // touching at x=20 — ambiguous edge
+
+// FIX 1: use union()
 union() {
-    base();
-    back();
-    lip();
+  cube([20, 20, 10]);
+  translate([20, 0, 0]) cube([20, 20, 10]);
 }
+
+// FIX 2: overlap slightly
+cube([20.001, 20, 10]);
+translate([20, 0, 0]) cube([20, 20, 10]);
 </code></pre>
-<p>Comparison:</p>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Method</th><th>Complexity</th><th>Speed</th><th>Quality</th><th>Use Case</th></tr>
-</thead>
-<tbody>
-<tr><td>Sharp edges</td><td>Simple</td><td>Fast</td><td>Angular, technical</td><td>Mechanical parts</td></tr>
-<tr><td><code>hull()</code> for rounding</td><td>Medium</td><td>Medium</td><td>Smooth, organic</td><td>Consumer products</td></tr>
-<tr><td><code>minkowski()</code> for fillets</td><td>Medium</td><td>Medium</td><td>Professional</td><td>Finished goods</td></tr>
-<tr><td>Manual fillet modules</td><td>Complex</td><td>Slow</td><td>Precise</td><td>Custom requirements</td></tr>
-</tbody>
-</table>
-</div>
-<h3 id="example-3-combining-hull-and-minkowski"><a class="header" href="#example-3-combining-hull-and-minkowski">Example 3: Combining Hull and Minkowski</a></h3>
-<p>Create sophisticated shapes by combining multiple techniques:</p>
-<pre><code class="language-openscad">// Advanced technique: Hull + Minkowski for professional design
-$fn = 100;
-module advanced_connector() {
-    minkowski() {
-        // Base shape with hull
-        hull() {
-            cube([10, 10, 30], center = true);
-            translate([20, 0, 0])
-            cylinder(h = 30, d = 8, center = true);
-        }
-        // Add small sphere for fillet
-        sphere(r = 2);
+<p>Diagnosis tool:</p>
+<pre><code class="language-bash">3dm describe  # AI will often flag non-manifold geometry
+# Also open STL in slicer and enable "Check for geometry errors"
+</code></pre>
+<h3 id="c3--advanced-geometry-hull-and-minkowski"><a class="header" href="#c3--advanced-geometry-hull-and-minkowski">C3 — Advanced Geometry: hull() and minkowski()</a></h3>
+<pre><code class="language-openscad">// hull() creates a convex envelope — useful for organic shapes
+module smooth_transition() {
+  hull() {
+    translate([0, 0, 0]) cylinder(r=15, h=5, $fn=64);
+    translate([0, 0, 30]) cylinder(r=5, h=2, $fn=64);
+  }
+}
+
+smooth_transition();
+
+// minkowski() adds the shape of a small object to every surface point
+module rounded_hull() {
+  minkowski() {
+    hull() {
+      cylinder(r=10, h=3, $fn=8);      // octagonal prism
+      translate([30, 0, 0]) sphere(r=8, $fn=32);
     }
+    sphere(r=2, $fn=16);  // rounds all edges by 2mm
+  }
 }
-// Use in assembly
-union() {
-    advanced_connector();
-    translate([50, 0, 0])
-    advanced_connector();
-}
+
+rounded_hull();
 </code></pre>
-<p>When to use each technique:</p>
-<ul>
-<li>Use <code>hull()</code> when you need organic, flowing shapes</li>
-<li>Use <code>minkowski()</code> when you need consistent rounding around edges</li>
-<li>Combine them for maximum design flexibility</li>
-<li>Test both approaches and choose based on render time and output quality</li>
-</ul>
-<h3 id="design-best-practices"><a class="header" href="#design-best-practices">Design Best Practices</a></h3>
+<h2 id="quiz--lesson-3dmake10-15-questions"><a class="header" href="#quiz--lesson-3dmake10-15-questions">Quiz — Lesson 3dMake.10 (15 questions)</a></h2>
 <ol>
-<li>Start simple: Create basic geometry first, then add rounding</li>
-<li>Test early: Render at low <code>$fn</code> during design, high <code>$fn</code> before export</li>
-<li>Document parameters: Make rounding radius and other values adjustable</li>
-<li>Validate manifold: Always run <code>3dm describe</code> after using hull/minkowski</li>
-<li>Consider performance: These operations can slow down preview significantly</li>
+<li>What tool do you use to measure printed part dimensions against the design specification?</li>
+<li>What is tolerance stack-up, and why does it matter for multi-part assemblies?</li>
+<li>What causes non-manifold geometry in OpenSCAD, and how do you detect it?</li>
+<li>How does <code>hull()</code> differ from <code>union()</code>?</li>
+<li>What does <code>3dm describe</code> help you verify about your model?</li>
+<li>What does a Cherry MX stem measure in diameter, and what clearance would you add for a slip-fit keycap?</li>
+<li>True or False: <code>find -newer</code> is an event-driven file change detection method.</li>
+<li>If three parts each have ±0.15 mm tolerance, what is the worst-case total error for a three-part stack?</li>
+<li>What does the <code>$fn</code> parameter control in OpenSCAD?</li>
+<li>Describe two methods for fixing non-manifold geometry caused by two touching (but not overlapping) shapes.</li>
+<li>What is the difference between <code>hull()</code> and <code>minkowski()</code> for creating organic shapes? Give one use case for each.</li>
+<li>What does <code>resize([50, 0, 0])</code> do, and why might <code>resize()</code> behave unexpectedly for non-uniform scaling?</li>
+<li>When measuring a printed part with calipers, what is the difference between an inside measurement and an outside measurement, and when does that distinction matter for tolerance analysis?</li>
+<li>Describe the iterative design workflow for dialing in press-fit tolerances: what do you print, what do you measure, and how do you adjust?</li>
+<li>If <code>3dm describe</code> reports “the model appears non-manifold,” what are three possible causes you would investigate in your OpenSCAD code?</li>
 </ol>
-<h2 id="exercise-set-b-common-problems-and-solutions"><a class="header" href="#exercise-set-b-common-problems-and-solutions">Exercise Set B: Common Problems and Solutions</a></h2>
-<h3 id="b1-non-manifold-geometry"><a class="header" href="#b1-non-manifold-geometry">B1: Non-Manifold Geometry</a></h3>
-<p>Problem: Model renders but slicer shows errors or generates invalid G-code</p>
-<p>Diagnosis:</p>
-<pre><code class="language-bash">3dm describe your_model.scad
-# Look for messages like "non-manifold edges" or "thickness near zero"
-</code></pre>
-<p>Common Causes and Fixes:</p>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Issue</th><th>Cause</th><th>Fix</th></tr>
-</thead>
-<tbody>
-<tr><td>Coincident faces</td><td>Shapes touching exactly</td><td>Add 0.001 offset: <code>translate([0, 0, 0.001])</code></td></tr>
-<tr><td>Zero-thickness walls</td><td>Wall too thin to render</td><td>Increase wall: <code>wall = 2.0</code> instead of <code>wall = 0.5</code></td></tr>
-<tr><td>Incomplete shape</td><td>Missing face in difference</td><td>Check boolean operations have complete shells</td></tr>
-<tr><td>Self-intersecting faces</td><td>Shape overlaps itself</td><td>Simplify geometry, use <code>hull()</code> instead of union</td></tr>
-</tbody>
-</table>
-</div>
-<p>Fix Example:</p>
-<pre><code class="language-openscad">// BEFORE (often fails)
-difference(){
-  cube([20, 20, 20]);
-  sphere(r=10);
-}
-// AFTER (usually works)
-difference(){
-  cube([20, 20, 20]);
-  translate([10, 10, 10.001])  // Offset to prevent coincidence
-    sphere(r=10, $fn=32);
-}
-</code></pre>
-<h3 id="b2-print-failures"><a class="header" href="#b2-print-failures">B2: Print Failures</a></h3>
-<p>Problem: Print starts but fails partway through</p>
-<p>Diagnosis:</p>
-<pre><code class="language-bash"># Check G-code for errors
-3dm slice your_model.scad
-
-# Verify model in slicer before printing
-# Preview layer-by-layer
-</code></pre>
-<p>Common Causes:</p>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Symptom</th><th>Cause</th><th>Prevention</th></tr>
-</thead>
-<tbody>
-<tr><td>Nozzle clogs after 10 min</td><td>Too fast extrusion speed</td><td>Reduce speed in slicer</td></tr>
-<tr><td>Parts separate from bed</td><td>Poor first layer adhesion</td><td>Check bed level, clean bed</td></tr>
-<tr><td>Melted plastic strands</td><td>Retraction not working</td><td>Verify retraction in slicer</td></tr>
-<tr><td>Model warping</td><td>Thermal stress, no cooling</td><td>Cool model, improve ventilation</td></tr>
-<tr><td>Supports fail to remove</td><td>Too thin or fused to model</td><td>Thicken supports, adjust angle</td></tr>
-</tbody>
-</table>
-</div>
-<p>Validation Checklist Before Printing:</p>
-<pre><code class="language-bash">#!/bin/bash
-# pre_print_check.sh - Validate before printing
-
-echo "=== Pre-Print Validation ==="
-
-# 1. Check for non-manifold geometry
-echo "Checking geometry..."
-3dm describe src/main.scad | grep -i "non-manifold"
-
-# 2. Check wall thickness
-echo "Checking wall thickness &gt; 1mm..."
-# (This requires slicer analysis - do manually)
-
-# 3. Generate preview
-echo "Generating 2D preview..."
-3dm preview src/main.scad
-
-# 4. Estimate print time
-3dm slice src/main.scad
-echo "Generated G-code: build/main.gcode"
-
-echo "=== Ready to print? ==="
-</code></pre>
-<h3 id="b3-dimensional-inaccuracy"><a class="header" href="#b3-dimensional-inaccuracy">B3: Dimensional Inaccuracy</a></h3>
-<p>Problem: Printed part measures 0.5-2mm different from design</p>
-<p>Cause: Printer calibration, shrinkage, or design tolerance issues<sup class="footnote-reference" id="fr-1-6"><a href="#footnote-1">1</a></sup></p>
-<p>Diagnosis:</p>
-<pre><code class="language-bash"># After printing, measure 3 locations and average
-# Compare to design parameters
-</code></pre>
-<p>Solution Process:</p>
-<pre><code>Step 1: Measure printed part (3 locations)
-        Design: 50mm
-        Measured: 49.7mm, 49.8mm, 49.6mm
-        Average: 49.7mm (0.3mm small)
-
-Step 2: Calculate correction factor
-        Correction = 50.0 / 49.7 = 1.0060 (0.6% larger)
-
-Step 3: Apply to design
-        New param = old_param * 1.0060
-
-Step 4: Reprint and verify
-</code></pre>
-<p>Prevention:</p>
-<ul>
-<li>Use standard calibration models (benchy, calibration cube)</li>
-<li>Document printer baseline dimensions</li>
-<li>Apply material-specific shrinkage factors</li>
-</ul>
-<h2 id="exercise-set-c-validation-and-documentation"><a class="header" href="#exercise-set-c-validation-and-documentation">Exercise Set C: Validation and Documentation</a></h2>
-<h3 id="c1-design-review-checklist"><a class="header" href="#c1-design-review-checklist">C1: Design Review Checklist</a></h3>
-<p>After completing any design, validate using this checklist:</p>
-<pre><code class="language-markdown"># Design Review Checklist
-
-## Geometry Validation
-- [ ] Model builds without errors (`3dm build`)
-- [ ] No non-manifold edges (`3dm describe` shows no warnings)
-- [ ] All walls  1.5mm thick
-- [ ] No floating parts or disconnected geometry
-- [ ] All features clearly serve a purpose
-
-## Parametric Design
-- [ ] All dimensions are parameters (no hard-coded values)
-- [ ] Parameter names are descriptive (e.g., `wall_thickness` not `w`)
-- [ ] Parameters have units comments (e.g., `wall = 2; // mm`)
-- [ ] Derived values calculated from parameters (e.g., `inner = outer - 2*wall`)
-
-## Printability
-- [ ] Overhangs  45 or have support strategy
-- [ ] No fine details &lt; 0.5mm
-- [ ] Assembly features tested (snap-fits, interlocks)
-- [ ] Post-processing needs documented
-
-## Documentation
-- [ ] README describes design purpose and key parameters
-- [ ] Usage examples provided
-- [ ] Known limitations documented
-- [ ] Assembly instructions included (if multi-part)
-
-## Accessibility
-- [ ] Model dimensions available in text form
-- [ ] AI description (`3dm describe`) is useful
-- [ ] Assembly process described non-visually
-- [ ] No features rely solely on visual inspection
-</code></pre>
-<h3 id="c2-troubleshooting-documentation-template"><a class="header" href="#c2-troubleshooting-documentation-template">C2: Troubleshooting Documentation Template</a></h3>
-<p>After solving any issue, document it:</p>
-<pre><code class="language-markdown"># Troubleshooting Record
-
-## Issue: [Describe the problem]
-Date: YYYY-MM-DD
-Project: [Project name]
-
-## Symptoms
-- [What did you observe?]
-- [When did it happen?]
-
-## Root Cause
-[Analysis of why it happened]
-
-## Solution Applied
-[Exact steps to fix]
-
-## Verification
-[How did you confirm it worked?]
-
-## Prevention
-[How to avoid this in future designs]
-
-## References
-- [Related documentation]
-- [Similar issues]
-</code></pre>
-<h2 id="checkpoint"><a class="header" href="#checkpoint">Checkpoint</a></h2>
-<ul>
-<li>After Exercise A1, you have a working phone stand</li>
-<li>After Exercise A2, you have a parametric keycap set</li>
-<li>After Exercise A3, you have a stackable bin system with tolerance data</li>
-<li>After Exercise B, you understand common failure modes</li>
-<li>After Exercise C, you have documentation habits</li>
-</ul>
-<h2 id="quiz---lesson-3dmake10-10-questions"><a class="header" href="#quiz---lesson-3dmake10-10-questions">Quiz - Lesson 3dMake.10 (10 questions)</a></h2>
+<h2 id="extension-problems-15"><a class="header" href="#extension-problems-15">Extension Problems (15)</a></h2>
 <ol>
-<li>What is the first diagnostic step when a model fails to slice<sup class="footnote-reference" id="fr-2-2"><a href="#footnote-2">2</a></sup>?</li>
-<li>Explain the 0.001 offset rule and when to apply it<sup class="footnote-reference" id="fr-2-3"><a href="#footnote-2">2</a></sup>.</li>
-<li>How would you verify that a wall is thick enough before printing<sup class="footnote-reference" id="fr-1-7"><a href="#footnote-1">1</a></sup>?</li>
-<li>What measurement method would you use to validate dimensional accuracy<sup class="footnote-reference" id="fr-1-8"><a href="#footnote-1">1</a></sup>?</li>
-<li>Describe what happens when stack_clearance is too small or too large<sup class="footnote-reference" id="fr-1-9"><a href="#footnote-1">1</a></sup>.</li>
-<li>True or False: Parametric design makes it harder to troubleshoot issues.</li>
-<li>How would you document a design so that others can modify and reprint it<sup class="footnote-reference" id="fr-1-10"><a href="#footnote-1">1</a></sup>?</li>
-<li>What should you check in a slicer preview before sending a file to print<sup class="footnote-reference" id="fr-2-4"><a href="#footnote-2">2</a></sup>?</li>
-<li>How would you use <code>3dm describe</code> to find design flaws<sup class="footnote-reference" id="fr-3-2"><a href="#footnote-3">3</a></sup>?</li>
-<li>Describe a complete workflow from problem diagnosis to solution verification<sup class="footnote-reference" id="fr-1-11"><a href="#footnote-1">1</a></sup>.</li>
+<li>Create a tolerance sensitivity study: build 5 keycaps with stem clearance from 0.05–0.25 mm in 0.05 mm increments, print them, and record which values fit your switches.</li>
+<li>Design a go/no-go gauge for a 10 mm nominal hole: a part with a “go” pin sized for slip-fit and a “no-go” pin sized for interference fit.</li>
+<li>Write a printer calibration SOP (standard operating procedure): bed leveling, first-layer calibration, and dimension verification. Include a measurement checklist.</li>
+<li>Build a three-tier stackable storage system for art supplies. Each tier has a different inner grid.</li>
+<li>Conduct a tolerance stack-up analysis for your stackable bin system. Calculate worst-case misalignment.</li>
+<li>Build a parametric test coupon that tests four different wall thicknesses (0.8, 1.2, 1.6, 2.0 mm) in a single print.</li>
+<li>Design a caliper stand: a holder that holds your digital calipers at a comfortable angle for one-handed operation.</li>
+<li>Build a non-manifold error catalog: intentionally create 5 different types of non-manifold geometry, document how each was created and how to fix it.</li>
+<li>Use <code>hull()</code> to design a smooth ergonomic tool handle and compare it to a simple cylinder handle.</li>
+<li>Create a printability checklist for new designs: overhangs, wall thickness, minimum feature size, support requirements. Apply it to your keycap and bin designs.</li>
+<li>Research the <code>resize()</code> function in OpenSCAD. Build an example showing how it behaves differently from <code>scale()</code> for non-uniform resizing.</li>
+<li>Design a multi-part assembly tutorial: a three-piece interlocking puzzle that teaches the concepts of tolerance, alignment, and slip-fit.</li>
+<li>Build a “measurement worksheet” template in OpenSCAD: render a flat sheet that lists all key dimensions of a part as text, for printing alongside the part.</li>
+<li>Create a chi-squared goodness-of-fit test for your printer’s dimensional accuracy: measure 20 prints of the same part and determine if the errors are normally distributed.</li>
+<li>Write a comprehensive troubleshooting guide covering the 10 most common 3D printing failures you have encountered (or researched), with causes, prevention, and fixes.</li>
 </ol>
-<h2 id="extension-problems-10"><a class="header" href="#extension-problems-10">Extension Problems (10)</a></h2>
-<ol>
-<li>Complete all three exercises (A1, A2, A3) and document results<sup class="footnote-reference" id="fr-1-12"><a href="#footnote-1">1</a></sup>.</li>
-<li>Print and test 2+ variants of your phone stand; measure and compare<sup class="footnote-reference" id="fr-1-13"><a href="#footnote-1">1</a></sup>.</li>
-<li>Conduct a tolerance sensitivity study: test bins with 3+ clearance values<sup class="footnote-reference" id="fr-1-14"><a href="#footnote-1">1</a></sup>.</li>
-<li>Create a troubleshooting guide for your specific printer: common issues and fixes<sup class="footnote-reference" id="fr-2-5"><a href="#footnote-2">2</a></sup>.</li>
-<li>Design a validation workflow: automated checks before printing<sup class="footnote-reference" id="fr-1-15"><a href="#footnote-1">1</a></sup>.</li>
-<li>Build a design documentation database: parameter ranges, material recommendations, print settings<sup class="footnote-reference" id="fr-1-16"><a href="#footnote-1">1</a></sup>.</li>
-<li>Create before/after case studies of design problems and solutions<sup class="footnote-reference" id="fr-1-17"><a href="#footnote-1">1</a></sup>.</li>
-<li>Develop a printer calibration procedure and document baseline dimensions<sup class="footnote-reference" id="fr-1-18"><a href="#footnote-1">1</a></sup>.</li>
-<li>Design a quality assurance system: define metrics, measurement methods, acceptance criteria<sup class="footnote-reference" id="fr-1-19"><a href="#footnote-1">1</a></sup>.</li>
-<li>Write a comprehensive troubleshooting and maintenance guide: diagnostics, solutions, prevention strategies, and accessibility considerations.</li>
-</ol>
-<p>References</p>
+<h2 id="references-and-helpful-resources"><a class="header" href="#references-and-helpful-resources">References and Helpful Resources</a></h2>
+<h3 id="supplemental-resources"><a class="header" href="#supplemental-resources">Supplemental Resources</a></h3>
+<ul>
+<li><a href="../../assets/Programming_with_OpenSCAD.epub">Programming with OpenSCAD EPUB Textbook</a> — Troubleshooting and advanced geometry chapters</li>
+<li><a href="https://github.com/ProgrammingWithOpenSCAD/CodeSolutions">CodeSolutions Repository</a> — Worked practice exercises</li>
+<li><a href="https://programmingwithopenscad.github.io/quick-reference.html">OpenSCAD Quick Reference</a> — Function reference</li>
+<li><a href="../../assets/3dMake_Foundation/master-rubric.html">Master Rubric</a> — Assessment criteria for practice exercises</li>
+</ul>
 <hr>
 <ol class="footnote-definition">
 <li id="footnote-1">
-<p>OpenSCAD Best Practices - <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/FAQ">https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/FAQ</a> <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a> <a href="#fr-1-3">↩3</a> <a href="#fr-1-4">↩4</a> <a href="#fr-1-5">↩5</a> <a href="#fr-1-6">↩6</a> <a href="#fr-1-7">↩7</a> <a href="#fr-1-8">↩8</a> <a href="#fr-1-9">↩9</a> <a href="#fr-1-10">↩10</a> <a href="#fr-1-11">↩11</a> <a href="#fr-1-12">↩12</a> <a href="#fr-1-13">↩13</a> <a href="#fr-1-14">↩14</a> <a href="#fr-1-15">↩15</a> <a href="#fr-1-16">↩16</a> <a href="#fr-1-17">↩17</a> <a href="#fr-1-18">↩18</a> <a href="#fr-1-19">↩19</a></p>
+<p>OpenSCAD User Manual — Hull and Minkowski. <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Minkowski_and_Hull">https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Minkowski_and_Hull</a> <a href="#fr-1-1">↩</a></p>
 </li>
 <li id="footnote-2">
-<p>3D Printing Troubleshooting Guide - <a href="https://www.prusa3d.com/support/">https://www.prusa3d.com/support/</a> <a href="#fr-2-1">↩</a> <a href="#fr-2-2">↩2</a> <a href="#fr-2-3">↩3</a> <a href="#fr-2-4">↩4</a> <a href="#fr-2-5">↩5</a></p>
+<p>Digital Calipers Measurement Technique — General metrology reference. See also: <a href="../../assets/3dMake_Foundation/measurement_worksheet.html">Measurement Worksheet Asset</a> <a href="#fr-2-1">↩</a></p>
 </li>
 <li id="footnote-3">
-<p>3DMake Documentation - <a href="https://github.com/tdeck/3dmake/wiki/Troubleshooting">https://github.com/tdeck/3dmake/wiki/Troubleshooting</a> <a href="#fr-3-1">↩</a> <a href="#fr-3-2">↩2</a></p>
+<p>3DMake GitHub Repository — Command reference including <code>3dm describe</code>. <a href="https://github.com/tdeck/3dmake">https://github.com/tdeck/3dmake</a> <a href="#fr-3-1">↩</a></p>
 </li>
 </ol>
 

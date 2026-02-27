@@ -1,209 +1,129 @@
-# Further Reading
+# References
 
-- [http://github.com/tdeck/3dmake](http://github.com/tdeck/3dmake)
-- [https://all3dp.com/1/3d-printer-filament-types-3d-printing-3d-filament/](https://all3dp.com/1/3d-printer-filament-types-3d-printing-3d-filament/)
-- [https://bambulab.com/en/download](https://bambulab.com/en/download)
-- [https://bambulab.com/en/download/studio](https://bambulab.com/en/download/studio)
-- [https://code.visualstudio.com/](https://code.visualstudio.com/)
-- [https://code.visualstudio.com/docs/editor/accessibility](https://code.visualstudio.com/docs/editor/accessibility)
-- [https://community.bambulab.com/](https://community.bambulab.com/)
-- [https://community.prusa3d.com/](https://community.prusa3d.com/)
-- [https://creativecommons.org/licenses/by-nc-nd/4.0/](https://creativecommons.org/licenses/by-nc-nd/4.0/)
-- [https://discord.gg/F2Nx2VxTB7](https://discord.gg/F2Nx2VxTB7)
-- [https://docs.cloud.google.com/vertex-ai/generative-ai/docs/start/get-started-with-gemini-3](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/start/get-started-with-gemini-3)
-- [https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cd](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cd)
-- [https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/dir](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/dir)
-- [https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands-glossary](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands-glossary)
-- [https://docs.microsoft.com/powershell](https://docs.microsoft.com/powershell)
-- [https://docs.microsoft.com/powershell/](https://docs.microsoft.com/powershell/)
-- [https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_error_handling](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_error_handling)
-- [https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_foreach](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_foreach)
-- [https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_functions_advanced](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_functions_advanced)
-- [https://docs.microsoft.com/powershell/scripting/](https://docs.microsoft.com/powershell/scripting/)
-- [https://docs.microsoft.com/windows-server/administration/windows-commands/windows-commands](https://docs.microsoft.com/windows-server/administration/windows-commands/windows-commands)
-- [https://docs.microsoft.com/windows/terminal/](https://docs.microsoft.com/windows/terminal/)
-- [https://docs.prusa3d.com/en/](https://docs.prusa3d.com/en/)
-- [https://docs.prusa3d.com/en/guide/39012-validation-tools/](https://docs.prusa3d.com/en/guide/39012-validation-tools/)
-- [https://docsbot.ai/prompts/technical/openscad-prompt-creation](https://docsbot.ai/prompts/technical/openscad-prompt-creation)
-- [https://doh.wa.gov/community-and-environment/schools/3d-printers](https://doh.wa.gov/community-and-environment/schools/3d-printers)
-- [https://ehs.osu.edu/kb/3d-printer-safety](https://ehs.osu.edu/kb/3d-printer-safety)
-- [https://ehs.utk.edu/index.php/table-of-policies-plans-procedures-guides/3d-printer-safety/](https://ehs.utk.edu/index.php/table-of-policies-plans-procedures-guides/3d-printer-safety/)
-- [https://en.wikibooks.org/wiki/OpenSCAD_User_Manual](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual)
-- [https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/FAQ](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/FAQ)
-- [https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Text](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Text)
-- [https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language)
-- [https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Modules](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Modules)
-- [https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Variables](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#Variables)
-- [https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations)
-- [https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#minkowski](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#minkowski)
-- [https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_the_2D_Subsystem](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_the_2D_Subsystem)
-- [https://en.wikibooks.org/wiki/OpenSCADUserManual](https://en.wikibooks.org/wiki/OpenSCADUserManual)
-- [https://en.wikipedia.org/wiki/Fractal](https://en.wikipedia.org/wiki/Fractal)
-- [https://example.com](https://example.com)
-- [https://forum.openscad.org/](https://forum.openscad.org/)
-- [https://git-scm.com](https://git-scm.com)
-- [https://git-scm.com/](https://git-scm.com/)
-- [https://git-scm.com/book/](https://git-scm.com/book/)
-- [https://git-scm.com/book/en/v2](https://git-scm.com/book/en/v2)
-- [https://git-scm.com/book/en/v2/Getting-Started-Installing-Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-- [https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository)
-- [https://git-scm.com/download/win](https://git-scm.com/download/win)
-- [https://gitforwindows.org/](https://gitforwindows.org/)
-- [https://github.com/BelfrySCAD/BOSL2](https://github.com/BelfrySCAD/BOSL2)
-- [https://github.com/ProgrammingWithOpenSCAD/CodeSolutions](https://github.com/ProgrammingWithOpenSCAD/CodeSolutions)
-- [https://github.com/ProgrammingWithOpenSCAD/CodeSolutions/tree/main/1_3D-Shapes](https://github.com/ProgrammingWithOpenSCAD/CodeSolutions/tree/main/1_3D-Shapes)
-- [https://github.com/ProgrammingWithOpenSCAD/CodeSolutions/tree/main/5_Modules](https://github.com/ProgrammingWithOpenSCAD/CodeSolutions/tree/main/5_Modules)
-- [https://github.com/ProgrammingWithOpenSCAD/CodeSolutions/tree/main/AppendixB_OpenSCAD-Visual-Reference](https://github.com/ProgrammingWithOpenSCAD/CodeSolutions/tree/main/AppendixB_OpenSCAD-Visual-Reference)
-- [https://github.com/revarbat/BOSL/wiki](https://github.com/revarbat/BOSL/wiki)
-- [https://github.com/revarbat/BOSL2](https://github.com/revarbat/BOSL2)
-- [https://github.com/SoftFever/OrcaSlicer](https://github.com/SoftFever/OrcaSlicer)
-- [https://github.com/SoftFever/OrcaSlicer/releases](https://github.com/SoftFever/OrcaSlicer/releases)
-- [https://github.com/SoftFever/OrcaSlicer/wiki](https://github.com/SoftFever/OrcaSlicer/wiki)
-- [https://github.com/supermerill/SuperSlicer](https://github.com/supermerill/SuperSlicer)
-- [https://github.com/tdeck/3dmake](https://github.com/tdeck/3dmake)
-- [https://github.com/tdeck/3dmake/blob/main/docs/automation.md](https://github.com/tdeck/3dmake/blob/main/docs/automation.md)
-- [https://github.com/tdeck/3dmake/blob/main/docs/examples.md](https://github.com/tdeck/3dmake/blob/main/docs/examples.md)
-- [https://github.com/tdeck/3dmake/blob/main/docs/terminalquickstart.md](https://github.com/tdeck/3dmake/blob/main/docs/terminalquickstart.md)
-- [https://github.com/tdeck/3dmake/blob/main/e2e_test.py](https://github.com/tdeck/3dmake/blob/main/e2e_test.py)
-- [https://github.com/tdeck/3dmake/releases/latest/download/3dmakelinux.tar.gz](https://github.com/tdeck/3dmake/releases/latest/download/3dmakelinux.tar.gz)
-- [https://github.com/tdeck/3dmake/releases/latest/download/3dmakewindows.zip](https://github.com/tdeck/3dmake/releases/latest/download/3dmakewindows.zip)
-- [https://github.com/tdeck/3dmake/wiki/Library-Management](https://github.com/tdeck/3dmake/wiki/Library-Management)
-- [https://github.com/tdeck/3dmake/wiki/Troubleshooting](https://github.com/tdeck/3dmake/wiki/Troubleshooting)
-- [https://help.prusa3d.com](https://help.prusa3d.com)
-- [https://help.prusa3d.com/category/prusaslicer_204](https://help.prusa3d.com/category/prusaslicer_204)
-- [https://help.prusa3d.com/materials](https://help.prusa3d.com/materials)
-- [https://learn.cadhub.xyz/blog/openscad-review/](https://learn.cadhub.xyz/blog/openscad-review/)
-- [https://learn.microsoft.com/en-us/training/modules/](https://learn.microsoft.com/en-us/training/modules/)
-- [https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/)
-- [https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cd](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cd)
-- [https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmd](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cmd)
-- [https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/doskey](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/doskey)
-- [https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/find](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/find)
-- [https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/findstr](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/findstr)
-- [https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/path](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/path)
-- [https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/redirection](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/redirection)
-- [https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/set](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/set)
-- [https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/setx](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/setx)
-- [https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/start](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/start)
-- [https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/type](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/type)
-- [https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/where](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/where)
-- [https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands-glossary](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands-glossary)
-- [https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_operators#call-operator-](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_operators#call-operator-)
-- [https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_profiles](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/about/about_profiles)
-- [https://learn.microsoft.com/powershell/module/microsoft.powershell.core/get-command](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/get-command)
-- [https://learn.microsoft.com/powershell/module/microsoft.powershell.core/invoke-history](https://learn.microsoft.com/powershell/module/microsoft.powershell.core/invoke-history)
-- [https://learn.microsoft.com/powershell/module/microsoft.powershell.management/copy-item](https://learn.microsoft.com/powershell/module/microsoft.powershell.management/copy-item)
-- [https://learn.microsoft.com/powershell/module/microsoft.powershell.management/get-childitem](https://learn.microsoft.com/powershell/module/microsoft.powershell.management/get-childitem)
-- [https://learn.microsoft.com/powershell/module/microsoft.powershell.management/get-content](https://learn.microsoft.com/powershell/module/microsoft.powershell.management/get-content)
-- [https://learn.microsoft.com/powershell/module/microsoft.powershell.management/new-item](https://learn.microsoft.com/powershell/module/microsoft.powershell.management/new-item)
-- [https://learn.microsoft.com/powershell/module/microsoft.powershell.management/remove-item](https://learn.microsoft.com/powershell/module/microsoft.powershell.management/remove-item)
-- [https://learn.microsoft.com/powershell/module/microsoft.powershell.utility/measure-object](https://learn.microsoft.com/powershell/module/microsoft.powershell.utility/measure-object)
-- [https://learn.microsoft.com/powershell/module/microsoft.powershell.utility/out-file](https://learn.microsoft.com/powershell/module/microsoft.powershell.utility/out-file)
-- [https://learn.microsoft.com/powershell/module/microsoft.powershell.utility/select-string](https://learn.microsoft.com/powershell/module/microsoft.powershell.utility/select-string)
-- [https://learn.microsoft.com/powershell/module/microsoft.powershell.utility/set-alias](https://learn.microsoft.com/powershell/module/microsoft.powershell.utility/set-alias)
-- [https://learn.microsoft.com/powershell/module/psreadline/about/about_psreadline_functions](https://learn.microsoft.com/powershell/module/psreadline/about/about_psreadline_functions)
-- [https://learn.microsoft.com/powershell/scripting/learn/shell/manipulating-items](https://learn.microsoft.com/powershell/scripting/learn/shell/manipulating-items)
-- [https://learn.microsoft.com/powershell/scripting/learn/shell/navigate-the-filesystem](https://learn.microsoft.com/powershell/scripting/learn/shell/navigate-the-filesystem)
-- [https://learn.microsoft.com/powershell/scripting/learn/shell/using-environment-variables](https://learn.microsoft.com/powershell/scripting/learn/shell/using-environment-variables)
-- [https://learn.microsoft.com/powershell/scripting/learn/shell/using-history](https://learn.microsoft.com/powershell/scripting/learn/shell/using-history)
-- [https://learn.microsoft.com/powershell/scripting/learn/shell/using-the-pipeline](https://learn.microsoft.com/powershell/scripting/learn/shell/using-the-pipeline)
-- [https://learn.microsoft.com/powershell/scripting/learn/shell/using-wildcards](https://learn.microsoft.com/powershell/scripting/learn/shell/using-wildcards)
-- [https://learn.microsoft.com/powershell/scripting/overview](https://learn.microsoft.com/powershell/scripting/overview)
-- [https://learn.microsoft.com/powershell/scripting/windows-powershell/ise/accessibility-in-windows-powershell-ise](https://learn.microsoft.com/powershell/scripting/windows-powershell/ise/accessibility-in-windows-powershell-ise)
-- [https://lib.utah.edu/protospace.php](https://lib.utah.edu/protospace.php)
-- [https://linux.die.net/man/1/which](https://linux.die.net/man/1/which)
-- [https://linuxcommand.org/](https://linuxcommand.org/)
-- [https://linuxcommand.org/lc3lts0020.php](https://linuxcommand.org/lc3lts0020.php)
-- [https://linuxcommand.org/lc3lts0050.php](https://linuxcommand.org/lc3lts0050.php)
-- [https://linuxize.com/post/how-to-add-directory-to-path-in-linux/](https://linuxize.com/post/how-to-add-directory-to-path-in-linux/)
-- [https://linuxize.com/post/linux-cd-command/](https://linuxize.com/post/linux-cd-command/)
-- [https://makesaltlake.org/](https://makesaltlake.org/)
-- [https://mrhunsaker.github.io/VI_3DMake_OpenSCAD_Curriculum/](https://mrhunsaker.github.io/VI_3DMake_OpenSCAD_Curriculum/)
-- [https://news.ycombinator.com/item?id=46338565](https://news.ycombinator.com/item?id=46338565)
-- [https://nostarch.com/programmingopenscad](https://nostarch.com/programmingopenscad)
-- [https://notepad-plus-plus.org/](https://notepad-plus-plus.org/)
-- [https://notepad-plus-plus.org/downloads/](https://notepad-plus-plus.org/downloads/)
-- [https://notepad-plus-plus.org/online-help/](https://notepad-plus-plus.org/online-help/)
-- [https://openscad.org](https://openscad.org)
-- [https://openscad.org/cheatsheet/](https://openscad.org/cheatsheet/)
-- [https://openscad.org/documentation.html](https://openscad.org/documentation.html)
-- [https://openscad.org/downloads.html](https://openscad.org/downloads.html)
-- [https://poshcode.gitbook.io/powershell-faq/src/getting-started/environment-variables](https://poshcode.gitbook.io/powershell-faq/src/getting-started/environment-variables)
-- [https://poshcode.gitbook.io/powershell-faq/src/getting-started/file-management](https://poshcode.gitbook.io/powershell-faq/src/getting-started/file-management)
-- [https://poshcode.gitbook.io/powershell-faq/src/getting-started/filesystem-navigation](https://poshcode.gitbook.io/powershell-faq/src/getting-started/filesystem-navigation)
-- [https://programmingwithopenscad.github.io/](https://programmingwithopenscad.github.io/)
-- [https://programmingwithopenscad.github.io/learning.html](https://programmingwithopenscad.github.io/learning.html)
-- [https://programmingwithopenscad.github.io/quick-reference.html](https://programmingwithopenscad.github.io/quick-reference.html)
-- [https://rust-lang.github.io/mdBook/](https://rust-lang.github.io/mdBook/)
-- [https://services.slcpl.org/creativelab](https://services.slcpl.org/creativelab)
-- [https://stratasys.com/](https://stratasys.com/)
-- [https://superuser.com/questions/167461/what-are-path-separators-on-windows](https://superuser.com/questions/167461/what-are-path-separators-on-windows)
-- [https://support.freedomscientific.com/Content/Documents/Manuals/JAWS/JAWS-Screen-Reader-Help.pdf](https://support.freedomscientific.com/Content/Documents/Manuals/JAWS/JAWS-Screen-Reader-Help.pdf)
-- [https://support.microsoft.com/en-us/help/22798/windows-11-narrator-get-started](https://support.microsoft.com/en-us/help/22798/windows-11-narrator-get-started)
-- [https://support.microsoft.com/narrator](https://support.microsoft.com/narrator)
-- [https://theprusaslicer.net/how-to-use-prusaslicer/](https://theprusaslicer.net/how-to-use-prusaslicer/)
-- [https://thomaspietrzak.com/bibliography/gonzalez24.pdf](https://thomaspietrzak.com/bibliography/gonzalez24.pdf)
-- [https://tldp.org/LDP/Bash-Beginners-Guide/html/](https://tldp.org/LDP/Bash-Beginners-Guide/html/)
-- [https://ultimaker.com/software/ultimaker-cura](https://ultimaker.com/software/ultimaker-cura)
-- [https://wiki.bambulab.com](https://wiki.bambulab.com)
-- [https://www.a11y-101.com/design/inclusive-documentation](https://www.a11y-101.com/design/inclusive-documentation)
-- [https://www.aiha.org/](https://www.aiha.org/)
-- [https://www.all3dp.com/guides/](https://www.all3dp.com/guides/)
-- [https://www.anycubic.com/](https://www.anycubic.com/)
-- [https://www.apache.org/licenses/LICENSE-2.0](https://www.apache.org/licenses/LICENSE-2.0)
-- [https://www.autodesk.com/products/fusion-360](https://www.autodesk.com/products/fusion-360)
-- [https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html](https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html)
-- [https://www.classcentral.com/subject/openscad](https://www.classcentral.com/subject/openscad)
-- [https://www.freedomscientific.com/](https://www.freedomscientific.com/)
-- [https://www.freedomscientific.com/products/software/jaws/](https://www.freedomscientific.com/products/software/jaws/)
-- [https://www.freedomscientific.com/support/](https://www.freedomscientific.com/support/)
-- [https://www.gnu.org/software/bash/manual/](https://www.gnu.org/software/bash/manual/)
-- [https://www.gnu.org/software/bash/manual/bash.html](https://www.gnu.org/software/bash/manual/bash.html)
-- [https://www.gnu.org/software/bash/manual/bash.html#Basic-Shell-Features](https://www.gnu.org/software/bash/manual/bash.html#Basic-Shell-Features)
-- [https://www.gnu.org/software/bash/manual/htmlnode/Aliases.html](https://www.gnu.org/software/bash/manual/htmlnode/Aliases.html)
-- [https://www.gnu.org/software/bash/manual/htmlnode/Bash-History-Builtins.html](https://www.gnu.org/software/bash/manual/htmlnode/Bash-History-Builtins.html)
-- [https://www.gnu.org/software/bash/manual/htmlnode/Bash-History-Facilities.html](https://www.gnu.org/software/bash/manual/htmlnode/Bash-History-Facilities.html)
-- [https://www.gnu.org/software/bash/manual/htmlnode/Bash-Startup-Files.html](https://www.gnu.org/software/bash/manual/htmlnode/Bash-Startup-Files.html)
-- [https://www.gnu.org/software/bash/manual/htmlnode/Bourne-Shell-Builtins.html](https://www.gnu.org/software/bash/manual/htmlnode/Bourne-Shell-Builtins.html)
-- [https://www.gnu.org/software/bash/manual/htmlnode/Commands-For-Completion.html](https://www.gnu.org/software/bash/manual/htmlnode/Commands-For-Completion.html)
-- [https://www.gnu.org/software/bash/manual/htmlnode/Controlling-the-Prompt.html](https://www.gnu.org/software/bash/manual/htmlnode/Controlling-the-Prompt.html)
-- [https://www.gnu.org/software/bash/manual/htmlnode/Environment.html](https://www.gnu.org/software/bash/manual/htmlnode/Environment.html)
-- [https://www.gnu.org/software/bash/manual/htmlnode/Executing-Scripts.html](https://www.gnu.org/software/bash/manual/htmlnode/Executing-Scripts.html)
-- [https://www.gnu.org/software/bash/manual/htmlnode/Pattern-Matching.html](https://www.gnu.org/software/bash/manual/htmlnode/Pattern-Matching.html)
-- [https://www.gnu.org/software/bash/manual/htmlnode/Pipelines.html](https://www.gnu.org/software/bash/manual/htmlnode/Pipelines.html)
-- [https://www.gnu.org/software/bash/manual/htmlnode/Redirections.html](https://www.gnu.org/software/bash/manual/htmlnode/Redirections.html)
-- [https://www.gnu.org/software/coreutils/manual/](https://www.gnu.org/software/coreutils/manual/)
-- [https://www.gnu.org/software/coreutils/manual/html_node/cat-invocation.html](https://www.gnu.org/software/coreutils/manual/html_node/cat-invocation.html)
-- [https://www.gnu.org/software/coreutils/manual/html_node/cp-invocation.html](https://www.gnu.org/software/coreutils/manual/html_node/cp-invocation.html)
-- [https://www.gnu.org/software/coreutils/manual/html_node/ls-invocation.html](https://www.gnu.org/software/coreutils/manual/html_node/ls-invocation.html)
-- [https://www.gnu.org/software/coreutils/manual/html_node/mv-invocation.html](https://www.gnu.org/software/coreutils/manual/html_node/mv-invocation.html)
-- [https://www.gnu.org/software/coreutils/manual/html_node/rm-invocation.html](https://www.gnu.org/software/coreutils/manual/html_node/rm-invocation.html)
-- [https://www.gnu.org/software/coreutils/manual/html_node/touch-invocation.html](https://www.gnu.org/software/coreutils/manual/html_node/touch-invocation.html)
-- [https://www.gnu.org/software/coreutils/manual/html_node/wc-invocation.html](https://www.gnu.org/software/coreutils/manual/html_node/wc-invocation.html)
-- [https://www.gnu.org/software/grep/manual/grep.html](https://www.gnu.org/software/grep/manual/grep.html)
-- [https://www.hubs.com/knowledge-base/what-is-fdm-3d-printing/](https://www.hubs.com/knowledge-base/what-is-fdm-3d-printing/)
-- [https://www.ideo.com/perspectives/design-thinking](https://www.ideo.com/perspectives/design-thinking)
-- [https://www.khanacademy.org/computing/computer-science/algorithms](https://www.khanacademy.org/computing/computer-science/algorithms)
-- [https://www.matterhackers.com/3d-printer-filament-compare](https://www.matterhackers.com/3d-printer-filament-compare)
-- [https://www.mekanizmalar.com/](https://www.mekanizmalar.com/)
-- [https://www.nist.gov/publications](https://www.nist.gov/publications)
-- [https://www.nvaccess.org/](https://www.nvaccess.org/)
-- [https://www.nvaccess.org/documentation/](https://www.nvaccess.org/documentation/)
-- [https://www.nvaccess.org/files/nvda/documentation/userGuide.html](https://www.nvaccess.org/files/nvda/documentation/userGuide.html)
-- [https://www.packtpub.com/en-us/product/simplifying-3d-printing-with-openscad-9781801813174](https://www.packtpub.com/en-us/product/simplifying-3d-printing-with-openscad-9781801813174)
-- [https://www.productschool.com/blog/requirements/](https://www.productschool.com/blog/requirements/)
-- [https://www.prusa3d.com/page/prusaslicer424/](https://www.prusa3d.com/page/prusaslicer424/)
-- [https://www.prusa3d.com/page/prusaslicer_410/](https://www.prusa3d.com/page/prusaslicer_410/)
-- [https://www.prusa3d.com/support/](https://www.prusa3d.com/support/)
-- [https://www.raise3d.com/ideamaker](https://www.raise3d.com/ideamaker)
-- [https://www.reddit.com/r/3Dprinting/](https://www.reddit.com/r/3Dprinting/)
-- [https://www.reddit.com/r/openscad/](https://www.reddit.com/r/openscad/)
-- [https://www.reddit.com/r/openscad/comments/1fxj8xv/why_is_there_so_little_content_and_community/](https://www.reddit.com/r/openscad/comments/1fxj8xv/why_is_there_so_little_content_and_community/)
-- [https://www.rit.edu/ehs/3-d-printer-safety](https://www.rit.edu/ehs/3-d-printer-safety)
-- [https://www.sculpteo.com/en/blog/2021/06/17/tolerance-3d-printing/](https://www.sculpteo.com/en/blog/2021/06/17/tolerance-3d-printing/)
-- [https://www.slcolibrary.org/what-we-have/create](https://www.slcolibrary.org/what-we-have/create)
-- [https://www.theblackbookofinnovation.com/lassonde-studios](https://www.theblackbookofinnovation.com/lassonde-studios)
-- [https://www.youtube.com/@LukesBlab](https://www.youtube.com/@LukesBlab)
-- [https://www.youtube.com/@TeachingTech](https://www.youtube.com/@TeachingTech)
-- [https://www.zenml.io/llmops-database/llm-powered-3d-model-generation-for-3d-printing](https://www.zenml.io/llmops-database/llm-powered-3d-model-generation-for-3d-printing)
-- [https://yourdolphin.com/supernova/](https://yourdolphin.com/supernova/)
+## Peer-Reviewed and Scholarly Works
+
+Gonzalez Avila, J. F., Pietrzak, T., Girouard, A., & Casiez, G. (2024). *Understanding the challenges of OpenSCAD users for 3D printing.* In *Proceedings of the CHI Conference on Human Factors in Computing Systems (CHI ’24)* (Article 351, pp. 1–20). Association for Computing Machinery. https://doi.org/10.1145/3613904.3642566 :contentReference[oaicite:0]{index=0}
+
+Li, G. (2024). *Chinese dragon modeling based on OpenSCAD.* *Applied and Computational Engineering, 67*, 1–12. https://doi.org/10.54254/2755-2721/67/20240585 :contentReference[oaicite:1]{index=1}
+
+Kwon, N., Sun, T., Gao, Y., Zhao, L., Wang, X., Kim, J., & Hong, S. R. (2024). *3DPFIX: Improving remote novices’ 3D printing troubleshooting through human-AI collaboration.* arXiv. https://doi.org/10.48550/arXiv.2401.15877 :contentReference[oaicite:2]{index=2}
+
+## Government & Standards
+
+Centers for Disease Control and Prevention, National Institute for Occupational Safety and Health. (2020, May 14). *Health and safety considerations for 3D printing.* https://blogs.cdc.gov/niosh-science-blog/2020/05/14/3d-printing/  
+
+Centers for Disease Control and Prevention, National Institute for Occupational Safety and Health. (2024). *Approaches to safe 3D printing.* https://www.cdc.gov/niosh/blogs/2024/safe-3d-printing.html  
+
+National Institute of Standards and Technology. (2023). *Artificial Intelligence Risk Management Framework (AI RMF 1.0).* https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf  
+
+Occupational Safety and Health Administration. (n.d.). *Hierarchy of controls.* https://www.osha.gov/hierarchy-of-controls  
+
+Washington State Department of Health. (n.d.). *3D printers in schools.* https://doh.wa.gov/community-and-environment/schools/3d-printers  
+
+## Industry & Commercial Documentation
+
+All3DP. (n.d.). *3D printer filament types explained.* https://all3dp.com/1/3d-printer-filament-types-3d-printing-3d-filament/  
+
+All3DP. (n.d.). *FDM 3D printing tolerances.* https://all3dp.com/2/fdm-3d-printing-tolerances/  
+
+Anycubic. (n.d.). *Anycubic.* https://www.anycubic.com/  
+
+Autodesk. (n.d.). *Fusion 360.* https://www.autodesk.com/products/fusion-360  
+
+Bambu Lab. (n.d.). *Downloads.* https://bambulab.com/en/download  
+
+Bambu Lab. (n.d.). *Bambu Studio.* https://bambulab.com/en/download/studio  
+
+Bambu Lab Wiki. (n.d.). *Bambu Lab Wiki.* https://wiki.bambulab.com  
+
+Hubs. (n.d.). *What is FDM 3D printing?* https://www.hubs.com/knowledge-base/what-is-fdm-3d-printing/  
+
+IDEA Maker (Raise3D). (n.d.). *ideaMaker.* https://www.raise3d.com/ideamaker  
+
+MatterHackers. (n.d.). *3D printer filament comparison.* https://www.matterhackers.com/3d-printer-filament-compare  
+
+Prusa Research. (n.d.). *PrusaSlicer 4.2.4.* https://www.prusa3d.com/page/prusaslicer424/  
+
+Prusa Research. (n.d.). *PrusaSlicer 4.1.0.* https://www.prusa3d.com/page/prusaslicer_410/  
+
+Prusa Research. (n.d.). *Support.* https://www.prusa3d.com/support/  
+
+Stratasys. (n.d.). *Stratasys.* https://stratasys.com/  
+
+UL Research Institutes. (n.d.). *3D printing emissions study.* https://www.ul.com/news/ul-research-institutes-releases-3d-printing-emissions-study  
+
+Ultimaker. (n.d.). *Ultimaker Cura.* https://ultimaker.com/software/ultimaker-cura  
+
+ZenML. (n.d.). *LLM-powered 3D model generation for 3D printing.* https://www.zenml.io/llmops-database/llm-powered-3d-model-generation-for-3d-printing  
+
+## Open-Source Software & Technical Documentation
+
+Anthropic. (n.d.). *Prompt engineering overview.* https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview  
+
+Apache Software Foundation. (2004). *Apache License, Version 2.0.* https://www.apache.org/licenses/LICENSE-2.0  
+
+BelfrySCAD. (n.d.). *BOSL2.* https://github.com/BelfrySCAD/BOSL2  
+
+Deck, T. (2025). *3DMake repository.* https://github.com/tdeck/3dmake  
+
+Free Software Foundation. (n.d.). *GNU Bash manual.* https://www.gnu.org/software/bash/manual/  
+
+Free Software Foundation. (n.d.). *GNU Coreutils manual.* https://www.gnu.org/software/coreutils/manual/  
+
+Free Software Foundation. (n.d.). *GNU Grep manual.* https://www.gnu.org/software/grep/manual/grep.html  
+
+Git SCM. (n.d.). *Git documentation.* https://git-scm.com/docs  
+
+Google Cloud. (2025). *Get started with Gemini models.* https://docs.cloud.google.com/vertex-ai/generative-ai/docs/start/get-started-with-gemini-3  
+
+Microsoft. (n.d.). *PowerShell documentation.* https://learn.microsoft.com/powershell/  
+
+Microsoft. (n.d.). *Windows commands documentation.* https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/  
+
+OpenSCAD. (n.d.). *OpenSCAD documentation.* https://openscad.org/documentation.html  
+
+OpenSCAD User Manual Contributors. (n.d.). *OpenSCAD User Manual.* https://en.wikibooks.org/wiki/OpenSCAD_User_Manual  
+
+Programming with OpenSCAD. (n.d.). *Programming with OpenSCAD.* https://programmingwithopenscad.github.io/  
+
+Rust Project Developers. (n.d.). *mdBook.* https://rust-lang.github.io/mdBook/  
+
+SuperSlicer. (n.d.). *SuperSlicer repository.* https://github.com/supermerill/SuperSlicer  
+
+The Linux Documentation Project. (n.d.). *Bash Beginner’s Guide.* https://tldp.org/LDP/Bash-Beginners-Guide/html/  
+
+## Educational & Community Resources
+
+A11Y-101. (n.d.). *Inclusive documentation design.* https://www.a11y-101.com/design/inclusive-documentation  
+
+Class Central. (n.d.). *OpenSCAD courses.* https://www.classcentral.com/subject/openscad  
+
+Khan Academy. (n.d.). *Algorithms.* https://www.khanacademy.org/computing/computer-science/algorithms  
+
+Salt Lake City Public Library. (n.d.). *Creative Lab.* https://services.slcpl.org/creativelab  
+
+Salt Lake County Library. (n.d.). *Create spaces.* https://www.slcolibrary.org/what-we-have/create  
+
+University of Utah. (n.d.). *ProtoSpace.* https://lib.utah.edu/protospace.php  
+
+### Accessibility & Assistive Tech
+
+Freedom Scientific. (n.d.). *JAWS screen reader.* https://www.freedomscientific.com/products/software/jaws/  
+
+Microsoft. (n.d.). *Narrator guide.* https://support.microsoft.com/narrator  
+
+NV Access. (n.d.). *NVDA screen reader.* https://www.nvaccess.org/  
+
+Your Dolphin. (n.d.). *SuperNova.* https://yourdolphin.com/supernova/  
+
+### Community & Media
+
+Discord. (n.d.). *3D printing community server.* https://discord.gg/F2Nx2VxTB7  
+
+Reddit. (n.d.). *r/3Dprinting subreddit.* https://www.reddit.com/r/3Dprinting/  
+
+Reddit. (n.d.). *r/OpenSCAD subreddit.* https://www.reddit.com/r/openscad/  
+
+YouTube. (n.d.). *Luke’s Lab channel.* https://www.youtube.com/@LukesBlab  
+
+YouTube. (n.d.). *Teaching Tech channel.* https://www.youtube.com/@TeachingTech  

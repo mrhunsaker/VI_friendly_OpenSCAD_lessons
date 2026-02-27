@@ -215,7 +215,7 @@ Opens the file in Notepad for comfortable editing with your screen reader.
 
 ### NVDA Users
 
-NVDA is available free from [https://example.com](https://example.com)
+NVDA is available free from [https://www.nvaccess.org/](https://www.nvaccess.org/)
 
 1. **After running a command**, press **NVDA+Home** (Insert+Home or CapsLock+Home) to read the current line.
 2. **To read all output**, press **NVDA+Down Arrow** to read from the cursor to the end of the screen.
@@ -227,7 +227,7 @@ NVDA is available free from [https://example.com](https://example.com)
 
 ### JAWS Users
 
-JAWS is available from [https://example.com](https://example.com)
+JAWS is available from [https://www.freedomscientific.com/products/software/jaws/](https://www.freedomscientific.com/products/software/jaws/)
 
 1. **After running a command**, press **Insert+Up Arrow** to re-read the current line.
 2. **To read all output**, press **Insert+Ctrl+Down** to read to the end of the screen.
@@ -251,7 +251,7 @@ Windows Narrator is built into Windows 10 and Windows 11. Enable it with **Windo
 
 ### Dolphin SuperNova Users
 
-Dolphin SuperNova is available from [https://example.com](https://example.com)
+Dolphin SuperNova is available from [https://yourdolphin.com/supernova/](https://yourdolphin.com/supernova/)
 
 1. **After running a command**, press **CapsLock+L** to read the current line.
 2. **To read all output**, press **CapsLock+Numpad Plus** (say all from current position).
@@ -383,9 +383,9 @@ Once comfortable with these basics, move to **CMD-0: Getting Started** for deepe
 
 ## Resources
 
-- **NVDA:** [https://example.com](https://example.com)
-- **JAWS:** [https://example.com](https://example.com)
-- **Windows Narrator guide:** [https://example.com](https://example.com)
-- **Dolphin SuperNova:** [https://example.com](https://example.com)
+- **NVDA:** [https://www.nvaccess.org/](https://www.nvaccess.org/)
+- **JAWS:** [https://www.freedomscientific.com/products/software/jaws/](https://www.freedomscientific.com/products/software/jaws/)
+- **Windows Narrator guide:** [https://support.microsoft.com/narrator](https://support.microsoft.com/narrator)
+- **Dolphin SuperNova:** [https://yourdolphin.com/supernova/](https://yourdolphin.com/supernova/)
 - **Windows CMD Reference:** [https://example.com](https://example.com)
-<!--pagebreak-->
+

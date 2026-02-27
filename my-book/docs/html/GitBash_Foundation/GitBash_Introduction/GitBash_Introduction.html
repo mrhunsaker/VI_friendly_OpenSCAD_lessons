@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-7e85ce75.js";
+            window.path_to_searchindex_js = "../../searchindex-eaf1c1cc.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-0b2574ce.js"></script>
+        <script src="../../toc-76b29a8d.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -220,137 +220,7 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="gitbash_foundation_gitbash_introduction-gitbash_introduction"><a class="header" href="#gitbash_foundation_gitbash_introduction-gitbash_introduction">Git Bash Introduction - Screen-Reader Friendly (JAWS/NVDA)</a></h1>
-<p>Estimated time: 20-30 minutes</p>
-<p>Target audience: Users who are new to the command line and use screen readers.</p>
-<p>Learning Goals</p>
-<ul>
-<li>Open and identify the Git Bash prompt</li>
-<li>Run basic commands: <code>pwd</code>, <code>ls -1</code>, <code>cd</code>, <code>touch</code>, <code>cat</code>, <code>echo</code></li>
-<li>Redirect and page through long outputs for screen readers</li>
-<li>Use <code>--help</code> and <code>which</code> to discover more about commands</li>
-</ul>
-<h2 id="starting-git-bash"><a class="header" href="#starting-git-bash">Starting Git Bash</a></h2>
-<p>Windows</p>
-<ol>
-<li>Press Windows, type <code>Git Bash</code>, then press Enter.</li>
-<li>Git Bash opens a terminal window. You’ll hear the prompt announced by your screen reader.</li>
-</ol>
-<p>When Git Bash starts you will hear the prompt and usually your current path. The default prompt looks something like:</p>
-<pre><code>YourName@COMPUTER MINGW64 ~
-$
-</code></pre>
-<h2 id="essential-commands---short-list"><a class="header" href="#essential-commands---short-list">Essential Commands - Short List</a></h2>
-<ul>
-<li><code>pwd</code> - print working directory (where you are now)</li>
-<li><code>ls -1</code> - list file and folder names one per line (recommended for screen readers)</li>
-<li><code>cd &lt;path&gt;</code> - change directory</li>
-<li><code>touch &lt;filename&gt;</code> - create an empty file</li>
-<li><code>cat &lt;file&gt;</code> - show file contents</li>
-<li><code>echo &lt;text&gt;</code> - print text</li>
-</ul>
-<p>Quick examples:</p>
-<pre><code class="language-bash">pwd
-ls -1
-cd Documents
-touch notes.txt
-echo "hello" &gt; notes.txt
-cat notes.txt
-</code></pre>
-<h2 id="paging-long-outputs-for-screen-readers"><a class="header" href="#paging-long-outputs-for-screen-readers">Paging Long Outputs for Screen Readers</a></h2>
-<ul>
-<li>If an output is long, redirect to a file and open it in an editor:
-<pre><code class="language-bash">some-command &gt; output.txt
-notepad output.txt
-</code></pre>
-</li>
-<li>Or pipe to <code>less</code>: <code>some-command | less</code> (press Space to advance, Q to quit).</li>
-<li>For very long listings: <code>ls -1 &gt; list.txt &amp;&amp; notepad list.txt</code></li>
-</ul>
-<h2 id="help-and-discovery"><a class="header" href="#help-and-discovery">Help and Discovery</a></h2>
-<ul>
-<li><code>command --help</code> shows help: <code>ls --help</code> or <code>grep --help</code></li>
-<li><code>man command</code> shows the manual page (pipe it to a file for easy reading): <code>man ls &gt; lshelp.txt &amp;&amp; notepad lshelp.txt</code></li>
-<li><code>which &lt;name&gt;</code> locates a program: <code>which openscad</code></li>
-</ul>
-<h2 id="running-scripts-and-executables"><a class="header" href="#running-scripts-and-executables">Running Scripts and Executables</a></h2>
-<ul>
-<li>Make a script executable: <code>chmod +x script.sh</code></li>
-<li>Run a script in the current directory: <code>./script.sh</code></li>
-<li>Run an executable by full path: <code>'/c/Program Files/OpenSCAD/openscad.exe'</code></li>
-</ul>
-<h2 id="screen-reader-specific-tips-jaws-nvda"><a class="header" href="#screen-reader-specific-tips-jaws-nvda">Screen Reader Specific Tips (JAWS, NVDA)</a></h2>
-<ul>
-<li>Use <code>ls -1</code> to avoid cluttered, multi-column listings</li>
-<li>Redirect large outputs to a text file and open it in an editor your screen reader handles well</li>
-<li>If output stops being announced, try moving focus with Alt+Tab and back, or briefly pressing Ctrl or Shift to force announcement</li>
-</ul>
-<h2 id="git-bash-vs-windows-command-prompt"><a class="header" href="#git-bash-vs-windows-command-prompt">Git Bash vs Windows Command Prompt</a></h2>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Task</th><th>Git Bash</th><th>Command Prompt</th></tr>
-</thead>
-<tbody>
-<tr><td>List files</td><td><code>ls -1</code></td><td><code>dir</code></td></tr>
-<tr><td>Show current path</td><td><code>pwd</code></td><td><code>cd</code></td></tr>
-<tr><td>Read a file</td><td><code>cat file.txt</code></td><td><code>type file.txt</code></td></tr>
-<tr><td>Create file</td><td><code>touch file.txt</code></td><td><code>type nul &gt; file.txt</code></td></tr>
-<tr><td>Copy file</td><td><code>cp src dest</code></td><td><code>copy src dest</code></td></tr>
-<tr><td>Move/rename</td><td><code>mv old new</code></td><td><code>move old new</code></td></tr>
-<tr><td>Delete file</td><td><code>rm file.txt</code></td><td><code>del file.txt</code></td></tr>
-</tbody>
-</table>
-</div>
-<p>Git Bash uses Unix commands that also work on Linux and macOS.</p>
-<h2 id="suggested-learning-path"><a class="header" href="#suggested-learning-path">Suggested Learning Path</a></h2>
-<ol>
-<li>Open Git Bash, run <code>pwd</code>, <code>ls -1</code>, <code>cd</code> into Documents.</li>
-<li>Create a file with <code>touch test.txt</code>, add a line with <code>echo "hi" &gt; test.txt</code>, and read it with <code>cat test.txt</code>.</li>
-<li>Use <code>ls --help</code> and redirect output to a file to read comfortably.</li>
-</ol>
-<h2 id="hands-on-explore-the-terminal-beginner"><a class="header" href="#hands-on-explore-the-terminal-beginner">Hands-On: Explore the Terminal (Beginner)</a></h2>
-<ol>
-<li>Run <code>pwd</code> and speak or note the output.</li>
-<li>Run <code>ls -1</code> in your home directory. If the list is long, save it: <code>ls -1 &gt; listing.txt &amp;&amp; notepad listing.txt</code></li>
-<li>Create a folder and file: <code>mkdir GBPractice &amp;&amp; cd GBPractice &amp;&amp; touch notes.txt</code></li>
-<li>Add a line: <code>echo "My first note" &gt; notes.txt &amp;&amp; cat notes.txt</code></li>
-</ol>
-<h2 id="extension-exercises"><a class="header" href="#extension-exercises">Extension Exercises</a></h2>
-<ol>
-<li>Use wildcards to list only <code>.scad</code> files: <code>ls *.scad</code>. Proceed to search for other types of files.</li>
-<li>Save a long command’s output and search it with <code>grep</code>.</li>
-<li>Create a small script (<code>chmod +x</code>, then <code>./</code>) that prints a timestamp and test it.</li>
-<li>Build a project template generator: write a script that creates a folder structure for a new 3D printing project.</li>
-<li>Create a personalized <code>.bashrc</code> with aliases for frequently used commands; test it after restarting Git Bash.</li>
-<li>Write a Bash script that combines multiple concepts: navigates folders, creates files, and performs file operations.</li>
-<li>Create a screen-reader navigation guide for Git Bash; test with an actual screen reader if available.</li>
-<li>Build a data analysis script: read a text or CSV file, filter and process data, and generate a report.</li>
-<li>Develop a troubleshooting aide: common Git Bash error messages, their causes, and solutions.</li>
-<li>Design a comprehensive Git Bash learning portfolio: document skills developed, commands mastered, scripts created, and practical applications.</li>
-</ol>
-<h2 id="quick-quiz-10-questions"><a class="header" href="#quick-quiz-10-questions">Quick Quiz (10 questions)</a></h2>
-<ol>
-<li>What command shows your current directory?</li>
-<li>How do you list names only, one per line, for screen readers?</li>
-<li>How do you create an empty file?</li>
-<li>How do you run a script in the current directory?</li>
-<li>How do you page through long output?</li>
-<li>True or False: Git Bash commands also work on Linux and macOS.</li>
-<li>What does the <code>~</code> symbol represent in a Git Bash path?</li>
-<li>Explain why redirecting output to a file (e.g., <code>command &gt; output.txt</code>) is helpful for screen reader users.</li>
-<li>What is the difference between <code>--help</code> and <code>man</code> in Git Bash?</li>
-<li>Describe a practical scenario where you would use piping (<code>|</code>) in Git Bash.</li>
-</ol>
-<h2 id="references"><a class="header" href="#references">References</a></h2>
-<ul>
-<li>Git for Windows. (2024). <em>Git Bash documentation</em>. <a href="https://gitforwindows.org/">https://gitforwindows.org/</a></li>
-<li>GNU. (2024). <em>Bash reference manual</em>. <a href="https://www.gnu.org/software/bash/manual/bash.html">https://www.gnu.org/software/bash/manual/bash.html</a></li>
-<li>The Linux Documentation Project. (2024). <em>Bash Beginners Guide</em>. <a href="https://tldp.org/LDP/Bash-Beginners-Guide/html/">https://tldp.org/LDP/Bash-Beginners-Guide/html/</a></li>
-</ul>
-<p>Other Screen Readers</p>
-<p>Dolphin SuperNova (commercial) and Windows Narrator (built-in) are also supported; the workflows and recommendations in this document apply to them. See <a href="https://example.com">https://example.com</a> and <a href="https://example.com">https://example.com</a> for vendor documentation.</p>
-<!--pagebreak-->
+                        <h1 id="git-bash-introduction"><a class="header" href="#git-bash-introduction">Git Bash Introduction</a></h1>
 
                     </main>
 

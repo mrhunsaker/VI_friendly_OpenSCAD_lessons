@@ -84,7 +84,7 @@ Write-Host \"Batch slicing finished.\"
 $printerIP = \"192.168.1.100\"  # Your printer's IP
 $printerPort = 8080            # Typical API port
 # Get current print status
-$status = Invoke-WebRequest -Uri \"[https://example.com](https://example.com) `
+$status = Invoke-WebRequest -Uri \"https://yourdolphin.com/supernova/\" `
     -UseBasicParsing | ConvertFrom-Json
 Write-Host \"State: $($status.state.text)\"
 Write-Host \"Progress: $($status.progress.completion)%\"

@@ -677,5 +677,5 @@ echo "All $count files processed!"
 - **Function Documentation:** [https://example.com](https://example.com)
 - **Error Handling:** [https://example.com](https://example.com)
 - **Loops:** [https://example.com](https://example.com)
-<!--pagebreak-->
+
 

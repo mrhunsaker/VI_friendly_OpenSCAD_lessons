@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-7e85ce75.js";
+            window.path_to_searchindex_js = "../../searchindex-eaf1c1cc.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-0b2574ce.js"></script>
+        <script src="../../toc-76b29a8d.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -220,350 +220,211 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="3dmake_foundation_lessons_3dmake_6-lessons_3dmake_6"><a class="header" href="#3dmake_foundation_lessons_3dmake_6-lessons_3dmake_6">Lesson 6: Practical 3dm Commands and Text Embossing</a></h1>
-<p>Estimated time: 90-120 minutes</p>
-<p>Learning Objectives</p>
+                        <h1 id="lesson-6-practical-3dm-commands-and-text-embossing"><a class="header" href="#lesson-6-practical-3dm-commands-and-text-embossing">Lesson 6: Practical 3dm Commands and Text Embossing</a></h1>
+<p>Estimated time: 90–120 minutes</p>
+<h2 id="learning-objectives"><a class="header" href="#learning-objectives">Learning Objectives</a></h2>
 <ul>
-<li>Master key 3dMake commands: <code>3dm describe</code>, <code>3dm preview</code>, <code>3dm orient</code>, <code>3dm slice</code> <sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">1</a></sup></li>
-<li>Apply text embossing and parametric customization to create a personalized keycap<sup class="footnote-reference" id="fr-2-1"><a href="#footnote-2">2</a></sup></li>
-<li>Generate tactile 2D previews for accessible model inspection<sup class="footnote-reference" id="fr-1-2"><a href="#footnote-1">1</a></sup></li>
+<li>Use the full <code>3dm</code> command suite: <code>describe</code>, <code>preview</code>, <code>orient</code>, <code>slice</code></li>
+<li>Emboss and engrave text using OpenSCAD’s <code>text()</code> function with <code>linear_extrude()</code></li>
+<li>Use OpenSCAD string functions: <code>str()</code>, <code>len()</code>, <code>search()</code>, <code>substr()</code></li>
+<li>Apply <code>let()</code> for scoped variable declarations</li>
+<li>Build a parametric label-making system</li>
 </ul>
-<p>Materials</p>
+<h2 id="materials"><a class="header" href="#materials">Materials</a></h2>
 <ul>
-<li>3dMake project scaffold with <code>src/main.scad</code></li>
-<li>Access to a slicer (PrusaSlicer, Cura, or Bambu Studio)</li>
-<li>Optional: printer for test print</li>
-<li>Reference: <a href="../Lessons_3dMake_1/3dmake-setup-guide.html">3dmake-setup-guide.md</a> for command reference</li>
+<li>3dMake project from previous lessons</li>
+<li>Terminal and editor</li>
+<li>Slicer (PrusaSlicer or equivalent)</li>
 </ul>
-<p>Related Project: See <a href="../../assets/3dMake_Foundation/Lessons_3dMake_6/cube_keycap.scad">cube_keycap.scad</a> for a worked example combining text embossing and the 3dm commands.</p>
-<h2 id="understanding-the-3dm-command-suite"><a class="header" href="#understanding-the-3dm-command-suite">Understanding the 3dm Command Suite</a></h2>
-<p>The 3dMake CLI provides a systematic workflow for model management. Each command serves a specific phase of the design-to-print pipeline.</p>
-<div class="table-wrapper">
-<table>
-<thead>
-<tr><th>Command</th><th>Purpose</th><th>Example</th></tr>
-</thead>
-<tbody>
-<tr><td><code>3dm describe &lt;file&gt;</code></td><td>Generates text and AI analysis of geometry</td><td><code>3dm describe src/main.scad</code></td></tr>
-<tr><td><code>3dm preview &lt;file&gt;</code></td><td>Creates a 2D tactile printout (ASCII/braille/SVG)</td><td><code>3dm preview src/main.scad</code></td></tr>
-<tr><td><code>3dm orient &lt;file&gt;</code></td><td>Analyzes and suggests optimal print orientation</td><td><code>3dm orient src/main.scad</code></td></tr>
-<tr><td><code>3dm slice &lt;file&gt;</code></td><td>Generates G-code (machine instructions)</td><td><code>3dm slice src/main.scad</code></td></tr>
-</tbody>
-</table>
-</div>
 <h2 id="step-by-step-tasks"><a class="header" href="#step-by-step-tasks">Step-by-step Tasks</a></h2>
-<ol>
-<li>
-<p>Create a parametric keycap model with top-level parameters for customization<sup class="footnote-reference" id="fr-2-2"><a href="#footnote-2">2</a></sup>:</p>
-<pre><code class="language-scad">// Cube Keycap - Parametric Design
-// A customizable keycap with embossed text
+<h3 id="1-master-the-3dm-command-suite"><a class="header" href="#1-master-the-3dm-command-suite">1. Master the 3dm Command Suite</a></h3>
+<pre><code class="language-bash"># Describe your current model using AI analysis (non-visual validation)
+3dm describe
 
-// Parameters (easy customization)
-key_size = 18;      // mm - width/depth of keycap
-key_height = 12;    // mm - height
-wall = 1.2;         // mm - wall thickness
-letter = "A";       // Character to emboss
-letter_size = 10;   // mm - text height
-letter_raise = 0.8; // mm - emboss depth
+# Generate a preview image (PNG) of the model
+3dm preview
 
-// Hollow shell
-module shell(){
-  difference(){
-    cube([key_size, key_size, key_height], center=false);
-    translate([wall, wall, wall])
-      cube([key_size-2*wall, key_size-2*wall, key_height], center=false);
-  }
-}
+# Suggest optimal print orientation
+3dm orient
 
-// Text embossing on top face
-module emboss(){
-  translate([key_size/2, key_size/2, key_height-0.01])
-    linear_extrude(height=letter_raise)
-      text(letter, size=letter_size, halign="center", valign="center");
-}
-
-// Assemble keycap
-union(){
-  shell();
-  emboss();
-}
+# Slice the model using your configured slicer settings
+3dm slice
 </code></pre>
-</li>
-<li>
-<p>Run <code>3dm describe</code> to generate a text-based analysis of your model:</p>
-<pre><code class="language-bash">3dm describe src/main.scad
-</code></pre>
-<p>This will output a description suitable for non-visual inspection. If AI is configured, you’ll also receive suggestions about geometry and potential print issues.</p>
-</li>
-<li>
-<p>Generate a tactile 2D preview with <code>3dm preview</code>:</p>
-<pre><code class="language-bash">3dm preview src/main.scad
-</code></pre>
-<p>This creates a simplified 2D outline that can be printed for physical inspection or converted to braille for accessibility.</p>
-</li>
-<li>
-<p>Analyze print orientation with <code>3dm orient</code>:</p>
-<pre><code class="language-bash">3dm orient src/main.scad
-</code></pre>
-<p>This command suggests the optimal orientation for printing-minimizing support material and maximizing surface quality.</p>
-</li>
-<li>
-<p>Prepare for printing by slicing your model:</p>
-<pre><code class="language-bash">3dm slice src/main.scad
-</code></pre>
-<p>This generates G-code (<code>build/main.gcode</code>) ready for your printer.</p>
-</li>
-</ol>
-<h2 id="string-functions-for-dynamic-naming-and-labeling"><a class="header" href="#string-functions-for-dynamic-naming-and-labeling">String Functions for Dynamic Naming and Labeling</a></h2>
-<p>OpenSCAD includes functions for manipulating strings, enabling designs that automatically label themselves, create dynamic descriptions, or adapt text based on parameters.</p>
-<h3 id="string-concatenation-str"><a class="header" href="#string-concatenation-str">String Concatenation: str()</a></h3>
-<p>Combine strings and numbers into single strings:</p>
-<pre><code class="language-openscad">// Basic concatenation
-name = str("Keycap_", "Large");
-echo(name);  // Prints: Keycap_Large
-// Combine strings and numbers
-size = 25;
-label = str("Size: ", size, "mm");
-echo(label);  // Prints: Size: 25mm
-// Complex concatenation
-width = 50;
-height = 30;
-material = "PLA";
-description = str(material, " box ", width, "x", height);
-echo(description);  // Prints: PLA box 50x30
-</code></pre>
-<p>Practical Example: Self-Labeling Container</p>
-<pre><code class="language-openscad">// Container that labels itself with dimensions
-module labeled_container(w, h, d, material_type) {
-  // Create dimension label
-  label = str(w, "x", h, "x", d, " ", material_type);
-  // Create container body
-  difference() {
-    cube([w, h, d]);
-    translate([5, 5, 5])
-      cube([w-10, h-10, d-5]);
-  }
-  // Add embossed label on side
-  translate([w/2, -2, d/2])
-    linear_extrude(0.8)
-      text(label, size=3, halign="center", valign="center", font="Arial:style=Bold");
-}
-labeled_container(60, 40, 30, "PLA");
-// Output: Creates box labeled "60x40x30 PLA"
-</code></pre>
-<h3 id="string-length-and-searching-len-search"><a class="header" href="#string-length-and-searching-len-search">String Length and Searching: len(), search()</a></h3>
-<p>Find and measure strings:</p>
-<pre><code class="language-openscad">// len(): String length
-echo(len("OpenSCAD"));  // Prints: 8
-echo(len("Hi"));        // Prints: 2
-// search(): Find substring
-text = "manufacturing";
-result = search("fact", text);
-echo(result);  // Returns index where "fact" is found
-</code></pre>
-<p>Practical Example: Smart Keycap Text</p>
-<pre><code class="language-openscad">// Keycap that validates text before embossing
-module smart_keycap(key_size, text_to_engrave) {
-  text_length = len(text_to_engrave);
-  // Choose appropriate text size based on length
-  text_size = text_length &gt; 3 ? 8 :
-              text_length &gt; 1 ? 12 :
-              14;  // Single character gets larger
-  echo(str("Engraving '", text_to_engrave, "' at ", text_size, "mm"));
-  difference() {
-    cube([key_size, key_size, 10]);
-    translate([2, 2, 2])
-      cube([key_size-4, key_size-4, 10]);
-  }
-  // Emboss with auto-scaled text
-  translate([key_size/2, key_size/2, 9.5])
-    linear_extrude(0.8)
-      text(text_to_engrave, size=text_size, halign="center", valign="center");
-}
-smart_keycap(18, "A");      // Single letter: 14mm
-smart_keycap(18, "Ctrl");   // Multi-char: 8mm
-</code></pre>
-<h3 id="substring-extraction-substr"><a class="header" href="#substring-extraction-substr">Substring Extraction: substr()</a></h3>
-<p>Extract parts of strings:</p>
-<pre><code class="language-openscad">// substr(): Extract substring
-original = "OpenSCAD";
-first_three = substr(original, 0, 3);
-echo(first_three);  // Prints: Ope
-last_three = substr(original, 5, 3);
-echo(last_three);  // Prints: CAD
-</code></pre>
-<p>Practical Example: Serial Number Generation</p>
-<pre><code class="language-openscad">// Generate sequential serial numbers
-module part_with_serial(part_name, serial_number) {
-  // Create formatted serial: PART_001, PART_002, etc.
-  serial_string = str(
-    substr(part_name, 0, 4),  // First 4 letters of part_name
-    "_",
-    serial_number &lt; 10 ? str("00", serial_number) :
-    serial_number &lt; 100 ? str("0", serial_number) :
-    str(serial_number)
-  );
-  echo(str("Creating: ", serial_string));
-  // Create part body
-  cube([20, 20, 15]);
-  // Add serial number embossing
-  translate([10, 10, 14.5])
-    linear_extrude(0.5)
-      text(serial_string, size=2, halign="center", valign="center", font="Arial");
-}
-part_with_serial("bearing", 1);    // Output: BEAR_001
-part_with_serial("bearing", 27);   // Output: BEAR_027
-part_with_serial("bearing", 150);  // Output: BEAR_150
-</code></pre>
-<h3 id="variable-scoping-with-let"><a class="header" href="#variable-scoping-with-let">Variable Scoping with let()</a></h3>
-<p>Use <code>let()</code> to create temporary local variables in expressions:</p>
-<pre><code class="language-openscad">// let() creates scoped variables in expressions
-radius = 10;
-// Without let: must use full expression
-area = 3.14159 * radius * radius;
-// With let: clearer and reusable
-area = let(r = radius, pi = 3.14159) pi * r * r;
-// Practical: Complex calculations
-box_volume = let(
-  w = 50,
-  h = 30,
-  d = 20
-) w * h * d;
-echo(box_volume);  // Prints: 30000
-</code></pre>
-<p>Practical Example: Parametric Gear with Formatted Output</p>
-<pre><code class="language-openscad">// Complete gear design with dynamic labeling
-module parametric_gear(
-  pitch_diameter,
-  teeth_count,
-  bore_diameter,
-  gear_name
-) {
-  // Use let() for intermediate calculations
-  calculations = let(
-    module = pitch_diameter / teeth_count,
-    addendum = 1.0,
-    dedendum = 1.25,
-    outer_d = pitch_diameter + 2 * addendum,
-    root_d = pitch_diameter - 2 * dedendum
-  ) [module, outer_d, root_d];
-  // Create formatted specification
-  spec = str(
-    gear_name, ": ",
-    teeth_count, " teeth, ",
-    pitch_diameter, "mm PD"
-  );
-  echo(spec);
-  // Create gear body
-  difference() {
-    cylinder(r=calculations[1]/2, h=8, $fn=teeth_count*2);
-    cylinder(r=bore_diameter/2, h=10);
-  }
-}
-parametric_gear(40, 20, 8, "InputGear");
-// Output: "InputGear: 20 teeth, 40mm PD"
-</code></pre>
-<h3 id="combining-string-functions-for-batch-documentation"><a class="header" href="#combining-string-functions-for-batch-documentation">Combining String Functions for Batch Documentation</a></h3>
-<p>Here’s a complete example generating documentation for multiple variants:</p>
-<pre><code class="language-openscad">// Generate a family of keycaps with automatic documentation
-module keycap_family() {
-  variants = [
-    ["S", 12, 8],     // [letter, size, height]
-    ["M", 16, 10],
-    ["L", 20, 12],
-    ["XL", 24, 14]
-  ];
-  for (v = variants) {
-    letter = v[0];
-    size = v[1];
-    height = v[2];
-    // Build specification string
-    spec = str(
-      "Keycap_", letter, " (",
-      size, "x", size, "x", height, "mm)"
-    );
-    echo(spec);
-    // Position variant for display
-    x_offset = (letter == "S") ? 0 :
-               (letter == "M") ? 30 :
-               (letter == "L") ? 60 :
-               90;
-    translate([x_offset, 0, 0]) {
-      difference() {
-        cube([size, size, height]);
-        translate([1.5, 1.5, 1.5])
-          cube([size-3, size-3, height-1.5]);
-      }
-      // Emboss the letter
-      translate([size/2, size/2, height - 0.5])
-        linear_extrude(0.8)
-          text(letter, size=size*0.5, halign="center", valign="center");
-    }
-  }
-}
-keycap_family();
-// Output:
-// Keycap_S (12x12x8mm)
-// Keycap_M (16x16x10mm)
-// Keycap_L (20x20x12mm)
-// Keycap_XL (24x24x14mm)
-</code></pre>
-<h2 id="checkpoint"><a class="header" href="#checkpoint">Checkpoint</a></h2>
-<ul>
-<li>After task 1, you have a working keycap model with parameters</li>
-<li>After task 3, you have a 2D tactile preview in <code>build/</code></li>
-<li>After task 5, you have G-code ready to send to a printer</li>
-</ul>
-<h2 id="customization-challenge"><a class="header" href="#customization-challenge">Customization Challenge</a></h2>
-<p>Modify the keycap by changing these parameters and observing the results:</p>
+<p>Quick Reference:</p>
 <div class="table-wrapper">
 <table>
 <thead>
-<tr><th>Parameter</th><th>Original</th><th>Try This</th><th>Effect</th></tr>
+<tr><th>Command</th><th>What It Does</th><th>Output</th></tr>
 </thead>
 <tbody>
-<tr><td><code>key_size</code></td><td>18</td><td>25</td><td>Larger keycap</td></tr>
-<tr><td><code>key_height</code></td><td>12</td><td>8</td><td>Shorter, lower-profile key</td></tr>
-<tr><td><code>letter</code></td><td>“A”</td><td>“YOUR_INITIAL”</td><td>Different character</td></tr>
-<tr><td><code>wall</code></td><td>1.2</td><td>1.5</td><td>Thicker walls (stronger)</td></tr>
-<tr><td><code>letter_raise</code></td><td>0.8</td><td>1.5</td><td>Deeper emboss</td></tr>
+<tr><td><code>3dm build</code></td><td>Compile <code>.scad</code> → <code>.stl</code></td><td><code>build/main.stl</code></td></tr>
+<tr><td><code>3dm describe</code></td><td>AI geometry description</td><td>Console text</td></tr>
+<tr><td><code>3dm preview</code></td><td>Render model to PNG image</td><td><code>build/preview.png</code></td></tr>
+<tr><td><code>3dm orient</code></td><td>Suggest print orientation</td><td>Console text with recommendation</td></tr>
+<tr><td><code>3dm slice</code></td><td>Call slicer on current STL</td><td>G-code file</td></tr>
 </tbody>
 </table>
 </div>
-<h2 id="quiz---lesson-3dmake6-10-questions"><a class="header" href="#quiz---lesson-3dmake6-10-questions">Quiz - Lesson 3dMake.6 (10 questions)</a></h2>
+<p>Note: <code>3dm describe</code> and <code>3dm orient</code> both use the AI backend configured in your <code>3dmake.toml</code>.<sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">1</a></sup></p>
+<h3 id="2-emboss-text-with-text-and-linear_extrude"><a class="header" href="#2-emboss-text-with-text-and-linear_extrude">2. Emboss Text with text() and linear_extrude()</a></h3>
+<pre><code class="language-openscad">// Basic text emboss (text raised above a base). See [^2] for more on text and fonts.
+module embossed_label(label_text, font_size=8, depth=1.5) {
+  linear_extrude(height=depth) {
+    text(label_text,
+         size=font_size,
+         font="Liberation Sans:style=Bold",
+         halign="center",
+         valign="center",
+         $fn=4   // $fn affects curve resolution on letters
+    );
+  }
+}
+
+// Base plate with embossed text
+difference() {
+  cube([60, 20, 5], center=true);
+  translate([0, 0, 4])
+    embossed_label("HELLO", font_size=8, depth=2);  // cuts 2mm into plate (engrave)
+}
+
+// OR: emboss (text proud of surface)
+union() {
+  cube([60, 20, 3], center=true);
+  translate([0, 0, 3])
+    embossed_label("HELLO", font_size=8, depth=1.5);
+}
+</code></pre>
+<h3 id="3-use-string-functions"><a class="header" href="#3-use-string-functions">3. Use String Functions</a></h3>
+<pre><code class="language-openscad">// str() - convert and concatenate values into strings
+part_id = str("PART-", 2026, "-", 42);
+echo(part_id);  // PART-2026-42
+
+// len() - length of a string or list
+name = "OpenSCAD";
+echo(len(name));  // 8
+
+// search() - find a character's position
+echo(search("S", "OpenSCAD"));  // [[4]]
+
+// substr() - extract substring
+full = "BATCH-001";
+batch = substr(full, 0, 5);   // "BATCH"
+number = substr(full, 6, 3);  // "001"
+echo(batch, number);
+</code></pre>
+<h3 id="4-use-let-for-scoped-variables"><a class="header" href="#4-use-let-for-scoped-variables">4. Use let() for Scoped Variables</a></h3>
+<pre><code class="language-openscad">// let() scopes variables to a block — they don't pollute the global namespace
+let (
+  base_w = 80,
+  base_d = 50,
+  text_offset_z = 5
+) {
+  cube([base_w, base_d, text_offset_z]);
+  translate([base_w/2, base_d/2, text_offset_z])
+    linear_extrude(2) text("v1.0", size=6, halign="center", valign="center");
+}
+</code></pre>
+<h3 id="5-build-a-parametric-label-maker"><a class="header" href="#5-build-a-parametric-label-maker">5. Build a Parametric Label Maker</a></h3>
+<pre><code class="language-openscad">// Parametric label: all dimensions and content are parameters
+label_text   = "STORAGE BOX";
+label_w      = 80;
+label_h      = 18;
+plate_depth  = 3;
+text_depth   = 1.2;
+font_size    = 7;
+corner_r     = 2;
+
+module label_plate(txt, w, h, t, td, fs, cr) {
+  difference() {
+    // Rounded base plate
+    minkowski() {
+      cube([w - 2*cr, h - 2*cr, t], center=true);
+      cylinder(r=cr, h=0.01, $fn=16);
+    }
+    // Engraved text
+    translate([0, 0, t/2 - td + 0.001])
+      linear_extrude(td + 0.001)
+        text(txt, size=fs, font="Liberation Sans:style=Bold",
+             halign="center", valign="center", $fn=4);
+    // Mounting hole
+    translate([w/2 - 6, 0, -0.001])
+      cylinder(r=1.5, h=t + 0.002, $fn=16);
+  }
+}
+
+label_plate(label_text, label_w, label_h, plate_depth, text_depth, font_size, corner_r);
+</code></pre>
+<h3 id="checkpoint"><a class="header" href="#checkpoint">Checkpoint</a></h3>
+<ul>
+<li>After step 1: All four commands run without error and produce expected output.</li>
+<li>After step 2: <code>3dm build</code> produces an STL with readable text in the slicer preview.</li>
+<li>After step 5: Your label plate shows the text correctly positioned and engraved.</li>
+</ul>
+<h2 id="font-handling"><a class="header" href="#font-handling">Font Handling</a></h2>
+<p>OpenSCAD accesses system fonts. Use <code>fontconfig</code> syntax for precise control:</p>
+<pre><code class="language-openscad">// Font specification format: "FontName:style=StyleName"
+text("Hello", font="Liberation Sans:style=Bold");
+text("Hello", font="Liberation Mono:style=Regular");
+text("Hello", font="DejaVu Serif:style=Italic");
+
+// List available fonts from the OpenSCAD Help menu &gt; Font List
+// Or from terminal (Linux):
+// fc-list | grep -i "liberation"
+</code></pre>
+<p>Common classroom-safe fonts (widely available on Linux):</p>
+<ul>
+<li><code>Liberation Sans</code> — clean, readable sans-serif (Arial-compatible)</li>
+<li><code>Liberation Mono</code> — monospace (good for part numbers)</li>
+<li><code>DejaVu Serif</code> — serif option</li>
+</ul>
+<h2 id="quiz--lesson-3dmake6-15-questions"><a class="header" href="#quiz--lesson-3dmake6-15-questions">Quiz — Lesson 3dMake.6 (15 questions)</a></h2>
 <ol>
-<li>What does <code>3dm describe</code> provide that <code>3dm preview</code> does not<sup class="footnote-reference" id="fr-1-3"><a href="#footnote-1">1</a></sup>?</li>
-<li>Why is <code>3dm preview</code> useful for accessibility<sup class="footnote-reference" id="fr-1-4"><a href="#footnote-1">1</a></sup>?</li>
-<li>What does <code>3dm orient</code> help you determine about your model<sup class="footnote-reference" id="fr-1-5"><a href="#footnote-1">1</a></sup>?</li>
-<li>How does parametric design (using variables) make customization easier<sup class="footnote-reference" id="fr-2-3"><a href="#footnote-2">2</a></sup>?</li>
-<li>Name one use case for embossed text in a 3D model<sup class="footnote-reference" id="fr-2-4"><a href="#footnote-2">2</a></sup>.</li>
-<li>True or False: You must run <code>3dm build</code> before running <code>3dm describe</code>.</li>
-<li>Explain the relationship between wall thickness and print strength.</li>
-<li>Describe what happens when you change the <code>$fn</code> parameter in your text() function.</li>
-<li>How would you modify the keycap code to add a second embossed character<sup class="footnote-reference" id="fr-2-5"><a href="#footnote-2">2</a></sup>?</li>
-<li>What information would you include in a <code>3dm describe</code> output for a manufacturer<sup class="footnote-reference" id="fr-1-6"><a href="#footnote-1">1</a></sup>?</li>
+<li>What does <code>3dm describe</code> do?</li>
+<li>What does <code>3dm orient</code> output, and when would you use it?</li>
+<li>What is the difference between embossed text and engraved text in 3D printing?</li>
+<li>What parameter in <code>text()</code> controls horizontal alignment?</li>
+<li>What does <code>str("PART-", 2024, "-", 1)</code> return?</li>
+<li>What does <code>len("OpenSCAD")</code> return?</li>
+<li>What is the purpose of <code>let()</code> in OpenSCAD?</li>
+<li>What does <code>$fn=4</code> do to letters rendered with <code>text()</code>?</li>
+<li>True or False: <code>3dm slice</code> compiles your <code>.scad</code> file before slicing.</li>
+<li>What font specification format does OpenSCAD use?</li>
+<li>Explain the difference between <code>halign="left"</code> and <code>halign="center"</code> in the <code>text()</code> function and describe when you would use each.</li>
+<li>What does <code>substr("BATCH-001", 6, 3)</code> return?</li>
+<li>Describe the role of <code>linear_extrude()</code> when used with <code>text()</code>. What would happen if you omitted it?</li>
+<li>Write the OpenSCAD code to engrave the text “LOT-42” into a 50×20×4 mm base plate, centered, with 1.5 mm engraving depth.</li>
+<li>What is the difference between scoped variables declared with <code>let()</code> and top-level global variables in an OpenSCAD file?</li>
 </ol>
-<h2 id="extension-problems-10"><a class="header" href="#extension-problems-10">Extension Problems (10)</a></h2>
+<h2 id="extension-problems-15"><a class="header" href="#extension-problems-15">Extension Problems (15)</a></h2>
 <ol>
-<li>Create three keycap variants (small, medium, large) by changing <code>key_size</code> and export each as a separate STL<sup class="footnote-reference" id="fr-2-6"><a href="#footnote-2">2</a></sup>.</li>
-<li>Add a decorative border using <code>linear_extrude</code> and <code>text()</code>; verify the result with <code>3dm preview</code> <sup class="footnote-reference" id="fr-1-7"><a href="#footnote-1">1</a></sup>.</li>
-<li>Run <code>3dm describe</code>, <code>3dm preview</code>, and <code>3dm orient</code> on your keycap; document all outputs<sup class="footnote-reference" id="fr-1-8"><a href="#footnote-1">1</a></sup>.</li>
-<li>Modify the emboss module to support multiple characters in different positions<sup class="footnote-reference" id="fr-2-7"><a href="#footnote-2">2</a></sup>.</li>
-<li>Create a parametric keycap library with variants for different keyboard layouts (cherry, OEM, DSA profiles)<sup class="footnote-reference" id="fr-2-8"><a href="#footnote-2">2</a></sup>.</li>
-<li>Design an accessibility assessment: use <code>3dm describe</code> and <code>3dm preview</code> to validate your model for non-visual users.</li>
-<li>Build a custom keycap design system: parameterize profile, height, wall thickness, and emboss content; generate a product family.</li>
-<li>Create a comparison study: test three different emboss depths and document print quality differences.</li>
-<li>Develop a keycap troubleshooting guide: common failures (emboss erosion, wall cracking, text illegibility) and solutions.</li>
-<li>Write a comprehensive keycap design documentation: parameters, materials, print settings, post-processing, and accessibility features.</li>
+<li>Build a parametric serial number generator: accept a prefix string and a number, concatenate them with <code>str()</code>, and emboss the result onto a label plate.</li>
+<li>Create a dynamic version label: use <code>str()</code> to combine a product name and a version number, where both are top-level parameters.</li>
+<li>Design a 4-up label sheet: 4 identical labels arranged in a 2×2 grid using <code>translate()</code> and a <code>for</code> loop.</li>
+<li>Build a multi-line label system: stack two <code>text()</code> calls at different Z heights to create a two-line label.</li>
+<li>Create a label with a decorative border using <code>difference()</code> to cut a frame outline around the text.</li>
+<li>Use <code>3dm orient</code> on three different models (flat slab, tall cylinder, L-bracket) and document whether the AI orientation suggestion agrees with your own analysis.</li>
+<li>Build a “batch tag” system: a module that generates different serial numbers from a list, placing each on a separate small tag in a row.</li>
+<li>Design a keychain tag: a rounded rectangle with a hole for a ring, parametric text, and two mounting ridges.</li>
+<li>Use <code>search()</code> to find the position of a dash character in a part-number string. Write the code and explain why this might be useful.</li>
+<li>Build a “negative space” text plate: instead of engraving text, create a plate with all letters cut completely through (silhouette/stencil style).</li>
+<li>Design a parametric drawer label holder: a clip that slides over the edge of a drawer and holds a label card. Make all dimensions parameters.</li>
+<li>Create a font comparison tool: render the same text string in Liberation Sans, Liberation Mono, and DejaVu Serif side by side on one plate.</li>
+<li>Build a screen-reader accessibility guide for the five <code>3dm</code> commands taught in this lesson. For each command, document: the command name, what it does, expected output, and how to interpret the output without visual reference.</li>
+<li>Write a parametric module that auto-sizes the font: given a fixed label width and a string, reduce the font size until the text fits within the width.</li>
+<li>Create a part-marking system for a small production batch: design a jig that holds 10 labels in a row, each with an incremented part number, ready to print all at once.</li>
 </ol>
-<p>References</p>
+<h2 id="references-and-helpful-resources"><a class="header" href="#references-and-helpful-resources">References and Helpful Resources</a></h2>
+<h3 id="supplemental-resources"><a class="header" href="#supplemental-resources">Supplemental Resources</a></h3>
+<ul>
+<li><a href="../../assets/Programming_with_OpenSCAD.epub">Programming with OpenSCAD EPUB Textbook</a> — String functions and text embossing examples</li>
+<li><a href="https://programmingwithopenscad.github.io/quick-reference.html">OpenSCAD Quick Reference</a> — All string function syntax</li>
+<li><a href="../../assets/3dMake_Foundation/3dmake-setup-guide.html">3DMake Terminal Quickstart Guide</a></li>
+<li><a href="https://github.com/ProgrammingWithOpenSCAD/CodeSolutions">CodeSolutions Repository</a> — Worked text embossing examples</li>
+</ul>
 <hr>
 <ol class="footnote-definition">
 <li id="footnote-1">
-<p>3DMake GitHub Repository - <a href="https://github.com/tdeck/3dmake">https://github.com/tdeck/3dmake</a> <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a> <a href="#fr-1-3">↩3</a> <a href="#fr-1-4">↩4</a> <a href="#fr-1-5">↩5</a> <a href="#fr-1-6">↩6</a> <a href="#fr-1-7">↩7</a> <a href="#fr-1-8">↩8</a></p>
-</li>
-<li id="footnote-2">
-<p>OpenSCAD Manual - Text &amp; Linear Extrude - <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Text">https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Text</a> <a href="#fr-2-1">↩</a> <a href="#fr-2-2">↩2</a> <a href="#fr-2-3">↩3</a> <a href="#fr-2-4">↩4</a> <a href="#fr-2-5">↩5</a> <a href="#fr-2-6">↩6</a> <a href="#fr-2-7">↩7</a> <a href="#fr-2-8">↩8</a></p>
+<p>3DMake GitHub Repository — Command Reference. <a href="https://github.com/tdeck/3dmake">https://github.com/tdeck/3dmake</a>. See README for full list of available commands. <a href="#fr-1-1">↩</a></p>
 </li>
 </ol>
 

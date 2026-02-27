@@ -1,0 +1,95 @@
+# (hash mark)
+$fn parameter
+&& (and)
+*/ (multiline comments)*
+// (single-line comments)
+[ ] (square brackets)
+{ } (curly brackets)
+|| (or)
+< > (angle brackets)
+2D fabrication
+2D shapes
+3D design
+3D printing
+3D shapes
+Abstraction
+Algorithms
+Arithmetic
+Boolean operations
+Code statement
+Comments
+Computational thinking
+Cones
+Cube commands
+Cylinder commands
+Debugging
+Decomposition
+Design cycle
+Design mode
+Difference operations
+Echo() function
+Editor window
+Extended if statement
+File format
+For loops
+Hull operations
+If statement
+ElseIf 
+Import 
+Indentation
+Intersection operations
+Linear_extrude operation
+Minkowski operation/sum
+Mirror operations
+Modules
+Offset operations
+Parameters
+Physical computing
+Polygon commands
+Preview window
+Print mode
+Random numbers / rands()
+Render mode/operations
+Rotate operations
+Scale parameter
+Text commands
+Translate operations
+Union operations
+Variables
+Walking skeleton approach
+Screen Reader Accessibility Guide
+Braille Display Setup
+Editor Setup 
+VS Code
+Notepad++
+Indent Announcement Configuration
+Non-Visual Toolchain Introduction
+PowerShell 
+Windows Command Prompt
+CMD
+Git Bash 
+File and Folder Manipulation 
+CLI 
+Command Line Interface
+Input, Output, and Piping
+Environment Variables & PATH
+3dm build
+3dm describe
+Geometric Primitives
+Parametric Architecture
+Safety Protocols and Ventilation
+Text Embossing
+Parametric Transforms
+Interlocking Features & Tolerance
+Stakeholder-Centric Design
+Slicing Guides 
+PrusaSlicer
+Bambu
+Cura
+Material Properties 
+PLA
+PETG
+TPU
+ABS
+Quality Assurance & Measurement 
+Calipers

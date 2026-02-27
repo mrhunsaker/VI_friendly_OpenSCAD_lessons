@@ -1,3 +1,11 @@
 [submodule "Simplifying-3D-Printing-with-OpenSCAD"]
     path = Simplifying-3D-Printing-with-OpenSCAD
     url = https://github.com/your-username/Simplifying-3D-Printing-with-OpenSCAD.git
+
+[submodule "CodeSolutions"]
+    path = CodeSolutions
+    url =  https://github.com/ProgrammingWithOpenSCAD/CodeSolutions
+
+[submodule "programmingwithopenscad.github.io"]
+    path = programmingwithopenscad.github.io
+    url =  https://github.com/ProgrammingWithOpenSCAD/programmingwithopenscad.github.io

@@ -1,4 +1,4 @@
--- pandoc Lua filter: replace <!--pagebreak--> with backend-specific page breaks
+-- pandoc Lua filter: replace  with backend-specific page breaks
 -- Place this file next to your other pandoc sources and include with --lua-filter=pagebreak.lua
 
 local function pagebreak_block()

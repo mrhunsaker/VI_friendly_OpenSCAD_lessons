@@ -70,4 +70,4 @@ Estimated time: 30-45 minutes
 - [history Command Reference](https://www.gnu.org/software/bash/manual/htmlnode/Bash-History-Builtins.html)
 - [Running Scripts with ./](https://www.gnu.org/software/bash/manual/htmlnode/Executing-Scripts.html)
 - [Screen Reader Tips and Tricks](https://www.nvaccess.org/documentation/)
-<!--pagebreak-->
+

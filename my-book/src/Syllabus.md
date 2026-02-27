@@ -383,4 +383,4 @@ For accessibility support:
 - Contact your NVDA/JAWS vendor directly for technical assistance
 - Refer to the [Screen Reader Accessibility Guide](Setup/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.md)
 - Check the [Git Bash Screen Reader Guide](GitBash_Foundation/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.md) if using Git Bash
-<!--pagebreak-->
+

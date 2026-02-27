@@ -63,8 +63,8 @@ Estimated time: 20-30 minutes
 
 ## References
 
-- Microsoft. (2024). *Command line reference*. [https://example.com](https://example.com)
-- Microsoft. (2024). *Using the cd command*. [https://example.com](https://example.com)
+- Microsoft. (2024). *Command line reference*. [https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/)
+- Microsoft. (2024). *Using the cd command*. [https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cd_1](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cd_1)
 
 ## Helpful Resources
 
@@ -72,4 +72,4 @@ Estimated time: 20-30 minutes
 - [CD Command Guide](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cd)
 - [DIR Command Reference](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/dir)
 - [Understanding Windows Paths](https://superuser.com/questions/167461/what-are-path-separators-on-windows)
-<!--pagebreak-->
+

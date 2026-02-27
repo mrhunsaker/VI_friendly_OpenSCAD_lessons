@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-7e85ce75.js";
+            window.path_to_searchindex_js = "../../searchindex-eaf1c1cc.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-0b2574ce.js"></script>
+        <script src="../../toc-76b29a8d.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -220,7 +220,43 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="3dmake_foundation_lessons_3dmake_8-snap-fit-clip"><a class="header" href="#3dmake_foundation_lessons_3dmake_8-snap-fit-clip">Snap-Fit Clip Project</a></h1>
+                        <h1 id="3dmake_foundation_lessons_3dmake_8-snap_fit_clip"><a class="header" href="#3dmake_foundation_lessons_3dmake_8-snap_fit_clip">Snap-Fit Clip - Extension Project</a></h1>
+<p>Estimated time: 3-6 hours</p>
+<h2 id="learning-objectives"><a class="header" href="#learning-objectives">Learning Objectives</a></h2>
+<p>By completing this project, you will:</p>
+<ul>
+<li>Design flexible components that must bend without failing</li>
+<li>Conduct tolerance and material testing systematically</li>
+<li>Understand the relationship between geometry, material properties, and functional performance</li>
+<li>Document design iterations and trade-offs</li>
+</ul>
+<h2 id="objective"><a class="header" href="#objective">Objective</a></h2>
+<ul>
+<li>Design a snap-fit clip with customizable clip thickness and spacing to determine optimal tolerances for your printer and material.</li>
+</ul>
+<h2 id="tasks"><a class="header" href="#tasks">Tasks</a></h2>
+<ol>
+<li>Design a parametric snap-fit test piece with adjustable clip thickness and spacing.</li>
+<li>Print test pieces for three tolerance values (adjust clip geometry for each variant).</li>
+<li>Test each clip for snap-fit behavior and document success/failure modes.</li>
+<li>Refine dimensions based on testing results and create final clip design.</li>
+</ol>
+<h2 id="deliverable"><a class="header" href="#deliverable">Deliverable</a></h2>
+<ul>
+<li>Source <code>.scad</code> file with parametric clip modules</li>
+<li>Test print results and tolerance documentation</li>
+<li>Final clip design with recommended print settings</li>
+</ul>
+<h2 id="starter-files"><a class="header" href="#starter-files">Starter files</a></h2>
+<ul>
+<li><a href="../../assets/Extension_Projects/Snap_Fit_Clip/starter.scad">starter.scad</a> - minimal snap-fit test scaffold.</li>
+</ul>
+<h2 id="assessment-questions-optional"><a class="header" href="#assessment-questions-optional">Assessment Questions (Optional)</a></h2>
+<ol>
+<li>What clip thickness and spacing values resulted in a reliable snap-fit for your printer?</li>
+<li>How did you balance flexibility (easy to snap/unsnap) with durability (no premature failure)?</li>
+<li>What would you change in the design if this clip needed to work reliably 1,000+ times?</li>
+</ol>
 <h2 id="starter-code"><a class="header" href="#starter-code">Starter Code</a></h2>
 <p>Use this stackable bins example as your starting point:</p>
 <pre><code class="language-openscad">// Stackable Storage Bins - Advanced Example

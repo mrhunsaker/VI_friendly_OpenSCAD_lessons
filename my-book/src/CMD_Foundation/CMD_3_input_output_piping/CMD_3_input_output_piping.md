@@ -195,4 +195,4 @@ notepad new_notes.txt
 - [TYPE Command Reference](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/type)
 - [FINDSTR for Advanced Searching](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/findstr)
 - [CMD Pipeline Concepts](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/)
-<!--pagebreak-->
+

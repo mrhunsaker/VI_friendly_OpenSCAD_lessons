@@ -7,4 +7,4 @@ Skills gained: Terminal navigation, file operations, basic scripting, keyboard-o
 
 > [!NOTE]
 > This curriculum uses Git Bash - a free Unix-style terminal for Windows that comes bundled with Git for Windows [https://git-scm.com/](https://git-scm.com/). It can be installed at the provided link or elde via `winget` in the terminal by typing `winget install Git.Git`. All commands in this section use standard bash syntax, which also works on Linux and macOS.
-<!--pagebreak-->
+

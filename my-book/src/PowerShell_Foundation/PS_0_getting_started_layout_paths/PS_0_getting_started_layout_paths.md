@@ -69,4 +69,4 @@ Estimated time: 20-30 minutes
 - [Understanding Path Notation](https://poshcode.gitbook.io/powershell-faq/src/getting-started/filesystem-navigation)
 - [Tab Completion Reference](https://learn.microsoft.com/powershell/module/psreadline/about/about_psreadline_functions)
 - [Accessibility in PowerShell ISE](https://learn.microsoft.com/powershell/scripting/windows-powershell/ise/accessibility-in-windows-powershell-ise)
-<!--pagebreak-->
+

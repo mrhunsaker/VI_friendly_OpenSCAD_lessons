@@ -183,4 +183,4 @@ dir /b | find /v "" /c
 - JAWS Documentation: [https://www.freedomscientific.com/support/](https://www.freedomscientific.com/support/)
 - Dolphin SuperNova: [https://yourdolphin.com/supernova/](https://yourdolphin.com/supernova/)
 - Windows Narrator: [https://support.microsoft.com/narrator](https://support.microsoft.com/narrator)
-<!--pagebreak-->
+

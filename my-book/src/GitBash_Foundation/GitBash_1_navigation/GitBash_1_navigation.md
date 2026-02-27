@@ -181,4 +181,4 @@ After this lesson, you should be able to:
 - [Navigation Best Practices](https://linuxcommand.org/lc3lts0020.php)
 - [Relative and Absolute Paths in Bash](https://linuxize.com/post/linux-cd-command/)
 - [Screen Reader Tips for Git Bash](https://www.nvaccess.org/documentation/)
-<!--pagebreak-->
+

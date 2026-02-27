@@ -7,4 +7,4 @@ Skills gained: Terminal navigation, file operations, basic scripting, keyboard-o
 
 > [!NOTE]
 > CMD is simpler than PowerShell but has fewer advanced features. Both pathways teach the same fundamental concepts.
-<!--pagebreak-->
+

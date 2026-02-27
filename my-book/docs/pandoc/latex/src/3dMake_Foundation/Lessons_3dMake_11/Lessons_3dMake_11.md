@@ -1,118 +1,114 @@
-[Header 2 ("3dmake_foundation_lessons_3dmake_11-lessons_3dmake_11", [], []) [Str "Lesson 11: Stakeholder-Centric Design and the Beaded Jewelry Project"], Para [Str "Estimated time: 90-120 minutes | Level: Advanced"], Para [Str "Learning Objectives"], BulletList [[Plain [Str "Conduct stakeholder interviews to identify needs, wants, and constraints", Note [Para [Str "Design Thinking Process - IDEO - ", Link ("", [], []) [Str "https://www.ideo.com/perspectives/design-thinking"] ("https://www.ideo.com/perspectives/design-thinking", "")]]]], [Plain [Str "Extract functional requirements from interview data", Note [Para [Str "Design Thinking Process - IDEO - ", Link ("", [], []) [Str "https://www.ideo.com/perspectives/design-thinking"] ("https://www.ideo.com/perspectives/design-thinking", "")]]]], [Plain [Str "Design a product that meets explicit requirements (not assumptions)", Note [Para [Str "Functional Requirements in Product Design - ", Link ("", [], []) [Str "https://www.productschool.com/blog/requirements/"] ("https://www.productschool.com/blog/requirements/", "")]]]], [Plain [Str "Iterate design based on stakeholder feedback", Note [Para [Str "Functional Requirements in Product Design - ", Link ("", [], []) [Str "https://www.productschool.com/blog/requirements/"] ("https://www.productschool.com/blog/requirements/", "")]]]], [Plain [Str "Document design decisions for reproducibility and accessibility", Note [Para [Str "Accessible Design Documentation - ", Link ("", [], []) [Str "https://www.a11y-101.com/design/inclusive-documentation"] ("https://www.a11y-101.com/design/inclusive-documentation", "")]]]]], Para [Str "Materials"], BulletList [[Plain [Str "Interview worksheet (provided below)"]], [Plain [Str "Notebook/laptop for notes"]], [Plain [Str "Access to stakeholder (or use provided scenario)"]], [Plain [Str "3dMake project scaffold"]], [Plain [Str "Calipers for measurement"]], [Plain [Str "Reference: ", Link ("", [], []) [Str "master-rubric.md"] ("docs/pandoc/latex/src/3dMake_Foundation/Lessons_3dMake_11/master-rubric.md#3dmake_foundation_lessons_3dmake_11-master-rubric", ""), Str " for design documentation standards"]]], Para [Str "Extension Project: Complete ", Link ("", [], []) [Str "Beaded_Jewelry_Unit"] ("docs/pandoc/latex/src/3dMake_Foundation/Lessons_3dMake_11/beaded-jewelry.md#3dmake_foundation_lessons_3dmake_11-beaded-jewelry", ""), Str " to apply stakeholder-centric design principles in a real project context."], Header 3 ("why-this-matters-the-design-thinking-process", ["unnumbered", "unlisted"], []) [Str "Why This Matters: The Design Thinking Process"], Para [Str "Most design failures start before CAD. They happen because:"], BulletList [[Plain [Str "Assumption Problem: Designer assumes what users need without asking"]], [Plain [Str "Specification Problem: Unclear requirements lead to wasted iterations"]], [Plain [Str "Accessibility Problem: Features designed without considering all users"]]], Para [Str "This lesson flips the process: Listen First, Design Second ", Note [Para [Str "Design Thinking Process - IDEO - ", Link ("", [], []) [Str "https://www.ideo.com/perspectives/design-thinking"] ("https://www.ideo.com/perspectives/design-thinking", "")]], Str "."], Header 4 ("the-design-thinking-pipeline", ["unnumbered", "unlisted"], []) [Str "The Design Thinking Pipeline"], CodeBlock ("", ["plaintext"], []) "1. Empathize (Listen to stakeholder)
-   v
-2. Define (Extract functional requirements)
-   v
-3. Ideate (Sketch/prototype solutions)
-   v
-4. Prototype (Build in CAD)
-   v
-5. Test (Get feedback)
-   v
-6. Iterate (Refine based on feedback)
-", Header 3 ("stakeholder-interviews-20-30-minutes", ["unnumbered", "unlisted"], []) [Str "Stakeholder Interviews (20-30 minutes)"], Header 4 ("what-is-a-stakeholder", ["unnumbered", "unlisted"], []) [Str "What is a Stakeholder?"], Para [Str "A stakeholder is anyone who will use, interact with, or be affected by your design. Examples:"], BulletList [[Plain [Str "End User: Person who directly uses the product"]], [Plain [Str "Maintenance Person: Someone who repairs/replaces parts"]], [Plain [Str "Budget Holder: Person responsible for cost"]], [Plain [Str "Safety Officer: Person ensuring regulatory compliance"]]], Header 4 ("open-ended-interview-questions", ["unnumbered", "unlisted"], []) [Str "Open-Ended Interview Questions"], Para [Str "Good interview questions:"], BulletList [[Plain [Str "[", Str "YES", Str "]", Str " Start with \"What,\" \"How,\" \"Why\""]], [Plain [Str "[", Str "YES", Str "]", Str " Don't suggest answers"]], [Plain [Str "[", Str "YES", Str "]", Str " Follow up with \"Tell me more...\""]], [Plain [Str "[", Str "YES", Str "]", Str " Listen for numbers, specific stories, pain points"]]], Para [Str "Bad interview questions:"], BulletList [[Plain [Str "[", Str "NO", Str "]", Str " \"Do you like...?\" (Yes/No - no detail)"]], [Plain [Str "[", Str "NO", Str "]", Str " \"Would you prefer A or B?\" (Forced choice)"]], [Plain [Str "[", Str "NO", Str "]", Str " \"Don't you think...?\" (Leading question)"]]], Header 4 ("sample-interview-script-beaded-jewelry", ["unnumbered", "unlisted"], []) [Str "Sample Interview Script (Beaded Jewelry)"], Para [Str "You're designing a custom beaded bracelet holder. Here's how to interview a stakeholder:"], CodeBlock ("", ["plaintext"], []) "Opening:
-\"Hi [name], I'm designing a way to store and display beaded 
-bracelets. I'd love to understand how YOU currently use bracelets 
-so I can design something that works for you. Is now a good time?\"
-Question 1: \"Tell me about your current bracelet collection. 
-How many do you have? What are they made of?\"
-Question 2: \"How do you currently store or display them? 
-What works well? What's frustrating?\"
-Question 3: \"If you could design the perfect bracelet holder, 
-what would it look like? What would it do?\"
-Question 4: \"Are there any constraints I should know about? 
-(Size of your space, colors, budget, etc.)\"
-Question 5: \"Who else might use this? How would their needs 
-differ from yours?\"
-Closing:
-\"Thank you for your time. I'll design based on what you've told me 
-and come back with a prototype for feedback.\"
-", Header 4 ("step-by-step-interview-task", ["unnumbered", "unlisted"], []) [Str "Step-by-Step Interview Task"], Para [Str "Duration: 15 minutes total"], OrderedList (1, DefaultStyle, DefaultDelim) [[Para [Str "Prepare (5 min):"], BulletList [[Plain [Str "Choose your stakeholder or use the scenario below"]], [Plain [Str "Write 4-6 questions using the template above"]], [Plain [Str "Explain the project and get permission to take notes"]]]], [Para [Str "Conduct (10 min):"], BulletList [[Plain [Str "Ask your prepared questions"]], [Plain [Str "Write down specific details (numbers, names, quotes)"]], [Plain [Str "Listen more than you talk"]], [Plain [Str "Ask \"Why?\" when you hear interesting responses"]]]], [Para [Str "Document (Immediately after):"], BulletList [[Plain [Str "Write a 2-3 sentence summary"]], [Plain [Str "Extract 3-5 key needs/constraints"]], [Plain [Str "Identify any questions that still need answers"]]]]], Header 4 ("scenario-if-you-dont-have-a-real-stakeholder", ["unnumbered", "unlisted"], []) [Str "Scenario: If You Don't Have a Real Stakeholder"], Para [Str "Scenario: Meet Sarah, a jewelry enthusiast"], Para [Str "Sarah has 15+ beaded bracelets but they're tangled in a drawer. She wants to:"], BulletList [[Plain [Str "Display them where she can see them"]], [Plain [Str "Keep them organized by color/style"]], [Plain [Str "Protect them from tangling"]], [Plain [Str "Fit in a small space on her desk"]]], Para [Str "Constraints:"], BulletList [[Plain [Str "Budget: $15 materials cost"]], [Plain [Str "Space: 6\" x 6\" footprint maximum"]], [Plain [Str "Aesthetic: Minimalist, natural wood preferred"]], [Plain [Str "Timeline: Needs it within 2 weeks"]]], Header 3 ("extract-functional-requirements-20-30-minutes", ["unnumbered", "unlisted"], []) [Str "Extract Functional Requirements (20-30 minutes)"], Header 4 ("from-interview-to-requirements", ["unnumbered", "unlisted"], []) [Str "From Interview to Requirements"], Para [Str "A functional requirement is specific, measurable, and testable:"], Table ("", [], []) (Caption Nothing []) [(AlignDefault, (ColWidth 0.32323232323232326)), (AlignDefault, (ColWidth 0.2222222222222222)), (AlignDefault, (ColWidth 0.45454545454545453))] (TableHead ("", [], []) [Row ("", [], []) [Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "Interview Data"]], Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "["]], Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "NO"]], Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "]"]], Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str " Bad Requirement"]], Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "["]], Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "YES"]], Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "]"]], Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str " Good Requirement"]]]]) [(TableBody ("", [], []) (RowHeadColumns 0) [] [Row ("", [], []) [Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "\"I have 15 bracelets\""]], Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "Lots of storage"]], Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "Hold 15-20 bracelets without damage"]]], Row ("", [], []) [Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "\"They're tangled in my drawer\""]], Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "Keep organized"]], Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "Vertical hanging system to prevent tangling"]]], Row ("", [], []) [Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "\"I want to see them\""]], Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "Display feature"]], Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "Visible from above (no lid)"]]], Row ("", [], []) [Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "\"Minimalist, natural wood\""]], Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "Nice looking"]], Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "Wood construction,  2 colors, clean lines"]]]])] (TableFoot ("", [], []) []), Header 4 ("functional-requirements-template", ["unnumbered", "unlisted"], []) [Str "Functional Requirements Template"], Para [Str "For your beaded jewelry holder, extract 5-8 requirements:"], CodeBlock ("", [""], []) "Functional Requirements:
-1. Capacity: Hold  bracelets
-2. Organization: Arrange by  (color/size/style)
-3. Protection: Prevent  (tangling/damage)
-4. Display: Visible from  (above/front/sides)
-5. Dimensions:  mm wide,  mm deep,  mm tall
-6. Material:  (wood/plastic/metal)
-7. Accessibility:  (non-visual inspection method)
-8. Durability: Withstand  (weight/use/time)
-", Header 4 ("measurable-acceptance-criteria", ["unnumbered", "unlisted"], []) [Str "Measurable Acceptance Criteria"], Para [Str "For each requirement, define how you'll TEST it:"], Table ("", [], []) (Caption Nothing []) [(AlignDefault, (ColWidth 0.2345679012345679)), (AlignDefault, (ColWidth 0.7654320987654321))] (TableHead ("", [], []) [Row ("", [], []) [Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "Requirement"]], Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "Measurement Method"]]]]) [(TableBody ("", [], []) (RowHeadColumns 0) [] [Row ("", [], []) [Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "Hold 15 bracelets"]], Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "Count actual bracelets loaded; verify no deformation"]]], Row ("", [], []) [Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "Prevent tangling"]], Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "Manual inspection: no twisting/knotting after 1 week storage"]]], Row ("", [], []) [Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "Dimensions"]], Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "Measure with calipers; compare to design parameters"]]], Row ("", [], []) [Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "Wood material"]], Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "Visual inspection; material weight check"]]], Row ("", [], []) [Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "Withstand weight"]], Cell ("", [], []) AlignDefault (RowSpan 0) (ColSpan 0) [Plain [Str "Load test: 2kg weight for 1 hour; check for deformation"]]]])] (TableFoot ("", [], []) []), Header 3 ("design-the-bracelet-holder-30-40-minutes", ["unnumbered", "unlisted"], []) [Str "Design the Bracelet Holder (30-40 minutes)"], Header 4 ("design-strategy", ["unnumbered", "unlisted"], []) [Str "Design Strategy"], Para [Str "Based on functional requirements, create a parametric SCAD model:"], CodeBlock ("", ["openscad"], []) "// Parametric Beaded Bracelet Holder
-// Designed for: [Stakeholder name]
-// Requirements: [List 3-5 key requirements]
-// === PARAMETERS (from stakeholder requirements) ===
-holderwidth = 150;      // mm - width for 15+ bracelets
-holderdepth = 80;       // mm - depth for stability
-holderheight = 120;     // mm - height for display
-numpegs = 16;           // Number of hanging pegs
-pegdiameter = 6;        // mm - bracelet hang diameter
-pegspacing = holderwidth / (numpegs + 1);
-// === DESIGN ===
-module base() {
-  // Wooden-look base plate
-  cube([holderwidth, holderdepth, 10]);
-}
-module backwall() {
-  // Back support for stability
-  translate([0, 0, 10])
-    cube([holderwidth, 5, holderheight]);
-}
-module hangingpegs() {
-  // Pegs for bracelets to hang
-  for (i = [1 : numpegs]) {
-    xpos = pegspacing * i;
-    translate([xpos, holderdepth/2, holderheight - 20])
-      cylinder(r=pegdiameter/2, h=30, $fn=16);
+[Header 2 ("lesson-10-hands-on-practice-exercises-and-troubleshooting", [], []) [Str "Lesson 10: Hands-On Practice Exercises and Troubleshooting"], Para [Str "Estimated time: 120–150 minutes"], Header 3 ("learning-objectives-", ["unnumbered", "unlisted"], []) [Str "Learning Objectives ", Note [Para [Str "OpenSCAD User Manual — Hull and Minkowski. ", Link ("", [], []) [Str "https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Minkowski_and_Hull"] ("https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Minkowski_and_Hull", "")]]], BulletList [[Plain [Str "Apply skills from Lessons 1–9 in three integrated design exercises"]], [Plain [Str "Use calipers to measure and validate printed parts against specifications"]], [Plain [Str "Diagnose and fix non-manifold geometry errors"]], [Plain [Str "Perform tolerance stack-up analysis"]], [Plain [Str "Use ", Code ("", [], []) "3dm describe", Str " for non-visual validation"]]], Header 3 ("materials", ["unnumbered", "unlisted"], []) [Str "Materials"], BulletList [[Plain [Str "3dMake project"]], [Plain [Str "Printer and PLA filament"]], [Plain [Str "Digital calipers"]], [Plain [Str "Printed parts from previous lessons (or new prints from exercises below)"]]], Header 3 ("exercise-set-a-phone-stand-refinement", ["unnumbered", "unlisted"], []) [Str "Exercise Set A: Phone Stand Refinement"], Header 4 ("a1--measure-and-iterate", ["unnumbered", "unlisted"], []) [Str "A1 — Measure and Iterate"], Para [Str "Using calipers, measure your printed phone stand against the design specification:"], CodeBlock ("", [""], []) "Measurement checklist:
+[ ] Base width = phone_w + 20 ± 0.3 mm
+[ ] Base depth as calculated ± 0.5 mm
+[ ] Back support angle (measure with angle gauge or protractor)
+[ ] Lip depth = lip_h ± 0.3 mm
+[ ] Phone fits and is stable (functional test)
+", Para [Str "For each out-of-spec dimension, calculate the correction and update the parameter in ", Code ("", [], []) "src/main.scad", Str ". Rebuild and reprint."], Header 4 ("a2--tolerance-stack-up-analysis-", ["unnumbered", "unlisted"], []) [Str "A2 — Tolerance Stack-Up Analysis ", Note [Para [Str "Digital Calipers Measurement Technique — General metrology reference. See also: ", Link ("", [], []) [Str "Measurement Worksheet Asset"] ("https://github.com/mrhunsaker/VI_3DMake_OpenSCAD_Curriculum/3dMake_Foundation/Lessons_3dMake_11%5C../../assets/3dMake_Foundation/measurement_worksheet.md", "")]]], CodeBlock ("", [""], []) "Scenario: phone stand cradle with three stacked parts:
+- Base plate: designed 5mm, printed 5.12mm (+ 0.12mm)
+- Back brace: designed 60mm, printed 59.87mm (- 0.13mm)
+- Lip:        designed 15mm, printed 15.09mm (+ 0.09mm)
+
+Total stack height: 5.12 + 59.87 + 15.09 = 80.08mm
+Design intent:      5 + 60 + 15            = 80.00mm
+Error:              80.08 - 80.00          = +0.08mm  (within 0.5mm spec — PASS)
+
+Worst case (all errors same direction): 0.12 + 0.13 + 0.09 = 0.34mm — still within spec
+", Para [Str "Document your own measurements in a similar table."], Header 4 ("a3--add-a-cable-slot-", ["unnumbered", "unlisted"], []) [Str "A3 — Add a Cable Slot ", Note [Para [Str "3DMake GitHub Repository — Command reference including ", Code ("", [], []) "3dm describe", Str ". ", Link ("", [], []) [Str "https://github.com/tdeck/3dmake"] ("https://github.com/tdeck/3dmake", "")]]], Para [Str "Extend your phone stand design with a cable slot through the base:"], CodeBlock ("", ["openscad"], []) "cable_slot_w  = 12;   // mm
+cable_slot_d  = 5;    // mm
+cable_slot_z  = -0.001;
+
+// Add to main difference() block:
+translate([base_w/2 - cable_slot_w/2, 0, cable_slot_z])
+  cube([cable_slot_w, cable_slot_d, base_h + 0.002]);
+", Header 3 ("exercise-set-b-keycap-with-text", ["unnumbered", "unlisted"], []) [Str "Exercise Set B: Keycap with Text"], Header 4 ("b1--build-a-mechanical-keyboard-keycap", ["unnumbered", "unlisted"], []) [Str "B1 — Build a Mechanical Keyboard Keycap"], CodeBlock ("", ["openscad"], []) "// Parametric keycap
+key_w      = 18;
+key_d      = 18;
+key_h      = 7;
+stem_r     = 2.75;  // MX stem: 5.5mm diameter
+stem_h     = 3.8;
+wall       = 1.5;
+label_text = \"A\";
+
+module keycap() {
+  difference() {
+    // Keycap body with slight top curve
+    hull() {
+      cube([key_w, key_d, key_h - 2], center=true);
+      translate([0, 0, 1]) cube([key_w - 2, key_d - 2, key_h], center=true);
+    }
+    // Hollow inside
+    translate([0, 0, -wall])
+      cube([key_w - 2*wall, key_d - 2*wall, key_h], center=true);
+    // MX stem hole
+    translate([0, 0, -(key_h/2 + 0.001)])
+      cylinder(r=stem_r + 0.1, h=stem_h + 0.001, $fn=16);
   }
 }
-module braceletholder() {
-  // Combine all components
-  union() {
-    base();
-    backwall();
-    hangingpegs();
+
+module stem_mount() {
+  translate([0, 0, -(key_h/2 + stem_h)])
+    difference() {
+      cylinder(r=stem_r + wall, h=stem_h, $fn=16);
+      cylinder(r=stem_r, h=stem_h + 0.001, $fn=16);
+    }
+}
+
+keycap();
+stem_mount();
+
+// Engrave label
+translate([0, 0, key_h/2 - 0.8])
+  linear_extrude(1.2)
+    text(label_text, size=8, font=\"Liberation Sans:style=Bold\",
+         halign=\"center\", valign=\"center\", $fn=4);
+", Header 4 ("b2--validate-with-3dm-describe", ["unnumbered", "unlisted"], []) [Str "B2 — Validate with 3dm describe"], CodeBlock ("", ["bash"], []) "3dm describe
+", Para [Str "Expected output should confirm the keycap geometry. Document what the AI description says and compare it to your design intent."], Header 4 ("b3--print-and-test", ["unnumbered", "unlisted"], []) [Str "B3 — Print and Test"], Para [Str "Print the keycap and test it on a Cherry MX switch (or compatible). If the stem is too tight, increase ", Code ("", [], []) "stem_r + 0.1", Str " to ", Code ("", [], []) "stem_r + 0.15", Str ". If too loose, decrease to ", Code ("", [], []) "stem_r + 0.05", Str "."], Header 3 ("exercise-set-c-stackable-bins", ["unnumbered", "unlisted"], []) [Str "Exercise Set C: Stackable Bins"], Header 4 ("c1--build-a-three-size-bin-set", ["unnumbered", "unlisted"], []) [Str "C1 — Build a Three-Size Bin Set"], Para [Str "Using the stackable bin module from Lesson 8, generate three sizes:"], CodeBlock ("", ["openscad"], []) "// Small bin
+translate([0, 0, 0])
+  bin_assembly(bin_w=60, bin_d=45, bin_h=30);
+
+// Medium bin
+translate([80, 0, 0])
+  bin_assembly(bin_w=80, bin_d=60, bin_h=40);
+
+// Large bin
+translate([180, 0, 0])
+  bin_assembly(bin_w=100, bin_d=80, bin_h=50);
+", Header 4 ("c2--diagnose-and-fix-non-manifold-geometry", ["unnumbered", "unlisted"], []) [Str "C2 — Diagnose and Fix Non-Manifold Geometry"], Para [Str "Non-manifold geometry occurs when faces share edges inconsistently (T-junctions, missing faces, zero-thickness walls). Common causes:"], CodeBlock ("", ["openscad"], []) "// PROBLEM: two cubes share a face exactly — may produce non-manifold edge
+cube([20, 20, 10]);
+translate([20, 0, 0]) cube([20, 20, 10]);  // touching at x=20 — ambiguous edge
+
+// FIX 1: use union()
+union() {
+  cube([20, 20, 10]);
+  translate([20, 0, 0]) cube([20, 20, 10]);
+}
+
+// FIX 2: overlap slightly
+cube([20.001, 20, 10]);
+translate([20, 0, 0]) cube([20, 20, 10]);
+", Para [Str "Diagnosis tool:"], CodeBlock ("", ["bash"], []) "3dm describe  # AI will often flag non-manifold geometry
+# Also open STL in slicer and enable \"Check for geometry errors\"
+", Header 4 ("c3--advanced-geometry-hull-and-minkowski", ["unnumbered", "unlisted"], []) [Str "C3 — Advanced Geometry: hull() and minkowski()"], CodeBlock ("", ["openscad"], []) "// hull() creates a convex envelope — useful for organic shapes
+module smooth_transition() {
+  hull() {
+    translate([0, 0, 0]) cylinder(r=15, h=5, $fn=64);
+    translate([0, 0, 30]) cylinder(r=5, h=2, $fn=64);
   }
 }
-// Main
-braceletholder();
-", Header 4 ("customization-based-on-stakeholder-feedback", ["unnumbered", "unlisted"], []) [Str "Customization Based on Stakeholder Feedback"], Para [Str "Before printing, modify parameters:"], CodeBlock ("", [""], []) "Interview revealed:
-- \"15 bracelets is about right\"
-- \"I like minimal spacing\"
-- \"Natural wood color\"
-- \"Small desk space - maybe 5 inches wide?\"
 
-Updated parameters:
-numpegs = 15;           // Exact count for their collection
-holderwidth = 127;      // 5 inches in mm
-pegspacing = holderwidth / (numpegs + 1);
-", Header 4 ("testing-non-visually", ["unnumbered", "unlisted"], []) [Str "Testing Non-Visually"], CodeBlock ("", ["bash"], []) "# Describe the model to verify it matches requirements
-3dm describe src/main.scad
+smooth_transition();
 
-# Expected output should mention:
-# - 15 hanging pegs arranged horizontally
-# - Base plate for stability
-# - Back wall for support
-# - Dimensions approximately 127mm x 80mm x 120mm
+// minkowski() adds the shape of a small object to every surface point
+module rounded_hull() {
+  minkowski() {
+    hull() {
+      cylinder(r=10, h=3, $fn=8);      // octagonal prism
+      translate([30, 0, 0]) sphere(r=8, $fn=32);
+    }
+    sphere(r=2, $fn=16);  // rounds all edges by 2mm
+  }
+}
 
-# Generate preview for tactile inspection
-3dm preview src/main.scad
-", Header 3 ("iterate-based-on-feedback-20-30-minutes", ["unnumbered", "unlisted"], []) [Str "Iterate Based on Feedback (20-30 minutes)"], Header 4 ("feedback-loop", ["unnumbered", "unlisted"], []) [Str "Feedback Loop"], Para [Str "After printing a test version:"], OrderedList (1, DefaultStyle, DefaultDelim) [[Para [Str "Measure physical parts:"], CodeBlock ("", ["bash"], []) "# Use calipers to verify
-- Actual width:  mm (design: 127mm)
-- Actual peg diameter:  mm (design: 6mm)
-- Actual spacing:  mm
-"], [Para [Str "Test with actual bracelets:"], BulletList [[Plain [Str "Can 15 bracelets actually hang?"]], [Plain [Str "Do they tangle?"]], [Plain [Str "Do pegs support the weight?"]], [Plain [Str "Is it stable on the desk?"]]]], [Para [Str "Document feedback:"], CodeBlock ("", ["markdown"], []) "Test Results:
-- [YES] Holds 15 bracelets comfortably
--  Pegs slightly too thin (bracelets slip)
-- [YES] No tangling observed
--  Wobbles slightly - needs wider base
-
-Adjustments for v2:
-- Increase pegdiameter: 6mm -> 8mm
-- Increase basedepth: 80mm -> 100mm
-"], [Para [Str "Iterate:"], CodeBlock ("", ["openscad"], []) "// Modified parameters for v2
-pegdiameter = 8;        // Thicker pegs (8mm instead of 6mm)
-holderdepth = 100;      // Wider base (100mm instead of 80mm)
-"], [Para [Str "Reprint and test:"], BulletList [[Plain [Str "Does v2 address the issues?"]], [Plain [Str "Any new problems?"]], [Plain [Str "Is it ready for final design?"]]]]], Header 4 ("accessible-iteration-tracking", ["unnumbered", "unlisted"], []) [Str "Accessible Iteration Tracking"], Para [Str "Document all iterations in a spreadsheet or text file:"], CodeBlock ("", ["plaintext"], []) "Version | Peg Size | Base Depth | Fits Bracelets | Stable | Notes
---------|----------|------------|----------------|--------|--------------------
-v1      | 6mm      | 80mm       | [YES] (14/15)  |        | Wobbles, pegs thin
-v2      | 8mm      | 100mm      | [YES] (15/15)  | [YES]  | Perfect fit, stable
-v3      | 8mm      | 100mm      | [YES] (15/15)  | [YES]  | With wood stain
-", Header 3 ("complete-project-beaded-jewelry-bracelet-holder", ["unnumbered", "unlisted"], []) [Str "Complete Project: Beaded Jewelry Bracelet Holder"], Header 4 ("project-requirements", ["unnumbered", "unlisted"], []) [Str "Project Requirements"], Para [Str "Objective: Design a customized bracelet holder based on an actual stakeholder's needs."], Para [Str "Deliverables:"], OrderedList (1, DefaultStyle, DefaultDelim) [[Para [Str "Interview Documentation (1-2 pages)"], BulletList [[Plain [Str "4-6 interview questions asked"]], [Plain [Str "Stakeholder's 3-5 key needs"]], [Plain [Str "Extracted functional requirements"]], [Plain [Str "Acceptance criteria for each requirement"]]]], [Para [Str "Design SCAD File (", Code ("", [], []) "braceletholder.scad", Str ")"], BulletList [[Plain [Str "Parametric design with all requirements"]], [Plain [Str "Clear parameters at top (easily customizable)"]], [Plain [Str "Well-commented modules"]], [Plain [Str "Matches stakeholder dimensions"]]]], [Para [Str "Iteration Log (2-3 pages)"], BulletList [[Plain [Str "Version 1 test results"]], [Plain [Str "Feedback from stakeholder"]], [Plain [Str "Changes made for v2"]], [Plain [Str "Final design specifications"]]]], [Para [Str "Printed Prototype (physical)"], BulletList [[Plain [Str "Demonstrates final design"]], [Plain [Str "Holds actual bracelets from stakeholder"]], [Plain [Str "Passes all acceptance criteria"]]]], [Para [Str "Final Documentation (1-2 pages)"], BulletList [[Plain [Str "Design process summary"]], [Plain [Str "Stakeholder feedback quotes"]], [Plain [Str "Design decisions justified"]], [Plain [Str "Lessons learned"]]]]], Header 4 ("assessment-rubric-0-9-scale", ["unnumbered", "unlisted"], []) [Str "Assessment Rubric (0-9 scale)"], Para [Str "Problem & Solution (0-3 points)"], BulletList [[Plain [Str "Stakeholder clearly identified and interviewed"]], [Plain [Str "Requirements extracted from interview (not assumptions)"]], [Plain [Str "Functional requirements are specific and measurable"]]], Para [Str "Design & Code Quality (0-3 points)"], BulletList [[Plain [Str "SCAD code is parametric and well-organized"]], [Plain [Str "Design meets all extracted requirements"]], [Plain [Str "Iterations show thoughtful refinement based on feedback"]]], Para [Str "Documentation (0-3 points)"], BulletList [[Plain [Str "Interview process clearly documented"]], [Plain [Str "Design decisions justified with stakeholder feedback"]], [Plain [Str "Iteration log shows testing methodology"]], [Plain [Str "Accessible description of design (3dm describe output)"]]], Header 3 ("quiz---lesson-3dmake11-10-questions", ["unnumbered", "unlisted"], []) [Str "Quiz - Lesson 3dMake.11 (10 questions)"], OrderedList (1, DefaultStyle, DefaultDelim) [[Plain [Str "What is the primary purpose of conducting stakeholder interviews before design", Note [Para [Str "Design Thinking Process - IDEO - ", Link ("", [], []) [Str "https://www.ideo.com/perspectives/design-thinking"] ("https://www.ideo.com/perspectives/design-thinking", "")]], Str "?"]], [Plain [Str "Give one example of an open-ended interview question and one bad (leading) question", Note [Para [Str "Design Thinking Process - IDEO - ", Link ("", [], []) [Str "https://www.ideo.com/perspectives/design-thinking"] ("https://www.ideo.com/perspectives/design-thinking", "")]], Str "."]], [Plain [Str "What is the difference between a \"need\" and a \"want\" in the design context", Note [Para [Str "Design Thinking Process - IDEO - ", Link ("", [], []) [Str "https://www.ideo.com/perspectives/design-thinking"] ("https://www.ideo.com/perspectives/design-thinking", "")]], Str "?"]], [Plain [Str "How do you convert interview data into functional requirements", Note [Para [Str "Design Thinking Process - IDEO - ", Link ("", [], []) [Str "https://www.ideo.com/perspectives/design-thinking"] ("https://www.ideo.com/perspectives/design-thinking", "")]], Str "?"]], [Plain [Str "What is an acceptance criterion and why is it important", Note [Para [Str "Functional Requirements in Product Design - ", Link ("", [], []) [Str "https://www.productschool.com/blog/requirements/"] ("https://www.productschool.com/blog/requirements/", "")]], Str "?"]], [Plain [Str "Describe how you would test a bracelet holder's capacity non-visually using measurements", Note [Para [Str "Functional Requirements in Product Design - ", Link ("", [], []) [Str "https://www.productschool.com/blog/requirements/"] ("https://www.productschool.com/blog/requirements/", "")]], Str "."]], [Plain [Str "True or False: You can design a good product without talking to the person who will use it."]], [Plain [Str "Explain why iteration based on real feedback is better than guessing", Note [Para [Str "Functional Requirements in Product Design - ", Link ("", [], []) [Str "https://www.productschool.com/blog/requirements/"] ("https://www.productschool.com/blog/requirements/", "")]], Str "."]], [Plain [Str "How would you document design changes in a way that's accessible to non-visual users", Note [Para [Str "Accessible Design Documentation - ", Link ("", [], []) [Str "https://www.a11y-101.com/design/inclusive-documentation"] ("https://www.a11y-101.com/design/inclusive-documentation", "")]], Str "?"]], [Plain [Str "What should you do if your prototype fails a stakeholder's test", Note [Para [Str "Functional Requirements in Product Design - ", Link ("", [], []) [Str "https://www.productschool.com/blog/requirements/"] ("https://www.productschool.com/blog/requirements/", "")]], Str "?"]]], Header 3 ("extension-problems-10", ["unnumbered", "unlisted"], []) [Str "Extension Problems (10)"], OrderedList (1, DefaultStyle, DefaultDelim) [[Plain [Str "Conduct interviews with 3 different stakeholders for the bracelet holder; compare their requirements", Note [Para [Str "Design Thinking Process - IDEO - ", Link ("", [], []) [Str "https://www.ideo.com/perspectives/design-thinking"] ("https://www.ideo.com/perspectives/design-thinking", "")]], Str "."]], [Plain [Str "Design 3 different bracelet holder variants for different stakeholder types (minimalist, maximalist, travel-focused)", Note [Para [Str "Design Thinking Process - IDEO - ", Link ("", [], []) [Str "https://www.ideo.com/perspectives/design-thinking"] ("https://www.ideo.com/perspectives/design-thinking", "")]], Str "."]], [Plain [Str "Create a complete functional requirements document with measurable acceptance criteria", Note [Para [Str "Design Thinking Process - IDEO - ", Link ("", [], []) [Str "https://www.ideo.com/perspectives/design-thinking"] ("https://www.ideo.com/perspectives/design-thinking", "")]], Str "."]], [Plain [Str "Build and test 2 iterations of the bracelet holder; document all changes", Note [Para [Str "Functional Requirements in Product Design - ", Link ("", [], []) [Str "https://www.productschool.com/blog/requirements/"] ("https://www.productschool.com/blog/requirements/", "")]], Str "."]], [Plain [Str "Develop a design specification document that someone else could follow to recreate your design", Note [Para [Str "Accessible Design Documentation - ", Link ("", [], []) [Str "https://www.a11y-101.com/design/inclusive-documentation"] ("https://www.a11y-101.com/design/inclusive-documentation", "")]], Str "."]], [Plain [Str "Conduct a \"design review\" with your stakeholder; document their feedback and your responses", Note [Para [Str "Design Thinking Process - IDEO - ", Link ("", [], []) [Str "https://www.ideo.com/perspectives/design-thinking"] ("https://www.ideo.com/perspectives/design-thinking", "")]], Str "."]], [Plain [Str "Create a manufacturing specification: tolerances, materials, assembly instructions, quality checks", Note [Para [Str "Functional Requirements in Product Design - ", Link ("", [], []) [Str "https://www.productschool.com/blog/requirements/"] ("https://www.productschool.com/blog/requirements/", "")]], Str "."]], [Plain [Str "Build a customer feedback tracking system; document what works and what could be improved", Note [Para [Str "Design Thinking Process - IDEO - ", Link ("", [], []) [Str "https://www.ideo.com/perspectives/design-thinking"] ("https://www.ideo.com/perspectives/design-thinking", "")]], Str "."]], [Plain [Str "Design an accessibility checklist for the bracelet holder: non-visual inspection, measurement-based testing, assembly ease", Note [Para [Str "Accessible Design Documentation - ", Link ("", [], []) [Str "https://www.a11y-101.com/design/inclusive-documentation"] ("https://www.a11y-101.com/design/inclusive-documentation", "")]], Str "."]], [Plain [Str "Write a comprehensive design case study: from initial interview through final product, including all iterations, feedback, and lessons learned", Note [Para [Str "Design Thinking Process - IDEO - ", Link ("", [], []) [Str "https://www.ideo.com/perspectives/design-thinking"] ("https://www.ideo.com/perspectives/design-thinking", "")]], Note [Para [Str "Functional Requirements in Product Design - ", Link ("", [], []) [Str "https://www.productschool.com/blog/requirements/"] ("https://www.productschool.com/blog/requirements/", "")]], Note [Para [Str "Accessible Design Documentation - ", Link ("", [], []) [Str "https://www.a11y-101.com/design/inclusive-documentation"] ("https://www.a11y-101.com/design/inclusive-documentation", "")]], Str "."]]], Header 3 ("summary-from-interview-to-design", ["unnumbered", "unlisted"], []) [Str "Summary: From Interview to Design"], Para [Str "The 11 lessons have taken you from beginner to advanced designer. This final lesson shows you that the best designs start with listening, not assuming."], Header 4 ("the-full-journey", ["unnumbered", "unlisted"], []) [Str "The Full Journey"], OrderedList (1, DefaultStyle, DefaultDelim) [[Plain [Str "Lessons 1-3: Foundation (setup, primitives, parametric code)"]], [Plain [Str "Lessons 4-5: Verification & Safety (AI checking, physical safety)"]], [Plain [Str "Lessons 6-7: Applied Projects (keycap, phone stand)"]], [Plain [Str "Lesson 8: Advanced Design (tolerance, interlocking, complex assemblies)"]], [Plain [Str "Lesson 9: Automation (batch processing, scripting)"]], [Plain [Str "Lesson 10: Mastery (troubleshooting, QA, testing)"]], [Plain [Str "Lesson 11: Leadership (listening to stakeholders, designing for real users)"]]], Header 4 ("next-steps-after-this-lesson", ["unnumbered", "unlisted"], []) [Str "Next Steps After This Lesson"], Para [Str "You're now ready for:"], BulletList [[Plain [Str "[", Str "YES", Str "]", Str " Professional product design workflows"]], [Plain [Str "[", Str "YES", Str "]", Str " Customer-driven development"]], [Plain [Str "[", Str "YES", Str "]", Str " Small-batch manufacturing"]], [Plain [Str "[", Str "YES", Str "]", Str " Open-source design contributions"]], [Plain [Str "[", Str "YES", Str "]", Str " Teaching others these skills"]]], Para [Str "References"]]
+rounded_hull();
+", Header 3 ("quiz--lesson-3dmake10-15-questions", ["unnumbered", "unlisted"], []) [Str "Quiz — Lesson 3dMake.10 (15 questions)"], OrderedList (1, DefaultStyle, DefaultDelim) [[Plain [Str "What tool do you use to measure printed part dimensions against the design specification?"]], [Plain [Str "What is tolerance stack-up, and why does it matter for multi-part assemblies?"]], [Plain [Str "What causes non-manifold geometry in OpenSCAD, and how do you detect it?"]], [Plain [Str "How does ", Code ("", [], []) "hull()", Str " differ from ", Code ("", [], []) "union()", Str "?"]], [Plain [Str "What does ", Code ("", [], []) "3dm describe", Str " help you verify about your model?"]], [Plain [Str "What does a Cherry MX stem measure in diameter, and what clearance would you add for a slip-fit keycap?"]], [Plain [Str "True or False: ", Code ("", [], []) "find -newer", Str " is an event-driven file change detection method."]], [Plain [Str "If three parts each have ±0.15 mm tolerance, what is the worst-case total error for a three-part stack?"]], [Plain [Str "What does the ", Code ("", [], []) "$fn", Str " parameter control in OpenSCAD?"]], [Plain [Str "Describe two methods for fixing non-manifold geometry caused by two touching (but not overlapping) shapes."]], [Plain [Str "What is the difference between ", Code ("", [], []) "hull()", Str " and ", Code ("", [], []) "minkowski()", Str " for creating organic shapes? Give one use case for each."]], [Plain [Str "What does ", Code ("", [], []) "resize([50, 0, 0])", Str " do, and why might ", Code ("", [], []) "resize()", Str " behave unexpectedly for non-uniform scaling?"]], [Plain [Str "When measuring a printed part with calipers, what is the difference between an inside measurement and an outside measurement, and when does that distinction matter for tolerance analysis?"]], [Plain [Str "Describe the iterative design workflow for dialing in press-fit tolerances: what do you print, what do you measure, and how do you adjust?"]], [Plain [Str "If ", Code ("", [], []) "3dm describe", Str " reports \"the model appears non-manifold,\" what are three possible causes you would investigate in your OpenSCAD code?"]]], Header 3 ("extension-problems-15", ["unnumbered", "unlisted"], []) [Str "Extension Problems (15)"], OrderedList (1, DefaultStyle, DefaultDelim) [[Plain [Str "Create a tolerance sensitivity study: build 5 keycaps with stem clearance from 0.05–0.25 mm in 0.05 mm increments, print them, and record which values fit your switches."]], [Plain [Str "Design a go/no-go gauge for a 10 mm nominal hole: a part with a \"go\" pin sized for slip-fit and a \"no-go\" pin sized for interference fit."]], [Plain [Str "Write a printer calibration SOP (standard operating procedure): bed leveling, first-layer calibration, and dimension verification. Include a measurement checklist."]], [Plain [Str "Build a three-tier stackable storage system for art supplies. Each tier has a different inner grid."]], [Plain [Str "Conduct a tolerance stack-up analysis for your stackable bin system. Calculate worst-case misalignment."]], [Plain [Str "Build a parametric test coupon that tests four different wall thicknesses (0.8, 1.2, 1.6, 2.0 mm) in a single print."]], [Plain [Str "Design a caliper stand: a holder that holds your digital calipers at a comfortable angle for one-handed operation."]], [Plain [Str "Build a non-manifold error catalog: intentionally create 5 different types of non-manifold geometry, document how each was created and how to fix it."]], [Plain [Str "Use ", Code ("", [], []) "hull()", Str " to design a smooth ergonomic tool handle and compare it to a simple cylinder handle."]], [Plain [Str "Create a printability checklist for new designs: overhangs, wall thickness, minimum feature size, support requirements. Apply it to your keycap and bin designs."]], [Plain [Str "Research the ", Code ("", [], []) "resize()", Str " function in OpenSCAD. Build an example showing how it behaves differently from ", Code ("", [], []) "scale()", Str " for non-uniform resizing."]], [Plain [Str "Design a multi-part assembly tutorial: a three-piece interlocking puzzle that teaches the concepts of tolerance, alignment, and slip-fit."]], [Plain [Str "Build a \"measurement worksheet\" template in OpenSCAD: render a flat sheet that lists all key dimensions of a part as text, for printing alongside the part."]], [Plain [Str "Create a chi-squared goodness-of-fit test for your printer's dimensional accuracy: measure 20 prints of the same part and determine if the errors are normally distributed."]], [Plain [Str "Write a comprehensive troubleshooting guide covering the 10 most common 3D printing failures you have encountered (or researched), with causes, prevention, and fixes."]]], Header 3 ("references-and-helpful-resources", ["unnumbered", "unlisted"], []) [Str "References and Helpful Resources"], Header 4 ("supplemental-resources", ["unnumbered", "unlisted"], []) [Str "Supplemental Resources"], BulletList [[Plain [Link ("", [], []) [Str "Programming with OpenSCAD EPUB Textbook"] ("docs%5Cpandoc%5Clatex%5Csrc%5Cassets%5CProgramming_with_OpenSCAD.epub", ""), Str " — Troubleshooting and advanced geometry chapters"]], [Plain [Link ("", [], []) [Str "CodeSolutions Repository"] ("https://github.com/ProgrammingWithOpenSCAD/CodeSolutions", ""), Str " — Worked practice exercises"]], [Plain [Link ("", [], []) [Str "OpenSCAD Quick Reference"] ("https://programmingwithopenscad.github.io/quick-reference.html", ""), Str " — Function reference"]], [Plain [Link ("", [], []) [Str "Master Rubric"] ("https://github.com/mrhunsaker/VI_3DMake_OpenSCAD_Curriculum/3dMake_Foundation/Lessons_3dMake_11%5C../../assets/3dMake_Foundation/master-rubric.md", ""), Str " — Assessment criteria for practice exercises"]]]]

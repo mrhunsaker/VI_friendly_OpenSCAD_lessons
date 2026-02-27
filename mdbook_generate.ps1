@@ -28,12 +28,6 @@ if (-not (Test-Path $BuildOutput)) {
     New-Item -ItemType Directory -Path $BuildOutput | Out-Null
 }
 
-# Clean previous build artifacts
-Write-Host "Cleaning previous mdBook build..."
-Push-Location $BookDir
-mdbook clean
-Pop-Location
-
 # Build the book
 Write-Host "Building mdbook..."
 Write-Host "  Source: $BookDir\src\"
@@ -45,5 +39,14 @@ $env:RUST_BACKTRACE = 'full'
 mdbook build --dest-dir "$BuildOutput"
 Pop-Location
 
+
+Write-Host "building pdf in root directory with lualatex"
+Push-Location $ScriptDir
+lualatex "$BuildOutput/pandoc/latex/OpenSCAD_Curriculum.tex"
+makeindex "$BuildOutput/pandoc/latex/OpenSCAD_Curriculum.idx"
+lualatex "$BuildOutput/pandoc/latex/OpenSCAD_Curriculum.tex"
+Pop-Location
+
 Write-Host ""
-Write-Host " HTML Build complete!" -ForegroundColor Green
+Write-Host "All Builds complete!"
+Write-Host " Outputs are available at: $BuildOutput"

@@ -257,4 +257,4 @@ After any `copy`, `move`, or `del` operation, always verify with `dir /B` to con
 ## Next Steps
 
 Complete all exercises, pass the checkpoint questions, then move to **CMD-3: Input, Output & Redirection**.
-<!--pagebreak-->
+

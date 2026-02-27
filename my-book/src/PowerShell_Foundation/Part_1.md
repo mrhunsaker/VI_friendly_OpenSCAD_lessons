@@ -5,4 +5,4 @@ This section covers terminal fundamentals, screen reader accessibility, and comm
 Time commitment: ~10 hours  
 
 Skills gained: Terminal navigation, file operations, basic scripting, keyboard-only workflow mastery
-<!--pagebreak-->
+

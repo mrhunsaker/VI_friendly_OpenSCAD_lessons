@@ -195,6 +195,9 @@ $endif$
 $fonts.latex()$
 $font-settings.latex()$
 $common.latex()$
+% Indexing support
+\usepackage{makeidx}
+\makeindex
 $for(header-includes)$
 $header-includes$
 $endfor$
@@ -296,6 +299,13 @@ $if(biblatex)$
 $endif$
 $for(include-after)$
 $include-after$
-
 $endfor$
+
+% Render the index at the very end of the book
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Index}
+\clearpage
+\printindex
+
 \end{document}

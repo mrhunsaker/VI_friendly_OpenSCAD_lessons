@@ -1,0 +1,354 @@
+# Master Instructor Glossary with Pedagogical Notes  
+*OpenSCAD + 3dMake + CLI-Based 3D Printing Curriculum*
+
+This glossary expands technical definitions with:
+
+- Teaching emphasis
+- Common misconceptions
+- Demonstration strategies
+- Assessment indicators
+- Cross-module integration notes
+
+---
+
+# 1. General Design & Engineering Concepts
+
+## Additive Manufacturing
+**Definition:** Manufacturing process that builds objects layer by layer.
+
+**Teaching Emphasis:**  
+Contrast with subtractive manufacturing (CNC milling). Students should understand material addition vs removal.
+
+**Common Misconception:**  
+Students often assume “3D printing” is a single technology; clarify FDM vs resin vs industrial processes.
+
+**Demonstration:**  
+Show failed print cross-section to visualize layers.
+
+**Assessment Cue:**  
+Can student explain how layer height affects surface quality?
+
+---
+
+## Parametric Design
+**Definition:** Designing models driven by adjustable variables.
+
+**Teaching Emphasis:**  
+This is the core philosophical difference between OpenSCAD and GUI CAD tools.
+
+**Common Misconception:**  
+Students confuse “parameter” with “hardcoded variable.” Emphasize reusability.
+
+**Demonstration:**  
+Live-edit a dimension variable and re-render.
+
+**Assessment Cue:**  
+Can student refactor a fixed-dimension model into a parametric one?
+
+---
+
+## Tolerance
+**Definition:** Acceptable dimensional variation to ensure parts fit.
+
+**Teaching Emphasis:**  
+Tie directly to printer calibration and material shrinkage.
+
+**Common Misconception:**  
+Students assume digital dimensions equal physical results.
+
+**Demonstration:**  
+Print tolerance test blocks.
+
+**Assessment Cue:**  
+Can student calculate clearance needed for a press fit?
+
+---
+
+# 2. 3D Printing (FDM)
+
+## Layer Height
+**Definition:** Vertical thickness of each printed layer.
+
+**Teaching Emphasis:**  
+Trade-off between print speed and surface quality.
+
+**Common Misconception:**  
+Lower layer height does not automatically mean stronger prints.
+
+**Demonstration:**  
+Compare 0.2mm vs 0.1mm prints.
+
+**Assessment Cue:**  
+Can student justify layer height choice for functional vs aesthetic part?
+
+---
+
+## Infill
+**Definition:** Internal support structure expressed as a percentage.
+
+**Teaching Emphasis:**  
+Strength comes from perimeters + infill pattern choice.
+
+**Common Misconception:**  
+Students assume 100% infill = strongest in all cases.
+
+**Demonstration:**  
+Cut apart failed prints to show internal structure.
+
+**Assessment Cue:**  
+Can student select appropriate infill for load-bearing bracket?
+
+---
+
+## Warping
+**Definition:** Edge lifting due to uneven cooling.
+
+**Teaching Emphasis:**  
+Connect to material properties (PLA vs ABS).
+
+**Assessment Cue:**  
+Can student propose mitigation strategies (brim, enclosure, temperature)?
+
+---
+
+# 3. OpenSCAD — Modeling & Language
+
+## CSG (Constructive Solid Geometry)
+**Definition:** Modeling by combining primitives with boolean operations.
+
+**Teaching Emphasis:**  
+Encourage students to think in logical operations, not sculpting.
+
+**Common Misconception:**  
+Students attempt to “draw” instead of combining primitives.
+
+**Demonstration:**  
+Build a complex object from cube + cylinder + difference().
+
+**Assessment Cue:**  
+Can student decompose a real-world object into primitives?
+
+---
+
+## Module
+**Definition:** Reusable block of geometry.
+
+**Teaching Emphasis:**  
+Modules = abstraction. Introduce early to prevent code duplication.
+
+**Common Misconception:**  
+Students treat modules as simple macros; clarify parameter scope.
+
+**Assessment Cue:**  
+Can student create a reusable module with defaults?
+
+---
+
+## $fn
+**Definition:** Resolution variable controlling roundness.
+
+**Teaching Emphasis:**  
+Performance vs visual quality trade-off.
+
+**Demonstration:**  
+Render cylinder with $fn=20 vs 100.
+
+**Assessment Cue:**  
+Can student explain why high $fn slows render time?
+
+---
+
+## Preview vs Render
+**Definition:** F5 (preview) vs F6 (full geometry evaluation).
+
+**Teaching Emphasis:**  
+Preview ≠ printable model.
+
+**Common Misconception:**  
+Students export from preview state without full render.
+
+**Assessment Cue:**  
+Does student verify manifold geometry before export?
+
+---
+
+# 4. 3dMake & Automation
+
+## Headless Rendering
+**Definition:** Running OpenSCAD via command line without GUI.
+
+**Teaching Emphasis:**  
+Reproducibility and automation are professional practices.
+
+**Demonstration:**  
+Run OpenSCAD CLI from PowerShell.
+
+**Assessment Cue:**  
+Can student produce STL via script without GUI?
+
+---
+
+## Reproducible Build
+**Definition:** Identical output from version-controlled inputs.
+
+**Teaching Emphasis:**  
+Critical for collaboration and grading consistency.
+
+**Assessment Cue:**  
+Can another student regenerate identical artifact from repo?
+
+---
+
+# 5. Command Line & Shell
+
+## Environment Variable
+**Definition:** Named value available to processes (e.g., PATH).
+
+**Teaching Emphasis:**  
+Students must understand PATH for CLI tools.
+
+**Common Misconception:**  
+Confusion between system vs user variables.
+
+**Assessment Cue:**  
+Can student diagnose “command not found” error?
+
+---
+
+## Exit Code
+**Definition:** Numeric return status of command (0 = success).
+
+**Teaching Emphasis:**  
+Foundation for scripting logic.
+
+**Assessment Cue:**  
+Can student use conditional logic based on exit status?
+
+---
+
+## Pipe
+**Definition:** Redirect output of one command into another.
+
+**Teaching Emphasis:**  
+Core Unix philosophy — small tools combined.
+
+**Demonstration:**  
+`Get-ChildItem | Select-String`
+
+---
+
+# 6. PowerShell-Specific
+
+## Cmdlet
+**Definition:** Native PowerShell command.
+
+**Teaching Emphasis:**  
+Verb-Noun naming convention.
+
+**Assessment Cue:**  
+Can student identify correct cmdlet via `Get-Command`?
+
+---
+
+## Execution Policy
+**Definition:** Controls whether scripts can run.
+
+**Teaching Emphasis:**  
+Security implications.
+
+**Assessment Cue:**  
+Can student safely modify policy for development?
+
+---
+
+# 7. Git & Version Control
+
+## Commit
+**Definition:** Snapshot of project state.
+
+**Teaching Emphasis:**  
+Encourage small, meaningful commits.
+
+**Assessment Cue:**  
+Does student use descriptive commit messages?
+
+---
+
+## Branch
+**Definition:** Parallel development path.
+
+**Teaching Emphasis:**  
+Introduce feature branching in advanced module.
+
+---
+
+# 8. Accessibility
+
+## Screen Reader
+**Definition:** Software that reads digital text aloud.
+
+**Teaching Emphasis:**  
+All documentation must be keyboard navigable.
+
+**Assessment Cue:**  
+Can site be navigated without mouse?
+
+---
+
+## Semantic Structure
+**Definition:** Logical heading hierarchy in Markdown/HTML.
+
+**Teaching Emphasis:**  
+Accessibility and maintainability.
+
+---
+
+# 9. Safety & Risk
+
+## Hierarchy of Controls
+**Definition:** Safety prioritization model (eliminate → PPE).
+
+**Teaching Emphasis:**  
+Ventilation > mask alone.
+
+---
+
+# 10. AI & Generative Design (Advanced)
+
+## Prompt Engineering
+**Definition:** Designing effective AI instructions.
+
+**Teaching Emphasis:**  
+Students must validate AI-generated geometry.
+
+**Assessment Cue:**  
+Can student identify unsafe AI-generated model?
+
+---
+
+# Instructor Meta-Notes
+
+### Spiral Curriculum Recommendation
+Reintroduce:
+- Parametric design
+- Automation
+- Reproducibility
+at increasing levels of complexity.
+
+### Capstone Integration
+Final project should require:
+- Parametric OpenSCAD module
+- 3dMake automated build
+- Git version control
+- Printed physical artifact
+- Accessibility-compliant documentation
+
+### Evaluation Matrix Suggestions
+Assess students on:
+- Code structure
+- Parametric flexibility
+- CLI competency
+- Print quality
+- Documentation clarity
+- Accessibility compliance
+

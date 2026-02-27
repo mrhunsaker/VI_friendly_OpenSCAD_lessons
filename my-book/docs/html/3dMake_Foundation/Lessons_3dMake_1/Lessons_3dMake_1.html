@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-7e85ce75.js";
+            window.path_to_searchindex_js = "../../searchindex-eaf1c1cc.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-0b2574ce.js"></script>
+        <script src="../../toc-76b29a8d.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -527,9 +527,8 @@ union() {
 <li>openscad-cheat-sheet.md - Keyboard shortcuts, syntax, and common functions</li>
 <li>filament-comparison-table.md - Material properties for different print scenarios</li>
 <li>master-rubric.md - Assessment criteria for evaluating student work</li>
-<li>markdown-starter-guide.md - Documentation best practices</li>
 </ul>
-<h2 id="quiz---lesson-3dmake1-10-questions"><a class="header" href="#quiz---lesson-3dmake1-10-questions">Quiz - Lesson 3dMake.1 (10 questions)</a></h2>
+<h2 id="quiz---lesson-3dmake1-15-questions"><a class="header" href="#quiz---lesson-3dmake1-15-questions">Quiz - Lesson 3dMake.1 (15 questions)</a></h2>
 <ol>
 <li>What command initializes a 3dMake project?</li>
 <li>What folder holds generated STLs?</li>
@@ -541,8 +540,13 @@ union() {
 <li>Describe what the <code>src/</code>, <code>build/</code>, and other project scaffold folders are used for.</li>
 <li>How would you compare the 3dMake build workflow to traditional OpenSCAD workflows?</li>
 <li>What validation steps should you perform after running <code>3dm build</code> and before sending a file to print?</li>
+<li>What is the difference between the global configuration file (<code>defaults.toml</code>) and the project configuration file (<code>3dmake.toml</code>)? Which takes precedence when both define the same setting?</li>
+<li>Describe what a TOML boolean value looks like and give one example of a 3dMake setting that would use a boolean.</li>
+<li>What command would you run to see all available 3dMake commands, and what command shows the installed version number?</li>
+<li>Explain what FDM stands for and describe the five-step pipeline from STL file to cooled physical part.</li>
+<li>You run <code>3dm build</code> and receive the error “No such file or directory: src/main.scad”. What are two likely causes and how would you fix each one?</li>
 </ol>
-<h2 id="extension-problems-10"><a class="header" href="#extension-problems-10">Extension Problems (10)</a></h2>
+<h2 id="extension-problems-15"><a class="header" href="#extension-problems-15">Extension Problems (15)</a></h2>
 <ol>
 <li>Add a README entry explaining your top-level parameters and expected units. Reference best practices from the OpenSCAD documentation<sup class="footnote-reference" id="fr-2-3"><a href="#footnote-2">2</a></sup>.</li>
 <li>Create a parameter variant by changing <code>width</code> by 20% and build both variants; compare dimensions with calipers. This demonstrates the power of parametric design discussed in programming resources<sup class="footnote-reference" id="fr-3-3"><a href="#footnote-3">3</a></sup>.</li>
@@ -554,6 +558,11 @@ union() {
 <li>Develop a screen-reader accessibility guide for 3dMake CLI commands and parameter syntax.</li>
 <li>Design a parametric part library in 3dMake format; document all parameters, units, and example usage.</li>
 <li>Write a comprehensive troubleshooting guide for common 3dMake build errors, with solutions and prevention tips.</li>
+<li>Add a <code>.gitignore</code> file to a new project, commit the scaffold using Git, then make a parameter change and create a second commit. Write a one-paragraph explanation of why version control is valuable for parametric design.</li>
+<li>Edit the global configuration file using <code>3dm edit-global-config</code> to change the default editor. Document the setting name, the value you chose, and how you verified the change took effect.</li>
+<li>Create a project with three <code>.scad</code> files (e.g., <code>main.scad</code>, <code>lid.scad</code>, <code>base.scad</code>) and build each using <code>3dm build -m &lt;name&gt;</code>. Record the output STL filenames for each.</li>
+<li>Research the FDM layer height trade-off: slice the same model at 0.15 mm, 0.20 mm, and 0.30 mm layer heights. Record estimated print time and filament use for each. Write two sentences explaining the trade-off.</li>
+<li>Write a one-page “new student onboarding guide” for 3dMake that covers installation, project creation, first build, and first print. Use accessible language suitable for someone with no prior terminal experience.</li>
 </ol>
 <h2 id="supplemental-resources"><a class="header" href="#supplemental-resources">Supplemental Resources</a></h2>
 <p>For deeper exploration of OpenSCAD and parametric design, consult these resources:</p>
@@ -577,7 +586,7 @@ union() {
 <p>OpenSCAD Review - Worth learning? - CadHub, accessed February 18, 2026, <a href="https://learn.cadhub.xyz/blog/openscad-review/">https://learn.cadhub.xyz/blog/openscad-review/</a> <a href="#fr-4-1">↩</a></p>
 </li>
 <li id="footnote-8">
-<p>OpenSCAD Prompt Creation - DocsBot AI, accessed February 18, 2026, <a href="https://docsbot.ai/prompts/technical/openscad-prompt-creation">https://docsbot.ai/prompts/technical/openscad-prompt-creation</a> <a href="#fr-8-1">↩</a></p>
+<p>OpenSCAD User Manual - Non-Manifold Geometry, accessed February 18, 2026, <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/FAQ#Why_is_my_model_not_manifold.3F">https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/FAQ#Why_is_my_model_not_manifold.3F</a> <a href="#fr-8-1">↩</a></p>
 </li>
 <li id="footnote-5">
 <p>Slicer Validation Tools - PrusaSlicer Documentation - <a href="https://docs.prusa3d.com/en/guide/39012-validation-tools/">https://docs.prusa3d.com/en/guide/39012-validation-tools/</a> <a href="#fr-5-1">↩</a></p>

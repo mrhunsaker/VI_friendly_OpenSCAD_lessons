@@ -102,7 +102,7 @@ Lessons Included:
 - GitBash-6: Advanced Terminal Techniques - Scripts, functions, professional workflows
 - GitBash Unit Test & Practice - Comprehensive self-assessment
 
-Time commitment: 20-25 hours (for screen reader users)
+Time commitment: 30-45 hours (for screen reader users)
 Best for: Users who want cross-platform skills (Windows, macOS, Linux)
 Skills: Unix/bash commands, shell scripting, cross-platform automation
 
@@ -127,22 +127,17 @@ Students build parametric 3D designs using OpenSCAD and automate the workflow wi
 
 Total: 45-55 hours instruction + practice projects
 
-What's New (v2.1):
+#### Reference Appendices
 
-- Lesson 3: Added Advanced Programming Concepts (Conditionals, Type Testing, List Comprehensions, Special Variables, Functions)
-- Lesson 6: Added String Functions for dynamic naming and labeling
-- Lesson 7: Added Mathematical Functions (trigonometry, rounding, power/root, vector math)
-- Lesson 8: Added Assembly Best Practices (snap-fits, threading, alignment, exploded views)
-- Lesson 9: Added File Import/Export (import, include vs use, multi-file projects)
+**Command Line Tools:**
+- [Appendix A: PowerShell Integration for SCAD Workflows](3dMake_Foundation/Appendix_D_PowerShell_Integration.md) - Batch processing, automation scripts, and advanced workflow integration
+- [Appendix B: Advanced OpenSCAD Concepts](3dMake_Foundation/Appendix_E_Advanced_OpenSCAD_Concepts.md) - Specialized topics including gears, batch processing, performance, print orientation, and recursion
 
-#### 6 Comprehensive Reference Appendices
-
-- [Appendix A: Comprehensive Slicing Guide](3dMake_Foundation/Appendix_A_Comprehensive_Slicing_Guide.md) - Complete reference for PrusaSlicer, Bambu Studio, Cura, and OrcaSlicer configuration
-- [Appendix B: Material Properties & Selection Guide](3dMake_Foundation/Appendix_B_Material_Properties.md) - Detailed material reference including shrinkage data, print settings, and properties
-- [Appendix C: Tolerance Testing & Quality Assurance Matrix](3dMake_Foundation/Appendix_C_Tolerance_QA.md) - Comprehensive QA procedures and tolerance validation methods
-- [Appendix D: PowerShell Integration for SCAD Workflows](3dMake_Foundation/Appendix_D_PowerShell_Integration.md) - Batch processing, automation scripts, and advanced workflow integration
-- [Appendix E: Advanced OpenSCAD Concepts](3dMake_Foundation/Appendix_E_Advanced_OpenSCAD_Concepts.md) - Specialized topics including gears, batch processing, performance, print orientation, and recursion
-- [Appendix F: 3dMake Code Examples & Assets](assets/3dMake_Foundation/README.md) - OpenSCAD code examples and reference designs
+**3dMake:**
+- [Appendix 1: Comprehensive Slicing Guide](3dMake_Foundation/Appendix_A_Comprehensive_Slicing_Guide.md) - Complete reference for PrusaSlicer, Bambu Studio, Cura, and OrcaSlicer configuration
+- [Appendix 2: Material Properties & Selection Guide](3dMake_Foundation/Appendix_B_Material_Properties.md) - Detailed material reference including shrinkage data, print settings, and properties
+- [Appendix 3: Tolerance Testing & Quality Assurance Matrix](3dMake_Foundation/Appendix_C_Tolerance_QA.md) - Comprehensive QA procedures and tolerance validation methods
+- [Appendix 4: 3dMake Code Examples & Assets](assets/3dMake_Foundation/README.md) - OpenSCAD code examples and reference designs
 
 ## The Accessible Toolchain
 
@@ -185,7 +180,7 @@ Students learn to design through code and testing, not visual previews:
 
 ## Project-Based Learning
 
-Every 3dMake lesson includes hands-on projects:
+3dMake lessons include hands-on projects:
 
 - Lesson 6: Keycap with embossed text (3dm commands)
 - Lesson 7: Phone stand (parametric transforms)
@@ -215,14 +210,11 @@ Quick navigation to common topics:
 
 ### Navigation
 
-[SUMMARY.md](SUMMARY.md) - Complete table of contents
 [Curriculum Guide](3dMake_Foundation/3dMake_Foundation_Curriculum_Guide.md) - Detailed overview of all lessons and appendices
 [Quick Reference](3dMake_Foundation/3dMake_Quick_Reference.md) - At-a-glance command and syntax reference
 [Appendices](Appendices/Appendices.md) - 3dMake reference materials
 
 ## Supplemental Resources & Textbooks
-
-This course is enhanced by comprehensive textbooks and companion materials from the *Programming with OpenSCAD* project:
 
 ### Textbook options (EPUB Format)
 
@@ -237,7 +229,7 @@ This course is enhanced by comprehensive textbooks and companion materials from 
 
 ## Getting Started
 
-For Students:
+### For Students:
 
 1. Start with [Setup & Accessibility Fundamentals](Setup/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.md)
 2. Read [Command Line Interface Selection Guide](Command_Line_Interface_Selection/Command_Line_Interface_Selection.md) to choose your CLI pathway
@@ -246,7 +238,7 @@ For Students:
 5. Follow [Lesson 1: Environmental Configuration](3dMake_Foundation/Lessons_3dMake_1/Lessons_3dMake_1.md)
 6. Continue through Lesson 11
 
-For Instructors:
+## For Instructors:
 
 1. Review [Curriculum Guide](3dMake_Foundation/3dMake_Foundation_Curriculum_Guide.md)
 2. Use [11 Teacher Templates](3dMake_Foundation/Templates/Teacher/) for assessment
@@ -254,7 +246,7 @@ For Instructors:
 4. Check [Syllabus](Syllabus.md) for course policies and learning progression
 
 
-Other Screen Readers
+## Screen Readers
 
-Dolphin SuperNova (commercial) and Windows Narrator (built-in) are also supported; the workflows and recommendations in this document apply to them. See [https://example.com](https://example.com) and [https://example.com](https://example.com) for vendor documentation.
-<!--pagebreak-->
+We know that users of this curriculum will primarily be JAWS and NVDA screenreader users, or else users of Orca if on a Linux-based system. Dolphin SuperNova (commercial) and Windows Narrator (built-in) are also supported; the workflows and recommendations in this document apply to them. See [https://yourdolphin.com/ScreenReader-Training](https://yourdolphin.com/ScreenReader-Training) and [https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1) for vendor documentation.
+

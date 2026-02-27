@@ -38,6 +38,7 @@ Professional OpenSCAD code follows consistent documentation practices for clarit
 ### Comment Types and When to Use Them
 
 File Header Comments - Describe the entire file's purpose:
+
 ```openscad
 // ==============================================================
 // Parametric Phone Stand - Design v2.1
@@ -55,6 +56,7 @@ File Header Comments - Describe the entire file's purpose:
 ```
 
 Section Comments - Organize code into logical blocks:
+
 ```openscad
 // ============================================
 // CUSTOMIZABLE PARAMETERS
@@ -75,6 +77,7 @@ module stand() { ... }
 ```
 
 Inline Comments - Clarify complex logic:
+
 ```openscad
 // Use minkowski for smooth edges (prevents sharp corners)
 module rounded_base() {
@@ -86,6 +89,7 @@ module rounded_base() {
 ```
 
 Parameter Documentation - Explain units and constraints:
+
 ```openscad
 // Parameter ranges and units
 width = 100;         // mm - must be > 50 mm for stability
@@ -103,6 +107,7 @@ $fn = 32;            // render quality - use 16-20 for preview, 32+ for export
 - Use clear parameter names (`wall_thickness` not `w`)
 
 2. Include Module Documentation
+
 ```openscad
 // Create a hollow box with walls of specified thickness
 // Parameters: outer_w, outer_d, outer_h (mm), wall (mm)
@@ -116,6 +121,7 @@ module hollow_box(outer_w, outer_d, outer_h, wall) {
 ```
 
 3. Document Known Limitations
+
 ```openscad
 // Phone Stand v2
 // Limitations:
@@ -304,9 +310,8 @@ Quick-reference guides are available in `Reference_Materials/`:
 - openscad-cheat-sheet.md - Keyboard shortcuts, syntax, and common functions
 - filament-comparison-table.md - Material properties for different print scenarios
 - master-rubric.md - Assessment criteria for evaluating student work
-- markdown-starter-guide.md - Documentation best practices
 
-## Quiz - Lesson 3dMake.1 (10 questions)
+## Quiz - Lesson 3dMake.1 (15 questions)
 
 1. What command initializes a 3dMake project?
 2. What folder holds generated STLs?
@@ -318,8 +323,13 @@ Quick-reference guides are available in `Reference_Materials/`:
 8. Describe what the `src/`, `build/`, and other project scaffold folders are used for.
 9. How would you compare the 3dMake build workflow to traditional OpenSCAD workflows?
 10. What validation steps should you perform after running `3dm build` and before sending a file to print?
+11. What is the difference between the global configuration file (`defaults.toml`) and the project configuration file (`3dmake.toml`)? Which takes precedence when both define the same setting?
+12. Describe what a TOML boolean value looks like and give one example of a 3dMake setting that would use a boolean.
+13. What command would you run to see all available 3dMake commands, and what command shows the installed version number?
+14. Explain what FDM stands for and describe the five-step pipeline from STL file to cooled physical part.
+15. You run `3dm build` and receive the error "No such file or directory: src/main.scad". What are two likely causes and how would you fix each one?
 
-## Extension Problems (10)
+## Extension Problems (15)
 1. Add a README entry explaining your top-level parameters and expected units. Reference best practices from the OpenSCAD documentation[^2].
 2. Create a parameter variant by changing `width` by 20% and build both variants; compare dimensions with calipers. This demonstrates the power of parametric design discussed in programming resources[^3].
 3. Script a `3dm` command sequence that automates new -> edit -> build for the scaffold. Review the 3dMake test suite for inspiration[^6].
@@ -330,6 +340,11 @@ Quick-reference guides are available in `Reference_Materials/`:
 8. Develop a screen-reader accessibility guide for 3dMake CLI commands and parameter syntax.
 9. Design a parametric part library in 3dMake format; document all parameters, units, and example usage.
 10. Write a comprehensive troubleshooting guide for common 3dMake build errors, with solutions and prevention tips.
+11. Add a `.gitignore` file to a new project, commit the scaffold using Git, then make a parameter change and create a second commit. Write a one-paragraph explanation of why version control is valuable for parametric design.
+12. Edit the global configuration file using `3dm edit-global-config` to change the default editor. Document the setting name, the value you chose, and how you verified the change took effect.
+13. Create a project with three `.scad` files (e.g., `main.scad`, `lid.scad`, `base.scad`) and build each using `3dm build -m <name>`. Record the output STL filenames for each.
+14. Research the FDM layer height trade-off: slice the same model at 0.15 mm, 0.20 mm, and 0.30 mm layer heights. Record estimated print time and filament use for each. Write two sentences explaining the trade-off.
+15. Write a one-page "new student onboarding guide" for 3dMake that covers installation, project creation, first build, and first print. Use accessible language suitable for someone with no prior terminal experience.
 
 ## Supplemental Resources
 
@@ -353,5 +368,4 @@ For deeper exploration of OpenSCAD and parametric design, consult these resource
 
 [^7]: Slicing Guides and Common Geometry Issues - PrusaSlicer Documentation, accessed February 18, 2026, [https://docs.prusa3d.com/en/](https://docs.prusa3d.com/en/)
 
-[^8]: OpenSCAD Prompt Creation - DocsBot AI, accessed February 18, 2026, [https://docsbot.ai/prompts/technical/openscad-prompt-creation](https://docsbot.ai/prompts/technical/openscad-prompt-creation)  
-
+[^8]: OpenSCAD User Manual - Non-Manifold Geometry, accessed February 18, 2026, [https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/FAQ#Why_is_my_model_not_manifold.3F](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/FAQ#Why_is_my_model_not_manifold.3F)

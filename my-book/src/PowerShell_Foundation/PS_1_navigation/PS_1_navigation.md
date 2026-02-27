@@ -160,4 +160,4 @@ After this lesson, you should be able to:
 - [Navigation Best Practices](https://learn.microsoft.com/powershell/scripting/learn/shell/navigate-the-filesystem)
 - [Relative and Absolute Paths](https://poshcode.gitbook.io/powershell-faq/src/getting-started/filesystem-navigation)
 - [Screen Reader Tips for PowerShell](https://learn.microsoft.com/powershell/scripting/windows-powershell/ise/accessibility-in-windows-powershell-ise)
-<!--pagebreak-->
+

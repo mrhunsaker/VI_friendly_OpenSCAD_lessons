@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Glossary - 3D Printing Course for Blind and Visually Impaired Learners</title>
+        <title>Student Glossary with Concept Examples - 3D Printing Course for Blind and Visually Impaired Learners</title>
 
 
         <!-- Custom HTML head -->
@@ -81,10 +81,10 @@
             const path_to_root = "../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../searchindex-7e85ce75.js";
+            window.path_to_searchindex_js = "../searchindex-eaf1c1cc.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../toc-0b2574ce.js"></script>
+        <script src="../toc-76b29a8d.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -220,113 +220,399 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="glossary--organized-by-topic"><a class="header" href="#glossary--organized-by-topic">Glossary — Organized by Topic</a></h1>
-<p>This glossary groups and alphabetizes terms by topic. It includes core 3D design and printing vocabulary, OpenSCAD-specific terms, command-line and coding terms, and accessibility/tooling references.</p>
+                        <h1 id="student--glossary"><a class="header" href="#student--glossary">Student  Glossary</a></h1>
+<p><em>OpenSCAD • 3dMake • 3D Printing • PowerShell • Command Prompt • Git Bash</em></p>
+<p>This glossary provides:</p>
+<ul>
+<li>Formal definitions</li>
+<li>Operational context</li>
+<li>Cross-system distinctions</li>
+<li>CLI examples</li>
+<li>Practical implications in 3D printing workflows</li>
+</ul>
 <hr>
-<h2 id="general"><a class="header" href="#general"><strong>General</strong></a></h2>
+<h1 id="section-i--additive-manufacturing--fabrication"><a class="header" href="#section-i--additive-manufacturing--fabrication">SECTION I — Additive Manufacturing &amp; Fabrication</a></h1>
+<h2 id="additive-manufacturing"><a class="header" href="#additive-manufacturing">Additive Manufacturing</a></h2>
+<p>A manufacturing methodology in which objects are fabricated layer-by-layer from digital models.<br>In desktop contexts, this typically refers to FDM (Fused Deposition Modeling).</p>
+<h3 id="technical-characteristics"><a class="header" href="#technical-characteristics">Technical Characteristics</a></h3>
 <ul>
-<li>Additive manufacturing: Processes that build objects by adding material layer by layer (3D printing).</li>
-<li>CAD (Computer-Aided Design): Software for creating 2D/3D models; OpenSCAD is a CAD tool focused on programmatic modeling.</li>
-<li>Design: An OpenSCAD program or other model created for fabrication or simulation.</li>
-<li>Parameter / parametric design: Designing with variables so a model can be changed by altering inputs.</li>
-<li>Preview: Fast, approximate model view (OpenSCAD <code>F5</code>).</li>
-<li>Render: Full evaluation of geometry (OpenSCAD <code>F6</code>) used before export.</li>
+<li>Layer-based deposition</li>
+<li>Toolpath-generated geometry</li>
+<li>STL-to-G-code workflow</li>
+<li>Thermoplastic extrusion (in FDM)</li>
 </ul>
-<h2 id="3d-printing"><a class="header" href="#3d-printing"><strong>3D Printing</strong></a></h2>
+<h3 id="workflow-position"><a class="header" href="#workflow-position">Workflow Position</a></h3>
+<p>OpenSCAD → STL → Slicer → G-code → Printer → Physical object</p>
+<hr>
+<h2 id="fdm-fused-deposition-modeling"><a class="header" href="#fdm-fused-deposition-modeling">FDM (Fused Deposition Modeling)</a></h2>
+<p>A thermoplastic extrusion process in which filament is melted and deposited in sequential layers.</p>
+<h3 id="critical-variables"><a class="header" href="#critical-variables">Critical Variables</a></h3>
 <ul>
-<li>Bed adhesion: Methods to keep the first layer attached to the build plate (tape, glue, heated bed).</li>
-<li>Brim: A single-layer flat ring around a model to improve adhesion.</li>
-<li>Filament: Thermoplastic material (PLA, PETG, ABS, TPU) used by FDM printers.</li>
-<li>G-code: The machine instructions that drive a printer (moves, extrusion, temps).</li>
-<li>Infill: Internal lattice/pattern inside a print, expressed as a percentage.</li>
-<li>Layer height: Vertical thickness of each printed layer; impacts quality and time.</li>
-<li>Nozzle / Hot end: The heated tip that melts and extrudes filament.</li>
-<li>Overhang: Model area with little/no support underneath; often needs support structures.</li>
-<li>Slicer: Software that converts 3D models (STL) into G-code for a specific printer.</li>
-<li>Support structures: Temporary scaffolding printed to support overhangs.</li>
-<li>STL: Common 3D model file format for printing (triangle mesh).</li>
-<li>Warping: Distortion from uneven cooling that lifts part edges.</li>
+<li>Nozzle temperature</li>
+<li>Bed temperature</li>
+<li>Layer height</li>
+<li>Print speed</li>
+<li>Cooling rate</li>
 </ul>
-<h2 id="openscad--language--modeling"><a class="header" href="#openscad--language--modeling"><strong>OpenSCAD — Language &amp; Modeling</strong></a></h2>
+<hr>
+<h2 id="layer-height"><a class="header" href="#layer-height">Layer Height</a></h2>
+<p>The vertical thickness of each printed layer.</p>
 <ul>
-<li>CSG (Constructive Solid Geometry): Building complex shapes by combining primitives with boolean ops.</li>
-<li>Children / children(): The nested block passed into a module; accessible with <code>children()</code>.</li>
-<li>Linear extrusion: <code>linear_extrude()</code> — creates 3D geometry from a 2D profile.</li>
-<li>Module: A named reusable block of OpenSCAD code defined with <code>module name() {}</code>.</li>
-<li>Parameter: Named values used to control geometry and behavior inside modules/functions.</li>
-<li>Primitive: Built-in shapes such as <code>cube()</code>, <code>cylinder()</code>, <code>sphere()</code>, <code>polyhedron()</code>.</li>
-<li>Preview vs Render: Preview (<code>F5</code>) is fast; Render (<code>F6</code>) evaluates final geometry.</li>
-<li>rotate() / translate() / scale(): Common transforms to orient and place geometry.</li>
-<li>union() / difference() / intersection(): Boolean operations for combining or subtracting solids.</li>
-<li>$fn: Special variable controlling polygonal approximation (number of faces) for rounded primitives.</li>
+<li>Smaller values increase surface fidelity.</li>
+<li>Larger values increase speed.</li>
 </ul>
-<h2 id="3dmake--build-automation-cli-based-toolchain"><a class="header" href="#3dmake--build-automation-cli-based-toolchain"><strong>3dMake / Build Automation (CLI-based toolchain)</strong></a></h2>
+<p>Example:</p>
 <ul>
-<li>Artifact: Any generated file from the build pipeline (STL, G-code, logs).</li>
-<li>Automation / Headless render: Running builds or OpenSCAD without a GUI, typically via scripts or CI.</li>
-<li>Build script: Script that automates rendering, exporting, slicing, and packaging.</li>
-<li>Parameter file: External JSON/TOML providing parameters for reproducible builds.</li>
-<li>Pipeline: Ordered steps from source to final artifact (render → export → slice → G-code).</li>
+<li>0.2 mm = standard</li>
+<li>0.1 mm = high resolution</li>
 </ul>
-<h2 id="powershell--automation"><a class="header" href="#powershell--automation"><strong>PowerShell &amp; Automation</strong></a></h2>
+<hr>
+<h2 id="infill"><a class="header" href="#infill">Infill</a></h2>
+<p>Internal structural lattice inside a model.</p>
+<p>Typical values:</p>
 <ul>
-<li>Cmdlet: Lightweight PowerShell command (e.g., <code>Get-ChildItem</code>).</li>
-<li>Execution policy: Controls whether PowerShell scripts are allowed to run on the machine.</li>
-<li>Object: PowerShell passes rich objects (not text) between cmdlets.</li>
-<li>Pipeline (PowerShell): Passing output of one cmdlet as input to another using <code>|</code>.</li>
-<li>Remote session: Running PowerShell commands on a remote host via <code>Enter-PSSession</code> or <code>Invoke-Command</code>.</li>
+<li>10–20% for visual models</li>
+<li>40%+ for structural parts</li>
 </ul>
-<h2 id="command-line--shell"><a class="header" href="#command-line--shell"><strong>Command-Line &amp; Shell</strong></a></h2>
+<hr>
+<h2 id="tolerance"><a class="header" href="#tolerance">Tolerance</a></h2>
+<p>Intentional dimensional offset to ensure mechanical fit.</p>
+<p>Example:
+A 10mm peg may require a 10.2mm hole for clearance.</p>
+<hr>
+<h2 id="manifold-watertight-model"><a class="header" href="#manifold-watertight-model">Manifold (Watertight Model)</a></h2>
+<p>A printable model with:</p>
 <ul>
-<li>Argument / Flag: Values or options passed to a command (e.g., <code>-r</code>, <code>--verbose</code>).</li>
-<li>Bash: A common Unix shell used interactively and in scripts; many curriculum examples reference Git Bash on Windows.</li>
-<li>CLI (Command-Line Interface): Text-based interface for interacting with programs via commands.</li>
-<li>Environment variable: Named values available to processes (e.g., <code>PATH</code>, <code>HOME</code>).</li>
-<li>Exit code: Numeric status returned by a command (0 = success conventionally).</li>
-<li>Pipe (<code>|</code>): Send stdout of one command to stdin of another.</li>
-<li>Redirection: <code>&gt;</code> and <code>&gt;&gt;</code> to write stdout to files; <code>2&gt;</code> for stderr.</li>
-<li>Shell script: A file of shell commands (Bash: <code>.sh</code>) executed by a shell.</li>
-<li>Standard streams: <code>stdin</code>, <code>stdout</code>, <code>stderr</code> for input, normal output, and error output.</li>
-<li>SSH / SCP: Secure remote shell/file copy tools for remote management and transfer.</li>
-<li>grep / sed / awk / jq: Common command-line text processing and JSON tools.</li>
+<li>No self-intersections</li>
+<li>No zero-thickness faces</li>
+<li>No holes in mesh</li>
 </ul>
-<h2 id="coding--programming-terms"><a class="header" href="#coding--programming-terms"><strong>Coding &amp; Programming Terms</strong></a></h2>
+<p>Non-manifold geometry causes slicer failure.</p>
+<hr>
+<h1 id="section-ii--openscad-parametric-modeling"><a class="header" href="#section-ii--openscad-parametric-modeling">SECTION II — OpenSCAD (Parametric Modeling)</a></h1>
+<h2 id="openscad"><a class="header" href="#openscad">OpenSCAD</a></h2>
+<p>A script-based solid modeling system using Constructive Solid Geometry (CSG).</p>
+<p>Official site:
+https://openscad.org</p>
+<hr>
+<h2 id="constructive-solid-geometry-csg"><a class="header" href="#constructive-solid-geometry-csg">Constructive Solid Geometry (CSG)</a></h2>
+<p>Modeling technique combining primitives using Boolean operations.</p>
+<hr>
+<h2 id="primitive"><a class="header" href="#primitive">Primitive</a></h2>
+<p>Basic geometric object.</p>
+<p>Examples:</p>
+<pre><code class="language-openscad">cube([10,10,10]);
+sphere(5);
+cylinder(h=20, d=10);
+</code></pre>
+<hr>
+<h2 id="boolean-operations"><a class="header" href="#boolean-operations">Boolean Operations</a></h2>
+<h3 id="union"><a class="header" href="#union">union()</a></h3>
+<p>Combines shapes.</p>
+<pre><code class="language-openscad">union() {
+    cube([10,10,10]);
+    sphere(6);
+}
+</code></pre>
+<hr>
+<h3 id="difference"><a class="header" href="#difference">difference()</a></h3>
+<p>Subtracts shapes.</p>
+<pre><code class="language-openscad">difference() {
+    cube([20,20,20]);
+    cylinder(h=25, d=5);
+}
+</code></pre>
+<hr>
+<h3 id="intersection"><a class="header" href="#intersection">intersection()</a></h3>
+<p>Keeps overlapping geometry.</p>
+<pre><code class="language-openscad">intersection() {
+    sphere(10);
+    cube([15,15,15], center=true);
+}
+</code></pre>
+<hr>
+<h2 id="variable"><a class="header" href="#variable">Variable</a></h2>
+<p>A named parameter used to control geometry.</p>
+<pre><code class="language-openscad">width = 30;
+cube([width,10,5]);
+</code></pre>
+<hr>
+<h2 id="parametric-design"><a class="header" href="#parametric-design">Parametric Design</a></h2>
+<p>Geometry controlled by variables.</p>
+<p>Advantages:</p>
 <ul>
-<li>API (Application Programming Interface): A defined interface for interacting with software or web services.</li>
-<li>Array / List: Ordered collection of values.</li>
-<li>Commit / Branch / Repository (git): Version control concepts: commits are snapshots, branches hold parallel work, repo stores history.</li>
-<li>CI (Continuous Integration): Automated builds and tests triggered by changes to source code.</li>
-<li>Function: Named reusable block of code that returns a value or performs an action.</li>
-<li>JSON / TOML / YAML: Common structured data formats used for configuration and parameter files.</li>
-<li>Library / Package / Module: Reusable code collections that your code can import.</li>
-<li>Linting: Static analysis to detect style issues or simple bugs in code.</li>
-<li>Loop / Conditional: Control flow constructs (for, while, if/else) used to repeat or branch logic.</li>
-<li>Regex (Regular expression): Pattern syntax for searching and transforming text.</li>
-<li>Unit test / Integration test: Automated tests that validate small units or integrated components.</li>
-<li>Virtual environment: Isolated Python environment (venv, virtualenv) to manage dependencies.</li>
+<li>Rapid iteration</li>
+<li>Reusability</li>
+<li>Scalable models</li>
 </ul>
-<h2 id="tools--resources"><a class="header" href="#tools--resources"><strong>Tools &amp; Resources</strong></a></h2>
-<ul>
-<li>3DMake: CLI workflow tool referenced in the curriculum for headless builds and automation.</li>
-<li>Git / GitHub: Version control and hosting used for code, examples, and CodeSolutions.</li>
-<li>Notable docs: NVDA, OpenSCAD, PrusaSlicer, and vendor sites are referenced throughout—links are in the Further Reading section.</li>
-</ul>
-<h2 id="accessibility-a11y"><a class="header" href="#accessibility-a11y"><strong>Accessibility (a11y)</strong></a></h2>
-<ul>
-<li>Screen reader: Software that reads text aloud (NVDA, JAWS) or provides braille output.</li>
-<li>Braille display: Hardware that renders text as tactile braille cells.</li>
-<li>Keyboard navigation: Ensuring tools and web content are usable without a mouse.</li>
-</ul>
+<hr>
+<h2 id="module"><a class="header" href="#module">Module</a></h2>
+<p>Reusable geometry block.</p>
+<pre><code class="language-openscad">module peg(d, h) {
+    cylinder(d=d, h=h);
+}
 
+peg(5, 20);
+</code></pre>
+<hr>
+<h2 id="fn-fragment-number"><a class="header" href="#fn-fragment-number">$fn (Fragment Number)</a></h2>
+<p>Controls circular resolution.</p>
+<pre><code class="language-openscad">$fn = 100;
+sphere(10);
+</code></pre>
+<p>Higher values increase smoothness and render time.</p>
+<hr>
+<h2 id="preview-vs-render"><a class="header" href="#preview-vs-render">Preview vs Render</a></h2>
+<ul>
+<li>F5 = Preview (OpenGL approximation)</li>
+<li>F6 = Render (full CSG evaluation)</li>
+</ul>
+<p>CLI equivalent:</p>
+<pre><code class="language-bash">openscad -o model.stl model.scad
+</code></pre>
+<hr>
+<h1 id="section-iii--3dmake-automation-tool"><a class="header" href="#section-iii--3dmake-automation-tool">SECTION III — 3dMake (Automation Tool)</a></h1>
+<h2 id="3dmake"><a class="header" href="#3dmake">3dMake</a></h2>
+<p>A command-line tool for automating 3D model generation and processing.</p>
+<p>Repository:
+https://github.com/tdeck/3dmake</p>
+<hr>
+<h2 id="headless-rendering"><a class="header" href="#headless-rendering">Headless Rendering</a></h2>
+<p>Running OpenSCAD without GUI.</p>
+<pre><code class="language-bash">openscad -o output.stl input.scad
+</code></pre>
+<hr>
+<h2 id="automated-build-pipeline"><a class="header" href="#automated-build-pipeline">Automated Build Pipeline</a></h2>
+<p>Example PowerShell pipeline:</p>
+<pre><code class="language-powershell">openscad -o model.stl model.scad
+</code></pre>
+<p>Example Bash:</p>
+<pre><code class="language-bash">openscad -o model.stl model.scad
+</code></pre>
+<hr>
+<h1 id="section-iv--command-line-systems"><a class="header" href="#section-iv--command-line-systems">SECTION IV — Command-Line Systems</a></h1>
+<h1 id="cli-command-line-interface"><a class="header" href="#cli-command-line-interface">CLI (Command-Line Interface)</a></h1>
+<p>A text-based interface for interacting with the operating system.</p>
+<hr>
+<h1 id="shell"><a class="header" href="#shell">Shell</a></h1>
+<p>A program that interprets commands.</p>
+<p>Examples:</p>
+<ul>
+<li>PowerShell</li>
+<li>Command Prompt</li>
+<li>Git Bash</li>
+</ul>
+<hr>
+<h1 id="powershell"><a class="header" href="#powershell">PowerShell</a></h1>
+<p>Object-oriented Windows shell.</p>
+<h3 id="list-files"><a class="header" href="#list-files">List Files</a></h3>
+<pre><code class="language-powershell">Get-ChildItem
+</code></pre>
+<h3 id="change-directory"><a class="header" href="#change-directory">Change Directory</a></h3>
+<pre><code class="language-powershell">Set-Location Documents
+</code></pre>
+<h3 id="run-script"><a class="header" href="#run-script">Run Script</a></h3>
+<pre><code class="language-powershell">.\build.ps1
+</code></pre>
+<h3 id="check-exit-code"><a class="header" href="#check-exit-code">Check Exit Code</a></h3>
+<pre><code class="language-powershell">$LASTEXITCODE
+</code></pre>
+<hr>
+<h1 id="command-prompt-cmdexe"><a class="header" href="#command-prompt-cmdexe">Command Prompt (cmd.exe)</a></h1>
+<p>Traditional Windows shell.</p>
+<h3 id="list-files-1"><a class="header" href="#list-files-1">List Files</a></h3>
+<pre><code class="language-cmd">dir
+</code></pre>
+<h3 id="change-directory-1"><a class="header" href="#change-directory-1">Change Directory</a></h3>
+<pre><code class="language-cmd">cd Documents
+</code></pre>
+<h3 id="run-program"><a class="header" href="#run-program">Run Program</a></h3>
+<pre><code class="language-cmd">openscad.exe -o model.stl model.scad
+</code></pre>
+<h3 id="check-exit-code-1"><a class="header" href="#check-exit-code-1">Check Exit Code</a></h3>
+<pre><code class="language-cmd">echo %ERRORLEVEL%
+</code></pre>
+<hr>
+<h1 id="git-bash"><a class="header" href="#git-bash">Git Bash</a></h1>
+<p>Unix-like shell for Windows.</p>
+<h3 id="list-files-2"><a class="header" href="#list-files-2">List Files</a></h3>
+<pre><code class="language-bash">ls
+</code></pre>
+<h3 id="change-directory-2"><a class="header" href="#change-directory-2">Change Directory</a></h3>
+<pre><code class="language-bash">cd Documents
+</code></pre>
+<h3 id="make-directory"><a class="header" href="#make-directory">Make Directory</a></h3>
+<pre><code class="language-bash">mkdir builds
+</code></pre>
+<hr>
+<h1 id="working-directory"><a class="header" href="#working-directory">Working Directory</a></h1>
+<p>The directory in which commands execute.</p>
+<h3 id="print-working-directory"><a class="header" href="#print-working-directory">Print Working Directory</a></h3>
+<pre><code class="language-bash">pwd
+</code></pre>
+<pre><code class="language-powershell">Get-Location
+</code></pre>
+<hr>
+<h1 id="path-environment-variable"><a class="header" href="#path-environment-variable">PATH (Environment Variable)</a></h1>
+<p>Tells system where executables are located.</p>
+<h3 id="view-path-powershell"><a class="header" href="#view-path-powershell">View PATH (PowerShell)</a></h3>
+<pre><code class="language-powershell">$env:PATH
+</code></pre>
+<h3 id="view-path-cmd"><a class="header" href="#view-path-cmd">View PATH (cmd)</a></h3>
+<pre><code class="language-cmd">echo %PATH%
+</code></pre>
+<hr>
+<h1 id="environment-variable"><a class="header" href="#environment-variable">Environment Variable</a></h1>
+<p>A system-level configuration variable.</p>
+<h3 id="set-temporarily-powershell"><a class="header" href="#set-temporarily-powershell">Set Temporarily (PowerShell)</a></h3>
+<pre><code class="language-powershell">$env:TESTVAR="hello"
+</code></pre>
+<h3 id="set-temporarily-cmd"><a class="header" href="#set-temporarily-cmd">Set Temporarily (cmd)</a></h3>
+<pre><code class="language-cmd">set TESTVAR=hello
+</code></pre>
+<hr>
+<h1 id="exit-code"><a class="header" href="#exit-code">Exit Code</a></h1>
+<p>Numeric status returned by command.</p>
+<ul>
+<li>0 = Success</li>
+<li>Non-zero = Error</li>
+</ul>
+<p>Example:</p>
+<pre><code class="language-powershell">if ($LASTEXITCODE -ne 0) { Write-Host "Build Failed" }
+</code></pre>
+<pre><code class="language-bash">if [ $? -ne 0 ]; then echo "Build Failed"; fi
+</code></pre>
+<hr>
+<h1 id="pipe"><a class="header" href="#pipe">Pipe</a></h1>
+<p>Pass output from one command to another.</p>
+<pre><code class="language-powershell">Get-ChildItem | Select-String ".scad"
+</code></pre>
+<pre><code class="language-bash">ls | grep ".scad"
+</code></pre>
+<hr>
+<h1 id="section-v--git--version-control"><a class="header" href="#section-v--git--version-control">SECTION V — Git &amp; Version Control</a></h1>
+<h2 id="git"><a class="header" href="#git">Git</a></h2>
+<p>Distributed version control system.</p>
+<hr>
+<h2 id="repository"><a class="header" href="#repository">Repository</a></h2>
+<p>Tracked project folder.</p>
+<pre><code class="language-bash">git init
+</code></pre>
+<hr>
+<h2 id="commit"><a class="header" href="#commit">Commit</a></h2>
+<p>Snapshot of changes.</p>
+<pre><code class="language-bash">git add .
+git commit -m "Initial model"
+</code></pre>
+<hr>
+<h2 id="branch"><a class="header" href="#branch">Branch</a></h2>
+<p>Parallel development path.</p>
+<pre><code class="language-bash">git branch feature-peg
+git checkout feature-peg
+</code></pre>
+<hr>
+<h2 id="clone"><a class="header" href="#clone">Clone</a></h2>
+<p>Download remote repository.</p>
+<pre><code class="language-bash">git clone https://github.com/user/project.git
+</code></pre>
+<hr>
+<h2 id="status"><a class="header" href="#status">Status</a></h2>
+<p>Check changes.</p>
+<pre><code class="language-bash">git status
+</code></pre>
+<hr>
+<h1 id="section-vi--file-formats"><a class="header" href="#section-vi--file-formats">SECTION VI — File Formats</a></h1>
+<h2 id="stl"><a class="header" href="#stl">STL</a></h2>
+<p>Triangle mesh file used in 3D printing.</p>
+<p>Generated by:</p>
+<pre><code class="language-bash">openscad -o model.stl model.scad
+</code></pre>
+<hr>
+<h2 id="g-code"><a class="header" href="#g-code">G-code</a></h2>
+<p>Machine instructions generated by slicer.</p>
+<p>Example fragment:</p>
+<pre><code class="language-gcode">G1 X10 Y10 Z0.2 F1500
+</code></pre>
+<hr>
+<h1 id="section-vii--automation-concepts"><a class="header" href="#section-vii--automation-concepts">SECTION VII — Automation Concepts</a></h1>
+<h2 id="script"><a class="header" href="#script">Script</a></h2>
+<p>File containing executable instructions.</p>
+<p>Examples:</p>
+<ul>
+<li><code>.ps1</code></li>
+<li><code>.sh</code></li>
+<li><code>.scad</code></li>
+</ul>
+<hr>
+<h2 id="reproducibility"><a class="header" href="#reproducibility">Reproducibility</a></h2>
+<p>Ability to regenerate identical outputs from identical inputs.</p>
+<hr>
+<h2 id="automation"><a class="header" href="#automation">Automation</a></h2>
+<p>Using scripts instead of manual steps.</p>
+<p>Example build script (PowerShell):</p>
+<pre><code class="language-powershell">openscad -o build/model.stl src/model.scad
+</code></pre>
+<hr>
+<h1 id="section-viii--accessibility--documentation"><a class="header" href="#section-viii--accessibility--documentation">SECTION VIII — Accessibility &amp; Documentation</a></h1>
+<h2 id="markdown"><a class="header" href="#markdown">Markdown</a></h2>
+<p>Lightweight markup language.</p>
+<p>Example:</p>
+<pre><code class="language-markdown"># Heading
+- Bullet
+</code></pre>
+<hr>
+<h2 id="semantic-structure"><a class="header" href="#semantic-structure">Semantic Structure</a></h2>
+<p>Proper heading hierarchy:</p>
+<pre><code># Title
+## Section
+### Subsection
+</code></pre>
+<p>Important for screen readers.</p>
+<hr>
+<h2 id="screen-reader"><a class="header" href="#screen-reader">Screen Reader</a></h2>
+<p>Software that reads text aloud.</p>
+<p>Examples:</p>
+<ul>
+<li>NVDA</li>
+<li>JAWS</li>
+<li>Orca</li>
+<li>VoiceOver</li>
+</ul>
+<hr>
+<h1 id="section-ix--mechanical-design-concepts"><a class="header" href="#section-ix--mechanical-design-concepts">SECTION IX — Mechanical Design Concepts</a></h1>
+<h2 id="clearance-fit"><a class="header" href="#clearance-fit">Clearance Fit</a></h2>
+<p>Loose fit allowing movement.</p>
+<h2 id="press-fit"><a class="header" href="#press-fit">Press Fit</a></h2>
+<p>Tight fit requiring force.</p>
+<h2 id="overhang"><a class="header" href="#overhang">Overhang</a></h2>
+<p>Unsupported geometry exceeding safe angle (≈45° for FDM).</p>
+<hr>
+<h1 id="section-x--advanced-workflow-concepts"><a class="header" href="#section-x--advanced-workflow-concepts">SECTION X — Advanced Workflow Concepts</a></h1>
+<h2 id="headless-ci-build"><a class="header" href="#headless-ci-build">Headless CI Build</a></h2>
+<p>Automated rendering using scripts or CI tools.</p>
+<pre><code class="language-bash">openscad -o output.stl model.scad
+</code></pre>
+<hr>
+<h2 id="deterministic-modeling"><a class="header" href="#deterministic-modeling">Deterministic Modeling</a></h2>
+<p>Same input → same output every time.</p>
+<p>OpenSCAD is deterministic.</p>
+<hr>
+<h2 id="dependency"><a class="header" href="#dependency">Dependency</a></h2>
+<p>External program required for workflow.</p>
+<p>Example:</p>
+<ul>
+<li>OpenSCAD must be in PATH.</li>
+</ul>
+<hr>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../3dMake_Foundation/Appendix_D_Advanced_OpenSCAD_Concepts.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../Backmatter/troubleshooting.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="../Backmatter/Further_Reading.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../Backmatter/teacher-glossary.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
 
@@ -336,11 +622,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../3dMake_Foundation/Appendix_D_Advanced_OpenSCAD_Concepts.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../Backmatter/troubleshooting.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="../Backmatter/Further_Reading.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../Backmatter/teacher-glossary.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
             </nav>

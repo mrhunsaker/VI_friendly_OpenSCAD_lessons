@@ -35,42 +35,47 @@ enable = true
 level = 1
 
 [output.pandoc]
-[output.pandoc.profile.pdf]
-output-file = "OpenSCAD_Curriculum.pdf"
-to = "latex"
-number-sections = false
-toc = true
-toc-depth = 3
-include-before-body = ["src/Cover.tex"]
-template = "src/template.tex"
-pdf-engine = "lualatex"
-filters = ["src/code-to-listings.lua"]
+pandoc-args = ["--lua-filter=src/code-to-listings.lua", "--lua-filter=src/index.lua"]
+# --- PDF PROFILE UPDATES ---
+#[output.pandoc.profile.pdf]
+#output-file = "OpenSCAD_Curriculum.pdf"
+#to = "latex"
+#number-sections = false
+#toc = true
+#toc-depth = 3
+#include-before-body = ["src/Cover.tex"]
+#template = "src/template.tex"
+#pdf-engine = "lualatex"
+# ADDED index.lua here
 
-[output.pandoc.profile.pdf.variables]
-listings = true  
-secnumdepth = 2
-date = "2026-02-24"
-title-meta = "3D Printing Course for Blind and Visually Impaired Learners"
-author-meta = "Michael Ryan Hunsaker, M.Ed., Ph.D."
-title = ""
-author = ""
-documentclass = "book"
-papersize = "letter"
-fontsize = "11pt"
-maketitle = false
-header-includes = "\\usepackage{url}"
+#[output.pandoc.profile.pdf.variables]
+#listings = true  
+#secnumdepth = 2
+#date = "2026-02-24"
+#title-meta = "3D Printing Course for Blind and Visually Impaired Learners"
+#author-meta = "Michael Ryan Hunsaker, M.Ed., Ph.D."
+#documentclass = "book"
+#papersize = "letter"
+#fontsize = "11pt"
+#maketitle = false
+# Ensure these strings are correct for LaTeX
+#header-includes = [
+#    '\usepackage{url}',
+#    '\usepackage{makeidx}',
+#    '\makeindex'
+#]
 
+# --- EPUB PROFILE UPDATES ---
 [output.pandoc.profile.epub]
 output-file = "OpenSCAD_Curriculum.epub"
 to = "epub"
 number-sections = false
 toc-depth = 3
 include-before-body = ["src/Cover.html"]
+# ADDED index.lua here to strip the tags for EPUB
 
 [output.pandoc.profile.epub.variables]
 date = "2026-02-24"
-title-meta = "3D Printing Course for Blind and Visually Impaired Learners"
-author-meta = "Michael Ryan Hunsaker, M.Ed., Ph.D."
 
 [output.pandoc.profile.latex]
 output-file = "OpenSCAD_Curriculum.tex"
@@ -79,9 +84,15 @@ number-sections = false
 toc-depth = 3
 include-before-body = ["src/Cover.tex"]
 template = "src/template.tex"
-filters = ["src/code-to-listings.lua"]
+# IMPORTANT: Add the index filter here too!
 
 [output.pandoc.profile.latex.variables]
 date = "2026-02-24"
 title-meta = "3D Printing Course for Blind and Visually Impaired Learners"
 author-meta = "Michael Ryan Hunsaker, M.Ed., Ph.D."
+# Ensure the index package is included in the raw .tex output
+header-includes = [
+    '\usepackage{url}',
+    '\usepackage{makeidx}',
+    '\makeindex'
+]

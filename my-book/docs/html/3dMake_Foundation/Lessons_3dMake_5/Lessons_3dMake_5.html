@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-7e85ce75.js";
+            window.path_to_searchindex_js = "../../searchindex-eaf1c1cc.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-0b2574ce.js"></script>
+        <script src="../../toc-76b29a8d.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -220,119 +220,175 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="3dmake_foundation_lessons_3dmake_5-lessons_3dmake_5"><a class="header" href="#3dmake_foundation_lessons_3dmake_5-lessons_3dmake_5">Lesson 5: Safety Protocols and the Physical Fabrication Interface</a></h1>
-<p>Estimated time: 60-90 minutes</p>
-<p>Learning Objectives</p>
+                        <h1 id="lesson-5-safety-protocols-and-the-physical-fabrication-interface"><a class="header" href="#lesson-5-safety-protocols-and-the-physical-fabrication-interface">Lesson 5: Safety Protocols and the Physical Fabrication Interface</a></h1>
+<p>Estimated time: 90–120 minutes</p>
+<h2 id="learning-objectives"><a class="header" href="#learning-objectives">Learning Objectives</a></h2>
 <ul>
-<li>Describe the Hierarchy of Controls and apply it to a classroom maker-space<sup class="footnote-reference" id="fr-5-1"><a href="#footnote-5">1</a></sup> <sup class="footnote-reference" id="fr-6-1"><a href="#footnote-6">2</a></sup></li>
-<li>Perform pre-print environmental and equipment checks<sup class="footnote-reference" id="fr-5-2"><a href="#footnote-5">1</a></sup></li>
-<li>Validate the digital-to-physical pipeline and document post-print inspection results<sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">3</a></sup> <sup class="footnote-reference" id="fr-3-1"><a href="#footnote-3">4</a></sup></li>
+<li>Identify and apply the Hierarchy of Controls for 3D printing hazards</li>
+<li>Understand filament-specific hazards and safe material handling</li>
+<li>Follow a safe printer startup, monitoring, and shutdown sequence</li>
+<li>Design parts that are safe to print (minimize supports, overhangs, and VOC-intensive materials)</li>
 </ul>
-<p>Materials</p>
+<h2 id="materials"><a class="header" href="#materials">Materials</a></h2>
 <ul>
-<li>Classroom 3D printer, enclosure, and filtration (or documented lab SOP)</li>
-<li>Example parametric OpenSCAD project and slicer profile</li>
+<li>3D printer (FDM)</li>
+<li>PLA, PETG, or TPU filament</li>
+<li>Safety checklist (see assets folder)</li>
+<li>Ventilation or enclosure (if using PETG, ABS, or ASA)</li>
 </ul>
-<p>Step-by-step Tasks</p>
-<ol>
-<li>Conduct a safety briefing: review the Hierarchy of Controls and locate safety equipment<sup class="footnote-reference" id="fr-5-3"><a href="#footnote-5">1</a></sup>.</li>
-<li>Verify environmental controls and printer readiness: confirm filtration, bed adhesion, and spool metadata<sup class="footnote-reference" id="fr-5-4"><a href="#footnote-5">1</a></sup> <sup class="footnote-reference" id="fr-6-2"><a href="#footnote-6">2</a></sup>.</li>
-<li>Run <code>3dm build</code> and inspect the STL in a slicer; check layer-preview and non-manifold warnings<sup class="footnote-reference" id="fr-1-2"><a href="#footnote-1">3</a></sup> <sup class="footnote-reference" id="fr-3-2"><a href="#footnote-3">4</a></sup>.</li>
-<li>If using remote submission (OctoPrint), confirm camera monitoring and logging before any unattended prints<sup class="footnote-reference" id="fr-5-5"><a href="#footnote-5">1</a></sup>.</li>
-<li>Obtain instructor sign-off and monitor the first layers in-person or via camera.</li>
-<li>After printing, wait for the part to cool (&lt; $30^\circ\text{C}$), measure critical dimensions, and record observations<sup class="footnote-reference" id="fr-5-6"><a href="#footnote-5">1</a></sup> <sup class="footnote-reference" id="fr-6-3"><a href="#footnote-6">2</a></sup>.</li>
-</ol>
-<p>Checkpoints</p>
-<ul>
-<li>Completed environmental checklist and saved inspection notes in the project README<sup class="footnote-reference" id="fr-1-3"><a href="#footnote-1">3</a></sup> <sup class="footnote-reference" id="fr-5-7"><a href="#footnote-5">1</a></sup>.</li>
-</ul>
-<h3 id="introduction-to-material-selection"><a class="header" href="#introduction-to-material-selection">Introduction to Material Selection</a></h3>
-<p>Before your part goes to print, it’s important to understand how material choice affects the printing process, the final product’s properties, and the safety considerations for your workspace.</p>
-<h4 id="why-material-choice-matters"><a class="header" href="#why-material-choice-matters">Why Material Choice Matters</a></h4>
-<p>Most projects in this class use PLA - and for good reason. It’s the easiest, cheapest, and lowest-emission option. But as you advance, you’ll encounter projects that require different materials:</p>
-<ul>
-<li>A flexible phone case needs TPU (thermoplastic polyurethane)</li>
-<li>A functional bracket that will be outdoors might use PETG (polyethylene terephthalate)</li>
-<li>A decorative miniature works perfectly in PLA</li>
-</ul>
-<h4 id="three-common-materials-quick-reference"><a class="header" href="#three-common-materials-quick-reference">Three Common Materials: Quick Reference</a></h4>
-<p>Each material has different print temperatures, strength properties, and difficulty levels. Here’s a quick comparison:</p>
+<h2 id="step-by-step-tasks"><a class="header" href="#step-by-step-tasks">Step-by-step Tasks</a></h2>
+<h3 id="1-review-the-hierarchy-of-controls"><a class="header" href="#1-review-the-hierarchy-of-controls">1. Review the Hierarchy of Controls</a></h3>
+<p>The Hierarchy of Controls is a standard safety framework used in occupational health to rank hazard mitigation strategies from most to least effective.<sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">1</a></sup> Applied to 3D printing:</p>
 <div class="table-wrapper">
 <table>
 <thead>
-<tr><th>Material</th><th>Print Temp</th><th>Difficulty</th><th>Best Uses</th><th>Cautions</th></tr>
+<tr><th>Control Level</th><th>Example in 3D Printing</th></tr>
 </thead>
 <tbody>
-<tr><td>PLA</td><td>190-220C</td><td>Easy</td><td>Prototypes, classroom projects, decorative models</td><td>Brittle; low heat resistance; low emission</td></tr>
-<tr><td>PETG</td><td>230-250C</td><td>Moderate</td><td>Functional parts, mechanical components, water resistance</td><td>Stringing issues; requires bed heat; more emission than PLA</td></tr>
-<tr><td>TPU</td><td>220-240C</td><td>Hard</td><td>Flexible parts, phone cases, gaskets, wearables</td><td>Requires slow speeds; produces more fumes; needs ventilation</td></tr>
+<tr><td><strong>Elimination</strong></td><td>Don’t use materials that produce hazardous fumes (e.g., choose PLA over ABS)</td></tr>
+<tr><td><strong>Substitution</strong></td><td>Use a low-VOC PETG instead of ABS for a part requiring heat resistance</td></tr>
+<tr><td><strong>Engineering Controls</strong></td><td>Install an enclosure with active filtration; use a HEPA filter</td></tr>
+<tr><td><strong>Administrative Controls</strong></td><td>Post material-specific operating procedures; require instructor sign-off</td></tr>
+<tr><td><strong>PPE</strong></td><td>Wear nitrile gloves when handling uncured resin; use respirator if enclosure is unavailable</td></tr>
 </tbody>
 </table>
 </div>
-<h4 id="how-material-choice-affects-your-slicer-settings"><a class="header" href="#how-material-choice-affects-your-slicer-settings">How Material Choice Affects Your Slicer Settings</a></h4>
-<p>When you switch materials, you must adjust:</p>
-<ul>
-<li>Nozzle Temperature: Too cold and plastic won’t extrude; too hot and it burns</li>
-<li>Bed Temperature: Helps adhesion; critical for PETG, optional for PLA</li>
-<li>Print Speed: TPU requires very slow speeds (20-30 mm/s) to prevent extrusion problems</li>
-<li>Cooling: PLA benefits from active cooling; TPU does not</li>
-</ul>
-<p>Most slicers (like PrusaSlicer) have material profiles that automatically set these values. Always verify the temperatures match your filament’s specifications (check the spool label).</p>
-<h4 id="environmental-and-safety-considerations"><a class="header" href="#environmental-and-safety-considerations">Environmental and Safety Considerations</a></h4>
-<p>Different materials produce different levels of emission:</p>
-<ul>
-<li>PLA: Lowest concern; generally safe in ventilated rooms</li>
-<li>PETG: Low emission; still requires good ventilation</li>
-<li>TPU: Moderate to higher emission; requires active ventilation or filtration</li>
-</ul>
-<p>Always follow your classroom’s safety protocol and consult Appendix B: Material Properties &amp; Selection for a comprehensive reference on all available materials, their specifications, and best practices.</p>
-<h4 id="looking-ahead-material-and-design-decisions"><a class="header" href="#looking-ahead-material-and-design-decisions">Looking Ahead: Material and Design Decisions</a></h4>
-<p>Later in this curriculum, you’ll encounter projects that specifically require:</p>
-<ul>
-<li>Flexible materials (Lesson 8: Assembly and Durability)</li>
-<li>High-strength materials (Lesson 10: Quality Assurance and Measurement)</li>
-<li>Multiple-material assemblies (Lesson 11: Stakeholder-Centric Design)</li>
-</ul>
-<p>By understanding material properties now, you’ll be prepared to make informed design decisions in those lessons.</p>
-<h2 id="quiz---lesson-3dmake5-10-questions"><a class="header" href="#quiz---lesson-3dmake5-10-questions">Quiz - Lesson 3dMake.5 (10 questions)</a></h2>
+<p>The most effective controls reduce or eliminate the hazard at the source. PPE is the least effective because it relies on consistent human behavior.</p>
+<h3 id="2-understand-filament-specific-hazards"><a class="header" href="#2-understand-filament-specific-hazards">2. Understand Filament-Specific Hazards</a></h3>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Filament</th><th>Print Temp (°C)</th><th>Bed Temp (°C)</th><th>Key Hazards</th><th>Ventilation Required?</th></tr>
+</thead>
+<tbody>
+<tr><td>PLA</td><td>200–215</td><td>0–60</td><td>Minimal; slight sweet smell</td><td>No (recommended)</td></tr>
+<tr><td>PETG</td><td>230–250</td><td>70–90</td><td>Low VOC, slight odor</td><td>Yes (moderate)</td></tr>
+<tr><td>TPU</td><td>220–240</td><td>30–60</td><td>Low VOC</td><td>Yes (moderate)</td></tr>
+<tr><td>ABS</td><td>230–260</td><td>100–110</td><td>Styrene fumes (potentially harmful)</td><td>Yes (required + enclosure)</td></tr>
+<tr><td>ASA</td><td>240–260</td><td>100–110</td><td>Similar to ABS</td><td>Yes (required + enclosure)</td></tr>
+<tr><td>Resin (SLA)</td><td>N/A</td><td>N/A</td><td>Skin/eye irritant; VOCs</td><td>Required + gloves</td></tr>
+</tbody>
+</table>
+</div>
+<p>PLA is the safest classroom filament. ABS and resin require active ventilation and enclosures.<sup class="footnote-reference" id="fr-2-1"><a href="#footnote-2">2</a></sup></p>
+<h3 id="3-safe-printer-startup-sequence"><a class="header" href="#3-safe-printer-startup-sequence">3. Safe Printer Startup Sequence</a></h3>
+<p>Follow this sequence every time you start a print:</p>
 <ol>
-<li>What are the four levels of the Hierarchy of Controls<sup class="footnote-reference" id="fr-5-8"><a href="#footnote-5">1</a></sup>?</li>
-<li>Name two engineering controls useful for reducing emissions<sup class="footnote-reference" id="fr-5-9"><a href="#footnote-5">1</a></sup> <sup class="footnote-reference" id="fr-6-4"><a href="#footnote-6">2</a></sup>.</li>
-<li>Why must you monitor the first layers of a new print profile<sup class="footnote-reference" id="fr-5-10"><a href="#footnote-5">1</a></sup>?</li>
-<li>Where should you record spool metadata and print observations<sup class="footnote-reference" id="fr-1-4"><a href="#footnote-1">3</a></sup> <sup class="footnote-reference" id="fr-5-11"><a href="#footnote-5">1</a></sup>?</li>
-<li>What is the safe cooldown temperature suggested before part removal<sup class="footnote-reference" id="fr-6-5"><a href="#footnote-6">2</a></sup>?</li>
-<li>True or False: Ventilation is only necessary for commercial printing facilities.</li>
-<li>Describe the relationship between print temperature, material type, and emissions.</li>
-<li>Explain what “spool metadata” includes and why tracking it is important for reproducibility.</li>
-<li>How would you measure and record critical dimensions on a printed part?</li>
-<li>What health and safety precautions should be documented in an SOP for supervised prints?</li>
+<li><strong>Visual inspection</strong> — No filament tangles; bed is clear; no debris on nozzle</li>
+<li><strong>Bed leveling check</strong> — Run manual or automatic leveling if the printer has been moved</li>
+<li><strong>Filament loaded and feeding</strong> — Manually extrude 10–20 mm to confirm clean flow</li>
+<li><strong>Slicer preview</strong> — Verify layer preview shows expected geometry before sending G-code <sup class="footnote-reference" id="fr-4-1"><a href="#footnote-4">3</a></sup></li>
+<li><strong>First layer observation</strong> — Watch the first 2–3 layers to confirm adhesion</li>
+<li><strong>Never leave unattended during the first layer</strong> — Most failures occur in the first 10 minutes</li>
 </ol>
-<p>Extension Problems (10)</p>
+<h3 id="4-monitoring-and-intervention"><a class="header" href="#4-monitoring-and-intervention">4. Monitoring and Intervention</a></h3>
+<p>During a print:</p>
+<ul>
+<li>Check in every 15–30 minutes for long prints</li>
+<li>Watch for: spaghetti (filament not adhering), layer shifts, nozzle clogs (clicking extruder), or smoke</li>
+<li><strong>Smoke = stop immediately</strong>: turn off the printer, do not restart until the cause is identified</li>
+<li>Use OctoPrint or built-in camera monitoring if available for remote observation</li>
+</ul>
+<h3 id="5-safe-shutdown-and-part-removal"><a class="header" href="#5-safe-shutdown-and-part-removal">5. Safe Shutdown and Part Removal</a></h3>
 <ol>
-<li>Draft a one-page SOP for start-to-finish supervised prints in your lab<sup class="footnote-reference" id="fr-5-12"><a href="#footnote-5">1</a></sup> <sup class="footnote-reference" id="fr-6-6"><a href="#footnote-6">2</a></sup>.</li>
-<li>Create a checklist script that verifies spool metadata and build settings before <code>3dm build</code> runs<sup class="footnote-reference" id="fr-1-5"><a href="#footnote-1">3</a></sup>.</li>
-<li>Run a test print and log measured deviations; propose a parameter change to correct the error<sup class="footnote-reference" id="fr-3-3"><a href="#footnote-3">4</a></sup>.</li>
-<li>Design an accessible post-print inspection checklist that non-visual users can follow<sup class="footnote-reference" id="fr-5-13"><a href="#footnote-5">1</a></sup> <sup class="footnote-reference" id="fr-6-7"><a href="#footnote-6">2</a></sup>.</li>
-<li>Research filtration options and recommend one for your classroom, including maintenance intervals<sup class="footnote-reference" id="fr-5-14"><a href="#footnote-5">1</a></sup> <sup class="footnote-reference" id="fr-6-8"><a href="#footnote-6">2</a></sup>.</li>
-<li>Develop a comprehensive classroom safety and operations manual: SOPs, checklists, emergency procedures, and accessibility considerations.</li>
-<li>Create a print quality assurance system: define metrics, measurement methods, and acceptance criteria for finished prints.</li>
-<li>Build a calibration and maintenance log: document all calibration activities, maintenance dates, and performance metrics over time.</li>
-<li>Design a student training certification program: define knowledge and skill requirements, create assessments, and track competency.</li>
-<li>Write an operations handbook that covers setup, troubleshooting, safety, maintenance, and accessibility for your 3D printing facility.</li>
+<li>Wait until the print is complete and the nozzle has cooled to &lt; 50°C</li>
+<li>Wait until the bed has cooled to &lt; 30°C before removing the part — hot beds can warp thin parts</li>
+<li>Use a spatula or palette knife to remove parts; never force them off with bare hands</li>
+<li>Store filament in a sealed bag with desiccant to prevent moisture absorption</li>
 </ol>
+<h3 id="6-design-for-safety"><a class="header" href="#6-design-for-safety">6. Design for Safety</a></h3>
+<p>Good design reduces printing risk:</p>
+<ul>
+<li><strong>Minimize supports</strong> — Parts that need &gt; 50% support coverage may jam the nozzle when support material tangles</li>
+<li><strong>Stay within bed size</strong> — Parts larger than the print bed require splitting and bonding</li>
+<li><strong>Avoid ABS when PLA or PETG will work</strong> — Select the safest material that meets mechanical requirements</li>
+<li><strong>Print test coupons first</strong> — A small test piece (5% of full size) catches problems before wasting a long print</li>
+</ul>
+<h3 id="checkpoint"><a class="header" href="#checkpoint">Checkpoint</a></h3>
+<ul>
+<li>After step 2: You can match each filament type to its required ventilation level.</li>
+<li>After step 3: You have completed at least one printer startup using the six-step sequence.</li>
+<li>After step 6: Your latest model has been evaluated for support minimization.</li>
+</ul>
+<h2 id="printability-focused-design-guidelines"><a class="header" href="#printability-focused-design-guidelines">Printability-Focused Design Guidelines</a></h2>
+<pre><code class="language-openscad">// Design with printability in mind from the start
+// Rule: any overhang &gt; 45 degrees from vertical needs supports
+// Rule: minimum wall thickness for FDM = 0.8mm (2x nozzle width for 0.4mm nozzle)
+// Rule: minimum hole diameter = 2mm (smaller holes may not print accurately)
+// Rule: add 0.15-0.20mm clearance between mating parts
+
+wall_min = 1.2;        // safe minimum for 0.4mm nozzle: 3x nozzle width
+hole_min_r = 1.5;      // 3mm diameter minimum for reliable hole printing
+clearance = 0.2;       // fitting clearance between mating faces
+
+module printable_box(w, d, h) {
+  wall = max(wall_min, w * 0.05);  // at least 5% of width, minimum 1.2mm
+  difference() {
+    cube([w, d, h]);
+    translate([wall, wall, wall])
+      cube([w - 2*wall, d - 2*wall, h]);  // open top
+  }
+}
+
+printable_box(50, 40, 30);
+</code></pre>
+<h2 id="quiz--lesson-3dmake5-15-questions"><a class="header" href="#quiz--lesson-3dmake5-15-questions">Quiz — Lesson 3dMake.5 (15 questions)</a></h2>
+<ol>
+<li>What are the five levels of the Hierarchy of Controls, from most to least effective?</li>
+<li>Why is Elimination considered the most effective control?</li>
+<li>What filament requires an enclosure with active ventilation and is NOT recommended for open classrooms?</li>
+<li>At what bed temperature should you wait before removing a print?</li>
+<li>What should you do immediately if you see smoke from your 3D printer?</li>
+<li>Why is PLA considered the safest classroom filament?</li>
+<li>What is the minimum wall thickness for a 0.4 mm nozzle, and why does this minimum exist?</li>
+<li>What is the purpose of desiccant when storing filament?</li>
+<li>True or False: It is safe to leave a 3D printer unattended during the first layer.</li>
+<li>What does “spaghetti” mean in the context of a 3D printing failure?</li>
+<li>What is the OSHA Hierarchy of Controls, and how does it differ from simply requiring PPE?<sup class="footnote-reference" id="fr-1-2"><a href="#footnote-1">1</a></sup></li>
+<li>What are the specific hazards associated with resin (SLA/MSLA) printing that differ from FDM?</li>
+<li>What is the bed temperature recommendation for PETG, and why is this higher than PLA?</li>
+<li>Explain why minimizing supports in your design is a safety consideration, not just a time-saving one.</li>
+<li>Describe one engineering control and one administrative control you could implement in a classroom 3D printing lab.</li>
+</ol>
+<h2 id="extension-problems-15"><a class="header" href="#extension-problems-15">Extension Problems (15)</a></h2>
+<ol>
+<li>Create a material selection flowchart: given mechanical requirements (heat resistance, flexibility, strength), the chart guides the user to the safest filament that meets requirements.</li>
+<li>Conduct a ventilation audit of your classroom or makerspace. Document air exchange rates, window proximity, and filter types. Write a one-page recommendation.</li>
+<li>Write a standard operating procedure (SOP) for ABS printing in a classroom. Include pre-print checks, monitoring requirements, and shutdown procedures.</li>
+<li>Design a “first layer test tile” that is 10 cm × 10 cm × 0.4 mm. Print it and assess adhesion quality. Document what you observe.</li>
+<li>Build a parametric filament moisture indicator holder in OpenSCAD: a box that holds a humidity indicator card inside a filament storage bag.</li>
+<li>Research OSHA’s published guidance on 3D printing VOC exposure. Summarize the key recommendations for occupational settings. Cite the specific OSHA or NIOSH publication.<sup class="footnote-reference" id="fr-1-3"><a href="#footnote-1">1</a></sup> <sup class="footnote-reference" id="fr-3-1"><a href="#footnote-3">4</a></sup></li>
+<li>Compare the safety data sheets (SDS) for PLA and ABS filament from two manufacturers. Document the differences in recommended ventilation and exposure limits.</li>
+<li>Design a printer enclosure in OpenSCAD. Key requirements: four walls, a door opening, a top panel with a vent hole. Make all dimensions parametric.</li>
+<li>Create a classroom safety poster (on paper or digitally) covering the five most important 3D printing safety rules, using the Hierarchy of Controls as a framework.</li>
+<li>Write a short (one-page) risk assessment for a new classroom printer purchase. Consider: filament type, ventilation, fire suppression, and student training.</li>
+<li>Design and print a filament storage clip: a parametric clip that holds a loose end of filament to a spool. Make the clip diameter a parameter.</li>
+<li>Build a “print monitoring checklist” as a paper form. Columns: time, nozzle temp, bed temp, layer number, observations, action taken.</li>
+<li>Research the difference between particle emissions and volatile organic compound (VOC) emissions in FDM printing. Which is more hazardous at typical classroom distances? Cite your sources.<sup class="footnote-reference" id="fr-3-2"><a href="#footnote-3">4</a></sup></li>
+<li>Design a parametric spatula guard in OpenSCAD: a thin safety bumper that clips to the edge of a build plate to prevent the spatula from slipping. Make the plate thickness a parameter.</li>
+<li>Write a “near-miss” incident report for a hypothetical 3D printing incident (e.g., a student touched a hot nozzle). Use a standard incident report format: what happened, contributing factors, corrective actions.</li>
+</ol>
+<h2 id="references-and-helpful-resources"><a class="header" href="#references-and-helpful-resources">References and Helpful Resources</a></h2>
+<h3 id="supplemental-resources"><a class="header" href="#supplemental-resources">Supplemental Resources</a></h3>
+<ul>
+<li><a href="https://github.com/tdeck/3dmake">3DMake GitHub Repository</a> — Build workflow reference</li>
+<li><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual">OpenSCAD User Manual</a> — Parametric design for printable parts</li>
+<li><a href="../../assets/3dMake_Foundation/safety_checklist.html">Safety Checklist</a> — Classroom printer safety checklist asset</li>
+<li><a href="../../assets/3dMake_Foundation/filament-comparison-table.html">Filament Comparison Table</a> — Filament properties reference</li>
+</ul>
 <hr>
 <ol class="footnote-definition">
-<li id="footnote-5">
-<p>ANSI/AIHA Z590.3 - Hierarchy of Controls - <a href="https://www.aiha.org/">https://www.aiha.org/</a> <a href="#fr-5-1">↩</a> <a href="#fr-5-2">↩2</a> <a href="#fr-5-3">↩3</a> <a href="#fr-5-4">↩4</a> <a href="#fr-5-5">↩5</a> <a href="#fr-5-6">↩6</a> <a href="#fr-5-7">↩7</a> <a href="#fr-5-8">↩8</a> <a href="#fr-5-9">↩9</a> <a href="#fr-5-10">↩10</a> <a href="#fr-5-11">↩11</a> <a href="#fr-5-12">↩12</a> <a href="#fr-5-13">↩13</a> <a href="#fr-5-14">↩14</a></p>
-</li>
-<li id="footnote-6">
-<p>10+ OpenSCAD Online Courses for 2026 | Explore Free Courses &amp; Certifications, accessed February 18, 2026, <a href="https://www.classcentral.com/subject/openscad">https://www.classcentral.com/subject/openscad</a> <a href="#fr-6-1">↩</a> <a href="#fr-6-2">↩2</a> <a href="#fr-6-3">↩3</a> <a href="#fr-6-4">↩4</a> <a href="#fr-6-5">↩5</a> <a href="#fr-6-6">↩6</a> <a href="#fr-6-7">↩7</a> <a href="#fr-6-8">↩8</a></p>
-</li>
 <li id="footnote-1">
-<p>STL Validation and Geometry Checking - <a href="https://docs.prusa3d.com/en/guide/39012-validation-tools/">https://docs.prusa3d.com/en/guide/39012-validation-tools/</a> <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a> <a href="#fr-1-3">↩3</a> <a href="#fr-1-4">↩4</a> <a href="#fr-1-5">↩5</a></p>
+<p>OSHA Hierarchy of Controls — Occupational Safety and Health Administration. <a href="https://www.osha.gov/hierarchy-of-controls">https://www.osha.gov/hierarchy-of-controls</a>. Also see NIOSH’s explanation: <a href="https://www.cdc.gov/niosh/topics/hierarchy/default.html">https://www.cdc.gov/niosh/topics/hierarchy/default.html</a> <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a> <a href="#fr-1-3">↩3</a></p>
+</li>
+<li id="footnote-2">
+<p>Filament Safety Properties — UL Research Institutes: Characterization of Particles and Gases from Common 3D Printing Filaments. <a href="https://www.ul.com/news/ul-research-institutes-releases-3d-printing-emissions-study">https://www.ul.com/news/ul-research-institutes-releases-3d-printing-emissions-study</a> <a href="#fr-2-1">↩</a></p>
+</li>
+<li id="footnote-4">
+<p>PrusaSlicer Documentation — Layer and Print Settings. <a href="https://docs.prusa3d.com/en/">https://docs.prusa3d.com/en/</a> <a href="#fr-4-1">↩</a></p>
 </li>
 <li id="footnote-3">
-<p>Post-Print Inspection Procedures - <a href="https://www.prusa3d.com/support/">https://www.prusa3d.com/support/</a> <a href="#fr-3-1">↩</a> <a href="#fr-3-2">↩2</a> <a href="#fr-3-3">↩3</a></p>
+<p>NIOSH Science Blog — Health and Safety Considerations for 3D Printing. <a href="https://blogs.cdc.gov/niosh-science-blog/2020/05/14/3d-printing/">https://blogs.cdc.gov/niosh-science-blog/2020/05/14/3d-printing/</a> <a href="#fr-3-1">↩</a> <a href="#fr-3-2">↩2</a></p>
 </li>
 </ol>
 

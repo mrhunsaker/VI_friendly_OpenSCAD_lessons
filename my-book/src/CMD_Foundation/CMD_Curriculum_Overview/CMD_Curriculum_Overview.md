@@ -122,10 +122,10 @@ Every lesson contains:
 
 All four screen readers are covered in each lesson:
 
-- **NVDA** — Free, excellent terminal support. Available at [https://example.com](https://example.com)
-- **JAWS** — Commercial, powerful, widely used in workplaces. Available at [https://example.com](https://example.com)
+- **NVDA** — Free, excellent terminal support. Available at [https://www.nvaccess.org/](https://www.nvaccess.org/)
+- **JAWS** — Commercial, powerful, widely used in workplaces. Available at [https://www.freedomscientific.com/products/software/jaws/](https://www.freedomscientific.com/products/software/jaws/)
 - **Windows Narrator** — Free, built into Windows, minimal setup required.
-- **Dolphin SuperNova** — Commercial, with optional magnification. Available at [https://example.com](https://example.com)
+- **Dolphin SuperNova** — Commercial, with optional magnification. Available at [https://yourdolphin.com/supernova/](https://yourdolphin.com/supernova/)
 
 If your screen reader is not listed in a specific tip, refer to the **Screen Reader Accessibility Guide** for equivalent commands across all four readers.
 
@@ -282,10 +282,10 @@ cd my-practice-folder
 
 ### Screen Reader Guides
 
-- **NVDA:** [https://example.com](https://example.com)
-- **JAWS:** [https://example.com](https://example.com)
-- **Windows Narrator:** [https://example.com](https://example.com)
-- **Dolphin SuperNova:** [https://example.com](https://example.com)
+- **NVDA:** [https://www.nvaccess.org/](https://www.nvaccess.org/)
+- **JAWS:** [https://www.freedomscientific.com/products/software/jaws/](https://www.freedomscientific.com/products/software/jaws/)
+- **Windows Narrator:** [https://support.microsoft.com/narrator](https://support.microsoft.com/narrator)
+- **Dolphin SuperNova:** [https://yourdolphin.com/supernova/](https://yourdolphin.com/supernova/)
 
 ---
 
@@ -320,4 +320,4 @@ NEXT: 3D Printing Integration Lessons
 **Questions? Feedback? Stuck?** Refer back to this page and try the Troubleshooting section. All the tools you need are here.
 
 **Now open CMD-Pre and get started!**
-<!--pagebreak-->
+

@@ -1,472 +1,215 @@
-# Lesson 2: Geometric Primitives and Constructive Solid Geometry  {#3dmake_foundation_lessons_3dmake_2-lessons_3dmake_2}
+# Lesson 2: Geometric Primitives and Constructive Solid Geometry
 
-Estimated time: 75-90 minutes
-- Use OpenSCAD primitives (`cube()`, `sphere()`, `cylinder()`) and transforms (`translate()`, `rotate()`, `scale()`)[^2]
-- Apply CSG operators (`union`, `difference`, `intersection`) safely and diagnose common numerical issues[^3]
-- Use quick diagnostic renders and validate geometry in a slicer[^1]
+Estimated time: 90–120 minutes
 
-Materials
-- 3dMake project scaffold with `src/main.scad`
-- Example primitive snippets (provided in assets)
-- Reference: [openscad-cheat-sheet.md](openscad-cheat-sheet.md) for syntax quick-reference
+## Learning Objectives
+- Use all six OpenSCAD primitive shapes: `cube`, `sphere`, `cylinder`, `polyhedron`, `text`, `surface`
+- Apply the four CSG operations: `union`, `difference`, `intersection`, and `hull`
+- Use modifier characters (`#`, `!`, `%`, `*`) for debugging
+- Understand and apply the `0.001` offset rule for clean Boolean operations[^1]
 
-1. Open `src/main.scad`; identify and run simple examples using `cube()`, `sphere()`, and `cylinder()` [^2].
+## Materials
+- 3dMake project from Lesson 1
+- Terminal
+- OpenSCAD (for live preview with F5)
 
-   Example primitives:
-   ```openscad
-   // Primitive shapes - uncomment one to try
-   // Cube (x, y, z dimensions)
-   cube([20, 20, 20]);
-   // Sphere (radius, resolution)
-   // sphere(r=10, $fn=32);
-   // Cylinder (radius, height, resolution)
-   // cylinder(r=10, h=20, $fn=32);
-   ```
+## Step-by-step Tasks
 
-2. Create three short examples demonstrating `union()`, `difference()`, and `intersection()` and render with reduced `$fn`. Review CSG best practices[^3].
-
-   Example CSG operations:
-   ```openscad
-   // UNION - Combine multiple shapes
-   union(){
-     cube([20, 20, 20]);
-     translate([15, 0, 0]) sphere(r=10, $fn=32);
-   }
-   // DIFFERENCE - Subtract shapes
-   // difference(){
-   //   cube([20, 20, 20]);
-   //   translate([10, 10, 10]) sphere(r=8, $fn=32);
-   // }
-   // INTERSECTION - Keep only overlapping volumes
-   // intersection(){
-   //   cube([20, 20, 20]);
-   //   sphere(r=12, $fn=32);
-   // }
-   ```
-
-3. Reproduce a failing `difference()` case and apply the 0.001 offset strategy to the subtractor; re-render and confirm fix. This technique addresses common manifold issues[^4].
-
-   Fix technique:
-   ```openscad
-   // Problem: Coincident faces cause non-manifold issues
-   difference(){
-     cube([20, 20, 20], center=true);
-     // Use translate with small offset (0.001) to prevent coincident faces
-     translate([0, 0, 0.001]) sphere(r=10, $fn=32);
-   }
-   ```
-
-4. Build an STL with `3dm build` and open it in your slicer to check for thin walls or islands[^1].
-5. Document any fixes in the project README and commit the working `main.scad` and STL.
-
-## Modifier Characters for Advanced Debugging
-
-OpenSCAD includes special modifier characters that help you isolate and debug specific parts of your model. These single-character prefixes (placed before module/shape names) change how that object is rendered without affecting the underlying code.
-
-### The Four Modifier Characters
-
-#### 1. The `!` Character (Show Only)
-
-Use `!` to render only the marked object and hide everything else. This is essential for isolating geometry when debugging complex models:
+### 1. Build a Compound Object with union and difference
 
 ```openscad
-module base() {
-  cube([50, 50, 5]);
-}
-module stand() {
-  translate([0, 0, 5])
-    rotate([60, 0, 0])
-    cube([50, 5, 40]);
-}
-module lip() {
-  translate([0, 50, 45])
-    cube([50, 8, 15]);
-}
-// Show all parts
-base();
-stand();
-lip();
-// DEBUG: Show only the stand by adding !
-// !stand();
-```
-
-When to use: You're debugging a multi-part assembly and want to see one component in isolation
-
-#### 2. The `#` Character (Highlight)
-
-Use `#` to render the marked object and highlight it in red (in preview mode). This helps you see which part corresponds to which code:
-
-```openscad
+// Simple canister: cylinder body with a sphere on top
 difference() {
-  cube([30, 30, 30], center=true);
-  // Highlight the subtracted sphere in red
-  #sphere(r=15, $fn=32);
+  union() {
+    cylinder(h=40, r=15, $fn=64);
+    translate([0, 0, 40]) sphere(r=15, $fn=64);
+  }
+  // Hollow out the inside (0.001 offset prevents co-planar faces)
+  translate([0, 0, 3])
+    cylinder(h=38 + 0.001, r=13, $fn=64);
 }
 ```
 
-When to use: Identifying which boolean operation is creating problems or validating that two objects overlap correctly
+Save as `src/main.scad` and run `3dm build`. Preview with F5 for fast render; use F6 for final export-quality render.
 
-#### 3. The `%` Character (Transparent/Ghost)
+### 2. Understand the 0.001 Offset Rule
 
-Use `%` to render the marked object as transparent/ghosted (shown as semi-transparent geometry). This helps you see what's "underneath" without removing the code:
+When two surfaces are exactly co-planar, OpenSCAD may produce rendering artifacts or non-manifold faces. Adding a tiny `0.001 mm` overlap ensures the Boolean operation cuts completely through:
 
 ```openscad
-module outer_shell() {
+// WRONG - co-planar bottom faces may cause artifacts
+difference() {
+  cube([20, 20, 10]);
+  cube([18, 18, 10]);  // same height - ambiguous
+}
+
+// CORRECT - 0.001 ensures clean cut
+difference() {
+  cube([20, 20, 10]);
+  translate([1, 1, -0.001])
+    cube([18, 18, 10 + 0.002]);  // 0.001 below and above
+}
+```
+
+This is a widely documented community convention in OpenSCAD for avoiding non-manifold geometry.[^1]
+
+### 3. Apply Modifier Characters for Debugging
+
+```openscad
+// # = highlight in pink (still rendered)
+# cube([10, 10, 10]);
+
+// % = ghost/transparent (shown but not part of model)
+% cube([20, 20, 20]);
+
+// ! = render only this object (ignore everything else)
+! sphere(r=10);
+
+// * = disable this object entirely
+* cube([5, 5, 5]);
+```
+
+Use `#` and `%` while debugging to visualize which geometry is being subtracted or added. Remove all modifier characters before final export. See [^4] for more on modifier characters.
+
+### 4. Use rotate_extrude and linear_extrude [^3]
+
+```openscad
+// linear_extrude: 2D profile extruded along Z axis
+linear_extrude(height=20, twist=0, scale=1) {
+  circle(r=10, $fn=32);
+}
+
+// rotate_extrude: 2D profile rotated around Z axis (creates vase/ring shapes)
+rotate_extrude(angle=360, $fn=64) {
+  translate([15, 0, 0]) circle(r=5, $fn=32);
+}
+```
+
+### 5. Use intersection and hull [^2]
+
+```openscad
+// intersection: keeps only the volume common to both shapes
+intersection() {
+  cube([20, 20, 20], center=true);
+  sphere(r=13, $fn=64);
+}
+
+// hull: convex envelope of all child geometry
+hull() {
+  translate([0, 0, 0]) sphere(r=5);
+  translate([30, 0, 0]) sphere(r=5);
+  translate([15, 20, 0]) sphere(r=5);
+}
+```
+
+### Checkpoint
+- F5 renders quickly in preview mode (not manifold-safe); F6 performs full CGAL render. Always use F6 / `3dm build` before slicing.
+- If the slicer reports non-manifold faces, check for missing `0.001` offsets on co-planar surfaces.
+
+## Advanced CSG Patterns
+
+### Combining Operations for Complex Parts
+
+Real parts require nested CSG trees. Here is a parametric mounting bracket that combines all four operations:
+
+```openscad
+// Parametric Mounting Bracket
+width = 40;
+height = 30;
+depth = 8;
+hole_r = 4;
+slot_w = 6;
+slot_h = 15;
+wall = 3;
+
+module bracket() {
   difference() {
-    cube([50, 50, 50], center=true);
-    cube([44, 44, 44], center=true);  // Wall thickness of 3mm
+    // Main body
+    cube([width, depth, height]);
+
+    // Two mounting holes
+    translate([10, -0.001, 10])
+      rotate([-90, 0, 0]) cylinder(r=hole_r, h=depth + 0.002, $fn=32);
+    translate([30, -0.001, 10])
+      rotate([-90, 0, 0]) cylinder(r=hole_r, h=depth + 0.002, $fn=32);
+
+    // Lightening slot
+    translate([width/2 - slot_w/2, -0.001, height - slot_h - wall])
+      cube([slot_w, depth + 0.002, slot_h]);
   }
 }
-module internal_support() {
-  translate([0, 0, -10])
-    cube([20, 20, 10], center=true);
-}
-// Show shell normally and support as ghosted
-outer_shell();
-%internal_support();  // Transparent - see where it sits relative to shell
+
+bracket();
 ```
 
-When to use: Visualizing assembly relationships or checking alignment of internal vs external features
-
-#### 4. The `*` Character (Disable)
-
-Use `*` to disable rendering of a marked object entirely. It's like commenting it out but without modifying the code:
+### Polyhedron for Irregular Shapes
 
 ```openscad
-module component_a() { cube([30, 30, 30]); }
-module component_b() { sphere(r=20, $fn=32); }
-module component_c() { cylinder(h=40, r=15, $fn=32); }
-component_a();
-*component_b();  // Disabled - won't render
-component_c();
+// Wedge using polyhedron
+polyhedron(
+  points = [
+    [0, 0, 0], [20, 0, 0], [20, 15, 0], [0, 15, 0],  // bottom
+    [0, 0, 10], [20, 0, 10]                             // top edge
+  ],
+  faces = [
+    [0, 1, 2, 3],  // bottom
+    [0, 4, 5, 1],  // front
+    [1, 5, 2],     // right
+    [0, 3, 4],     // left
+    [3, 2, 5, 4],  // back/top
+  ]
+);
 ```
 
-When to use: Testing whether a component is causing rendering errors or print failures without deleting code
-
-### Practical Debugging Workflow Using Modifiers
-
-Scenario: Your phone stand model has three parts, but it's rendering very slowly. You suspect one part is the problem.
-
-```openscad
-module base() {
-  cube([100, 100, 5]);
-}
-module stand() {
-  // Complex geometry with many $fn values
-  translate([0, 0, 5])
-    rotate([60, 0, 0])
-    minkowski() {
-      cube([90, 10, 40], center=true);
-      cylinder(r=5, h=0.01, $fn=64);  // This might be slow!
-    }
-}
-module lip() {
-  translate([0, 100, 45])
-    cube([100, 10, 15]);
-}
-// DEBUGGING STEPS:
-// Step 1: Show all parts (original speed problem)
-base();
-stand();
-lip();
-// Step 2: Disable stand to test if it's the culprit
-// base();
-// *stand();
-// lip();
-// Result: If still slow, problem is elsewhere. If fast, stand() is the issue.
-// Step 3: If stand() is slow, highlight just that part
-// !#stand();  // Shows only stand in red - can now debug its geometry
-// Step 4: Reduce resolution in stand() and test again
-// (modify the $fn=64 to $fn=16 and see if faster)
-```
-
-### Key Points About Modifiers
-
-| Character | Effect                | Use Case                                         |
-|-----------|-----------------------|--------------------------------------------------|
-| `!`       | Show only this object | Isolate one component in multi-part assembly     |
-| `#`       | Highlight in red      | See what's being subtracted/added in boolean ops |
-| `%`       | Ghost/transparent     | See assembly relationships and overlaps          |
-| `*`       | Disable/hide          | Test if a component is causing problems          |
-
-> [!IMPORTANT]
-> Modifiers only affect the visual preview/render. They do not change the exported STL file. When you export, all objects are included normally (unless you've actually deleted or commented them out).
-
-### Practice Exercise: Modifier Workflow
-
-Create a file with three overlapping shapes and practice:
-1. Use `!` to show only the middle shape
-2. Use `#` to highlight the bottom shape
-3. Use `%` to ghost the top shape
-4. Use `*` to disable all shapes one at a time
-
-```openscad
-// Practice: Multi-part assembly debugging
-module bottom_part() {
-  cube([50, 50, 10], center=true);
-}
-module middle_part() {
-  translate([0, 0, 15])
-    cylinder(h=20, r=20, $fn=32);
-}
-module top_part() {
-  translate([0, 0, 40])
-    sphere(r=15, $fn=32);
-}
-// Test 1: Show only middle
-// !middle_part();
-// Test 2: Highlight bottom
-// #bottom_part();
-// middle_part();
-// top_part();
-// Test 3: Ghost top
-// bottom_part();
-// middle_part();
-// %top_part();
-// Test 4: Disable one at a time
-// *bottom_part();
-// middle_part();
-// top_part();
-```
-
-### Debugging, Resolution, and Common Issues
-
-As your OpenSCAD models become more complex, you'll encounter rendering errors, non-manifold geometry, or slow previews. Learning to debug efficiently is essential for productive design work.
-
-#### Understanding OpenSCAD Console Errors
-
-When you press F5 to preview or F6 to render your model, OpenSCAD displays warnings and errors in the console at the bottom of the editor. Here's what to look for:
-
-- Error Line Numbers: The console message tells you the exact line where the problem was detected. Look for missing semicolons, unmatched braces, or undefined variables
-- Syntax Errors: These prevent the model from rendering at all (common causes: missing `;`, unclosed `{` or `[`, typos in function names)
-- Warnings (Non-Manifold Geometry): Your geometry is *technically* valid but has internal inconsistencies that may prevent printing
-
-Example Console Output:
-```
-ERROR: Unexpected token 'sphere' at line 15, column 5
-  Expected one of: } ) ]
-```
-This tells you that line 15 has a syntax issue-likely a missing closing bracket on the previous line.
-
-#### The 0.001 Offset Strategy (Revisited)
-
-One of the most common issues with CSG operations is coincident faces-when two shapes touch exactly at their boundaries. This creates a non-manifold geometry that slicer tools flag as unprintable.
-
-The Fix: Add a tiny offset (0.001 mm or smaller) to move one surface slightly:
-
-```openscad
-// BEFORE (problematic):
-difference(){
-  cube([20, 20, 20], center=true);
-  sphere(r=10, $fn=32);
-}
-// AFTER (fixed):
-difference(){
-  cube([20, 20, 20], center=true);
-  translate([0, 0, 0.001]) sphere(r=10, $fn=32);  // Tiny offset prevents coincident faces
-}
-```
-
-This 0.001 mm offset is invisible to the human eye but fixes the non-manifold warning and makes the model printable.
-
-#### Using `$fn` to Balance Speed and Quality
-
-The `$fn` parameter controls the resolution of curved surfaces (spheres, cylinders, etc.). It represents the number of polygonal faces used to approximate the curve:
-
-- `$fn = 12` - Very fast preview, coarse geometry (useful for quick testing)
-- `$fn = 32` - Good balance for most designs (default for many situations)
-- `$fn = 100+` - High quality but slow to render; use only for final export
-
-Debugging Workflow:
-1. During design iteration: Use `$fn = 12` or `$fn = 20` for quick feedback
-2. Before export: Increase to `$fn = 32` or higher for final quality
-3. For complex assemblies: Keep `$fn` low during iteration to save preview time
-
-#### Incremental Rendering: The F5/F6 Workflow
-
-- F5 (Preview): Quick render to check overall geometry and catch layout errors
-- F6 (Full Render): Slower but more accurate; use before export
-- Strategy: Press F5 frequently while editing to get immediate feedback, then F6 once before exporting
-
-This workflow catches errors early and saves you from spending 10 minutes rendering only to discover a syntax error.
-
-#### Diagnosing Non-Manifold Geometry
-
-A model might render in OpenSCAD but still be unprintable. The slicer will report errors like "non-manifold edges" or "holes in surface." Common causes:
-
-1. Coincident Faces -> Use small offsets (0.001 mm)
-2. Zero-Thickness Walls -> Ensure all walls are at least 0.8-1.0 mm
-3. Gaps Between Shapes -> Check that boolean operations have no small gaps; use `minkowski()` for rounded edges if needed
-4. Inside-Out Geometry -> A shape might be flipped; use `scale([1, 1, -1])` to flip normals if needed
-
-When your slicer reports non-manifold issues, use the slicer's visualization to locate the problem, then reference the line numbers in your OpenSCAD code and test fixes incrementally using F5/F6.
-
-Checkpoints
-- After task 3 the problematic boolean should render without non-manifold warnings[^4].
-- After this section, you should be able to interpret at least three common console error messages and apply appropriate fixes.
-
-## Quiz - Lesson 3dMake.2 (10 questions)
-
-1. Name three primitive functions in OpenSCAD[^2].
-2. What does `difference()` accomplish[^3]?
-3. Why might two coincident faces cause a render failure[^4]?
-4. What is the 0.001 rule and why is it useful[^4]?
-5. How does lowering `$fn` help during debugging[^3]?
-6. True or False: `union()` combines shapes while `intersection()` keeps only overlapping volumes.
-7. Describe what Constructive Solid Geometry (CSG) is and give an example of where it's useful.
-8. Explain how scale(), translate(), and rotate() transforms change a primitive's behavior.
-9. How would you diagnose and fix a non-manifold issue in your model?
-10. When validating geometry in a slicer, what specific issues should you look for?
-
-## Lesson 2 Assets & Projects
-
-Your Lesson 2 assets are located in the centralized assets folder:
-
-- Lesson 2 Asset Overview ([assets/Lessons_3dMake_2/README.md](../../assets/3dMake_Foundation/Lessons_3dMake_2/README.md)) - Folder contents and learning resources
-- Your Second Print Project ([assets/Lessons_3dMake_2/Your_Second_Print/](../../assets/3dMake_Foundation/Lessons_3dMake_2/Your_Second_Print/)) - Adapt models to real-world needs
-- Bonus Print Project ([assets/Lessons_3dMake_2/Bonus_Print/](../../assets/3dMake_Foundation/Lessons_3dMake_2/Bonus_Print/)) - Practice resizing and parametric variation
-
-These projects reinforce the boolean operations and CSG concepts you learned in this lesson.
-
-## Advanced Example: Rotational and Linear Extrusion
-
-Beyond basic primitives and boolean operations, OpenSCAD provides powerful 2D-to-3D operations. Here are practical examples from real-world designs:
-
-### Example 1: Rotating 2D Shapes with `rotate_extrude()`
-
-The `rotate_extrude()` function spins a 2D profile around the Z-axis, creating axially symmetric objects like vases, bowls, or cones:
-
-```openscad
-// Simple Vase - Rotating a 2D profile
-$fn = 100;
-rotate_extrude(angle = 360, convexity = 4)
-{
-  translate([20, 0, 0])
-  square([8, 50], center=false);
-}
-```
-
-What it does:
-- Draws a 2D square 20 units from the center
-- Rotates it 360deg around the Z-axis
-- Creates a hollow cylindrical vase
-
-Try this variation:
-```openscad
-// Vase with a curved profile
-$fn = 100;
-rotate_extrude(angle = 360, convexity = 4)
-{
-  // Profile shape: wider at top, narrower at bottom
-  polygon([
-    [20, 0],      // bottom inner
-    [25, 0],      // bottom outer
-    [30, 40],     // top outer
-    [25, 40]      // top inner
-  ]);
-}
-```
-
-### Example 2: Linear Extrusion with 2D Text
-
-The `linear_extrude()` function pulls a 2D profile vertically (along the Z-axis). Combined with the `text()` function, it creates embossed letters:
-
-```openscad
-// Embossed Text - Name Plate
-linear_extrude(height = 5, convexity = 10)
-{
-  text("MAKER", size = 30, font = "Impact:style=Regular",
-       halign = "center", valign = "center");
-}
-```
-
-What it does:
-- Creates 2D text outline
-- Pulls it 5 mm upward
-- Creates a 3D embossed nameplate
-
-Complete nameplate with backing:
-```openscad
-// Name plate with base and embossed text
-union()
-{
-  // Base plate
-  cube([120, 40, 3], center = true);
-  // Embossed text
-  translate([0, 0, 2])
-  linear_extrude(height = 2)
-  {
-    text("MAKER", size = 24, font = "Impact:style=Regular",
-         halign = "center", valign = "center");
-  }
-}
-```
-
-### Example 3: Practical Project - Hook with `rotate_extrude()`
-
-This real-world example creates a wall mount hook by rotating a 2D profile:
-
-```openscad
-// Wall Mount Hook
-$fn = 100;
-difference()
-{
-  // Outer hook profile - rotated 360deg
-  rotate_extrude(angle = 360, convexity = 4)
-  {
-    translate([25, 0, 0])
-    square([8, 60], center = false);
-  }
-  // Hollow center
-  translate([0, 0, -5])
-  cylinder(h = 70, d = 40);
-}
-```
-
-Key observations:
-- The 2D square is positioned 25 units from the Z-axis
-- Rotating it creates a thick-walled hollow cylinder
-- This is used in real products like the birdhouse and PVC hook examples from the *Simplifying 3D Printing* textbook
-
-### Key Concepts for 2D-to-3D Conversion
-
-| Function                      | Purpose                       | Common Use                             |
-|-------------------------------|-------------------------------|----------------------------------------|
-| `linear_extrude(height)`      | Pull 2D shape vertically      | Text, badges, plaques                  |
-| `rotate_extrude(angle)`       | Rotate 2D shape around Z-axis | Vases, bowls, hooks, symmetric parts   |
-| `scale()`                     | Stretch/compress along axes   | Tapered cones, proportional variations |
-| Combining with `difference()` | Hollow out the extruded shape | Cups, containers, hollow handles       |
-
-Checkpoint: After this section, you can:
-- Use `linear_extrude()` to create embossed text and flat designs
-- Use `rotate_extrude()` to create axially symmetric 3D shapes
-- Combine extrusion with boolean operations to hollow or refine shapes
-
-Extension Problems (10)
-1. Create a small assembly using `union()` of three primitives and export the STL. Reference best practices from OpenSCAD documentation[^2].
-2. Intentionally create a failing boolean and fix it using offsets; explain your approach. Document the manifold issues encountered[^4].
-3. Write a short test script that generates three variants with varying `$fn` values and compare render times. Consider using 3dMake workflows[^1].
-4. Use `3dm info` (if available) to generate a report on your model and document any recommendations[^1].
-5. Explore using a library module (e.g., a fillet helper) to fix a sharp corner and note the difference in final STL[^3].
-6. Build a geometry validation toolkit: test all basic transformations (union, difference, intersection) with edge cases and document failure modes.
-7. Create a parametric assembly generator that produces 5+ configurations and validates each for printability.
-8. Develop a boolean operation troubleshooting guide with visual examples and step-by-step fixes.
-9. Design a library module system for common geometric operations (fillets, chamfers, arrays); test reusability across projects.
-10. Write an accessibility guide for boolean operations: describe methods for validating geometry non-visually using model properties and slicer feedback.
-
-## Supplemental Resources
-
-For additional examples and practice with 3D primitives and boolean operations, explore these resources:
-
-- [Programming with OpenSCAD EPUB Textbook](../../assets/Programming_with_OpenSCAD.epub) - Comprehensive guide to primitives, boolean operations, and CSG fundamentals
-- [CodeSolutions: 3D Primitives](https://github.com/ProgrammingWithOpenSCAD/CodeSolutions/tree/main/1_3D-Shapes) - Working examples of cube, sphere, cylinder, and other 3D shapes
-- [CodeSolutions: Combining Shapes](https://github.com/ProgrammingWithOpenSCAD/CodeSolutions/tree/main/AppendixB_OpenSCAD-Visual-Reference) - Examples of union, difference, intersection, and hull operations
-- [Practice Worksheets: 3D Shapes](https://programmingwithopenscad.github.io/learning.html) - Visualization and decomposition exercises
-
-[^1]: Slicer Validation - PrusaSlicer Documentation - [https://docs.prusa3d.com/en/guide/39012-validation-tools/](https://docs.prusa3d.com/en/guide/39012-validation-tools/)
-
-[^2]: OpenSCAD Manual - Primitives and Transforms - [https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_the_2D_Subsystem](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_the_2D_Subsystem)
-
-[^3]: Gonzalez Avila, J. F., Pietrzak, T., & Casiez, G. (2024). *Understanding the challenges of OpenSCAD users for 3D printing*. Proceedings of the ACM Symposium on User Interface Software and Technology.
-
-[^4]: Google. (2025). *Vertex AI Gemini 3 Pro Preview: Getting started with generative AI*. [https://docs.cloud.google.com/vertex-ai/generative-ai/docs/start/get-started-with-gemini-3](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/start/get-started-with-gemini-3)  
+## Quiz — Lesson 3dMake.2 (15 questions)
+
+1. What are the six OpenSCAD primitive shapes?
+2. What does `difference()` do in CSG?
+3. Why do you add `0.001` mm to the cutting geometry in a `difference()` operation?
+4. What does the `#` modifier character do, and when would you use it?
+5. What is the difference between `F5` and `F6` in OpenSCAD?
+6. What does `hull()` produce, and how is it different from `union()`?
+7. What does the `%` modifier do to a shape in OpenSCAD?
+8. Describe what `rotate_extrude()` does and give one example of a shape it could produce.
+9. What does `intersection()` return when applied to two overlapping cubes?
+10. True or False: the `*` modifier renders a shape as a ghost for debugging.
+11. Describe what `linear_extrude()` does and explain the `twist` parameter.
+12. What is a non-manifold face, and what common OpenSCAD mistake produces it?
+13. If you want to subtract a cylinder from a cube and the cylinder is exactly as tall as the cube, what do you need to add to ensure a clean cut?
+14. Explain when you would use `polyhedron()` instead of simpler primitives.
+15. What is the difference between `union()` combining two overlapping shapes and simply rendering two separate shapes without a CSG operation?
+
+## Extension Problems (15)
+
+1. Build a hollow sphere (a shell with `1.5 mm` walls) using `difference()` and the `0.001` rule.[^1]
+2. Create a vase shape using `rotate_extrude()` and a custom 2D profile.
+3. Design a bracket or clip using nested `difference()` and `union()` operations. Document each CSG step with inline comments.
+4. Use `hull()` to create a smooth transition between two differently-sized shapes.
+5. Experiment with the `%` modifier: build a model where a ghost reference shape helps you position a cut accurately. Screenshot the debugging view and explain it.
+6. Create a parametric name badge: a flat base with your name text embossed using `linear_extrude()` and `difference()`.
+7. Build a compound hinge using two cylinders, a `hull()`, and alignment holes.
+8. Design a 10-sided (decagonal) prism using `cylinder()` with `$fn=10` and a `difference()` to cut a through-hole.
+9. Create a test print that exercises all four CSG operations in a single part (document what each operation does in a header comment).
+10. Using only `cube()`, `sphere()`, `difference()`, and `hull()`, build a simple car silhouette (top-down view).
+11. Create a lattice structure using a `for` loop combined with `difference()` to cut a grid of holes in a cube. Document the relationship between hole spacing and wall thickness.
+12. Build a parametric ring using `rotate_extrude()` and make the cross-section shape (circle, square, or triangle) a parameter.
+13. Research and document the `surface()` primitive: what input does it accept, what shape does it produce, and when would you use it instead of `polyhedron()`? Include a working example.
+14. Design a tolerance test set: 5 pairs of pegs and holes with clearances from 0.0 mm to 0.4 mm in 0.1 mm increments. Print one set and document which clearance allows free movement.
+15. Write a short guide explaining the four modifier characters (`#`, `!`, `%`, `*`) with one example use case for each and a note on when to remove them before final export.
+
+## References and Helpful Resources
+
+[^1]: OpenSCAD User Manual — Primitive Solids and Boolean Operations - [https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Primitive_Solids](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Primitive_Solids). The 0.001 offset rule is a community convention documented in the OpenSCAD forums to prevent co-planar face artifacts in Boolean operations.
+
+[^2]: OpenSCAD User Manual — CSG Modelling - [https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/CSG_Modelling](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/CSG_Modelling)
+
+[^3]: OpenSCAD User Manual — Transformations and Extrusions - [https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_the_2D_Subsystem](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_the_2D_Subsystem)
+
+[^4]: OpenSCAD User Manual — Modifier Characters - [https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Modifier_Characters](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Modifier_Characters)
+
+### Supplemental Resources
+
+- [Programming with OpenSCAD EPUB Textbook](../../assets/Programming_with_OpenSCAD.epub) — Chapters on CSG and primitives
+- [CodeSolutions Repository](https://github.com/ProgrammingWithOpenSCAD/CodeSolutions) — Worked examples for CSG, hull, and extrusions
+- [OpenSCAD Quick Reference](https://programmingwithopenscad.github.io/quick-reference.html) — All primitive and CSG syntax at a glance
+- [3DMake GitHub Repository](https://github.com/tdeck/3dmake) — Build workflow reference

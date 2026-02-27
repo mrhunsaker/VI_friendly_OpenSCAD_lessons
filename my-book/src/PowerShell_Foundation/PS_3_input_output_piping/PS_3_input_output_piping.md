@@ -151,13 +151,13 @@ Checkpoints
 14. Implement a comprehensive error-handling pipeline: read output, catch errors, log them separately, and generate a summary of successes vs failures.
 15. Design and execute a real-world project backup workflow: use piping to verify file integrity, count files by type, generate a backup manifest, and create audit logs-all in one integrated command pipeline.
 ## References
-- Microsoft. (2024). *Out-File cmdlet for redirection*. [https://example.com](https://example.com)
-- Microsoft. (2024). *Select-String piping reference*. [https://example.com](https://example.com)
-- Microsoft. (2024). *PowerShell pipeline concepts*. [https://example.com](https://example.com)
+- Microsoft. (2024). *Out-File cmdlet for redirection*. [https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-file](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-file)
+- Microsoft. (2024). *Select-String piping reference*. [https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/select-string](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/select-string)
+- Microsoft. (2024). *PowerShell pipeline concepts*. [https://learn.microsoft.com/en-us/powershell/scripting/learn/deep-dives/everything-about-pipeline](https://learn.microsoft.com/en-us/powershell/scripting/learn/deep-dives/everything-about-pipeline)
 ## Helpful Resources
 - [Using Out-File for Redirection](https://learn.microsoft.com/powershell/module/microsoft.powershell.utility/out-file)
 - [Piping and Select-String](https://learn.microsoft.com/powershell/module/microsoft.powershell.utility/select-string)
 - [Get-Content Cmdlet Reference](https://learn.microsoft.com/powershell/module/microsoft.powershell.management/get-content)
 - [Measure-Object for Counting](https://learn.microsoft.com/powershell/module/microsoft.powershell.utility/measure-object)
 - [PowerShell Pipeline Concept](https://learn.microsoft.com/powershell/scripting/learn/shell/using-the-pipeline)
-<!--pagebreak-->
+
