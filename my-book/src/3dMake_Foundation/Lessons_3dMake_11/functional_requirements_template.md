@@ -100,10 +100,10 @@ Acceptance Criteria:
 
 ## Non-Functional Requirements
 
-*Performance, reliability, and design}} properties*
+*Performance, reliability, and design properties*
 
 ### Performance Requirements
-- Response time}}: _
+- Response time: _
 - Throughput: _
 - Resource usage: _
 
@@ -134,10 +134,10 @@ Acceptance Criteria:
 
 ## Constraint Requirements
 
-*Limitations on design}} and implementation*
+*Limitations on design and implementation*
 
 ### Technical Constraints
-- Must work}} with: 
+- Must work with: 
 - Must not require: 
 - Must be compatible with: 
 
@@ -207,7 +207,7 @@ Requirements Changes:
 
 ## Verification Plan
 
-How will we verify each}} requirement is met?
+How will we verify each requirement is met?
 
 | Requirement | Verification Method    | Test Case | Status |
 |-------------|------------------------|-----------|--------|
@@ -229,7 +229,7 @@ Date:   Status:  Approved /  Pending /  Rejected
 ## Reference Documents
 
 - Interview notes: 
-- Design}} sketches: 
+- Design sketches: 
 - Related specifications: _
 - Standards/guidelines: 
 

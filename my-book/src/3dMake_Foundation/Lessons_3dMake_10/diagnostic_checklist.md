@@ -1,6 +1,6 @@
 # Diagnostic Checklist for 3D Printing {#3dmake_foundation_lessons_3dmake_10-diagnostic_checklist}
 
-Use this comprehensive checklist to systematically diagnose and troubleshoot printing}} issues.
+Use this comprehensive checklist to systematically diagnose and troubleshoot printing issues.
 
 ## Quick Diagnosis Flowchart
 
@@ -37,7 +37,7 @@ Checklist:
 - [ ] Printer powered on
 - [ ] LED indicators showing normal status
 - [ ] USB cable connected (if applicable)
-- [ ] No error}} codes displaying
+- [ ] No error codes displaying
 - [ ] Display/interface responding to input
 
 If failed:
@@ -46,16 +46,16 @@ If failed:
 2. Verify power supply specifications (voltage, current)
 3. Test with different power outlet
 4. Try power-cycling (off 30 sec, on)
-5. Check for blown fuses inside printer}}
+5. Check for blown fuses inside printer
 
 ### Category B: Temperature System
 
 Heating Element Status:
 
 - [ ] Hot end temperature rises when heating commanded
-- [ ] Bed}} temperature rises when heating commanded
+- [ ] Bed temperature rises when heating commanded
 - [ ] Temperature readings stable (not fluctuating 5C+)
-- [ ] No error}} messages during heating
+- [ ] No error messages during heating
 
 Measurement Method:
 
@@ -130,7 +130,7 @@ Powered Movement Test:
 
 Build Plate Leveling Test:
 
-Paper Method (Most Common}}):
+Paper Method (Most Common):
 
 ```plaintext
 1. Heat bed to printing temperature
@@ -146,10 +146,10 @@ Target: Consistent slight paper drag all points
 Leveling Validation:
 
 - [ ] Level at 4 corners
-- [ ] Level at bed}} center
+- [ ] Level at bed center
 - [ ] No high/low points
-- [ ] Nozzle}} doesn't hit bed}} at any point
-- [ ] Consistent first}}-layer}} appearance across bed}}
+- [ ] Nozzle doesn't hit bed at any point
+- [ ] Consistent first-layer appearance across bed
 
 ### Category E: Filament & Extruder
 
@@ -159,7 +159,7 @@ Filament Quality Check:
 - [ ] No visible cracks or damage
 - [ ] Spool rotates freely without binding
 - [ ] Filament path clear to extruder
-- [ ] No tangles in filament}} path
+- [ ] No tangles in filament path
 
 Extruder Test:
 
@@ -193,28 +193,28 @@ If fails:
 
 ### Layer Appearance Test
 
-After printing}} first}} 5-10 layer}} heights, evaluate:
+After printing first 5-10 layer heights, evaluate:
 
-| Appearance              | Issue                        | Action                     |
-|-------------------------|------------------------------|----------------------------|
-| Wavy/embossed           | Bed}} not level or too close | Relevel bed}}              |
-| Gaps between}} lines    | Nozzle}} too high            | Lower Z-offset             |
-| Completely squished     | Nozzle}} too low             | Raise Z-offset             |
-| Partial adhesion        | Bed}} too cool or dirty      | Clean bed}}, increase temp |
-| Consistent squish/lines | Correct                      | Continue print}}           |
+| Appearance              | Issue                      | Action                   |
+|-------------------------|----------------------------|--------------------------|
+| Wavy/embossed           | Bed not level or too close | Relevel bed              |
+| Gaps between lines      | Nozzle too high            | Lower Z-offset           |
+| Completely squished     | Nozzle too low             | Raise Z-offset           |
+| Partial adhesion        | Bed too cool or dirty      | Clean bed, increase temp |
+| Consistent squish/lines | Correct                    | Continue print           |
 
 ## Mid-Print Issue Diagnostics
 
 ### Extrusion Failure Checklist
 
-When extrusion stops during print}}:
+When extrusion stops during print:
 
 Immediate Actions:
 
-- [ ] Pause print}} (don't stop)
+- [ ] Pause print (don't stop)
 - [ ] Listen for extruder sounds (grinding = jam)
 - [ ] Feel nozzle carefully (if cooled slightly)
-- [ ] Observe filament}} in extruder (is it feeding?)
+- [ ] Observe filament in extruder (is it feeding?)
 
 Diagnostic Decision:
 
@@ -257,7 +257,7 @@ Diagnosis Method:
 
 ### Visual Inspection During Print
 
-Every 30 minutes of printing}}, check:
+Every 30 minutes of printing, check:
 
 ```plaintext
 [ ] Layer alignment (no X/Y shifting)
@@ -270,7 +270,7 @@ Every 30 minutes of printing}}, check:
 
 ## Dimensional Accuracy Diagnostics
 
-After print}} completes and cools (24 hours):
+After print completes and cools (24 hours):
 
 ### Precision Measurement
 
@@ -305,15 +305,15 @@ Example:
 
 ## Environmental Diagnostics
 
-When quality}} varies between}} prints:
+When quality varies between prints:
 
 Check Conditions:
 
 - [ ] Room temperature stable (+/-5C?)
 - [ ] Humidity reasonable (30-60%?)
-- [ ] No drafts from windows/AC near printer}}
+- [ ] No drafts from windows/AC near printer
 - [ ] Consistent vibration level (no external impact)
-- [ ] Same filament}} spool/batch used
+- [ ] Same filament spool/batch used
 - [ ] Same slicer settings applied
 
 Environmental Log:

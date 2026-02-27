@@ -1,6 +1,6 @@
-# OpenSCAD}} Quick Reference - Cheat Sheet {#3dmake_foundation_lessons_3dmake_2-openscad-cheat-sheet}
+# OpenSCAD Quick Reference - Cheat Sheet {#3dmake_foundation_lessons_3dmake_2-openscad-cheat-sheet}
 
-*Keep this handy during all OpenSCAD}} work}}. For full documentation: [https://openscad.org/documentation.html](https://openscad.org/documentation.html)*
+*Keep this handy during all OpenSCAD work. For full documentation: [https://openscad.org/documentation.html](https://openscad.org/documentation.html)*
 
 ## Basic Shapes (Primitives)
 
@@ -35,7 +35,7 @@ difference() { base; subtract; }       // remove one shape from another
 intersection() { shape1; shape2; }     // keep only overlapping region
 ```
 
-Tip for difference}}(): Always make the subtracting shape 1 mm taller on both ends than the base shape to avoid zero-thickness artifacts.
+Tip for difference(): Always make the subtracting shape 1 mm taller on both ends than the base shape to avoid zero-thickness artifacts.
 
 ```scad
 // Example - box with a hole:
@@ -122,7 +122,7 @@ max(3, 5, 1)           // returns 5
 
 | Key            | Action                   |
 |----------------|--------------------------|
-| F5             | Preview}} (fast)         |
+| F5             | Preview (fast)           |
 | F6             | Full render (for export) |
 | Ctrl+S         | Save                     |
 | Ctrl+Z         | Undo                     |
@@ -132,11 +132,11 @@ max(3, 5, 1)           // returns 5
 ## Export Workflow
 
 1. Press F6 (full render - wait for it to complete)
-2. File > Export > Export as STL}}
+2. File > Export > Export as STL
 3. Save with a descriptive filename: `projectname_v2.stl`
 
 ## Sources
 
-OpenSCAD}}. (n.d.). *OpenSCAD}} cheatsheet*. [https://openscad.org/cheatsheet/](https://openscad.org/cheatsheet/)  
-OpenSCAD}}. (n.d.). *OpenSCAD}} documentation*. [https://openscad.org/documentation.html](https://openscad.org/documentation.html)  
-Gohde, J., & Kintel, M. (2021). *Programming with OpenSCAD}}*. No Starch Press. [https://nostarch.com/programmingopenscad](https://nostarch.com/programmingopenscad)
+OpenSCAD. (n.d.). *OpenSCAD cheatsheet*. [https://openscad.org/cheatsheet/](https://openscad.org/cheatsheet/)  
+OpenSCAD. (n.d.). *OpenSCAD documentation*. [https://openscad.org/documentation.html](https://openscad.org/documentation.html)  
+Gohde, J., & Kintel, M. (2021). *Programming with OpenSCAD*. No Starch Press. [https://nostarch.com/programmingopenscad](https://nostarch.com/programmingopenscad)

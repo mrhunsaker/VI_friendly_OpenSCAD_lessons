@@ -43,8 +43,10 @@ toc = true
 toc-depth = 3
 include-before-body = ["src/Cover.tex"]
 template = "src/template.tex"
+pdf-engine = "lualatex"
 
 [output.pandoc.profile.pdf.variables]
+listings = true  
 secnumdepth = 2
 date = "2026-02-24"
 title-meta = "3D Printing Course for Blind and Visually Impaired Learners"
@@ -75,6 +77,7 @@ to = "latex"
 number-sections = false
 toc-depth = 3
 include-before-body = ["src/Cover.tex"]
+template = "src/template.tex"
 
 [output.pandoc.profile.latex.variables]
 date = "2026-02-24"

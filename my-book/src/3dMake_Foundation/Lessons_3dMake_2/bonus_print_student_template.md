@@ -2,13 +2,13 @@
 
 - Author:
 - Date:
-- Description: Create scaled variants of a design}} to explore parametric}} thinking and manufacturing trade-offs.
+- Description: Create scaled variants of a design to explore parametric thinking and manufacturing trade-offs.
 
-## Design}} Concept
+## Design Concept
 
-- Base design}} name}} and description:
-- Why did you}} choose this design}}?
-- How will you}} generate variants parametrically?
+- Base design name and description:
+- Why did you choose this design?
+- How will you generate variants parametrically?
 
 ## Variant Specifications
 
@@ -28,23 +28,23 @@
 
 ## Analysis and Reflections
 
-- Which variant is most efficient (time}}/material}} ratio)?
-- How did scaling affect print}} quality}}?
-- What trade-offs did you}} observe (speed vs. quality}}, material}} vs. time}})?
-- If you}} made a fourth variant, what would it be and why?
+- Which variant is most efficient (time/material ratio)?
+- How did scaling affect print quality?
+- What trade-offs did you observe (speed vs. quality, material vs. time)?
+- If you made a fourth variant, what would it be and why?
 
 ## Attachments
 
-- [ ] `.scad` file}} with variant generation code}}
+- [ ] `.scad` file with variant generation code
 - [ ] Photos of all variants (assembled if applicable)
-- [ ] Print log for each}} variant
+- [ ] Print log for each variant
 - [ ] Comparison analysis
 
 ## Teacher Feedback
 
-| Category                      | Score | Notes |
-|-------------------------------|-------|-------|
-| Problem & Solution (0-3)      |       |       |
-| Design}} & Code Quality (0-3) |       |       |
-| Documentation (0-3)           |       |       |
-| Total (0-9)                   |       |       |
+| Category                    | Score | Notes |
+|-----------------------------|-------|-------|
+| Problem & Solution (0-3)    |       |       |
+| Design & Code Quality (0-3) |       |       |
+| Documentation (0-3)         |       |       |
+| Total (0-9)                 |       |       |

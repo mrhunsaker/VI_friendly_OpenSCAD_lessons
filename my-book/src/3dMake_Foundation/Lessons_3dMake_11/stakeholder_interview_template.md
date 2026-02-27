@@ -13,7 +13,7 @@ Interview Details:
 - Contact: _
 
 Interview Objective:
-(What do you}} specifically want to learn?)
+(What do you specifically want to learn?)
 _
 
 Estimated Duration: 45-60 minutes
@@ -29,19 +29,19 @@ Opening Questions:
 2. "What problem are we trying to solve?"
    - _
 
-3. "Who else will be affected by this design}}?"
+3. "Who else will be affected by this design?"
    - _
 
 ### Section 2: Current Situation (10 minutes)
 
 Current Process:
-1. "How do you}} currently solve this problem?"
+1. "How do you currently solve this problem?"
    - _
 
 2. "What works well about the current approach?"
    - _
 
-3. "What frustrates you}} most about the current process?"
+3. "What frustrates you most about the current process?"
    - _
 
 Pain Points:
@@ -54,7 +54,7 @@ Requirements (Ask open-ended):
 1. "Ideally, what would this solution do?"
    - _
 
-2. "How would you}} use it?"
+2. "How would you use it?"
    - _
 
 3. "Where would it be used?"
@@ -80,7 +80,7 @@ Frequency & Scale:
 2. "How many people need this?"
    - _
 
-3. "For how long each}} use?"
+3. "For how long each use?"
    - _
 
 User Profile:
@@ -95,7 +95,7 @@ What defines success?
 2. 
 3. 
 
-How will you}} measure if this works?
+How will you measure if this works?
 - Metric 1: 
 - Metric 2: 
 
@@ -104,7 +104,7 @@ What would be a failure?
 
 ### Section 6: Preferences & Priorities (10 minutes)
 
-Priority Ranking (Ask: "If you}} could only have 3 features, which would they be?")
+Priority Ranking (Ask: "If you could only have 3 features, which would they be?")
 1.  (Priority:  /10)
 2.  (Priority:  /10)
 3.  (Priority:  /10)
@@ -112,7 +112,7 @@ Priority Ranking (Ask: "If you}} could only have 3 features, which would they be
 Style/Aesthetic:
 - Preferred look: 
 - Must fit with existing: _
-- Any}} visual requirements: _
+- Any visual requirements: _
 
 Material/Finish:
 - Preferred materials: 
@@ -125,13 +125,13 @@ Dig deeper on key points:
 - "Tell me more about that..."
 - "Why is that important?"
 - "What would happen if that weren't included?"
-- "Can you}} give me an example?"
-- "How would you}} compare that to...?"
+- "Can you give me an example?"
+- "How would you compare that to...?"
 
 ## Accessibility Considerations
 
 Always Ask:
-- "Are there any accessibility}} requirements?"
+- "Are there any accessibility requirements?"
 - "Will this be used by people with different abilities?"
 - "Are there sensory, mobility, or cognitive considerations?"
 - "What assistive devices might be used with this?"
@@ -167,14 +167,14 @@ Next Steps:
 
 After conducting multiple interviews, summarize:
 
-### Common}} Themes
+### Common Themes
 (What requirements appeared in multiple interviews?)
 1. 
 2. 
 3. 
 
 ### Conflicting Requirements
-(What requirements contradicted each}} other?)
+(What requirements contradicted each other?)
 - Stakeholder 1 wants: _
 - Stakeholder 2 wants: _
 - Resolution: 
@@ -186,4 +186,4 @@ After conducting multiple interviews, summarize:
 
 Interview Conducted By: _
 Date Documented: _
-Approved By Stakeholder: _ (signature/name}})
+Approved By Stakeholder: _ (signature/name)

@@ -2,9 +2,9 @@
 
 - Author:
 - Date:
-- Description: Design}} and assemble a multi-part}} object with careful tolerance management.
+- Description: Design and assemble a multi-part object with careful tolerance management.
 
-## Design}} Concept
+## Design Concept
 
 - Assembly description (what does it do?):
 - Number of distinct parts: _
@@ -38,21 +38,21 @@
 ## Assembly Results
 
 - All parts assembled successfully: Yes / No
-- Assembly time}}: _ minutes
-- Any}} challenges during assembly?
+- Assembly time: _ minutes
+- Any challenges during assembly?
 - Quality of final assembly:
 
 ## Reflections
 
-- Did the assembly sequence work}} as planned?
-- What tolerance issues did you}} encounter?
-- How would you}} document this for someone else to build}}?
-- What would you}} change for a second version?
+- Did the assembly sequence work as planned?
+- What tolerance issues did you encounter?
+- How would you document this for someone else to build?
+- What would you change for a second version?
 
 ## Attachments
 
-- [ ] `.scad` file}} with all parts and assembly
-- [ ] Exported `.stl` for each}} part}}
+- [ ] `.scad` file with all parts and assembly
+- [ ] Exported `.stl` for each part
 - [ ] Assembly sequence diagram or photo documentation
 - [ ] Photos of assembly steps
 - [ ] Photo of final assembled product
@@ -60,9 +60,9 @@
 
 ## Teacher Feedback
 
-| Category                      | Score | Notes |
-|-------------------------------|-------|-------|
-| Problem & Solution (0-3)      |       |       |
-| Design}} & Code Quality (0-3) |       |       |
-| Documentation (0-3)           |       |       |
-| Total (0-9)                   |       |       |
+| Category                    | Score | Notes |
+|-----------------------------|-------|-------|
+| Problem & Solution (0-3)    |       |       |
+| Design & Code Quality (0-3) |       |       |
+| Documentation (0-3)         |       |       |
+| Total (0-9)                 |       |       |

@@ -6,10 +6,10 @@ Project / Assignment: _
 
 ## How to Use This Worksheet
 
-1. Measure each}} feature three times and record all three values
+1. Measure each feature three times and record all three values
 2. Calculate the average: add the three values and divide by 3
-3. Round to one}} decimal place (e.g., 23.4 mm)
-4. Use the average in your OpenSCAD}} code}} - not a single measurement
+3. Round to one decimal place (e.g., 23.4 mm)
+4. Use the average in your OpenSCAD code - not a single measurement
 
 Units: All measurements in millimeters (mm) unless otherwise noted.
 
@@ -120,11 +120,11 @@ After completing all measurements, compare your averages with a partner who meas
 | 4      |                 |                        |                 |              |
 | 5      |                 |                        |                 |              |
 
-If any difference}} is greater than 1 mm, remeasure together and find the source of the discrepancy.
+If any difference is greater than 1 mm, remeasure together and find the source of the discrepancy.
 
 ## Percent Error (Optional / Extension)
 
-If your instructor provides the "true" dimension of an object (measured with a reference}} instrument), you}} can}} calculate your percent error}}:
+If your instructor provides the "true" dimension of an object (measured with a reference instrument), you can calculate your percent error:
 
 Formula: `% error = (|your average  true value| / true value) x 100`
 
@@ -133,7 +133,7 @@ Formula: `% error = (|your average  true value| / true value) x 100`
 |        |              |            |            |         |
 |        |              |            |            |         |
 
-A percent error}} under 2% is excellent for caliper work}} at this level.
+A percent error under 2% is excellent for caliper work at this level.
 
 ## Reflection
 
@@ -141,6 +141,6 @@ A percent error}} under 2% is excellent for caliper work}} at this level.
 
 1. Which measurement was most difficult to take and why?
 
-2. Did your three measurements for any feature vary significantly? What might cause variation between}} repeated measurements?
+2. Did your three measurements for any feature vary significantly? What might cause variation between repeated measurements?
 
-3. If you}} were designing an object in OpenSCAD}} that needed to fit over one}} of these objects, which measurement would you}} use - your smallest, your largest, or your average? Why?
+3. If you were designing an object in OpenSCAD that needed to fit over one of these objects, which measurement would you use - your smallest, your largest, or your average? Why?

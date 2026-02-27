@@ -1,4 +1,4 @@
-# 3dMake Setup & Workflow {#3dmake_foundation_lessons_3dmake_1-3dmake-setup-guide}
+# 3dMake Setup & Workflow 
 
 This guide walks you through installing 3dMake, creating projects, and managing your workflow efficiently.
 

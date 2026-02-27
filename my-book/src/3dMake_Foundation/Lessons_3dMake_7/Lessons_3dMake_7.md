@@ -1,25 +1,25 @@
 # Lesson 7: Parametric Transforms and the Phone Stand Project {#3dmake_foundation_lessons_3dmake_7-lessons_3dmake_7}
 
-Estimated time}}: 105-135 minutes
+Estimated time: 105-135 minutes
 
 Learning Objectives
 
-- Use parametric}} transforms (`rotate()`, `translate()`, `scale()`) to position and orient sub-assemblies[^1]
+- Use parametric transforms (`rotate()`, `translate()`, `scale()`) to position and orient sub-assemblies[^1]
 - Apply the Minkowski operation as a method for creating filleted edges[^2]
-- Create multi-part}} assemblies where each}} component serves a distinct structural function[^3]
-- Test and validate parametric}} variations before}} printing}}[^1]
+- Create multi-part assemblies where each component serves a distinct structural function[^3]
+- Test and validate parametric variations before printing[^1]
 
 Materials
 
 - 3dMake project scaffold with `src/main.scad`
-- Access to a printer}} or slicing software
-- Measuring tools (calipers) for post-print}} validation
+- Access to a printer or slicing software
+- Measuring tools (calipers) for post-print validation
 
 Related Project: Study [phone_stand.scad](../../assets/3dMake_Foundation/Lessons_3dMake_7/phone_stand.scad) for an advanced example combining multiple transforms and Minkowski operations in a real-world assembly.
 
 ## Understanding Parametric Transforms
 
-Transforms are the foundation of positioning objects in 3D space. Unlike drag-and-drop interfaces, OpenSCAD}} requires you}} to explicitly specify every position and rotation. This precision is what enables parametric}} design}}-once defined mathematically, a model can}} be infinitely reconfigured.
+Transforms are the foundation of positioning objects in 3D space. Unlike drag-and-drop interfaces, OpenSCAD requires you to explicitly specify every position and rotation. This precision is what enables parametric design-once defined mathematically, a model can be infinitely reconfigured.
 
 ### Core Transform Operations
 
@@ -32,7 +32,7 @@ Transforms are the foundation of positioning objects in 3D space. Unlike drag-an
 
 ### Translating Objects: Moving in 3D Space
 
-`translate([x, y, z])` moves an object in three-dimensional space. The key insight is that you}} specify the movement *before}}* creating or referencing the object:
+`translate([x, y, z])` moves an object in three-dimensional space. The key insight is that you specify the movement *before* creating or referencing the object:
 
 ```openscad
 // Move a cube 30 mm to the right
@@ -43,7 +43,7 @@ translate([0, 0, 10]) cube([20, 20, 20]);
 translate([30, 20, 0]) cube([20, 20, 20]);
 ```
 
-A critical concept: When you}} use `translate()`, OpenSCAD}} moves the *coordinate system*, not just the object. The object is then created in the new}} coordinate system. This means:
+A critical concept: When you use `translate()`, OpenSCAD moves the *coordinate system*, not just the object. The object is then created in the new coordinate system. This means:
 
 ```openscad
 // These are functionally equivalent:
@@ -52,7 +52,7 @@ cube([20, 20, 20]);
 translate([10, 0, 0]) cube([20, 20, 20]);  // Second cube shifted right
 ```
 
-For multi-part}} assemblies, you}} typically nest `translate()` calls within modules:
+For multi-part assemblies, you typically nest `translate()` calls within modules:
 
 ```openscad
 module phone_stand() {
@@ -80,7 +80,7 @@ rotate([0, 0, 45]) cube([10, 10, 10]);
 rotate([45, 30, 15]) cube([10, 10, 10]);
 ```
 
-Order matters: When you}} specify multiple rotations, they are applied in sequence (X, then Y, then Z). This can}} produce unexpected results:
+Order matters: When you specify multiple rotations, they are applied in sequence (X, then Y, then Z). This can produce unexpected results:
 
 ```openscad
 // These produce different final orientations:
@@ -90,7 +90,7 @@ rotate([90, 45, 0]) cube([10, 10, 10]);
 
 ### Combining Transforms: The Order of Operations
 
-You can}} nest transforms to build}} complex positions. Remember: OpenSCAD}} applies transforms from the inside out:
+You can nest transforms to build complex positions. Remember: OpenSCAD applies transforms from the inside out:
 
 ```openscad
 // Example: Position a cylinder so it sticks up from the back of a base
@@ -128,7 +128,7 @@ translate([100, 0, 0]) axes();  // Check alignment at offset
 
 ### Task 1: Build a Simple Phone Stand Base
 
-Create a parametric}} base plate that can}} be adjusted for different phone weights and sizes:
+Create a parametric base plate that can be adjusted for different phone weights and sizes:
 
 ```openscad
 // Phone Stand - Base Component
@@ -178,7 +178,7 @@ union() {
 
 ### Task 2: Test Parameter Variations
 
-Save your file}} and test}} each}} variant by modifying the parameters}} and running `3dm build`:
+Save your file and test each variant by modifying the parameters and running `3dm build`:
 
 ```bash
 # Build the base version
@@ -207,14 +207,14 @@ Document the impact:
 3dm orient src/main.scad
 ```
 
-This command}} analyzes your model and suggests:
-- Optimal rotation for minimal support}} material}}
-- Estimated support}} volume that will need to be removed
-- Print time}} savings from better orientation
+This command analyzes your model and suggests:
+- Optimal rotation for minimal support material
+- Estimated support volume that will need to be removed
+- Print time savings from better orientation
 
 ### Task 4: Generate Variants for Different Devices
 
-Modify your main.scad to create}} three configurations (tablet, phone, document holder):
+Modify your main.scad to create three configurations (tablet, phone, document holder):
 
 ```openscad
 // At the bottom of main.scad, uncomment one configuration:
@@ -231,15 +231,15 @@ angle = 40;
 
 ### Task 5: Validate and Document
 
-After printing}} (or slicing), record:
+After printing (or slicing), record:
 - Actual dimensions (measure with calipers)
 - Angle accuracy (verify tilt angle with protractor or phone measurement app)
 - Friction resistance (does phone stay in place?)
-- Print quality}} (note any support}} marks, layer}} quality}})
+- Print quality (note any support marks, layer quality)
 
 ## Advanced: Adding Snap-Fit Connectors
 
-To join the base and back without fasteners, you}} can}} add interlocking features:
+To join the base and back without fasteners, you can add interlocking features:
 
 ```openscad
 // Optional: Add snap-fit connectors
@@ -261,13 +261,13 @@ module back_tab() {
 
 ## Checkpoint
 
-- After task 1, you}} have a working 3-part}} stand (base, back, lip)
-- After task 2, you}}'ve tested at least 2 parameter}} variations
-- After task 4, you}} have 3 different configurations ready to print}}
+- After task 1, you have a working 3-part stand (base, back, lip)
+- After task 2, you've tested at least 2 parameter variations
+- After task 4, you have 3 different configurations ready to print
 
-## Mathematical Functions for Advanced Parametric Design}}
+## Mathematical Functions for Advanced Parametric Design
 
-Beyond translate}} and rotate, OpenSCAD}} includes mathematical functions for calculating positions, angles, and dimensions. These enable designs that respond dynamically to parameters}}.
+Beyond translate and rotate, OpenSCAD includes mathematical functions for calculating positions, angles, and dimensions. These enable designs that respond dynamically to parameters.
 
 ### Trigonometric Functions: sin(), cos(), atan2()
 
@@ -330,7 +330,7 @@ simple_gear(30, 12, 5);  // 30mm radius, 12 teeth, 5mm deep
 
 ### Rounding Functions: round(), floor(), ceil()
 
-Control precision and create}} integer-based parametric}} designs:
+Control precision and create integer-based parametric designs:
 
 ```openscad
 // round(): Nearest integer
@@ -445,7 +445,7 @@ module fixture_on_surface(surface_direction, offset_distance) {
 fixture_on_surface([1, 0, 0], 20);
 ```
 
-### Practical Application: Parametric Spiral Design}}
+### Practical Application: Parametric Spiral Design
 
 Here's a complete example combining multiple math functions:
 
@@ -473,32 +473,32 @@ spiral_generator(30, 50, 3);  // 30mm radius, 50mm tall, 3 complete revolutions
 ## Quiz - Lesson 3dMake.7 (10 questions)
 
 1. What does the `rotate()` function do, and how does it differ from physical rotation[^1]?
-2. Why is parametric}} positioning important for design}} iteration[^1]?
+2. Why is parametric positioning important for design iteration[^1]?
 3. Explain the Minkowski sum operation and why it's useful for filleting[^2].
-4. How would you}} position a second component relative to the first}} using}} `translate()` [^1]?
-5. What parameter}} would you}} change to make a phone stand suitable for tablets[^3]?
-6. True or False: You can}} rotate an object around multiple axes in a single `rotate()` call.
+4. How would you position a second component relative to the first using `translate()` [^1]?
+5. What parameter would you change to make a phone stand suitable for tablets[^3]?
+6. True or False: You can rotate an object around multiple axes in a single `rotate()` call.
 7. Describe how `$fn` affects the appearance of rounded edges created by Minkowski[^2].
-8. What advantage does parametric}} design}} have over manually modeling each}} variant[^1]?
-9. How would you}} verify that your stand's angle matches your design}} intent after printing}}[^3]?
-10. What design}} considerations should you}} account for when adding a lip to prevent phone slippage[^3]?
+8. What advantage does parametric design have over manually modeling each variant[^1]?
+9. How would you verify that your stand's angle matches your design intent after printing[^3]?
+10. What design considerations should you account for when adding a lip to prevent phone slippage[^3]?
 
 ## Extension Problems (10)
 
-1. Create five stand variants (for phones, tablets, documents, laptops, and books) by parameterizing width, angle, and lip height}}[^3].
-2. Add parametric}} feet (small cylinders) to the base to improve stability; test}} with and without feet[^1].
-3. Use `3dm describe` to document each}} variant's key geometric properties[^1].
-4. Design}} and test}} a snap-fit connector system that joins the base and back without fasteners[^3].
-5. Create a comparison table showing print}} time}}, material}} weight, and assembly complexity for each}} variant[^3].
-6. Build a complete phone stand product family: define naming convention, parameter}} ranges, and assembly instructions.
+1. Create five stand variants (for phones, tablets, documents, laptops, and books) by parameterizing width, angle, and lip height[^3].
+2. Add parametric feet (small cylinders) to the base to improve stability; test with and without feet[^1].
+3. Use `3dm describe` to document each variant's key geometric properties[^1].
+4. Design and test a snap-fit connector system that joins the base and back without fasteners[^3].
+5. Create a comparison table showing print time, material weight, and assembly complexity for each variant[^3].
+6. Build a complete phone stand product family: define naming convention, parameter ranges, and assembly instructions.
 7. Develop a stress analysis guide: identify high-stress areas in your stand and propose reinforcement strategies.
-8. Create a customization guide for end users: how to modify angle, width, and lip height}} for different devices.
-9. Design}} an accessibility}}-focused stand: include tactile angle markers and clear, non-visual assembly instructions.
-10. Write a comprehensive stand design}} documentation: CAD parameters}}, material}} recommendations, print}} settings, assembly, troubleshooting, and accessible design}} notes.
+8. Create a customization guide for end users: how to modify angle, width, and lip height for different devices.
+9. Design an accessibility-focused stand: include tactile angle markers and clear, non-visual assembly instructions.
+10. Write a comprehensive stand design documentation: CAD parameters, material recommendations, print settings, assembly, troubleshooting, and accessible design notes.
 
 ## Starter Code
 
-Use this parametric}} phone stand as your starting point:
+Use this parametric phone stand as your starting point:
 
 ```openscad
 // Parametric Phone Stand - Intermediate Example
@@ -542,6 +542,6 @@ union(){
 
 References
 
-[^1]: OpenSCAD}} Manual - Transformations - [https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations)
-[^2]: OpenSCAD}} Manual - Minkowski - [https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#minkowski](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#minkowski)
-[^3]: 3DMake}} GitHub}} - Phone Stand Example - [https://github.com/tdeck/3dmake/blob/main/docs/examples.md](https://github.com/tdeck/3dmake/blob/main/docs/examples.md)
+[^1]: OpenSCAD Manual - Transformations - [https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations)
+[^2]: OpenSCAD Manual - Minkowski - [https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#minkowski](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#minkowski)
+[^3]: 3DMake GitHub - Phone Stand Example - [https://github.com/tdeck/3dmake/blob/main/docs/examples.md](https://github.com/tdeck/3dmake/blob/main/docs/examples.md)

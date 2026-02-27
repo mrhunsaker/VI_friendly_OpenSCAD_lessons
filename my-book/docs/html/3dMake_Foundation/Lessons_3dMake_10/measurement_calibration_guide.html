@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-d0af5d9e.js";
+            window.path_to_searchindex_js = "../../searchindex-7e85ce75.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-5b0c6224.js"></script>
+        <script src="../../toc-0b2574ce.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -225,37 +225,37 @@
 <h2 id="why-calibration-matters"><a class="header" href="#why-calibration-matters">Why Calibration Matters</a></h2>
 <p>Printed dimensions often deviate from designed dimensions due to:</p>
 <ul>
-<li>Nozzle}} width variations</li>
+<li>Nozzle width variations</li>
 <li>Extrusion flow rate inconsistencies</li>
 <li>Plastic shrinkage during cooling</li>
-<li>Slicer}} interpretation differences</li>
-<li>Material-specific}} shrinkage (ABS can}} shrink 0.3-1%)</li>
+<li>Slicer interpretation differences</li>
+<li>Material-specific shrinkage (ABS can shrink 0.3-1%)</li>
 </ul>
 <p>Typical tolerances without calibration: +/-0.3-0.5mm
 Typical tolerances with calibration: +/-0.1-0.2mm</p>
 <h2 id="pre-print-calibration"><a class="header" href="#pre-print-calibration">Pre-Print Calibration</a></h2>
-<h3 id="1-nozzle-diameter-verification"><a class="header" href="#1-nozzle-diameter-verification">1. Nozzle}} Diameter Verification</a></h3>
+<h3 id="1-nozzle-diameter-verification"><a class="header" href="#1-nozzle-diameter-verification">1. Nozzle Diameter Verification</a></h3>
 <p>What to verify: Is your nozzle actually 0.4mm?</p>
 <p>Test:</p>
 <ol>
-<li>Create a simple box in OpenSCAD}}: 10mm x 10mm x 5mm, solid</li>
+<li>Create a simple box in OpenSCAD: 10mm x 10mm x 5mm, solid</li>
 <li>Slice with default 0.4mm line width</li>
-<li>Print using}} 100% flow rate</li>
+<li>Print using 100% flow rate</li>
 <li>Measure printed box</li>
 </ol>
 <p>Adjustment:</p>
 <ul>
-<li>If too small: Nozzle}} might be partially clogged (clean)</li>
+<li>If too small: Nozzle might be partially clogged (clean)</li>
 <li>If significantly different from 0.4mm: Replace nozzle</li>
 </ul>
 <h3 id="2-e-steps-calibration-extrusion-rate"><a class="header" href="#2-e-steps-calibration-extrusion-rate">2. E-Steps Calibration (Extrusion Rate)</a></h3>
-<p>What to verify: Does the extruder push the correct amount of filament}}?</p>
+<p>What to verify: Does the extruder push the correct amount of filament?</p>
 <p>Method:</p>
 <ol>
-<li>Heat extruder to printing}} temperature</li>
-<li>Mark filament}} 100mm from extruder entrance with marker</li>
-<li>Command extrusion of 100mm in firmware (G-code}}: <code>G1 E100 F100</code>)</li>
-<li>Measure actual distance filament}} moved</li>
+<li>Heat extruder to printing temperature</li>
+<li>Mark filament 100mm from extruder entrance with marker</li>
+<li>Command extrusion of 100mm in firmware (G-code: <code>G1 E100 F100</code>)</li>
+<li>Measure actual distance filament moved</li>
 </ol>
 <p>Formula:</p>
 <pre><code>New E-steps = Current E-steps x (100mm / Actual distance moved)
@@ -267,30 +267,30 @@ Typical tolerances with calibration: +/-0.1-0.2mm</p>
 <li>Actual: 92mm moved</li>
 <li>New: 93 x (100/92) = 101 steps/mm</li>
 </ul>
-<p>How to apply (varies by printer}}):</p>
+<p>How to apply (varies by printer):</p>
 <ul>
 <li>Marlin: <code>M92 E101</code> then <code>M500</code> to save</li>
 <li>Klipper: Update configuration and restart</li>
 </ul>
 <h3 id="3-first-layer-height-verification"><a class="header" href="#3-first-layer-height-verification">3. First Layer Height Verification</a></h3>
-<p>What to verify: Is first}} layer}} height}} optimal?</p>
-<p>Test: Print a simple single-layer}} square (just base layer}})</p>
+<p>What to verify: Is first layer height optimal?</p>
+<p>Test: Print a simple single-layer square (just base layer)</p>
 <p>Measurements:</p>
 <ul>
-<li>Too high (&gt;0.3mm): Poor layer}} adhesion</li>
-<li>Too low (&lt;0.1mm): Nozzle}} scratches bed}}, plastic squeezed</li>
+<li>Too high (&gt;0.3mm): Poor layer adhesion</li>
+<li>Too low (&lt;0.1mm): Nozzle scratches bed, plastic squeezed</li>
 <li>Optimal: 0.2-0.25mm (roughly paper thickness)</li>
 </ul>
-<p>Adjustment: Use bed}} leveling or Z-offset:</p>
+<p>Adjustment: Use bed leveling or Z-offset:</p>
 <ul>
 <li>If too high: Reduce Z-offset by 0.05mm</li>
 <li>If too low: Increase Z-offset by 0.05mm</li>
-<li>Test between}} adjustments</li>
+<li>Test between adjustments</li>
 </ul>
 <h2 id="dimension-calibration-process"><a class="header" href="#dimension-calibration-process">Dimension Calibration Process</a></h2>
 <h3 id="standard-xy-calibration-test"><a class="header" href="#standard-xy-calibration-test">Standard XY Calibration Test</a></h3>
 <p>Goal: Create parts with precisely measured dimensions</p>
-<p>Test File (OpenSCAD}}):</p>
+<p>Test File (OpenSCAD):</p>
 <pre><code>// Create calibration cube
 cube_size = 20;  // 20mm cube
 wall_thickness = 2;
@@ -304,13 +304,13 @@ difference() {
 </code></pre>
 <p>Print Instructions:</p>
 <ul>
-<li>Use standard settings (your normal layer}} height}}, speed, temp)</li>
+<li>Use standard settings (your normal layer height, speed, temp)</li>
 <li>Print with 100% flow rate</li>
 <li>Allow complete cooling (2+ hours)</li>
 </ul>
 <p>Measurement Procedure:</p>
 <ol>
-<li>Measure internal dimensions (hollow part}}) in 3 locations each}} axis</li>
+<li>Measure internal dimensions (hollow part) in 3 locations each axis</li>
 <li>Calculate average internal width: <code>avg_internal</code></li>
 <li>Expected internal: <code>20 - 2xwall_thickness = 16mm</code></li>
 </ol>
@@ -324,8 +324,8 @@ Example:
 - Set flow to: 101.6% in slicer
 </code></pre>
 <h3 id="z-height-calibration"><a class="header" href="#z-height-calibration">Z-Height Calibration</a></h3>
-<p>Goal: Verify layer}} heights are accurate</p>
-<p>Test: Print calibration tower with varying layer}} heights</p>
+<p>Goal: Verify layer heights are accurate</p>
+<p>Test: Print calibration tower with varying layer heights</p>
 <p>Tower Specifications:</p>
 <ul>
 <li>20mm x 20mm square base</li>
@@ -334,12 +334,12 @@ Example:
 </ul>
 <p>Measurements:</p>
 <ul>
-<li>Stack digital calipers on layers and measure height}}</li>
-<li>Calculate average layer}} thickness</li>
+<li>Stack digital calipers on layers and measure height</li>
+<li>Calculate average layer thickness</li>
 <li>Compare with intended 0.2mm</li>
 </ul>
 <p>Adjustment:
-If actual layer}} height}} differs:</p>
+If actual layer height differs:</p>
 <pre><code>New Z-scale = Intended height / Actual height
 
 Example:
@@ -355,11 +355,11 @@ Example:
 <tr><th>Measurement</th><th>Method</th><th>Tolerance</th><th>Frequency</th></tr>
 </thead>
 <tbody>
-<tr><td>Wall thickness</td><td>Calipers (multiple spots)</td><td>+/-0.1mm</td><td>Every print}}</td></tr>
-<tr><td>Hole diameter</td><td>Calipers or gauge</td><td>+/-0.1-0.2mm</td><td>Every print}}</td></tr>
+<tr><td>Wall thickness</td><td>Calipers (multiple spots)</td><td>+/-0.1mm</td><td>Every print</td></tr>
+<tr><td>Hole diameter</td><td>Calipers or gauge</td><td>+/-0.1-0.2mm</td><td>Every print</td></tr>
 <tr><td>Overall dimensions</td><td>Ruler/calipers</td><td>+/-0.2mm</td><td>Monthly</td></tr>
-<tr><td>Layer height}}</td><td>Stack on calipers</td><td>+/-0.02mm</td><td>Monthly</td></tr>
-<tr><td>Vertical dimensions</td><td>Measure sides</td><td>+/-0.1mm</td><td>Every print}}</td></tr>
+<tr><td>Layer height</td><td>Stack on calipers</td><td>+/-0.02mm</td><td>Monthly</td></tr>
+<tr><td>Vertical dimensions</td><td>Measure sides</td><td>+/-0.1mm</td><td>Every print</td></tr>
 </tbody>
 </table>
 </div>
@@ -373,27 +373,27 @@ Example:
 </thead>
 <tbody>
 <tr><td>PLA</td><td>0.3-0.5%</td><td>Usually acceptable, no action</td></tr>
-<tr><td>PETG</td><td>0.5-1%</td><td>Scale design}} up by 0.5-1% if critical</td></tr>
-<tr><td>ABS</td><td>0.8-1.5%</td><td>Scale design}} up by 1% minimum</td></tr>
+<tr><td>PETG</td><td>0.5-1%</td><td>Scale design up by 0.5-1% if critical</td></tr>
+<tr><td>ABS</td><td>0.8-1.5%</td><td>Scale design up by 1% minimum</td></tr>
 <tr><td>TPU</td><td>1-2%</td><td>Significant - scale up 1-2% for critical dimensions</td></tr>
 </tbody>
 </table>
 </div>
-<p>How to apply in design}}:</p>
+<p>How to apply in design:</p>
 <pre><code>// In OpenSCAD, scale critical dimensions
 final_size = 20;
 material_shrinkage = 1.01;  // 1% shrinkage
 designed_size = final_size * material_shrinkage;
 </code></pre>
-<h3 id="bed-temperature-compensation"><a class="header" href="#bed-temperature-compensation">Bed}} Temperature Compensation</a></h3>
-<p>Different bed}} temperatures affect final dimensions:</p>
-<p>ABS on cold bed}} (50C) vs warm bed}} (100C):</p>
+<h3 id="bed-temperature-compensation"><a class="header" href="#bed-temperature-compensation">Bed Temperature Compensation</a></h3>
+<p>Different bed temperatures affect final dimensions:</p>
+<p>ABS on cold bed (50C) vs warm bed (100C):</p>
 <ul>
-<li>Cold bed}}: Faster cooling, less shrinkage (but poor adhesion)</li>
-<li>Warm bed}}: Slower cooling, more shrinkage (better adhesion)</li>
+<li>Cold bed: Faster cooling, less shrinkage (but poor adhesion)</li>
+<li>Warm bed: Slower cooling, more shrinkage (better adhesion)</li>
 <li>Difference: Can be 0.2-0.3% in dimensions</li>
 </ul>
-<p>Solution: Standardize bed}} temperature for repeatable results</p>
+<p>Solution: Standardize bed temperature for repeatable results</p>
 <h3 id="environmental-factors"><a class="header" href="#environmental-factors">Environmental Factors</a></h3>
 <div class="table-wrapper">
 <table>
@@ -402,8 +402,8 @@ designed_size = final_size * material_shrinkage;
 </thead>
 <tbody>
 <tr><td>Room temperature</td><td>Affects cooling rate</td><td>Maintain 20-22C</td></tr>
-<tr><td>Humidity</td><td>Affects material}} properties</td><td>Keep 40-60% RH</td></tr>
-<tr><td>Air flow</td><td>Inconsistent cooling</td><td>Avoid drafts near printer}}</td></tr>
+<tr><td>Humidity</td><td>Affects material properties</td><td>Keep 40-60% RH</td></tr>
+<tr><td>Air flow</td><td>Inconsistent cooling</td><td>Avoid drafts near printer</td></tr>
 <tr><td>Time of day</td><td>Material temperature varies</td><td>Print at consistent times</td></tr>
 </tbody>
 </table>
@@ -412,30 +412,30 @@ designed_size = final_size * material_shrinkage;
 <h3 id="before-first-print-with-new-settings"><a class="header" href="#before-first-print-with-new-settings">Before First Print with New Settings</a></h3>
 <ul>
 <li><input disabled="" type="checkbox"> E-steps calibration complete</li>
-<li><input disabled="" type="checkbox"> First layer}} height}} verified</li>
-<li><input disabled="" type="checkbox"> Nozzle}} diameter confirmed</li>
-<li><input disabled="" type="checkbox"> Test print}} completed and measured</li>
+<li><input disabled="" type="checkbox"> First layer height verified</li>
+<li><input disabled="" type="checkbox"> Nozzle diameter confirmed</li>
+<li><input disabled="" type="checkbox"> Test print completed and measured</li>
 </ul>
 <h3 id="monthly-maintenance"><a class="header" href="#monthly-maintenance">Monthly Maintenance</a></h3>
 <ul>
-<li><input disabled="" type="checkbox"> Calibration cube}} printed and measured</li>
+<li><input disabled="" type="checkbox"> Calibration cube printed and measured</li>
 <li><input disabled="" type="checkbox"> Flow rate adjusted if needed</li>
-<li><input disabled="" type="checkbox"> Layer height}} verified</li>
+<li><input disabled="" type="checkbox"> Layer height verified</li>
 <li><input disabled="" type="checkbox"> Temperature consistency checked</li>
 </ul>
 <h3 id="when-dimensions-are-critical"><a class="header" href="#when-dimensions-are-critical">When Dimensions Are Critical</a></h3>
 <ul>
-<li><input disabled="" type="checkbox"> Printed test}} part}}, let cool 24+ hours</li>
+<li><input disabled="" type="checkbox"> Printed test part, let cool 24+ hours</li>
 <li><input disabled="" type="checkbox"> Measured in multiple locations</li>
 <li><input disabled="" type="checkbox"> Calculated average deviation</li>
 <li><input disabled="" type="checkbox"> Flow rate adjusted accordingly</li>
 <li><input disabled="" type="checkbox"> Re-printed and verified</li>
 </ul>
-<h3 id="after-any-changes"><a class="header" href="#after-any-changes">After Any}} Changes</a></h3>
+<h3 id="after-any-changes"><a class="header" href="#after-any-changes">After Any Changes</a></h3>
 <ul>
-<li><input disabled="" type="checkbox"> Nozzle}} replacement -&gt; Re-verify nozzle diameter</li>
-<li><input disabled="" type="checkbox"> Bed}} leveling -&gt; Re-verify first}} layer}}</li>
-<li><input disabled="" type="checkbox"> Temperature changes -&gt; Test print}} required</li>
+<li><input disabled="" type="checkbox"> Nozzle replacement -&gt; Re-verify nozzle diameter</li>
+<li><input disabled="" type="checkbox"> Bed leveling -&gt; Re-verify first layer</li>
+<li><input disabled="" type="checkbox"> Temperature changes -&gt; Test print required</li>
 <li><input disabled="" type="checkbox"> Material change -&gt; Full calibration recommended</li>
 </ul>
 <h2 id="measurement-tools-needed"><a class="header" href="#measurement-tools-needed">Measurement Tools Needed</a></h2>
@@ -447,7 +447,7 @@ designed_size = final_size * material_shrinkage;
 <tbody>
 <tr><td>Digital Calipers</td><td>$5-15</td><td>+/-0.05mm</td><td>Primary measurements</td></tr>
 <tr><td>Steel Ruler</td><td>$3-10</td><td>+/-1mm</td><td>Quick rough checks</td></tr>
-<tr><td>Vernier Calipers</td><td>$10-30</td><td>+/-0.05mm</td><td>Precision work}}</td></tr>
+<tr><td>Vernier Calipers</td><td>$10-30</td><td>+/-0.05mm</td><td>Precision work</td></tr>
 <tr><td>Micrometer</td><td>$20-50</td><td>+/-0.01mm</td><td>Critical tolerances</td></tr>
 <tr><td>Layer Height Gauge</td><td>DIY or $5-10</td><td>+/-0.05mm</td><td>Layer verification</td></tr>
 </tbody>
@@ -457,23 +457,23 @@ designed_size = final_size * material_shrinkage;
 <h2 id="troubleshooting-calibration-issues"><a class="header" href="#troubleshooting-calibration-issues">Troubleshooting Calibration Issues</a></h2>
 <p>Problem: Measurements still inconsistent after calibration</p>
 <ul>
-<li>Check if bed}} is level (temperature affects levelness)</li>
-<li>Verify material}} is dry (moisture affects dimensions)</li>
+<li>Check if bed is level (temperature affects levelness)</li>
+<li>Verify material is dry (moisture affects dimensions)</li>
 <li>Ensure ambient temperature is stable</li>
-<li>Try printing}} on different bed}} locations</li>
+<li>Try printing on different bed locations</li>
 </ul>
 <p>Problem: Can’t achieve target dimensions</p>
 <ul>
-<li>Nozzle}} may be damaged/worn (try replacement)</li>
+<li>Nozzle may be damaged/worn (try replacement)</li>
 <li>Printer may have fundamental hardware issues</li>
 <li>Review mechanical components (belts, screws)</li>
-<li>Consider printer}} calibration limits</li>
+<li>Consider printer calibration limits</li>
 </ul>
-<p>Problem: Dimensions drift over time}}</p>
+<p>Problem: Dimensions drift over time</p>
 <ul>
 <li>Printer thermal properties changing</li>
-<li>Nozzle}} wearing out (gradually gets smaller)</li>
-<li>Bed}} surface degrading</li>
+<li>Nozzle wearing out (gradually gets smaller)</li>
+<li>Bed surface degrading</li>
 <li>Normal wear - recalibrate quarterly</li>
 </ul>
 <h2 id="reference-standard-test-models"><a class="header" href="#reference-standard-test-models">Reference: Standard Test Models</a></h2>
@@ -484,7 +484,7 @@ designed_size = final_size * material_shrinkage;
 <li>Layer Tower (graduated heights) - Layer consistency</li>
 <li>Thin Wall Test (walls 1-5mm) - Wall thickness accuracy</li>
 </ol>
-<p>Last Calibration Date: _<br>Printer Model}}: _<br>Current E-Steps: _<br>Current Flow Rate: _<br>Materials Calibrated For: _</p>
+<p>Last Calibration Date: _<br>Printer Model: _<br>Current E-Steps: _<br>Current Flow Rate: _<br>Materials Calibrated For: _</p>
 
                     </main>
 

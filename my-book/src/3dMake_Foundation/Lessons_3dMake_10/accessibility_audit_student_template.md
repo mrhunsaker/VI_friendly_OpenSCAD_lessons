@@ -2,7 +2,7 @@
 
 - Author:
 - Date:
-- Description: Audit 3D printing}} tools and workflows for accessibility}} barriers and recommend improvements.
+- Description: Audit 3D printing tools and workflows for accessibility barriers and recommend improvements.
 
 ## Audit Scope
 
@@ -11,7 +11,7 @@ Tools/workflows to audit:
 2. _
 3. _
 
-Testing methodology (screen reader}}, keyboard-only, other):
+Testing methodology (screen reader, keyboard-only, other):
 
 ## Detailed Findings
 
@@ -20,7 +20,7 @@ Testing methodology (screen reader}}, keyboard-only, other):
 #### Automated Accessibility Checks
 - (Screenshots/results of testing)
 
-#### Screen}} Reader Testing
+#### Screen Reader Testing
 - Navigation: (clear/unclear/broken)
 - Output readability: (readable/partially readable/unreadable)
 - Error messages: (helpful/unclear/missing)
@@ -60,34 +60,34 @@ Testing methodology (screen reader}}, keyboard-only, other):
 
 ## Reflections
 
-- What surprised you}} about accessibility}} barriers in these tools?
-- How would you}} prioritize improvements if you}} had limited resources?
-- What role should users with disabilities play in accessibility}} testing?
-- How can}} accessibility}} become part}} of the design}} culture?
+- What surprised you about accessibility barriers in these tools?
+- How would you prioritize improvements if you had limited resources?
+- What role should users with disabilities play in accessibility testing?
+- How can accessibility become part of the design culture?
 
 ## Action Plan
 
 If implementing improvements, describe your plan:
-- Which improvements will you}} tackle first}}?
-- How will you}} measure success?
+- Which improvements will you tackle first?
+- How will you measure success?
 - Timeline for implementation:
 
 ## Attachments
 
-- [ ] Screenshots of accessibility}} tests
-- [ ] Screen}} reader}}}} testing notes (with timestamps)
-- [ ] Keyboard navigation}} checklist
+- [ ] Screenshots of accessibility tests
+- [ ] Screen reader testing notes (with timestamps)
+- [ ] Keyboard navigation checklist
 - [ ] Detailed findings document
 - [ ] Recommendations matrix
 - [ ] Action plan (if implementing)
 
 ## Teacher Feedback
 
-| Category                      | Score | Notes |
-|-------------------------------|-------|-------|
-| Problem & Solution (0-3)      |       |       |
-| Design}} & Code Quality (0-3) |       |       |
-| Documentation (0-3)           |       |       |
-| Total (0-9)                   |       |       |
+| Category                    | Score | Notes |
+|-----------------------------|-------|-------|
+| Problem & Solution (0-3)    |       |       |
+| Design & Code Quality (0-3) |       |       |
+| Documentation (0-3)         |       |       |
+| Total (0-9)                 |       |       |
 
 Feedback:

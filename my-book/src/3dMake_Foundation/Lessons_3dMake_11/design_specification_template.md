@@ -1,16 +1,16 @@
-# Design}} Specification Template {#3dmake_foundation_lessons_3dmake_11-design_specification_template}
+# Design Specification Template {#3dmake_foundation_lessons_3dmake_11-design_specification_template}
 
-Technical design}} document specifying how requirements will be implemented.
+Technical design document specifying how requirements will be implemented.
 
-## Design}} Document Information
+## Design Document Information
 
 - Project: _
-- Design}} Version: _
+- Design Version: _
 - Date: _
 - Designed By: _
 - Reviewed By: _
 
-## Design}} Overview
+## Design Overview
 
 Problem Statement:
 (What are we solving?)
@@ -20,7 +20,7 @@ Solution Approach:
 (High-level how we'll solve it)
 _
 
-Key Design}} Decisions:
+Key Design Decisions:
 1. 
 2. 
 3. 
@@ -37,7 +37,7 @@ Specifications:
 - Material: 
 - Quantity: 
 
-Design}} Rationale:
+Design Rationale:
 (Why this approach?)
 _
 
@@ -47,13 +47,13 @@ Related Components:
 
 Manufacturing Considerations:
 - Support structures needed: _
-- Orientation for print}}: _
-- Estimated print}} time}}: _
+- Orientation for print: _
+- Estimated print time: _
 
 ### Component 2: [Component Name]
-(Repeat structure for each}} component)
+(Repeat structure for each component)
 
-## Assembly Design}}
+## Assembly Design
 
 Overall Assembly Structure:
 (How components fit together)
@@ -78,7 +78,7 @@ Assembly Challenges & Solutions:
 
 Primary Material: 
 
-Why this material}}?
+Why this material?
 | Property     | Requirement | Selected Material | Alternative |
 |--------------|-------------|-------------------|-------------|
 | Strength     |             |                   |             |
@@ -88,8 +88,8 @@ Why this material}}?
 | Availability |             |                   |             |
 
 Material Properties:
-- Nozzle}} temperature: 
-- Bed}} temperature: 
+- Nozzle temperature: 
+- Bed temperature: 
 - Print speed: _
 - Support required: 
 - Post-processing: 
@@ -99,14 +99,14 @@ Material Alternatives & Trade-offs:
 - Option 2: _
 - Selected option rationale: _
 
-## Design}} Features
+## Design Features
 
 ### Feature 1: [Feature Name]
 
 Purpose:
 _
 
-Design}} Details:
+Design Details:
 - Dimensions: 
 - Placement: _
 - Tolerances: 
@@ -120,7 +120,7 @@ Related Requirement:
 _
 
 ### Feature 2: [Feature Name]
-(Repeat for each}} significant feature)
+(Repeat for each significant feature)
 
 ## Tolerance & Fit Analysis
 
@@ -136,28 +136,28 @@ Fit Relationships:
 - Part B to Part C: _
 
 Validation Plan:
-- [ ] Print test}} version before}} production
+- [ ] Print test version before production
 - [ ] Measure critical dimensions
 - [ ] Test assembly fit
-- [ ] Perform functional test}}
+- [ ] Perform functional test
 
 ## Manufacturing Planning
 
 ### Print Parameters
 
-Slicer}} Settings:
-- Layer height}}: 
+Slicer Settings:
+- Layer height: 
 - Infill: 
-- Support material}}: 
+- Support material: 
 - Raft/brim: _
 
 Print Time & Material:
-- Estimated time}}: 
+- Estimated time: 
 - Material weight: _
 - Cost estimate: _
 
 Orientation Strategy:
-(How will this be oriented during printing}}?)
+(How will this be oriented during printing?)
 - Rationale: _
 - Risks: _
 - Mitigation: 
@@ -173,7 +173,7 @@ Cleanup:
 Finishing:
 - [ ] Paint/coat (type: )
 - [ ] Treat for durability: 
-- [ ] Inspect quality}}: 
+- [ ] Inspect quality: 
 
 Assembly Work:
 - [ ] Insert threaded nuts/inserts
@@ -192,16 +192,16 @@ Functionality Tests:
 |      |        |               |        |
 
 Durability Tests:
-- Stress test}}: _
+- Stress test: _
 - Environmental exposure: 
-- Lifecycle test}}: _
+- Lifecycle test: _
 
 Tolerance Verification:
 - Measure key dimensions
 - Compare to specification
 - Document variance
 
-## Design}} Risks & Mitigation
+## Design Risks & Mitigation
 
 Risk 1:
 - Description: _
@@ -213,7 +213,7 @@ Risk 1:
 Risk 2:
 (Continue for identified risks)
 
-## Design}} Alternatives Considered
+## Design Alternatives Considered
 
 Alternative 1:
 - Approach: _
@@ -222,13 +222,13 @@ Alternative 1:
 - Why not selected: 
 
 Alternative 2:
-(Continue for each}} alternative considered)
+(Continue for each alternative considered)
 
 ## Technical Specifications
 
 ### Dimensional Drawing Reference
 (Attach or describe detailed drawings/models)
-- CAD file}}: 
+- CAD file: 
 - Drawing revision: 
 
 ### Performance Specifications
@@ -247,7 +247,7 @@ Alternative 2:
 
 Total Material Cost: $
 
-## Design}} Verification Checklist
+## Design Verification Checklist
 
 Before manufacturing:
 - [ ] All components specified
@@ -259,9 +259,9 @@ Before manufacturing:
 - [ ] Risks documented
 - [ ] Cost estimates calculated
 - [ ] Timeline realistic
-- [ ] Design}} approved by stakeholders
+- [ ] Design approved by stakeholders
 
-## Design}} Change Log
+## Design Change Log
 
 | Change # | Date | Description | Reason | Impact |
 |----------|------|-------------|--------|--------|
@@ -269,7 +269,7 @@ Before manufacturing:
 
 ## Sign-Off
 
-Design}} Approval:
+Design Approval:
 
 | Role        | Name | Signature | Date |
 |-------------|------|-----------|------|

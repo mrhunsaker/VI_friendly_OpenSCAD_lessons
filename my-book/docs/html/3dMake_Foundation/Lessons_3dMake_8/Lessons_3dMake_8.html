@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-d0af5d9e.js";
+            window.path_to_searchindex_js = "../../searchindex-7e85ce75.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-5b0c6224.js"></script>
+        <script src="../../toc-0b2574ce.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -220,24 +220,24 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="3dmake_foundation_lessons_3dmake_8-lessons_3dmake_8"><a class="header" href="#3dmake_foundation_lessons_3dmake_8-lessons_3dmake_8">Lesson 8: Advanced Parametric Design}} and Interlocking Features</a></h1>
-<p>Estimated time}}: 120-150 minutes</p>
+                        <h1 id="3dmake_foundation_lessons_3dmake_8-lessons_3dmake_8"><a class="header" href="#3dmake_foundation_lessons_3dmake_8-lessons_3dmake_8">Lesson 8: Advanced Parametric Design and Interlocking Features</a></h1>
+<p>Estimated time: 120-150 minutes</p>
 <p>Learning Objectives</p>
 <ul>
-<li>Design}} parametric}} walls with precise clearances for stackable assemblies<sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">1</a></sup></li>
+<li>Design parametric walls with precise clearances for stackable assemblies<sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">1</a></sup></li>
 <li>Create interlocking features (rims, tabs, snap-fits) for assembly without fasteners<sup class="footnote-reference" id="fr-2-1"><a href="#footnote-2">2</a></sup></li>
-<li>Apply chamfers for edge finishing and print}} quality}}<sup class="footnote-reference" id="fr-3-1"><a href="#footnote-3">3</a></sup></li>
-<li>Manage tolerance stack-up in complex parametric}} designs<sup class="footnote-reference" id="fr-1-2"><a href="#footnote-1">1</a></sup></li>
+<li>Apply chamfers for edge finishing and print quality<sup class="footnote-reference" id="fr-3-1"><a href="#footnote-3">3</a></sup></li>
+<li>Manage tolerance stack-up in complex parametric designs<sup class="footnote-reference" id="fr-1-2"><a href="#footnote-1">1</a></sup></li>
 </ul>
 <p>Materials</p>
 <ul>
 <li>3dMake project scaffold with <code>src/main.scad</code></li>
 <li>Calipers for measuring clearances and wall thickness</li>
-<li>Printer for test}} prints (recommended for validation)</li>
+<li>Printer for test prints (recommended for validation)</li>
 </ul>
-<p>Related Project: Work through <a href="../../assets/3dMake_Foundation/Lessons_3dMake_8/stackable_bins.scad">stackable_bins.scad</a> to apply tolerance design}} in a multi-part}} assembly with interlocking features.</p>
+<p>Related Project: Work through <a href="../../assets/3dMake_Foundation/Lessons_3dMake_8/stackable_bins.scad">stackable_bins.scad</a> to apply tolerance design in a multi-part assembly with interlocking features.</p>
 <h2 id="understanding-tolerance-and-clearance"><a class="header" href="#understanding-tolerance-and-clearance">Understanding Tolerance and Clearance</a></h2>
-<p>In 3D printing}}, tolerance refers to the acceptable variation in printed dimensions. When designing parts that must fit together, you}} must account for:</p>
+<p>In 3D printing, tolerance refers to the acceptable variation in printed dimensions. When designing parts that must fit together, you must account for:</p>
 <ul>
 <li>Printer accuracy (~0.1-0.3 mm typical)</li>
 <li>Material shrinkage (PLA: ~0.3-0.5%)</li>
@@ -249,7 +249,7 @@ rim_clearance = 0.6 mm  (small space between stack and rim below)
 rim_inner = bin_outer - 2*wall - 2*rim_clearance
 </code></pre>
 <h2 id="step-by-step-tasks"><a class="header" href="#step-by-step-tasks">Step-by-step Tasks</a></h2>
-<h3 id="task-1-design-a-parametric-stackable-bin"><a class="header" href="#task-1-design-a-parametric-stackable-bin">Task 1: Design}} a Parametric Stackable Bin</a></h3>
+<h3 id="task-1-design-a-parametric-stackable-bin"><a class="header" href="#task-1-design-a-parametric-stackable-bin">Task 1: Design a Parametric Stackable Bin</a></h3>
 <p>Create a storage bin with walls, a removable lid, and interlocking features:</p>
 <pre><code class="language-openscad">// Stackable Storage Bin - Advanced Parametric Design
 // Features: walls, interlocking rim, chamfered edges, optional dividers
@@ -318,24 +318,24 @@ union() {
 }
 </code></pre>
 <h3 id="task-2-test-stackability"><a class="header" href="#task-2-test-stackability">Task 2: Test Stackability</a></h3>
-<p>After printing}} the first}} bin:</p>
+<p>After printing the first bin:</p>
 <ol>
 <li>Print a second identical bin</li>
-<li>Stack one}} on top of the other and verify:
+<li>Stack one on top of the other and verify:
 <ul>
-<li>Does the rim insert smoothly into}} the rim below?</li>
-<li>Can you}} stack 3 bins without binding?</li>
+<li>Does the rim insert smoothly into the rim below?</li>
+<li>Can you stack 3 bins without binding?</li>
 <li>Does the stack remain stable without tipping?</li>
 </ul>
 </li>
 </ol>
 <p>Document:</p>
 <ul>
-<li>Any}} friction or resistance (good for stability)</li>
+<li>Any friction or resistance (good for stability)</li>
 <li>Gaps or looseness (adjust <code>stack_clear</code> if needed)</li>
 </ul>
-<h3 id="task-3-design-variants-for-different-storage-needs"><a class="header" href="#task-3-design-variants-for-different-storage-needs">Task 3: Design}} Variants for Different Storage Needs</a></h3>
-<p>Create three different bin sizes using}} the same parametric}} code}}:</p>
+<h3 id="task-3-design-variants-for-different-storage-needs"><a class="header" href="#task-3-design-variants-for-different-storage-needs">Task 3: Design Variants for Different Storage Needs</a></h3>
+<p>Create three different bin sizes using the same parametric code:</p>
 <pre><code class="language-openscad">// Small bin (desk organization)
 bin_w = 60;
 bin_d = 80;
@@ -352,7 +352,7 @@ bin_h = 40;
 // bin_h = 80;
 </code></pre>
 <h3 id="task-4-add-optional-internal-dividers"><a class="header" href="#task-4-add-optional-internal-dividers">Task 4: Add Optional Internal Dividers</a></h3>
-<p>Enhance the design}} with parametric}} dividers:</p>
+<p>Enhance the design with parametric dividers:</p>
 <pre><code class="language-openscad">// Optional: Parametric dividers
 num_dividers = 2;        // Number of internal compartments
 divider_thickness = 1.5; // mm
@@ -378,14 +378,14 @@ C      | 0.8 mm      | 2.0  | Loose - unstable
 D      | 0.6 mm      | 2.5  | Better - stronger walls
 ========================================
 </code></pre>
-<p>After printing}} and testing, record observations about fit quality}}.</p>
+<p>After printing and testing, record observations about fit quality.</p>
 <h2 id="advanced-topics-snap-fit-connectors-and-multi-part-assemblies"><a class="header" href="#advanced-topics-snap-fit-connectors-and-multi-part-assemblies">Advanced Topics: Snap-Fit Connectors and Multi-Part Assemblies</a></h2>
-<p>As you}} progress beyond simple stacking, you}} may want to create}} assemblies where parts connect without fasteners. This section covers snap-fit and interlocking designs.</p>
+<p>As you progress beyond simple stacking, you may want to create assemblies where parts connect without fasteners. This section covers snap-fit and interlocking designs.</p>
 <h3 id="designing-snap-fit-clips"><a class="header" href="#designing-snap-fit-clips">Designing Snap-Fit Clips</a></h3>
 <p>A snap-fit clip works by:</p>
 <ol>
 <li>Creating a flexible arm that bends outward to release</li>
-<li>Providing a catch (usually a small notch or undercut) that locks into}} place</li>
+<li>Providing a catch (usually a small notch or undercut) that locks into place</li>
 <li>Balancing flexibility (easy to insert/remove) with durability (survives many cycles)</li>
 </ol>
 <p>Here’s a simple snap-fit connector:</p>
@@ -412,11 +412,11 @@ union() {
   translate([3, 0, 0]) snap_fit_arm();
 }
 </code></pre>
-<p>Key parameters}} to test}}:</p>
+<p>Key parameters to test:</p>
 <ul>
 <li><code>thickness</code> (1.0-2.0 mm): Thicker = stronger but harder to flex</li>
 <li>Arm length: Longer = more flexible but weaker</li>
-<li>Catch geometry}}: Size and shape determine how securely parts lock</li>
+<li>Catch geometry: Size and shape determine how securely parts lock</li>
 </ul>
 <h3 id="tolerance-for-snap-fits"><a class="header" href="#tolerance-for-snap-fits">Tolerance for Snap-Fits</a></h3>
 <p>Unlike stackable bins, snap-fit parts need tighter tolerances because they must flex on insertion:</p>
@@ -429,13 +429,13 @@ If too loose: Parts fall apart
 If too tight: Parts won't insert or break on insertion
 </code></pre>
 <h3 id="multi-part-assemblies-coordinating-multiple-components"><a class="header" href="#multi-part-assemblies-coordinating-multiple-components">Multi-Part Assemblies: Coordinating Multiple Components</a></h3>
-<p>For more complex assemblies (like the Miniature Assembly in later projects), you}} need to:</p>
+<p>For more complex assemblies (like the Miniature Assembly in later projects), you need to:</p>
 <ol>
 <li>Define a global coordinate system where all parts know their positions</li>
-<li>Use modular design}} so each}} part}} can}} be printed, tested, and refined independently</li>
-<li>Document assembly order so users know which parts fit together first}}</li>
+<li>Use modular design so each part can be printed, tested, and refined independently</li>
+<li>Document assembly order so users know which parts fit together first</li>
 </ol>
-<p>Here’s a pattern for a multi-part}} assembly:</p>
+<p>Here’s a pattern for a multi-part assembly:</p>
 <pre><code class="language-openscad">// Multi-part assembly pattern
 // === ASSEMBLY PARAMETERS ===
 assembly_id = "miniature_furniture";  // Unique name for this assembly
@@ -472,16 +472,16 @@ module furniture_assembly() {
 // Or export the full assembly:
 furniture_assembly();
 </code></pre>
-<p>Best practices for multi-part}} designs:</p>
+<p>Best practices for multi-part designs:</p>
 <ol>
-<li>Print and test}} parts individually before}} assembling</li>
+<li>Print and test parts individually before assembling</li>
 <li>Add small alignment features (pins, notches) to guide assembly</li>
 <li>Document which parts go together and the order</li>
-<li>Include spare parts (print}} 2-3 copies of small connecting pieces)</li>
-<li>Test the full assembly on a test}} print}} before}} final production</li>
+<li>Include spare parts (print 2-3 copies of small connecting pieces)</li>
+<li>Test the full assembly on a test print before final production</li>
 </ol>
 <h3 id="assembly-documentation"><a class="header" href="#assembly-documentation">Assembly Documentation</a></h3>
-<p>For any multi-part}} project, create}} a simple assembly guide:</p>
+<p>For any multi-part project, create a simple assembly guide:</p>
 <pre><code>Miniature Furniture Assembly Guide
 
 Parts:
@@ -502,7 +502,7 @@ Quality Checks:
 - Shelf should hold light objects without sagging
 </code></pre>
 <h2 id="advanced-assembly-best-practices"><a class="header" href="#advanced-assembly-best-practices">Advanced Assembly Best Practices</a></h2>
-<p>Professional assemblies require planning beyond individual parts. Consider assembly sequence, tolerance management, and accessibility}}.</p>
+<p>Professional assemblies require planning beyond individual parts. Consider assembly sequence, tolerance management, and accessibility.</p>
 <h3 id="designing-for-snap-fit-assemblies"><a class="header" href="#designing-for-snap-fit-assemblies">Designing for Snap-Fit Assemblies</a></h3>
 <p>Snap-fits eliminate fasteners, reducing assembly complexity and cost:</p>
 <pre><code class="language-openscad">// Snap-fit connector with spring arm
@@ -564,7 +564,7 @@ translate([0, 0, 30])
   connector_lid(60, 40, 3, 3);
 </code></pre>
 <h3 id="thread-and-screw-calculations"><a class="header" href="#thread-and-screw-calculations">Thread and Screw Calculations</a></h3>
-<p>Design}} for M3 and M4 fasteners commonly available in 3D printing}} accessories:</p>
+<p>Design for M3 and M4 fasteners commonly available in 3D printing accessories:</p>
 <pre><code class="language-openscad">// M3 bolt hole specifications
 M3_clearance_hole = 3.2;    // Loose fit, easy insertion
 M3_tight_hole = 2.8;        // Tight fit for threaded inserts
@@ -597,7 +597,7 @@ module mounting_bracket(length, height, pocket_depth) {
 mounting_bracket(60, 20, 5);
 </code></pre>
 <h3 id="alignment-features-and-dowel-pins"><a class="header" href="#alignment-features-and-dowel-pins">Alignment Features and Dowel Pins</a></h3>
-<p>Guide parts into}} correct assembly positions:</p>
+<p>Guide parts into correct assembly positions:</p>
 <pre><code class="language-openscad">// Dowel pin socket (receives alignment pin)
 module dowel_socket(diameter, depth) {
   difference() {
@@ -696,11 +696,11 @@ module assembly_with_clearance_check() {
 // When rendered, the % shows potential interference areas
 </code></pre>
 <h2 id="checkpoint"><a class="header" href="#checkpoint">Checkpoint</a></h2>
-<p>Chamfers improve print}} quality}} by:</p>
+<p>Chamfers improve print quality by:</p>
 <ol>
 <li>Reducing stress concentration at edges</li>
-<li>Improving layer}} adhesion at sharp transitions</li>
-<li>Making parts easier to remove from the build}} platform</li>
+<li>Improving layer adhesion at sharp transitions</li>
+<li>Making parts easier to remove from the build platform</li>
 </ol>
 <pre><code class="language-openscad">// More sophisticated chamfer (chamfered corner)
 module chamfer_corner(size, radius) {
@@ -713,48 +713,48 @@ module chamfer_corner(size, radius) {
 </code></pre>
 <h2 id="checkpoint-1"><a class="header" href="#checkpoint-1">Checkpoint</a></h2>
 <ul>
-<li>After task 1, you}} have a single parametric}} bin</li>
-<li>After task 2, you}}’ve verified stackability</li>
-<li>After task 4, you}} have optional dividers working</li>
-<li>After task 5, you}}’ve documented tolerance data</li>
+<li>After task 1, you have a single parametric bin</li>
+<li>After task 2, you’ve verified stackability</li>
+<li>After task 4, you have optional dividers working</li>
+<li>After task 5, you’ve documented tolerance data</li>
 </ul>
 <h2 id="quiz---lesson-3dmake8-10-questions"><a class="header" href="#quiz---lesson-3dmake8-10-questions">Quiz - Lesson 3dMake.8 (10 questions)</a></h2>
 <ol>
-<li>What is the purpose of the <code>stack_clear</code> parameter}} in stackable bin design}}<sup class="footnote-reference" id="fr-1-3"><a href="#footnote-1">1</a></sup>?</li>
-<li>Why is wall thickness a critical parameter}} in structural parts<sup class="footnote-reference" id="fr-1-4"><a href="#footnote-1">1</a></sup>?</li>
-<li>Explain what “tolerance stack-up” means and why it matters in multi-part}} assemblies<sup class="footnote-reference" id="fr-1-5"><a href="#footnote-1">1</a></sup>.</li>
-<li>How does chamfering improve print}} quality}}<sup class="footnote-reference" id="fr-3-2"><a href="#footnote-3">3</a></sup>?</li>
-<li>What parameter}} would you}} adjust to make bins stack with more friction for stability<sup class="footnote-reference" id="fr-1-6"><a href="#footnote-1">1</a></sup>?</li>
-<li>True or False: Thin walls always print}} faster than thick walls.</li>
-<li>Describe the difference}} between}} the outer rim and inner rim in the stackable bin design}}<sup class="footnote-reference" id="fr-1-7"><a href="#footnote-1">1</a></sup>.</li>
-<li>Why might you}} use <code>num_dividers</code> as a parameter}} instead of hard-coding divider positions<sup class="footnote-reference" id="fr-1-8"><a href="#footnote-1">1</a></sup>?</li>
-<li>How would you}} measure whether your printed bin matches the designed dimensions<sup class="footnote-reference" id="fr-1-9"><a href="#footnote-1">1</a></sup>?</li>
-<li>What design}} considerations apply when stacking more than 3 bins vertically<sup class="footnote-reference" id="fr-1-10"><a href="#footnote-1">1</a></sup>?</li>
+<li>What is the purpose of the <code>stack_clear</code> parameter in stackable bin design<sup class="footnote-reference" id="fr-1-3"><a href="#footnote-1">1</a></sup>?</li>
+<li>Why is wall thickness a critical parameter in structural parts<sup class="footnote-reference" id="fr-1-4"><a href="#footnote-1">1</a></sup>?</li>
+<li>Explain what “tolerance stack-up” means and why it matters in multi-part assemblies<sup class="footnote-reference" id="fr-1-5"><a href="#footnote-1">1</a></sup>.</li>
+<li>How does chamfering improve print quality<sup class="footnote-reference" id="fr-3-2"><a href="#footnote-3">3</a></sup>?</li>
+<li>What parameter would you adjust to make bins stack with more friction for stability<sup class="footnote-reference" id="fr-1-6"><a href="#footnote-1">1</a></sup>?</li>
+<li>True or False: Thin walls always print faster than thick walls.</li>
+<li>Describe the difference between the outer rim and inner rim in the stackable bin design<sup class="footnote-reference" id="fr-1-7"><a href="#footnote-1">1</a></sup>.</li>
+<li>Why might you use <code>num_dividers</code> as a parameter instead of hard-coding divider positions<sup class="footnote-reference" id="fr-1-8"><a href="#footnote-1">1</a></sup>?</li>
+<li>How would you measure whether your printed bin matches the designed dimensions<sup class="footnote-reference" id="fr-1-9"><a href="#footnote-1">1</a></sup>?</li>
+<li>What design considerations apply when stacking more than 3 bins vertically<sup class="footnote-reference" id="fr-1-10"><a href="#footnote-1">1</a></sup>?</li>
 </ol>
 <h2 id="extension-problems-10"><a class="header" href="#extension-problems-10">Extension Problems (10)</a></h2>
 <ol>
-<li>Create five bin variants (small, medium, large, tall, shallow) using}} parametric}} logic; print}} and stack them<sup class="footnote-reference" id="fr-1-11"><a href="#footnote-1">1</a></sup>.</li>
-<li>Add parametric}} rounded corners using}} <code>minkowski()</code> to improve structural integrity<sup class="footnote-reference" id="fr-3-3"><a href="#footnote-3">3</a></sup>.</li>
-<li>Design}} a custom divider system: parameterize number, position, and thickness; test}} strength<sup class="footnote-reference" id="fr-1-12"><a href="#footnote-1">1</a></sup>.</li>
-<li>Conduct a tolerance study: print}} bins with <code>stack_clear</code> values of 0.4, 0.6, 0.8 mm; document fit quality}}<sup class="footnote-reference" id="fr-1-13"><a href="#footnote-1">1</a></sup>.</li>
-<li>Create a modular stacking system with connecting clips or latches; test}} assembly and disassembly<sup class="footnote-reference" id="fr-2-2"><a href="#footnote-2">2</a></sup>.</li>
-<li>Build a complete storage system: design}} multiple bin sizes with standard stackability and create}} an assembly guide.</li>
-<li>Develop a manufacturing specification document: tolerance ranges, material}} recommendations, quality}} acceptance criteria.</li>
-<li>Design}} a labeling system: add parametric}} label holders or embossed areas for identifying bin contents.</li>
+<li>Create five bin variants (small, medium, large, tall, shallow) using parametric logic; print and stack them<sup class="footnote-reference" id="fr-1-11"><a href="#footnote-1">1</a></sup>.</li>
+<li>Add parametric rounded corners using <code>minkowski()</code> to improve structural integrity<sup class="footnote-reference" id="fr-3-3"><a href="#footnote-3">3</a></sup>.</li>
+<li>Design a custom divider system: parameterize number, position, and thickness; test strength<sup class="footnote-reference" id="fr-1-12"><a href="#footnote-1">1</a></sup>.</li>
+<li>Conduct a tolerance study: print bins with <code>stack_clear</code> values of 0.4, 0.6, 0.8 mm; document fit quality<sup class="footnote-reference" id="fr-1-13"><a href="#footnote-1">1</a></sup>.</li>
+<li>Create a modular stacking system with connecting clips or latches; test assembly and disassembly<sup class="footnote-reference" id="fr-2-2"><a href="#footnote-2">2</a></sup>.</li>
+<li>Build a complete storage system: design multiple bin sizes with standard stackability and create an assembly guide.</li>
+<li>Develop a manufacturing specification document: tolerance ranges, material recommendations, quality acceptance criteria.</li>
+<li>Design a labeling system: add parametric label holders or embossed areas for identifying bin contents.</li>
 <li>Create a structural analysis guide: identify stress concentration points and propose reinforcement strategies.</li>
-<li>Write comprehensive bin design}} documentation: parameters}}, variants, assembly, stackability testing, tolerance management, maintenance, and accessibility}} features.</li>
+<li>Write comprehensive bin design documentation: parameters, variants, assembly, stackability testing, tolerance management, maintenance, and accessibility features.</li>
 </ol>
 <p>References</p>
 <hr>
 <ol class="footnote-definition">
 <li id="footnote-1">
-<p>3DMake}} GitHub}} - Stackable Bins Example - <a href="https://github.com/tdeck/3dmake/blob/main/docs/examples.md">https://github.com/tdeck/3dmake/blob/main/docs/examples.md</a> <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a> <a href="#fr-1-3">↩3</a> <a href="#fr-1-4">↩4</a> <a href="#fr-1-5">↩5</a> <a href="#fr-1-6">↩6</a> <a href="#fr-1-7">↩7</a> <a href="#fr-1-8">↩8</a> <a href="#fr-1-9">↩9</a> <a href="#fr-1-10">↩10</a> <a href="#fr-1-11">↩11</a> <a href="#fr-1-12">↩12</a> <a href="#fr-1-13">↩13</a></p>
+<p>3DMake GitHub - Stackable Bins Example - <a href="https://github.com/tdeck/3dmake/blob/main/docs/examples.md">https://github.com/tdeck/3dmake/blob/main/docs/examples.md</a> <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a> <a href="#fr-1-3">↩3</a> <a href="#fr-1-4">↩4</a> <a href="#fr-1-5">↩5</a> <a href="#fr-1-6">↩6</a> <a href="#fr-1-7">↩7</a> <a href="#fr-1-8">↩8</a> <a href="#fr-1-9">↩9</a> <a href="#fr-1-10">↩10</a> <a href="#fr-1-11">↩11</a> <a href="#fr-1-12">↩12</a> <a href="#fr-1-13">↩13</a></p>
 </li>
 <li id="footnote-2">
-<p>Engineering Tolerance in 3D Printing - <a href="https://www.sculpteo.com/en/blog/2021/06/17/tolerance-3d-printing}}/">https://www.sculpteo.com/en/blog/2021/06/17/tolerance-3d-printing}}/</a> <a href="#fr-2-1">↩</a> <a href="#fr-2-2">↩2</a></p>
+<p>Engineering Tolerance in 3D Printing - <a href="https://www.sculpteo.com/en/blog/2021/06/17/tolerance-3d-printing/">https://www.sculpteo.com/en/blog/2021/06/17/tolerance-3d-printing/</a> <a href="#fr-2-1">↩</a> <a href="#fr-2-2">↩2</a></p>
 </li>
 <li id="footnote-3">
-<p>OpenSCAD}} Manual - Minkowski (chamfers/rounding) - <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#minkowski">https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#minkowski</a> <a href="#fr-3-1">↩</a> <a href="#fr-3-2">↩2</a> <a href="#fr-3-3">↩3</a></p>
+<p>OpenSCAD Manual - Minkowski (chamfers/rounding) - <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#minkowski">https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#minkowski</a> <a href="#fr-3-1">↩</a> <a href="#fr-3-2">↩2</a> <a href="#fr-3-3">↩3</a></p>
 </li>
 </ol>
 

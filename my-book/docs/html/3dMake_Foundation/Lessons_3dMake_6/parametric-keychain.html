@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-d0af5d9e.js";
+            window.path_to_searchindex_js = "../../searchindex-7e85ce75.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-5b0c6224.js"></script>
+        <script src="../../toc-0b2574ce.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -220,39 +220,39 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="parametric-keychain---extension-project--3dmake_foundation_lessons_3dmake_6-parametric-keychain"><a class="header" href="#parametric-keychain---extension-project--3dmake_foundation_lessons_3dmake_6-parametric-keychain">Parametric Keychain - Extension Project  {#3dmake_foundation_lessons_3dmake_6-parametric}}-keychain}</a></h1>
-<p>Estimated time}}: 2-4 hours</p>
+                        <h1 id="3dmake_foundation_lessons_3dmake_6-parametric-keychain"><a class="header" href="#3dmake_foundation_lessons_3dmake_6-parametric-keychain">Parametric Keychain - Extension Project</a></h1>
+<p>Estimated time: 2-4 hours</p>
 <h2 id="learning-objectives"><a class="header" href="#learning-objectives">Learning Objectives</a></h2>
-<p>By completing this project, you}} will:</p>
+<p>By completing this project, you will:</p>
 <ul>
-<li>Create parametric}} OpenSCAD}} modules that accept user inputs</li>
-<li>Implement 2D text}} manipulation and 3D extrusion techniques</li>
-<li>Generate and test}} multiple design}} variants systematically</li>
-<li>Document design}} parameters}} for reproducibility and user customization</li>
+<li>Create parametric OpenSCAD modules that accept user inputs</li>
+<li>Implement 2D text manipulation and 3D extrusion techniques</li>
+<li>Generate and test multiple design variants systematically</li>
+<li>Document design parameters for reproducibility and user customization</li>
 </ul>
 <h2 id="objective"><a class="header" href="#objective">Objective</a></h2>
 <ul>
-<li>Create a parametric}} keychain design}} that adapts to custom text}}, dimensions, and materials.</li>
+<li>Create a parametric keychain design that adapts to custom text, dimensions, and materials.</li>
 </ul>
 <h2 id="tasks"><a class="header" href="#tasks">Tasks</a></h2>
 <ol>
-<li>Create <code>keychain.scad</code> with top-level parameters}}: <code>width</code>, <code>height</code>, <code>thickness</code>, and <code>text</code>.</li>
-<li>Implement embossed or debossed text}} using}} <code>linear_extrude()</code> of a 2D text}} shape (or simulate with simple geometry}} if system lacks text}} support}}).</li>
-<li>Produce three size variants and export STLs; record print}} settings.</li>
-<li>Test attachment point for common}} key rings and report fit.</li>
+<li>Create <code>keychain.scad</code> with top-level parameters: <code>width</code>, <code>height</code>, <code>thickness</code>, and <code>text</code>.</li>
+<li>Implement embossed or debossed text using <code>linear_extrude()</code> of a 2D text shape (or simulate with simple geometry if system lacks text support).</li>
+<li>Produce three size variants and export STLs; record print settings.</li>
+<li>Test attachment point for common key rings and report fit.</li>
 </ol>
 <h2 id="deliverable"><a class="header" href="#deliverable">Deliverable</a></h2>
 <ul>
-<li>Source <code>keychain.scad</code> file}} with parametric}} variables}} documented</li>
-<li>Three STL}} variants (small, medium, large)</li>
-<li>Print settings log and fit-test}} report for key ring attachment</li>
+<li>Source <code>keychain.scad</code> file with parametric variables documented</li>
+<li>Three STL variants (small, medium, large)</li>
+<li>Print settings log and fit-test report for key ring attachment</li>
 </ul>
-<h2 id="starter-files"><a class="header" href="#starter-files">Starter files}}</a></h2>
+<h2 id="starter-files"><a class="header" href="#starter-files">Starter files</a></h2>
 <ul>
-<li><a href="../../assets/Extension_Projects/Parametric_Keychain/starter.scad">starter.scad</a> - minimal parametric}} scaffold to begin.</li>
+<li><a href="../../assets/Extension_Projects/Parametric_Keychain/starter.scad">starter.scad</a> - minimal parametric scaffold to begin.</li>
 </ul>
 <h2 id="starter-code"><a class="header" href="#starter-code">Starter Code</a></h2>
-<p>Copy and modify this cube}} keycap example as your starting point:</p>
+<p>Copy and modify this cube keycap example as your starting point:</p>
 <pre><code class="language-openscad">// Cube Keycap - Beginner Example
 // A simple 20mm cube keycap with an embossed letter
 // Parameters
@@ -281,9 +281,9 @@ union(){
 }
 </code></pre>
 <h2 id="advanced-text-techniques"><a class="header" href="#advanced-text-techniques">Advanced Text Techniques</a></h2>
-<p>Beyond simple embossed letters, you}} can}} create}} sophisticated text}} effects using}} the patterns from the <em>Simplifying 3D Printing</em> textbook:</p>
+<p>Beyond simple embossed letters, you can create sophisticated text effects using the patterns from the <em>Simplifying 3D Printing</em> textbook:</p>
 <h3 id="example-1-circular-text-array"><a class="header" href="#example-1-circular-text-array">Example 1: Circular Text Array</a></h3>
-<p>Arrange text}} in a circle around a central point:</p>
+<p>Arrange text in a circle around a central point:</p>
 <pre><code class="language-openscad">// Circular Text Arrangement
 // Text rotates around a center point
 module rotate_text(display_text, 
@@ -309,12 +309,12 @@ rotate_text("MAKER", text_size = 12, distance = 30, rotation_value = 75, tilt = 
 </code></pre>
 <p>What it does:</p>
 <ul>
-<li>Rotates each}} letter individually around a center point</li>
-<li>Creates circular or spiral text}} effects</li>
+<li>Rotates each letter individually around a center point</li>
+<li>Creates circular or spiral text effects</li>
 <li>Useful for badges, nameplates, and decorative objects</li>
 </ul>
 <h3 id="example-2-multi-line-text-composition"><a class="header" href="#example-2-multi-line-text-composition">Example 2: Multi-Line Text Composition</a></h3>
-<p>Combine text}} at different sizes and positions for a professional nameplate:</p>
+<p>Combine text at different sizes and positions for a professional nameplate:</p>
 <pre><code class="language-openscad">// Professional Nameplate with Multiple Text Layers
 module create_nameplate(name, role, company)
 {
@@ -344,9 +344,9 @@ create_nameplate("Alex Chen", "3D Design Engineer", "MakerCorp");
 </code></pre>
 <p>Key features:</p>
 <ul>
-<li>Multiple text}} elements at different scales</li>
+<li>Multiple text elements at different scales</li>
 <li>Layered composition for professional appearance</li>
-<li>Each text}} element can}} be customized independently</li>
+<li>Each text element can be customized independently</li>
 </ul>
 <h3 id="example-3-parametric-font-selection"><a class="header" href="#example-3-parametric-font-selection">Example 3: Parametric Font Selection</a></h3>
 <p>Use different fonts for different effects:</p>
@@ -370,10 +370,10 @@ text("Script", size = 20, font = "Courier:style=Regular", halign = "center");
 <li><code>Impact:style=Regular</code> - Bold, condensed, modern</li>
 <li><code>Arial:style=Regular</code> - Clean, neutral, professional</li>
 <li><code>Courier:style=Regular</code> - Monospace, technical</li>
-<li>System fonts vary; check OpenSCAD}} documentation for your platform</li>
+<li>System fonts vary; check OpenSCAD documentation for your platform</li>
 </ul>
 <h3 id="practical-project-custom-keychain-nameplate"><a class="header" href="#practical-project-custom-keychain-nameplate">Practical Project: Custom Keychain Nameplate</a></h3>
-<p>Combine everything into}} a professional keychains with multiple variants:</p>
+<p>Combine everything into a professional keychains with multiple variants:</p>
 <pre><code class="language-openscad">// Customizable Keychain Nameplate
 // Parameters - change these to create variants
 name = "ALEX";
@@ -405,9 +405,9 @@ keychain_nameplate(name, keysize, keyheight, textsize);
 </code></pre>
 <h2 id="assessment-questions-optional"><a class="header" href="#assessment-questions-optional">Assessment Questions (Optional)</a></h2>
 <ol>
-<li>How did you}} use OpenSCAD}} parameters}} to enable users to customize the keychain without editing code}}?</li>
-<li>What were the key differences in print}} time}} and material}} usage between}} your three variants?</li>
-<li>Describe how you}} tested the key ring attachment and what adjustments you}} would make for the final design}}.</li>
+<li>How did you use OpenSCAD parameters to enable users to customize the keychain without editing code?</li>
+<li>What were the key differences in print time and material usage between your three variants?</li>
+<li>Describe how you tested the key ring attachment and what adjustments you would make for the final design.</li>
 </ol>
 
                     </main>

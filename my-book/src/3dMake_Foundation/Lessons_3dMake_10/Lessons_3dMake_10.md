@@ -1,45 +1,45 @@
 # Lesson 10: Hands-On Practice Exercises and Troubleshooting {#3dmake_foundation_lessons_3dmake_10-lessons_3dmake_10}
 
-Estimated time}}: 120-150 minutes (multiple activities)
+Estimated time: 120-150 minutes (multiple activities)
 
 Learning Objectives
 
 - Apply all prior lessons in integrated projects[^1]
-- Diagnose and fix common}} 3D printing}} and OpenSCAD}} issues[^2]
-- Validate models using}} deterministic and AI-assisted inspection[^3]
-- Document design}} decisions and troubleshooting processes[^1]
+- Diagnose and fix common 3D printing and OpenSCAD issues[^2]
+- Validate models using deterministic and AI-assisted inspection[^3]
+- Document design decisions and troubleshooting processes[^1]
 
 Materials
 
 - 3dMake project scaffold
-- Printer for test}} prints (recommended)
+- Printer for test prints (recommended)
 - Measuring tools (calipers, protractor)
-- Access to 3dm commands}}
+- Access to 3dm commands
 - Reference: [master-rubric.md](/Lessons_3dMake_11/master-rubric.md) for assessment criteria
-- Reference: [filament}}-comparison-table.md](/Lessons_3dMake_5/filament}}-comparison-table.md) for material}} properties
+- Reference: [filament-comparison-table.md](/Lessons_3dMake_5/filament-comparison-table.md) for material properties
 
 Extension Projects: Complete [Dice_Dice_Dice](/Lessons_3dMake_4/Dice_Dice_Dice.md) or [Snap_Fit_Clip](../Lessons_3dMake_8/snap-fit-clip.md) to practice integrated validation workflows.
 
 ## Measurement Fundamentals
 
-Before you}} can}} validate that your designs print}} correctly, you}} need to measure accurately. This section covers using}} calipers and interpreting measurement data.
+Before you can validate that your designs print correctly, you need to measure accurately. This section covers using calipers and interpreting measurement data.
 
 ### Understanding Digital Calipers
 
 A digital caliper is a precision tool with three measurement modes:
 
-| Mode         | Use                        | Example                                   |
-|--------------|----------------------------|-------------------------------------------|
-| Outside jaws | Measure outer dimensions   | Diameter of a cylinder, width of a part}} |
-| Inside jaws  | Measure inner dimensions   | Hole diameter, inside width of a box      |
-| Depth rod    | Measure depth or thickness | Depth of a recess, thickness of a part}}  |
+| Mode         | Use                        | Example                                 |
+|--------------|----------------------------|-----------------------------------------|
+| Outside jaws | Measure outer dimensions   | Diameter of a cylinder, width of a part |
+| Inside jaws  | Measure inner dimensions   | Hole diameter, inside width of a box    |
+| Depth rod    | Measure depth or thickness | Depth of a recess, thickness of a part  |
 
 ### Measurement Best Practices
 
 1. Zero the caliper: With jaws closed, press the ON/ZERO button to confirm it reads 0.0 mm
 2. Use gentle pressure: Tighten jaws just enough to hold the object; excessive force causes false readings
 3. Take three trials: Measure the same feature three times and calculate the average
-4. Record to 0.1 mm: Most printed parts can}} be reliably measured to one}} decimal place
+4. Record to 0.1 mm: Most printed parts can be reliably measured to one decimal place
 
 Example measurement sequence:
 
@@ -54,9 +54,9 @@ Interpretation: Designed as 25.0 mm, printed as 24.4 mm
 Deviation: -0.6 mm (0.24% shrinkage, acceptable for PLA)
 ```
 
-### Using Measurements to Improve Design}}
+### Using Measurements to Improve Design
 
-When you}} find a deviation between}} your designed and actual dimensions, you}} can}} adjust future prints:
+When you find a deviation between your designed and actual dimensions, you can adjust future prints:
 
 ```openscad
 // Design parameter
@@ -93,7 +93,7 @@ then adjust if needed.
 
 ### Creating a Measurement Log
 
-For any parametric}} design}} project, maintain a measurement log:
+For any parametric design project, maintain a measurement log:
 
 ```
 Project: Phone Stand Variants
@@ -142,10 +142,10 @@ For comprehensive QA procedures, assembly testing, and durability validation, se
 Objective: Create a phone stand that works for 3+ phone models with different screen sizes.
 
 Requirements:
-- Base must support}} 300g weight
+- Base must support 300g weight
 - Angle must be adjustable (45-75)
 - Width must accommodate phones 60-90mm wide
-- All parameters}} at top of file}}
+- All parameters at top of file
 
 Starter Code:
 
@@ -181,25 +181,25 @@ union() {
 Tasks:
 1. Build the model and verify it's manifold with `3dm describe`
 2. Generate 3 variants: iPhone (60mm), iPad mini (100mm), Tablet (150mm)
-3. Test each}} variant by measuring critical dimensions
+3. Test each variant by measuring critical dimensions
 4. Document which variant works best with real devices
 
 Success Criteria:
-- All 3 variants build}} without errors
-- Printed parts successfully hold test}} phones
+- All 3 variants build without errors
+- Printed parts successfully hold test phones
 - Dimensions match designs within 0.5mm
 
 ### Exercise A2: The Customizable Keycap Set (Intermediate)
 
-Objective: Design}} a family of keycaps for a custom keyboard with text}}, icons, and different profiles.
+Objective: Design a family of keycaps for a custom keyboard with text, icons, and different profiles.
 
 Requirements:
 - 5+ keycap sizes (mm 12-28)
-- Support embossed text}} and numbers
+- Support embossed text and numbers
 - Optional: icon cutouts
 - All printable without supports
 
-Challenge: Use parametric}} code}} to generate all 5 caps from a single design}}[^1]:
+Challenge: Use parametric code to generate all 5 caps from a single design[^1]:
 
 ```openscad
 // Parametric Keycap Generator v1
@@ -234,18 +234,18 @@ union() {
 
 Tasks:
 1. Create variants with `cap_size` = 12, 16, 18, 20, 24 mm
-2. Build each}} variant and verify emboss quality}}
-3. Test printability: print}} 2-3 variants
-4. Measure final dimensions and compare to design}}
+2. Build each variant and verify emboss quality
+3. Test printability: print 2-3 variants
+4. Measure final dimensions and compare to design
 
 Documentation Required:
 - Parameter table showing all 5 variants
-- Print time}} estimates for each}}
-- Post-processing notes (support}} removal, surface finishing)
+- Print time estimates for each
+- Post-processing notes (support removal, surface finishing)
 
 ### Exercise A3: The Stackable Storage System (Advanced)
 
-Objective: Design}} a modular storage system where bins stack securely and dividers are customizable.
+Objective: Design a modular storage system where bins stack securely and dividers are customizable.
 
 Requirements:
 - Bins must stack without binding
@@ -306,20 +306,20 @@ union() {
 ```
 
 Tasks:
-1. Print 2 identical bins and test}} stacking
+1. Print 2 identical bins and test stacking
 2. Create 3 configurations: Small (60x80x40), Medium (80x120x60), Large (120x160x80)
 3. Test with different `stack_clearance` values: 0.4, 0.6, 0.8mm
 4. Document which clearance works best in practice[^1]
-5. Print a large bin with 3 dividers and test}} storage capacity
+5. Print a large bin with 3 dividers and test storage capacity
 
 Documentation Required:
 - Tolerance testing matrix with measurements
 - Assembly instructions with photos/descriptions
-- Recommendations for printer}} calibration
+- Recommendations for printer calibration
 
 ## Advanced Geometry Techniques: Hull and Minkowski Operations
 
-Beyond basic primitives and boolean operations, professional designs often use hull and Minkowski operations to create}} smooth, rounded, and organic shapes. These are essential for creating high-quality}}, manufacturable designs.
+Beyond basic primitives and boolean operations, professional designs often use hull and Minkowski operations to create smooth, rounded, and organic shapes. These are essential for creating high-quality, manufacturable designs.
 
 ### Example 1: Hull Operations for Organic Shapes
 
@@ -366,7 +366,7 @@ Key insights:
 - `hull()` automatically creates a smooth envelope around shapes
 - Blending multiple spheres creates organic, curved surfaces
 - Combining `hull()` with `minkowski()` creates sophisticated forms
-- Great for product design}}, containers, and artistic shapes
+- Great for product design, containers, and artistic shapes
 
 ### Example 2: Minkowski Operations for Rounded Edges
 
@@ -450,25 +450,25 @@ union() {
 }
 ```
 
-When to use each}} technique:
-- Use `hull()` when you}} need organic, flowing shapes
-- Use `minkowski()` when you}} need consistent rounding around edges
-- Combine them for maximum design}} flexibility
-- Test both approaches and choose based on render time}} and output}} quality}}
+When to use each technique:
+- Use `hull()` when you need organic, flowing shapes
+- Use `minkowski()` when you need consistent rounding around edges
+- Combine them for maximum design flexibility
+- Test both approaches and choose based on render time and output quality
 
-### Design}} Best Practices
+### Design Best Practices
 
-1. Start simple: Create basic geometry}} first}}, then add rounding
-2. Test early: Render at low `$fn` during design}}, high `$fn` before}} export
-3. Document parameters}}: Make rounding radius and other values adjustable
-4. Validate manifold: Always run}} `3dm describe` after using}} hull/minkowski
-5. Consider performance: These operations can}} slow down preview significantly
+1. Start simple: Create basic geometry first, then add rounding
+2. Test early: Render at low `$fn` during design, high `$fn` before export
+3. Document parameters: Make rounding radius and other values adjustable
+4. Validate manifold: Always run `3dm describe` after using hull/minkowski
+5. Consider performance: These operations can slow down preview significantly
 
-## Exercise Set B: Common}} Problems and Solutions
+## Exercise Set B: Common Problems and Solutions
 
 ### B1: Non-Manifold Geometry
 
-Problem: Model}} renders but slicer shows errors or generates invalid G-code}}
+Problem: Model renders but slicer shows errors or generates invalid G-code
 
 Diagnosis:
 ```bash
@@ -476,14 +476,14 @@ Diagnosis:
 # Look for messages like "non-manifold edges" or "thickness near zero"
 ```
 
-Common}} Causes and Fixes:
+Common Causes and Fixes:
 
-| Issue                   | Cause                        | Fix                                                 |
-|-------------------------|------------------------------|-----------------------------------------------------|
-| Coincident faces        | Shapes touching exactly      | Add 0.001 offset: `translate([0, 0, 0.001])`        |
-| Zero-thickness walls    | Wall too thin to render      | Increase wall: `wall = 2.0` instead of `wall = 0.5` |
-| Incomplete shape        | Missing face in difference}} | Check boolean operations have complete shells       |
-| Self-intersecting faces | Shape overlaps itself        | Simplify geometry}}, use `hull()` instead of union  |
+| Issue                   | Cause                      | Fix                                                 |
+|-------------------------|----------------------------|-----------------------------------------------------|
+| Coincident faces        | Shapes touching exactly    | Add 0.001 offset: `translate([0, 0, 0.001])`        |
+| Zero-thickness walls    | Wall too thin to render    | Increase wall: `wall = 2.0` instead of `wall = 0.5` |
+| Incomplete shape        | Missing face in difference | Check boolean operations have complete shells       |
+| Self-intersecting faces | Shape overlaps itself      | Simplify geometry, use `hull()` instead of union    |
 
 Fix Example:
 ```openscad
@@ -513,15 +513,15 @@ Diagnosis:
 # Preview layer-by-layer
 ```
 
-Common}} Causes:
+Common Causes:
 
-| Symptom                     | Cause                         | Prevention                      |
-|-----------------------------|-------------------------------|---------------------------------|
-| Nozzle}} clogs after 10 min | Too fast extrusion speed      | Reduce speed in slicer          |
-| Parts separate from bed}}   | Poor first}} layer}} adhesion | Check bed}} level, clean bed}}  |
-| Melted plastic strands      | Retraction not working        | Verify retraction in slicer     |
-| Model}} warping             | Thermal stress, no cooling    | Cool model, improve ventilation |
-| Supports fail to remove     | Too thin or fused to model    | Thicken supports, adjust angle  |
+| Symptom                   | Cause                      | Prevention                      |
+|---------------------------|----------------------------|---------------------------------|
+| Nozzle clogs after 10 min | Too fast extrusion speed   | Reduce speed in slicer          |
+| Parts separate from bed   | Poor first layer adhesion  | Check bed level, clean bed      |
+| Melted plastic strands    | Retraction not working     | Verify retraction in slicer     |
+| Model warping             | Thermal stress, no cooling | Cool model, improve ventilation |
+| Supports fail to remove   | Too thin or fused to model | Thicken supports, adjust angle  |
 
 Validation Checklist Before Printing:
 
@@ -552,9 +552,9 @@ echo "=== Ready to print? ==="
 
 ### B3: Dimensional Inaccuracy
 
-Problem: Printed part}} measures 0.5-2mm different from design}}
+Problem: Printed part measures 0.5-2mm different from design
 
-Cause: Printer calibration, shrinkage, or design}} tolerance issues[^1]
+Cause: Printer calibration, shrinkage, or design tolerance issues[^1]
 
 Diagnosis:
 ```bash
@@ -580,15 +580,15 @@ Step 4: Reprint and verify
 ```
 
 Prevention:
-- Use standard calibration models (benchy, calibration cube}})
-- Document printer}} baseline dimensions
-- Apply material}}-specific}} shrinkage factors
+- Use standard calibration models (benchy, calibration cube)
+- Document printer baseline dimensions
+- Apply material-specific shrinkage factors
 
 ## Exercise Set C: Validation and Documentation
 
-### C1: Design}} Review Checklist
+### C1: Design Review Checklist
 
-After completing any design}}, validate using}} this checklist:
+After completing any design, validate using this checklist:
 
 ```markdown
 # Design Review Checklist
@@ -659,40 +659,40 @@ Project: [Project name]
 
 ## Checkpoint
 
-- After Exercise A1, you}} have a working phone stand
-- After Exercise A2, you}} have a parametric}} keycap set
-- After Exercise A3, you}} have a stackable bin system with tolerance data
-- After Exercise B, you}} understand common}} failure modes
-- After Exercise C, you}} have documentation habits
+- After Exercise A1, you have a working phone stand
+- After Exercise A2, you have a parametric keycap set
+- After Exercise A3, you have a stackable bin system with tolerance data
+- After Exercise B, you understand common failure modes
+- After Exercise C, you have documentation habits
 
 ## Quiz - Lesson 3dMake.10 (10 questions)
 
-1. What is the first}} diagnostic step when a model fails to slice[^2]?
+1. What is the first diagnostic step when a model fails to slice[^2]?
 2. Explain the 0.001 offset rule and when to apply it[^2].
-3. How would you}} verify that a wall is thick enough before}} printing}}[^1]?
-4. What measurement method would you}} use to validate dimensional accuracy[^1]?
+3. How would you verify that a wall is thick enough before printing[^1]?
+4. What measurement method would you use to validate dimensional accuracy[^1]?
 5. Describe what happens when stack_clearance is too small or too large[^1].
-6. True or False: Parametric design}} makes it harder to troubleshoot issues.
-7. How would you}} document a design}} so that others can}} modify and reprint it[^1]?
-8. What should you}} check in a slicer preview before}} sending a file}} to print}}[^2]?
-9. How would you}} use `3dm describe` to find design}} flaws[^3]?
-10. Describe a complete workflow}} from problem diagnosis to solution verification[^1].
+6. True or False: Parametric design makes it harder to troubleshoot issues.
+7. How would you document a design so that others can modify and reprint it[^1]?
+8. What should you check in a slicer preview before sending a file to print[^2]?
+9. How would you use `3dm describe` to find design flaws[^3]?
+10. Describe a complete workflow from problem diagnosis to solution verification[^1].
 
 ## Extension Problems (10)
 
 1. Complete all three exercises (A1, A2, A3) and document results[^1].
-2. Print and test}} 2+ variants of your phone stand; measure and compare[^1].
-3. Conduct a tolerance sensitivity study: test}} bins with 3+ clearance values[^1].
-4. Create a troubleshooting guide for your specific}} printer}}: common}} issues and fixes[^2].
-5. Design}} a validation workflow}}: automated checks before}} printing}}[^1].
-6. Build a design}} documentation database: parameter}} ranges, material}} recommendations, print}} settings[^1].
-7. Create before}}/after case studies of design}} problems and solutions[^1].
-8. Develop a printer}} calibration procedure and document baseline dimensions[^1].
-9. Design}} a quality}} assurance system: define metrics, measurement methods, acceptance criteria[^1].
-10. Write a comprehensive troubleshooting and maintenance guide: diagnostics, solutions, prevention strategies, and accessibility}} considerations.
+2. Print and test 2+ variants of your phone stand; measure and compare[^1].
+3. Conduct a tolerance sensitivity study: test bins with 3+ clearance values[^1].
+4. Create a troubleshooting guide for your specific printer: common issues and fixes[^2].
+5. Design a validation workflow: automated checks before printing[^1].
+6. Build a design documentation database: parameter ranges, material recommendations, print settings[^1].
+7. Create before/after case studies of design problems and solutions[^1].
+8. Develop a printer calibration procedure and document baseline dimensions[^1].
+9. Design a quality assurance system: define metrics, measurement methods, acceptance criteria[^1].
+10. Write a comprehensive troubleshooting and maintenance guide: diagnostics, solutions, prevention strategies, and accessibility considerations.
 
 References
 
-[^1]: OpenSCAD}} Best Practices - [https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/FAQ](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/FAQ)
-[^2]: 3D Printing Troubleshooting Guide - [https://www.prusa3d.com/support}}/](https://www.prusa3d.com/support}}/)
-[^3]: 3DMake}} Documentation - [https://github.com/tdeck/3dmake/wiki/Troubleshooting](https://github.com/tdeck/3dmake/wiki/Troubleshooting)
+[^1]: OpenSCAD Best Practices - [https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/FAQ](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/FAQ)
+[^2]: 3D Printing Troubleshooting Guide - [https://www.prusa3d.com/support/](https://www.prusa3d.com/support/)
+[^3]: 3DMake Documentation - [https://github.com/tdeck/3dmake/wiki/Troubleshooting](https://github.com/tdeck/3dmake/wiki/Troubleshooting)

@@ -114,7 +114,7 @@
     - [Appendix B: Material Properties & Selection Guide](3dMake_Foundation/Appendix_B_Material_Properties.md)
     - [Appendix C: Tolerance Testing & Quality Assurance Matrix](3dMake_Foundation/Appendix_C_Tolerance_QA.md)
     - [Appendix D: Advanced OpenSCAD Concepts](3dMake_Foundation/Appendix_D_Advanced_OpenSCAD_Concepts.md)
-    - [Glossary](Backmatter/glossary.md)
+  - [Glossary](Backmatter/glossary.md)
   - [Further Reading](Backmatter/Further_Reading.md)
   [About the Author](Contributors.md)
 

@@ -1,35 +1,35 @@
-# Parametric Keychain - Extension Project  {#3dmake_foundation_lessons_3dmake_6-parametric}}-keychain}
+# Parametric Keychain - Extension Project  {#3dmake_foundation_lessons_3dmake_6-parametric-keychain}
 
-Estimated time}}: 2-4 hours
+Estimated time: 2-4 hours
 
 ## Learning Objectives
 
-By completing this project, you}} will:
-- Create parametric}} OpenSCAD}} modules that accept user inputs
-- Implement 2D text}} manipulation and 3D extrusion techniques
-- Generate and test}} multiple design}} variants systematically
-- Document design}} parameters}} for reproducibility and user customization
+By completing this project, you will:
+- Create parametric OpenSCAD modules that accept user inputs
+- Implement 2D text manipulation and 3D extrusion techniques
+- Generate and test multiple design variants systematically
+- Document design parameters for reproducibility and user customization
 
 ## Objective
-- Create a parametric}} keychain design}} that adapts to custom text}}, dimensions, and materials.
+- Create a parametric keychain design that adapts to custom text, dimensions, and materials.
 
 ## Tasks
-1. Create `keychain.scad` with top-level parameters}}: `width`, `height`, `thickness`, and `text`.
-2. Implement embossed or debossed text}} using}} `linear_extrude()` of a 2D text}} shape (or simulate with simple geometry}} if system lacks text}} support}}).
-3. Produce three size variants and export STLs; record print}} settings.
-4. Test attachment point for common}} key rings and report fit.
+1. Create `keychain.scad` with top-level parameters: `width`, `height`, `thickness`, and `text`.
+2. Implement embossed or debossed text using `linear_extrude()` of a 2D text shape (or simulate with simple geometry if system lacks text support).
+3. Produce three size variants and export STLs; record print settings.
+4. Test attachment point for common key rings and report fit.
 
 ## Deliverable
-- Source `keychain.scad` file}} with parametric}} variables}} documented
-- Three STL}} variants (small, medium, large)
-- Print settings log and fit-test}} report for key ring attachment
+- Source `keychain.scad` file with parametric variables documented
+- Three STL variants (small, medium, large)
+- Print settings log and fit-test report for key ring attachment
 
-## Starter files}}
-- [starter.scad](../../assets/Extension_Projects/Parametric_Keychain/starter.scad) - minimal parametric}} scaffold to begin.
+## Starter files
+- [starter.scad](../../assets/Extension_Projects/Parametric_Keychain/starter.scad) - minimal parametric scaffold to begin.
 
 ## Starter Code
 
-Copy and modify this cube}} keycap example as your starting point:
+Copy and modify this cube keycap example as your starting point:
 
 ```openscad
 // Cube Keycap - Beginner Example
@@ -62,11 +62,11 @@ union(){
 
 ## Advanced Text Techniques
 
-Beyond simple embossed letters, you}} can}} create}} sophisticated text}} effects using}} the patterns from the *Simplifying 3D Printing* textbook:
+Beyond simple embossed letters, you can create sophisticated text effects using the patterns from the *Simplifying 3D Printing* textbook:
 
 ### Example 1: Circular Text Array
 
-Arrange text}} in a circle around a central point:
+Arrange text in a circle around a central point:
 
 ```openscad
 // Circular Text Arrangement
@@ -94,13 +94,13 @@ rotate_text("MAKER", text_size = 12, distance = 30, rotation_value = 75, tilt = 
 ```
 
 What it does:
-- Rotates each}} letter individually around a center point
-- Creates circular or spiral text}} effects
+- Rotates each letter individually around a center point
+- Creates circular or spiral text effects
 - Useful for badges, nameplates, and decorative objects
 
 ### Example 2: Multi-Line Text Composition
 
-Combine text}} at different sizes and positions for a professional nameplate:
+Combine text at different sizes and positions for a professional nameplate:
 
 ```openscad
 // Professional Nameplate with Multiple Text Layers
@@ -132,9 +132,9 @@ create_nameplate("Alex Chen", "3D Design Engineer", "MakerCorp");
 ```
 
 Key features:
-- Multiple text}} elements at different scales
+- Multiple text elements at different scales
 - Layered composition for professional appearance
-- Each text}} element can}} be customized independently
+- Each text element can be customized independently
 
 ### Example 3: Parametric Font Selection
 
@@ -161,11 +161,11 @@ Font options (availability depends on your system):
 - `Impact:style=Regular` - Bold, condensed, modern
 - `Arial:style=Regular` - Clean, neutral, professional
 - `Courier:style=Regular` - Monospace, technical
-- System fonts vary; check OpenSCAD}} documentation for your platform
+- System fonts vary; check OpenSCAD documentation for your platform
 
 ### Practical Project: Custom Keychain Nameplate
 
-Combine everything into}} a professional keychains with multiple variants:
+Combine everything into a professional keychains with multiple variants:
 
 ```openscad
 // Customizable Keychain Nameplate
@@ -199,6 +199,6 @@ keychain_nameplate(name, keysize, keyheight, textsize);
 ```
 
 ## Assessment Questions (Optional)
-1. How did you}} use OpenSCAD}} parameters}} to enable users to customize the keychain without editing code}}?
-2. What were the key differences in print}} time}} and material}} usage between}} your three variants?
-3. Describe how you}} tested the key ring attachment and what adjustments you}} would make for the final design}}.
+1. How did you use OpenSCAD parameters to enable users to customize the keychain without editing code?
+2. What were the key differences in print time and material usage between your three variants?
+3. Describe how you tested the key ring attachment and what adjustments you would make for the final design.

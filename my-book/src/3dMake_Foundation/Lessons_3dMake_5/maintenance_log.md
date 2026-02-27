@@ -1,10 +1,10 @@
 # Printer Maintenance Log {#3dmake_foundation_lessons_3dmake_5-maintenance_log}
 
-Track routine maintenance, repairs, and operational issues to keep your printer}} running smoothly.
+Track routine maintenance, repairs, and operational issues to keep your printer running smoothly.
 
 ## Printer Information
 
-- Model}}: _
+- Model: _
 - Serial Number: _
 - Purchase Date: _
 - Last Service Date: _
@@ -14,8 +14,8 @@ Track routine maintenance, repairs, and operational issues to keep your printer}
 ### Daily (Before Each Use)
 - [ ] Visual inspection for damage
 - [ ] Clean nozzle if needed
-- [ ] Check build}} plate level
-- [ ] Verify filament}} spool rotates freely
+- [ ] Check build plate level
+- [ ] Verify filament spool rotates freely
 
 ### Weekly
 - [ ] Clean extruder drive gear
@@ -24,8 +24,8 @@ Track routine maintenance, repairs, and operational issues to keep your printer}
 - [ ] Test emergency stop function
 
 ### Monthly
-- [ ] Full build}} plate leveling procedure
-- [ ] Clean interior of printer}} chamber
+- [ ] Full build plate leveling procedure
+- [ ] Clean interior of printer chamber
 - [ ] Inspect heating elements
 - [ ] Test temperature calibration
 
@@ -33,7 +33,7 @@ Track routine maintenance, repairs, and operational issues to keep your printer}
 - [ ] Replace worn nozzle if needed
 - [ ] Full mechanical inspection
 - [ ] Software/firmware update check
-- [ ] Complete system test}} print}}
+- [ ] Complete system test print
 
 ## Maintenance Log
 
@@ -69,26 +69,26 @@ Track routine maintenance, repairs, and operational issues to keep your printer}
 
 ## Filament Compatibility Notes
 
-Test results for different filament}} types used with this printer}}:
+Test results for different filament types used with this printer:
 
-| Filament Type | Brand | Nozzle}} Temp | Bed}} Temp | Print Speed | Success Rate | Notes |
-|---------------|-------|---------------|------------|-------------|--------------|-------|
-| PLA           |       |               |            |             |              |       |
-| PETG          |       |               |            |             |              |       |
-| ABS           |       |               |            |             |              |       |
-| TPU           |       |               |            |             |              |       |
-| Other:        |       |               |            |             |              |       |
+| Filament Type | Brand | Nozzle Temp | Bed Temp | Print Speed | Success Rate | Notes |
+|---------------|-------|-------------|----------|-------------|--------------|-------|
+| PLA           |       |             |          |             |              |       |
+| PETG          |       |             |          |             |              |       |
+| ABS           |       |             |          |             |              |       |
+| TPU           |       |             |          |             |              |       |
+| Other:        |       |             |          |             |              |       |
 
 ## Troubleshooting Reference
 
-### Common}} Issues and Solutions
+### Common Issues and Solutions
 
-Nozzle}} Clogs:
+Nozzle Clogs:
 - Date First Noticed: _
 - Attempts to Clear: _
 - Successful Solution: _
 
-Bed}} Adhesion Problems:
+Bed Adhesion Problems:
 - Suspected Cause: _
 - Solution Applied: _
 - Result: _
@@ -105,14 +105,14 @@ Extrusion Issues:
 
 ## Printer Performance Metrics
 
-Track overall printer}} health over time}}:
+Track overall printer health over time:
 
-| Month | Print Success Rate | Avg Print Time | Common}} Issues | Overall Assessment |
-|-------|--------------------|----------------|-----------------|--------------------|
-|       |                    |                |                 |                    |
-|       |                    |                |                 |                    |
-|       |                    |                |                 |                    |
-|       |                    |                |                 |                    |
+| Month | Print Success Rate | Avg Print Time | Common Issues | Overall Assessment |
+|-------|--------------------|----------------|---------------|--------------------|
+|       |                    |                |               |                    |
+|       |                    |                |               |                    |
+|       |                    |                |               |                    |
+|       |                    |                |               |                    |
 
 ## Warranty & Support Information
 

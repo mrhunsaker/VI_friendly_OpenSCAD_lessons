@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-d0af5d9e.js";
+            window.path_to_searchindex_js = "../../searchindex-7e85ce75.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-5b0c6224.js"></script>
+        <script src="../../toc-0b2574ce.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -221,23 +221,23 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="3dmake_foundation_lessons_3dmake_7-lessons_3dmake_7"><a class="header" href="#3dmake_foundation_lessons_3dmake_7-lessons_3dmake_7">Lesson 7: Parametric Transforms and the Phone Stand Project</a></h1>
-<p>Estimated time}}: 105-135 minutes</p>
+<p>Estimated time: 105-135 minutes</p>
 <p>Learning Objectives</p>
 <ul>
-<li>Use parametric}} transforms (<code>rotate()</code>, <code>translate()</code>, <code>scale()</code>) to position and orient sub-assemblies<sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">1</a></sup></li>
+<li>Use parametric transforms (<code>rotate()</code>, <code>translate()</code>, <code>scale()</code>) to position and orient sub-assemblies<sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">1</a></sup></li>
 <li>Apply the Minkowski operation as a method for creating filleted edges<sup class="footnote-reference" id="fr-2-1"><a href="#footnote-2">2</a></sup></li>
-<li>Create multi-part}} assemblies where each}} component serves a distinct structural function<sup class="footnote-reference" id="fr-3-1"><a href="#footnote-3">3</a></sup></li>
-<li>Test and validate parametric}} variations before}} printing}}<sup class="footnote-reference" id="fr-1-2"><a href="#footnote-1">1</a></sup></li>
+<li>Create multi-part assemblies where each component serves a distinct structural function<sup class="footnote-reference" id="fr-3-1"><a href="#footnote-3">3</a></sup></li>
+<li>Test and validate parametric variations before printing<sup class="footnote-reference" id="fr-1-2"><a href="#footnote-1">1</a></sup></li>
 </ul>
 <p>Materials</p>
 <ul>
 <li>3dMake project scaffold with <code>src/main.scad</code></li>
-<li>Access to a printer}} or slicing software</li>
-<li>Measuring tools (calipers) for post-print}} validation</li>
+<li>Access to a printer or slicing software</li>
+<li>Measuring tools (calipers) for post-print validation</li>
 </ul>
 <p>Related Project: Study <a href="../../assets/3dMake_Foundation/Lessons_3dMake_7/phone_stand.scad">phone_stand.scad</a> for an advanced example combining multiple transforms and Minkowski operations in a real-world assembly.</p>
 <h2 id="understanding-parametric-transforms"><a class="header" href="#understanding-parametric-transforms">Understanding Parametric Transforms</a></h2>
-<p>Transforms are the foundation of positioning objects in 3D space. Unlike drag-and-drop interfaces, OpenSCAD}} requires you}} to explicitly specify every position and rotation. This precision is what enables parametric}} design}}-once defined mathematically, a model can}} be infinitely reconfigured.</p>
+<p>Transforms are the foundation of positioning objects in 3D space. Unlike drag-and-drop interfaces, OpenSCAD requires you to explicitly specify every position and rotation. This precision is what enables parametric design-once defined mathematically, a model can be infinitely reconfigured.</p>
 <h3 id="core-transform-operations"><a class="header" href="#core-transform-operations">Core Transform Operations</a></h3>
 <div class="table-wrapper">
 <table>
@@ -253,7 +253,7 @@
 </table>
 </div>
 <h3 id="translating-objects-moving-in-3d-space"><a class="header" href="#translating-objects-moving-in-3d-space">Translating Objects: Moving in 3D Space</a></h3>
-<p><code>translate([x, y, z])</code> moves an object in three-dimensional space. The key insight is that you}} specify the movement <em>before}}</em> creating or referencing the object:</p>
+<p><code>translate([x, y, z])</code> moves an object in three-dimensional space. The key insight is that you specify the movement <em>before</em> creating or referencing the object:</p>
 <pre><code class="language-openscad">// Move a cube 30 mm to the right
 translate([30, 0, 0]) cube([20, 20, 20]);
 // Move it up by 10 mm
@@ -261,13 +261,13 @@ translate([0, 0, 10]) cube([20, 20, 20]);
 // Move it diagonally (right and forward)
 translate([30, 20, 0]) cube([20, 20, 20]);
 </code></pre>
-<p>A critical concept: When you}} use <code>translate()</code>, OpenSCAD}} moves the <em>coordinate system</em>, not just the object. The object is then created in the new}} coordinate system. This means:</p>
+<p>A critical concept: When you use <code>translate()</code>, OpenSCAD moves the <em>coordinate system</em>, not just the object. The object is then created in the new coordinate system. This means:</p>
 <pre><code class="language-openscad">// These are functionally equivalent:
 translate([10, 0, 0]) cube([20, 20, 20]);
 cube([20, 20, 20]);
 translate([10, 0, 0]) cube([20, 20, 20]);  // Second cube shifted right
 </code></pre>
-<p>For multi-part}} assemblies, you}} typically nest <code>translate()</code> calls within modules:</p>
+<p>For multi-part assemblies, you typically nest <code>translate()</code> calls within modules:</p>
 <pre><code class="language-openscad">module phone_stand() {
   // Base stays at origin
   base();
@@ -288,13 +288,13 @@ rotate([0, 0, 45]) cube([10, 10, 10]);
 // Rotate around all three axes
 rotate([45, 30, 15]) cube([10, 10, 10]);
 </code></pre>
-<p>Order matters: When you}} specify multiple rotations, they are applied in sequence (X, then Y, then Z). This can}} produce unexpected results:</p>
+<p>Order matters: When you specify multiple rotations, they are applied in sequence (X, then Y, then Z). This can produce unexpected results:</p>
 <pre><code class="language-openscad">// These produce different final orientations:
 rotate([45, 90, 0]) cube([10, 10, 10]);
 rotate([90, 45, 0]) cube([10, 10, 10]);
 </code></pre>
 <h3 id="combining-transforms-the-order-of-operations"><a class="header" href="#combining-transforms-the-order-of-operations">Combining Transforms: The Order of Operations</a></h3>
-<p>You can}} nest transforms to build}} complex positions. Remember: OpenSCAD}} applies transforms from the inside out:</p>
+<p>You can nest transforms to build complex positions. Remember: OpenSCAD applies transforms from the inside out:</p>
 <pre><code class="language-openscad">// Example: Position a cylinder so it sticks up from the back of a base
 // Step 1: Create a cylinder at the origin
 cylinder(r=5, h=20, $fn=32);
@@ -323,7 +323,7 @@ translate([100, 0, 0]) axes();  // Check alignment at offset
 </code></pre>
 <h2 id="step-by-step-tasks"><a class="header" href="#step-by-step-tasks">Step-by-step Tasks</a></h2>
 <h3 id="task-1-build-a-simple-phone-stand-base"><a class="header" href="#task-1-build-a-simple-phone-stand-base">Task 1: Build a Simple Phone Stand Base</a></h3>
-<p>Create a parametric}} base plate that can}} be adjusted for different phone weights and sizes:</p>
+<p>Create a parametric base plate that can be adjusted for different phone weights and sizes:</p>
 <pre><code class="language-openscad">// Phone Stand - Base Component
 // Adjustable platform for holding phones and tablets
 // === TOP-LEVEL PARAMETERS (customize these) ===
@@ -369,7 +369,7 @@ union() {
 }
 </code></pre>
 <h3 id="task-2-test-parameter-variations"><a class="header" href="#task-2-test-parameter-variations">Task 2: Test Parameter Variations</a></h3>
-<p>Save your file}} and test}} each}} variant by modifying the parameters}} and running <code>3dm build</code>:</p>
+<p>Save your file and test each variant by modifying the parameters and running <code>3dm build</code>:</p>
 <pre><code class="language-bash"># Build the base version
 3dm build
 
@@ -397,14 +397,14 @@ union() {
 <h3 id="task-3-run-3dm-orient-to-optimize-orientation"><a class="header" href="#task-3-run-3dm-orient-to-optimize-orientation">Task 3: Run <code>3dm orient</code> to Optimize Orientation</a></h3>
 <pre><code class="language-bash">3dm orient src/main.scad
 </code></pre>
-<p>This command}} analyzes your model and suggests:</p>
+<p>This command analyzes your model and suggests:</p>
 <ul>
-<li>Optimal rotation for minimal support}} material}}</li>
-<li>Estimated support}} volume that will need to be removed</li>
-<li>Print time}} savings from better orientation</li>
+<li>Optimal rotation for minimal support material</li>
+<li>Estimated support volume that will need to be removed</li>
+<li>Print time savings from better orientation</li>
 </ul>
 <h3 id="task-4-generate-variants-for-different-devices"><a class="header" href="#task-4-generate-variants-for-different-devices">Task 4: Generate Variants for Different Devices</a></h3>
-<p>Modify your main.scad to create}} three configurations (tablet, phone, document holder):</p>
+<p>Modify your main.scad to create three configurations (tablet, phone, document holder):</p>
 <pre><code class="language-openscad">// At the bottom of main.scad, uncomment one configuration:
 // Configuration 1: Phone (narrow, shallow angle)
 // base_width = 60;
@@ -417,15 +417,15 @@ angle = 40;
 // angle = 20;
 </code></pre>
 <h3 id="task-5-validate-and-document"><a class="header" href="#task-5-validate-and-document">Task 5: Validate and Document</a></h3>
-<p>After printing}} (or slicing), record:</p>
+<p>After printing (or slicing), record:</p>
 <ul>
 <li>Actual dimensions (measure with calipers)</li>
 <li>Angle accuracy (verify tilt angle with protractor or phone measurement app)</li>
 <li>Friction resistance (does phone stay in place?)</li>
-<li>Print quality}} (note any support}} marks, layer}} quality}})</li>
+<li>Print quality (note any support marks, layer quality)</li>
 </ul>
 <h2 id="advanced-adding-snap-fit-connectors"><a class="header" href="#advanced-adding-snap-fit-connectors">Advanced: Adding Snap-Fit Connectors</a></h2>
-<p>To join the base and back without fasteners, you}} can}} add interlocking features:</p>
+<p>To join the base and back without fasteners, you can add interlocking features:</p>
 <pre><code class="language-openscad">// Optional: Add snap-fit connectors
 // Slot in base plate (where back plate slides in)
 module base_slot() {
@@ -444,12 +444,12 @@ module back_tab() {
 </code></pre>
 <h2 id="checkpoint"><a class="header" href="#checkpoint">Checkpoint</a></h2>
 <ul>
-<li>After task 1, you}} have a working 3-part}} stand (base, back, lip)</li>
-<li>After task 2, you}}’ve tested at least 2 parameter}} variations</li>
-<li>After task 4, you}} have 3 different configurations ready to print}}</li>
+<li>After task 1, you have a working 3-part stand (base, back, lip)</li>
+<li>After task 2, you’ve tested at least 2 parameter variations</li>
+<li>After task 4, you have 3 different configurations ready to print</li>
 </ul>
-<h2 id="mathematical-functions-for-advanced-parametric-design"><a class="header" href="#mathematical-functions-for-advanced-parametric-design">Mathematical Functions for Advanced Parametric Design}}</a></h2>
-<p>Beyond translate}} and rotate, OpenSCAD}} includes mathematical functions for calculating positions, angles, and dimensions. These enable designs that respond dynamically to parameters}}.</p>
+<h2 id="mathematical-functions-for-advanced-parametric-design"><a class="header" href="#mathematical-functions-for-advanced-parametric-design">Mathematical Functions for Advanced Parametric Design</a></h2>
+<p>Beyond translate and rotate, OpenSCAD includes mathematical functions for calculating positions, angles, and dimensions. These enable designs that respond dynamically to parameters.</p>
 <h3 id="trigonometric-functions-sin-cos-atan2"><a class="header" href="#trigonometric-functions-sin-cos-atan2">Trigonometric Functions: sin(), cos(), atan2()</a></h3>
 <p>Trigonometric functions calculate angles and positions in circular patterns. Essential for gears, spirals, and polar arrangements:</p>
 <pre><code class="language-openscad">// Place objects in circular pattern using sin/cos
@@ -503,7 +503,7 @@ module simple_gear(radius, teeth_count, tooth_depth) {
 simple_gear(30, 12, 5);  // 30mm radius, 12 teeth, 5mm deep
 </code></pre>
 <h3 id="rounding-functions-round-floor-ceil"><a class="header" href="#rounding-functions-round-floor-ceil">Rounding Functions: round(), floor(), ceil()</a></h3>
-<p>Control precision and create}} integer-based parametric}} designs:</p>
+<p>Control precision and create integer-based parametric designs:</p>
 <pre><code class="language-openscad">// round(): Nearest integer
 echo(round(3.7));    // Prints: 4
 echo(round(3.2));    // Prints: 3
@@ -598,7 +598,7 @@ module fixture_on_surface(surface_direction, offset_distance) {
 // Mount fixture 20mm away from surface
 fixture_on_surface([1, 0, 0], 20);
 </code></pre>
-<h3 id="practical-application-parametric-spiral-design"><a class="header" href="#practical-application-parametric-spiral-design">Practical Application: Parametric Spiral Design}}</a></h3>
+<h3 id="practical-application-parametric-spiral-design"><a class="header" href="#practical-application-parametric-spiral-design">Practical Application: Parametric Spiral Design</a></h3>
 <p>Here’s a complete example combining multiple math functions:</p>
 <pre><code class="language-openscad">// Create a parametric spiral using sin/cos and sqrt
 module spiral_generator(max_radius, height, spiral_tightness) {
@@ -622,31 +622,31 @@ spiral_generator(30, 50, 3);  // 30mm radius, 50mm tall, 3 complete revolutions
 <h2 id="quiz---lesson-3dmake7-10-questions"><a class="header" href="#quiz---lesson-3dmake7-10-questions">Quiz - Lesson 3dMake.7 (10 questions)</a></h2>
 <ol>
 <li>What does the <code>rotate()</code> function do, and how does it differ from physical rotation<sup class="footnote-reference" id="fr-1-3"><a href="#footnote-1">1</a></sup>?</li>
-<li>Why is parametric}} positioning important for design}} iteration<sup class="footnote-reference" id="fr-1-4"><a href="#footnote-1">1</a></sup>?</li>
+<li>Why is parametric positioning important for design iteration<sup class="footnote-reference" id="fr-1-4"><a href="#footnote-1">1</a></sup>?</li>
 <li>Explain the Minkowski sum operation and why it’s useful for filleting<sup class="footnote-reference" id="fr-2-2"><a href="#footnote-2">2</a></sup>.</li>
-<li>How would you}} position a second component relative to the first}} using}} <code>translate()</code> <sup class="footnote-reference" id="fr-1-5"><a href="#footnote-1">1</a></sup>?</li>
-<li>What parameter}} would you}} change to make a phone stand suitable for tablets<sup class="footnote-reference" id="fr-3-2"><a href="#footnote-3">3</a></sup>?</li>
-<li>True or False: You can}} rotate an object around multiple axes in a single <code>rotate()</code> call.</li>
+<li>How would you position a second component relative to the first using <code>translate()</code> <sup class="footnote-reference" id="fr-1-5"><a href="#footnote-1">1</a></sup>?</li>
+<li>What parameter would you change to make a phone stand suitable for tablets<sup class="footnote-reference" id="fr-3-2"><a href="#footnote-3">3</a></sup>?</li>
+<li>True or False: You can rotate an object around multiple axes in a single <code>rotate()</code> call.</li>
 <li>Describe how <code>$fn</code> affects the appearance of rounded edges created by Minkowski<sup class="footnote-reference" id="fr-2-3"><a href="#footnote-2">2</a></sup>.</li>
-<li>What advantage does parametric}} design}} have over manually modeling each}} variant<sup class="footnote-reference" id="fr-1-6"><a href="#footnote-1">1</a></sup>?</li>
-<li>How would you}} verify that your stand’s angle matches your design}} intent after printing}}<sup class="footnote-reference" id="fr-3-3"><a href="#footnote-3">3</a></sup>?</li>
-<li>What design}} considerations should you}} account for when adding a lip to prevent phone slippage<sup class="footnote-reference" id="fr-3-4"><a href="#footnote-3">3</a></sup>?</li>
+<li>What advantage does parametric design have over manually modeling each variant<sup class="footnote-reference" id="fr-1-6"><a href="#footnote-1">1</a></sup>?</li>
+<li>How would you verify that your stand’s angle matches your design intent after printing<sup class="footnote-reference" id="fr-3-3"><a href="#footnote-3">3</a></sup>?</li>
+<li>What design considerations should you account for when adding a lip to prevent phone slippage<sup class="footnote-reference" id="fr-3-4"><a href="#footnote-3">3</a></sup>?</li>
 </ol>
 <h2 id="extension-problems-10"><a class="header" href="#extension-problems-10">Extension Problems (10)</a></h2>
 <ol>
-<li>Create five stand variants (for phones, tablets, documents, laptops, and books) by parameterizing width, angle, and lip height}}<sup class="footnote-reference" id="fr-3-5"><a href="#footnote-3">3</a></sup>.</li>
-<li>Add parametric}} feet (small cylinders) to the base to improve stability; test}} with and without feet<sup class="footnote-reference" id="fr-1-7"><a href="#footnote-1">1</a></sup>.</li>
-<li>Use <code>3dm describe</code> to document each}} variant’s key geometric properties<sup class="footnote-reference" id="fr-1-8"><a href="#footnote-1">1</a></sup>.</li>
-<li>Design}} and test}} a snap-fit connector system that joins the base and back without fasteners<sup class="footnote-reference" id="fr-3-6"><a href="#footnote-3">3</a></sup>.</li>
-<li>Create a comparison table showing print}} time}}, material}} weight, and assembly complexity for each}} variant<sup class="footnote-reference" id="fr-3-7"><a href="#footnote-3">3</a></sup>.</li>
-<li>Build a complete phone stand product family: define naming convention, parameter}} ranges, and assembly instructions.</li>
+<li>Create five stand variants (for phones, tablets, documents, laptops, and books) by parameterizing width, angle, and lip height<sup class="footnote-reference" id="fr-3-5"><a href="#footnote-3">3</a></sup>.</li>
+<li>Add parametric feet (small cylinders) to the base to improve stability; test with and without feet<sup class="footnote-reference" id="fr-1-7"><a href="#footnote-1">1</a></sup>.</li>
+<li>Use <code>3dm describe</code> to document each variant’s key geometric properties<sup class="footnote-reference" id="fr-1-8"><a href="#footnote-1">1</a></sup>.</li>
+<li>Design and test a snap-fit connector system that joins the base and back without fasteners<sup class="footnote-reference" id="fr-3-6"><a href="#footnote-3">3</a></sup>.</li>
+<li>Create a comparison table showing print time, material weight, and assembly complexity for each variant<sup class="footnote-reference" id="fr-3-7"><a href="#footnote-3">3</a></sup>.</li>
+<li>Build a complete phone stand product family: define naming convention, parameter ranges, and assembly instructions.</li>
 <li>Develop a stress analysis guide: identify high-stress areas in your stand and propose reinforcement strategies.</li>
-<li>Create a customization guide for end users: how to modify angle, width, and lip height}} for different devices.</li>
-<li>Design}} an accessibility}}-focused stand: include tactile angle markers and clear, non-visual assembly instructions.</li>
-<li>Write a comprehensive stand design}} documentation: CAD parameters}}, material}} recommendations, print}} settings, assembly, troubleshooting, and accessible design}} notes.</li>
+<li>Create a customization guide for end users: how to modify angle, width, and lip height for different devices.</li>
+<li>Design an accessibility-focused stand: include tactile angle markers and clear, non-visual assembly instructions.</li>
+<li>Write a comprehensive stand design documentation: CAD parameters, material recommendations, print settings, assembly, troubleshooting, and accessible design notes.</li>
 </ol>
 <h2 id="starter-code"><a class="header" href="#starter-code">Starter Code</a></h2>
-<p>Use this parametric}} phone stand as your starting point:</p>
+<p>Use this parametric phone stand as your starting point:</p>
 <pre><code class="language-openscad">// Parametric Phone Stand - Intermediate Example
 // Parameters
 thickness = 4;        // mm
@@ -689,13 +689,13 @@ union(){
 <hr>
 <ol class="footnote-definition">
 <li id="footnote-1">
-<p>OpenSCAD}} Manual - Transformations - <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations">https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations</a> <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a> <a href="#fr-1-3">↩3</a> <a href="#fr-1-4">↩4</a> <a href="#fr-1-5">↩5</a> <a href="#fr-1-6">↩6</a> <a href="#fr-1-7">↩7</a> <a href="#fr-1-8">↩8</a></p>
+<p>OpenSCAD Manual - Transformations - <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations">https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations</a> <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a> <a href="#fr-1-3">↩3</a> <a href="#fr-1-4">↩4</a> <a href="#fr-1-5">↩5</a> <a href="#fr-1-6">↩6</a> <a href="#fr-1-7">↩7</a> <a href="#fr-1-8">↩8</a></p>
 </li>
 <li id="footnote-2">
-<p>OpenSCAD}} Manual - Minkowski - <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#minkowski">https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#minkowski</a> <a href="#fr-2-1">↩</a> <a href="#fr-2-2">↩2</a> <a href="#fr-2-3">↩3</a></p>
+<p>OpenSCAD Manual - Minkowski - <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#minkowski">https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#minkowski</a> <a href="#fr-2-1">↩</a> <a href="#fr-2-2">↩2</a> <a href="#fr-2-3">↩3</a></p>
 </li>
 <li id="footnote-3">
-<p>3DMake}} GitHub}} - Phone Stand Example - <a href="https://github.com/tdeck/3dmake/blob/main/docs/examples.md">https://github.com/tdeck/3dmake/blob/main/docs/examples.md</a> <a href="#fr-3-1">↩</a> <a href="#fr-3-2">↩2</a> <a href="#fr-3-3">↩3</a> <a href="#fr-3-4">↩4</a> <a href="#fr-3-5">↩5</a> <a href="#fr-3-6">↩6</a> <a href="#fr-3-7">↩7</a></p>
+<p>3DMake GitHub - Phone Stand Example - <a href="https://github.com/tdeck/3dmake/blob/main/docs/examples.md">https://github.com/tdeck/3dmake/blob/main/docs/examples.md</a> <a href="#fr-3-1">↩</a> <a href="#fr-3-2">↩2</a> <a href="#fr-3-3">↩3</a> <a href="#fr-3-4">↩4</a> <a href="#fr-3-5">↩5</a> <a href="#fr-3-6">↩6</a> <a href="#fr-3-7">↩7</a></p>
 </li>
 </ol>
 

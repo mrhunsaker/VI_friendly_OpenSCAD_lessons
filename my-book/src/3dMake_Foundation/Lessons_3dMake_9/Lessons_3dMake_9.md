@@ -1,23 +1,23 @@
 # Lesson 9: Automation and 3dm Workflows {#3dmake_foundation_lessons_3dmake_9-lessons_3dmake_9}
 
-Estimated time}}: 90-120 minutes
+Estimated time: 90-120 minutes
 
 Learning Objectives
 
-- Chain 3dm commands}} to automate the design}}-to-print}} pipeline[^1]
-- Create shell}} scripts}} that manage multiple model variants automatically[^1]
-- Use `3dm lib` for library management and code}} reuse[^2]
+- Chain 3dm commands to automate the design-to-print pipeline[^1]
+- Create shell scripts that manage multiple model variants automatically[^1]
+- Use `3dm lib` for library management and code reuse[^2]
 - Optimize workflows for batch processing and continuous improvement[^1]
 
 Materials
 
-- 3dMake project scaffold with multiple model files}}
-- Terminal/command}} line access
-- Text editor for script}} creation
+- 3dMake project scaffold with multiple model files
+- Terminal/command line access
+- Text editor for script creation
 
 ## The 3dm Command Chain
 
-Instead of running commands}} one}} at a time}}, you}} can}} chain them to automate the entire workflow}}:
+Instead of running commands one at a time, you can chain them to automate the entire workflow:
 
 ```bash
 # Individual commands (slow, manual)
@@ -29,13 +29,13 @@ Instead of running commands}} one}} at a time}}, you}} can}} chain them to autom
 3dm build src/main.scad && 3dm describe src/main.scad && 3dm slice src/main.scad
 ```
 
-The `&&` operator ensures each}} command}} runs only if the previous one}} succeeds.
+The `&&` operator ensures each command runs only if the previous one succeeds.
 
 ## Step-by-step Tasks
 
 ### Task 1: Create a Multi-Variant Project
 
-Organize your project with multiple model files}}:
+Organize your project with multiple model files:
 
 ```
 src/
@@ -46,7 +46,7 @@ src/
 +------ stand_test.scad        # Experimental model
 ```
 
-Each file}} should be independent and buildable:
+Each file should be independent and buildable:
 
 ```openscad
 // keycap_small.scad
@@ -58,7 +58,7 @@ letter = "S";
 
 ### Task 2: Create a Batch Build Script
 
-Create `build_all.sh` to build}}, describe, and slice all models:
+Create `build_all.sh` to build, describe, and slice all models:
 
 ```bash
 #!/bin/bash
@@ -96,7 +96,7 @@ echo "=== All models processed ==="
 ls -lh build/*.gcode
 ```
 
-To run}} the script}}:
+To run the script:
 
 ```bash
 chmod +x build_all.sh    # Make executable
@@ -105,7 +105,7 @@ chmod +x build_all.sh    # Make executable
 
 ### Task 3: Create a Variant Testing Script
 
-Test parameter}} variations automatically and compare results:
+Test parameter variations automatically and compare results:
 
 ```bash
 #!/bin/bash
@@ -165,7 +165,7 @@ echo "Results saved to build/"
 
 ### Task 4: Library Management
 
-Organize reusable modules into}} libraries:
+Organize reusable modules into libraries:
 
 ```bash
 # Create a library structure
@@ -206,7 +206,7 @@ rounded_cube(30, 20, 15, 2);
 
 ### Task 5: Continuous Integration Concept
 
-Create a workflow}} that regenerates designs when parameters}} change:
+Create a workflow that regenerates designs when parameters change:
 
 ```bash
 #!/bin/bash
@@ -232,7 +232,7 @@ done
 
 ## Batch Processing Workflow
 
-Complete pipeline from code}} to print}}-ready files}}:
+Complete pipeline from code to print-ready files:
 
 ```bash
 #!/bin/bash
@@ -280,11 +280,11 @@ echo "Archive: ${OUTPUT_DIR}.tar.gz"
 
 ## File Import/Export: Working with External Assets
 
-Professional OpenSCAD}} projects often incorporate external files}}-DXF drawings, SVG logos, or shared library modules. Understanding import, include, and use is critical for managing complex projects.
+Professional OpenSCAD projects often incorporate external files-DXF drawings, SVG logos, or shared library modules. Understanding import, include, and use is critical for managing complex projects.
 
-### import(): Loading 3D Files (DXF, STL}}, AMF)
+### import(): Loading 3D Files (DXF, STL, AMF)
 
-Import 3D geometry}} from external files}}. Useful for incorporating CAD data or third-party parts:
+Import 3D geometry from external files. Useful for incorporating CAD data or third-party parts:
 
 ```openscad
 // Import DXF profile and extrude it
@@ -299,7 +299,7 @@ scale([1, 1, 10])  // Scale Z by 10 if DXF uses different units
   import("part.dxf");
 ```
 
-Practical Example: Combining CAD and Parametric Design}}
+Practical Example: Combining CAD and Parametric Design
 
 ```openscad
 // Import a technical DXF sketch and create 3D model around it
@@ -321,7 +321,7 @@ custom_bracket();
 
 ### include vs use: Library Management
 
-Both load external SCAD files}}, but with different scoping:
+Both load external SCAD files, but with different scoping:
 
 ```openscad
 // include: Imports functions and modules into current namespace
@@ -364,7 +364,7 @@ union() {
 }
 ```
 
-Content of utilities.scad (included file}}):
+Content of utilities.scad (included file):
 
 ```openscad
 // utilities.scad - Reusable helper functions
@@ -459,7 +459,7 @@ material_part([50, 50, 30]);
 
 ### File Path Handling and Organization
 
-Best practices for organizing files}} in larger projects:
+Best practices for organizing files in larger projects:
 
 ```openscad
 // Recommended project structure
@@ -531,50 +531,50 @@ complete_product();
 
 ## Checkpoint
 
-- After task 2, you}} have a working batch build}} script}}
-- After task 3, you}}'ve tested multiple parameter}} variants
-- After task 5, you}} understand continuous integration concepts
+- After task 2, you have a working batch build script
+- After task 3, you've tested multiple parameter variants
+- After task 5, you understand continuous integration concepts
 
 ## Quiz - Lesson 3dMake.9 (10 questions)
 
-1. What does the `&&` operator do in a command}} chain[^1]?
-2. Why would you}} use a batch build}} script}} instead of running commands}} manually[^1]?
-3. How would you}} extract the filename without extension in a bash script}}[^1]?
-4. Explain the purpose of creating a temporary SCAD file}} for variant testing[^1].
+1. What does the `&&` operator do in a command chain[^1]?
+2. Why would you use a batch build script instead of running commands manually[^1]?
+3. How would you extract the filename without extension in a bash script[^1]?
+4. Explain the purpose of creating a temporary SCAD file for variant testing[^1].
 5. What is `3dm lib list` used for[^2]?
-6. True or False: You must manually edit each}} model file}} to test}} different parameters}}.
-7. Describe what a continuous integration workflow}} accomplishes[^1].
-8. How would you}} save variant test}} results for comparison[^1]?
-9. What file}} format would you}} use to archive completed builds for long-term storage[^1]?
-10. How could you}} use scripting to automatically generate documentation for your designs[^1]?
+6. True or False: You must manually edit each model file to test different parameters.
+7. Describe what a continuous integration workflow accomplishes[^1].
+8. How would you save variant test results for comparison[^1]?
+9. What file format would you use to archive completed builds for long-term storage[^1]?
+10. How could you use scripting to automatically generate documentation for your designs[^1]?
 
 ## Extension Problems (10)
 
-1. Create a batch build}} script}} that processes 5+ model variants and generates a comparison report[^1].
-2. Design}} a parameter}} testing matrix: test}} 3 dimensions x 3 wall thicknesses and compare results[^1].
-3. Build a library module}} for common}} features (brackets, connectors, fasteners); use in multiple projects[^2].
-4. Create a "watch and rebuild" script}} that automatically regenerates designs when code}} changes[^1].
-5. Develop a production workflow}} script}} that generates timestamped builds with complete documentation[^1].
+1. Create a batch build script that processes 5+ model variants and generates a comparison report[^1].
+2. Design a parameter testing matrix: test 3 dimensions x 3 wall thicknesses and compare results[^1].
+3. Build a library module for common features (brackets, connectors, fasteners); use in multiple projects[^2].
+4. Create a "watch and rebuild" script that automatically regenerates designs when code changes[^1].
+5. Develop a production workflow script that generates timestamped builds with complete documentation[^1].
 6. Build an automated testing framework: validate designs against dimensional requirements[^1].
 7. Create a version control integration: automatically tag and archive successful builds[^1].
-8. Design}} a design}} parameter}} database: store and query historical variants and their properties[^1].
-9. Develop a remote print}} queue system: batch multiple models and send to printer}} automatically[^1].
-10. Write a comprehensive automation documentation: best practices, script}} templates, troubleshooting, and accessibility}} considerations.
+8. Design a design parameter database: store and query historical variants and their properties[^1].
+9. Develop a remote print queue system: batch multiple models and send to printer automatically[^1].
+10. Write a comprehensive automation documentation: best practices, script templates, troubleshooting, and accessibility considerations.
 
-## Helpful Shell}} Commands Reference
+## Helpful Shell Commands Reference
 
 | Command                                              | Purpose                   |
 |------------------------------------------------------|---------------------------|
-| `chmod +x script.sh`                                 | Make script}} executable  |
-| `./script.sh`                                        | Run a shell}} script}}    |
-| `for file in *.scad; do ... done`                    | Loop through files}}      |
+| `chmod +x script.sh`                                 | Make script executable    |
+| `./script.sh`                                        | Run a shell script        |
+| `for file in *.scad; do ... done`                    | Loop through files        |
 | `basename file.scad .scad`                           | Remove extension          |
-| `stat -c%s file` (Linux) or `stat -f%z file` (macOS) | Get file}} size           |
-| `find dir -name "*.scad"`                            | Find all SCAD files}}     |
+| `stat -c%s file` (Linux) or `stat -f%z file` (macOS) | Get file size             |
+| `find dir -name "*.scad"`                            | Find all SCAD files       |
 | `tar -czf archive.tar.gz folder/`                    | Create compressed archive |
 | `du -sh folder/`                                     | Show folder size          |
 
 References
 
-[^1]: 3DMake}} GitHub}} - Automation Examples - [https://github.com/tdeck/3dmake/blob/main/docs/automation.md](https://github.com/tdeck/3dmake/blob/main/docs/automation.md)
-[^2]: 3DMake}} Library Management - [https://github.com/tdeck/3dmake/wiki/Library-Management](https://github.com/tdeck/3dmake/wiki/Library-Management)
+[^1]: 3DMake GitHub - Automation Examples - [https://github.com/tdeck/3dmake/blob/main/docs/automation.md](https://github.com/tdeck/3dmake/blob/main/docs/automation.md)
+[^2]: 3DMake Library Management - [https://github.com/tdeck/3dmake/wiki/Library-Management](https://github.com/tdeck/3dmake/wiki/Library-Management)

@@ -1,109 +1,109 @@
 # Safety Checklist for 3D Printing {#3dmake_foundation_lessons_3dmake_5-safety_checklist}
 
-Complete this checklist before}} each}} printing}} session to maintain a safe workspace.
+Complete this checklist before each printing session to maintain a safe workspace.
 
 ## Pre-Print Setup
 
 - [ ] Work Area Clear
   - Clear desk/table of unnecessary items
-  - Remove tripping hazards around printer}}
-  - Ensure adequate ventilation around the printer}}
+  - Remove tripping hazards around printer
+  - Ensure adequate ventilation around the printer
 
 - [ ] Printer Inspection
-  - Check nozzle is clean (no old filament}} residue)
-  - Verify build}} plate is level
-  - Confirm heated bed}} temperature sensor attached
+  - Check nozzle is clean (no old filament residue)
+  - Verify build plate is level
+  - Confirm heated bed temperature sensor attached
   - Check all cables are secure and not frayed
 
 - [ ] Filament Preparation
   - Filament spool rotates freely (no binding)
   - Filament path clear of obstructions
   - Extruder drive gear clean (not clogged with plastic)
-  - New filament}} loaded correctly
+  - New filament loaded correctly
 
 - [ ] Environmental Conditions
   - Room temperature adequate (18-25C ideal)
-  - No direct drafts from windows/AC on printer}}
+  - No direct drafts from windows/AC on printer
   - Humidity levels reasonable (not extremely dry)
-  - Adequate lighting to see printer}} clearly
+  - Adequate lighting to see printer clearly
 
 ## During Print
 
 - [ ] First Layer Monitoring
-  - Watch first}} 2-3 layers closely
-  - Check bed}} adhesion (not too loose or tight)
+  - Watch first 2-3 layers closely
+  - Check bed adhesion (not too loose or tight)
   - Confirm nozzle temperature stable
   - Monitor for any unusual sounds
 
 - [ ] Regular Checks
-  - Check print}} every 15-30 minutes initially
-  - Verify filament}} is feeding smoothly
+  - Check print every 15-30 minutes initially
+  - Verify filament is feeding smoothly
   - Listen for grinding or skipping noises
-  - Watch for layer}} shifting or warping
+  - Watch for layer shifting or warping
 
 - [ ] Temperature Stability
-  - Heated bed}} maintains consistent temperature
-  - Nozzle}} temperature doesn't fluctuate
+  - Heated bed maintains consistent temperature
+  - Nozzle temperature doesn't fluctuate
   - No thermal runaway warnings
 
 ## Safety Alerts
 
 - [ ] STOP Print Immediately If
-  - Nozzle}} jams or extrudes unevenly
+  - Nozzle jams or extrudes unevenly
   - Filament completely stops feeding
   - Burning smell detected
-  - Visible layer}} shifting
+  - Visible layer shifting
   - Extruder grinding or skipping sounds
-  - Any}} unusual smells (especially chemical/burning)
+  - Any unusual smells (especially chemical/burning)
   - Power indicators show failure
 
 ## Post-Print
 
 - [ ] Cool Down Period
-  - Allow heated bed}} to cool naturally (10-15 min)
+  - Allow heated bed to cool naturally (10-15 min)
   - Keep hands clear until nozzle cools
-  - Verify printer}} is idle before}} touching
+  - Verify printer is idle before touching
 
 - [ ] Print Removal
   - Use proper tools (spatula/scraper)
-  - Remove print}} when bed}} fully cooled
-  - Inspect print}} for defects or sharp edges
+  - Remove print when bed fully cooled
+  - Inspect print for defects or sharp edges
   - Sand sharp edges if necessary
 
 - [ ] Equipment Cleaning
   - Wipe nozzle with brass wire when cooled
-  - Remove any plastic debris from build}} plate
-  - Check extruder for filament}} residue
+  - Remove any plastic debris from build plate
+  - Check extruder for filament residue
   - Clean any visible dust from electronics
 
 - [ ] Workspace Cleanup
   - Return tools to proper storage
-  - Dispose of support}} material}} safely
+  - Dispose of support material safely
   - Tidy workspace and verify clear pathways
-  - Store filament}} properly in dry location
+  - Store filament properly in dry location
 
 ## Hazard Awareness
 
 Hot Surfaces:
-- Nozzle}} reaches 200-250C
-- Bed}} reaches 60-100C
-- Allow adequate cooling time}} before}} touching
+- Nozzle reaches 200-250C
+- Bed reaches 60-100C
+- Allow adequate cooling time before touching
 
 Filament Hazards:
-- Tangled filament}} can}} jam printer}}
-- Always keep filament}} spool free-spinning
-- Check for knots or kinks before}} printing}}
+- Tangled filament can jam printer
+- Always keep filament spool free-spinning
+- Check for knots or kinks before printing
 
 Electrical Safety:
 - Never operate with wet hands
-- Keep liquids away from printer}}
-- Unplug before}} major maintenance
+- Keep liquids away from printer
+- Unplug before major maintenance
 - Verify power supply is grounded
 
 Material Hazards:
 - Some filaments emit fumes when heated
 - Ensure adequate ventilation
-- Use HEPA filter if printing}} indoors
+- Use HEPA filter if printing indoors
 - Dispose of failed prints properly
 
 ## Emergency Contacts

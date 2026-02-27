@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-d0af5d9e.js";
+            window.path_to_searchindex_js = "../../searchindex-7e85ce75.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-5b0c6224.js"></script>
+        <script src="../../toc-0b2574ce.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -220,8 +220,8 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="3dmake_foundation_lessons_3dmake_2-openscad-cheat-sheet"><a class="header" href="#3dmake_foundation_lessons_3dmake_2-openscad-cheat-sheet">OpenSCAD}} Quick Reference - Cheat Sheet</a></h1>
-<p><em>Keep this handy during all OpenSCAD}} work}}. For full documentation: <a href="https://openscad.org/documentation.html">https://openscad.org/documentation.html</a></em></p>
+                        <h1 id="3dmake_foundation_lessons_3dmake_2-openscad-cheat-sheet"><a class="header" href="#3dmake_foundation_lessons_3dmake_2-openscad-cheat-sheet">OpenSCAD Quick Reference - Cheat Sheet</a></h1>
+<p><em>Keep this handy during all OpenSCAD work. For full documentation: <a href="https://openscad.org/documentation.html">https://openscad.org/documentation.html</a></em></p>
 <h2 id="basic-shapes-primitives"><a class="header" href="#basic-shapes-primitives">Basic Shapes (Primitives)</a></h2>
 <pre><code class="language-scad">cube([length, width, height]);          // rectangular box
 cube([l, w, h], center = true);        // centered at origin
@@ -246,7 +246,7 @@ mirror([1, 0, 0]) shape;               // mirror across YZ plane (use [0,1,0] fo
 difference() { base; subtract; }       // remove one shape from another
 intersection() { shape1; shape2; }     // keep only overlapping region
 </code></pre>
-<p>Tip for difference}}(): Always make the subtracting shape 1 mm taller on both ends than the base shape to avoid zero-thickness artifacts.</p>
+<p>Tip for difference(): Always make the subtracting shape 1 mm taller on both ends than the base shape to avoid zero-thickness artifacts.</p>
 <pre><code class="language-scad">// Example - box with a hole:
 difference() {
     cube([30, 30, 10]);
@@ -315,7 +315,7 @@ max(3, 5, 1)           // returns 5
 <tr><th>Key</th><th>Action</th></tr>
 </thead>
 <tbody>
-<tr><td>F5</td><td>Preview}} (fast)</td></tr>
+<tr><td>F5</td><td>Preview (fast)</td></tr>
 <tr><td>F6</td><td>Full render (for export)</td></tr>
 <tr><td>Ctrl+S</td><td>Save</td></tr>
 <tr><td>Ctrl+Z</td><td>Undo</td></tr>
@@ -327,11 +327,11 @@ max(3, 5, 1)           // returns 5
 <h2 id="export-workflow"><a class="header" href="#export-workflow">Export Workflow</a></h2>
 <ol>
 <li>Press F6 (full render - wait for it to complete)</li>
-<li>File &gt; Export &gt; Export as STL}}</li>
+<li>File &gt; Export &gt; Export as STL</li>
 <li>Save with a descriptive filename: <code>projectname_v2.stl</code></li>
 </ol>
 <h2 id="sources"><a class="header" href="#sources">Sources</a></h2>
-<p>OpenSCAD}}. (n.d.). <em>OpenSCAD}} cheatsheet</em>. <a href="https://openscad.org/cheatsheet/">https://openscad.org/cheatsheet/</a><br>OpenSCAD}}. (n.d.). <em>OpenSCAD}} documentation</em>. <a href="https://openscad.org/documentation.html">https://openscad.org/documentation.html</a><br>Gohde, J., &amp; Kintel, M. (2021). <em>Programming with OpenSCAD}}</em>. No Starch Press. <a href="https://nostarch.com/programmingopenscad">https://nostarch.com/programmingopenscad</a></p>
+<p>OpenSCAD. (n.d.). <em>OpenSCAD cheatsheet</em>. <a href="https://openscad.org/cheatsheet/">https://openscad.org/cheatsheet/</a><br>OpenSCAD. (n.d.). <em>OpenSCAD documentation</em>. <a href="https://openscad.org/documentation.html">https://openscad.org/documentation.html</a><br>Gohde, J., &amp; Kintel, M. (2021). <em>Programming with OpenSCAD</em>. No Starch Press. <a href="https://nostarch.com/programmingopenscad">https://nostarch.com/programmingopenscad</a></p>
 
                     </main>
 

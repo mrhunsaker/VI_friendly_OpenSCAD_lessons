@@ -1,25 +1,25 @@
-# Lesson 8: Advanced Parametric Design}} and Interlocking Features {#3dmake_foundation_lessons_3dmake_8-lessons_3dmake_8}
+# Lesson 8: Advanced Parametric Design and Interlocking Features {#3dmake_foundation_lessons_3dmake_8-lessons_3dmake_8}
 
-Estimated time}}: 120-150 minutes
+Estimated time: 120-150 minutes
 
 Learning Objectives
 
-- Design}} parametric}} walls with precise clearances for stackable assemblies[^1]
+- Design parametric walls with precise clearances for stackable assemblies[^1]
 - Create interlocking features (rims, tabs, snap-fits) for assembly without fasteners[^2]
-- Apply chamfers for edge finishing and print}} quality}}[^3]
-- Manage tolerance stack-up in complex parametric}} designs[^1]
+- Apply chamfers for edge finishing and print quality[^3]
+- Manage tolerance stack-up in complex parametric designs[^1]
 
 Materials
 
 - 3dMake project scaffold with `src/main.scad`
 - Calipers for measuring clearances and wall thickness
-- Printer for test}} prints (recommended for validation)
+- Printer for test prints (recommended for validation)
 
-Related Project: Work through [stackable_bins.scad](../../assets/3dMake_Foundation/Lessons_3dMake_8/stackable_bins.scad) to apply tolerance design}} in a multi-part}} assembly with interlocking features.
+Related Project: Work through [stackable_bins.scad](../../assets/3dMake_Foundation/Lessons_3dMake_8/stackable_bins.scad) to apply tolerance design in a multi-part assembly with interlocking features.
 
 ## Understanding Tolerance and Clearance
 
-In 3D printing}}, tolerance refers to the acceptable variation in printed dimensions. When designing parts that must fit together, you}} must account for:
+In 3D printing, tolerance refers to the acceptable variation in printed dimensions. When designing parts that must fit together, you must account for:
 
 - Printer accuracy (~0.1-0.3 mm typical)
 - Material shrinkage (PLA: ~0.3-0.5%)
@@ -35,7 +35,7 @@ rim_inner = bin_outer - 2*wall - 2*rim_clearance
 
 ## Step-by-step Tasks
 
-### Task 1: Design}} a Parametric Stackable Bin
+### Task 1: Design a Parametric Stackable Bin
 
 Create a storage bin with walls, a removable lid, and interlocking features:
 
@@ -109,21 +109,21 @@ union() {
 
 ### Task 2: Test Stackability
 
-After printing}} the first}} bin:
+After printing the first bin:
 
 1. Print a second identical bin
-2. Stack one}} on top of the other and verify:
-   - Does the rim insert smoothly into}} the rim below?
-   - Can you}} stack 3 bins without binding?
+2. Stack one on top of the other and verify:
+   - Does the rim insert smoothly into the rim below?
+   - Can you stack 3 bins without binding?
    - Does the stack remain stable without tipping?
 
 Document:
-- Any}} friction or resistance (good for stability)
+- Any friction or resistance (good for stability)
 - Gaps or looseness (adjust `stack_clear` if needed)
 
-### Task 3: Design}} Variants for Different Storage Needs
+### Task 3: Design Variants for Different Storage Needs
 
-Create three different bin sizes using}} the same parametric}} code}}:
+Create three different bin sizes using the same parametric code:
 
 ```openscad
 // Small bin (desk organization)
@@ -144,7 +144,7 @@ bin_h = 40;
 
 ### Task 4: Add Optional Internal Dividers
 
-Enhance the design}} with parametric}} dividers:
+Enhance the design with parametric dividers:
 
 ```openscad
 // Optional: Parametric dividers
@@ -177,17 +177,17 @@ D      | 0.6 mm      | 2.5  | Better - stronger walls
 ========================================
 ```
 
-After printing}} and testing, record observations about fit quality}}.
+After printing and testing, record observations about fit quality.
 
 ## Advanced Topics: Snap-Fit Connectors and Multi-Part Assemblies
 
-As you}} progress beyond simple stacking, you}} may want to create}} assemblies where parts connect without fasteners. This section covers snap-fit and interlocking designs.
+As you progress beyond simple stacking, you may want to create assemblies where parts connect without fasteners. This section covers snap-fit and interlocking designs.
 
 ### Designing Snap-Fit Clips
 
 A snap-fit clip works by:
 1. Creating a flexible arm that bends outward to release
-2. Providing a catch (usually a small notch or undercut) that locks into}} place
+2. Providing a catch (usually a small notch or undercut) that locks into place
 3. Balancing flexibility (easy to insert/remove) with durability (survives many cycles)
 
 Here's a simple snap-fit connector:
@@ -217,10 +217,10 @@ union() {
 }
 ```
 
-Key parameters}} to test}}:
+Key parameters to test:
 - `thickness` (1.0-2.0 mm): Thicker = stronger but harder to flex
 - Arm length: Longer = more flexible but weaker
-- Catch geometry}}: Size and shape determine how securely parts lock
+- Catch geometry: Size and shape determine how securely parts lock
 
 ### Tolerance for Snap-Fits
 
@@ -238,13 +238,13 @@ If too tight: Parts won't insert or break on insertion
 
 ### Multi-Part Assemblies: Coordinating Multiple Components
 
-For more complex assemblies (like the Miniature Assembly in later projects), you}} need to:
+For more complex assemblies (like the Miniature Assembly in later projects), you need to:
 
 1. Define a global coordinate system where all parts know their positions
-2. Use modular design}} so each}} part}} can}} be printed, tested, and refined independently
-3. Document assembly order so users know which parts fit together first}}
+2. Use modular design so each part can be printed, tested, and refined independently
+3. Document assembly order so users know which parts fit together first
 
-Here's a pattern for a multi-part}} assembly:
+Here's a pattern for a multi-part assembly:
 
 ```openscad
 // Multi-part assembly pattern
@@ -284,16 +284,16 @@ module furniture_assembly() {
 furniture_assembly();
 ```
 
-Best practices for multi-part}} designs:
-1. Print and test}} parts individually before}} assembling
+Best practices for multi-part designs:
+1. Print and test parts individually before assembling
 2. Add small alignment features (pins, notches) to guide assembly
 3. Document which parts go together and the order
-4. Include spare parts (print}} 2-3 copies of small connecting pieces)
-5. Test the full assembly on a test}} print}} before}} final production
+4. Include spare parts (print 2-3 copies of small connecting pieces)
+5. Test the full assembly on a test print before final production
 
 ### Assembly Documentation
 
-For any multi-part}} project, create}} a simple assembly guide:
+For any multi-part project, create a simple assembly guide:
 
 ```
 Miniature Furniture Assembly Guide
@@ -318,7 +318,7 @@ Quality Checks:
 
 ## Advanced Assembly Best Practices
 
-Professional assemblies require planning beyond individual parts. Consider assembly sequence, tolerance management, and accessibility}}.
+Professional assemblies require planning beyond individual parts. Consider assembly sequence, tolerance management, and accessibility.
 
 ### Designing for Snap-Fit Assemblies
 
@@ -389,7 +389,7 @@ translate([0, 0, 30])
 
 ### Thread and Screw Calculations
 
-Design}} for M3 and M4 fasteners commonly available in 3D printing}} accessories:
+Design for M3 and M4 fasteners commonly available in 3D printing accessories:
 
 ```openscad
 // M3 bolt hole specifications
@@ -426,7 +426,7 @@ mounting_bracket(60, 20, 5);
 
 ### Alignment Features and Dowel Pins
 
-Guide parts into}} correct assembly positions:
+Guide parts into correct assembly positions:
 
 ```openscad
 // Dowel pin socket (receives alignment pin)
@@ -540,10 +540,10 @@ module assembly_with_clearance_check() {
 
 ## Checkpoint
 
-Chamfers improve print}} quality}} by:
+Chamfers improve print quality by:
 1. Reducing stress concentration at edges
-2. Improving layer}} adhesion at sharp transitions
-3. Making parts easier to remove from the build}} platform
+2. Improving layer adhesion at sharp transitions
+3. Making parts easier to remove from the build platform
 
 ```openscad
 // More sophisticated chamfer (chamfered corner)
@@ -558,39 +558,39 @@ module chamfer_corner(size, radius) {
 
 ## Checkpoint
 
-- After task 1, you}} have a single parametric}} bin
-- After task 2, you}}'ve verified stackability
-- After task 4, you}} have optional dividers working
-- After task 5, you}}'ve documented tolerance data
+- After task 1, you have a single parametric bin
+- After task 2, you've verified stackability
+- After task 4, you have optional dividers working
+- After task 5, you've documented tolerance data
 
 ## Quiz - Lesson 3dMake.8 (10 questions)
 
-1. What is the purpose of the `stack_clear` parameter}} in stackable bin design}}[^1]?
-2. Why is wall thickness a critical parameter}} in structural parts[^1]?
-3. Explain what "tolerance stack-up" means and why it matters in multi-part}} assemblies[^1].
-4. How does chamfering improve print}} quality}}[^3]?
-5. What parameter}} would you}} adjust to make bins stack with more friction for stability[^1]?
-6. True or False: Thin walls always print}} faster than thick walls.
-7. Describe the difference}} between}} the outer rim and inner rim in the stackable bin design}}[^1].
-8. Why might you}} use `num_dividers` as a parameter}} instead of hard-coding divider positions[^1]?
-9. How would you}} measure whether your printed bin matches the designed dimensions[^1]?
-10. What design}} considerations apply when stacking more than 3 bins vertically[^1]?
+1. What is the purpose of the `stack_clear` parameter in stackable bin design[^1]?
+2. Why is wall thickness a critical parameter in structural parts[^1]?
+3. Explain what "tolerance stack-up" means and why it matters in multi-part assemblies[^1].
+4. How does chamfering improve print quality[^3]?
+5. What parameter would you adjust to make bins stack with more friction for stability[^1]?
+6. True or False: Thin walls always print faster than thick walls.
+7. Describe the difference between the outer rim and inner rim in the stackable bin design[^1].
+8. Why might you use `num_dividers` as a parameter instead of hard-coding divider positions[^1]?
+9. How would you measure whether your printed bin matches the designed dimensions[^1]?
+10. What design considerations apply when stacking more than 3 bins vertically[^1]?
 
 ## Extension Problems (10)
 
-1. Create five bin variants (small, medium, large, tall, shallow) using}} parametric}} logic; print}} and stack them[^1].
-2. Add parametric}} rounded corners using}} `minkowski()` to improve structural integrity[^3].
-3. Design}} a custom divider system: parameterize number, position, and thickness; test}} strength[^1].
-4. Conduct a tolerance study: print}} bins with `stack_clear` values of 0.4, 0.6, 0.8 mm; document fit quality}}[^1].
-5. Create a modular stacking system with connecting clips or latches; test}} assembly and disassembly[^2].
-6. Build a complete storage system: design}} multiple bin sizes with standard stackability and create}} an assembly guide.
-7. Develop a manufacturing specification document: tolerance ranges, material}} recommendations, quality}} acceptance criteria.
-8. Design}} a labeling system: add parametric}} label holders or embossed areas for identifying bin contents.
+1. Create five bin variants (small, medium, large, tall, shallow) using parametric logic; print and stack them[^1].
+2. Add parametric rounded corners using `minkowski()` to improve structural integrity[^3].
+3. Design a custom divider system: parameterize number, position, and thickness; test strength[^1].
+4. Conduct a tolerance study: print bins with `stack_clear` values of 0.4, 0.6, 0.8 mm; document fit quality[^1].
+5. Create a modular stacking system with connecting clips or latches; test assembly and disassembly[^2].
+6. Build a complete storage system: design multiple bin sizes with standard stackability and create an assembly guide.
+7. Develop a manufacturing specification document: tolerance ranges, material recommendations, quality acceptance criteria.
+8. Design a labeling system: add parametric label holders or embossed areas for identifying bin contents.
 9. Create a structural analysis guide: identify stress concentration points and propose reinforcement strategies.
-10. Write comprehensive bin design}} documentation: parameters}}, variants, assembly, stackability testing, tolerance management, maintenance, and accessibility}} features.
+10. Write comprehensive bin design documentation: parameters, variants, assembly, stackability testing, tolerance management, maintenance, and accessibility features.
 
 References
 
-[^1]: 3DMake}} GitHub}} - Stackable Bins Example - [https://github.com/tdeck/3dmake/blob/main/docs/examples.md](https://github.com/tdeck/3dmake/blob/main/docs/examples.md)
-[^2]: Engineering Tolerance in 3D Printing - [https://www.sculpteo.com/en/blog/2021/06/17/tolerance-3d-printing}}/](https://www.sculpteo.com/en/blog/2021/06/17/tolerance-3d-printing}}/)
-[^3]: OpenSCAD}} Manual - Minkowski (chamfers/rounding) - [https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#minkowski](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#minkowski)
+[^1]: 3DMake GitHub - Stackable Bins Example - [https://github.com/tdeck/3dmake/blob/main/docs/examples.md](https://github.com/tdeck/3dmake/blob/main/docs/examples.md)
+[^2]: Engineering Tolerance in 3D Printing - [https://www.sculpteo.com/en/blog/2021/06/17/tolerance-3d-printing/](https://www.sculpteo.com/en/blog/2021/06/17/tolerance-3d-printing/)
+[^3]: OpenSCAD Manual - Minkowski (chamfers/rounding) - [https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#minkowski](https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#minkowski)

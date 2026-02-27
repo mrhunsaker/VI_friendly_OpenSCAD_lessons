@@ -36,9 +36,14 @@ echo ""
 cd "$BOOKDIR"
 RUST_BACKTRACE=full mdbook build --dest-dir "$BUILDOUTPUT"
 
+echo "building pdf in root directory with lualatex"
+cd "$SCRIPTDIR"
+lualatex "$BUILDOUTPUT/pandoc/latex/OpenSCAD_Curriculum.tex"
+lualatex "$BUILDOUTPUT/pandoc/latex/OpenSCAD_Curriculum.tex"
+
 echo ""
-echo " HTML Build complete!"
-echo " HTML output is available at: $BUILDOUTPUT"
+echo "All Builds complete!"
+echo " Outputs are available at: $BUILDOUTPUT"
 
 
 

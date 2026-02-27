@@ -1,12 +1,12 @@
 # Feedback Collection Template {#3dmake_foundation_lessons_3dmake_11-feedback_collection_template}
 
-Structured approach to gathering and analyzing feedback from users and stakeholders throughout the design}} process.
+Structured approach to gathering and analyzing feedback from users and stakeholders throughout the design process.
 
 ## Feedback Collection Strategy
 
 ### Collection Points
 
-- [ ] Prototype testing (early design}})
+- [ ] Prototype testing (early design)
 - [ ] Mid-development review
 - [ ] Beta testing (near completion)
 - [ ] Post-launch review
@@ -32,12 +32,12 @@ Structured approach to gathering and analyzing feedback from users and stakehold
 
 ### Initial Reactions
 
-1. "What is your first}} impression of this design}}?"
+1. "What is your first impression of this design?"
    -
-2. "Is it what you}} expected?"
+2. "Is it what you expected?"
    - [ ] More than expected  [ ] As expected  [ ] Less than expected
    - Explanation:
-3. "Would you}} use this?"
+3. "Would you use this?"
    - [ ] Definitely  [ ] Maybe  [ ] No  [ ] Not sure
    - Why?
 
@@ -45,7 +45,7 @@ Structured approach to gathering and analyzing feedback from users and stakehold
 
 ### Using the Product
 
-1. "Can you}} show me how you}} would use this?"
+1. "Can you show me how you would use this?"
    - (Observe: difficulties, hesitations, confusion)
    - Notes:
 
@@ -53,7 +53,7 @@ Structured approach to gathering and analyzing feedback from users and stakehold
    - [ ] Very easy  [ ] Easy  [ ] Neutral  [ ] Difficult  [ ] Very difficult
    - What was confusing?
 
-3. "Are there any parts that don't work}} well together?"
+3. "Are there any parts that don't work well together?"
    -
 
 ### Specific Usability Issues
@@ -78,19 +78,19 @@ Critical Functions:
 - Most important for your use:
 - Missing capability:
 
-### Section 4: Physical Design}} Assessment (10 minutes)
+### Section 4: Physical Design Assessment (10 minutes)
 
 ### Appearance & Feel
 
-### Visual Design}}
+### Visual Design
 
 - [ ] Appealing  [ ] Acceptable  [ ] Unappealing  [ ] Doesn't matter
 - Suggestions:
 
 ### Size & Comfort
 
-- Too large / Just right / Too small (circle one}})
-- Weight: Too heavy / Just right / Too light (circle one}})
+- Too large / Just right / Too small (circle one)
+- Weight: Too heavy / Just right / Too light (circle one)
 - Comfort feedback:
 
 Material & Texture:
@@ -108,13 +108,13 @@ Color/Finish:
 
 During Testing:
 
-1. "Did it work}} consistently?"
+1. "Did it work consistently?"
    - [ ] Always  [ ] Usually  [ ] Sometimes  [ ] Never
    - Issues experienced:
 2. "How solid/durable does it feel?"
    - [ ] Very durable  [ ] Durable  [ ] Adequate  [ ] Fragile  [ ] Very fragile
    - Concerns:
-3. "Any}} parts that seem weak?"
+3. "Any parts that seem weak?"
 
 ### Section 6: Overall Satisfaction (5 minutes)
 
@@ -125,7 +125,7 @@ Scoring Matrix:
 | Overall satisfaction | 1 2 3 4 5 |          |
 | Likely to recommend  | 1 2 3 4 5 |          |
 | Meets my needs       | 1 2 3 4 5 |          |
-| Design}} quality}}   | 1 2 3 4 5 |          |
+| Design quality       | 1 2 3 4 5 |          |
 | Value for cost       | 1 2 3 4 5 |          |
 
 (1=Poor, 5=Excellent)
@@ -143,16 +143,16 @@ Open-Ended Feedback:
 3. "What should we keep as-is?"
    -
 
-4. "Would you}} buy/use this?"
+4. "Would you buy/use this?"
    - [ ] Yes  [ ] Maybe  [ ] No
    - Why?
 
 Suggestions Priority:
 
-| Suggestion | Priority     | Category                   | Effort        |
-|------------|--------------|----------------------------|---------------|
-|            | High/Med/Low | Design}}/Function/Material | Easy/Med/Hard |
-|            | High/Med/Low | Design}}/Function/Material | Easy/Med/Hard |
+| Suggestion | Priority     | Category                 | Effort        |
+|------------|--------------|--------------------------|---------------|
+|            | High/Med/Low | Design/Function/Material | Easy/Med/Hard |
+|            | High/Med/Low | Design/Function/Material | Easy/Med/Hard |
 
 ### Section 8: Accessibility Check (5 minutes)
 
@@ -166,13 +166,13 @@ If applicable to your product:
    - [ ] Yes  [ ] With difficulty  [ ] No
    - How:
 
-3. "Are there any accessibility}} barriers?"
+3. "Are there any accessibility barriers?"
    -
 
 ## Post-Testing Notes
 
 Tester Behavior Observations:
-(What did you}} notice about how they used it?)
+(What did you notice about how they used it?)
 
 Surprises:
 (Anything unexpected?)
@@ -193,7 +193,7 @@ Non-Critical Issues:
 
 ## Feedback Analysis (After Multiple Sessions)
 
-### Common}} Themes
+### Common Themes
 
 Frequently Mentioned Issues:
 
@@ -235,12 +235,12 @@ Nice to Have (Low Priority - enhancements):
 1.
 2.
 
-### Design}} Changes Resulting from Feedback
+### Design Changes Resulting from Feedback
 
-| Original Design}} | Feedback | Change Made | Rationale |
-|-------------------|----------|-------------|-----------|
-|                   |          |             |           |
-|                   |          |             |           |
+| Original Design | Feedback | Change Made | Rationale |
+|-----------------|----------|-------------|-----------|
+|                 |          |             |           |
+|                 |          |             |           |
 
 ## Follow-Up Actions
 
@@ -248,7 +248,7 @@ Immediate Actions:
 
 - [ ] Fix critical issues:
 - [ ] Notify stakeholders:
-- [ ] Update design}} document:
+- [ ] Update design document:
 
 Next Test Cycle:
 
@@ -266,7 +266,7 @@ Timeline for Changes:
 
 Share findings with:
 
-- [ ] Design}} team
+- [ ] Design team
 - [ ] Stakeholders
 - [ ] User community
 - [ ] Management
@@ -296,7 +296,7 @@ Reviewed By:
 
 Status:
 
-- [ ]  Feedback incorporated into}} design}}
+- [ ]  Feedback incorporated into design
 - [ ]  Partial incorporation (note: )
 - [ ]  Under review (decision pending)
 - [ ]  Declined (reason: )

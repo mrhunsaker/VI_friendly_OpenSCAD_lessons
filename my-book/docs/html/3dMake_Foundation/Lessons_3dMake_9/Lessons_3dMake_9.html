@@ -81,10 +81,10 @@
             const path_to_root = "../../";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "../../searchindex-d0af5d9e.js";
+            window.path_to_searchindex_js = "../../searchindex-7e85ce75.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="../../toc-5b0c6224.js"></script>
+        <script src="../../toc-0b2574ce.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -221,22 +221,22 @@
                 <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="3dmake_foundation_lessons_3dmake_9-lessons_3dmake_9"><a class="header" href="#3dmake_foundation_lessons_3dmake_9-lessons_3dmake_9">Lesson 9: Automation and 3dm Workflows</a></h1>
-<p>Estimated time}}: 90-120 minutes</p>
+<p>Estimated time: 90-120 minutes</p>
 <p>Learning Objectives</p>
 <ul>
-<li>Chain 3dm commands}} to automate the design}}-to-print}} pipeline<sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">1</a></sup></li>
-<li>Create shell}} scripts}} that manage multiple model variants automatically<sup class="footnote-reference" id="fr-1-2"><a href="#footnote-1">1</a></sup></li>
-<li>Use <code>3dm lib</code> for library management and code}} reuse<sup class="footnote-reference" id="fr-2-1"><a href="#footnote-2">2</a></sup></li>
+<li>Chain 3dm commands to automate the design-to-print pipeline<sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">1</a></sup></li>
+<li>Create shell scripts that manage multiple model variants automatically<sup class="footnote-reference" id="fr-1-2"><a href="#footnote-1">1</a></sup></li>
+<li>Use <code>3dm lib</code> for library management and code reuse<sup class="footnote-reference" id="fr-2-1"><a href="#footnote-2">2</a></sup></li>
 <li>Optimize workflows for batch processing and continuous improvement<sup class="footnote-reference" id="fr-1-3"><a href="#footnote-1">1</a></sup></li>
 </ul>
 <p>Materials</p>
 <ul>
-<li>3dMake project scaffold with multiple model files}}</li>
-<li>Terminal/command}} line access</li>
-<li>Text editor for script}} creation</li>
+<li>3dMake project scaffold with multiple model files</li>
+<li>Terminal/command line access</li>
+<li>Text editor for script creation</li>
 </ul>
 <h2 id="the-3dm-command-chain"><a class="header" href="#the-3dm-command-chain">The 3dm Command Chain</a></h2>
-<p>Instead of running commands}} one}} at a time}}, you}} can}} chain them to automate the entire workflow}}:</p>
+<p>Instead of running commands one at a time, you can chain them to automate the entire workflow:</p>
 <pre><code class="language-bash"># Individual commands (slow, manual)
 3dm build src/main.scad
 3dm describe src/main.scad
@@ -245,10 +245,10 @@
 # Chained commands (fast, automatic)
 3dm build src/main.scad &amp;&amp; 3dm describe src/main.scad &amp;&amp; 3dm slice src/main.scad
 </code></pre>
-<p>The <code>&amp;&amp;</code> operator ensures each}} command}} runs only if the previous one}} succeeds.</p>
+<p>The <code>&amp;&amp;</code> operator ensures each command runs only if the previous one succeeds.</p>
 <h2 id="step-by-step-tasks"><a class="header" href="#step-by-step-tasks">Step-by-step Tasks</a></h2>
 <h3 id="task-1-create-a-multi-variant-project"><a class="header" href="#task-1-create-a-multi-variant-project">Task 1: Create a Multi-Variant Project</a></h3>
-<p>Organize your project with multiple model files}}:</p>
+<p>Organize your project with multiple model files:</p>
 <pre><code>src/
 +------ main.scad              # Base model
 +------ keycap_small.scad      # Variant 1
@@ -256,7 +256,7 @@
 +------ keycap_large.scad      # Variant 3
 +------ stand_test.scad        # Experimental model
 </code></pre>
-<p>Each file}} should be independent and buildable:</p>
+<p>Each file should be independent and buildable:</p>
 <pre><code class="language-openscad">// keycap_small.scad
 key_size = 14;
 key_height = 10;
@@ -264,7 +264,7 @@ letter = "S";
 // ... rest of keycap code
 </code></pre>
 <h3 id="task-2-create-a-batch-build-script"><a class="header" href="#task-2-create-a-batch-build-script">Task 2: Create a Batch Build Script</a></h3>
-<p>Create <code>build_all.sh</code> to build}}, describe, and slice all models:</p>
+<p>Create <code>build_all.sh</code> to build, describe, and slice all models:</p>
 <pre><code class="language-bash">#!/bin/bash
 # build_all.sh - Batch process all SCAD files
 
@@ -299,12 +299,12 @@ done
 echo "=== All models processed ==="
 ls -lh build/*.gcode
 </code></pre>
-<p>To run}} the script}}:</p>
+<p>To run the script:</p>
 <pre><code class="language-bash">chmod +x build_all.sh    # Make executable
 ./build_all.sh           # Run
 </code></pre>
 <h3 id="task-3-create-a-variant-testing-script"><a class="header" href="#task-3-create-a-variant-testing-script">Task 3: Create a Variant Testing Script</a></h3>
-<p>Test parameter}} variations automatically and compare results:</p>
+<p>Test parameter variations automatically and compare results:</p>
 <pre><code class="language-bash">#!/bin/bash
 # test_variants.sh - Build and compare parameter variants
 
@@ -360,7 +360,7 @@ echo "=== Variant testing complete ==="
 echo "Results saved to build/"
 </code></pre>
 <h3 id="task-4-library-management"><a class="header" href="#task-4-library-management">Task 4: Library Management</a></h3>
-<p>Organize reusable modules into}} libraries:</p>
+<p>Organize reusable modules into libraries:</p>
 <pre><code class="language-bash"># Create a library structure
 mkdir -p lib
 mkdir -p lib/connectors
@@ -394,7 +394,7 @@ EOF
 rounded_cube(30, 20, 15, 2);
 </code></pre>
 <h3 id="task-5-continuous-integration-concept"><a class="header" href="#task-5-continuous-integration-concept">Task 5: Continuous Integration Concept</a></h3>
-<p>Create a workflow}} that regenerates designs when parameters}} change:</p>
+<p>Create a workflow that regenerates designs when parameters change:</p>
 <pre><code class="language-bash">#!/bin/bash
 # watch_and_build.sh - Rebuild whenever SCAD files change
 
@@ -416,7 +416,7 @@ while true; do
 done
 </code></pre>
 <h2 id="batch-processing-workflow"><a class="header" href="#batch-processing-workflow">Batch Processing Workflow</a></h2>
-<p>Complete pipeline from code}} to print}}-ready files}}:</p>
+<p>Complete pipeline from code to print-ready files:</p>
 <pre><code class="language-bash">#!/bin/bash
 # production_build.sh - Complete pipeline
 
@@ -460,9 +460,9 @@ echo "Output: $OUTPUT_DIR"
 echo "Archive: ${OUTPUT_DIR}.tar.gz"
 </code></pre>
 <h2 id="file-importexport-working-with-external-assets"><a class="header" href="#file-importexport-working-with-external-assets">File Import/Export: Working with External Assets</a></h2>
-<p>Professional OpenSCAD}} projects often incorporate external files}}-DXF drawings, SVG logos, or shared library modules. Understanding import, include, and use is critical for managing complex projects.</p>
-<h3 id="import-loading-3d-files-dxf-stl-amf"><a class="header" href="#import-loading-3d-files-dxf-stl-amf">import(): Loading 3D Files (DXF, STL}}, AMF)</a></h3>
-<p>Import 3D geometry}} from external files}}. Useful for incorporating CAD data or third-party parts:</p>
+<p>Professional OpenSCAD projects often incorporate external files-DXF drawings, SVG logos, or shared library modules. Understanding import, include, and use is critical for managing complex projects.</p>
+<h3 id="import-loading-3d-files-dxf-stl-amf"><a class="header" href="#import-loading-3d-files-dxf-stl-amf">import(): Loading 3D Files (DXF, STL, AMF)</a></h3>
+<p>Import 3D geometry from external files. Useful for incorporating CAD data or third-party parts:</p>
 <pre><code class="language-openscad">// Import DXF profile and extrude it
 import("path/to/profile.dxf");  // Load 2D or 3D geometry
 // Practical example: Import CAD drawing and extrude
@@ -474,7 +474,7 @@ module extruded_part() {
 scale([1, 1, 10])  // Scale Z by 10 if DXF uses different units
   import("part.dxf");
 </code></pre>
-<p>Practical Example: Combining CAD and Parametric Design}}</p>
+<p>Practical Example: Combining CAD and Parametric Design</p>
 <pre><code class="language-openscad">// Import a technical DXF sketch and create 3D model around it
 module custom_bracket() {
   // Import 2D profile from technical drawing
@@ -492,7 +492,7 @@ module custom_bracket() {
 custom_bracket();
 </code></pre>
 <h3 id="include-vs-use-library-management"><a class="header" href="#include-vs-use-library-management">include vs use: Library Management</a></h3>
-<p>Both load external SCAD files}}, but with different scoping:</p>
+<p>Both load external SCAD files, but with different scoping:</p>
 <pre><code class="language-openscad">// include: Imports functions and modules into current namespace
 // Use this when you want all definitions merged into current file
 include &lt;library.scad&gt;
@@ -529,7 +529,7 @@ union() {
     bolt_m3(length=10);
 }
 </code></pre>
-<p>Content of utilities.scad (included file}}):</p>
+<p>Content of utilities.scad (included file):</p>
 <pre><code class="language-openscad">// utilities.scad - Reusable helper functions
 // Create repeating pattern
 module repeat_linear(count, spacing) {
@@ -609,7 +609,7 @@ module material_part(dimensions) {
 material_part([50, 50, 30]);
 </code></pre>
 <h3 id="file-path-handling-and-organization"><a class="header" href="#file-path-handling-and-organization">File Path Handling and Organization</a></h3>
-<p>Best practices for organizing files}} in larger projects:</p>
+<p>Best practices for organizing files in larger projects:</p>
 <pre><code class="language-openscad">// Recommended project structure
 /*
 my_project/
@@ -675,49 +675,49 @@ complete_product();
 </code></pre>
 <h2 id="checkpoint"><a class="header" href="#checkpoint">Checkpoint</a></h2>
 <ul>
-<li>After task 2, you}} have a working batch build}} script}}</li>
-<li>After task 3, you}}’ve tested multiple parameter}} variants</li>
-<li>After task 5, you}} understand continuous integration concepts</li>
+<li>After task 2, you have a working batch build script</li>
+<li>After task 3, you’ve tested multiple parameter variants</li>
+<li>After task 5, you understand continuous integration concepts</li>
 </ul>
 <h2 id="quiz---lesson-3dmake9-10-questions"><a class="header" href="#quiz---lesson-3dmake9-10-questions">Quiz - Lesson 3dMake.9 (10 questions)</a></h2>
 <ol>
-<li>What does the <code>&amp;&amp;</code> operator do in a command}} chain<sup class="footnote-reference" id="fr-1-4"><a href="#footnote-1">1</a></sup>?</li>
-<li>Why would you}} use a batch build}} script}} instead of running commands}} manually<sup class="footnote-reference" id="fr-1-5"><a href="#footnote-1">1</a></sup>?</li>
-<li>How would you}} extract the filename without extension in a bash script}}<sup class="footnote-reference" id="fr-1-6"><a href="#footnote-1">1</a></sup>?</li>
-<li>Explain the purpose of creating a temporary SCAD file}} for variant testing<sup class="footnote-reference" id="fr-1-7"><a href="#footnote-1">1</a></sup>.</li>
+<li>What does the <code>&amp;&amp;</code> operator do in a command chain<sup class="footnote-reference" id="fr-1-4"><a href="#footnote-1">1</a></sup>?</li>
+<li>Why would you use a batch build script instead of running commands manually<sup class="footnote-reference" id="fr-1-5"><a href="#footnote-1">1</a></sup>?</li>
+<li>How would you extract the filename without extension in a bash script<sup class="footnote-reference" id="fr-1-6"><a href="#footnote-1">1</a></sup>?</li>
+<li>Explain the purpose of creating a temporary SCAD file for variant testing<sup class="footnote-reference" id="fr-1-7"><a href="#footnote-1">1</a></sup>.</li>
 <li>What is <code>3dm lib list</code> used for<sup class="footnote-reference" id="fr-2-2"><a href="#footnote-2">2</a></sup>?</li>
-<li>True or False: You must manually edit each}} model file}} to test}} different parameters}}.</li>
-<li>Describe what a continuous integration workflow}} accomplishes<sup class="footnote-reference" id="fr-1-8"><a href="#footnote-1">1</a></sup>.</li>
-<li>How would you}} save variant test}} results for comparison<sup class="footnote-reference" id="fr-1-9"><a href="#footnote-1">1</a></sup>?</li>
-<li>What file}} format would you}} use to archive completed builds for long-term storage<sup class="footnote-reference" id="fr-1-10"><a href="#footnote-1">1</a></sup>?</li>
-<li>How could you}} use scripting to automatically generate documentation for your designs<sup class="footnote-reference" id="fr-1-11"><a href="#footnote-1">1</a></sup>?</li>
+<li>True or False: You must manually edit each model file to test different parameters.</li>
+<li>Describe what a continuous integration workflow accomplishes<sup class="footnote-reference" id="fr-1-8"><a href="#footnote-1">1</a></sup>.</li>
+<li>How would you save variant test results for comparison<sup class="footnote-reference" id="fr-1-9"><a href="#footnote-1">1</a></sup>?</li>
+<li>What file format would you use to archive completed builds for long-term storage<sup class="footnote-reference" id="fr-1-10"><a href="#footnote-1">1</a></sup>?</li>
+<li>How could you use scripting to automatically generate documentation for your designs<sup class="footnote-reference" id="fr-1-11"><a href="#footnote-1">1</a></sup>?</li>
 </ol>
 <h2 id="extension-problems-10"><a class="header" href="#extension-problems-10">Extension Problems (10)</a></h2>
 <ol>
-<li>Create a batch build}} script}} that processes 5+ model variants and generates a comparison report<sup class="footnote-reference" id="fr-1-12"><a href="#footnote-1">1</a></sup>.</li>
-<li>Design}} a parameter}} testing matrix: test}} 3 dimensions x 3 wall thicknesses and compare results<sup class="footnote-reference" id="fr-1-13"><a href="#footnote-1">1</a></sup>.</li>
-<li>Build a library module}} for common}} features (brackets, connectors, fasteners); use in multiple projects<sup class="footnote-reference" id="fr-2-3"><a href="#footnote-2">2</a></sup>.</li>
-<li>Create a “watch and rebuild” script}} that automatically regenerates designs when code}} changes<sup class="footnote-reference" id="fr-1-14"><a href="#footnote-1">1</a></sup>.</li>
-<li>Develop a production workflow}} script}} that generates timestamped builds with complete documentation<sup class="footnote-reference" id="fr-1-15"><a href="#footnote-1">1</a></sup>.</li>
+<li>Create a batch build script that processes 5+ model variants and generates a comparison report<sup class="footnote-reference" id="fr-1-12"><a href="#footnote-1">1</a></sup>.</li>
+<li>Design a parameter testing matrix: test 3 dimensions x 3 wall thicknesses and compare results<sup class="footnote-reference" id="fr-1-13"><a href="#footnote-1">1</a></sup>.</li>
+<li>Build a library module for common features (brackets, connectors, fasteners); use in multiple projects<sup class="footnote-reference" id="fr-2-3"><a href="#footnote-2">2</a></sup>.</li>
+<li>Create a “watch and rebuild” script that automatically regenerates designs when code changes<sup class="footnote-reference" id="fr-1-14"><a href="#footnote-1">1</a></sup>.</li>
+<li>Develop a production workflow script that generates timestamped builds with complete documentation<sup class="footnote-reference" id="fr-1-15"><a href="#footnote-1">1</a></sup>.</li>
 <li>Build an automated testing framework: validate designs against dimensional requirements<sup class="footnote-reference" id="fr-1-16"><a href="#footnote-1">1</a></sup>.</li>
 <li>Create a version control integration: automatically tag and archive successful builds<sup class="footnote-reference" id="fr-1-17"><a href="#footnote-1">1</a></sup>.</li>
-<li>Design}} a design}} parameter}} database: store and query historical variants and their properties<sup class="footnote-reference" id="fr-1-18"><a href="#footnote-1">1</a></sup>.</li>
-<li>Develop a remote print}} queue system: batch multiple models and send to printer}} automatically<sup class="footnote-reference" id="fr-1-19"><a href="#footnote-1">1</a></sup>.</li>
-<li>Write a comprehensive automation documentation: best practices, script}} templates, troubleshooting, and accessibility}} considerations.</li>
+<li>Design a design parameter database: store and query historical variants and their properties<sup class="footnote-reference" id="fr-1-18"><a href="#footnote-1">1</a></sup>.</li>
+<li>Develop a remote print queue system: batch multiple models and send to printer automatically<sup class="footnote-reference" id="fr-1-19"><a href="#footnote-1">1</a></sup>.</li>
+<li>Write a comprehensive automation documentation: best practices, script templates, troubleshooting, and accessibility considerations.</li>
 </ol>
-<h2 id="helpful-shell-commands-reference"><a class="header" href="#helpful-shell-commands-reference">Helpful Shell}} Commands Reference</a></h2>
+<h2 id="helpful-shell-commands-reference"><a class="header" href="#helpful-shell-commands-reference">Helpful Shell Commands Reference</a></h2>
 <div class="table-wrapper">
 <table>
 <thead>
 <tr><th>Command</th><th>Purpose</th></tr>
 </thead>
 <tbody>
-<tr><td><code>chmod +x script.sh</code></td><td>Make script}} executable</td></tr>
-<tr><td><code>./script.sh</code></td><td>Run a shell}} script}}</td></tr>
-<tr><td><code>for file in *.scad; do ... done</code></td><td>Loop through files}}</td></tr>
+<tr><td><code>chmod +x script.sh</code></td><td>Make script executable</td></tr>
+<tr><td><code>./script.sh</code></td><td>Run a shell script</td></tr>
+<tr><td><code>for file in *.scad; do ... done</code></td><td>Loop through files</td></tr>
 <tr><td><code>basename file.scad .scad</code></td><td>Remove extension</td></tr>
-<tr><td><code>stat -c%s file</code> (Linux) or <code>stat -f%z file</code> (macOS)</td><td>Get file}} size</td></tr>
-<tr><td><code>find dir -name "*.scad"</code></td><td>Find all SCAD files}}</td></tr>
+<tr><td><code>stat -c%s file</code> (Linux) or <code>stat -f%z file</code> (macOS)</td><td>Get file size</td></tr>
+<tr><td><code>find dir -name "*.scad"</code></td><td>Find all SCAD files</td></tr>
 <tr><td><code>tar -czf archive.tar.gz folder/</code></td><td>Create compressed archive</td></tr>
 <tr><td><code>du -sh folder/</code></td><td>Show folder size</td></tr>
 </tbody>
@@ -727,10 +727,10 @@ complete_product();
 <hr>
 <ol class="footnote-definition">
 <li id="footnote-1">
-<p>3DMake}} GitHub}} - Automation Examples - <a href="https://github.com/tdeck/3dmake/blob/main/docs/automation.md">https://github.com/tdeck/3dmake/blob/main/docs/automation.md</a> <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a> <a href="#fr-1-3">↩3</a> <a href="#fr-1-4">↩4</a> <a href="#fr-1-5">↩5</a> <a href="#fr-1-6">↩6</a> <a href="#fr-1-7">↩7</a> <a href="#fr-1-8">↩8</a> <a href="#fr-1-9">↩9</a> <a href="#fr-1-10">↩10</a> <a href="#fr-1-11">↩11</a> <a href="#fr-1-12">↩12</a> <a href="#fr-1-13">↩13</a> <a href="#fr-1-14">↩14</a> <a href="#fr-1-15">↩15</a> <a href="#fr-1-16">↩16</a> <a href="#fr-1-17">↩17</a> <a href="#fr-1-18">↩18</a> <a href="#fr-1-19">↩19</a></p>
+<p>3DMake GitHub - Automation Examples - <a href="https://github.com/tdeck/3dmake/blob/main/docs/automation.md">https://github.com/tdeck/3dmake/blob/main/docs/automation.md</a> <a href="#fr-1-1">↩</a> <a href="#fr-1-2">↩2</a> <a href="#fr-1-3">↩3</a> <a href="#fr-1-4">↩4</a> <a href="#fr-1-5">↩5</a> <a href="#fr-1-6">↩6</a> <a href="#fr-1-7">↩7</a> <a href="#fr-1-8">↩8</a> <a href="#fr-1-9">↩9</a> <a href="#fr-1-10">↩10</a> <a href="#fr-1-11">↩11</a> <a href="#fr-1-12">↩12</a> <a href="#fr-1-13">↩13</a> <a href="#fr-1-14">↩14</a> <a href="#fr-1-15">↩15</a> <a href="#fr-1-16">↩16</a> <a href="#fr-1-17">↩17</a> <a href="#fr-1-18">↩18</a> <a href="#fr-1-19">↩19</a></p>
 </li>
 <li id="footnote-2">
-<p>3DMake}} Library Management - <a href="https://github.com/tdeck/3dmake/wiki/Library-Management">https://github.com/tdeck/3dmake/wiki/Library-Management</a> <a href="#fr-2-1">↩</a> <a href="#fr-2-2">↩2</a> <a href="#fr-2-3">↩3</a></p>
+<p>3DMake Library Management - <a href="https://github.com/tdeck/3dmake/wiki/Library-Management">https://github.com/tdeck/3dmake/wiki/Library-Management</a> <a href="#fr-2-1">↩</a> <a href="#fr-2-2">↩2</a> <a href="#fr-2-3">↩3</a></p>
 </li>
 </ol>
 
