@@ -117,4 +117,3 @@
   - [Glossary](Backmatter/glossary.md)
   - [Further Reading](Backmatter/Further_Reading.md)
   [About the Author](Contributors.md)
-

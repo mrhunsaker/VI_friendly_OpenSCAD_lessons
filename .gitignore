@@ -1,0 +1,26 @@
+# Ignore submodule folder
+Simplifying-3D-Printing-with-OpenSCAD/
+# Exclude docs folder
+docs/
+
+# Exclude all backup files (common extensions)
+*~
+*.bak
+*.backup
+*.tmp
+*.swp
+
+# Exclude scripts folder
+scripts/
+
+# Exclude all Python files
+*.py
+*.bak
+
+my-book/docs/
+*.aux
+*.log
+*.tex
+
+textbooks/
+admonitions_mdbook.md

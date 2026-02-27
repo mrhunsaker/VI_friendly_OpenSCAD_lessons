@@ -1,0 +1,65 @@
+name: Build and Release mdBook with Pandoc and LaTeX
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install mdBook
+        run: |
+          wget https://github.com/rust-lang/mdBook/releases/download/v0.5.2/mdbook-v0.5.2-x86_64-unknown-linux-gnu.tar.gz
+          tar xzf mdbook-v0.5.2-x86_64-unknown-linux-gnu.tar.gz
+          sudo mv mdbook /usr/local/bin/
+
+      - name: Install mdbook-pandoc
+        run: |
+          wget https://github.com/lzanini/mdbook-pandoc/releases/download/v0.5.2/mdbook-pandoc-v0.5.2-x86_64-unknown-linux-gnu.tar.gz
+          tar xzf mdbook-pandoc-v0.5.2-x86_64-unknown-linux-gnu.tar.gz
+          sudo mv mdbook-pandoc /usr/local/bin/
+
+      - name: Install Pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc
+
+      - name: Install TeX Live (LaTeX)
+        run: sudo apt-get install -y texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended lualatex
+
+      - name: Build book (HTML)
+        run: |
+          cd my-book
+          mdbook build
+
+      - name: Build EPUB and LaTeX via mdbook-pandoc
+        run: |
+          cd my-book
+          mdbook-pandoc epub
+          mdbook-pandoc latex
+
+      - name: Build PDF via lualatex (run twice)
+        run: |
+          cd my-book
+          lualatex book.tex
+          lualatex book.tex
+
+      - name: Move EPUB and PDF to release folder
+        run: |
+          mkdir -p release
+          mv my-book/book.epub release/
+          mv my-book/book.pdf release/
+
+      - name: Create Release and Upload Assets
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            release/book.epub
+            release/book.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

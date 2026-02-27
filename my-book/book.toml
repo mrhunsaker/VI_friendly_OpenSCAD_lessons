@@ -44,6 +44,7 @@ toc-depth = 3
 include-before-body = ["src/Cover.tex"]
 template = "src/template.tex"
 pdf-engine = "lualatex"
+filters = ["src/code-to-listings.lua"]
 
 [output.pandoc.profile.pdf.variables]
 listings = true  
@@ -78,6 +79,7 @@ number-sections = false
 toc-depth = 3
 include-before-body = ["src/Cover.tex"]
 template = "src/template.tex"
+filters = ["src/code-to-listings.lua"]
 
 [output.pandoc.profile.latex.variables]
 date = "2026-02-24"

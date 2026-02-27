@@ -20,6 +20,16 @@ jobs:
           wget https://github.com/rust-lang/mdBook/releases/download/v0.5.2/mdbook-v0.5.2-x86_64-unknown-linux-gnu.tar.gz
           tar xzf mdbook-v0.5.2-x86_64-unknown-linux-gnu.tar.gz
 
+      - name: Install lualatex (TeX Live)
+        run: sudo apt-get update && sudo apt-get install -y texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended lualatex
+          wget https://github.com/lzanini/mdbook-pandoc/releases/download/v0.5.2/mdbook-pandoc-v0.5.2-x86_64-unknown-linux-gnu.tar.gz
+          tar xzf mdbook-pandoc-v0.5.2-x86_64-unknown-linux-gnu.tar.gz
+          wget https://github.com/lzanini/mdbook-bib/releases/download/v0.4.0/mdbook-bib-v0.4.0-x86_64-unknown-linux-gnu.tar.gz
+          tar xzf mdbook-bib-v0.4.0-x86_64-unknown-linux-gnu.tar.gz
+          wget https://github.com/badboy/mdbook-mermaid/releases/download/v0.13.0/mdbook-mermaid-v0.13.0-x86_64-unknown-linux-gnu.tar.gz
+          tar xzf mdbook-mermaid-v0.13.0-x86_64-unknown-linux-gnu.tar.gz
+          sudo mv mdbook mdbook-pandoc mdbook-bib mdbook-mermaid /usr/local/bin/
+
       - name: Install Rust toolchain
         uses: actions-rs/toolchain@v1
         with:
@@ -44,10 +54,15 @@ jobs:
           echo "--- Run bib linter ---"
           python3 scripts/checkbib.py || true
 
-      - name: Build book
+      - name: Build book (HTML)
         run: |
           cd my-book
-          ../mdbook build
+          ../mdbook build --dest-dir docs
+
+      - name: Build PDF via lualatex (run twice)
+        run: |
+          lualatex my-book/docs/pandoc/latex/OpenSCAD_Curriculum.tex
+          lualatex my-book/docs/pandoc/latex/OpenSCAD_Curriculum.tex
       - name: Verify fonts copied
         run: |
           test -f my-book/docs/assets/fonts/AtkinsonHyperlegibleNext-Regular.ttf
