@@ -27,21 +27,36 @@ jobs:
             texlive-fonts-recommended \
             texlive-fonts-extra
 
-      - name: Install mdBook and plugins
+      - name: Install mdBook binary
         run: |
           wget https://github.com/rust-lang/mdBook/releases/download/v0.4.40/mdbook-v0.4.40-x86_64-unknown-linux-gnu.tar.gz
           tar xzf mdbook-v0.4.40-x86_64-unknown-linux-gnu.tar.gz
+          sudo mv mdbook /usr/local/bin/
 
-          wget https://github.com/lzanini/mdbook-pandoc/releases/download/v0.7.1/mdbook-pandoc-v0.7.1-x86_64-unknown-linux-gnu.tar.gz
-          tar xzf mdbook-pandoc-v0.7.1-x86_64-unknown-linux-gnu.tar.gz
-
-          wget https://github.com/francisco-perez-sorrosal/mdbook-bib/releases/download/v0.0.7/mdbook-bib-v0.0.7-x86_64-unknown-linux-gnu.tar.gz
-          tar xzf mdbook-bib-v0.0.7-x86_64-unknown-linux-gnu.tar.gz
-
+      - name: Install mdbook-mermaid binary
+        run: |
           wget https://github.com/badboy/mdbook-mermaid/releases/download/v0.13.0/mdbook-mermaid-v0.13.0-x86_64-unknown-linux-gnu.tar.gz
           tar xzf mdbook-mermaid-v0.13.0-x86_64-unknown-linux-gnu.tar.gz
+          sudo mv mdbook-mermaid /usr/local/bin/
 
-          sudo mv mdbook mdbook-pandoc mdbook-bib mdbook-mermaid /usr/local/bin/
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache cargo registry
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            ~/.cargo/bin
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-
+
+      - name: Install mdbook-pandoc and mdbook-bib via cargo
+        run: |
+          cargo install mdbook-pandoc --locked 2>/dev/null || cargo install mdbook-pandoc
+          cargo install mdbook-bib    --locked 2>/dev/null || cargo install mdbook-bib
 
       - name: "CI: debug versions and check bibliography"
         run: |
@@ -69,13 +84,11 @@ jobs:
           cd my-book
           lualatex docs/pandoc/latex/OpenSCAD_Curriculum.tex
           lualatex docs/pandoc/latex/OpenSCAD_Curriculum.tex
-          # lualatex writes the PDF to CWD; move it back alongside the .tex
+          # lualatex writes PDF to CWD; move it back into the docs tree
           mv OpenSCAD_Curriculum.pdf docs/pandoc/latex/ || true
 
-      - name: Copy EPUB into docs for Pages hosting
+      - name: Copy EPUB into docs root for easy linking
         run: |
-          # mdbook-pandoc writes epub under docs/pandoc/epub/
-          # Expose it at the site root so it is easy to link to
           find my-book/docs/pandoc -name "*.epub" -exec cp {} my-book/docs/ \; || true
 
       - name: Verify fonts copied
