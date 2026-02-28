@@ -62,9 +62,6 @@ jobs:
         run: |
           echo "--- Versions ---"
           mdbook --version          || true
-          mdbook-pandoc --version   || true
-          mdbook-bib --version      || true
-          mdbook-mermaid --version  || true
           pandoc --version          || true
           lualatex --version        || true
           python3 --version         || true
