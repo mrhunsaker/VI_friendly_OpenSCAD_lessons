@@ -27,20 +27,13 @@ jobs:
             texlive-fonts-recommended \
             texlive-fonts-extra
 
-      - name: Install mdBook binary
-        run: |
-          wget https://github.com/rust-lang/mdBook/releases/download/v0.4.40/mdbook-v0.4.40-x86_64-unknown-linux-gnu.tar.gz
-          tar xzf mdbook-v0.4.40-x86_64-unknown-linux-gnu.tar.gz
-          sudo mv mdbook /usr/local/bin/
-
-      - name: Install mdbook-mermaid binary
-        run: |
-          wget https://github.com/badboy/mdbook-mermaid/releases/download/v0.13.0/mdbook-mermaid-v0.13.0-x86_64-unknown-linux-gnu.tar.gz
-          tar xzf mdbook-mermaid-v0.13.0-x86_64-unknown-linux-gnu.tar.gz
-          sudo mv mdbook-mermaid /usr/local/bin/
-
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@stable
+
+      - name: Install mdBook and mdbook-mermaid (latest) via cargo
+        run: |
+          export PATH="$HOME/.cargo/bin:$PATH"
+          cargo install mdbook --locked || cargo install mdbook --force
 
       - name: Cache cargo registry
         uses: actions/cache@v3
@@ -55,7 +48,8 @@ jobs:
 
       - name: Install mdbook-pandoc and mdbook-bib via cargo
         run: |
-          cargo install mdbook-pandoc --locked 2>/dev/null || cargo install mdbook-pandoc
+          export PATH="$HOME/.cargo/bin:$PATH"
+          cargo install mdbook-pandoc --locked || cargo install mdbook-pandoc --force
 
       - name: "CI: debug versions and check bibliography"
         run: |
