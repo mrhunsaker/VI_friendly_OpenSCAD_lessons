@@ -21,20 +21,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # ---------------------------------------------------------------
+      # Checkout
+      # ---------------------------------------------------------------
       - name: Checkout repository
         uses: actions/checkout@v4
 
       # ---------------------------------------------------------------
-      # Install mdBook
-      # ---------------------------------------------------------------
-      - name: Install mdBook
-        uses: peaceiris/actions-mdbook@v2
-        with:
-          mdbook-version: "latest"
-
-      # ---------------------------------------------------------------
-      # Install Pandoc (≥ 3.2 required for full template-partial support;
-      # we pin to a recent known-good release to avoid partial mismatches)
+      # Pandoc — must be ≥ 3.2 for the template partials in template.tex.
+      # apt-get on ubuntu-latest gives Pandoc 2.x, so we install from
+      # the official GitHub release instead.
       # ---------------------------------------------------------------
       - name: Install Pandoc 3.6.4
         run: |
@@ -43,54 +39,83 @@ jobs:
           pandoc --version
 
       # ---------------------------------------------------------------
-      # Install mdBook-pandoc backend
+      # Rust toolchain (dtolnay/rust-toolchain replaces deprecated
+      # actions-rs/toolchain)
       # ---------------------------------------------------------------
-      - name: Install mdbook-pandoc
-        run: |
-          cargo install mdbook-pandoc --locked
-          mdbook-pandoc --version
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Add cargo bin to PATH
+        run: echo "$HOME/.cargo/bin" >> $GITHUB_PATH
 
       # ---------------------------------------------------------------
-      # Install LaTeX (lualatex + required packages for the template)
+      # mdBook + mdbook-pandoc
+      # Both are installed as cargo binaries; mdbook-pandoc is wired in
+      # automatically as a backend via [output.pandoc] in book.toml —
+      # it must NOT be called directly on the command line.
       # ---------------------------------------------------------------
-      - name: Install LaTeX
+      - name: Install mdBook and mdbook-pandoc
+        run: |
+          cargo install mdbook --locked
+          cargo install mdbook-pandoc --locked
+
+      # ---------------------------------------------------------------
+      # LaTeX — lualatex is inside texlive-luatex (not a standalone pkg).
+      # fonts-atkinson-hyperlegible is required by template.tex.
+      # ---------------------------------------------------------------
+      - name: Install TeX Live
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y --no-install-recommends \
             texlive-latex-base \
+            texlive-latex-recommended \
             texlive-latex-extra \
             texlive-fonts-recommended \
             texlive-fonts-extra \
             texlive-luatex \
             texlive-xetex \
-            texlive-science \
             lmodern \
             fonts-atkinson-hyperlegible
 
       # ---------------------------------------------------------------
-      # Install Lua (for pandoc Lua filters)
+      # Single build step — mdbook build fires ALL backends:
+      #   output.html          → docs/html/
+      #   output.pandoc epub   → docs/pandoc/epub/OpenSCAD_Curriculum.epub
+      #   output.pandoc latex  → docs/pandoc/latex/OpenSCAD_Curriculum.tex
+      #
+      # Do NOT call mdbook-pandoc directly. It reads its input as JSON
+      # piped from mdbook and will fail with an EOF error if invoked
+      # standalone.
       # ---------------------------------------------------------------
-      - name: Install Lua
-        run: sudo apt-get install -y lua5.4
-
-      # ---------------------------------------------------------------
-      # Build the book
-      # ---------------------------------------------------------------
-      - name: Build book
+      - name: Build book (all backends)
         run: |
           cd my-book
           mdbook build
 
       # ---------------------------------------------------------------
-      # Upload HTML output as GitHub Pages artifact
+      # Compile the pandoc-produced .tex → PDF.
+      # Two lualatex passes resolve TOC and cross-references.
+      # makeindex runs between passes to resolve \printindex.
       # ---------------------------------------------------------------
-      - name: Upload HTML pages artifact
+      - name: Compile LaTeX → PDF
+        run: |
+          TEX_FILE="my-book/docs/pandoc/latex/OpenSCAD_Curriculum.tex"
+          OUT_DIR="$(dirname "$TEX_FILE")"
+
+          lualatex --interaction=nonstopmode --output-directory="$OUT_DIR" "$TEX_FILE"
+          makeindex "$OUT_DIR/OpenSCAD_Curriculum.idx" || true
+          lualatex --interaction=nonstopmode --output-directory="$OUT_DIR" "$TEX_FILE"
+
+      # ---------------------------------------------------------------
+      # Upload HTML to GitHub Pages
+      # ---------------------------------------------------------------
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: my-book/docs/html
 
       # ---------------------------------------------------------------
-      # Upload EPUB and LaTeX as downloadable artifacts
+      # Upload EPUB, LaTeX source, and PDF as downloadable artifacts
       # ---------------------------------------------------------------
       - name: Upload pandoc outputs
         uses: actions/upload-artifact@v4
@@ -99,10 +124,13 @@ jobs:
           path: |
             my-book/docs/pandoc/epub/OpenSCAD_Curriculum.epub
             my-book/docs/pandoc/latex/OpenSCAD_Curriculum.tex
+            my-book/docs/pandoc/latex/OpenSCAD_Curriculum.pdf
           if-no-files-found: warn
 
+  # ---------------------------------------------------------------
+  # Deploy HTML to GitHub Pages (main branch pushes only)
+  # ---------------------------------------------------------------
   deploy:
-    # Only deploy on pushes to main (not PRs)
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest

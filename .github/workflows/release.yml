@@ -11,67 +11,125 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
+      # ---------------------------------------------------------------
+      # Checkout
+      # ---------------------------------------------------------------
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Install pandoc
-        run: sudo apt-get update && sudo apt-get install -y pandoc pandoc-data
+      # ---------------------------------------------------------------
+      # Pandoc — install from GitHub releases to get a recent version.
+      # apt-get on ubuntu-latest gives Pandoc 2.x which is missing the
+      # template partials your template.tex depends on.
+      # ---------------------------------------------------------------
+      - name: Install Pandoc 3.6.4
+        run: |
+          wget -q https://github.com/jgm/pandoc/releases/download/3.6.4/pandoc-3.6.4-1-amd64.deb
+          sudo dpkg -i pandoc-3.6.4-1-amd64.deb
+          pandoc --version
 
+      # ---------------------------------------------------------------
+      # Rust / Cargo (replaces the deprecated actions-rs/toolchain)
+      # ---------------------------------------------------------------
       - name: Install Rust toolchain
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-          profile: minimal
-          override: true
+        uses: dtolnay/rust-toolchain@stable
 
       - name: Add cargo bin to PATH
         run: echo "$HOME/.cargo/bin" >> $GITHUB_PATH
 
-      - name: Install mdBook and plugins via cargo
+      # ---------------------------------------------------------------
+      # mdBook + mdbook-pandoc
+      # ---------------------------------------------------------------
+      - name: Install mdBook and mdbook-pandoc
         run: |
-          cargo install mdbook --locked || cargo install mdbook --force
-          cargo install mdbook-pandoc --locked || cargo install mdbook-pandoc --force
-          cargo install mdbook-bib --locked || cargo install mdbook-bib --force
+          cargo install mdbook --locked
+          cargo install mdbook-pandoc --locked
 
-      - name: "CI: debug versions"
+      # ---------------------------------------------------------------
+      # LaTeX — lualatex lives in texlive-luatex, not a standalone pkg.
+      # Also install the Atkinson Hyperlegible font used by template.tex.
+      # ---------------------------------------------------------------
+      - name: Install TeX Live
         run: |
-          mdbook --version || true
-          mdbook-pandoc --version || true
-          rustc --version || true
-          cargo --version || true
-          python3 --version || true
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends \
+            texlive-latex-base \
+            texlive-latex-recommended \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-fonts-extra \
+            texlive-luatex \
+            texlive-xetex \
+            lmodern \
+            fonts-atkinson-hyperlegible
 
-      - name: Install TeX Live (LaTeX)
-        run: sudo apt-get install -y texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended lualatex
+      # ---------------------------------------------------------------
+      # Debug versions
+      # ---------------------------------------------------------------
+      - name: Print tool versions
+        run: |
+          mdbook --version
+          mdbook-pandoc --version
+          pandoc --version
+          lualatex --version
 
-      - name: Build book (HTML)
+      # ---------------------------------------------------------------
+      # Build everything.
+      # mdbook build triggers ALL configured backends in book.toml:
+      #   - output.html  → docs/html/
+      #   - output.pandoc (epub profile)  → docs/pandoc/epub/OpenSCAD_Curriculum.epub
+      #   - output.pandoc (latex profile) → docs/pandoc/latex/OpenSCAD_Curriculum.tex
+      # ---------------------------------------------------------------
+      - name: Build book (HTML + EPUB + LaTeX source)
         run: |
           cd my-book
           mdbook build
 
-      - name: Build EPUB and LaTeX via mdbook-pandoc
+      # ---------------------------------------------------------------
+      # Compile the pandoc-produced .tex → PDF with lualatex.
+      # Run twice so that the table of contents and index are resolved.
+      # ---------------------------------------------------------------
+      - name: Compile LaTeX → PDF
         run: |
-          cd my-book
-          mdbook-pandoc epub
-          mdbook-pandoc latex
+          TEX_FILE="my-book/docs/pandoc/latex/OpenSCAD_Curriculum.tex"
+          OUT_DIR="$(dirname "$TEX_FILE")"
 
-      - name: Build PDF via lualatex (run twice)
-        run: |
-          cd my-book
-          lualatex book.tex
-          lualatex book.tex
+          # First pass — generates .aux, .toc, .idx
+          lualatex \
+            --interaction=nonstopmode \
+            --output-directory="$OUT_DIR" \
+            "$TEX_FILE"
 
-      - name: Move EPUB and PDF to release folder
+          # Build the index from the .idx file produced in pass 1
+          makeindex "$OUT_DIR/OpenSCAD_Curriculum.idx" || true
+
+          # Second pass — embeds TOC, page refs, and index
+          lualatex \
+            --interaction=nonstopmode \
+            --output-directory="$OUT_DIR" \
+            "$TEX_FILE"
+
+      # ---------------------------------------------------------------
+      # Collect release artefacts
+      # ---------------------------------------------------------------
+      - name: Collect release artefacts
         run: |
           mkdir -p release
-          mv my-book/book.epub release/
-          mv my-book/book.pdf release/
+          cp my-book/docs/pandoc/epub/OpenSCAD_Curriculum.epub  release/
+          cp my-book/docs/pandoc/latex/OpenSCAD_Curriculum.tex  release/
+          cp my-book/docs/pandoc/latex/OpenSCAD_Curriculum.pdf  release/
 
-      - name: Create Release and Upload Assets
+      # ---------------------------------------------------------------
+      # Create GitHub Release and attach the three files
+      # ---------------------------------------------------------------
+      - name: Create Release and upload assets
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            release/book.epub
-            release/book.pdf
+            release/OpenSCAD_Curriculum.epub
+            release/OpenSCAD_Curriculum.tex
+            release/OpenSCAD_Curriculum.pdf
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
