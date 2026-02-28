@@ -1,71 +1,116 @@
-name: Deploy mdBook to GitHub Pages
+name: Build and Deploy Book
+
 on:
   push:
-    branches: ["main"]
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Install pandoc
-        run: sudo apt-get update && sudo apt-get install -y pandoc
-
-      - name: Install Rust toolchain
-        uses: actions-rs/toolchain@v1
+      # ---------------------------------------------------------------
+      # Install mdBook
+      # ---------------------------------------------------------------
+      - name: Install mdBook
+        uses: peaceiris/actions-mdbook@v2
         with:
-          toolchain: stable
-          profile: minimal
-          override: true
+          mdbook-version: "latest"
 
-      - name: Add cargo bin to PATH
-        run: echo "$HOME/.cargo/bin" >> $GITHUB_PATH
-
-      - name: Install mdBook and plugins via cargo
+      # ---------------------------------------------------------------
+      # Install Pandoc (≥ 3.2 required for full template-partial support;
+      # we pin to a recent known-good release to avoid partial mismatches)
+      # ---------------------------------------------------------------
+      - name: Install Pandoc 3.6.4
         run: |
-          cargo install mdbook --locked || cargo install mdbook --force
-          cargo install mdbook-pandoc --locked || cargo install mdbook-pandoc --force
-          cargo install mdbook-bib --locked || cargo install mdbook-bib --force
+          wget -q https://github.com/jgm/pandoc/releases/download/3.6.4/pandoc-3.6.4-1-amd64.deb
+          sudo dpkg -i pandoc-3.6.4-1-amd64.deb
+          pandoc --version
 
-      - name: "CI: debug versions"
+      # ---------------------------------------------------------------
+      # Install mdBook-pandoc backend
+      # ---------------------------------------------------------------
+      - name: Install mdbook-pandoc
         run: |
-          mdbook --version || true
-          mdbook-pandoc --version || true
-          rustc --version || true
-          cargo --version || true
-          python3 --version || true
+          cargo install mdbook-pandoc --locked
+          mdbook-pandoc --version
 
+      # ---------------------------------------------------------------
+      # Install LaTeX (lualatex + required packages for the template)
+      # ---------------------------------------------------------------
+      - name: Install LaTeX
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends \
+            texlive-latex-base \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-fonts-extra \
+            texlive-luatex \
+            texlive-xetex \
+            texlive-science \
+            lmodern \
+            fonts-atkinson-hyperlegible
+
+      # ---------------------------------------------------------------
+      # Install Lua (for pandoc Lua filters)
+      # ---------------------------------------------------------------
+      - name: Install Lua
+        run: sudo apt-get install -y lua5.4
+
+      # ---------------------------------------------------------------
+      # Build the book
+      # ---------------------------------------------------------------
       - name: Build book
         run: |
           cd my-book
           mdbook build
 
-      - name: Verify fonts copied
-        run: |
-          test -f my-book/docs/assets/fonts/AtkinsonHyperlegibleNext-Regular.ttf
-          test -f my-book/docs/assets/fonts/AtkinsonHyperlegibleMono-Regular.otf
-
-      - name: Verify @font-face in HTML
-        run: grep -R "@font-face" -n my-book/docs/index.html
-
-      - name: Upload artifact
+      # ---------------------------------------------------------------
+      # Upload HTML output as GitHub Pages artifact
+      # ---------------------------------------------------------------
+      - name: Upload HTML pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./my-book/docs
+          path: my-book/docs/html
+
+      # ---------------------------------------------------------------
+      # Upload EPUB and LaTeX as downloadable artifacts
+      # ---------------------------------------------------------------
+      - name: Upload pandoc outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: pandoc-outputs
+          path: |
+            my-book/docs/pandoc/epub/OpenSCAD_Curriculum.epub
+            my-book/docs/pandoc/latex/OpenSCAD_Curriculum.tex
+          if-no-files-found: warn
 
   deploy:
-    runs-on: ubuntu-latest
+    # Only deploy on pushes to main (not PRs)
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}

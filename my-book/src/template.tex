@@ -1,4 +1,14 @@
-$passoptions.latex()$
+% ---------------------------------------------------------------------------
+% Replaces $passoptions.latex()$ which is only available in Pandoc ≥ 3.2
+% and is absent from many CI-installed Pandoc versions.
+% These are the PassOptions calls Pandoc would normally inject via that partial.
+% ---------------------------------------------------------------------------
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+$if(colorlinks)$
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+$endif$
+% ---------------------------------------------------------------------------
 \documentclass[
   $if(fontsize)$$fontsize$$else$10pt$endif$,
   twoside,
