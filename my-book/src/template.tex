@@ -1,14 +1,8 @@
-% ---------------------------------------------------------------------------
-% Replaces $passoptions.latex()$ which is only available in Pandoc ≥ 3.2
-% and is absent from many CI-installed Pandoc versions.
-% These are the PassOptions calls Pandoc would normally inject via that partial.
-% ---------------------------------------------------------------------------
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 $if(colorlinks)$
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 $endif$
-% ---------------------------------------------------------------------------
 \documentclass[
   $if(fontsize)$$fontsize$$else$10pt$endif$,
   twoside,
@@ -36,7 +30,6 @@ $endif$
 $if(cancel)$
 \usepackage{cancel}
 $endif$
-% Detect engine and load fontspec+atkinson only for XeTeX or LuaTeX
 \usepackage{iftex}
 \ifLuaTeX
   \usepackage{fontspec}
@@ -45,33 +38,22 @@ $endif$
   \usepackage{fontspec}
   \usepackage[sfdefault]{atkinson}
 \fi\fi
-% ==================================================================================
-% Code listings and table theming (listings + tabularray)
-% ==================================================================================
-% Listings package for code blocks (configured to use the Alabaster-inspired style below)
 \usepackage{listings}
 \usepackage{upquote}
 \usepackage{tabularray}
 \UseTblrLibrary{booktabs}
 
-% ==================================================================================
-% Define Alabaster-inspired colors
-% ==================================================================================
-\definecolor{alabaster-bg}{HTML}{FAFAFA} % Background color - very light gray
-\definecolor{alabaster-keyword}{HTML}{C92C2C} % Keywords - red
-\definecolor{alabaster-string}{HTML}{008000} % Strings - green
-\definecolor{alabaster-comment}{HTML}{0078D7} % Comments - blue
-\definecolor{alabaster-number}{HTML}{333333} % Line numbers - dark gray
-\definecolor{alabaster-identifier}{HTML}{000000} % Identifiers - black
+\definecolor{alabaster-bg}{HTML}{FAFAFA}
+\definecolor{alabaster-keyword}{HTML}{C92C2C}
+\definecolor{alabaster-string}{HTML}{008000}
+\definecolor{alabaster-comment}{HTML}{0078D7}
+\definecolor{alabaster-number}{HTML}{333333}
+\definecolor{alabaster-identifier}{HTML}{000000}
 
-% Compact arrow for a single tab: compute width of four code-space characters
 \newlength{\AlabasterTabWidth}
-\settowidth{\AlabasterTabWidth}{{\ttfamily\footnotesize\ \ \ \ }}% width of four spaces in code font
-\newcommand*\AlabasterTab{\makebox[\AlabasterTabWidth][c]{\color{BrickRed}\scriptsize\(\rightarrow\)}}% arrow for tab
+\settowidth{\AlabasterTabWidth}{{\ttfamily\footnotesize\ \ \ \ }}
+\newcommand*\AlabasterTab{\makebox[\AlabasterTabWidth][c]{\color{BrickRed}\scriptsize\(\rightarrow\)}}
 
-% ==================================================================================
-% Global Listings Settings
-% ==================================================================================
 \lstset{
   numbers=left,
   numberstyle=\tiny\color{alabaster-number},
@@ -91,14 +73,11 @@ $endif$
   columns=fullflexible,
   extendedchars=true,
   inputencoding=utf8,
-  aboveskip=0pt, % remove extra vertical space above listings
-  belowskip=0pt, % remove extra vertical space below listings
-  lineskip=-0.25\baselineskip % collapse blank lines inside listings
+  aboveskip=0pt,
+  belowskip=0pt,
+  lineskip=-0.25\baselineskip
 }
 
-% ==================================================================================
-% Alabaster Style for listings
-% ==================================================================================
 \lstdefinestyle{Alabaster}{
   frame=lines,
   backgroundcolor=\color{alabaster-bg},
@@ -120,7 +99,6 @@ $endif$
   xrightmargin=3.4pt
 }
 
-% Define OpenSCAD language for listings
 \lstdefinelanguage{openscad}{
   sensitive=true,
   morekeywords={module,function,if,else,for,intersection,difference,union,translate,rotate,scale,mirror,resize,render,include,use,assign,let,return,echo},
@@ -133,31 +111,29 @@ $endif$
   stringstyle=\color{alabaster-string},
 }
 
-  % PowerShell language definition (use `powershell` in fenced code blocks)
-  \lstdefinelanguage{powershell}{
-    sensitive=true,
-    morekeywords={function,param,begin,process,end,if,else,foreach,while,return,break,continue,try,catch,finally,throw,exit},
-      morecomment=[l]{\#},
-    morestring=[b]{"},
-    morestring=[b]{'},
-    keywordstyle=\color{alabaster-keyword}\bfseries,
-    commentstyle=\color{alabaster-comment}\itshape,
-    stringstyle=\color{alabaster-string},
-  }
+\lstdefinelanguage{powershell}{
+  sensitive=true,
+  morekeywords={function,param,begin,process,end,if,else,foreach,while,return,break,continue,try,catch,finally,throw,exit},
+  morecomment=[l]{\#},
+  morestring=[b]{"},
+  morestring=[b]{'},
+  keywordstyle=\color{alabaster-keyword}\bfseries,
+  commentstyle=\color{alabaster-comment}\itshape,
+  stringstyle=\color{alabaster-string},
+}
 
-  % Windows CMD / Batch language definition (use `cmd` in fenced code blocks)
-  \lstdefinelanguage{cmd}{
-    sensitive=false,
-    morekeywords={if,else,for,call,exit,echo,set,cd,copy,del,move,ren,start,dir,type,shift,md,rd,cls},
-      morecomment=[l]{REM},
-    morecomment=[l]{::},
-    morestring=[b]{"},
-    alsoletter={@,\%},
-    keywordstyle=\color{alabaster-keyword}\bfseries,
-    commentstyle=\color{alabaster-comment}\itshape,
-    stringstyle=\color{alabaster-string},
-  }
-% JSON language definition (use `json` in fenced code blocks)
+\lstdefinelanguage{cmd}{
+  sensitive=false,
+  morekeywords={if,else,for,call,exit,echo,set,cd,copy,del,move,ren,start,dir,type,shift,md,rd,cls},
+  morecomment=[l]{REM},
+  morecomment=[l]{::},
+  morestring=[b]{"},
+  alsoletter={@,\%},
+  keywordstyle=\color{alabaster-keyword}\bfseries,
+  commentstyle=\color{alabaster-comment}\itshape,
+  stringstyle=\color{alabaster-string},
+}
+
 \lstdefinelanguage{json}{
   sensitive=true,
   morestring=[b]{"},
@@ -184,7 +160,7 @@ $endif$
   stringstyle=\color{alabaster-string},
   commentstyle=\color{alabaster-comment}\itshape,
 }
-% Ensure listings uses the Alabaster style by default
+
 \lstset{style=Alabaster}
 \lstalias{openscad}{openscad}
 \lstalias{batch}{cmd}
@@ -194,18 +170,14 @@ $endif$
 \usepackage{booktabs}
 \usepackage{array}
 
-$--
-$-- section numbering
-$--
 $if(numbersections)$
 \setcounter{secnumdepth}{$if(secnumdepth)$$secnumdepth$$else$5$endif$}
 $else$
-\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\setcounter{secnumdepth}{-\maxdimen}
 $endif$
 $fonts.latex()$
 $font-settings.latex()$
 $common.latex()$
-% Indexing support
 \usepackage{makeidx}
 \makeindex
 $for(header-includes)$
@@ -214,7 +186,6 @@ $endfor$
 $after-header-includes.latex()$
 $hypersetup.latex()$
 $if(pdf-trailer-id)$
-
 \ifXeTeX
 \special{pdf:trailerid [ $pdf-trailer-id$ ]}
 \fi
@@ -311,7 +282,6 @@ $for(include-after)$
 $include-after$
 $endfor$
 
-% Render the index at the very end of the book
 \cleardoublepage
 \phantomsection
 \addcontentsline{toc}{chapter}{Index}

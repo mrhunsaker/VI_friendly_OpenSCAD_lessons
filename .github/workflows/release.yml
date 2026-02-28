@@ -13,44 +13,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # ---------------------------------------------------------------
-      # Checkout
-      # ---------------------------------------------------------------
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # ---------------------------------------------------------------
-      # Pandoc — install from GitHub releases to get a recent version.
-      # apt-get on ubuntu-latest gives Pandoc 2.x which is missing the
-      # template partials your template.tex depends on.
-      # ---------------------------------------------------------------
       - name: Install Pandoc 3.6.4
         run: |
           wget -q https://github.com/jgm/pandoc/releases/download/3.6.4/pandoc-3.6.4-1-amd64.deb
           sudo dpkg -i pandoc-3.6.4-1-amd64.deb
           pandoc --version
 
-      # ---------------------------------------------------------------
-      # Rust / Cargo (replaces the deprecated actions-rs/toolchain)
-      # ---------------------------------------------------------------
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@stable
 
       - name: Add cargo bin to PATH
         run: echo "$HOME/.cargo/bin" >> $GITHUB_PATH
 
-      # ---------------------------------------------------------------
-      # mdBook + mdbook-pandoc
-      # ---------------------------------------------------------------
       - name: Install mdBook and mdbook-pandoc
         run: |
           cargo install mdbook --locked
           cargo install mdbook-pandoc --locked
 
-      # ---------------------------------------------------------------
-      # LaTeX — lualatex lives in texlive-luatex, not a standalone pkg.
-      # Also install the Atkinson Hyperlegible font used by template.tex.
-      # ---------------------------------------------------------------
       - name: Install TeX Live
         run: |
           sudo apt-get update -qq
@@ -65,9 +47,6 @@ jobs:
             lmodern \
             fonts-atkinson-hyperlegible
 
-      # ---------------------------------------------------------------
-      # Debug versions
-      # ---------------------------------------------------------------
       - name: Print tool versions
         run: |
           mdbook --version
@@ -75,45 +54,25 @@ jobs:
           pandoc --version
           lualatex --version
 
-      # ---------------------------------------------------------------
-      # Build everything.
-      # mdbook build triggers ALL configured backends in book.toml:
-      #   - output.html  → docs/html/
-      #   - output.pandoc (epub profile)  → docs/pandoc/epub/OpenSCAD_Curriculum.epub
-      #   - output.pandoc (latex profile) → docs/pandoc/latex/OpenSCAD_Curriculum.tex
-      # ---------------------------------------------------------------
+      # mdbook build handles all backends from book.toml in one call.
+      # Never invoke mdbook-pandoc directly — it reads JSON from mdbook's stdin.
       - name: Build book (HTML + EPUB + LaTeX source)
         run: |
           cd my-book
           mdbook build
 
-      # ---------------------------------------------------------------
-      # Compile the pandoc-produced .tex → PDF with lualatex.
-      # Run twice so that the table of contents and index are resolved.
-      # ---------------------------------------------------------------
+      # cd into the latex output dir so relative image paths resolve.
       - name: Compile LaTeX → PDF
         run: |
-          TEX_FILE="my-book/docs/pandoc/latex/OpenSCAD_Curriculum.tex"
-          OUT_DIR="$(dirname "$TEX_FILE")"
+          OUT_DIR="my-book/docs/pandoc/latex"
+          TEX="OpenSCAD_Curriculum.tex"
 
-          # First pass — generates .aux, .toc, .idx
-          lualatex \
-            --interaction=nonstopmode \
-            --output-directory="$OUT_DIR" \
-            "$TEX_FILE"
+          cd "$OUT_DIR"
 
-          # Build the index from the .idx file produced in pass 1
-          makeindex "$OUT_DIR/OpenSCAD_Curriculum.idx" || true
+          lualatex --interaction=nonstopmode "$TEX"
+          makeindex "OpenSCAD_Curriculum.idx" || true
+          lualatex --interaction=nonstopmode "$TEX"
 
-          # Second pass — embeds TOC, page refs, and index
-          lualatex \
-            --interaction=nonstopmode \
-            --output-directory="$OUT_DIR" \
-            "$TEX_FILE"
-
-      # ---------------------------------------------------------------
-      # Collect release artefacts
-      # ---------------------------------------------------------------
       - name: Collect release artefacts
         run: |
           mkdir -p release
@@ -121,9 +80,6 @@ jobs:
           cp my-book/docs/pandoc/latex/OpenSCAD_Curriculum.tex  release/
           cp my-book/docs/pandoc/latex/OpenSCAD_Curriculum.pdf  release/
 
-      # ---------------------------------------------------------------
-      # Create GitHub Release and attach the three files
-      # ---------------------------------------------------------------
       - name: Create Release and upload assets
         uses: softprops/action-gh-release@v2
         with:
