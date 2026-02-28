@@ -118,7 +118,4 @@
   - [Teacher Glossary](Backmatter/teacher-glossary)
   - [Further Reading](Backmatter/Further_Reading.md)
   - [Index](index_page.md)
-
----
-
-[About the Author](Contributors.md)
+  - [About the Author](Contributors.md)
