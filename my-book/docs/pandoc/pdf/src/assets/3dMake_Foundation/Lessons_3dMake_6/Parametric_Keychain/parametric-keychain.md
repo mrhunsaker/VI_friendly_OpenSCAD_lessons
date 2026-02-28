@@ -1,1 +1,0 @@
-# Parametric Keychain Project {#assets_3dmake_foundation_lessons_3dmake_6_parametric_keychain-parametric-keychain}

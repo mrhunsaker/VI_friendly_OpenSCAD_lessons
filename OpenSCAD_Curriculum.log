@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.1.1)  27 FEB 2026 17:10
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.1.1)  28 FEB 2026 06:23
  restricted system commands enabled.
 **/run/media/ryhunsaker/250GB/VI_3DMake_OpenSCAD_Curriculum/my-book/docs/pandoc
 /latex/OpenSCAD_Curriculum.tex
@@ -1844,251 +1844,215 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 LaTeX Font Info:    Font shape `TU/AtkinsonHyperlegibleNext(0)/b/n' will be
 (Font)              scaled to size 10.0pt on input line 2.
 
-Overfull \hbox (1.18997pt too wide) detected at line 15
+Overfull \hbox (1.18997pt too wide) detected at line 14
  []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 104
  []
 
 
-Overfull \hbox (0.14998pt too wide) detected at line 16
+Overfull \hbox (0.14998pt too wide) detected at line 15
  []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 107
  []
 
 
-Overfull \hbox (0.80997pt too wide) detected at line 20
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 130
+Overfull \hbox (0.94998pt too wide) detected at line 23
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 144
  []
 
 
-Overfull \hbox (0.46997pt too wide) detected at line 22
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 134
+Overfull \hbox (0.22998pt too wide) detected at line 25
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 155
  []
 
 
-Overfull \hbox (0.35997pt too wide) detected at line 24
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 149
- []
-
-
-Overfull \hbox (0.30997pt too wide) detected at line 27
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 163
+Overfull \hbox (0.52997pt too wide) detected at line 27
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 166
  []
 
 [3
 
 ]
-Overfull \hbox (0.49997pt too wide) detected at line 29
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 169
+Overfull \hbox (0.27997pt too wide) detected at line 32
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 193
  []
 
 
-Overfull \hbox (0.85997pt too wide) detected at line 31
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 184
+Overfull \hbox (0.66997pt too wide) detected at line 34
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 198
  []
 
 
-Overfull \hbox (0.99997pt too wide) detected at line 32
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 190
+Overfull \hbox (1.29996pt too wide) detected at line 38
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 224
  []
 
 
-Underfull \hbox (badness 3623) in paragraph at lines 32--32
- [][] []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Screen Reader Ac-ces-si-bil-ity 
-Guide for Win-dows Com-mand 
+Overfull \hbox (1.11995pt too wide) detected at line 39
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 232
  []
 
 
-Overfull \hbox (0.55997pt too wide) detected at line 33
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 194
+Overfull \hbox (1.77995pt too wide) detected at line 40
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 234
  []
 
 
-Overfull \hbox (0.55997pt too wide) detected at line 34
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 194
+Overfull \hbox (1.78995pt too wide) detected at line 41
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 238
  []
 
 
-Overfull \hbox (2.60995pt too wide) detected at line 35
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 208
- []
-
-
-Overfull \hbox (2.60995pt too wide) detected at line 36
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 208
- []
-
-
-Overfull \hbox (1.93996pt too wide) detected at line 38
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 220
- []
-
-
-Overfull \hbox (0.55997pt too wide) detected at line 39
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 227
- []
-
-
-Overfull \hbox (1.40996pt too wide) detected at line 40
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 229
- []
-
-
-Overfull \hbox (1.39995pt too wide) detected at line 41
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 233
- []
-
-
-Overfull \hbox (1.51996pt too wide) detected at line 42
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 235
- []
-
-
-Overfull \hbox (2.29996pt too wide) detected at line 43
+Overfull \hbox (2.29996pt too wide) detected at line 42
  []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 240
  []
 
 
-Overfull \hbox (1.09996pt too wide) detected at line 44
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 242
- []
-
-
-Overfull \hbox (1.69997pt too wide) detected at line 45
+Overfull \hbox (1.69997pt too wide) detected at line 43
  []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 245
  []
 
 
-Overfull \hbox (0.95998pt too wide) detected at line 46
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 257
+Overfull \hbox (0.91997pt too wide) detected at line 44
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 247
  []
 
 
-Overfull \hbox (2.09996pt too wide) detected at line 48
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 264
+Overfull \hbox (2.33997pt too wide) detected at line 45
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 250
  []
 
 
-Overfull \hbox (0.93997pt too wide) detected at line 49
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 273
+Overfull \hbox (1.43996pt too wide) detected at line 46
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 262
  []
 
 
-Overfull \hbox (1.90996pt too wide) detected at line 50
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 285
+Overfull \hbox (1.20996pt too wide) detected at line 50
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 292
  []
 
 
-Overfull \hbox (1.02995pt too wide) detected at line 51
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 287
+Overfull \hbox (0.80997pt too wide) detected at line 51
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 301
  []
 
 
-Overfull \hbox (2.07996pt too wide) detected at line 52
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 298
+Overfull \hbox (0.27997pt too wide) detected at line 53
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 319
  []
 
 
-Overfull \hbox (2.21996pt too wide) detected at line 55
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 320
+Overfull \hbox (1.39995pt too wide) detected at line 54
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 323
  []
 
 
-Overfull \hbox (1.61996pt too wide) detected at line 56
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 325
- []
-
-
-Overfull \hbox (1.78995pt too wide) detected at line 57
+Overfull \hbox (1.78995pt too wide) detected at line 55
  []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 328
  []
 
 
-Overfull \hbox (1.77995pt too wide) detected at line 59
+Overfull \hbox (2.49995pt too wide) detected at line 56
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 330
+ []
+
+
+Overfull \hbox (1.77995pt too wide) detected at line 57
  []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 333
  []
 
 
-Overfull \hbox (1.95996pt too wide) detected at line 60
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 339
+Overfull \hbox (1.99995pt too wide) detected at line 58
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 336
  []
 
 
-Overfull \hbox (1.67996pt too wide) detected at line 61
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 342
+Overfull \hbox (0.46997pt too wide) detected at line 59
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 341
  []
 
 
-Overfull \hbox (2.63997pt too wide) detected at line 62
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 344
+Overfull \hbox (2.15996pt too wide) detected at line 60
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 343
  []
 
 
-Overfull \hbox (1.49997pt too wide) detected at line 63
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 347
- []
-
-[4]
-Overfull \hbox (2.61996pt too wide) detected at line 64
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 350
+Overfull \hbox (2.27997pt too wide) detected at line 61
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 345
  []
 
 
-Overfull \hbox (1.61996pt too wide) detected at line 66
+Overfull \hbox (2.54996pt too wide) detected at line 62
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 348
+ []
+
+
+Overfull \hbox (1.61996pt too wide) detected at line 64
  []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 352
  []
 
-
-Overfull \hbox (2.27997pt too wide) detected at line 67
+[4]
+Overfull \hbox (2.27997pt too wide) detected at line 65
  []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 354
  []
 
 
-Overfull \hbox (1.98996pt too wide) detected at line 68
+Overfull \hbox (1.91997pt too wide) detected at line 66
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 355
+ []
+
+
+Overfull \hbox (1.98996pt too wide) detected at line 67
  []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 359
  []
 
 
-Overfull \hbox (2.37996pt too wide) detected at line 69
+Overfull \hbox (2.37996pt too wide) detected at line 68
  []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 364
  []
 
 
-Overfull \hbox (2.21996pt too wide) detected at line 70
+Overfull \hbox (2.21996pt too wide) detected at line 69
  []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 366
  []
 
 
-Overfull \hbox (2.38995pt too wide) detected at line 71
+Overfull \hbox (2.38995pt too wide) detected at line 70
  []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 368
  []
 
 
-Overfull \hbox (2.18996pt too wide) detected at line 72
+Overfull \hbox (2.18996pt too wide) detected at line 71
  []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 369
  []
 
 
-Overfull \hbox (1.23997pt too wide) detected at line 73
+Overfull \hbox (1.23997pt too wide) detected at line 72
  []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 375
  []
 
 
-Overfull \hbox (0.75998pt too wide) detected at line 74
+Overfull \hbox (0.75998pt too wide) detected at line 73
  []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 377
  []
 
 
-Overfull \hbox (2.88995pt too wide) detected at line 75
+Overfull \hbox (2.88995pt too wide) detected at line 74
  []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 380
  []
 
 
-Overfull \hbox (2.38995pt too wide) detected at line 76
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 386
+Overfull \hbox (2.28996pt too wide) detected at line 75
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 385
  []
 
 
-Overfull \hbox (2.55995pt too wide) detected at line 77
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 388
+Overfull \hbox (1.40996pt too wide) detected at line 76
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 387
+ []
+
+
+Overfull \hbox (0.26997pt too wide) detected at line 77
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 391
  []
 
 
@@ -2097,39 +2061,44 @@ Overfull \hbox (1.47997pt too wide) detected at line 78
  []
 
 
-Overfull \hbox (2.23996pt too wide) detected at line 79
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 394
+Overfull \hbox (1.95996pt too wide) detected at line 79
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 393
  []
 
 
-Overfull \hbox (2.07997pt too wide) detected at line 80
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 395
+Overfull \hbox (2.34996pt too wide) detected at line 80
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 398
  []
 
 
-Overfull \hbox (1.18997pt too wide) detected at line 81
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 401
+Overfull \hbox (3.25996pt too wide) detected at line 81
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 404
  []
 
 
-Overfull \hbox (2.21997pt too wide) detected at line 82
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 407
+Overfull \hbox (2.99997pt too wide) detected at line 82
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 405
  []
 
 
-Overfull \hbox (3.06996pt too wide) detected at line 83
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 409
- []
-
-
-Underfull \hbox (badness 1215) in paragraph at lines 83--83
+Underfull \hbox (badness 1215) in paragraph at lines 82--82
  [][] []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Snap-Fit Clip - Stu-dent Doc-u-me
 n-ta-tion Tem-plate (Ex-ten-sion 
  []
 
 
-Overfull \hbox (0.18997pt too wide) detected at line 85
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 412
+Overfull \hbox (2.21997pt too wide) detected at line 83
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 407
+ []
+
+
+Overfull \hbox (3.26996pt too wide) detected at line 84
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 408
+ []
+
+
+Overfull \hbox (0.46997pt too wide) detected at line 85
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 413
  []
 
 
@@ -2143,68 +2112,68 @@ Overfull \hbox (1.75996pt too wide) detected at line 87
  []
 
 
-Overfull \hbox (0.46997pt too wide) detected at line 88
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 431
+Overfull \hbox (2.87996pt too wide) detected at line 88
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 430
  []
 
 
-Overfull \hbox (1.49997pt too wide) detected at line 89
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 437
+Overfull \hbox (2.15996pt too wide) detected at line 89
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 433
  []
 
 
-Overfull \hbox (3.35997pt too wide) detected at line 90
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 440
+Overfull \hbox (2.54996pt too wide) detected at line 90
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 438
  []
 
 
-Overfull \hbox (2.75998pt too wide) detected at line 91
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 445
+Overfull \hbox (2.54996pt too wide) detected at line 91
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 438
  []
 
 
-Overfull \hbox (2.75998pt too wide) detected at line 92
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 445
+Overfull \hbox (0.94998pt too wide) detected at line 92
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 441
  []
 
 
-Overfull \hbox (3.02997pt too wide) detected at line 93
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 448
+Overfull \hbox (2.15997pt too wide) detected at line 93
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 442
  []
 
 
-Overfull \hbox (2.52997pt too wide) detected at line 94
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 449
+Overfull \hbox (1.97998pt too wide) detected at line 94
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 447
  []
 
 
-Overfull \hbox (2.29997pt too wide) detected at line 95
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 455
+Overfull \hbox (0.38998pt too wide) detected at line 95
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 451
  []
 
 
-Overfull \hbox (2.36996pt too wide) detected at line 96
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 459
+Overfull \hbox (2.45998pt too wide) detected at line 96
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 456
  []
 
 
-Overfull \hbox (2.75996pt too wide) detected at line 97
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 464
+Overfull \hbox (2.09996pt too wide) detected at line 97
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 462
  []
 
 
-Overfull \hbox (2.21997pt too wide) detected at line 98
+Overfull \hbox (2.76996pt too wide) detected at line 98
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 468
+ []
+
+
+Overfull \hbox (2.21997pt too wide) detected at line 99
  []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 470
  []
 
 
-Overfull \hbox (1.71997pt too wide) detected at line 99
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 476
- []
-
-
-Overfull \hbox (1.68997pt too wide) detected at line 100
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 478
+Overfull \hbox (1.37997pt too wide) detected at line 100
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 474
  []
 
 
@@ -2213,33 +2182,33 @@ Overfull \hbox (2.16995pt too wide) detected at line 101
  []
 
 
-Overfull \hbox (2.76996pt too wide) detected at line 102
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 490
+Overfull \hbox (2.04996pt too wide) detected at line 103
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 493
  []
 
 
-Overfull \hbox (2.33997pt too wide) detected at line 104
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 502
+Overfull \hbox (2.04996pt too wide) detected at line 104
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 493
  []
 
 [5]
-Overfull \hbox (2.33997pt too wide) detected at line 105
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 502
+Overfull \hbox (2.26996pt too wide) detected at line 105
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 496
  []
 
 
-Overfull \hbox (2.73997pt too wide) detected at line 106
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 505
+Overfull \hbox (1.95998pt too wide) detected at line 106
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 507
  []
 
 
-Overfull \hbox (2.33997pt too wide) detected at line 107
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 520
+Overfull \hbox (2.80997pt too wide) detected at line 107
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 509
  []
 
 
-Overfull \hbox (1.51996pt too wide) detected at line 108
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 523
+Overfull \hbox (0.72998pt too wide) detected at line 108
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 510
  []
 
 
@@ -2248,43 +2217,38 @@ Overfull \hbox (1.51996pt too wide) detected at line 109
  []
 
 
-Overfull \hbox (1.03998pt too wide) detected at line 110
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 537
+Overfull \hbox (2.07997pt too wide) detected at line 110
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 534
  []
 
 
-Overfull \hbox (2.16997pt too wide) detected at line 111
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 549
+Overfull \hbox (2.75998pt too wide) detected at line 111
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 544
  []
 
 
-Overfull \hbox (2.00996pt too wide) detected at line 112
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 559
+Overfull \hbox (1.71997pt too wide) detected at line 112
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 553
  []
 
 
-Overfull \hbox (1.33998pt too wide) detected at line 113
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 573
+Overfull \hbox (2.45998pt too wide) detected at line 113
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 564
  []
 
 
-Overfull \hbox (2.40997pt too wide) detected at line 114
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 585
+Overfull \hbox (1.45998pt too wide) detected at line 114
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 576
  []
 
 
-Overfull \hbox (1.32997pt too wide) detected at line 115
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 597
+Overfull \hbox (2.66997pt too wide) detected at line 115
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 584
  []
 
 
-Overfull \hbox (2.83997pt too wide) detected at line 116
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 605
- []
-
-
-Overfull \hbox (3.10995pt too wide) detected at line 117
- []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 608
+Overfull \hbox (1.52997pt too wide) detected at line 116
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 587
  []
 
 )
@@ -2348,17 +2312,12 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
  [11] [12] [13] [14
 
 ]
-Overfull \hbox (4.03749pt too wide) in paragraph at lines 762--762
+Overfull \hbox (4.03749pt too wide) in paragraph at lines 764--764
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
 
 [15]
-Overfull \hbox (7.0547pt too wide) in paragraph at lines 815--815
-\TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
- []
-
-
-Overfull \hbox (7.0547pt too wide) in paragraph at lines 818--818
+Overfull \hbox (7.0547pt too wide) in paragraph at lines 817--817
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
 
@@ -2373,37 +2332,37 @@ Overfull \hbox (7.0547pt too wide) in paragraph at lines 822--822
  []
 
 
-Overfull \hbox (7.0547pt too wide) in paragraph at lines 825--825
+Overfull \hbox (7.0547pt too wide) in paragraph at lines 824--824
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
 
 
-Overfull \hbox (7.0547pt too wide) in paragraph at lines 828--828
+Overfull \hbox (7.0547pt too wide) in paragraph at lines 827--827
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
 
 
-Overfull \hbox (7.0547pt too wide) in paragraph at lines 831--831
+Overfull \hbox (7.0547pt too wide) in paragraph at lines 830--830
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
 
 
-Overfull \hbox (7.0547pt too wide) in paragraph at lines 834--834
+Overfull \hbox (7.0547pt too wide) in paragraph at lines 833--833
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
 
 
-Overfull \hbox (7.0547pt too wide) in paragraph at lines 837--837
+Overfull \hbox (7.0547pt too wide) in paragraph at lines 836--836
+\TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
+ []
+
+
+Overfull \hbox (7.0547pt too wide) in paragraph at lines 839--839
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
 
 ignored error Infinite glue shrinkage found in box being split [16]
-Overfull \hbox (6.12407pt too wide) in paragraph at lines 866--866
-\TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
- []
-
-
-Overfull \hbox (6.12407pt too wide) in paragraph at lines 869--869
+Overfull \hbox (6.12407pt too wide) in paragraph at lines 868--868
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
 
@@ -2418,22 +2377,22 @@ Overfull \hbox (6.12407pt too wide) in paragraph at lines 873--873
  []
 
 
-Overfull \hbox (6.12407pt too wide) in paragraph at lines 876--876
+Overfull \hbox (6.12407pt too wide) in paragraph at lines 875--875
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
 
 
-Overfull \hbox (6.12407pt too wide) in paragraph at lines 879--879
+Overfull \hbox (6.12407pt too wide) in paragraph at lines 878--878
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
 
 
-Overfull \hbox (6.12407pt too wide) in paragraph at lines 882--882
+Overfull \hbox (6.12407pt too wide) in paragraph at lines 881--881
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
 
 
-Overfull \hbox (6.12407pt too wide) in paragraph at lines 885--885
+Overfull \hbox (6.12407pt too wide) in paragraph at lines 884--884
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
 
@@ -2442,18 +2401,18 @@ Overfull \hbox (6.12407pt too wide) in paragraph at lines 887--887
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
 
+
+Overfull \hbox (6.12407pt too wide) in paragraph at lines 889--889
+\TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
+ []
+
 ignored error Infinite glue shrinkage found in box being split [17]
-Overfull \hbox (5.38446pt too wide) in paragraph at lines 924--924
+Overfull \hbox (5.38446pt too wide) in paragraph at lines 926--926
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
 
 
-Overfull \hbox (5.38446pt too wide) in paragraph at lines 927--927
-\TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
- []
-
-
-Overfull \hbox (5.38446pt too wide) in paragraph at lines 930--930
+Overfull \hbox (5.38446pt too wide) in paragraph at lines 929--929
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
 
@@ -2463,12 +2422,12 @@ Overfull \hbox (5.38446pt too wide) in paragraph at lines 932--932
  []
 
 
-Overfull \hbox (5.38446pt too wide) in paragraph at lines 935--935
+Overfull \hbox (5.38446pt too wide) in paragraph at lines 934--934
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
 
 
-Overfull \hbox (5.38446pt too wide) in paragraph at lines 938--938
+Overfull \hbox (5.38446pt too wide) in paragraph at lines 937--937
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
 
@@ -2483,38 +2442,38 @@ Overfull \hbox (5.38446pt too wide) in paragraph at lines 942--942
  []
 
 
-Overfull \hbox (5.38446pt too wide) in paragraph at lines 945--945
+Overfull \hbox (5.38446pt too wide) in paragraph at lines 944--944
+\TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
+ []
+
+
+Overfull \hbox (5.38446pt too wide) in paragraph at lines 947--947
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
 
 ignored error Infinite glue shrinkage found in box being split [18] [19]
-Overfull \hbox (12.85582pt too wide) in paragraph at lines 989--990
+Overfull \hbox (12.85582pt too wide) in paragraph at lines 991--992
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Project  
  []
 
 
-Overfull \hbox (5.24582pt too wide) in paragraph at lines 997--998
+Overfull \hbox (5.24582pt too wide) in paragraph at lines 999--1000
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 None|  
  []
 
 
-Overfull \hbox (5.24582pt too wide) in paragraph at lines 1000--1001
+Overfull \hbox (5.24582pt too wide) in paragraph at lines 1002--1003
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 None|  
  []
 
 
-Overfull \hbox (5.24582pt too wide) in paragraph at lines 1003--1004
+Overfull \hbox (5.24582pt too wide) in paragraph at lines 1005--1006
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 None|  
  []
 
 
-Overfull \hbox (9.51762pt too wide) in paragraph at lines 1023--1024
+Overfull \hbox (9.51762pt too wide) in paragraph at lines 1025--1026
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Project  
- []
-
-
-Overfull \hbox (1.90762pt too wide) in paragraph at lines 1030--1031
-[]|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 None|  
  []
 
 
@@ -2522,13 +2481,18 @@ Overfull \hbox (1.90762pt too wide) in paragraph at lines 1032--1033
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 None|  
  []
 
+
+Overfull \hbox (1.90762pt too wide) in paragraph at lines 1034--1035
+[]|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 None|  
+ []
+
 [20] [21]
-Overfull \hbox (19.0097pt too wide) in paragraph at lines 1196--1196
+Overfull \hbox (19.0097pt too wide) in paragraph at lines 1198--1198
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 server/Learner|  
  []
 
 
-Overfull \hbox (19.0097pt too wide) in paragraph at lines 1198--1198
+Overfull \hbox (19.0097pt too wide) in paragraph at lines 1200--1200
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 server/Learner|  
  []
 
@@ -2536,27 +2500,27 @@ Overfull \hbox (19.0097pt too wide) in paragraph at lines 1198--1198
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [22]
-Underfull \hbox (badness 1424) in paragraph at lines 1249--1251
+Underfull \hbox (badness 1424) in paragraph at lines 1251--1253
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Meta-data track-ing: Con-fig-u-ra-tion files store pa-ram-e-ters as human-
  []
 
 [23]
-Overfull \hbox (10.47472pt too wide) in paragraph at lines 1315--1316
+Overfull \hbox (10.47472pt too wide) in paragraph at lines 1317--1318
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Points  
  []
 
 
-Overfull \hbox (11.57224pt too wide) in paragraph at lines 1340--1341
+Overfull \hbox (11.57224pt too wide) in paragraph at lines 1342--1343
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Score  
  []
 
 ignored error Infinite glue shrinkage found in box being split [24]
-Overfull \hbox (13.53357pt too wide) in paragraph at lines 1369--1370
+Overfull \hbox (13.53357pt too wide) in paragraph at lines 1371--1372
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Score  
  []
 
 
-Overfull \hbox (13.10167pt too wide) in paragraph at lines 1396--1397
+Overfull \hbox (13.10167pt too wide) in paragraph at lines 1398--1399
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Score  
  []
 
@@ -2698,22 +2662,22 @@ ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
 ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 ] [36] [37]
-Overfull \hbox (16.31783pt too wide) in paragraph at lines 2262--2262
+Overfull \hbox (16.31783pt too wide) in paragraph at lines 2266--2266
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 sert+Ctrl+Down|  
  []
 
 
-Overfull \hbox (7.25122pt too wide) in paragraph at lines 2263--2264
-\TU/AtkinsonHyperlegibleNext(0)/m/n/10 sLock+Numpad 
- []
-
-
-Overfull \hbox (7.25122pt too wide) in paragraph at lines 2265--2266
-\TU/AtkinsonHyperlegibleNext(0)/m/n/10 sLock+Numpad 
- []
-
-
 Overfull \hbox (7.25122pt too wide) in paragraph at lines 2267--2268
+\TU/AtkinsonHyperlegibleNext(0)/m/n/10 sLock+Numpad 
+ []
+
+
+Overfull \hbox (7.25122pt too wide) in paragraph at lines 2269--2270
+\TU/AtkinsonHyperlegibleNext(0)/m/n/10 sLock+Numpad 
+ []
+
+
+Overfull \hbox (7.25122pt too wide) in paragraph at lines 2271--2272
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 sLock+Numpad 
  []
 
@@ -2776,7 +2740,7 @@ gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 
-Underfull \hbox (badness 1087) in paragraph at lines 2467--2469
+Underfull \hbox (badness 1087) in paragraph at lines 2471--2473
 []\TU/AtkinsonHyperlegibleNext(0)/b/n/10 Win-dows Nar-ra-tor: \TU/AtkinsonHyper
 legibleNext(0)/m/n/10 Set-tings →󰀀 Ac-ces-si-bil-ity →󰀀 Nar-ra-tor 
 →󰀀 Ad-vanced
@@ -2848,32 +2812,32 @@ gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 ]
-Overfull \hbox (9.27985pt too wide) in paragraph at lines 2774--2774
+Overfull \hbox (9.27985pt too wide) in paragraph at lines 2778--2778
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 sert+Ctrl+Down 
  []
 
 
-Overfull \hbox (4.31004pt too wide) in paragraph at lines 2775--2776
+Overfull \hbox (4.31004pt too wide) in paragraph at lines 2779--2780
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 sLock+Numpad 
  []
 
 
-Overfull \hbox (4.31004pt too wide) in paragraph at lines 2778--2779
+Overfull \hbox (4.31004pt too wide) in paragraph at lines 2782--2783
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 sLock+Numpad 
  []
 
 
-Overfull \hbox (4.31004pt too wide) in paragraph at lines 2781--2782
+Overfull \hbox (4.31004pt too wide) in paragraph at lines 2785--2786
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 sLock+Numpad 
  []
 
 
-Overfull \hbox (4.71286pt too wide) in paragraph at lines 2782--2782
+Overfull \hbox (4.71286pt too wide) in paragraph at lines 2786--2786
 \TU/AtkinsonHyperlegibleNext(0)/b/n/10 screen/buffer|  
  []
 
 
-Overfull \hbox (4.71286pt too wide) in paragraph at lines 2784--2784
+Overfull \hbox (4.71286pt too wide) in paragraph at lines 2788--2788
 \TU/AtkinsonHyperlegibleNext(0)/b/n/10 screen/buffer|  
  []
 
@@ -2888,7 +2852,7 @@ gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 
-Overfull \hbox (3.00264pt too wide) in paragraph at lines 2793--2793
+Overfull \hbox (3.00264pt too wide) in paragraph at lines 2797--2797
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 dows+Ctrl+N 
  []
 
@@ -3157,13 +3121,13 @@ gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 ] [57]
-Underfull \hbox (badness 1533) in paragraph at lines 3470--3472
+Underfull \hbox (badness 1533) in paragraph at lines 3474--3476
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 In-te-grated ter-mi-nal al-lows run-nin
 g 3dm com-mands with-out con-text
  []
 
 [58]
-Overfull \hbox (10.50667pt too wide) in paragraph at lines 3524--3527
+Overfull \hbox (10.50667pt too wide) in paragraph at lines 3528--3531
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 de-fault) \TU/lmtt/m/n/10 editor = '''C:\
 Program Files (x86)\Notepad++\notepad++.exe'''
  []
@@ -3195,19 +3159,19 @@ lar.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no ` (U+0060) in font [AtkinsonHyperlegibleNext-Regu
 lar.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 ] [63]
-Overfull \hbox (28.92004pt too wide) in paragraph at lines 4000--4001
+Overfull \hbox (28.92004pt too wide) in paragraph at lines 4004--4005
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 JAWSKey+Alt+Shift+I: Cy-cle be-tween in
 -dent re-port-ing modes (speech/tones/off) 
  []
 
 [64] [65] [66] [67] [68] [69]
-Underfull \hbox (badness 1881) in paragraph at lines 4459--4460
+Underfull \hbox (badness 1881) in paragraph at lines 4465--4466
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 Wel-come! Be-fore div-ing into 3D de-sign
  with Open-SCAD, you'll mas-ter
  []
 
 
-Underfull \hbox (badness 1845) in paragraph at lines 4459--4460
+Underfull \hbox (badness 1845) in paragraph at lines 4465--4466
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 command-line fun-da-men-tals. This page 
 will help you un-der-stand what
  []
@@ -3218,7 +3182,7 @@ will help you un-der-stand what
 ignored error Infinite glue shrinkage found in box being split [72] [73]
 [74] [75] [76]
 LaTeX Font Info:    Font shape `TU/AtkinsonHyperlegibleNext(0)/m/it' will be
-(Font)              scaled to size 10.0pt on input line 5004.
+(Font)              scaled to size 10.0pt on input line 5010.
  [77]
 ignored error Infinite glue shrinkage found in box being split [78] [79]
 [80] [81] [82] [83] [84] [85]
@@ -3226,21 +3190,21 @@ Underfull \vbox (badness 2875) has occurred while \output is active []
 
  [86]
 [87] [88] [89] [90] [91] [92] [93] [94] [95] [96] [97] [98]
-Underfull \hbox (badness 10000) in paragraph at lines 6758--6760
+Underfull \hbox (badness 10000) in paragraph at lines 6764--6766
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 What hap-pens when you use \TU/lmtt/m/
 n/10 ls -n part?.scad \TU/AtkinsonHyperlegibleNext(0)/m/n/10 ver-sus \TU/lmtt/m
 /n/10 ls -n
  []
 
 
-Overfull \hbox (42.25572pt too wide) in paragraph at lines 6762--6764
+Overfull \hbox (42.25572pt too wide) in paragraph at lines 6768--6770
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 If you're in \TU/lmtt/m/n/10 /Documents
 /Projects/3D \TU/AtkinsonHyperlegibleNext(0)/m/n/10 and you want to go to \TU/l
 mtt/m/n/10 /Documents/Resources\TU/AtkinsonHyperlegibleNext(0)/m/n/10 ,
  []
 
 [99] [100]
-Underfull \hbox (badness 10000) in paragraph at lines 6910--6912
+Underfull \hbox (badness 10000) in paragraph at lines 6916--6918
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Com-pare \TU/lmtt/m/n/10 mv old_name.tx
 t new_name.txt \TU/AtkinsonHyperlegibleNext(0)/m/n/10 vs \TU/lmtt/m/n/10 mv old_
 name.txt
@@ -3251,20 +3215,20 @@ Underfull \vbox (badness 2941) has occurred while \output is active []
 
  [102]
 [103] [104]
-Underfull \hbox (badness 3919) in paragraph at lines 7176--7178
+Underfull \hbox (badness 3919) in paragraph at lines 7182--7184
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 What would be the dif-fer-ence in out-p
 ut be-tween \TU/lmtt/m/n/10 echo "test" >
  []
 
 [105] [106] [107] [108] [109] [110] [111] [112] [113] [114] [115] [116]
 [117] [118] [119] [120] [121] [122] [123] [124] [125]
-Overfull \hbox (6.68669pt too wide) in paragraph at lines 8760--8762
+Overfull \hbox (6.68669pt too wide) in paragraph at lines 8766--8768
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Cre-ate a folder struc-ture \TU/lmtt/m
 /n/10 ~/Documents/PowerShell_Assessment/Projects
  []
 
 
-Overfull \hbox (6.32343pt too wide) in paragraph at lines 8762--8764
+Overfull \hbox (6.32343pt too wide) in paragraph at lines 8768--8770
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Cre-ate five files named \TU/lmtt/m/n/
 10 project_1.scad\TU/AtkinsonHyperlegibleNext(0)/m/n/10 , \TU/lmtt/m/n/10 projec
 t_2.scad\TU/AtkinsonHyperlegibleNext(0)/m/n/10 , \TU/lmtt/m/n/10 project_3.txt\
@@ -3272,26 +3236,26 @@ TU/AtkinsonHyperlegibleNext(0)/m/n/10 ,
  []
 
 [126]
-Underfull \hbox (badness 5460) in paragraph at lines 8778--8780
+Underfull \hbox (badness 5460) in paragraph at lines 8784--8786
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Use \TU/lmtt/m/n/10 Select-String \TU/
 AtkinsonHyperlegibleNext(0)/m/n/10 to search for a key-word (e.g., ”project
 ”) in
  []
 
 
-Underfull \hbox (badness 1168) in paragraph at lines 8778--8780
+Underfull \hbox (badness 1168) in paragraph at lines 8784--8786
 \TU/lmtt/m/n/10 my_data.txt \TU/AtkinsonHyperlegibleNext(0)/m/n/10 and pipe the re-sults to \TU/lmtt/m/n/10 clip\TU/AtkinsonHyperlegibleNext(0)/m/n/10 . Paste the re-sults into
  []
 
 
-Underfull \hbox (badness 4193) in paragraph at lines 8780--8782
+Underfull \hbox (badness 4193) in paragraph at lines 8786--8788
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 List all files in the \TU/lmtt/m/n/10 
 Projects \TU/AtkinsonHyperlegibleNext(0)/m/n/10 folder and redi-rect the out-put
  to
  []
 
 
-Overfull \hbox (8.01666pt too wide) in paragraph at lines 8784--8785
+Overfull \hbox (8.01666pt too wide) in paragraph at lines 8790--8791
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Run \TU/lmtt/m/n/10 Get-Help Get-ChildI
 tem \TU/AtkinsonHyperlegibleNext(0)/m/n/10 and redi-rect the out-put to \TU/lmt
 t/m/n/10 help_output.txt\TU/AtkinsonHyperlegibleNext(0)/m/n/10 .
@@ -3384,7 +3348,7 @@ gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 ]
-Underfull \hbox (badness 1320) in paragraph at lines 10039--10041
+Underfull \hbox (badness 1320) in paragraph at lines 10045--10047
 []\TU/AtkinsonHyperlegibleNext(0)/b/n/10 For long out-puts\TU/AtkinsonHyperlegi
 bleNext(0)/m/n/10 , redi-rect to a file: \TU/lmtt/m/n/10 command > output.txt\T
 U/AtkinsonHyperlegibleNext(0)/m/n/10 , then
@@ -3395,7 +3359,7 @@ gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 
-Underfull \hbox (badness 7451) in paragraph at lines 10061--10063
+Underfull \hbox (badness 7451) in paragraph at lines 10067--10069
 []\TU/AtkinsonHyperlegibleNext(0)/b/n/10 Redi-rect to a file\TU/AtkinsonHyperle
 gibleNext(0)/m/n/10 : \TU/lmtt/m/n/10 command > output.txt\TU/AtkinsonHyperlegi
 bleNext(0)/m/n/10 , then \TU/lmtt/m/n/10 notepad.exe
@@ -3407,28 +3371,28 @@ gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 ] [145]
 ignored error Infinite glue shrinkage found in box being split [146] [147]
 [148] [149] [150]
-Underfull \hbox (badness 1292) in paragraph at lines 10601--10603
+Underfull \hbox (badness 1292) in paragraph at lines 10607--10609
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Af-ter each \TU/lmtt/m/n/10 cd \TU/Atk
 insonHyperlegibleNext(0)/m/n/10 com-mand, run \TU/lmtt/m/n/10 cd \TU/AtkinsonHy
 perlegibleNext(0)/m/n/10 alone to con-firm lo-ca-tion. Press
  []
 
 
-Overfull \hbox (7.57007pt too wide) in paragraph at lines 10605--10606
+Overfull \hbox (7.57007pt too wide) in paragraph at lines 10611--10612
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 For long list-ings: \TU/lmtt/m/n/10 dir
  /B > listing.txt\TU/AtkinsonHyperlegibleNext(0)/m/n/10 , then \TU/lmtt/m/n/10 
 notepad.exe listing.txt\TU/AtkinsonHyperlegibleNext(0)/m/n/10 . 
  []
 
 
-Overfull \hbox (7.57007pt too wide) in paragraph at lines 10617--10618
+Overfull \hbox (7.57007pt too wide) in paragraph at lines 10623--10624
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 For long list-ings: \TU/lmtt/m/n/10 dir
  /B > listing.txt\TU/AtkinsonHyperlegibleNext(0)/m/n/10 , then \TU/lmtt/m/n/10 
 notepad.exe listing.txt\TU/AtkinsonHyperlegibleNext(0)/m/n/10 . 
  []
 
 [151]
-Overfull \hbox (7.57007pt too wide) in paragraph at lines 10641--10642
+Overfull \hbox (7.57007pt too wide) in paragraph at lines 10647--10648
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 For long list-ings: \TU/lmtt/m/n/10 dir
  /B > listing.txt\TU/AtkinsonHyperlegibleNext(0)/m/n/10 , then \TU/lmtt/m/n/10 
 notepad.exe listing.txt\TU/AtkinsonHyperlegibleNext(0)/m/n/10 . 
@@ -3437,32 +3401,32 @@ notepad.exe listing.txt\TU/AtkinsonHyperlegibleNext(0)/m/n/10 .
 [152] [153] [154] [155] [156] [157] [158]
 ignored error Infinite glue shrinkage found in box being split [159] [160]
 [161] [162] [163]
-Underfull \hbox (badness 3323) in paragraph at lines 11511--11513
+Underfull \hbox (badness 3323) in paragraph at lines 11517--11519
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Cre-ate a tem-po-rary alias: \TU/lmtt/
 m/n/10 doskey preview=openscad $* \TU/AtkinsonHyperlegibleNext(0)/m/n/10 and tes
 t
  []
 
 [164] [165] [166] [167] [168] [169] [170] [171] [172]
-Underfull \hbox (badness 4779) in paragraph at lines 12151--12153
+Underfull \hbox (badness 4779) in paragraph at lines 12157--12159
 []\TU/lmtt/m/n/10 if not exist "%folderPath%\" \TU/AtkinsonHyperlegibleNext(0)/
 m/n/10 checks if folder ex-ists (trail-ing \TU/lmtt/m/n/10 \
  []
 
 [173] [174] [175] [176] [177] [178] [179] [180] [181] [182]
-Overfull \hbox (24.92668pt too wide) in paragraph at lines 12957--12959
+Overfull \hbox (24.92668pt too wide) in paragraph at lines 12963--12965
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 De-scribe what would hap-pen if you ran
  \TU/lmtt/m/n/10 rmdir /S /Q C:\Documents\my_folder
  []
 
 
-Overfull \hbox (32.93669pt too wide) in paragraph at lines 12982--12984
+Overfull \hbox (32.93669pt too wide) in paragraph at lines 12988--12990
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Cre-ate a folder struc-ture \TU/lmtt/m
 /n/10 %USERPROFILE%\Documents\CMD_Assessment\Projects
  []
 
 
-Overfull \hbox (6.32343pt too wide) in paragraph at lines 12984--12986
+Overfull \hbox (6.32343pt too wide) in paragraph at lines 12990--12992
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Cre-ate five files named \TU/lmtt/m/n/
 10 project_1.scad\TU/AtkinsonHyperlegibleNext(0)/m/n/10 , \TU/lmtt/m/n/10 projec
 t_2.scad\TU/AtkinsonHyperlegibleNext(0)/m/n/10 , \TU/lmtt/m/n/10 project_3.txt\
@@ -3470,7 +3434,7 @@ TU/AtkinsonHyperlegibleNext(0)/m/n/10 ,
  []
 
 [183]
-Underfull \hbox (badness 4193) in paragraph at lines 13001--13003
+Underfull \hbox (badness 4193) in paragraph at lines 13007--13009
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 List all files in the \TU/lmtt/m/n/10 
 Projects \TU/AtkinsonHyperlegibleNext(0)/m/n/10 folder and redi-rect the out-put
  to
@@ -3482,7 +3446,7 @@ ignored error Infinite glue shrinkage found in box being split [196] [197]
 ignored error Infinite glue shrinkage found in box being split [207]
 ignored error Infinite glue shrinkage found in box being split [208]
 ignored error Infinite glue shrinkage found in box being split [209]
-Underfull \hbox (badness 3919) in paragraph at lines 15078--15079
+Underfull \hbox (badness 3919) in paragraph at lines 15084--15085
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Note: Paths in Git Bash use for-ward sl
 ashes (\TU/lmtt/m/n/10 /\TU/AtkinsonHyperlegibleNext(0)/m/n/10 ) and your Win-do
 ws
@@ -3492,46 +3456,46 @@ ws
 ignored error Infinite glue shrinkage found in box being split [211] [212]
 [213] [214] [215] [216] [217] [218] [219] [220] [221] [222] [223] [224]
 [225]
-Underfull \hbox (badness 7451) in paragraph at lines 16359--16361
+Underfull \hbox (badness 7451) in paragraph at lines 16365--16367
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 If you're in \TU/lmtt/m/n/10 ~/Document
 s/Projects/3D \TU/AtkinsonHyperlegibleNext(0)/m/n/10 and you want to go to
  []
 
 
-Underfull \hbox (badness 5893) in paragraph at lines 16371--16373
+Underfull \hbox (badness 5893) in paragraph at lines 16377--16379
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Write a one-line com-mand that lists \
 TU/lmtt/m/n/10 .scad \TU/AtkinsonHyperlegibleNext(0)/m/n/10 files and saves to
  []
 
 [226] [227]
-Underfull \hbox (badness 10000) in paragraph at lines 16507--16509
+Underfull \hbox (badness 10000) in paragraph at lines 16513--16515
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Com-pare \TU/lmtt/m/n/10 mv old_name.tx
 t new_name.txt \TU/AtkinsonHyperlegibleNext(0)/m/n/10 vs \TU/lmtt/m/n/10 mv old_
 name.txt
  []
 
 [228] [229] [230] [231]
-Underfull \hbox (badness 3919) in paragraph at lines 16798--16800
+Underfull \hbox (badness 3919) in paragraph at lines 16804--16806
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 What would be the dif-fer-ence in out-p
 ut be-tween \TU/lmtt/m/n/10 echo "test" >
  []
 
 [232] [233] [234] [235] [236]
-Overfull \hbox (29.3601pt too wide) in paragraph at lines 17060--17061
+Overfull \hbox (29.3601pt too wide) in paragraph at lines 17066--17067
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Add a per-sis-tent alias line to your 
 pro-file (ex-am-ple: \TU/lmtt/m/n/10 alias preview='openscad'\TU/AtkinsonHyperl
 egibleNext(0)/m/n/10 ),
  []
 
 
-Overfull \hbox (49.18333pt too wide) in paragraph at lines 17094--17096
+Overfull \hbox (49.18333pt too wide) in paragraph at lines 17100--17102
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Write a com-mand that would run a scrip
 t at the path \TU/lmtt/m/n/10 ~/scripts/openscad_runner.sh
  []
 
 [237] [238] [239] [240] [241] [242] [243] [244] [245] [246] [247] [248]
 [249] [250] [251] [252] [253]
-Overfull \hbox (6.32343pt too wide) in paragraph at lines 18451--18453
+Overfull \hbox (6.32343pt too wide) in paragraph at lines 18457--18459
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Cre-ate five files named \TU/lmtt/m/n/
 10 project_1.scad\TU/AtkinsonHyperlegibleNext(0)/m/n/10 , \TU/lmtt/m/n/10 projec
 t_2.scad\TU/AtkinsonHyperlegibleNext(0)/m/n/10 , \TU/lmtt/m/n/10 project_3.txt\
@@ -3539,7 +3503,7 @@ TU/AtkinsonHyperlegibleNext(0)/m/n/10 ,
  []
 
 [254]
-Underfull \hbox (badness 4193) in paragraph at lines 18469--18471
+Underfull \hbox (badness 4193) in paragraph at lines 18475--18477
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 List all files in the \TU/lmtt/m/n/10 
 Projects \TU/AtkinsonHyperlegibleNext(0)/m/n/10 folder and redi-rect the out-put
  to
@@ -3547,21 +3511,21 @@ Projects \TU/AtkinsonHyperlegibleNext(0)/m/n/10 folder and redi-rect the out-put
 
 [255] [256]
 LaTeX Font Info:    Font shape `TU/AtkinsonHyperlegibleNext(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 18543.
+(Font)              scaled to size 7.0pt on input line 18551.
 LaTeX Font Info:    Font shape `TU/AtkinsonHyperlegibleNext(0)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 18543.
+(Font)              scaled to size 6.0pt on input line 18551.
 LaTeX Font Info:    Font shape `TU/AtkinsonHyperlegibleNext(0)/m/it' will be
-(Font)              scaled to size 8.0pt on input line 18543.
+(Font)              scaled to size 8.0pt on input line 18551.
  [257
 
 ] [258]
-Underfull \hbox (badness 1142) in paragraph at lines 18577--18578
+Underfull \hbox (badness 1142) in paragraph at lines 18585--18586
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 par-ti-cles (UFPs) per minute dur-ing ex-
 tru-sion.[][][] These par-ti-cles, smaller
  []
 
 [259] [260]
-Overfull \hbox (21.29004pt too wide) in paragraph at lines 18621--18622
+Overfull \hbox (21.29004pt too wide) in paragraph at lines 18629--18630
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Post-Print Cool-ing: En-sur-ing the pri
 nter has cooled to be-low $30^\circ\text{C}$
  []
@@ -3571,139 +3535,128 @@ Underfull \vbox (badness 1701) has occurred while \output is active []
 
  [261]
 [262] [263] [264] [265] [266] [267] [268] [269] [270] [271] [272] [273]
-[274] [275] [276] [277] [278] [279]
-Underfull \vbox (badness 2932) has occurred while \output is active []
+[274] [275] [276] [277] [278] [279] [280] [281] [282] [283] [284]
+Overfull \hbox (34.31673pt too wide) in paragraph at lines 20212--20213
+[]\TU/AtkinsonHyperlegibleNext(0)/b/n/10 Ref-er-ence Ma-te-ri-als \TU/AtkinsonH
+yperlegibleNext(0)/m/n/10 Quick-reference guides are avail-able in \TU/lmtt/m/n
+/10 Reference_Materials/\TU/AtkinsonHyperlegibleNext(0)/m/n/10 : 
+ []
 
- [280]
-[281] [282] [283] [284] [285] [286] [287]
-Overfull \hbox (9.04007pt too wide) in paragraph at lines 20374--20376
+
+Overfull \hbox (9.04007pt too wide) in paragraph at lines 20251--20253
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 What is the dif-fer-ence be-tween the 
 global con-fig-u-ra-tion file (\TU/lmtt/m/n/10 defaults.toml\TU/AtkinsonHyperle
 gibleNext(0)/m/n/10 )
  []
 
-[288]
-Underfull \hbox (badness 1248) in paragraph at lines 20412--20414
+[285]
+Underfull \hbox (badness 1248) in paragraph at lines 20289--20291
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Edit the global con-fig-u-ra-tion file us-ing \TU/lmtt/m/n/10 3dm edit-global-config \TU/AtkinsonHyperlegibleNext(0)/m/n/10 to
  []
 
 
-Underfull \hbox (badness 1259) in paragraph at lines 20414--20416
+Underfull \hbox (badness 1259) in paragraph at lines 20291--20293
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Cre-ate a project with three \TU/lmtt/
 m/n/10 .scad \TU/AtkinsonHyperlegibleNext(0)/m/n/10 files (e.g., \TU/lmtt/m/n/1
 0 main.scad\TU/AtkinsonHyperlegibleNext(0)/m/n/10 , \TU/lmtt/m/n/10 lid.scad\TU
 /AtkinsonHyperlegibleNext(0)/m/n/10 ,
  []
 
-[289] [290] [291] [292]
-Underfull \hbox (badness 4048) in paragraph at lines 20735--20736
-[]\TU/AtkinsonHyperlegibleNext(0)/b/n/10 Step 1: Cre-ate or Edit Open-SCAD Files
- \TU/AtkinsonHyperlegibleNext(0)/m/n/10 The main model file is
- []
-
-[293] [294] [295] [296]
-Underfull \hbox (badness 1521) in paragraph at lines 21090--21091
+[286] [287] [288] [289] [290] [291] [292] [293] [294]
+Underfull \hbox (badness 1521) in paragraph at lines 20967--20968
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 says \TU/lmtt/m/n/10 printerprofile = "pr
 usaMK4" \TU/AtkinsonHyperlegibleNext(0)/m/n/10 but your project's \TU/lmtt/m/n/
 10 3dmake.toml \TU/AtkinsonHyperlegibleNext(0)/m/n/10 says
  []
 
-[297] [298] [299] [300] [301] [302] [303] [304] [305] [306] [307] [308]
-[309] [310] [311]
-ignored error Infinite glue shrinkage found in box being split [312]
-ignored error Infinite glue shrinkage found in box being split [313] [314]
-[315] [316] [317] [318] [319] [320] [321] [322]
-Overfull \hbox (4.89091pt too wide) in paragraph at lines 22951--22952
+[295] [296] [297] [298] [299] [300] [301] [302] [303] [304] [305] [306]
+[307] [308] [309] [310]
+ignored error Infinite glue shrinkage found in box being split [311] [312]
+[313] [314] [315] [316] [317] [318] [319]
+Overfull \hbox (4.89091pt too wide) in paragraph at lines 22828--22829
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Points  
  []
 
 
-Overfull \hbox (8.47272pt too wide) in paragraph at lines 22976--22977
+Overfull \hbox (8.47272pt too wide) in paragraph at lines 22853--22854
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Score  
  []
 
 
-Overfull \hbox (3.71165pt too wide) in paragraph at lines 23002--23003
+Overfull \hbox (3.71165pt too wide) in paragraph at lines 22879--22880
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Score  
  []
 
-[323]
-Overfull \hbox (3.11208pt too wide) in paragraph at lines 23027--23028
+[320]
+Overfull \hbox (3.11208pt too wide) in paragraph at lines 22904--22905
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Score  
  []
 
-[324]
-Underfull \hbox (badness 1888) in paragraph at lines 23108--23110
+[321]
+Underfull \hbox (badness 1888) in paragraph at lines 22985--22987
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Use all six Open-SCAD prim-i-tive shape
 s: \TU/lmtt/m/n/10 cube\TU/AtkinsonHyperlegibleNext(0)/m/n/10 , \TU/lmtt/m/n/10
  sphere\TU/AtkinsonHyperlegibleNext(0)/m/n/10 , \TU/lmtt/m/n/10 cylinder\TU/Atk
 insonHyperlegibleNext(0)/m/n/10 ,
  []
 
-[325] [326] [327]
-Underfull \hbox (badness 2042) in paragraph at lines 23323--23324
+[322] [323] [324]
+Underfull \hbox (badness 2042) in paragraph at lines 23200--23201
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 shapes and sim-ply ren-der-ing two sep-a-
 rate shapes with-out a CSG
  []
 
-
-Underfull \vbox (badness 1762) has occurred while \output is active []
-
- [328]
-[329] [330] [331] [332] [333] [334] [335] [336] [337]
-Overfull \hbox (6.33585pt too wide) in paragraph at lines 24003--24004
+[325] [326] [327] [328] [329] [330] [331] [332] [333]
+Overfull \hbox (6.33585pt too wide) in paragraph at lines 23880--23881
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Points  
  []
 
 
-Overfull \hbox (5.60693pt too wide) in paragraph at lines 24028--24029
+Overfull \hbox (5.60693pt too wide) in paragraph at lines 23905--23906
+[]\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Score  
+ []
+
+[334]
+Overfull \hbox (8.80807pt too wide) in paragraph at lines 23931--23932
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Score  
  []
 
 
-Overfull \hbox (8.80807pt too wide) in paragraph at lines 24054--24055
+Overfull \hbox (8.10687pt too wide) in paragraph at lines 23957--23958
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Score  
  []
 
-[338]
-Overfull \hbox (8.10687pt too wide) in paragraph at lines 24080--24081
-[]\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Score  
- []
-
-[339] [340] [341] [342] [343]
-Overfull \hbox (2.15009pt too wide) in paragraph at lines 24469--24471
+ignored error Infinite glue shrinkage found in box being split [335] [336]
+[337] [338] [339]
+Overfull \hbox (2.15009pt too wide) in paragraph at lines 24346--24348
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Write type-safe mod-ules us-ing \TU/lm
 tt/m/n/10 is_number()\TU/AtkinsonHyperlegibleNext(0)/m/n/10 , \TU/lmtt/m/n/10 is
 _list()\TU/AtkinsonHyperlegibleNext(0)/m/n/10 , and \TU/lmtt/m/n/10 is_string() 
  []
 
-[344]
-Underfull \vbox (badness 1354) has occurred while \output is active []
-
- [345]
-[346]
-Overfull \hbox (25.11002pt too wide) in paragraph at lines 24653--24655
+[340] [341] [342]
+Overfull \hbox (25.11002pt too wide) in paragraph at lines 24530--24532
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 What does \TU/lmtt/m/n/10 include <libr
 ary.scad> \TU/AtkinsonHyperlegibleNext(0)/m/n/10 do dif-fer-ently from \TU/lmtt
 /m/n/10 use <library.scad>\TU/AtkinsonHyperlegibleNext(0)/m/n/10 ? 
  []
 
-[347]
-Underfull \hbox (badness 5036) in paragraph at lines 24695--24697
+
+Underfull \hbox (badness 5036) in paragraph at lines 24572--24574
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 De-sign a para-met-ric gear pro-file mo
 d-ule. Pa-ram-e-ters: \TU/lmtt/m/n/10 teeth\TU/AtkinsonHyperlegibleNext(0)/m/n/
 10 ,
  []
 
-
-Underfull \hbox (badness 3482) in paragraph at lines 24703--24705
+[343]
+Underfull \hbox (badness 3482) in paragraph at lines 24580--24582
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 ing bor-dered frame; pa-ram-e-ters: \TU/
 lmtt/m/n/10 text_str\TU/AtkinsonHyperlegibleNext(0)/m/n/10 , \TU/lmtt/m/n/10 fon
 t_size\TU/AtkinsonHyperlegibleNext(0)/m/n/10 , \TU/lmtt/m/n/10 padding\TU/Atkin
 sonHyperlegibleNext(0)/m/n/10 ,
  []
 
-[348] [349] [350]
+[344] [345] [346]
 Missing character: There is no ✓ (U+2713) in font [lmmono8-regular]:!
 Missing character: There is no ✗ (U+2717) in font [lmmono8-regular]:!
 Missing character: There is no ✓ (U+2713) in font [lmmono8-regular]:!
@@ -3720,7 +3673,7 @@ Missing character: There is no ✓ (U+2713) in font [lmmono8-regular]:!
 Missing character: There is no ✗ (U+2717) in font [lmmono8-regular]:!
 Missing character: There is no ✓ (U+2713) in font [lmmono8-regular]:!
 Missing character: There is no ✗ (U+2717) in font [lmmono8-regular]:!
-[351
+[347
 Missing character: There is no ✓ (U+2713) in font [lmmono8-regular]:!
 Missing character: There is no ✗ (U+2717) in font [lmmono8-regular]:!
 Missing character: There is no ✓ (U+2713) in font [lmmono8-regular]:!
@@ -3742,456 +3695,439 @@ Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-[352
+[348
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-] [353] [354] [355] [356] [357]
-Underfull \vbox (badness 1360) has occurred while \output is active []
-
- [358]
-ignored error Infinite glue shrinkage found in box being split [359] [360]
-[361] [362]
-Underfull \hbox (badness 1320) in paragraph at lines 25641--25642
+] [349] [350] [351] [352] [353]
+ignored error Infinite glue shrinkage found in box being split [354] [355]
+[356] [357] [358]
+Underfull \hbox (badness 1320) in paragraph at lines 25518--25519
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 Com-plete this check-list be-fore each pr
 int-ing ses-sion to main-tain a safe
  []
 
-
-Underfull \vbox (badness 3118) has occurred while \output is active []
-
- [363]
-[364] [365] [366]
-Overfull \hbox (1.98033pt too wide) in paragraph at lines 25991--25992
+[359] [360] [361]
+Overfull \hbox (1.98033pt too wide) in paragraph at lines 25868--25869
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Date  
  []
 
-[367]
-Overfull \hbox (1.69424pt too wide) in paragraph at lines 26072--26073
+[362]
+Overfull \hbox (1.69424pt too wide) in paragraph at lines 25949--25950
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Brand  
  []
 
 
-Overfull \hbox (1.32423pt too wide) in paragraph at lines 26082--26083
+Overfull \hbox (1.32423pt too wide) in paragraph at lines 25959--25960
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Notes  
  []
 
-[368]
-Overfull \hbox (1.16719pt too wide) in paragraph at lines 26161--26162
+ignored error Infinite glue shrinkage found in box being split [363]
+Overfull \hbox (1.16719pt too wide) in paragraph at lines 26038--26039
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Month  
  []
 
-
-Underfull \hbox (badness 2012) in paragraph at lines 26210--26212
+[364]
+Underfull \hbox (badness 2012) in paragraph at lines 26087--26089
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Em-boss and en-grave text us-ing OpenSC
 AD's \TU/lmtt/m/n/10 text() \TU/AtkinsonHyperlegibleNext(0)/m/n/10 func-tion wit
 h
  []
 
-[369]
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-[370
+[365
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-] [371] [372] [373]
-ignored error Infinite glue shrinkage found in box being split [374] [375]
-Underfull \hbox (badness 3872) in paragraph at lines 26701--26703
+] [366] [367] [368]
+ignored error Infinite glue shrinkage found in box being split [369] [370]
+Underfull \hbox (badness 3872) in paragraph at lines 26578--26580
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Cre-ate \TU/lmtt/m/n/10 keychain.scad 
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 with top-level pa-ram-e-ters: \TU/lmtt/m
 /n/10 width\TU/AtkinsonHyperlegibleNext(0)/m/n/10 , \TU/lmtt/m/n/10 height\TU/A
 tkinsonHyperlegibleNext(0)/m/n/10 ,
  []
 
-[376] [377] [378]
-Underfull \vbox (badness 3209) has occurred while \output is active []
+[371] [372] [373]
+Underfull \hbox (badness 2846) in paragraph at lines 26817--26817
+[][]\TU/AtkinsonHyperlegibleNext(0)/b/n/10 Para-met-ric Key-chain - Stu-dent Doc
+-u-men-ta-tion Tem-plate (Ex-ten-sion
+ []
 
- [379]
-[380] [381] [382] [383] [384] [385]
-Underfull \hbox (badness 10000) in paragraph at lines 27374--27376
+[374] [375]
+Underfull \hbox (badness 2452) in paragraph at lines 26944--26945
+[]\TU/AtkinsonHyperlegibleNext(0)/b/n/10 Brief-ing \TU/AtkinsonHyperlegibleNext
+(0)/m/n/10 Stu-dents de-sign a per-son-al-ized key-chain us-ing fully para-met-
+ []
+
+
+Underfull \hbox (badness 1721) in paragraph at lines 26944--26945
+\TU/AtkinsonHyperlegibleNext(0)/m/n/10 ric Open-SCAD code. This project em-pha-s
+izes parameter-driven de-sign,
+ []
+
+[376] [377] [378] [379]
+Underfull \hbox (badness 10000) in paragraph at lines 27251--27253
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 True or False: \TU/lmtt/m/n/10 translat
 e([10,0,0]) rotate([0,0,45]) cube(5)
  []
 
-[386]
-Underfull \vbox (badness 1810) has occurred while \output is active []
+[380] [381] [382]
+Underfull \vbox (badness 3189) has occurred while \output is active []
 
- [387]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [388]
-[389]
-Underfull \vbox (badness 3271) has occurred while \output is active []
-
- [390]
-[391]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [392]
-[393] [394] [395] [396] [397] [398] [399]
-Underfull \hbox (badness 10000) in paragraph at lines 28323--28325
+ [383]
+[384] [385] [386] [387] [388] [389] [390] [391] [392] [393]
+Underfull \hbox (badness 10000) in paragraph at lines 28200--28202
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 What does \TU/lmtt/m/n/10 find src/ -na
 me "*.scad" -newer build/main.stl
  []
 
-[400] [401]
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 13.80963pt on input line 28400.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 13.80963pt on input line 28400.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 13.80963pt on input line 28400.
- [402] [403] [404] [405] [406]
-Underfull \hbox (badness 1082) in paragraph at lines 28690--28691
+[394] [395] [396] [397] [398] [399]
+Underfull \hbox (badness 1082) in paragraph at lines 28567--28568
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Write a com-pre-hen-sive trou-bleshoot-
 ing guide cov-er-ing the 10 most
  []
 
-[407] [408] [409] [410] [411] [412] [413] [414] [415] [416] [417] [418]
-[419] [420] [421] [422] [423] [424] [425] [426] [427]
-Overfull \hbox (1.206pt too wide) in paragraph at lines 30702--30702
+[400] [401] [402] [403] [404] [405] [406] [407] [408]
+ignored error Infinite glue shrinkage found in box being split [409] [410]
+[411] [412] [413] [414] [415] [416] [417] [418] [419] [420]
+Overfull \hbox (1.206pt too wide) in paragraph at lines 30579--30579
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Medium|  
  []
 
-[428] [429] [430] [431] [432] [433] [434] [435]
-Underfull \hbox (badness 1082) in paragraph at lines 31147--31148
+[421] [422] [423] [424] [425] [426] [427]
+Underfull \hbox (badness 1082) in paragraph at lines 31024--31025
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Write a com-pre-hen-sive trou-bleshoot-
 ing guide cov-er-ing the 10 most
  []
 
-[436] [437] [438] [439] [440] [441] [442] [443]
-ignored error Infinite glue shrinkage found in box being split [444] [445]
-[446] [447] [448] [449] [450] [451] [452]
-ignored error Infinite glue shrinkage found in box being split [453] [454]
-[455] [456]
-Overfull \hbox (11.57224pt too wide) in paragraph at lines 33087--33088
+[428] [429] [430] [431] [432] [433] [434] [435] [436] [437] [438] [439]
+[440] [441] [442] [443] [444] [445] [446] [447] [448]
+Overfull \hbox (11.57224pt too wide) in paragraph at lines 32964--32965
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Score  
  []
 
-[457]
-Overfull \hbox (15.93188pt too wide) in paragraph at lines 33114--33115
+[449]
+Overfull \hbox (15.93188pt too wide) in paragraph at lines 32991--32992
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Score  
  []
 
 
-Overfull \hbox (13.89941pt too wide) in paragraph at lines 33141--33142
+Overfull \hbox (13.89941pt too wide) in paragraph at lines 33018--33019
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Score  
  []
 
-[458] [459] [460] [461]
-Underfull \hbox (badness 2538) in paragraph at lines 33413--33415
+[450] [451] [452] [453]
+Underfull \hbox (badness 2538) in paragraph at lines 33290--33292
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 with single-parameter changes; doc-u-ment
  aes-thetic and func-tional
  []
 
-[462] [463] [464] [465]
-Underfull \hbox (badness 7777) in paragraph at lines 33662--33663
+[454] [455] [456] [457]
+Underfull \hbox (badness 7777) in paragraph at lines 33539--33540
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 Ques-tion: Ex-plain the dif-fer-ence be-t
 ween \TU/lmtt/m/n/10 sphere(r=10, $fn=8) \TU/AtkinsonHyperlegibleNext(0)/m/n/10
  and
  []
 
-[466]
-Underfull \hbox (badness 2818) in paragraph at lines 33718--33719
+[458]
+Underfull \hbox (badness 2818) in paragraph at lines 33595--33596
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 Ques-tion: If you ap-ply \TU/lmtt/m/n/10
  scale([2, 1, 0.5]) \TU/AtkinsonHyperlegibleNext(0)/m/n/10 to a \TU/lmtt/m/n/10
  cube([10, 10, 10],
  []
 
-[467] [468] [469] [470]
-Overfull \hbox (49.12753pt too wide) in paragraph at lines 34003--34003
+[459] [460] [461] [462]
+Overfull \hbox (49.12753pt too wide) in paragraph at lines 33880--33880
 \TU/lmtt/m/n/10 describe/preview/orient/slice\TU/AtkinsonHyperlegibleNext(0)/m/
 n/10 , 
  []
 
 
-Overfull \hbox (2.56227pt too wide) in paragraph at lines 34006--34006
+Overfull \hbox (2.56227pt too wide) in paragraph at lines 33883--33883
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 120m|  
  []
 
 
-Overfull \hbox (1.76987pt too wide) in paragraph at lines 34011--34011
+Overfull \hbox (1.76987pt too wide) in paragraph at lines 33888--33888
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 10|  
  []
 
 
-Overfull \hbox (2.96228pt too wide) in paragraph at lines 34011--34011
+Overfull \hbox (2.96228pt too wide) in paragraph at lines 33888--33888
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 150m|  
  []
 
 
-Overfull \hbox (2.56227pt too wide) in paragraph at lines 34013--34013
+Overfull \hbox (2.56227pt too wide) in paragraph at lines 33890--33890
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 120m|  
  []
 
 
-Overfull \hbox (4.22037pt too wide) in paragraph at lines 34013--34013
+Overfull \hbox (4.22037pt too wide) in paragraph at lines 33890--33890
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 vanced+|  
  []
 
-ignored error Infinite glue shrinkage found in box being split [471]
-Overfull \hbox (9.58492pt too wide) in paragraph at lines 34044--34044
+
+Overfull \hbox (9.58492pt too wide) in paragraph at lines 33921--33921
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 PrusaSlicer, 
  []
 
 
-Overfull \hbox (6.9058pt too wide) in paragraph at lines 34045--34045
+Overfull \hbox (6.9058pt too wide) in paragraph at lines 33922--33922
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 1,500+ 
  []
 
 
-Overfull \hbox (6.5058pt too wide) in paragraph at lines 34047--34047
+Overfull \hbox (6.5058pt too wide) in paragraph at lines 33924--33924
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 1,200+ 
  []
 
 
-Overfull \hbox (6.5058pt too wide) in paragraph at lines 34050--34050
+Overfull \hbox (6.5058pt too wide) in paragraph at lines 33927--33927
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 1,200+ 
  []
 
 
-Overfull \hbox (4.7958pt too wide) in paragraph at lines 34054--34054
+Overfull \hbox (4.7958pt too wide) in paragraph at lines 33931--33931
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 1,100+ 
  []
 
+[463] [464] [465] [466] [467] [468] [469] [470] [471] [472
 
-Underfull \vbox (badness 2547) has occurred while \output is active []
-
- [472]
-[473] [474] [475] [476] [477] [478] [479] [480] [481
-
-] [482] [483] [484]
-Underfull \hbox (badness 6268) in paragraph at lines 34868--34870
+] [473] [474]
+[475]
+Underfull \hbox (badness 6268) in paragraph at lines 34747--34749
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Keep batch scripts small; del-e-gate co
 m-plex text pro-cess-ing to
  []
 
-[485] [486] [487] [488]
+[476] [477] [478] [479]
 Underfull \vbox (badness 2762) has occurred while \output is active []
 
- [489]
-[490] [491] [492] [493] [494] [495] [496] [497] [498]
-Overfull \hbox (12.73083pt too wide) in paragraph at lines 35980--35980
+ [480]
+[481] [482] [483] [484] [485] [486] [487] [488] [489]
+Overfull \hbox (12.73083pt too wide) in paragraph at lines 35859--35859
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Brim/Raft/Skirt|  
  []
 
-ignored error Infinite glue shrinkage found in box being split [499] [500]
-[501] [502] [503] [504] [505] [506] [507] [508]
-ignored error Infinite glue shrinkage found in box being split [509] [510]
-[511]
-ignored error Infinite glue shrinkage found in box being split [512] [513]
-[514] [515] [516]
-ignored error Infinite glue shrinkage found in box being split [517] [518]
-Overfull \hbox (9.53333pt too wide) in paragraph at lines 37805--37806
+ignored error Infinite glue shrinkage found in box being split [490] [491]
+[492] [493] [494] [495] [496] [497] [498] [499]
+ignored error Infinite glue shrinkage found in box being split [500] [501]
+[502]
+ignored error Infinite glue shrinkage found in box being split [503] [504]
+[505] [506] [507]
+ignored error Infinite glue shrinkage found in box being split [508] [509]
+Overfull \hbox (9.53333pt too wide) in paragraph at lines 37684--37685
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Strength  
  []
 
 
-Overfull \hbox (1.1525pt too wide) in paragraph at lines 37809--37810
+Overfull \hbox (1.1525pt too wide) in paragraph at lines 37688--37689
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Heat  
  []
 
 
-Overfull \hbox (1.3125pt too wide) in paragraph at lines 37811--37812
+Overfull \hbox (1.3125pt too wide) in paragraph at lines 37690--37691
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Ease  
  []
 
 
-Overfull \hbox (3.04787pt too wide) in paragraph at lines 37813--37814
+Overfull \hbox (3.04787pt too wide) in paragraph at lines 37692--37693
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Cost  
  []
 
 
-Overfull \hbox (2.5037pt too wide) in paragraph at lines 37821--37821
+Overfull \hbox (2.5037pt too wide) in paragraph at lines 37700--37700
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 200C|  
  []
 
 
-Overfull \hbox (2.12787pt too wide) in paragraph at lines 37821--37821
+Overfull \hbox (2.12787pt too wide) in paragraph at lines 37700--37700
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 60C|  
  []
 
 
-Overfull \hbox (2.2425pt too wide) in paragraph at lines 37821--37821
+Overfull \hbox (2.2425pt too wide) in paragraph at lines 37700--37700
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 [2/5]|  
  []
 
 
-Overfull \hbox (2.3425pt too wide) in paragraph at lines 37821--37821
+Overfull \hbox (2.3425pt too wide) in paragraph at lines 37700--37700
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 [5/5]|  
  []
 
 
-Overfull \hbox (1.0837pt too wide) in paragraph at lines 37823--37823
+Overfull \hbox (1.0837pt too wide) in paragraph at lines 37702--37702
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 235C|  
  []
 
 
-Overfull \hbox (2.29787pt too wide) in paragraph at lines 37823--37823
+Overfull \hbox (2.29787pt too wide) in paragraph at lines 37702--37702
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 80C|  
  []
 
 
-Overfull \hbox (2.22249pt too wide) in paragraph at lines 37823--37823
+Overfull \hbox (2.22249pt too wide) in paragraph at lines 37702--37702
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 [3/5]|  
  []
 
 
-Overfull \hbox (2.7025pt too wide) in paragraph at lines 37823--37823
+Overfull \hbox (2.7025pt too wide) in paragraph at lines 37702--37702
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 [4/5]|  
  []
 
 
-Overfull \hbox (1.8637pt too wide) in paragraph at lines 37825--37825
+Overfull \hbox (1.8637pt too wide) in paragraph at lines 37704--37704
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 240C|  
  []
 
 
-Overfull \hbox (6.69788pt too wide) in paragraph at lines 37825--37825
+Overfull \hbox (6.69788pt too wide) in paragraph at lines 37704--37704
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 100C|  
  []
 
 
-Overfull \hbox (2.3425pt too wide) in paragraph at lines 37825--37825
+Overfull \hbox (2.3425pt too wide) in paragraph at lines 37704--37704
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 [5/5]|  
  []
 
 
-Overfull \hbox (2.2425pt too wide) in paragraph at lines 37825--37825
+Overfull \hbox (2.2425pt too wide) in paragraph at lines 37704--37704
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 [2/5]|  
  []
 
 
-Overfull \hbox (2.12787pt too wide) in paragraph at lines 37827--37827
+Overfull \hbox (2.12787pt too wide) in paragraph at lines 37706--37706
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 60C|  
  []
 
 
-Overfull \hbox (2.22249pt too wide) in paragraph at lines 37827--37827
+Overfull \hbox (2.22249pt too wide) in paragraph at lines 37706--37706
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 [3/5]|  
  []
 
 
-Overfull \hbox (2.22249pt too wide) in paragraph at lines 37827--37827
+Overfull \hbox (2.22249pt too wide) in paragraph at lines 37706--37706
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 [3/5]|  
  []
 
 
-Overfull \hbox (0.97787pt too wide) in paragraph at lines 37828--37828
+Overfull \hbox (0.97787pt too wide) in paragraph at lines 37707--37707
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 $$$|  
  []
 
 
-Overfull \hbox (2.07368pt too wide) in paragraph at lines 37829--37829
+Overfull \hbox (2.07368pt too wide) in paragraph at lines 37708--37708
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 280C|  
  []
 
 
-Overfull \hbox (4.28789pt too wide) in paragraph at lines 37829--37829
+Overfull \hbox (4.28789pt too wide) in paragraph at lines 37708--37708
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 110C|  
  []
 
 
-Overfull \hbox (2.3425pt too wide) in paragraph at lines 37829--37829
+Overfull \hbox (2.3425pt too wide) in paragraph at lines 37708--37708
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 [5/5]|  
  []
 
 
-Overfull \hbox (0.8325pt too wide) in paragraph at lines 37829--37829
+Overfull \hbox (0.8325pt too wide) in paragraph at lines 37708--37708
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 [1/5]|  
  []
 
 
-Overfull \hbox (6.89787pt too wide) in paragraph at lines 37830--37830
+Overfull \hbox (6.89787pt too wide) in paragraph at lines 37709--37709
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 $$$$|  
  []
 
 
-Overfull \hbox (1.9037pt too wide) in paragraph at lines 37831--37831
+Overfull \hbox (1.9037pt too wide) in paragraph at lines 37710--37710
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 250C|  
  []
 
 
-Overfull \hbox (1.69788pt too wide) in paragraph at lines 37831--37831
+Overfull \hbox (1.69788pt too wide) in paragraph at lines 37710--37710
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 85C|  
  []
 
 
-Overfull \hbox (2.7025pt too wide) in paragraph at lines 37831--37831
+Overfull \hbox (2.7025pt too wide) in paragraph at lines 37710--37710
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 [4/5]|  
  []
 
 
-Overfull \hbox (2.2425pt too wide) in paragraph at lines 37831--37831
+Overfull \hbox (2.2425pt too wide) in paragraph at lines 37710--37710
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 [2/5]|  
  []
 
 
-Overfull \hbox (0.97787pt too wide) in paragraph at lines 37832--37832
+Overfull \hbox (0.97787pt too wide) in paragraph at lines 37711--37711
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 $$$|  
  []
 
-ignored error Infinite glue shrinkage found in box being split [519] [520]
-[521]
-Overfull \hbox (2.2069pt too wide) in paragraph at lines 38032--38033
+ignored error Infinite glue shrinkage found in box being split [510] [511]
+[512]
+Overfull \hbox (2.2069pt too wide) in paragraph at lines 37911--37912
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Rank  
  []
 
-[522] [523] [524]
-Overfull \hbox (9.42546pt too wide) in paragraph at lines 38328--38328
+[513] [514] [515]
+Overfull \hbox (9.42546pt too wide) in paragraph at lines 38207--38207
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 127mm|  
  []
 
 
-Overfull \hbox (0.75545pt too wide) in paragraph at lines 38330--38330
+Overfull \hbox (0.75545pt too wide) in paragraph at lines 38209--38209
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 6mm|  
  []
 
 
-Overfull \hbox (0.92545pt too wide) in paragraph at lines 38331--38331
+Overfull \hbox (0.92545pt too wide) in paragraph at lines 38210--38210
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 8mm|  
  []
 
 
-Overfull \hbox (10.80545pt too wide) in paragraph at lines 38332--38332
+Overfull \hbox (10.80545pt too wide) in paragraph at lines 38211--38211
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 120mm|  
  []
 
 
-Overfull \hbox (1.89545pt too wide) in paragraph at lines 38335--38335
+Overfull \hbox (1.89545pt too wide) in paragraph at lines 38214--38214
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 200g|  
  []
 
 
-Overfull \hbox (3.0197pt too wide) in paragraph at lines 38336--38336
+Overfull \hbox (3.0197pt too wide) in paragraph at lines 38215--38215
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Pass/fail|  
  []
 
-[525] [526] [527] [528] [529] [530] [531]
-Overfull \hbox (116.3985pt too wide) in paragraph at lines 38858--38859
+[516] [517] [518] [519] [520] [521] [522]
+Overfull \hbox (116.3985pt too wide) in paragraph at lines 38737--38738
 [][][][][] 
  []
 
-[532] [533] [534] [535]
+[523] [524] [525] [526]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [536]
-[537] [538] [539] [540] [541] [542]
+ [527]
+[528] [529] [530] [531] [532] [533]
 Underfull \vbox (badness 3954) has occurred while \output is active []
 
- [543]
-[544] [545]
-Overfull \hbox (12.86113pt too wide) in paragraph at lines 39877--39877
+ [534]
+[535] [536]
+Overfull \hbox (12.86113pt too wide) in paragraph at lines 39756--39756
 [][]\TU/AtkinsonHyperlegibleNext(0)/b/n/14.4 PART IV --- WIN-DOWS COM-MAND PROMP
 T (CMD.EXE)
  []
 
-[546] [547] [548] [549] [550] [551] [552]
+[537] [538] [539] [540] [541] [542] [543]
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
@@ -4212,7 +4148,7 @@ Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-[553
+[544
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
@@ -4223,7 +4159,7 @@ Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-] [554] [555] [556] [557] [558] [559] [560] [561] [562] [563] [564]
+] [545] [546] [547] [548] [549] [550] [551] [552] [553] [554] [555]
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
@@ -4236,7 +4172,7 @@ Missing character: There is no ` (U+0060) in font [AtkinsonHyperlegibleNext-Regu
 lar.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no ` (U+0060) in font [AtkinsonHyperlegibleNext-Regu
 lar.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-[565
+[556
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no ` (U+0060) in font [AtkinsonHyperlegibleNext-Regu
@@ -4277,12 +4213,12 @@ lar.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no ` (U+0060) in font [AtkinsonHyperlegibleNext-Regu
 lar.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 
-Underfull \hbox (badness 2057) in paragraph at lines 41202--41204
+Underfull \hbox (badness 2057) in paragraph at lines 41081--41083
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 Students con-fuse `󰀀`󰀀pa-ram-e-ter'
 ' with `󰀀`󰀀hard-coded vari-able.'' Em-pha-size
  []
 
-[566
+[557
 Missing character: There is no ` (U+0060) in font [AtkinsonHyperlegibleNext-Regu
 lar.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no ` (U+0060) in font [AtkinsonHyperlegibleNext-Regu
@@ -4291,7 +4227,7 @@ Missing character: There is no ` (U+0060) in font [AtkinsonHyperlegibleNext-Regu
 lar.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no ` (U+0060) in font [AtkinsonHyperlegibleNext-Regu
 lar.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-] [567]
+] [558]
 Missing character: There is no ` (U+0060) in font [AtkinsonHyperlegibleNext-Regu
 lar.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no ` (U+0060) in font [AtkinsonHyperlegibleNext-Regu
@@ -4300,7 +4236,7 @@ Missing character: There is no ` (U+0060) in font [AtkinsonHyperlegibleNext-Regu
 lar.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no ` (U+0060) in font [AtkinsonHyperlegibleNext-Regu
 lar.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-[568
+[559
 Missing character: There is no ` (U+0060) in font [AtkinsonHyperlegibleNext-Regu
 lar.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no ` (U+0060) in font [AtkinsonHyperlegibleNext-Regu
@@ -4314,7 +4250,7 @@ Missing character: There is no ` (U+0060) in font [AtkinsonHyperlegibleNext-Regu
 lar.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no ` (U+0060) in font [AtkinsonHyperlegibleNext-Regu
 lar.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-[569] [570
+[560] [561
 Missing character: There is no ` (U+0060) in font [AtkinsonHyperlegibleNext-Regu
 lar.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no ` (U+0060) in font [AtkinsonHyperlegibleNext-Regu
@@ -4324,117 +4260,117 @@ Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-[571] [572
+[562] [563
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 41571--41572
+Underfull \hbox (badness 10000) in paragraph at lines 41450--41451
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 https://doi.org/10.1145/3613904.3642566 
 :con-tentRe-f-er-ence[oaicite:0]{in-
  []
 
 
-Underfull \hbox (badness 1484) in paragraph at lines 41573--41574
+Underfull \hbox (badness 1484) in paragraph at lines 41452--41453
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Li, G. (2024). \TU/AtkinsonHyperlegibl
 eNext(0)/m/it/10 Chi-nese dragon mod-el-ing based on Open-SCAD. Ap-plied
  []
 
 
-Underfull \hbox (badness 1242) in paragraph at lines 41573--41574
+Underfull \hbox (badness 1242) in paragraph at lines 41452--41453
 \TU/AtkinsonHyperlegibleNext(0)/m/it/10 and Com-pu-ta-tional En-gi-neer-ing, 67\TU/AtkinsonHyperlegibleNext(0)/m/n/10 , 1--12. https://doi.org/10.54254/2755-
  []
 
 
-Underfull \hbox (badness 3281) in paragraph at lines 41581--41582
+Underfull \hbox (badness 3281) in paragraph at lines 41460--41461
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Cen-ters for Dis-ease Con-trol and Pre-
 ven-tion, Na-tional In-sti-tute for Oc-
  []
 
-[573]
-Overfull \hbox (41.47014pt too wide) in paragraph at lines 41611--41612
+[564]
+Overfull \hbox (41.47014pt too wide) in paragraph at lines 41490--41491
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Prusa Re-search. (n.d.). \TU/AtkinsonH
 yperlegibleNext(0)/m/it/10 PrusaSlicer 4.2.4. \TU/AtkinsonHyperlegibleNext(0)/m
 /n/10 https://www.prusa3d.com/page/prusaslicer424/ 
  []
 
 
-Overfull \hbox (43.18015pt too wide) in paragraph at lines 41613--41614
+Overfull \hbox (43.18015pt too wide) in paragraph at lines 41492--41493
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Prusa Re-search. (n.d.). \TU/AtkinsonH
 yperlegibleNext(0)/m/it/10 PrusaSlicer 4.1.0. \TU/AtkinsonHyperlegibleNext(0)/m
 /n/10 https://www.prusa3d.com/page/prusaslicer_410/ 
  []
 
 
-Overfull \hbox (33.8982pt too wide) in paragraph at lines 41619--41620
+Overfull \hbox (33.8982pt too wide) in paragraph at lines 41498--41499
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 UL Re-search In-sti-tutes. (n.d.). \TU
 /AtkinsonHyperlegibleNext(0)/m/it/10 3D print-ing emis-sions study. \TU/Atkinso
 nHyperlegibleNext(0)/m/n/10 https://www.ul.com/news/ul-
  []
 
 
-Overfull \hbox (65.52933pt too wide) in paragraph at lines 41623--41624
+Overfull \hbox (65.52933pt too wide) in paragraph at lines 41502--41503
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 ZenML. (n.d.). \TU/AtkinsonHyperlegibl
 eNext(0)/m/it/10 LLM-powered 3D model gen-er-a-tion for 3D print-ing. \TU/Atkin
 sonHyperlegibleNext(0)/m/n/10 https://www.zenml.io/llmops-
  []
 
 
-Overfull \hbox (43.60005pt too wide) in paragraph at lines 41627--41628
+Overfull \hbox (43.60005pt too wide) in paragraph at lines 41506--41507
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 An-thropic. (n.d.). \TU/AtkinsonHyperleg
 ibleNext(0)/m/it/10 Prompt en-gi-neer-ing overview. \TU/AtkinsonHyperlegibleNex
 t(0)/m/n/10 https://docs.an-thropic.com/en/docs/build-
  []
 
 
-Underfull \hbox (badness 3281) in paragraph at lines 41629--41630
+Underfull \hbox (badness 3281) in paragraph at lines 41508--41509
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Apache Soft-ware Foun-da-tion. (2004). \TU/AtkinsonHyperlegibleNext(0)/m/it/10 Apache Li-cense, Ver-sion 2.0.
  []
 
 
-Overfull \hbox (10.53241pt too wide) in paragraph at lines 41637--41638
+Overfull \hbox (10.53241pt too wide) in paragraph at lines 41516--41517
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Free Soft-ware Foun-da-tion. (n.d.). \
 TU/AtkinsonHyperlegibleNext(0)/m/it/10 GNU Core-utils man-ual. \TU/AtkinsonHype
 rlegibleNext(0)/m/n/10 https://www.gnu.org/soft-
  []
 
-[574]
-Overfull \hbox (60.07005pt too wide) in paragraph at lines 41643--41644
+[565]
+Overfull \hbox (60.07005pt too wide) in paragraph at lines 41522--41523
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Google Cloud. (2025). \TU/AtkinsonHype
 rlegibleNext(0)/m/it/10 Get started with Gem-ini mod-els. \TU/AtkinsonHyperlegi
 bleNext(0)/m/n/10 https://docs.cloud.google.com/vertex-
  []
 
 
-Underfull \hbox (badness 1406) in paragraph at lines 41647--41648
+Underfull \hbox (badness 1406) in paragraph at lines 41526--41527
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Mi-crosoft. (n.d.). \TU/AtkinsonHyperl
 egibleNext(0)/m/it/10 Win-dows com-mands doc-u-men-ta-tion. \TU/AtkinsonHyperle
 gibleNext(0)/m/n/10 https://learn.mi-
  []
 
 
-Underfull \hbox (badness 1527) in paragraph at lines 41651--41652
+Underfull \hbox (badness 1527) in paragraph at lines 41530--41531
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Open-SCAD User Man-ual Con-trib-u-tors.
  (n.d.). \TU/AtkinsonHyperlegibleNext(0)/m/it/10 Open-SCAD User Man-ual.
  []
 
 
-Overfull \hbox (48.7401pt too wide) in paragraph at lines 41659--41660
+Overfull \hbox (48.7401pt too wide) in paragraph at lines 41538--41539
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 The Linux Doc-u-men-ta-tion Project. (n
 .d.). \TU/AtkinsonHyperlegibleNext(0)/m/it/10 Bash Be-gin-ner’s Guide. \TU/At
 kinsonHyperlegibleNext(0)/m/n/10 https://tldp.org/LDP/Bash-
  []
 
 
-Underfull \hbox (badness 3128) in paragraph at lines 41671--41672
+Underfull \hbox (badness 3128) in paragraph at lines 41550--41551
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Salt Lake County Li-brary. (n.d.). \TU
 /AtkinsonHyperlegibleNext(0)/m/it/10 Cre-ate spaces. \TU/AtkinsonHyperlegibleNe
 xt(0)/m/n/10 https://www.slcol-i-
  []
 
-[575] [576]
+[566] [567]
 
 LaTeX Warning: File `docs/pandoc/latex/src/assets/images/bio-photo.jpg' not fou
-nd on input line 41711.
+nd on input line 41592.
 
 
 ! Package luatex.def Error: File `docs/pandoc/latex/src/assets/images/bio-photo
@@ -4444,16 +4380,14 @@ See the luatex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.41711 ...latex/src/assets/images/bio-photo.jpg}}
+l.41592 ...latex/src/assets/images/bio-photo.jpg}}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[577
+[568
 
-] [578] [579] [580
-
-]
+] [569] [570]
 No file OpenSCAD_Curriculum.ind.
 (./OpenSCAD_Curriculum.aux)
  ***********
@@ -4467,19 +4401,39 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 )
 
 Here is how much of LuaTeX's memory you used:
- 42771 strings out of 476081
- 1456332,1977958 words of node,token memory allocated
- 144838 words of node memory still in use:
-   10 hlist, 3 vlist, 6 rule, 1 disc, 1 local_par, 107 glue, 5 kern, 1 penalty, 
-53 glyph, 53270 attribute, 64 glue_spec, 17760 attribute_list, 3 write, 1 user_d
-efined, 1 pdf_dest, 171 pdf_action, 2 pdf_colorstack nodes
-   avail lists: 1:22,2:77083,3:735,4:20090,5:14123,6:269,7:62806,8:111,9:35466,1
+ 42604 strings out of 476081
+ 1456338,1977958 words of node,token memory allocated
+ 145726 words of node memory still in use:
+   10 hlist, 3 vlist, 6 rule, 1 disc, 1 local_par, 106 glue, 5 kern, 1 penalty, 
+53 glyph, 53618 attribute, 64 glue_spec, 17876 attribute_list, 4 write, 1 user_d
+efined, 1 pdf_dest, 165 pdf_action, 2 pdf_colorstack nodes
+   avail lists: 1:25,2:77076,3:714,4:20090,5:14122,6:316,7:62664,8:111,9:35466,1
 0:45,11:1671
- 53672 multiletter control sequences out of 65536+600000
- 95 fonts using 22996743 bytes
- 74i,11n,114p,1463b,1171s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 53589 multiletter control sequences out of 65536+600000
+ 89 fonts using 20503879 bytes
+ 74i,11n,114p,1462b,1171s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-warning  (pdf backend): unreferenced destination with name 'section*.2381'
+warning  (pdf backend): unreferenced destination with name 'section*.2335'
+
+warning  (pdf backend): unreferenced destination with name 'chapter*.2358'
+
+warning  (pdf backend): unreferenced destination with name 'section*.2357'
+
+warning  (pdf backend): unreferenced destination with name 'section*.2349'
+
+warning  (pdf backend): unreferenced destination with name 'chapter*.1931'
+
+warning  (pdf backend): unreferenced destination with name 'section*.1770'
+
+warning  (pdf backend): unreferenced destination with name 'chapter*.1012'
+
+warning  (pdf backend): unreferenced destination with name 'chapter*.990'
+
+warning  (pdf backend): unreferenced destination with name 'chapter*.704'
+
+warning  (pdf backend): unreferenced destination with name 'chapter*.437'
+
+warning  (pdf backend): unreferenced destination with name 'chapter*.216'
 </var/home/ryhunsaker/.local/texlive/2025/texmf-dist/fonts/opentype/public/lm-ma
 th/latinmodern-math.otf></var/home/ryhunsaker/.fonts/Atkinson Hyperlegible Next/
 AtkinsonHyperlegibleNext-RegularItalic.otf></var/home/ryhunsaker/.local/texlive/
@@ -4491,10 +4445,10 @@ ntype/public/lm/lmmono8-regular.otf></var/home/ryhunsaker/.fonts/Atkinson Hyperl
 egible Next/AtkinsonHyperlegibleNext-Regular.otf></var/home/ryhunsaker/.fonts/At
 kinson Hyperlegible Next/AtkinsonHyperlegibleNext-Bold.otf></var/home/ryhunsaker
 /.local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on OpenSCAD_Curriculum.pdf (580 pages, 2001676 bytes).
+Output written on OpenSCAD_Curriculum.pdf (570 pages, 1984039 bytes).
 
-PDF statistics: 15088 PDF objects out of 15390 (max. 8388607)
- 14337 compressed objects within 144 object streams
- 11088 named destinations out of 12825 (max. 131072)
- 945 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 14837 PDF objects out of 15390 (max. 8388607)
+ 14099 compressed objects within 141 object streams
+ 11004 named destinations out of 12825 (max. 131072)
+ 625 words of extra memory for PDF output out of 10000 (max. 100000000)
 

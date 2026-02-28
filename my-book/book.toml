@@ -72,7 +72,7 @@ to = "epub"
 number-sections = false
 toc-depth = 3
 include-before-body = ["src/Cover.html"]
-filters = ["src/code-to-listings.lua", "src/index.lua"]  # Ensure filters are applied to EPUB as well
+filters = ["src/code-to-listings.lua", "src/index.lua", "src/pagebreak-chapters.lua"]
 
 [output.pandoc.profile.epub.variables]
 date = "2026-02-24"
@@ -84,7 +84,7 @@ number-sections = false
 toc-depth = 3
 include-before-body = ["src/Cover.tex"]
 template = "src/template.tex"
-filters = ["src/code-to-listings.lua", "src/index.lua"]  # Ensure filters are applied to EPUB as well
+filters = ["src/code-to-listings.lua", "src/index.lua", "src/pagebreak-chapters.lua"]
 
 [output.pandoc.profile.latex.variables]
 date = "2026-02-24"

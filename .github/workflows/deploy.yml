@@ -15,54 +15,69 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install mdBook
+      - name: Install system dependencies
         run: |
-          wget https://github.com/rust-lang/mdBook/releases/download/v0.5.2/mdbook-v0.5.2-x86_64-unknown-linux-gnu.tar.gz
-          tar xzf mdbook-v0.5.2-x86_64-unknown-linux-gnu.tar.gz
+          sudo apt-get update
+          sudo apt-get install -y \
+            pandoc \
+            texlive-luatex \
+            texlive-latex-base \
+            texlive-latex-recommended \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-fonts-extra
 
-      - name: Install lualatex (TeX Live)
-        run: sudo apt-get update && sudo apt-get install -y texlive-latex-base texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended lualatex
-          wget https://github.com/lzanini/mdbook-pandoc/releases/download/v0.5.2/mdbook-pandoc-v0.5.2-x86_64-unknown-linux-gnu.tar.gz
-          tar xzf mdbook-pandoc-v0.5.2-x86_64-unknown-linux-gnu.tar.gz
-          wget https://github.com/lzanini/mdbook-bib/releases/download/v0.4.0/mdbook-bib-v0.4.0-x86_64-unknown-linux-gnu.tar.gz
-          tar xzf mdbook-bib-v0.4.0-x86_64-unknown-linux-gnu.tar.gz
+      - name: Install mdBook and plugins
+        run: |
+          wget https://github.com/rust-lang/mdBook/releases/download/v0.4.40/mdbook-v0.4.40-x86_64-unknown-linux-gnu.tar.gz
+          tar xzf mdbook-v0.4.40-x86_64-unknown-linux-gnu.tar.gz
+
+          wget https://github.com/lzanini/mdbook-pandoc/releases/download/v0.7.1/mdbook-pandoc-v0.7.1-x86_64-unknown-linux-gnu.tar.gz
+          tar xzf mdbook-pandoc-v0.7.1-x86_64-unknown-linux-gnu.tar.gz
+
+          wget https://github.com/francisco-perez-sorrosal/mdbook-bib/releases/download/v0.0.7/mdbook-bib-v0.0.7-x86_64-unknown-linux-gnu.tar.gz
+          tar xzf mdbook-bib-v0.0.7-x86_64-unknown-linux-gnu.tar.gz
+
           wget https://github.com/badboy/mdbook-mermaid/releases/download/v0.13.0/mdbook-mermaid-v0.13.0-x86_64-unknown-linux-gnu.tar.gz
           tar xzf mdbook-mermaid-v0.13.0-x86_64-unknown-linux-gnu.tar.gz
+
           sudo mv mdbook mdbook-pandoc mdbook-bib mdbook-mermaid /usr/local/bin/
-
-      - name: Install Rust toolchain
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-          profile: minimal
-          override: true
-
-      - name: Add cargo bin to PATH
-        run: echo "$HOME/.cargo/bin" >> $GITHUB_PATH
 
       - name: "CI: debug versions and check bibliography"
         run: |
           echo "--- Versions ---"
-          mdbook --version || true
-          mdbook-bib --version || true
-          rustc --version || true
-          cargo --version || true
-          python3 --version || true
+          mdbook --version          || true
+          mdbook-pandoc --version   || true
+          mdbook-bib --version      || true
+          mdbook-mermaid --version  || true
+          pandoc --version          || true
+          lualatex --version        || true
+          python3 --version         || true
           echo "--- Show suspect bib ranges ---"
           sed -n '1018,1030p' my-book/src/globalbibliography.bib || true
           sed -n '1433,1441p' my-book/src/globalbibliography.bib || true
           echo "--- Run bib linter ---"
           python3 scripts/checkbib.py || true
 
-      - name: Build book (HTML)
+      - name: Build book (HTML + Pandoc outputs)
         run: |
           cd my-book
-          ../mdbook build --dest-dir docs
+          mdbook build
 
-      - name: Build PDF via lualatex (run twice)
+      - name: Build PDF via lualatex (run twice for cross-references)
         run: |
-          lualatex my-book/docs/pandoc/latex/OpenSCAD_Curriculum.tex
-          lualatex my-book/docs/pandoc/latex/OpenSCAD_Curriculum.tex
+          cd my-book
+          lualatex docs/pandoc/latex/OpenSCAD_Curriculum.tex
+          lualatex docs/pandoc/latex/OpenSCAD_Curriculum.tex
+          # lualatex writes the PDF to CWD; move it back alongside the .tex
+          mv OpenSCAD_Curriculum.pdf docs/pandoc/latex/ || true
+
+      - name: Copy EPUB into docs for Pages hosting
+        run: |
+          # mdbook-pandoc writes epub under docs/pandoc/epub/
+          # Expose it at the site root so it is easy to link to
+          find my-book/docs/pandoc -name "*.epub" -exec cp {} my-book/docs/ \; || true
+
       - name: Verify fonts copied
         run: |
           test -f my-book/docs/assets/fonts/AtkinsonHyperlegibleNext-Regular.ttf
@@ -70,9 +85,9 @@ jobs:
 
       - name: Verify @font-face in HTML
         run: |
-          grep -R "@font-face" -n my-book/docs/index.html
+          grep -R "@font-face" my-book/docs/index.html
 
-      - name: Upload artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./my-book/docs
@@ -82,6 +97,8 @@ jobs:
     needs: build
     environment:
       name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4

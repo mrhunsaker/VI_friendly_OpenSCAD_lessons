@@ -82,10 +82,10 @@
             const path_to_root = "";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-eaf1c1cc.js";
+            window.path_to_searchindex_js = "searchindex-1fa19088.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-76b29a8d.js"></script>
+        <script src="toc-ccdaa231.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -10984,89 +10984,21 @@ Then: Lesson 9 (Automation)</p>
 </ul>
 <p>Happy designing!</p>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="3dmake-non-visual-3d-printing-tutorial"><a class="header" href="#3dmake-non-visual-3d-printing-tutorial">3dmake: Non-Visual 3D Printing Tutorial</a></h1>
-<h2 id="estimated-time-45-75-minutes"><a class="header" href="#estimated-time-45-75-minutes">Estimated time: 45-75 minutes</a></h2>
-<h3 id="learning-objectives-15"><a class="header" href="#learning-objectives-15">Learning Objectives</a></h3>
-<ul>
-<li>Describe the 3dMake command-line workflow and project structure</li>
-<li>Create a new 3dMake project, edit <code>src/main.scad</code>, and run <code>3dm build</code></li>
-<li>Slice a model and produce a tactile preview or full G-code</li>
-</ul>
-<h3 id="materials-9"><a class="header" href="#materials-9">Materials</a></h3>
-<ul>
-<li>Computer with 3dMake installed</li>
-<li>Screen reader (NVDA, JAWS, Orca) configured</li>
-<li>Example project files in <code>assets/</code> or classroom repo</li>
-</ul>
-<h3 id="step-by-step-tasks-11"><a class="header" href="#step-by-step-tasks-11">Step-by-step Tasks</a></h3>
-<ol>
-<li>Verify prerequisites: confirm <code>3dm</code>, <code>openscad</code>, and your slicer are discoverable in the terminal (<code>which 3dm</code>, <code>which openscad</code>).</li>
-<li>Create a new project: <code>3dm new</code> -&gt; open <code>src/main.scad</code> with <code>3dm edit-model</code> and add a simple cube: <code>cube([20,20,20]);</code>.</li>
-<li>Build the project: <code>3dm build</code> and confirm <code>build/main.stl</code> exists.</li>
-<li>Slice a preview: <code>3dm preview slice</code> then <code>3dm preview print</code> (or export preview STL) to test tactile output.</li>
-<li>Slice for full print: <code>3dm build slice</code> -&gt; inspect <code>build/main.gcode</code> with a layer-preview option in your slicer.</li>
-</ol>
-<h3 id="checkpoints-13"><a class="header" href="#checkpoints-13">Checkpoints</a></h3>
-<ul>
-<li>After step 2 you can open and edit <code>src/main.scad</code> from the terminal.</li>
-<li>After step 3 the <code>build/</code> folder contains <code>main.stl</code>.</li>
-</ul>
-<h2 id="quick-quiz-5"><a class="header" href="#quick-quiz-5">Quick Quiz (5)</a></h2>
-<ol>
-<li>What command creates a new 3dMake project?</li>
-<li>Where does 3dMake put compiled STLs by default?</li>
-<li>How do you open the model editor from the CLI?</li>
-<li>What command slices a preview for tactile testing?</li>
-<li>Why is it useful to run a preview before a full print?</li>
-</ol>
-<h2 id="extension-problems-10-1"><a class="header" href="#extension-problems-10-1">Extension Problems (10)</a></h2>
-<ol>
-<li>Create two variants of a parameterized cube (different sizes) and export both STLs; compare their file sizes and estimated print times.</li>
-<li>Add a <code>3dmake.toml</code> overlay that changes layer height and document the visible effect on the preview.</li>
-<li>Build and slice a small object, then import the STL into a second slicer and report any differences in estimated time.</li>
-<li>Create a short shell script that automates new -&gt; edit -&gt; build for a classroom scaffold.</li>
-<li>Describe three safety checks you will perform before starting a multi-hour print.</li>
-<li>Develop an accessibility audit of 3DMake’s web interface and CLI tools; test keyboard navigation, screen-reader compatibility, and error message clarity.</li>
-<li>Build a 3DMake workflow automation script: integrates model creation, parameter validation, and batch STL generation.</li>
-<li>Create a 3DMake best practices guide for your classroom: document common patterns, troubleshooting tips, and performance optimization.</li>
-<li>Design a parametric model library in 3DMake with shared modules; test reuse across multiple student projects.</li>
-<li>Compare 3DMake vs. desktop slicers on 5+ models; create a decision matrix for when to use each tool.</li>
-</ol>
-<p>Notes: This lesson is intended to be hands-on. If networked AI features are not configured, skip the AI verification steps and focus on deterministic renders and slicer previews.</p>
-<h2 id="helpful-commands"><a class="header" href="#helpful-commands">Helpful Commands</a></h2>
-<h3 id="library-commands"><a class="header" href="#library-commands">Library commands</a></h3>
-<pre><code class="language-powershell">3dm list-libraries
-3dm install-libraries
-</code></pre>
-<h3 id="help-and-version"><a class="header" href="#help-and-version">Help and version</a></h3>
-<pre><code class="language-powershell">3dm help
-3dm version
-</code></pre>
-<h1 id="references-apa"><a class="header" href="#references-apa">References (APA)</a></h1>
-<p>Deck, T. (n.d.). <em>3dmake: Non-visual 3D design and 3D printing tool</em>. GitHub. Retrieved February 18, 2026, from <a href="http://github.com/tdeck/3dmake">http://github.com/tdeck/3dmake</a></p>
-<p>OpenSCAD. (n.d.). <em>The programmers solid 3D CAD modeller</em>. Retrieved February 18, 2026, from <a href="https://openscad.org">https://openscad.org</a></p>
-<pre><code>
-
-Other Screen Readers
-
-Dolphin SuperNova (commercial) and Windows Narrator (built-in) are also supported; the workflows and recommendations in this document apply to them. See [https://yourdolphin.com/supernova/](https://yourdolphin.com/supernova/) and [https://support.microsoft.com/narrator](https://support.microsoft.com/narrator) for vendor documentation.
-</code></pre>
-<div style="break-before: page; page-break-before: always;"></div>
 <h1 id="lesson-1-environmental-configuration-and-the-developer-workflow-1"><a class="header" href="#lesson-1-environmental-configuration-and-the-developer-workflow-1">Lesson 1: Environmental Configuration and the Developer Workflow</a></h1>
 <p>Estimated time: 90-120 minutes</p>
-<h2 id="learning-objectives-16"><a class="header" href="#learning-objectives-16">Learning Objectives</a></h2>
+<h2 id="learning-objectives-15"><a class="header" href="#learning-objectives-15">Learning Objectives</a></h2>
 <ul>
 <li>Install and verify 3dm<sup class="footnote-reference" id="fr-1-1-1"><a href="#footnote-1-1">1</a></sup>, openscad<sup class="footnote-reference" id="fr-2-1"><a href="#footnote-2">2</a></sup>, and a slicer are discoverable in the terminal</li>
 <li>Initialize a 3dMake project and understand the project scaffold (<code>src/</code>, <code>build/</code>, <code>3dmake.toml</code>)</li>
 <li>Edit <code>src/main.scad</code> using OpenSCAD’s parametric design capabilities<sup class="footnote-reference" id="fr-3-1-1"><a href="#footnote-3-1">3</a></sup>, run <code>3dm build</code>, and inspect the generated <code>build/main.stl</code></li>
 </ul>
-<h2 id="materials-10"><a class="header" href="#materials-10">Materials</a></h2>
+<h2 id="materials-9"><a class="header" href="#materials-9">Materials</a></h2>
 <ul>
 <li>Terminal with 3dMake installed</li>
 <li>Editor (VS Code or Notepad)</li>
 <li>Example scaffold or classroom repository</li>
 </ul>
-<h2 id="step-by-step-tasks-12"><a class="header" href="#step-by-step-tasks-12">Step-by-step Tasks</a></h2>
+<h2 id="step-by-step-tasks-11"><a class="header" href="#step-by-step-tasks-11">Step-by-step Tasks</a></h2>
 <ol>
 <li>
 <p>Run <code>./3dm setup</code> or follow instructor’s installation notes; confirm tools with <code>which 3dm</code> and <code>which openscad</code>. Verify your 3dMake installation is properly configured<sup class="footnote-reference" id="fr-1-2-1"><a href="#footnote-1-1">1</a></sup>.</p>
@@ -11265,7 +11197,7 @@ union() {
 <li>Accessible: Non-visual users can understand the design intent and constraints</li>
 <li>Professional: Employers and collaborators trust well-documented code</li>
 </ul>
-<h3 id="checkpoints-14"><a class="header" href="#checkpoints-14">Checkpoints</a></h3>
+<h3 id="checkpoints-13"><a class="header" href="#checkpoints-13">Checkpoints</a></h3>
 <ul>
 <li>After step 2 you can locate <code>3dmake.toml</code> and the <code>build/</code> directory. Ensure your project scaffold matches the expected structure described in the 3dMake repository<sup class="footnote-reference" id="fr-1-3-1"><a href="#footnote-1-1">1</a></sup>.</li>
 <li>After step 4 the <code>build/</code> folder contains a valid <code>main.stl</code>. Verify the geometry using your slicer’s validation tools<sup class="footnote-reference" id="fr-5-1"><a href="#footnote-5">6</a></sup>.</li>
@@ -12583,18 +12515,18 @@ OR: In OpenSCAD, press F6 then File &gt; Export &gt; Export as STL</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="3dmake_foundation_lessons_3dmake_1-your-first-print"><a class="header" href="#3dmake_foundation_lessons_3dmake_1-your-first-print">Your First Print - Guided Extension</a></h1>
 <p>Estimated time: 2-4 hours (including setup and print monitoring)</p>
-<h2 id="learning-objectives-17"><a class="header" href="#learning-objectives-17">Learning Objectives</a></h2>
+<h2 id="learning-objectives-16"><a class="header" href="#learning-objectives-16">Learning Objectives</a></h2>
 <ul>
 <li>Select a simple ready-made model and evaluate its printability for a classroom printer</li>
 <li>Configure slicer settings for a short-duration print and prepare the printer safely</li>
 <li>Document print parameters and reflect on the physical outcome</li>
 </ul>
-<h2 id="materials-11"><a class="header" href="#materials-11">Materials</a></h2>
+<h2 id="materials-10"><a class="header" href="#materials-10">Materials</a></h2>
 <ul>
 <li>Computer with slicer and access to the online repository</li>
 <li>Prusa Mini+ or classroom-approved printer, filament spool</li>
 </ul>
-<h2 id="step-by-step-tasks-13"><a class="header" href="#step-by-step-tasks-13">Step-by-step Tasks</a></h2>
+<h2 id="step-by-step-tasks-12"><a class="header" href="#step-by-step-tasks-12">Step-by-step Tasks</a></h2>
 <ol>
 <li>Choose a simple model (&lt;2 hours print) from Thingiverse or Printables and save the STL.</li>
 <li>Inspect the model: note overhangs, thin features, and dimensions; write two short reasons why this model is appropriate for a first print.</li>
@@ -12664,7 +12596,7 @@ baseshape();
 <li>Multiple choice: When measuring a printed dimension, where should you measure multiple times (three different spots) to account for print variation? (A) Never, measure once (B) Only if you suspect error (C) Always measure at least three locations - Answer: C</li>
 <li>Reflection: Explain why carefully selecting your first print model (simple, robust, known to work on your printer) is better than immediately attempting a complex design. What will you learn from success that prepares you for harder projects?</li>
 </ol>
-<h2 id="extension-problems-10-2"><a class="header" href="#extension-problems-10-2">Extension Problems (10)</a></h2>
+<h2 id="extension-problems-10-1"><a class="header" href="#extension-problems-10-1">Extension Problems (10)</a></h2>
 <ol>
 <li>Re-slice the model with a finer layer height and compare surface finish and print time; document differences.</li>
 <li>Modify the model in OpenSCAD to thicken a failing feature and reprint a small test piece.</li>
@@ -12942,20 +12874,20 @@ baseshape();
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="lesson-2-geometric-primitives-and-constructive-solid-geometry-1"><a class="header" href="#lesson-2-geometric-primitives-and-constructive-solid-geometry-1">Lesson 2: Geometric Primitives and Constructive Solid Geometry</a></h1>
 <p>Estimated time: 90–120 minutes</p>
-<h2 id="learning-objectives-18"><a class="header" href="#learning-objectives-18">Learning Objectives</a></h2>
+<h2 id="learning-objectives-17"><a class="header" href="#learning-objectives-17">Learning Objectives</a></h2>
 <ul>
 <li>Use all six OpenSCAD primitive shapes: <code>cube</code>, <code>sphere</code>, <code>cylinder</code>, <code>polyhedron</code>, <code>text</code>, <code>surface</code></li>
 <li>Apply the four CSG operations: <code>union</code>, <code>difference</code>, <code>intersection</code>, and <code>hull</code></li>
 <li>Use modifier characters (<code>#</code>, <code>!</code>, <code>%</code>, <code>*</code>) for debugging</li>
 <li>Understand and apply the <code>0.001</code> offset rule for clean Boolean operations<sup class="footnote-reference" id="fr-1-1-2"><a href="#footnote-1-2">1</a></sup></li>
 </ul>
-<h2 id="materials-12"><a class="header" href="#materials-12">Materials</a></h2>
+<h2 id="materials-11"><a class="header" href="#materials-11">Materials</a></h2>
 <ul>
 <li>3dMake project from Lesson 1</li>
 <li>Terminal</li>
 <li>OpenSCAD (for live preview with F5)</li>
 </ul>
-<h2 id="step-by-step-tasks-14"><a class="header" href="#step-by-step-tasks-14">Step-by-step Tasks</a></h2>
+<h2 id="step-by-step-tasks-13"><a class="header" href="#step-by-step-tasks-13">Step-by-step Tasks</a></h2>
 <h3 id="1-build-a-compound-object-with-union-and-difference"><a class="header" href="#1-build-a-compound-object-with-union-and-difference">1. Build a Compound Object with union and difference</a></h3>
 <pre><code class="language-openscad">// Simple canister: cylinder body with a sphere on top
 difference() {
@@ -13251,18 +13183,18 @@ max(3, 5, 1)           // returns 5
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="3dmake_foundation_lessons_3dmake_2-your-second-print"><a class="header" href="#3dmake_foundation_lessons_3dmake_2-your-second-print">Real-Life Problem Solver - Guided Extension</a></h1>
 <p>Estimated time: 4-8 hours (design, adapt, print, and document)</p>
-<h2 id="learning-objectives-19"><a class="header" href="#learning-objectives-19">Learning Objectives</a></h2>
+<h2 id="learning-objectives-18"><a class="header" href="#learning-objectives-18">Learning Objectives</a></h2>
 <ul>
 <li>Identify a user problem and evaluate candidate printed solutions</li>
 <li>Adapt an existing model to meet real constraints and safety requirements</li>
 <li>Test, measure, and iterate on a prototype with documented decisions</li>
 </ul>
-<h2 id="materials-13"><a class="header" href="#materials-13">Materials</a></h2>
+<h2 id="materials-12"><a class="header" href="#materials-12">Materials</a></h2>
 <ul>
 <li>Computer with slicer and access to repositories</li>
 <li>Printer, filament, basic hand tools for post-processing</li>
 </ul>
-<h2 id="step-by-step-tasks-15"><a class="header" href="#step-by-step-tasks-15">Step-by-step Tasks</a></h2>
+<h2 id="step-by-step-tasks-14"><a class="header" href="#step-by-step-tasks-14">Step-by-step Tasks</a></h2>
 <ol>
 <li>Interview a potential user (or yourself) and write a 1-paragraph problem statement.</li>
 <li>Search repositories for candidate models; list three options and justify which one you will adapt.</li>
@@ -13288,7 +13220,7 @@ max(3, 5, 1)           // returns 5
 <li>Multiple choice: When you create a changelog, what should you document? (A) Only the successful changes (B) All changes, including failures and iterations (C) Only the slicer settings - Answer: B</li>
 <li>Reflection: Explain how iteration (design -&gt; print -&gt; test -&gt; adapt) leads to better functional outcomes than trying to get the design perfect on the first attempt. Give a specific example from your project.</li>
 </ol>
-<h2 id="extension-problems-10-3"><a class="header" href="#extension-problems-10-3">Extension Problems (10)</a></h2>
+<h2 id="extension-problems-10-2"><a class="header" href="#extension-problems-10-2">Extension Problems (10)</a></h2>
 <ol>
 <li>Rework your prototype to improve durability and report trade-offs in weight and print time.</li>
 <li>Create a user test script and run it with two participants; summarize results.</li>
@@ -13583,17 +13515,17 @@ max(3, 5, 1)           // returns 5
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="3dmake_foundation_lessons_3dmake_2-bonus-print"><a class="header" href="#3dmake_foundation_lessons_3dmake_2-bonus-print">Bonus Print - Guided Extension</a></h1>
 <p>Estimated time: 3-5 hours</p>
-<h2 id="learning-objectives-20"><a class="header" href="#learning-objectives-20">Learning Objectives</a></h2>
+<h2 id="learning-objectives-19"><a class="header" href="#learning-objectives-19">Learning Objectives</a></h2>
 <ul>
 <li>Apply scaling and simple modifications to an existing model</li>
 <li>Verify multi-part prints and manage print constraints</li>
 <li>Document design changes and reproduceable print settings</li>
 </ul>
-<h2 id="materials-14"><a class="header" href="#materials-14">Materials</a></h2>
+<h2 id="materials-13"><a class="header" href="#materials-13">Materials</a></h2>
 <ul>
 <li>Online repository access, slicer, printer, filament</li>
 </ul>
-<h2 id="step-by-step-tasks-16"><a class="header" href="#step-by-step-tasks-16">Step-by-step Tasks</a></h2>
+<h2 id="step-by-step-tasks-15"><a class="header" href="#step-by-step-tasks-15">Step-by-step Tasks</a></h2>
 <ol>
 <li>Choose a model from Thingiverse or Printables and note the original dimensions.</li>
 <li>Decide on a purposeful modification (scale, add mounting holes, combine parts) and explain why.</li>
@@ -13619,7 +13551,7 @@ max(3, 5, 1)           // returns 5
 <li>Multiple choice: When assembling multi-part prints, what should you test first? (A) The final assembly (B) Individual part dimensions, then pairwise assembly (C) Skip testing - Answer: B</li>
 <li>Reflection: Describe how documenting your modifications (scaling factor, OpenSCAD code changes, filament type, print settings) enables other students to reproduce your design and iterate on it further.</li>
 </ol>
-<h2 id="extension-problems-10-4"><a class="header" href="#extension-problems-10-4">Extension Problems (10)</a></h2>
+<h2 id="extension-problems-10-3"><a class="header" href="#extension-problems-10-3">Extension Problems (10)</a></h2>
 <ol>
 <li>Create a small assembly guide with tactile cues for non-visual users.</li>
 <li>Produce two scaled variants and compare required print time and fit.</li>
@@ -13745,7 +13677,7 @@ max(3, 5, 1)           // returns 5
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="lesson-3-parametric-architecture-and-modular-libraries-1"><a class="header" href="#lesson-3-parametric-architecture-and-modular-libraries-1">Lesson 3: Parametric Architecture and Modular Libraries</a></h1>
 <p>Estimated time: 90–120 minutes</p>
-<h2 id="learning-objectives-21"><a class="header" href="#learning-objectives-21">Learning Objectives</a></h2>
+<h2 id="learning-objectives-20"><a class="header" href="#learning-objectives-20">Learning Objectives</a></h2>
 <ul>
 <li>Understand and apply the DRY (Don’t Repeat Yourself) principle through modules and functions</li>
 <li>Use <code>include</code> vs <code>use</code> for library files</li>
@@ -13753,12 +13685,12 @@ max(3, 5, 1)           // returns 5
 <li>Write type-safe modules using <code>is_number()</code>, <code>is_list()</code>, and <code>is_string()</code></li>
 <li>Build a reusable module library</li>
 </ul>
-<h2 id="materials-15"><a class="header" href="#materials-15">Materials</a></h2>
+<h2 id="materials-14"><a class="header" href="#materials-14">Materials</a></h2>
 <ul>
 <li>3dMake project from Lessons 1–2</li>
 <li>Terminal and editor</li>
 </ul>
-<h2 id="step-by-step-tasks-17"><a class="header" href="#step-by-step-tasks-17">Step-by-step Tasks</a></h2>
+<h2 id="step-by-step-tasks-16"><a class="header" href="#step-by-step-tasks-16">Step-by-step Tasks</a></h2>
 <h3 id="1-define-a-reusable-module"><a class="header" href="#1-define-a-reusable-module">1. Define a Reusable Module</a></h3>
 <p>Modules create named geometry. They accept parameters and can be called anywhere in the file. See <sup class="footnote-reference" id="fr-1-1-3"><a href="#footnote-1-3">1</a></sup>.</p>
 <pre><code class="language-openscad">// Modules create geometry; calling them produces shapes
@@ -13940,7 +13872,7 @@ difference() {
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="lesson-4-ai-enhanced-verification-and-multimodal-feedback-1"><a class="header" href="#lesson-4-ai-enhanced-verification-and-multimodal-feedback-1">Lesson 4: AI-Enhanced Verification and Multimodal Feedback</a></h1>
 <p>Estimated time: 90–120 minutes</p>
-<h2 id="learning-objectives-22"><a class="header" href="#learning-objectives-22">Learning Objectives</a></h2>
+<h2 id="learning-objectives-21"><a class="header" href="#learning-objectives-21">Learning Objectives</a></h2>
 <ul>
 <li>Use <code>3dm describe</code> to generate AI-assisted descriptions of STL geometry</li>
 <li>Understand deterministic vs. AI-assisted validation</li>
@@ -13948,13 +13880,13 @@ difference() {
 <li>Recognize when to trust, question, or reject AI suggestions</li>
 <li>Understand data privacy considerations when using cloud AI tools</li>
 </ul>
-<h2 id="materials-16"><a class="header" href="#materials-16">Materials</a></h2>
+<h2 id="materials-15"><a class="header" href="#materials-15">Materials</a></h2>
 <ul>
 <li>3dMake project with a completed STL from Lessons 1–3</li>
 <li>Terminal</li>
 <li>Optional: AI chat interface (Claude, ChatGPT, or similar)</li>
 </ul>
-<h2 id="step-by-step-tasks-18"><a class="header" href="#step-by-step-tasks-18">Step-by-step Tasks</a></h2>
+<h2 id="step-by-step-tasks-17"><a class="header" href="#step-by-step-tasks-17">Step-by-step Tasks</a></h2>
 <h3 id="1-run-3dm-describe-on-your-current-model"><a class="header" href="#1-run-3dm-describe-on-your-current-model">1. Run 3dm describe on Your Current Model</a></h3>
 <p><code>3dm describe</code> sends your STL to an AI service and returns a natural-language description of the geometry. This is especially useful for non-visual validation.</p>
 <pre><code class="language-bash">3dm describe
@@ -14115,18 +14047,18 @@ Output format: numbered list of issues, each with severity and fix
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="3dmake_foundation_lessons_3dmake_4-dice_dice_dice"><a class="header" href="#3dmake_foundation_lessons_3dmake_4-dice_dice_dice">Dice Design Workshop - Guided Extension</a></h1>
 <p>Estimated time: 3-6 hours</p>
-<h2 id="learning-objectives-23"><a class="header" href="#learning-objectives-23">Learning Objectives</a></h2>
+<h2 id="learning-objectives-22"><a class="header" href="#learning-objectives-22">Learning Objectives</a></h2>
 <ul>
 <li>Design parametric dice in OpenSCAD with controlled mass distribution</li>
 <li>Test durability and randomness for small, thrown objects</li>
 <li>Document design decisions and measure physical outcomes</li>
 </ul>
-<h2 id="materials-17"><a class="header" href="#materials-17">Materials</a></h2>
+<h2 id="materials-16"><a class="header" href="#materials-16">Materials</a></h2>
 <ul>
 <li>Computer with OpenSCAD and slicer</li>
 <li>Printer and filament, small testing surface</li>
 </ul>
-<h2 id="step-by-step-tasks-19"><a class="header" href="#step-by-step-tasks-19">Step-by-step Tasks</a></h2>
+<h2 id="step-by-step-tasks-18"><a class="header" href="#step-by-step-tasks-18">Step-by-step Tasks</a></h2>
 <ol>
 <li>Create three distinct die designs in OpenSCAD using parameters (size, face style, internal cavities).</li>
 <li>For each die, explain which parameters you changed and why (one short paragraph each).</li>
@@ -14152,7 +14084,7 @@ Output format: numbered list of issues, each with severity and fix
 <li>Multiple choice: If you increase infill from 15% to 50%, what happens? (A) Dramatically longer print time and higher weight (B) Slightly longer print time, much higher weight (C) Same weight, different durability - Answer: B</li>
 <li>Reflection: Explain why a fair die is an excellent test of design precision and iterative improvement. How does this project teach you about manufacturability, quality assurance, and design validation?</li>
 </ol>
-<h2 id="extension-problems-10-5"><a class="header" href="#extension-problems-10-5">Extension Problems (10)</a></h2>
+<h2 id="extension-problems-10-4"><a class="header" href="#extension-problems-10-4">Extension Problems (10)</a></h2>
 <ol>
 <li>Create a parametric script that produces dice with adjustable center-of-mass offsets and show results of roll tests.</li>
 <li>Design a bead-style die that assembles from two printed halves and document assembly steps.</li>
@@ -14295,21 +14227,21 @@ Output format: numbered list of issues, each with severity and fix
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="lesson-5-safety-protocols-and-the-physical-fabrication-interface-1"><a class="header" href="#lesson-5-safety-protocols-and-the-physical-fabrication-interface-1">Lesson 5: Safety Protocols and the Physical Fabrication Interface</a></h1>
 <p>Estimated time: 90–120 minutes</p>
-<h2 id="learning-objectives-24"><a class="header" href="#learning-objectives-24">Learning Objectives</a></h2>
+<h2 id="learning-objectives-23"><a class="header" href="#learning-objectives-23">Learning Objectives</a></h2>
 <ul>
 <li>Identify and apply the Hierarchy of Controls for 3D printing hazards</li>
 <li>Understand filament-specific hazards and safe material handling</li>
 <li>Follow a safe printer startup, monitoring, and shutdown sequence</li>
 <li>Design parts that are safe to print (minimize supports, overhangs, and VOC-intensive materials)</li>
 </ul>
-<h2 id="materials-18"><a class="header" href="#materials-18">Materials</a></h2>
+<h2 id="materials-17"><a class="header" href="#materials-17">Materials</a></h2>
 <ul>
 <li>3D printer (FDM)</li>
 <li>PLA, PETG, or TPU filament</li>
 <li>Safety checklist (see assets folder)</li>
 <li>Ventilation or enclosure (if using PETG, ABS, or ASA)</li>
 </ul>
-<h2 id="step-by-step-tasks-20"><a class="header" href="#step-by-step-tasks-20">Step-by-step Tasks</a></h2>
+<h2 id="step-by-step-tasks-19"><a class="header" href="#step-by-step-tasks-19">Step-by-step Tasks</a></h2>
 <h3 id="1-review-the-hierarchy-of-controls"><a class="header" href="#1-review-the-hierarchy-of-controls">1. Review the Hierarchy of Controls</a></h3>
 <p>The Hierarchy of Controls is a standard safety framework used in occupational health to rank hazard mitigation strategies from most to least effective.<sup class="footnote-reference" id="fr-1-1-5"><a href="#footnote-1-5">1</a></sup> Applied to 3D printing:</p>
 <div class="table-wrapper">
@@ -14774,7 +14706,7 @@ printable_box(50, 40, 30);
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="lesson-6-practical-3dm-commands-and-text-embossing-1"><a class="header" href="#lesson-6-practical-3dm-commands-and-text-embossing-1">Lesson 6: Practical 3dm Commands and Text Embossing</a></h1>
 <p>Estimated time: 90–120 minutes</p>
-<h2 id="learning-objectives-25"><a class="header" href="#learning-objectives-25">Learning Objectives</a></h2>
+<h2 id="learning-objectives-24"><a class="header" href="#learning-objectives-24">Learning Objectives</a></h2>
 <ul>
 <li>Use the full <code>3dm</code> command suite: <code>describe</code>, <code>preview</code>, <code>orient</code>, <code>slice</code></li>
 <li>Emboss and engrave text using OpenSCAD’s <code>text()</code> function with <code>linear_extrude()</code></li>
@@ -14782,13 +14714,13 @@ printable_box(50, 40, 30);
 <li>Apply <code>let()</code> for scoped variable declarations</li>
 <li>Build a parametric label-making system</li>
 </ul>
-<h2 id="materials-19"><a class="header" href="#materials-19">Materials</a></h2>
+<h2 id="materials-18"><a class="header" href="#materials-18">Materials</a></h2>
 <ul>
 <li>3dMake project from previous lessons</li>
 <li>Terminal and editor</li>
 <li>Slicer (PrusaSlicer or equivalent)</li>
 </ul>
-<h2 id="step-by-step-tasks-21"><a class="header" href="#step-by-step-tasks-21">Step-by-step Tasks</a></h2>
+<h2 id="step-by-step-tasks-20"><a class="header" href="#step-by-step-tasks-20">Step-by-step Tasks</a></h2>
 <h3 id="1-master-the-3dm-command-suite"><a class="header" href="#1-master-the-3dm-command-suite">1. Master the 3dm Command Suite</a></h3>
 <pre><code class="language-bash"># Describe your current model using AI analysis (non-visual validation)
 3dm describe
@@ -15060,7 +14992,7 @@ text("Hello", font="DejaVu Serif:style=Italic");
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="3dmake_foundation_lessons_3dmake_6-parametric-keychain"><a class="header" href="#3dmake_foundation_lessons_3dmake_6-parametric-keychain">Parametric Keychain - Extension Project</a></h1>
 <p>Estimated time: 2-4 hours</p>
-<h2 id="learning-objectives-26"><a class="header" href="#learning-objectives-26">Learning Objectives</a></h2>
+<h2 id="learning-objectives-25"><a class="header" href="#learning-objectives-25">Learning Objectives</a></h2>
 <p>By completing this project, you will:</p>
 <ul>
 <li>Create parametric OpenSCAD modules that accept user inputs</li>
@@ -15369,7 +15301,7 @@ keychain_nameplate(name, keysize, keyheight, textsize);
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="lesson-7-parametric-transforms-and-the-phone-stand-project-1"><a class="header" href="#lesson-7-parametric-transforms-and-the-phone-stand-project-1">Lesson 7: Parametric Transforms and the Phone Stand Project</a></h1>
 <p>Estimated time: 90–120 minutes</p>
-<h2 id="learning-objectives-27"><a class="header" href="#learning-objectives-27">Learning Objectives</a></h2>
+<h2 id="learning-objectives-26"><a class="header" href="#learning-objectives-26">Learning Objectives</a></h2>
 <ul>
 <li>Apply <code>translate()</code>, <code>rotate()</code>, <code>scale()</code>, and <code>mirror()</code> correctly</li>
 <li>Understand transform order of operations</li>
@@ -15377,13 +15309,13 @@ keychain_nameplate(name, keysize, keyheight, textsize);
 <li>Apply trigonometric functions (<code>sin()</code>, <code>cos()</code>, <code>atan()</code>, <code>atan2()</code>) for angular positioning</li>
 <li>Build a complete parametric phone stand</li>
 </ul>
-<h2 id="materials-20"><a class="header" href="#materials-20">Materials</a></h2>
+<h2 id="materials-19"><a class="header" href="#materials-19">Materials</a></h2>
 <ul>
 <li>3dMake project</li>
 <li>Terminal and editor</li>
 <li>Calipers for measuring your phone</li>
 </ul>
-<h2 id="step-by-step-tasks-22"><a class="header" href="#step-by-step-tasks-22">Step-by-step Tasks</a></h2>
+<h2 id="step-by-step-tasks-21"><a class="header" href="#step-by-step-tasks-21">Step-by-step Tasks</a></h2>
 <h3 id="1-master-transforms-and-order-of-operations-1"><a class="header" href="#1-master-transforms-and-order-of-operations-1">1. Master Transforms and Order of Operations <sup class="footnote-reference" id="fr-1-1-7"><a href="#footnote-1-7">1</a></sup></a></h3>
 <p>Transforms in OpenSCAD apply right-to-left (innermost first). Order matters:</p>
 <pre><code class="language-openscad">// rotate THEN translate (object moves to [20,0,0] first, then rotates in place)
@@ -15580,7 +15512,7 @@ sphere(r=20, $fn=$fn);
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="lesson-8-advanced-parametric-design-and-interlocking-features-1"><a class="header" href="#lesson-8-advanced-parametric-design-and-interlocking-features-1">Lesson 8: Advanced Parametric Design and Interlocking Features</a></h1>
 <p>Estimated time: 90–120 minutes</p>
-<h2 id="learning-objectives-28"><a class="header" href="#learning-objectives-28">Learning Objectives</a></h2>
+<h2 id="learning-objectives-27"><a class="header" href="#learning-objectives-27">Learning Objectives</a></h2>
 <ul>
 <li>Apply tolerance and clearance concepts for press-fit and slip-fit assemblies</li>
 <li>Design snap-fit clips using cantilever beam principles</li>
@@ -15588,13 +15520,13 @@ sphere(r=20, $fn=$fn);
 <li>Use threaded insert pockets for secure metal-to-plastic fastening</li>
 <li>Apply chamfers and true chamfer geometry</li>
 </ul>
-<h2 id="materials-21"><a class="header" href="#materials-21">Materials</a></h2>
+<h2 id="materials-20"><a class="header" href="#materials-20">Materials</a></h2>
 <ul>
 <li>3dMake project</li>
 <li>Terminal and calipers</li>
 <li>Reference: standard tolerance table (0.1–0.4 mm clearance guide)</li>
 </ul>
-<h2 id="step-by-step-tasks-23"><a class="header" href="#step-by-step-tasks-23">Step-by-step Tasks</a></h2>
+<h2 id="step-by-step-tasks-22"><a class="header" href="#step-by-step-tasks-22">Step-by-step Tasks</a></h2>
 <h3 id="1-understand-tolerance-and-clearance-1"><a class="header" href="#1-understand-tolerance-and-clearance-1">1. Understand Tolerance and Clearance <sup class="footnote-reference" id="fr-3-1-7"><a href="#footnote-3-7">1</a></sup></a></h3>
 <p>In FDM printing, dimensions come out slightly different from the digital model due to thermal expansion, layer bonding, and material shrinkage:</p>
 <pre><code class="language-openscad">// Tolerance guide for FDM with 0.4mm nozzle, PLA
@@ -15819,7 +15751,7 @@ translate([60, 0, 0])
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="3dmake_foundation_lessons_3dmake_8-snap_fit_clip"><a class="header" href="#3dmake_foundation_lessons_3dmake_8-snap_fit_clip">Snap-Fit Clip - Extension Project</a></h1>
 <p>Estimated time: 3-6 hours</p>
-<h2 id="learning-objectives-29"><a class="header" href="#learning-objectives-29">Learning Objectives</a></h2>
+<h2 id="learning-objectives-28"><a class="header" href="#learning-objectives-28">Learning Objectives</a></h2>
 <p>By completing this project, you will:</p>
 <ul>
 <li>Design flexible components that must bend without failing</li>
@@ -16022,7 +15954,7 @@ union(){
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="lesson-9-automation-and-3dm-workflows-1"><a class="header" href="#lesson-9-automation-and-3dm-workflows-1">Lesson 9: Automation and 3dm Workflows</a></h1>
 <p>Estimated time: 90–120 minutes</p>
-<h2 id="learning-objectives-30"><a class="header" href="#learning-objectives-30">Learning Objectives</a></h2>
+<h2 id="learning-objectives-29"><a class="header" href="#learning-objectives-29">Learning Objectives</a></h2>
 <ul>
 <li>Write bash scripts to automate repetitive 3dMake build tasks</li>
 <li>Use <code>import()</code>, <code>include</code>, and <code>use</code> to manage multi-file projects</li>
@@ -16030,13 +15962,13 @@ union(){
 <li>Use file system tools to organize and archive builds</li>
 <li>Understand how to detect file changes for watch-and-rebuild loops</li>
 </ul>
-<h2 id="materials-22"><a class="header" href="#materials-22">Materials</a></h2>
+<h2 id="materials-21"><a class="header" href="#materials-21">Materials</a></h2>
 <ul>
 <li>3dMake project</li>
 <li>Terminal (bash)</li>
 <li>Text editor</li>
 </ul>
-<h2 id="step-by-step-tasks-24"><a class="header" href="#step-by-step-tasks-24">Step-by-step Tasks</a></h2>
+<h2 id="step-by-step-tasks-23"><a class="header" href="#step-by-step-tasks-23">Step-by-step Tasks</a></h2>
 <h3 id="1-write-your-first-build-automation-script-1"><a class="header" href="#1-write-your-first-build-automation-script-1">1. Write Your First Build Automation Script <sup class="footnote-reference" id="fr-1-1-9"><a href="#footnote-1-9">1</a></sup></a></h3>
 <pre><code class="language-bash">#!/bin/bash
 # build_all.sh — build project and archive the result
@@ -16221,7 +16153,7 @@ done
 <li>Perform tolerance stack-up analysis</li>
 <li>Use <code>3dm describe</code> for non-visual validation</li>
 </ul>
-<h2 id="materials-23"><a class="header" href="#materials-23">Materials</a></h2>
+<h2 id="materials-22"><a class="header" href="#materials-22">Materials</a></h2>
 <ul>
 <li>3dMake project</li>
 <li>Printer and PLA filament</li>
@@ -17636,7 +17568,7 @@ Project / Assignment: _</p>
 <li>Perform tolerance stack-up analysis</li>
 <li>Use <code>3dm describe</code> for non-visual validation</li>
 </ul>
-<h2 id="materials-24"><a class="header" href="#materials-24">Materials</a></h2>
+<h2 id="materials-23"><a class="header" href="#materials-23">Materials</a></h2>
 <ul>
 <li>3dMake project</li>
 <li>Printer and PLA filament</li>
@@ -19099,7 +19031,7 @@ Deliverables due: End of week (see milestones)</p>
 <li>Use at least two different bead shapes in the final assembly.</li>
 <li>The final piece must be wearable and assembled - not just a set of loose beads.</li>
 </ul>
-<h2 id="learning-objectives-31"><a class="header" href="#learning-objectives-31">Learning Objectives</a></h2>
+<h2 id="learning-objectives-30"><a class="header" href="#learning-objectives-30">Learning Objectives</a></h2>
 <ul>
 <li>Create parametric OpenSCAD modules for repeated geometry</li>
 <li>Combine modular parts into a coherent assembled object</li>

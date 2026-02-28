@@ -1,1 +1,0 @@
-# Accessibility Audit Project {#assets_3dmake_foundation_lessons_3dmake_10_accessibility_audit-accessibility-audit}
