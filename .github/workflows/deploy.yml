@@ -1,24 +1,16 @@
 name: Deploy mdBook to GitHub Pages
-
 on:
   push:
     branches: ["main"]
-
 permissions:
   contents: read
   pages: write
   id-token: write
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
-      - name: Install mdBook
-        run: |
-          wget https://github.com/rust-lang/mdBook/releases/download/v0.5.2/mdbook-v0.5.2-x86_64-unknown-linux-gnu.tar.gz
-          tar xzf mdbook-v0.5.2-x86_64-unknown-linux-gnu.tar.gz
 
       - name: Install Rust toolchain
         uses: actions-rs/toolchain@v1
@@ -29,25 +21,17 @@ jobs:
 
       - name: Add cargo bin to PATH
         run: echo "$HOME/.cargo/bin" >> $GITHUB_PATH
-        - name: Install Rust toolchain
-          uses: actions-rs/toolchain@v1
-          with:
-            toolchain: stable
-            profile: minimal
-            override: true
 
-        - name: Add cargo bin to PATH
-          run: echo "$HOME/.cargo/bin" >> $GITHUB_PATH
-
-        - name: Install mdBook via cargo
-          run: |
-            export PATH="$HOME/.cargo/bin:$PATH"
-            cargo install mdbook --locked || cargo install mdbook --force
-
-      - name: "CI: debug versions and check bibliography"
+      - name: Install mdBook and plugins via cargo
         run: |
-          echo "--- Versions ---"
-            mdbook --version || true
+          cargo install mdbook --locked || cargo install mdbook --force
+          cargo install mdbook-pandoc --locked || cargo install mdbook-pandoc --force
+          cargo install mdbook-bib --locked || cargo install mdbook-bib --force
+
+      - name: "CI: debug versions"
+        run: |
+          mdbook --version || true
+          mdbook-pandoc --version || true
           rustc --version || true
           cargo --version || true
           python3 --version || true
@@ -55,15 +39,15 @@ jobs:
       - name: Build book
         run: |
           cd my-book
-            mdbook build
+          mdbook build
+
       - name: Verify fonts copied
         run: |
           test -f my-book/docs/assets/fonts/AtkinsonHyperlegibleNext-Regular.ttf
           test -f my-book/docs/assets/fonts/AtkinsonHyperlegibleMono-Regular.otf
 
       - name: Verify @font-face in HTML
-        run: |
-          grep -R "@font-face" -n my-book/docs/index.html
+        run: grep -R "@font-face" -n my-book/docs/index.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -75,6 +59,10 @@ jobs:
     needs: build
     environment:
       name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
