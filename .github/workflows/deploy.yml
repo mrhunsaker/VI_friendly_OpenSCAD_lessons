@@ -15,59 +15,39 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install system dependencies
+      - name: Install mdBook
         run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            pandoc \
-            texlive-luatex \
-            texlive-latex-base \
-            texlive-latex-recommended \
-            texlive-latex-extra \
-            texlive-fonts-recommended \
-            texlive-fonts-extra
+          wget https://github.com/rust-lang/mdBook/releases/download/v0.5.2/mdbook-v0.5.2-x86_64-unknown-linux-gnu.tar.gz
+          tar xzf mdbook-v0.5.2-x86_64-unknown-linux-gnu.tar.gz
 
       - name: Install Rust toolchain
-        uses: dtolnay/rust-toolchain@stable
-
-      - name: Install mdBook and mdbook-mermaid (latest) via cargo
-        run: |
-          export PATH="$HOME/.cargo/bin:$PATH"
-          cargo install mdbook --locked || cargo install mdbook --force
-
-      - name: Cache cargo registry
-        uses: actions/cache@v3
+        uses: actions-rs/toolchain@v1
         with:
-          path: |
-            ~/.cargo/registry
-            ~/.cargo/git
-            ~/.cargo/bin
-          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-cargo-
+          toolchain: stable
+          profile: minimal
+          override: true
 
-      - name: Install mdbook-pandoc and mdbook-bib via cargo
-        run: |
-          export PATH="$HOME/.cargo/bin:$PATH"
-          cargo install mdbook-pandoc --locked || cargo install mdbook-pandoc --force
+      - name: Add cargo bin to PATH
+        run: echo "$HOME/.cargo/bin" >> $GITHUB_PATH
 
       - name: "CI: debug versions and check bibliography"
         run: |
           echo "--- Versions ---"
-          mdbook --version          || true
-          pandoc --version          || true
-          lualatex --version        || true
-          python3 --version         || true
+          mdbook --version || true
+          mdbook-bib --version || true
+          rustc --version || true
+          cargo --version || true
+          python3 --version || true
+          echo "--- Show suspect bib ranges ---"
+          sed -n '1018,1030p' my-book/src/globalbibliography.bib || true
+          sed -n '1433,1441p' my-book/src/globalbibliography.bib || true
+          echo "--- Run bib linter ---"
+          python3 scripts/checkbib.py || true
 
-      - name: Build book (HTML + Pandoc outputs)
+      - name: Build book
         run: |
           cd my-book
-          mdbook build
-
-      - name: Copy EPUB into docs root for easy linking
-        run: |
-          find my-book/docs/pandoc -name "*.epub" -exec cp {} my-book/docs/ \; || true
-
+          ../mdbook build
       - name: Verify fonts copied
         run: |
           test -f my-book/docs/assets/fonts/AtkinsonHyperlegibleNext-Regular.ttf
@@ -75,9 +55,9 @@ jobs:
 
       - name: Verify @font-face in HTML
         run: |
-          grep -R "@font-face" my-book/docs/index.html
+          grep -R "@font-face" -n my-book/docs/index.html
 
-      - name: Upload Pages artifact
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./my-book/docs
@@ -87,8 +67,6 @@ jobs:
     needs: build
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4
