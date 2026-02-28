@@ -1,8 +1,7 @@
 # Summary {#summary}
 
-[Accessible 3D Printing with OpenSCAD and 3DMake](README.md)
-[Syllabus](Syllabus.md)
-
+- [Accessible 3D Printing with OpenSCAD and 3DMake](README.md)
+- [Syllabus](Syllabus.md)
 - [Setup & Accessibility Fundamentals](Setup/Screen_Reader_Accessibility_Guide/Screen_Reader_Accessibility_Guide.md)
   - [Screen Readers and the Windows CLI](Setup/Screen_Reader_Choice/Screen_Reader_Choice.md)
   - [Braille Display & Terminal Mode](Setup/Braille_Displays/Braille_Displays.md)
@@ -46,7 +45,6 @@
     - [GitBash-5: Filling in the Gaps - Shell Profiles, History, and Debugging](GitBash_Foundation/GitBash_5_filling_in_the_gaps/GitBash_5_filling_in_the_gaps.md)
     - [GitBash-6: Advanced Terminal Techniques - Scripts, Functions & Professional Workflows](GitBash_Foundation/GitBash_6_Advanced_Techniques/GitBash_6_Advanced_Techniques.md)
     - [GitBash Unit Test & Practice](GitBash_Foundation/GitBash_Unit_Test/GitBash_Unit_Test.md)
-
 - [3dMake Foundation & Design](3dMake_Foundation/Part_2.md)
   - [3D Make Introduction](3dMake_Foundation/3dMake_Intro/3dMake_Intro.md)
   - [3D Make Foundation Curriculum Guide](3dMake_Foundation/3dMake_Foundation_Curriculum_Guide.md)
@@ -102,7 +100,6 @@
       - [Beaded Jewelry Project](3dMake_Foundation/Lessons_3dMake_11/beaded-jewelry.md)
   - [3D Make Final Exam](3dMake_Foundation/3dMake_Final_Exam.md)
   - [3D Make Quick Reference](3dMake_Foundation/3dMake_Quick_Reference.md)
-
 - [BackMatter](Backmatter/backmatter.md)
   - [Command Line Appendices](Appendices/CLI_Appendices.md)
     - [Appendix A: CMD Integration for SCAD Workflows](Command_Line_Interface_Selection/Appendix_A_CommandLine_Integration.md)
@@ -115,10 +112,7 @@
     - [Appendix D: Advanced OpenSCAD Concepts](3dMake_Foundation/Appendix_D_Advanced_OpenSCAD_Concepts.md)
   - [Technical Reference and Troubleshooting Guide](Backmatter/troubleshooting.md)
   - [Student Glossary with Concept Examples](Backmatter/glossary.md)
-  - [Teacher Glossary](Backmatter/teacher-glossary)
+  - [Teacher Glossary](Backmatter/teacher-glossary.md)
   - [Further Reading](Backmatter/Further_Reading.md)
   - [Index](index_page.md)
-
----
-
-[About the Author](Contributors.md)
+  - [About the Author](Contributors.md)

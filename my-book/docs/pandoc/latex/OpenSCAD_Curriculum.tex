@@ -287,8 +287,7 @@
 \setcounter{tocdepth}{2}
 \tableofcontents
 }
-\chapter*{Introduction}\label{docs__pandoc__latex__src__readme.md__readme}
-\addcontentsline{toc}{chapter}{Introduction}
+\chapter{Introduction}\label{docs__pandoc__latex__src__readme.md__readme}
 
 This course teaches 3D design and digital fabrication using a fully accessible, command-line-driven toolchain centered on OpenSCAD (text-based CAD), 3DMake (non-visual build automation), and accessible editors (VS Code, Notepad++, command-line editors) with screen reader support.
 
@@ -704,8 +703,7 @@ We know that users of this curriculum will primarily be JAWS and NVDA screenread
 
 \newpage
 
-\chapter*{3D Design \& Printing Curriculum - Non-Visual Toolchain Edition}\label{docs__pandoc__latex__src__syllabus.md__syllabus}
-\addcontentsline{toc}{chapter}{3D Design \& Printing Curriculum - Non-Visual Toolchain Edition}
+\chapter{3D Design \& Printing Curriculum - Non-Visual Toolchain Edition}\label{docs__pandoc__latex__src__syllabus.md__syllabus}
 
 Author: Michael Ryan Hunsaker, M.Ed., Ph.D. Last Updated: 2026-02-22
 Target Audience: Blind and visually impaired high school students; anyone learning 3D design and printing through screen reader-accessible workflows.
@@ -34540,7 +34538,7 @@ This section contains supplementary material and appendices that support the mai
   \begin{itemize}
   \tightlist
   \item
-    \href{https://github.com/mrhunsaker/VI_3DMake_OpenSCAD_Curriculum/Backmatter/../Backmatter/teacher-glossary.md}{Glossary}
+    \hyperref[docs__pandoc__latex__src__backmatter__teacher-glossary.md__teacher-glossary]{Glossary}
   \end{itemize}
 \item
   \textbf{Further Reading} --- curated list of books, articles, tools, and resources to continue learning.
@@ -41029,419 +41027,7 @@ Example:
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\section{Master Instructor Glossary with Pedagogical Notes}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__master-instructor-glossary-with-pedagogical-notes}
-
-\emph{OpenSCAD + 3dMake + CLI-Based 3D Printing Curriculum}
-
-This glossary expands technical definitions with:
-
-\begin{itemize}
-\tightlist
-\item
-  Teaching emphasis
-\item
-  Common misconceptions
-\item
-  Demonstration strategies
-\item
-  Assessment indicators
-\item
-  Cross-module integration notes
-\end{itemize}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{1. General Design \& Engineering Concepts}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__1-general-design--engineering-concepts}
-
-\subsection*{Additive Manufacturing}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__additive-manufacturing}
-
-\textbf{Definition:} Manufacturing process that builds objects layer by layer.
-
-\textbf{Teaching Emphasis:}\\
-Contrast with subtractive manufacturing (CNC milling). Students should understand material addition vs removal.
-
-\textbf{Common Misconception:}\\
-Students often assume ``3D printing'' is a single technology; clarify FDM vs resin vs industrial processes.
-
-\textbf{Demonstration:}\\
-Show failed print cross-section to visualize layers.
-
-\textbf{Assessment Cue:}\\
-Can student explain how layer height affects surface quality?
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\subsection*{Parametric Design}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__parametric-design}
-
-\textbf{Definition:} Designing models driven by adjustable variables.
-
-\textbf{Teaching Emphasis:}\\
-This is the core philosophical difference between OpenSCAD and GUI CAD tools.
-
-\textbf{Common Misconception:}\\
-Students confuse ``parameter'' with ``hardcoded variable.'' Emphasize reusability.
-
-\textbf{Demonstration:}\\
-Live-edit a dimension variable and re-render.
-
-\textbf{Assessment Cue:}\\
-Can student refactor a fixed-dimension model into a parametric one?
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\subsection*{Tolerance}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__tolerance}
-
-\textbf{Definition:} Acceptable dimensional variation to ensure parts fit.
-
-\textbf{Teaching Emphasis:}\\
-Tie directly to printer calibration and material shrinkage.
-
-\textbf{Common Misconception:}\\
-Students assume digital dimensions equal physical results.
-
-\textbf{Demonstration:}\\
-Print tolerance test blocks.
-
-\textbf{Assessment Cue:}\\
-Can student calculate clearance needed for a press fit?
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{2. 3D Printing (FDM)}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__2-3d-printing-fdm}
-
-\subsection*{Layer Height}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__layer-height}
-
-\textbf{Definition:} Vertical thickness of each printed layer.
-
-\textbf{Teaching Emphasis:}\\
-Trade-off between print speed and surface quality.
-
-\textbf{Common Misconception:}\\
-Lower layer height does not automatically mean stronger prints.
-
-\textbf{Demonstration:}\\
-Compare 0.2mm vs 0.1mm prints.
-
-\textbf{Assessment Cue:}\\
-Can student justify layer height choice for functional vs aesthetic part?
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\subsection*{Infill}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__infill}
-
-\textbf{Definition:} Internal support structure expressed as a percentage.
-
-\textbf{Teaching Emphasis:}\\
-Strength comes from perimeters + infill pattern choice.
-
-\textbf{Common Misconception:}\\
-Students assume 100\% infill = strongest in all cases.
-
-\textbf{Demonstration:}\\
-Cut apart failed prints to show internal structure.
-
-\textbf{Assessment Cue:}\\
-Can student select appropriate infill for load-bearing bracket?
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\subsection*{Warping}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__warping}
-
-\textbf{Definition:} Edge lifting due to uneven cooling.
-
-\textbf{Teaching Emphasis:}\\
-Connect to material properties (PLA vs ABS).
-
-\textbf{Assessment Cue:}\\
-Can student propose mitigation strategies (brim, enclosure, temperature)?
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{3. OpenSCAD --- Modeling \& Language}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__3-openscad--modeling--language}
-
-\subsection*{CSG (Constructive Solid Geometry)}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__csg-constructive-solid-geometry}
-
-\textbf{Definition:} Modeling by combining primitives with boolean operations.
-
-\textbf{Teaching Emphasis:}\\
-Encourage students to think in logical operations, not sculpting.
-
-\textbf{Common Misconception:}\\
-Students attempt to ``draw'' instead of combining primitives.
-
-\textbf{Demonstration:}\\
-Build a complex object from cube + cylinder + difference().
-
-\textbf{Assessment Cue:}\\
-Can student decompose a real-world object into primitives?
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\subsection*{Module}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__module}
-
-\textbf{Definition:} Reusable block of geometry.
-
-\textbf{Teaching Emphasis:}\\
-Modules = abstraction. Introduce early to prevent code duplication.
-
-\textbf{Common Misconception:}\\
-Students treat modules as simple macros; clarify parameter scope.
-
-\textbf{Assessment Cue:}\\
-Can student create a reusable module with defaults?
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\subsection*{\$fn}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__fn}
-
-\textbf{Definition:} Resolution variable controlling roundness.
-
-\textbf{Teaching Emphasis:}\\
-Performance vs visual quality trade-off.
-
-\textbf{Demonstration:}\\
-Render cylinder with \$fn=20 vs 100.
-
-\textbf{Assessment Cue:}\\
-Can student explain why high \$fn slows render time?
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\subsection*{Preview vs Render}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__preview-vs-render}
-
-\textbf{Definition:} F5 (preview) vs F6 (full geometry evaluation).
-
-\textbf{Teaching Emphasis:}\\
-Preview ≠ printable model.
-
-\textbf{Common Misconception:}\\
-Students export from preview state without full render.
-
-\textbf{Assessment Cue:}\\
-Does student verify manifold geometry before export?
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{4. 3dMake \& Automation}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__4-3dmake--automation}
-
-\subsection*{Headless Rendering}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__headless-rendering}
-
-\textbf{Definition:} Running OpenSCAD via command line without GUI.
-
-\textbf{Teaching Emphasis:}\\
-Reproducibility and automation are professional practices.
-
-\textbf{Demonstration:}\\
-Run OpenSCAD CLI from PowerShell.
-
-\textbf{Assessment Cue:}\\
-Can student produce STL via script without GUI?
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\subsection*{Reproducible Build}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__reproducible-build}
-
-\textbf{Definition:} Identical output from version-controlled inputs.
-
-\textbf{Teaching Emphasis:}\\
-Critical for collaboration and grading consistency.
-
-\textbf{Assessment Cue:}\\
-Can another student regenerate identical artifact from repo?
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{5. Command Line \& Shell}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__5-command-line--shell}
-
-\subsection*{Environment Variable}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__environment-variable}
-
-\textbf{Definition:} Named value available to processes (e.g., PATH).
-
-\textbf{Teaching Emphasis:}\\
-Students must understand PATH for CLI tools.
-
-\textbf{Common Misconception:}\\
-Confusion between system vs user variables.
-
-\textbf{Assessment Cue:}\\
-Can student diagnose ``command not found'' error?
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\subsection*{Exit Code}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__exit-code}
-
-\textbf{Definition:} Numeric return status of command (0 = success).
-
-\textbf{Teaching Emphasis:}\\
-Foundation for scripting logic.
-
-\textbf{Assessment Cue:}\\
-Can student use conditional logic based on exit status?
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\subsection*{Pipe}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__pipe}
-
-\textbf{Definition:} Redirect output of one command into another.
-
-\textbf{Teaching Emphasis:}\\
-Core Unix philosophy --- small tools combined.
-
-\textbf{Demonstration:}\\
-\texttt{Get-ChildItem\ \textbar{}\ Select-String}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{6. PowerShell-Specific}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__6-powershell-specific}
-
-\subsection*{Cmdlet}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__cmdlet}
-
-\textbf{Definition:} Native PowerShell command.
-
-\textbf{Teaching Emphasis:}\\
-Verb-Noun naming convention.
-
-\textbf{Assessment Cue:}\\
-Can student identify correct cmdlet via \texttt{Get-Command}?
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\subsection*{Execution Policy}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__execution-policy}
-
-\textbf{Definition:} Controls whether scripts can run.
-
-\textbf{Teaching Emphasis:}\\
-Security implications.
-
-\textbf{Assessment Cue:}\\
-Can student safely modify policy for development?
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{7. Git \& Version Control}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__7-git--version-control}
-
-\subsection*{Commit}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__commit}
-
-\textbf{Definition:} Snapshot of project state.
-
-\textbf{Teaching Emphasis:}\\
-Encourage small, meaningful commits.
-
-\textbf{Assessment Cue:}\\
-Does student use descriptive commit messages?
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\subsection*{Branch}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__branch}
-
-\textbf{Definition:} Parallel development path.
-
-\textbf{Teaching Emphasis:}\\
-Introduce feature branching in advanced module.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{8. Accessibility}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__8-accessibility}
-
-\subsection*{Screen Reader}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__screen-reader}
-
-\textbf{Definition:} Software that reads digital text aloud.
-
-\textbf{Teaching Emphasis:}\\
-All documentation must be keyboard navigable.
-
-\textbf{Assessment Cue:}\\
-Can site be navigated without mouse?
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\subsection*{Semantic Structure}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__semantic-structure}
-
-\textbf{Definition:} Logical heading hierarchy in Markdown/HTML.
-
-\textbf{Teaching Emphasis:}\\
-Accessibility and maintainability.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{9. Safety \& Risk}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__9-safety--risk}
-
-\subsection*{Hierarchy of Controls}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__hierarchy-of-controls}
-
-\textbf{Definition:} Safety prioritization model (eliminate → PPE).
-
-\textbf{Teaching Emphasis:}\\
-Ventilation \textgreater{} mask alone.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{10. AI \& Generative Design (Advanced)}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__10-ai--generative-design-advanced}
-
-\subsection*{Prompt Engineering}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__prompt-engineering}
-
-\textbf{Definition:} Designing effective AI instructions.
-
-\textbf{Teaching Emphasis:}\\
-Students must validate AI-generated geometry.
-
-\textbf{Assessment Cue:}\\
-Can student identify unsafe AI-generated model?
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-\section*{Instructor Meta-Notes}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__instructor-meta-notes}
-
-\subsubsection*{Spiral Curriculum Recommendation}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__spiral-curriculum-recommendation}
-
-Reintroduce:
-
-\begin{itemize}
-\tightlist
-\item
-  Parametric design
-\item
-  Automation
-\item
-  Reproducibility at increasing levels of complexity.
-\end{itemize}
-
-\subsubsection*{Capstone Integration}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__capstone-integration}
-
-Final project should require:
-
-\begin{itemize}
-\tightlist
-\item
-  Parametric OpenSCAD module
-\item
-  3dMake automated build
-\item
-  Git version control
-\item
-  Printed physical artifact
-\item
-  Accessibility-compliant documentation
-\end{itemize}
-
-\subsubsection*{Evaluation Matrix Suggestions}\label{docs__pandoc__latex__src__backmatter__teacher-glossary__evaluation-matrix-suggestions}
-
-Assess students on:
-
-\begin{itemize}
-\tightlist
-\item
-  Code structure
-\item
-  Parametric flexibility
-\item
-  CLI competency
-\item
-  Print quality
-\item
-  Documentation clarity
-\item
-  Accessibility compliance
-\end{itemize}
+\section{Teacher Glossary}\label{docs__pandoc__latex__src__backmatter__teacher-glossary.md__teacher-glossary}
 
 \section{References}\label{docs__pandoc__latex__src__backmatter__further_reading.md__references}
 
@@ -41584,52 +41170,49 @@ YouTube. (n.d.). \emph{Teaching Tech channel.} https://www.youtube.com/@Teaching
 
 \end{lstlisting}
 
-\newpage
-
-\chapter*{Contributors to this Curriculum}\label{docs__pandoc__latex__src__contributors.md__contributors}
-\addcontentsline{toc}{chapter}{Contributors to this Curriculum}
+\section{Contributors to this Curriculum}\label{docs__pandoc__latex__src__contributors.md__contributors}
 
 \pandocbounded{\includegraphics[keepaspectratio,alt={Headshot of Michael Ryan Hunsaker, M.Ed., Ph.D.}]{docs/pandoc/latex/src/assets/images/bio-photo.jpg}}
 
 Michael Ryan Hunsaker, M.Ed., Ph.D. (he/him)
 
-\section*{About Dr. Hunsaker}\label{docs__pandoc__latex__src__contributors.md__about-dr-hunsaker}
+\subsection*{About Dr. Hunsaker}\label{docs__pandoc__latex__src__contributors.md__about-dr-hunsaker}
 
 Michael Ryan Hunsaker holds a Ph.D. in neuroscience (behavioral/translational neuroscience focus) from UC Davis and a Master\textquotesingle s degree in Special Education from the University of Utah with a credential to teach blind and visually impaired students. His career uniquely bridges scientific research, clinical experience, and classroom practice-positioning him to design accessible educational materials grounded in both neuroscience and practical pedagogy.
 
-\subsection*{Research \& Clinical Background}\label{docs__pandoc__latex__src__contributors.md__research--clinical-background}
+\subsubsection*{Research \& Clinical Background}\label{docs__pandoc__latex__src__contributors.md__research--clinical-background}
 
 Following his doctoral work at UC Davis (2012), Dr. Hunsaker completed postdoctoral research in primate neural development at the UC Davis MIND Institute, where he developed sophisticated research methods to evaluate developmental disorders. During this period, he gained extensive clinical experience working directly with children and adults across a broad spectrum of diagnoses, including autism spectrum disorder, cerebral palsy, genetic conditions (fragile X syndrome, Williams syndrome, 22q11.2DS, Down syndrome), ADHD, and Tourette\textquotesingle s syndrome. This diverse exposure to different neurological profiles taught him a crucial lesson: each learner\textquotesingle s disability uniquely shapes their cognitive strengths, learning preferences, and educational needs.
 
-\subsection*{Transition to Education}\label{docs__pandoc__latex__src__contributors.md__transition-to-education}
+\subsubsection*{Transition to Education}\label{docs__pandoc__latex__src__contributors.md__transition-to-education}
 
 In 2013, recognizing the gap between academic research and classroom reality, Dr. Hunsaker made a deliberate career shift to direct education. Rather than pursue traditional academic pathways, he committed to applying his scientific training to help students in real classroom environments. As a special education teacher, he focused on understanding the individual relationship between disability and learning-developing instructional approaches that enable students to access their full potential rather than working around perceived limitations.
 
-\subsection*{Expertise in Accessibility \& Inclusive Design}\label{docs__pandoc__latex__src__contributors.md__expertise-in-accessibility--inclusive-design}
+\subsubsection*{Expertise in Accessibility \& Inclusive Design}\label{docs__pandoc__latex__src__contributors.md__expertise-in-accessibility--inclusive-design}
 
 His specialization in teaching blind and visually impaired students, particularly those with additional disabilities, has given Dr. Hunsaker deep expertise in accessible pedagogy and non-visual problem-solving. He grounds all curriculum design in evidence-based practice informed by neuroscience, accessibility research, and years of direct classroom experience with diverse learners. He understands that accessibility is not an afterthought or accommodation; it is the foundation upon which effective education for all students is built.
 
-\subsection*{Creator of Accessible Educational Resources}\label{docs__pandoc__latex__src__contributors.md__creator-of-accessible-educational-resources}
+\subsubsection*{Creator of Accessible Educational Resources}\label{docs__pandoc__latex__src__contributors.md__creator-of-accessible-educational-resources}
 
 Motivated by observing persistent gaps in affordable, practical, and culturally responsive accessible educational materials, Dr. Hunsaker created TVI Resources, a collection of free, openly licensed instructional materials designed to meet the real needs of educators and students. This commitment to accessible education informed his development of this curriculum: a comprehensive, text-based approach to 3D design and digital fabrication specifically engineered for blind and visually impaired learners, emphasizing independence, technical mastery, and real-world application.
 
-\section*{Acknowledgements}\label{docs__pandoc__latex__src__contributors.md__acknowledgements}
+\subsection*{Acknowledgements}\label{docs__pandoc__latex__src__contributors.md__acknowledgements}
 
 This curriculum stands on the shoulders of innovators, educators, and open-source maintainers whose commitment to accessibility and open education made this work possible.
 
-\subsection*{3DMake}\label{docs__pandoc__latex__src__contributors.md__3dmake}
+\subsubsection*{3DMake}\label{docs__pandoc__latex__src__contributors.md__3dmake}
 
 Special thanks to Troy Deck, the creator and maintainer of \href{https://github.com/tdeck/3dmake}{3DMake}, an open-source command-line tool that automates the workflow from code-based 3D models to print-ready files. 3DMake is essential to this curriculum-it eliminates the visual GUI entirely and makes parametric 3D design accessible to screen reader users through text-based commands and configuration files. Without 3DMake, a truly non-visual pathway from design to fabrication would not exist.
 
-\subsection*{Texas School for the Blind and Visually Impaired (TSBVI)}\label{docs__pandoc__latex__src__contributors.md__texas-school-for-the-blind-and-visually-impaired-tsbvi}
+\subsubsection*{Texas School for the Blind and Visually Impaired (TSBVI)}\label{docs__pandoc__latex__src__contributors.md__texas-school-for-the-blind-and-visually-impaired-tsbvi}
 
 This curriculum was directly inspired by the innovative work at TSBVI, a pioneer in accessible education for blind and visually impaired students. The foundational idea of using text-driven tools and command-line workflows for technical education originated from  collaboration with TSBVI educators. Their commitment to demonstrating that blind and visually impaired students can excel in technical fields provided the vision for this project.
 
-\subsection*{OpenSCAD Community}\label{docs__pandoc__latex__src__contributors.md__openscad-community}
+\subsubsection*{OpenSCAD Community}\label{docs__pandoc__latex__src__contributors.md__openscad-community}
 
 Deep appreciation to the OpenSCAD project maintainers and contributors for creating and maintaining a code-driven, parametric 3D modeling system that is inherently more accessible than traditional GUI-based CAD tools. OpenSCAD\textquotesingle s text-based programming model and screen-reader-compatible approach to geometry design makes it uniquely suited for learners who use assistive technology. The OpenSCAD community\textquotesingle s commitment to open-source principles and accessibility embodies the philosophy that drives this curriculum.
 
-\subsection*{Open Education \& Accessibility Movement}\label{docs__pandoc__latex__src__contributors.md__open-education--accessibility-movement}
+\subsubsection*{Open Education \& Accessibility Movement}\label{docs__pandoc__latex__src__contributors.md__open-education--accessibility-movement}
 
 Finally, this curriculum is part of a broader movement toward open educational resources that prioritize accessibility from the ground up. It reflects the conviction that education should be barrier-free, that students with disabilities bring unique perspectives and strengths, and that accessible design benefits all learners. The work of accessibility advocates, neurodivergent educators, and disability justice activists informed every decision in building this material.
 

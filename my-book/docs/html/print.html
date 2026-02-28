@@ -82,10 +82,10 @@
             const path_to_root = "";
             const default_light_theme = "rust";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-1fa19088.js";
+            window.path_to_searchindex_js = "searchindex-16a773af.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-ccdaa231.js"></script>
+        <script src="toc-a7b67ace.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -19806,7 +19806,7 @@ done
 <li>
 <p><strong>Teacher Glossary</strong> — a concise list of terms and definitions used throughout the book with instructional tips.</p>
 <ul>
-<li><a href="#master-instructor-glossary-with-pedagogical-notes">Glossary</a></li>
+<li><a href="#teacher-glossary">Glossary</a></li>
 </ul>
 </li>
 <li>
@@ -23718,184 +23718,7 @@ git checkout feature-peg
 <li>OpenSCAD must be in PATH.</li>
 </ul>
 <hr><div style="break-before: page; page-break-before: always;"></div>
-<h1 id="master-instructor-glossary-with-pedagogical-notes"><a class="header" href="#master-instructor-glossary-with-pedagogical-notes">Master Instructor Glossary with Pedagogical Notes</a></h1>
-<p><em>OpenSCAD + 3dMake + CLI-Based 3D Printing Curriculum</em></p>
-<p>This glossary expands technical definitions with:</p>
-<ul>
-<li>Teaching emphasis</li>
-<li>Common misconceptions</li>
-<li>Demonstration strategies</li>
-<li>Assessment indicators</li>
-<li>Cross-module integration notes</li>
-</ul>
-<hr>
-<h1 id="1-general-design--engineering-concepts"><a class="header" href="#1-general-design--engineering-concepts">1. General Design &amp; Engineering Concepts</a></h1>
-<h2 id="additive-manufacturing-1"><a class="header" href="#additive-manufacturing-1">Additive Manufacturing</a></h2>
-<p><strong>Definition:</strong> Manufacturing process that builds objects layer by layer.</p>
-<p><strong>Teaching Emphasis:</strong><br>Contrast with subtractive manufacturing (CNC milling). Students should understand material addition vs removal.</p>
-<p><strong>Common Misconception:</strong><br>Students often assume “3D printing” is a single technology; clarify FDM vs resin vs industrial processes.</p>
-<p><strong>Demonstration:</strong><br>Show failed print cross-section to visualize layers.</p>
-<p><strong>Assessment Cue:</strong><br>Can student explain how layer height affects surface quality?</p>
-<hr>
-<h2 id="parametric-design-1"><a class="header" href="#parametric-design-1">Parametric Design</a></h2>
-<p><strong>Definition:</strong> Designing models driven by adjustable variables.</p>
-<p><strong>Teaching Emphasis:</strong><br>This is the core philosophical difference between OpenSCAD and GUI CAD tools.</p>
-<p><strong>Common Misconception:</strong><br>Students confuse “parameter” with “hardcoded variable.” Emphasize reusability.</p>
-<p><strong>Demonstration:</strong><br>Live-edit a dimension variable and re-render.</p>
-<p><strong>Assessment Cue:</strong><br>Can student refactor a fixed-dimension model into a parametric one?</p>
-<hr>
-<h2 id="tolerance-1"><a class="header" href="#tolerance-1">Tolerance</a></h2>
-<p><strong>Definition:</strong> Acceptable dimensional variation to ensure parts fit.</p>
-<p><strong>Teaching Emphasis:</strong><br>Tie directly to printer calibration and material shrinkage.</p>
-<p><strong>Common Misconception:</strong><br>Students assume digital dimensions equal physical results.</p>
-<p><strong>Demonstration:</strong><br>Print tolerance test blocks.</p>
-<p><strong>Assessment Cue:</strong><br>Can student calculate clearance needed for a press fit?</p>
-<hr>
-<h1 id="2-3d-printing-fdm"><a class="header" href="#2-3d-printing-fdm">2. 3D Printing (FDM)</a></h1>
-<h2 id="layer-height-2"><a class="header" href="#layer-height-2">Layer Height</a></h2>
-<p><strong>Definition:</strong> Vertical thickness of each printed layer.</p>
-<p><strong>Teaching Emphasis:</strong><br>Trade-off between print speed and surface quality.</p>
-<p><strong>Common Misconception:</strong><br>Lower layer height does not automatically mean stronger prints.</p>
-<p><strong>Demonstration:</strong><br>Compare 0.2mm vs 0.1mm prints.</p>
-<p><strong>Assessment Cue:</strong><br>Can student justify layer height choice for functional vs aesthetic part?</p>
-<hr>
-<h2 id="infill-2"><a class="header" href="#infill-2">Infill</a></h2>
-<p><strong>Definition:</strong> Internal support structure expressed as a percentage.</p>
-<p><strong>Teaching Emphasis:</strong><br>Strength comes from perimeters + infill pattern choice.</p>
-<p><strong>Common Misconception:</strong><br>Students assume 100% infill = strongest in all cases.</p>
-<p><strong>Demonstration:</strong><br>Cut apart failed prints to show internal structure.</p>
-<p><strong>Assessment Cue:</strong><br>Can student select appropriate infill for load-bearing bracket?</p>
-<hr>
-<h2 id="warping"><a class="header" href="#warping">Warping</a></h2>
-<p><strong>Definition:</strong> Edge lifting due to uneven cooling.</p>
-<p><strong>Teaching Emphasis:</strong><br>Connect to material properties (PLA vs ABS).</p>
-<p><strong>Assessment Cue:</strong><br>Can student propose mitigation strategies (brim, enclosure, temperature)?</p>
-<hr>
-<h1 id="3-openscad--modeling--language"><a class="header" href="#3-openscad--modeling--language">3. OpenSCAD — Modeling &amp; Language</a></h1>
-<h2 id="csg-constructive-solid-geometry"><a class="header" href="#csg-constructive-solid-geometry">CSG (Constructive Solid Geometry)</a></h2>
-<p><strong>Definition:</strong> Modeling by combining primitives with boolean operations.</p>
-<p><strong>Teaching Emphasis:</strong><br>Encourage students to think in logical operations, not sculpting.</p>
-<p><strong>Common Misconception:</strong><br>Students attempt to “draw” instead of combining primitives.</p>
-<p><strong>Demonstration:</strong><br>Build a complex object from cube + cylinder + difference().</p>
-<p><strong>Assessment Cue:</strong><br>Can student decompose a real-world object into primitives?</p>
-<hr>
-<h2 id="module-1"><a class="header" href="#module-1">Module</a></h2>
-<p><strong>Definition:</strong> Reusable block of geometry.</p>
-<p><strong>Teaching Emphasis:</strong><br>Modules = abstraction. Introduce early to prevent code duplication.</p>
-<p><strong>Common Misconception:</strong><br>Students treat modules as simple macros; clarify parameter scope.</p>
-<p><strong>Assessment Cue:</strong><br>Can student create a reusable module with defaults?</p>
-<hr>
-<h2 id="fn"><a class="header" href="#fn">$fn</a></h2>
-<p><strong>Definition:</strong> Resolution variable controlling roundness.</p>
-<p><strong>Teaching Emphasis:</strong><br>Performance vs visual quality trade-off.</p>
-<p><strong>Demonstration:</strong><br>Render cylinder with $fn=20 vs 100.</p>
-<p><strong>Assessment Cue:</strong><br>Can student explain why high $fn slows render time?</p>
-<hr>
-<h2 id="preview-vs-render-1"><a class="header" href="#preview-vs-render-1">Preview vs Render</a></h2>
-<p><strong>Definition:</strong> F5 (preview) vs F6 (full geometry evaluation).</p>
-<p><strong>Teaching Emphasis:</strong><br>Preview ≠ printable model.</p>
-<p><strong>Common Misconception:</strong><br>Students export from preview state without full render.</p>
-<p><strong>Assessment Cue:</strong><br>Does student verify manifold geometry before export?</p>
-<hr>
-<h1 id="4-3dmake--automation"><a class="header" href="#4-3dmake--automation">4. 3dMake &amp; Automation</a></h1>
-<h2 id="headless-rendering-1"><a class="header" href="#headless-rendering-1">Headless Rendering</a></h2>
-<p><strong>Definition:</strong> Running OpenSCAD via command line without GUI.</p>
-<p><strong>Teaching Emphasis:</strong><br>Reproducibility and automation are professional practices.</p>
-<p><strong>Demonstration:</strong><br>Run OpenSCAD CLI from PowerShell.</p>
-<p><strong>Assessment Cue:</strong><br>Can student produce STL via script without GUI?</p>
-<hr>
-<h2 id="reproducible-build"><a class="header" href="#reproducible-build">Reproducible Build</a></h2>
-<p><strong>Definition:</strong> Identical output from version-controlled inputs.</p>
-<p><strong>Teaching Emphasis:</strong><br>Critical for collaboration and grading consistency.</p>
-<p><strong>Assessment Cue:</strong><br>Can another student regenerate identical artifact from repo?</p>
-<hr>
-<h1 id="5-command-line--shell"><a class="header" href="#5-command-line--shell">5. Command Line &amp; Shell</a></h1>
-<h2 id="environment-variable-1"><a class="header" href="#environment-variable-1">Environment Variable</a></h2>
-<p><strong>Definition:</strong> Named value available to processes (e.g., PATH).</p>
-<p><strong>Teaching Emphasis:</strong><br>Students must understand PATH for CLI tools.</p>
-<p><strong>Common Misconception:</strong><br>Confusion between system vs user variables.</p>
-<p><strong>Assessment Cue:</strong><br>Can student diagnose “command not found” error?</p>
-<hr>
-<h2 id="exit-code-1"><a class="header" href="#exit-code-1">Exit Code</a></h2>
-<p><strong>Definition:</strong> Numeric return status of command (0 = success).</p>
-<p><strong>Teaching Emphasis:</strong><br>Foundation for scripting logic.</p>
-<p><strong>Assessment Cue:</strong><br>Can student use conditional logic based on exit status?</p>
-<hr>
-<h2 id="pipe-1"><a class="header" href="#pipe-1">Pipe</a></h2>
-<p><strong>Definition:</strong> Redirect output of one command into another.</p>
-<p><strong>Teaching Emphasis:</strong><br>Core Unix philosophy — small tools combined.</p>
-<p><strong>Demonstration:</strong><br><code>Get-ChildItem | Select-String</code></p>
-<hr>
-<h1 id="6-powershell-specific"><a class="header" href="#6-powershell-specific">6. PowerShell-Specific</a></h1>
-<h2 id="cmdlet"><a class="header" href="#cmdlet">Cmdlet</a></h2>
-<p><strong>Definition:</strong> Native PowerShell command.</p>
-<p><strong>Teaching Emphasis:</strong><br>Verb-Noun naming convention.</p>
-<p><strong>Assessment Cue:</strong><br>Can student identify correct cmdlet via <code>Get-Command</code>?</p>
-<hr>
-<h2 id="execution-policy"><a class="header" href="#execution-policy">Execution Policy</a></h2>
-<p><strong>Definition:</strong> Controls whether scripts can run.</p>
-<p><strong>Teaching Emphasis:</strong><br>Security implications.</p>
-<p><strong>Assessment Cue:</strong><br>Can student safely modify policy for development?</p>
-<hr>
-<h1 id="7-git--version-control"><a class="header" href="#7-git--version-control">7. Git &amp; Version Control</a></h1>
-<h2 id="commit-1"><a class="header" href="#commit-1">Commit</a></h2>
-<p><strong>Definition:</strong> Snapshot of project state.</p>
-<p><strong>Teaching Emphasis:</strong><br>Encourage small, meaningful commits.</p>
-<p><strong>Assessment Cue:</strong><br>Does student use descriptive commit messages?</p>
-<hr>
-<h2 id="branch-1"><a class="header" href="#branch-1">Branch</a></h2>
-<p><strong>Definition:</strong> Parallel development path.</p>
-<p><strong>Teaching Emphasis:</strong><br>Introduce feature branching in advanced module.</p>
-<hr>
-<h1 id="8-accessibility"><a class="header" href="#8-accessibility">8. Accessibility</a></h1>
-<h2 id="screen-reader-1"><a class="header" href="#screen-reader-1">Screen Reader</a></h2>
-<p><strong>Definition:</strong> Software that reads digital text aloud.</p>
-<p><strong>Teaching Emphasis:</strong><br>All documentation must be keyboard navigable.</p>
-<p><strong>Assessment Cue:</strong><br>Can site be navigated without mouse?</p>
-<hr>
-<h2 id="semantic-structure-1"><a class="header" href="#semantic-structure-1">Semantic Structure</a></h2>
-<p><strong>Definition:</strong> Logical heading hierarchy in Markdown/HTML.</p>
-<p><strong>Teaching Emphasis:</strong><br>Accessibility and maintainability.</p>
-<hr>
-<h1 id="9-safety--risk"><a class="header" href="#9-safety--risk">9. Safety &amp; Risk</a></h1>
-<h2 id="hierarchy-of-controls"><a class="header" href="#hierarchy-of-controls">Hierarchy of Controls</a></h2>
-<p><strong>Definition:</strong> Safety prioritization model (eliminate → PPE).</p>
-<p><strong>Teaching Emphasis:</strong><br>Ventilation &gt; mask alone.</p>
-<hr>
-<h1 id="10-ai--generative-design-advanced"><a class="header" href="#10-ai--generative-design-advanced">10. AI &amp; Generative Design (Advanced)</a></h1>
-<h2 id="prompt-engineering"><a class="header" href="#prompt-engineering">Prompt Engineering</a></h2>
-<p><strong>Definition:</strong> Designing effective AI instructions.</p>
-<p><strong>Teaching Emphasis:</strong><br>Students must validate AI-generated geometry.</p>
-<p><strong>Assessment Cue:</strong><br>Can student identify unsafe AI-generated model?</p>
-<hr>
-<h1 id="instructor-meta-notes"><a class="header" href="#instructor-meta-notes">Instructor Meta-Notes</a></h1>
-<h3 id="spiral-curriculum-recommendation"><a class="header" href="#spiral-curriculum-recommendation">Spiral Curriculum Recommendation</a></h3>
-<p>Reintroduce:</p>
-<ul>
-<li>Parametric design</li>
-<li>Automation</li>
-<li>Reproducibility
-at increasing levels of complexity.</li>
-</ul>
-<h3 id="capstone-integration"><a class="header" href="#capstone-integration">Capstone Integration</a></h3>
-<p>Final project should require:</p>
-<ul>
-<li>Parametric OpenSCAD module</li>
-<li>3dMake automated build</li>
-<li>Git version control</li>
-<li>Printed physical artifact</li>
-<li>Accessibility-compliant documentation</li>
-</ul>
-<h3 id="evaluation-matrix-suggestions"><a class="header" href="#evaluation-matrix-suggestions">Evaluation Matrix Suggestions</a></h3>
-<p>Assess students on:</p>
-<ul>
-<li>Code structure</li>
-<li>Parametric flexibility</li>
-<li>CLI competency</li>
-<li>Print quality</li>
-<li>Documentation clarity</li>
-<li>Accessibility compliance</li>
-</ul>
+<h1 id="teacher-glossary"><a class="header" href="#teacher-glossary">Teacher Glossary</a></h1>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="references-23"><a class="header" href="#references-23">References</a></h1>
 <h2 id="peer-reviewed-and-scholarly-works"><a class="header" href="#peer-reviewed-and-scholarly-works">Peer-Reviewed and Scholarly Works</a></h2>
