@@ -56,7 +56,6 @@ jobs:
       - name: Install mdbook-pandoc and mdbook-bib via cargo
         run: |
           cargo install mdbook-pandoc --locked 2>/dev/null || cargo install mdbook-pandoc
-          cargo install mdbook-bib    --locked 2>/dev/null || cargo install mdbook-bib
 
       - name: "CI: debug versions and check bibliography"
         run: |
