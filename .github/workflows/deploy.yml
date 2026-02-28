@@ -58,24 +58,11 @@ jobs:
           pandoc --version          || true
           lualatex --version        || true
           python3 --version         || true
-          echo "--- Show suspect bib ranges ---"
-          sed -n '1018,1030p' my-book/src/globalbibliography.bib || true
-          sed -n '1433,1441p' my-book/src/globalbibliography.bib || true
-          echo "--- Run bib linter ---"
-          python3 scripts/checkbib.py || true
 
       - name: Build book (HTML + Pandoc outputs)
         run: |
           cd my-book
           mdbook build
-
-      - name: Build PDF via lualatex (run twice for cross-references)
-        run: |
-          cd my-book
-          lualatex docs/pandoc/latex/OpenSCAD_Curriculum.tex
-          lualatex docs/pandoc/latex/OpenSCAD_Curriculum.tex
-          # lualatex writes PDF to CWD; move it back into the docs tree
-          mv OpenSCAD_Curriculum.pdf docs/pandoc/latex/ || true
 
       - name: Copy EPUB into docs root for easy linking
         run: |
