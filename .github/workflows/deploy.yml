@@ -29,25 +29,33 @@ jobs:
 
       - name: Add cargo bin to PATH
         run: echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+        - name: Install Rust toolchain
+          uses: actions-rs/toolchain@v1
+          with:
+            toolchain: stable
+            profile: minimal
+            override: true
+
+        - name: Add cargo bin to PATH
+          run: echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+
+        - name: Install mdBook via cargo
+          run: |
+            export PATH="$HOME/.cargo/bin:$PATH"
+            cargo install mdbook --locked || cargo install mdbook --force
 
       - name: "CI: debug versions and check bibliography"
         run: |
           echo "--- Versions ---"
-          mdbook --version || true
-          mdbook-bib --version || true
+            mdbook --version || true
           rustc --version || true
           cargo --version || true
           python3 --version || true
-          echo "--- Show suspect bib ranges ---"
-          sed -n '1018,1030p' my-book/src/globalbibliography.bib || true
-          sed -n '1433,1441p' my-book/src/globalbibliography.bib || true
-          echo "--- Run bib linter ---"
-          python3 scripts/checkbib.py || true
 
       - name: Build book
         run: |
           cd my-book
-          ../mdbook build
+            mdbook build
       - name: Verify fonts copied
         run: |
           test -f my-book/docs/assets/fonts/AtkinsonHyperlegibleNext-Regular.ttf
