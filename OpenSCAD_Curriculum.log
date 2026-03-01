@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.1.1)  28 FEB 2026 17:00
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.1.1)  1 MAR 2026 06:29
  restricted system commands enabled.
 **/run/media/ryhunsaker/250GB/VI_3DMake_OpenSCAD_Curriculum/my-book/docs/pandoc
 /latex/OpenSCAD_Curriculum.tex
@@ -1840,13 +1840,267 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 (/var/home/ryhunsaker/.local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb
 .cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [2] (./OpenSCAD_Curriculum.toc)
+) [2] (./OpenSCAD_Curriculum.toc
+LaTeX Font Info:    Font shape `TU/AtkinsonHyperlegibleNext(0)/b/n' will be
+(Font)              scaled to size 10.0pt on input line 2.
+
+Overfull \hbox (1.52997pt too wide) detected at line 15
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 100
+ []
+
+
+Overfull \hbox (0.80997pt too wide) detected at line 16
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 103
+ []
+
+
+Overfull \hbox (1.02997pt too wide) detected at line 17
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 106
+ []
+
+
+Overfull \hbox (0.99997pt too wide) detected at line 18
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 109
+ []
+
+
+Overfull \hbox (0.20998pt too wide) detected at line 23
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 135
+ []
+
+
+Overfull \hbox (0.94998pt too wide) detected at line 24
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 144
+ []
+
+
+Overfull \hbox (0.68997pt too wide) detected at line 25
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 146
+ []
+
+
+Overfull \hbox (0.38998pt too wide) detected at line 27
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 156
+ []
+
+[3
+
+]
+Overfull \hbox (1.02997pt too wide) detected at line 28
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 160
+ []
+
+
+Overfull \hbox (0.30997pt too wide) detected at line 29
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 163
+ []
+
+
+Overfull \hbox (0.42998pt too wide) detected at line 30
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 165
+ []
+
+
+Underfull \hbox (badness 3623) in paragraph at lines 32--32
+ [][] []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Screen Reader Ac-ces-si-bil-ity 
+Guide for Win-dows Com-mand 
+ []
+
+
+Overfull \hbox (0.69997pt too wide) detected at line 33
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 186
+ []
+
+
+Overfull \hbox (0.69997pt too wide) detected at line 34
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 186
+ []
+
+
+Overfull \hbox (2.93996pt too wide) detected at line 35
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 200
+ []
+
+
+Overfull \hbox (2.93996pt too wide) detected at line 36
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 200
+ []
+
+
+Overfull \hbox (2.59996pt too wide) detected at line 37
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 204
+ []
+
+
+Overfull \hbox (0.19997pt too wide) detected at line 39
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 218
+ []
+
+
+Overfull \hbox (1.93996pt too wide) detected at line 40
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 220
+ []
+
+
+Overfull \hbox (1.29996pt too wide) detected at line 41
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 224
+ []
+
+
+Overfull \hbox (1.43996pt too wide) detected at line 42
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 226
+ []
+
+
+Overfull \hbox (1.39995pt too wide) detected at line 44
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 233
+ []
+
+
+Overfull \hbox (1.61995pt too wide) detected at line 45
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 236
+ []
+
+
+Overfull \hbox (0.91997pt too wide) detected at line 46
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 247
+ []
+
+
+Overfull \hbox (1.99997pt too wide) detected at line 48
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 254
+ []
+
+
+Overfull \hbox (1.71996pt too wide) detected at line 49
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 263
+ []
+
+
+Overfull \hbox (0.95998pt too wide) detected at line 50
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 275
+ []
+
+
+Overfull \hbox (0.27997pt too wide) detected at line 58
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 319
+ []
+
+
+Overfull \hbox (1.11996pt too wide) detected at line 66
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 337
+ []
+
+
+Overfull \hbox (0.46997pt too wide) detected at line 67
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 341
+ []
+
+
+Overfull \hbox (1.71996pt too wide) detected at line 74
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 362
+ []
+
+
+Overfull \hbox (0.99997pt too wide) detected at line 79
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 374
+ []
+
+
+Overfull \hbox (1.30997pt too wide) detected at line 80
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 379
+ []
+
+
+Overfull \hbox (2.55995pt too wide) detected at line 84
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 388
+ []
+
+
+Overfull \hbox (1.95996pt too wide) detected at line 85
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 393
+ []
+
+
+Overfull \hbox (0.38998pt too wide) detected at line 100
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 451
+ []
+
+
+Overfull \hbox (3.09996pt too wide) detected at line 101
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 460
+ []
+
+
+Overfull \hbox (2.21997pt too wide) detected at line 103
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 470
+ []
+
+[4]
+Overfull \hbox (2.21997pt too wide) detected at line 104
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 470
+ []
+
+
+Overfull \hbox (1.59998pt too wide) detected at line 105
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 473
+ []
+
+
+Overfull \hbox (2.92996pt too wide) detected at line 106
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 484
+ []
+
+
+Overfull \hbox (2.76996pt too wide) detected at line 107
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 486
+ []
+
+
+Overfull \hbox (1.78996pt too wide) detected at line 108
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 487
+ []
+
+
+Overfull \hbox (3.33997pt too wide) detected at line 109
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 500
+ []
+
+
+Overfull \hbox (2.41997pt too wide) detected at line 112
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 530
+ []
+
+
+Overfull \hbox (0.58998pt too wide) detected at line 113
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 541
+ []
+
+
+Overfull \hbox (1.71997pt too wide) detected at line 114
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 553
+ []
+
+
+Overfull \hbox (1.71997pt too wide) detected at line 115
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 553
+ []
+
+
+Overfull \hbox (2.09998pt too wide) detected at line 116
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 556
+ []
+
+
+Overfull \hbox (1.25998pt too wide) detected at line 117
+ []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 557
+ []
+
+)
 \tf@toc=\write5
 
 \openout5 = OpenSCAD_Curriculum.toc
- [3
-
-]
+ [5]
 Underfull \hbox (badness 1642) in paragraph at lines 272--273
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 command-line-driven toolchain cen-tered 
 on Open-SCAD (text-based CAD),
@@ -1862,84 +2116,26 @@ LaTeX Font Info:    Font shape `TU/AtkinsonHyperlegibleNext(0)/b/n' will be
 (Font)              scaled to size 14.4pt on input line 276.
 LaTeX Font Info:    Font shape `TU/AtkinsonHyperlegibleNext(0)/b/n' will be
 (Font)              scaled to size 12.0pt on input line 278.
-[4
+[6
 
 ]
-LaTeX Font Info:    Font shape `TU/AtkinsonHyperlegibleNext(0)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 302.
-
 Underfull \hbox (badness 6859) in paragraph at lines 331--333
 [][]\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Pow-er-Shell In-tro-duc-tion[] - Scre
 en-reader-friendly quick-start guide
  []
 
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__cmd_foundation__cmd_c
-urriculum_overview__cmd_curriculum_overview.md__cmd_foundation_cmd_curriculum_o
-verview-cmd_curriculum_overview' on page 5 undefined on input line 366.
-
-[5]
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__gitbash_foundation__g
-itbash_curriculum_overview__gitbash_curriculum_overview.md__gitbash_foundation_
-gitbash_curriculum_overview-gitbash_curriculum_overview' on page 6 undefined on
- input line 398.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__gitbash_foundation__g
-itbash_introduction__gitbash_introduction.md__git-bash-introduction' on page 6 
-undefined on input line 405.
-
-
+[7]
 Underfull \hbox (badness 10000) in paragraph at lines 405--407
-[]\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Git Bash In-tro-duc-tion - Screen-reade
-r-friendly quick-start guide
+[][]\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Git Bash In-tro-duc-tion[] - Screen-r
+eader-friendly quick-start guide
  []
 
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__gitbash_foundation__g
-itbash_tutorial__gitbash_tutorial.md__gitbash_foundation_gitbash_tutorial-gitba
-sh_tutorial' on page 6 undefined on input line 407.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__gitbash_foundation__s
-creen_reader_accessibility_guide__screen_reader_accessibility_guide.md__screen-
-reader-accessibility-guide-for-git-bash' on page 6 undefined on input line 409.
-
-
-[6]
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__3d
-make_intro__3dmake_intro.md__instructional-framework-for-3dmake-and-openscad-in
--secondary-stem-education' on page 7 undefined on input line 446.
-
-
+[8]
 Overfull \hbox (13.03374pt too wide) in paragraph at lines 462--463
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Lessons  
  []
 
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__ap
-pendix_a_comprehensive_slicing_guide.md__3dmake_foundation-appendix_a_comprehen
-sive_slicing_guide' on page 7 undefined on input line 505.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__ap
-pendix_b_material_properties.md__3dmake_foundation-appendix_b_material_properti
-es' on page 7 undefined on input line 507.
-
-[7]
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__ap
-pendix_c_tolerance_qa.md__3dmake_foundation-appendix_c_tolerance_qa' on page 8 
-undefined on input line 509.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__le
-ssons_3dmake_1__nvda-jaws-coding-tips.md__3dmake_foundation_lessons_3dmake_1-nv
-da-jaws-coding-tips' on page 8 undefined on input line 532.
-
-
+[9]
 (/var/home/ryhunsaker/.local/texlive/2025/texmf-dist/tex/latex/listings/lstlang
 1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
@@ -1958,75 +2154,17 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
 (Font)              scaled to size 9.20642pt on input line 539.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 (Font)              scaled to size 9.20642pt on input line 539.
- [8]
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__le
-ssons_3dmake_2__openscad-cheat-sheet.md__3dmake_foundation_lessons_3dmake_2-ope
-nscad-cheat-sheet' on page 9 undefined on input line 615.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__le
-ssons_3dmake_1__3dmake-setup-guide.md__3dmake-setup--workflow' on page 9 undefi
-ned on input line 616.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__le
-ssons_3dmake_1__vscode-setup-guide.md__3dmake_foundation_lessons_3dmake_1-vscod
-e-setup-guide' on page 9 undefined on input line 617.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__le
-ssons_3dmake_11__master-rubric.md__3dmake_foundation_lessons_3dmake_11-master-r
-ubric' on page 9 undefined on input line 620.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__3d
-make_foundation_curriculum_guide.md__3dmake_foundation-3dmake_foundation_curric
-ulum_guide' on page 9 undefined on input line 624.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__3d
-make_quick_reference.md__3dmake_foundation-3dmake_quick_reference' on page 9 un
-defined on input line 625.
-
-[9]
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__3d
-make_intro__3dmake_intro.md__instructional-framework-for-3dmake-and-openscad-in
--secondary-stem-education' on page 10 undefined on input line 659.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__le
-ssons_3dmake_1__lessons_3dmake_1.md__lesson-1-environmental-configuration-and-t
-he-developer-workflow' on page 10 undefined on input line 661.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__3d
-make_foundation_curriculum_guide.md__3dmake_foundation-3dmake_foundation_curric
-ulum_guide' on page 10 undefined on input line 671.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__le
-ssons_3dmake_11__master-rubric.md__3dmake_foundation_lessons_3dmake_11-master-r
-ubric' on page 10 undefined on input line 675.
-
-[10] [11
+ [10] [11] [12] [13
 
 ]
 Overfull \hbox (4.03749pt too wide) in paragraph at lines 742--742
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
 
-[12]
+[14]
 Overfull \hbox (7.0547pt too wide) in paragraph at lines 795--795
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__powershell_foundation
-__ps_0_getting_started_layout_paths__ps_0_getting_started_layout_paths.md__powe
-rshell_foundation_ps_0_getting_started_layout_paths-ps_0_getting_started_layout
-_paths' on page 13 undefined on input line 797.
 
 
 Overfull \hbox (7.0547pt too wide) in paragraph at lines 798--798
@@ -2034,21 +2172,9 @@ Overfull \hbox (7.0547pt too wide) in paragraph at lines 798--798
  []
 
 
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__powershell_foundation
-__ps_1_navigation__ps_1_navigation.md__powershell_foundation_ps_1_navigation-ps
-_1_navigation' on page 13 undefined on input line 799.
-
-
 Overfull \hbox (7.0547pt too wide) in paragraph at lines 800--800
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__powershell_foundation
-__ps_2_file_folder_manipulation_modification__ps_2_file_folder_manipulation_mod
-ification.md__powershell_foundation_ps_2_file_folder_manipulation_modification-
-ps_2_file_folder_manipulation_modification' on page 13 undefined on input line 
-801.
 
 
 Overfull \hbox (7.0547pt too wide) in paragraph at lines 802--802
@@ -2056,21 +2182,9 @@ Overfull \hbox (7.0547pt too wide) in paragraph at lines 802--802
  []
 
 
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__powershell_foundation
-__ps_3_input_output_piping__ps_3_input_output_piping.md__powershell_foundation_
-ps_3_input_output_piping-ps_3_input_output_piping' on page 13 undefined on inpu
-t line 804.
-
-
 Overfull \hbox (7.0547pt too wide) in paragraph at lines 805--805
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__powershell_foundation
-__ps_4_environment_variables_aliases__ps_4_environment_variables_aliases.md__po
-wershell_foundation_ps_4_environment_variables_aliases-ps_4_environment_variabl
-es_aliases' on page 13 undefined on input line 807.
 
 
 Overfull \hbox (7.0547pt too wide) in paragraph at lines 808--808
@@ -2078,21 +2192,9 @@ Overfull \hbox (7.0547pt too wide) in paragraph at lines 808--808
  []
 
 
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__powershell_foundation
-__ps_5_filling_in_the_gaps__ps_5_filling_in_the_gaps.md__powershell_foundation_
-ps_5_filling_in_the_gaps-ps_5_filling_in_the_gaps' on page 13 undefined on inpu
-t line 810.
-
-
 Overfull \hbox (7.0547pt too wide) in paragraph at lines 811--811
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__powershell_foundation
-__ps_6_advanced_techniques__ps_6_advanced_techniques.md__powershell_foundation_
-ps_6_advanced_techniques-ps_6_advanced_techniques' on page 13 undefined on inpu
-t line 813.
 
 
 Overfull \hbox (7.0547pt too wide) in paragraph at lines 814--814
@@ -2100,37 +2202,14 @@ Overfull \hbox (7.0547pt too wide) in paragraph at lines 814--814
  []
 
 
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__powershell_foundation
-__ps_unit_test__ps_unit_test.md__powershell_foundation_ps_unit_test-ps_unit_tes
-t' on page 13 undefined on input line 816.
-
-
 Overfull \hbox (7.0547pt too wide) in paragraph at lines 817--817
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
 
-ignored error Infinite glue shrinkage found in box being split [13]
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__cmd_foundation__cmd_c
-urriculum_overview__cmd_curriculum_overview.md__cmd_foundation_cmd_curriculum_o
-verview-cmd_curriculum_overview' on page 14 undefined on input line 826.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__cmd_foundation__cmd_p
-re_your_first_terminal__cmd_pre_your_first_terminal.md__cmd_foundation_cmd_pre_
-your_first_terminal-cmd_pre_your_first_terminal' on page 14 undefined on input 
-line 845.
-
-
+ignored error Infinite glue shrinkage found in box being split [15]
 Overfull \hbox (6.12407pt too wide) in paragraph at lines 846--846
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__cmd_foundation__cmd_0
-_getting_started_layout_paths__cmd_0_getting_started_layout_paths.md__cmd-0-get
-ting-started---layout-paths-and-the-shell' on page 14 undefined on input line 8
-48.
 
 
 Overfull \hbox (6.12407pt too wide) in paragraph at lines 849--849
@@ -2138,20 +2217,9 @@ Overfull \hbox (6.12407pt too wide) in paragraph at lines 849--849
  []
 
 
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__cmd_foundation__cmd_1
-_navigation__cmd_1_navigation.md__cmd_foundation_cmd_1_navigation-cmd_1_navigat
-ion' on page 14 undefined on input line 850.
-
-
 Overfull \hbox (6.12407pt too wide) in paragraph at lines 851--851
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__cmd_foundation__cmd_2
-_file_folder_manipulation_modification__cmd_2_file_folder_manipulation_modifica
-tion.md__cmd_foundation_cmd_2_file_folder_manipulation_modification-cmd_2_file_
-folder_manipulation_modification' on page 14 undefined on input line 852.
 
 
 Overfull \hbox (6.12407pt too wide) in paragraph at lines 853--853
@@ -2159,19 +2227,9 @@ Overfull \hbox (6.12407pt too wide) in paragraph at lines 853--853
  []
 
 
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__cmd_foundation__cmd_3
-_input_output_piping__cmd_3_input_output_piping.md__cmd-3-input-output-and-pipi
-ng' on page 14 undefined on input line 855.
-
-
 Overfull \hbox (6.12407pt too wide) in paragraph at lines 856--856
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__cmd_foundation__cmd_4
-_environment_variables_aliases__cmd_4_environment_variables_aliases.md__cmd-4-e
-nvironment-variables-path-and-aliases' on page 14 undefined on input line 858.
 
 
 Overfull \hbox (6.12407pt too wide) in paragraph at lines 859--859
@@ -2179,21 +2237,9 @@ Overfull \hbox (6.12407pt too wide) in paragraph at lines 859--859
  []
 
 
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__cmd_foundation__cmd_5
-_filling_in_the_gaps__cmd_5_filling_in_the_gaps.md__cmd-5-filling-in-the-gaps--
--control-flow-startup-scripts-and-useful-tricks' on page 14 undefined on input 
-line 861.
-
-
 Overfull \hbox (6.12407pt too wide) in paragraph at lines 862--862
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__cmd_foundation__cmd_6
-_advanced_techniques__cmd_6_advanced_techniques.md__cmd-6-advanced-terminal-tec
-hniques---batch-scripts-functions--professional-workflows' on page 14 undefined
- on input line 864.
 
 
 Overfull \hbox (6.12407pt too wide) in paragraph at lines 865--865
@@ -2201,54 +2247,14 @@ Overfull \hbox (6.12407pt too wide) in paragraph at lines 865--865
  []
 
 
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__cmd_foundation__cmd_u
-nit_test__cmd_unit_test.md__cmd-unit-test---comprehensive-assessment' on page 1
-4 undefined on input line 866.
-
-
 Overfull \hbox (6.12407pt too wide) in paragraph at lines 867--867
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
 
-ignored error Infinite glue shrinkage found in box being split [14]
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__gitbash_foundation__g
-itbash_curriculum_overview__gitbash_curriculum_overview.md__gitbash_foundation_
-gitbash_curriculum_overview-gitbash_curriculum_overview' on page 15 undefined o
-n input line 876.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__gitbash_foundation__g
-itbash_introduction__gitbash_introduction.md__git-bash-introduction' on page 15
- undefined on input line 895.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__gitbash_foundation__g
-itbash_tutorial__gitbash_tutorial.md__gitbash_foundation_gitbash_tutorial-gitba
-sh_tutorial' on page 15 undefined on input line 898.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__gitbash_foundation__s
-creen_reader_accessibility_guide__screen_reader_accessibility_guide.md__screen-
-reader-accessibility-guide-for-git-bash' on page 15 undefined on input line 901
-.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__gitbash_foundation__g
-itbash_pre_your_first_terminal__gitbash_pre_your_first_terminal.md__gitbash_fou
-ndation_gitbash_pre_your_first_terminal-gitbash_pre_your_first_terminal' on pag
-e 15 undefined on input line 903.
-
-
+ignored error Infinite glue shrinkage found in box being split [16]
 Overfull \hbox (5.38446pt too wide) in paragraph at lines 904--904
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__gitbash_foundation__g
-itbash_0_getting_started_layout_paths__gitbash_0_getting_started_layout_paths.m
-d__gitbash-0-getting-started---layout-paths-and-the-shell' on page 15 undefined
- on input line 906.
 
 
 Overfull \hbox (5.38446pt too wide) in paragraph at lines 907--907
@@ -2256,20 +2262,9 @@ Overfull \hbox (5.38446pt too wide) in paragraph at lines 907--907
  []
 
 
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__gitbash_foundation__g
-itbash_1_navigation__gitbash_1_navigation.md__gitbash-1-navigation---moving-aro
-und-your-file-system' on page 15 undefined on input line 909.
-
-
 Overfull \hbox (5.38446pt too wide) in paragraph at lines 910--910
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__gitbash_foundation__g
-itbash_2_file_folder_manipulation_modification__gitbash_2_file_folder_manipulat
-ion_modification.md__gitbash-2-file-and-folder-manipulation' on page 15 undefin
-ed on input line 911.
 
 
 Overfull \hbox (5.38446pt too wide) in paragraph at lines 912--912
@@ -2277,20 +2272,9 @@ Overfull \hbox (5.38446pt too wide) in paragraph at lines 912--912
  []
 
 
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__gitbash_foundation__g
-itbash_3_input_output_piping__gitbash_3_input_output_piping.md__gitbash-3-input
--output-and-piping' on page 15 undefined on input line 914.
-
-
 Overfull \hbox (5.38446pt too wide) in paragraph at lines 915--915
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__gitbash_foundation__g
-itbash_4_environment_variables_aliases__gitbash_4_environment_variables_aliases
-.md__gitbash-4-environment-variables-path-and-aliases' on page 15 undefined on 
-input line 917.
 
 
 Overfull \hbox (5.38446pt too wide) in paragraph at lines 918--918
@@ -2298,21 +2282,9 @@ Overfull \hbox (5.38446pt too wide) in paragraph at lines 918--918
  []
 
 
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__gitbash_foundation__g
-itbash_5_filling_in_the_gaps__gitbash_5_filling_in_the_gaps.md__gitbash-5-filli
-ng-in-the-gaps---shell-profiles-history-and-useful-tricks' on page 15 undefined
- on input line 919.
-
-
 Overfull \hbox (5.38446pt too wide) in paragraph at lines 920--920
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__gitbash_foundation__g
-itbash_6_advanced_techniques__gitbash_6_advanced_techniques.md__gitbash-6-advan
-ced-terminal-techniques---shell-scripts-functions--professional-workflows' on p
-age 15 undefined on input line 921.
 
 
 Overfull \hbox (5.38446pt too wide) in paragraph at lines 922--922
@@ -2320,30 +2292,14 @@ Overfull \hbox (5.38446pt too wide) in paragraph at lines 922--922
  []
 
 
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__gitbash_foundation__g
-itbash_unit_test__gitbash_unit_test.md__gitbash-unit-test---comprehensive-asses
-sment' on page 15 undefined on input line 924.
-
-
 Overfull \hbox (5.38446pt too wide) in paragraph at lines 925--925
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 hours|  
  []
 
-ignored error Infinite glue shrinkage found in box being split [15] [16]
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__3d
-make_intro__3dmake_intro.md__instructional-framework-for-3dmake-and-openscad-in
--secondary-stem-education' on page 17 undefined on input line 949.
-
-
+ignored error Infinite glue shrinkage found in box being split [17] [18]
 Overfull \hbox (12.85582pt too wide) in paragraph at lines 969--970
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Project  
  []
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__le
-ssons_3dmake_1__lessons_3dmake_1.md__lesson-1-environmental-configuration-and-t
-he-developer-workflow' on page 17 undefined on input line 975.
 
 
 Overfull \hbox (5.24582pt too wide) in paragraph at lines 977--978
@@ -2351,19 +2307,9 @@ Overfull \hbox (5.24582pt too wide) in paragraph at lines 977--978
  []
 
 
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__le
-ssons_3dmake_2__lessons_3dmake_2.md__lesson-2-geometric-primitives-and-construc
-tive-solid-geometry' on page 17 undefined on input line 978.
-
-
 Overfull \hbox (5.24582pt too wide) in paragraph at lines 980--981
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 None|  
  []
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__le
-ssons_3dmake_3__lessons_3dmake_3.md__lesson-3-parametric-architecture-and-modul
-ar-libraries' on page 17 undefined on input line 981.
 
 
 Overfull \hbox (5.24582pt too wide) in paragraph at lines 983--984
@@ -2376,72 +2322,16 @@ Overfull \hbox (9.51762pt too wide) in paragraph at lines 1003--1004
  []
 
 
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__le
-ssons_3dmake_4__lessons_3dmake_4.md__lesson-4-ai-enhanced-verification-and-mult
-imodal-feedback' on page 17 undefined on input line 1009.
-
-
 Overfull \hbox (1.90762pt too wide) in paragraph at lines 1010--1011
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 None|  
  []
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__le
-ssons_3dmake_5__lessons_3dmake_5.md__lesson-5-safety-protocols-and-the-physical
--fabrication-interface' on page 17 undefined on input line 1011.
 
 
 Overfull \hbox (1.90762pt too wide) in paragraph at lines 1012--1013
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 None|  
  []
 
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__le
-ssons_3dmake_6__lessons_3dmake_6.md__lesson-6-practical-3dm-commands-and-text-e
-mbossing' on page 17 undefined on input line 1038.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__le
-ssons_3dmake_7__lessons_3dmake_7.md__lesson-7-parametric-transforms-and-the-pho
-ne-stand-project' on page 17 undefined on input line 1041.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__le
-ssons_3dmake_8__lessons_3dmake_8.md__lesson-8-advanced-parametric-design-and-in
-terlocking-features' on page 17 undefined on input line 1043.
-
-[17]
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__le
-ssons_3dmake_9__lessons_3dmake_9.md__lesson-9-automation-and-3dm-workflows' on 
-page 18 undefined on input line 1071.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__le
-ssons_3dmake_10__lessons_3dmake_10.md__lesson-10-hands-on-practice-exercises-an
-d-troubleshooting' on page 18 undefined on input line 1074.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__le
-ssons_3dmake_11__lessons_3dmake_11.md__lesson-10-hands-on-practice-exercises-an
-d-troubleshooting' on page 18 undefined on input line 1102.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__ap
-pendix_a_comprehensive_slicing_guide.md__3dmake_foundation-appendix_a_comprehen
-sive_slicing_guide' on page 18 undefined on input line 1131.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__ap
-pendix_b_material_properties.md__3dmake_foundation-appendix_b_material_properti
-es' on page 18 undefined on input line 1134.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__ap
-pendix_c_tolerance_qa.md__3dmake_foundation-appendix_c_tolerance_qa' on page 18
- undefined on input line 1137.
-
-[18]
+[19] [20]
 Overfull \hbox (19.0097pt too wide) in paragraph at lines 1176--1176
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 server/Learner|  
  []
@@ -2454,12 +2344,12 @@ Overfull \hbox (19.0097pt too wide) in paragraph at lines 1178--1178
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19]
+ [21]
 Underfull \hbox (badness 1424) in paragraph at lines 1229--1231
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Meta-data track-ing: Con-fig-u-ra-tion files store pa-ram-e-ters as human-
  []
 
-[20]
+[22]
 Overfull \hbox (10.47472pt too wide) in paragraph at lines 1295--1296
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Points  
  []
@@ -2469,7 +2359,7 @@ Overfull \hbox (11.57224pt too wide) in paragraph at lines 1320--1321
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Score  
  []
 
-ignored error Infinite glue shrinkage found in box being split [21]
+ignored error Infinite glue shrinkage found in box being split [23]
 Overfull \hbox (13.53357pt too wide) in paragraph at lines 1349--1350
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Score  
  []
@@ -2479,131 +2369,22 @@ Overfull \hbox (13.10167pt too wide) in paragraph at lines 1376--1377
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Score  
  []
 
-ignored error Infinite glue shrinkage found in box being split [22]
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__le
-ssons_3dmake_2__openscad-cheat-sheet.md__3dmake_foundation_lessons_3dmake_2-ope
-nscad-cheat-sheet' on page 23 undefined on input line 1441.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__3d
-make_quick_reference.md__3dmake_foundation-3dmake_quick_reference' on page 23 u
-ndefined on input line 1451.
-
-[23]
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__le
-ssons_3dmake_1__nvda-jaws-coding-tips.md__3dmake_foundation_lessons_3dmake_1-nv
-da-jaws-coding-tips' on page 24 undefined on input line 1485.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__le
-ssons_3dmake_1__vscode-setup-guide.md__3dmake_foundation_lessons_3dmake_1-vscod
-e-setup-guide' on page 24 undefined on input line 1487.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__gitbash_foundation__s
-creen_reader_accessibility_guide__screen_reader_accessibility_guide.md__screen-
-reader-accessibility-guide-for-git-bash' on page 24 undefined on input line 148
-9.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__ap
-pendix_a_comprehensive_slicing_guide.md__3dmake_foundation-appendix_a_comprehen
-sive_slicing_guide' on page 24 undefined on input line 1505.
-
-[24]
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__le
-ssons_3dmake_10__common_issues_and_solutions.md__3dmake_foundation_lessons_3dma
-ke_10-common_issues_and_solutions' on page 25 undefined on input line 1589.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__le
-ssons_3dmake_10__diagnostic_checklist.md__3dmake_foundation_lessons_3dmake_10-d
-iagnostic_checklist' on page 25 undefined on input line 1591.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__gitbash_foundation__s
-creen_reader_accessibility_guide__screen_reader_accessibility_guide.md__screen-
-reader-accessibility-guide-for-git-bash' on page 25 undefined on input line 160
-7.
-
-[25]
+ignored error Infinite glue shrinkage found in box being split [24] [25]
+[26] [27]
 Underfull \vbox (badness 4144) has occurred while \output is active []
 
- [26
+ [28
 
 ]
-[27]
+[29]
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-[28
+[30
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 ]
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-[29
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-]
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-ignored error Infinite glue shrinkage found in box being split [30
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-]
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
 ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
@@ -2617,6 +2398,66 @@ Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
 ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
 ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+]
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+ignored error Infinite glue shrinkage found in box being split [32
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+]
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+[33
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
 ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
@@ -2652,7 +2493,7 @@ Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
 ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
 ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-[32
+[34
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
 ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
@@ -2665,7 +2506,7 @@ Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
 ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
 ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-] [33] [34]
+] [35] [36]
 Overfull \hbox (16.31783pt too wide) in paragraph at lines 2244--2244
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 sert+Ctrl+Down|  
  []
@@ -2685,8 +2526,8 @@ Overfull \hbox (7.25122pt too wide) in paragraph at lines 2249--2250
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 sLock+Numpad 
  []
 
-[35]
-ignored error Infinite glue shrinkage found in box being split [36] [37]
+[37]
+ignored error Infinite glue shrinkage found in box being split [38] [39]
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
@@ -2772,7 +2613,7 @@ Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-[38
+[40
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
@@ -2801,7 +2642,7 @@ Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-] [39] [40] [41]
+] [41] [42] [43]
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
@@ -2810,7 +2651,7 @@ Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-[42
+[44
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
@@ -2860,7 +2701,7 @@ Overfull \hbox (3.00264pt too wide) in paragraph at lines 2775--2775
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 dows+Ctrl+N 
  []
 
-ignored error Infinite glue shrinkage found in box being split [43]
+ignored error Infinite glue shrinkage found in box being split [45]
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
@@ -2881,62 +2722,7 @@ Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-[44
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
-gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
-gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
-gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
-gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
-gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
-gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
-gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-] [45]
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 [46
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-]
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-[47
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-]
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
@@ -2951,34 +2737,7 @@ Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
-gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
-gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
-gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+] [47]
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
 ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
@@ -2992,31 +2751,7 @@ Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
 ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
 ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
-gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
-gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
-gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
-gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
-gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 ]
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
 ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
@@ -3034,9 +2769,15 @@ Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
 ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
 ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+]
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
 ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-] [50] [51]
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
@@ -3049,7 +2790,107 @@ Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-ignored error Infinite glue shrinkage found in box being split [52
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
+gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
+gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
+gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
+gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+[50
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
+gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
+gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
+gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
+gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
+gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+]
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+[51
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+] [52] [53]
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
+gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
+gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
+gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
+gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
+gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
+gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+ignored error Infinite glue shrinkage found in box being split [54
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
@@ -3101,7 +2942,7 @@ Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-ignored error Infinite glue shrinkage found in box being split [53
+ignored error Infinite glue shrinkage found in box being split [55
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
@@ -3124,19 +2965,19 @@ Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-] [54]
+] [56]
 Underfull \hbox (badness 1533) in paragraph at lines 3452--3454
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 In-te-grated ter-mi-nal al-lows run-nin
 g 3dm com-mands with-out con-text
  []
 
-[55]
+[57]
 Overfull \hbox (10.50667pt too wide) in paragraph at lines 3506--3509
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 de-fault) \TU/lmtt/m/n/10 editor = '''C:\
 Program Files (x86)\Notepad++\notepad++.exe'''
  []
 
-[56] [57]
+[58] [59]
 Missing character: There is no ` (U+0060) in font [AtkinsonHyperlegibleNext-Regu
 lar.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no ` (U+0060) in font [AtkinsonHyperlegibleNext-Regu
@@ -3145,7 +2986,7 @@ Missing character: There is no ` (U+0060) in font [AtkinsonHyperlegibleNext-Regu
 lar.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no ` (U+0060) in font [AtkinsonHyperlegibleNext-Regu
 lar.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-[58
+[60
 Missing character: There is no ` (U+0060) in font [AtkinsonHyperlegibleNext-Regu
 lar.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 ]
@@ -3155,20 +2996,20 @@ Missing character: There is no ` (U+0060) in font [AtkinsonHyperlegibleNext-Regu
 lar.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no ` (U+0060) in font [AtkinsonHyperlegibleNext-Regu
 lar.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-[59
+[61
 Missing character: There is no ` (U+0060) in font [AtkinsonHyperlegibleNext-Regu
 lar.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no ` (U+0060) in font [AtkinsonHyperlegibleNext-Regu
 lar.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no ` (U+0060) in font [AtkinsonHyperlegibleNext-Regu
 lar.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-] [60]
+] [62]
 Overfull \hbox (28.92004pt too wide) in paragraph at lines 3982--3983
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 JAWSKey+Alt+Shift+I: Cy-cle be-tween in
 -dent re-port-ing modes (speech/tones/off) 
  []
 
-[61] [62] [63] [64] [65] [66]
+[63] [64] [65] [66] [67] [68]
 Underfull \hbox (badness 1881) in paragraph at lines 4443--4444
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 Wel-come! Be-fore div-ing into 3D de-sign
  with Open-SCAD, you'll mas-ter
@@ -3180,41 +3021,20 @@ Underfull \hbox (badness 1845) in paragraph at lines 4443--4444
 will help you un-der-stand what
  []
 
-[67
+[69
 
-] [68]
-ignored error Infinite glue shrinkage found in box being split [69] [70]
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__cmd_foundation__cmd_c
-urriculum_overview__cmd_curriculum_overview.md__cmd_foundation_cmd_curriculum_o
-verview-cmd_curriculum_overview' on page 71 undefined on input line 4791.
-
-[71]
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__gitbash_foundation__g
-itbash_curriculum_overview__gitbash_curriculum_overview.md__gitbash_foundation_
-gitbash_curriculum_overview-gitbash_curriculum_overview' on page 72 undefined o
-n input line 4827.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__cmd_foundation__part_
-1.md__cmd_foundation-part_1' on page 72 undefined on input line 4873.
-
-[72]
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__gitbash_foundation__p
-art_1.md__gitbash_foundation-part_1' on page 73 undefined on input line 4901.
-
-[73]
+] [70]
+ignored error Infinite glue shrinkage found in box being split [71] [72]
+[73] [74] [75]
 LaTeX Font Info:    Font shape `TU/AtkinsonHyperlegibleNext(0)/m/it' will be
 (Font)              scaled to size 10.0pt on input line 4988.
- [74]
-ignored error Infinite glue shrinkage found in box being split [75] [76]
-[77] [78] [79] [80] [81] [82]
+ [76]
+ignored error Infinite glue shrinkage found in box being split [77] [78]
+[79] [80] [81] [82] [83] [84]
 Underfull \vbox (badness 2875) has occurred while \output is active []
 
- [83]
-[84] [85] [86] [87] [88] [89] [90] [91] [92] [93] [94] [95]
+ [85]
+[86] [87] [88] [89] [90] [91] [92] [93] [94] [95] [96] [97]
 Underfull \hbox (badness 10000) in paragraph at lines 6742--6744
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 What hap-pens when you use \TU/lmtt/m/
 n/10 ls -n part?.scad \TU/AtkinsonHyperlegibleNext(0)/m/n/10 ver-sus \TU/lmtt/m
@@ -3228,25 +3048,25 @@ Overfull \hbox (42.25572pt too wide) in paragraph at lines 6746--6748
 mtt/m/n/10 /Documents/Resources\TU/AtkinsonHyperlegibleNext(0)/m/n/10 ,
  []
 
-[96] [97]
+[98] [99]
 Underfull \hbox (badness 10000) in paragraph at lines 6894--6896
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Com-pare \TU/lmtt/m/n/10 mv old_name.tx
 t new_name.txt \TU/AtkinsonHyperlegibleNext(0)/m/n/10 vs \TU/lmtt/m/n/10 mv old_
 name.txt
  []
 
-[98]
+[100]
 Underfull \vbox (badness 2941) has occurred while \output is active []
 
- [99]
-[100] [101]
+ [101]
+[102] [103]
 Underfull \hbox (badness 3919) in paragraph at lines 7160--7162
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 What would be the dif-fer-ence in out-p
 ut be-tween \TU/lmtt/m/n/10 echo "test" >
  []
 
-[102] [103] [104] [105] [106] [107] [108] [109] [110] [111] [112] [113]
-[114] [115] [116] [117] [118] [119] [120] [121] [122]
+[104] [105] [106] [107] [108] [109] [110] [111] [112] [113] [114] [115]
+[116] [117] [118] [119] [120] [121] [122] [123] [124]
 Overfull \hbox (6.68669pt too wide) in paragraph at lines 8744--8746
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Cre-ate a folder struc-ture \TU/lmtt/m
 /n/10 ~/Documents/PowerShell_Assessment/Projects
@@ -3260,7 +3080,7 @@ t_2.scad\TU/AtkinsonHyperlegibleNext(0)/m/n/10 , \TU/lmtt/m/n/10 project_3.txt\
 TU/AtkinsonHyperlegibleNext(0)/m/n/10 ,
  []
 
-[123]
+[125]
 Underfull \hbox (badness 5460) in paragraph at lines 8762--8764
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Use \TU/lmtt/m/n/10 Select-String \TU/
 AtkinsonHyperlegibleNext(0)/m/n/10 to search for a key-word (e.g., ”project
@@ -3286,57 +3106,7 @@ tem \TU/AtkinsonHyperlegibleNext(0)/m/n/10 and redi-rect the out-put to \TU/lmt
 t/m/n/10 help_output.txt\TU/AtkinsonHyperlegibleNext(0)/m/n/10 .
  []
 
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 46 on input line 8785.
-
-[124]
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__powershell_foundation
-__screen_reader_accessibility_guide__screen_reader_accessibility_guide.md__gett
-ing-started' on page 125 undefined on input line 8834.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__powershell_foundation
-__screen_reader_accessibility_guide__screen_reader_accessibility_guide.md__nvda
--tips' on page 125 undefined on input line 8836.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__powershell_foundation
-__screen_reader_accessibility_guide__screen_reader_accessibility_guide.md__jaws
--tips' on page 125 undefined on input line 8838.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__powershell_foundation
-__screen_reader_accessibility_guide__screen_reader_accessibility_guide.md__gene
-ral-terminal' on page 125 undefined on input line 8840.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__powershell_foundation
-__screen_reader_accessibility_guide__screen_reader_accessibility_guide.md__long
--output' on page 125 undefined on input line 8842.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__powershell_foundation
-__screen_reader_accessibility_guide__screen_reader_accessibility_guide.md__shor
-tcuts' on page 125 undefined on input line 8844.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__powershell_foundation
-__screen_reader_accessibility_guide__screen_reader_accessibility_guide.md__trou
-bleshooting' on page 125 undefined on input line 8846.
-
-[125]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 48 on input line 8946.
-
-[126]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 49 on input line 9032.
-
-[127] [128] [129]
+[126] [127] [128] [129] [130] [131]
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
 ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
@@ -3345,30 +3115,12 @@ Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
 ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
 ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-[130
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
-ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-] [131]
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
-gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
-gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
-gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
-gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 [132
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
-gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
-gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-] [133] [134] [135] [136]
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
-gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
-gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Bo
+ld.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+] [133]
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
@@ -3377,14 +3129,12 @@ Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-[137
+[134
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
-gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-] [138] [139]
+] [135] [136] [137] [138]
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
@@ -3397,6 +3147,14 @@ Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+[139
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
+gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
+gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
+gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+] [140] [141]
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
@@ -3409,7 +3167,19 @@ Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-[140
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
+gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
+gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
+gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
+gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
+gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
+gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
+[142
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
@@ -3440,12 +3210,12 @@ gibleNext(0)/m/n/10 : \TU/lmtt/m/n/10 command > output.txt\TU/AtkinsonHyperlegi
 bleNext(0)/m/n/10 , then \TU/lmtt/m/n/10 notepad.exe
  []
 
-[141
+[143
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-] [142]
-ignored error Infinite glue shrinkage found in box being split [143] [144]
-[145] [146] [147]
+] [144]
+ignored error Infinite glue shrinkage found in box being split [145] [146]
+[147] [148] [149]
 Underfull \hbox (badness 1292) in paragraph at lines 10585--10587
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Af-ter each \TU/lmtt/m/n/10 cd \TU/Atk
 insonHyperlegibleNext(0)/m/n/10 com-mand, run \TU/lmtt/m/n/10 cd \TU/AtkinsonHy
@@ -3466,33 +3236,29 @@ Overfull \hbox (7.57007pt too wide) in paragraph at lines 10601--10602
 notepad.exe listing.txt\TU/AtkinsonHyperlegibleNext(0)/m/n/10 . 
  []
 
-[148]
+[150]
 Overfull \hbox (7.57007pt too wide) in paragraph at lines 10625--10626
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 For long list-ings: \TU/lmtt/m/n/10 dir
  /B > listing.txt\TU/AtkinsonHyperlegibleNext(0)/m/n/10 , then \TU/lmtt/m/n/10 
 notepad.exe listing.txt\TU/AtkinsonHyperlegibleNext(0)/m/n/10 . 
  []
 
-[149] [150] [151] [152] [153] [154] [155]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 55 on input line 11221.
-
-ignored error Infinite glue shrinkage found in box being split [156] [157]
-[158] [159] [160]
+[151] [152] [153] [154] [155] [156] [157]
+ignored error Infinite glue shrinkage found in box being split [158] [159]
+[160] [161] [162]
 Underfull \hbox (badness 3323) in paragraph at lines 11495--11497
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Cre-ate a tem-po-rary alias: \TU/lmtt/
 m/n/10 doskey preview=openscad $* \TU/AtkinsonHyperlegibleNext(0)/m/n/10 and tes
 t
  []
 
-[161] [162] [163] [164] [165] [166] [167] [168] [169]
+[163] [164] [165] [166] [167] [168] [169] [170] [171]
 Underfull \hbox (badness 4779) in paragraph at lines 12135--12137
 []\TU/lmtt/m/n/10 if not exist "%folderPath%\" \TU/AtkinsonHyperlegibleNext(0)/
 m/n/10 checks if folder ex-ists (trail-ing \TU/lmtt/m/n/10 \
  []
 
-[170] [171] [172] [173] [174] [175] [176] [177] [178] [179]
+[172] [173] [174] [175] [176] [177] [178] [179] [180] [181]
 Overfull \hbox (24.92668pt too wide) in paragraph at lines 12941--12943
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 De-scribe what would hap-pen if you ran
  \TU/lmtt/m/n/10 rmdir /S /Q C:\Documents\my_folder
@@ -3512,135 +3278,29 @@ t_2.scad\TU/AtkinsonHyperlegibleNext(0)/m/n/10 , \TU/lmtt/m/n/10 project_3.txt\
 TU/AtkinsonHyperlegibleNext(0)/m/n/10 ,
  []
 
-[180]
+[182]
 Underfull \hbox (badness 4193) in paragraph at lines 12985--12987
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 List all files in the \TU/lmtt/m/n/10 
 Projects \TU/AtkinsonHyperlegibleNext(0)/m/n/10 folder and redi-rect the out-put
  to
  []
 
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 56 on input line 13008.
-
-[181]
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__cmd_foundation__scree
-n_reader_accessibility_guide__screen_reader_accessibility_guide.md__getting-sta
-rted' on page 182 undefined on input line 13061.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__cmd_foundation__scree
-n_reader_accessibility_guide__screen_reader_accessibility_guide.md__nvda-tips' 
-on page 182 undefined on input line 13063.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__cmd_foundation__scree
-n_reader_accessibility_guide__screen_reader_accessibility_guide.md__jaws-tips' 
-on page 182 undefined on input line 13065.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__cmd_foundation__scree
-n_reader_accessibility_guide__screen_reader_accessibility_guide.md__general-ter
-minal' on page 182 undefined on input line 13067.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__cmd_foundation__scree
-n_reader_accessibility_guide__screen_reader_accessibility_guide.md__long-output
-' on page 182 undefined on input line 13069.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__cmd_foundation__scree
-n_reader_accessibility_guide__screen_reader_accessibility_guide.md__shortcuts' 
-on page 182 undefined on input line 13071.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__cmd_foundation__scree
-n_reader_accessibility_guide__screen_reader_accessibility_guide.md__troubleshoo
-ting' on page 182 undefined on input line 13073.
-
-[182] [183]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 58 on input line 13173.
-
-[184]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 59 on input line 13265.
-
-[185] [186] [187] [188] [189] [190] [191] [192]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 60 on input line 14038.
-
-ignored error Infinite glue shrinkage found in box being split [193] [194]
-[195] [196]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 62 on input line 14330.
-
-[197] [198] [199] [200] [201] [202] [203]
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__gitbash_foundation__s
-creen_reader_accessibility_guide__screen_reader_accessibility_guide.md__getting
--started' on page 204 undefined on input line 14858.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__gitbash_foundation__s
-creen_reader_accessibility_guide__screen_reader_accessibility_guide.md__nvda-ti
-ps' on page 204 undefined on input line 14860.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__gitbash_foundation__s
-creen_reader_accessibility_guide__screen_reader_accessibility_guide.md__jaws-ti
-ps' on page 204 undefined on input line 14862.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__gitbash_foundation__s
-creen_reader_accessibility_guide__screen_reader_accessibility_guide.md__general
--terminal' on page 204 undefined on input line 14864.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__gitbash_foundation__s
-creen_reader_accessibility_guide__screen_reader_accessibility_guide.md__long-ou
-tput' on page 204 undefined on input line 14866.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__gitbash_foundation__s
-creen_reader_accessibility_guide__screen_reader_accessibility_guide.md__shortcu
-ts' on page 204 undefined on input line 14868.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__gitbash_foundation__s
-creen_reader_accessibility_guide__screen_reader_accessibility_guide.md__trouble
-shooting' on page 204 undefined on input line 14870.
-
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 63 on input line 14892.
-
-ignored error Infinite glue shrinkage found in box being split [204]
-ignored error Infinite glue shrinkage found in box being split [205]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 65 on input line 15001.
-
+[183] [184] [185] [186] [187] [188] [189] [190] [191] [192] [193] [194]
+ignored error Infinite glue shrinkage found in box being split [195] [196]
+[197] [198] [199] [200] [201] [202] [203] [204] [205]
 ignored error Infinite glue shrinkage found in box being split [206]
+ignored error Infinite glue shrinkage found in box being split [207]
+ignored error Infinite glue shrinkage found in box being split [208]
 Underfull \hbox (badness 3919) in paragraph at lines 15062--15063
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Note: Paths in Git Bash use for-ward sl
 ashes (\TU/lmtt/m/n/10 /\TU/AtkinsonHyperlegibleNext(0)/m/n/10 ) and your Win-do
 ws
  []
 
-[207]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 66 on input line 15187.
-
-ignored error Infinite glue shrinkage found in box being split [208] [209]
-[210] [211] [212] [213] [214] [215] [216] [217] [218] [219] [220] [221]
-[222]
+[209]
+ignored error Infinite glue shrinkage found in box being split [210] [211]
+[212] [213] [214] [215] [216] [217] [218] [219] [220] [221] [222] [223]
+[224]
 Underfull \hbox (badness 7451) in paragraph at lines 16343--16345
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 If you're in \TU/lmtt/m/n/10 ~/Document
 s/Projects/3D \TU/AtkinsonHyperlegibleNext(0)/m/n/10 and you want to go to
@@ -3652,20 +3312,20 @@ Underfull \hbox (badness 5893) in paragraph at lines 16355--16357
 TU/lmtt/m/n/10 .scad \TU/AtkinsonHyperlegibleNext(0)/m/n/10 files and saves to
  []
 
-[223] [224]
+[225] [226]
 Underfull \hbox (badness 10000) in paragraph at lines 16491--16493
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Com-pare \TU/lmtt/m/n/10 mv old_name.tx
 t new_name.txt \TU/AtkinsonHyperlegibleNext(0)/m/n/10 vs \TU/lmtt/m/n/10 mv old_
 name.txt
  []
 
-[225] [226] [227] [228]
+[227] [228] [229] [230]
 Underfull \hbox (badness 3919) in paragraph at lines 16782--16784
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 What would be the dif-fer-ence in out-p
 ut be-tween \TU/lmtt/m/n/10 echo "test" >
  []
 
-[229] [230] [231] [232] [233]
+[231] [232] [233] [234] [235]
 Overfull \hbox (29.3601pt too wide) in paragraph at lines 17044--17045
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Add a per-sis-tent alias line to your 
 pro-file (ex-am-ple: \TU/lmtt/m/n/10 alias preview='openscad'\TU/AtkinsonHyperl
@@ -3678,8 +3338,8 @@ Overfull \hbox (49.18333pt too wide) in paragraph at lines 17078--17080
 t at the path \TU/lmtt/m/n/10 ~/scripts/openscad_runner.sh
  []
 
-[234] [235] [236] [237] [238] [239] [240] [241] [242] [243] [244] [245]
-[246] [247] [248] [249] [250]
+[236] [237] [238] [239] [240] [241] [242] [243] [244] [245] [246] [247]
+[248] [249] [250] [251] [252]
 Overfull \hbox (6.32343pt too wide) in paragraph at lines 18435--18437
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Cre-ate five files named \TU/lmtt/m/n/
 10 project_1.scad\TU/AtkinsonHyperlegibleNext(0)/m/n/10 , \TU/lmtt/m/n/10 projec
@@ -3687,33 +3347,29 @@ t_2.scad\TU/AtkinsonHyperlegibleNext(0)/m/n/10 , \TU/lmtt/m/n/10 project_3.txt\
 TU/AtkinsonHyperlegibleNext(0)/m/n/10 ,
  []
 
-[251]
+[253]
 Underfull \hbox (badness 4193) in paragraph at lines 18453--18455
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 List all files in the \TU/lmtt/m/n/10 
 Projects \TU/AtkinsonHyperlegibleNext(0)/m/n/10 folder and redi-rect the out-put
  to
  []
 
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 72 on input line 18476.
-
-[252] [253]
+[254] [255]
 LaTeX Font Info:    Font shape `TU/AtkinsonHyperlegibleNext(0)/m/n' will be
 (Font)              scaled to size 7.0pt on input line 18529.
 LaTeX Font Info:    Font shape `TU/AtkinsonHyperlegibleNext(0)/m/n' will be
 (Font)              scaled to size 6.0pt on input line 18529.
 LaTeX Font Info:    Font shape `TU/AtkinsonHyperlegibleNext(0)/m/it' will be
 (Font)              scaled to size 8.0pt on input line 18529.
- [254
+ [256
 
-] [255]
+] [257]
 Underfull \hbox (badness 1142) in paragraph at lines 18563--18564
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 par-ti-cles (UFPs) per minute dur-ing ex-
 tru-sion.[][][] These par-ti-cles, smaller
  []
 
-[256] [257]
+[258] [259]
 Overfull \hbox (21.29004pt too wide) in paragraph at lines 18607--18608
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Post-Print Cool-ing: En-sur-ing the pri
 nter has cooled to be-low $30^\circ\text{C}$
@@ -3722,14 +3378,9 @@ nter has cooled to be-low $30^\circ\text{C}$
 
 Underfull \vbox (badness 1701) has occurred while \output is active []
 
- [258]
-[259] [260] [261] [262] [263] [264] [265] [266] [267] [268]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 76 on input line 19232.
-
-[269] [270] [271] [272] [273] [274] [275] [276] [277] [278] [279] [280]
-[281]
+ [260]
+[261] [262] [263] [264] [265] [266] [267] [268] [269] [270] [271] [272]
+[273] [274] [275] [276] [277] [278] [279] [280] [281] [282] [283]
 Overfull \hbox (34.31673pt too wide) in paragraph at lines 20190--20191
 []\TU/AtkinsonHyperlegibleNext(0)/b/n/10 Ref-er-ence Ma-te-ri-als \TU/AtkinsonH
 yperlegibleNext(0)/m/n/10 Quick-reference guides are avail-able in \TU/lmtt/m/n
@@ -3743,7 +3394,7 @@ global con-fig-u-ra-tion file (\TU/lmtt/m/n/10 defaults.toml\TU/AtkinsonHyperle
 gibleNext(0)/m/n/10 )
  []
 
-[282]
+[284]
 Underfull \hbox (badness 1248) in paragraph at lines 20267--20269
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Edit the global con-fig-u-ra-tion file us-ing \TU/lmtt/m/n/10 3dm edit-global-config \TU/AtkinsonHyperlegibleNext(0)/m/n/10 to
  []
@@ -3756,64 +3407,17 @@ m/n/10 .scad \TU/AtkinsonHyperlegibleNext(0)/m/n/10 files (e.g., \TU/lmtt/m/n/1
 /AtkinsonHyperlegibleNext(0)/m/n/10 ,
  []
 
-[283] [284] [285] [286] [287] [288] [289] [290] [291]
+[285] [286] [287] [288] [289] [290] [291] [292] [293]
 Underfull \hbox (badness 1521) in paragraph at lines 20945--20946
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 says \TU/lmtt/m/n/10 printerprofile = "pr
 usaMK4" \TU/AtkinsonHyperlegibleNext(0)/m/n/10 but your project's \TU/lmtt/m/n/
 10 3dmake.toml \TU/AtkinsonHyperlegibleNext(0)/m/n/10 says
  []
 
-[292] [293] [294] [295] [296] [297] [298]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 81 on input line 21524.
-
-[299]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 82 on input line 21571.
-
-[300] [301] [302]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 83 on input line 21766.
-
-[303] [304] [305]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 84 on input line 22023.
-
-[306]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 85 on input line 22044.
-
-[307]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 88 on input line 22133.
-
-ignored error Infinite glue shrinkage found in box being split [308] [309]
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__le
-ssons_3dmake_1__mdbook-navigation-guide.md__3dmake_foundation_lessons_3dmake_1-
-mdbook-navigation-guide' on page 310 undefined on input line 22328.
-
-[310] [311] [312] [313]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 90 on input line 22558.
-
-[314] [315]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 92 on input line 22699.
-
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 93 on input line 22724.
-
-[316]
+[294] [295] [296] [297] [298] [299] [300] [301] [302] [303] [304] [305]
+[306] [307] [308] [309]
+ignored error Infinite glue shrinkage found in box being split [310] [311]
+[312] [313] [314] [315] [316] [317] [318]
 Overfull \hbox (4.89091pt too wide) in paragraph at lines 22806--22807
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Points  
  []
@@ -3828,12 +3432,12 @@ Overfull \hbox (3.71165pt too wide) in paragraph at lines 22857--22858
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Score  
  []
 
-[317]
+[319]
 Overfull \hbox (3.11208pt too wide) in paragraph at lines 22882--22883
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Score  
  []
 
-[318]
+[320]
 Underfull \hbox (badness 1888) in paragraph at lines 22963--22965
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Use all six Open-SCAD prim-i-tive shape
 s: \TU/lmtt/m/n/10 cube\TU/AtkinsonHyperlegibleNext(0)/m/n/10 , \TU/lmtt/m/n/10
@@ -3841,32 +3445,13 @@ s: \TU/lmtt/m/n/10 cube\TU/AtkinsonHyperlegibleNext(0)/m/n/10 , \TU/lmtt/m/n/10
 insonHyperlegibleNext(0)/m/n/10 ,
  []
 
-[319] [320] [321]
+[321] [322] [323]
 Underfull \hbox (badness 2042) in paragraph at lines 23178--23179
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 shapes and sim-ply ren-der-ing two sep-a-
 rate shapes with-out a CSG
  []
 
-[322] [323] [324]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 99 on input line 23379.
-
-[325] [326] [327]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 100 on input line 23558.
-
-[328] [329]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 102 on input line 23749.
-
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 103 on input line 23774.
-
-[330]
+[324] [325] [326] [327] [328] [329] [330] [331] [332]
 Overfull \hbox (6.33585pt too wide) in paragraph at lines 23858--23859
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Points  
  []
@@ -3876,7 +3461,7 @@ Overfull \hbox (5.60693pt too wide) in paragraph at lines 23883--23884
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Score  
  []
 
-[331]
+[333]
 Overfull \hbox (8.80807pt too wide) in paragraph at lines 23909--23910
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Score  
  []
@@ -3886,20 +3471,15 @@ Overfull \hbox (8.10687pt too wide) in paragraph at lines 23935--23936
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Score  
  []
 
-ignored error Infinite glue shrinkage found in box being split [332] [333]
-[334] [335]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 111 on input line 24222.
-
-[336]
+ignored error Infinite glue shrinkage found in box being split [334] [335]
+[336] [337] [338]
 Overfull \hbox (2.15009pt too wide) in paragraph at lines 24324--24326
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Write type-safe mod-ules us-ing \TU/lm
 tt/m/n/10 is_number()\TU/AtkinsonHyperlegibleNext(0)/m/n/10 , \TU/lmtt/m/n/10 is
 _list()\TU/AtkinsonHyperlegibleNext(0)/m/n/10 , and \TU/lmtt/m/n/10 is_string() 
  []
 
-[337] [338] [339]
+[339] [340] [341]
 Overfull \hbox (25.11002pt too wide) in paragraph at lines 24508--24510
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 What does \TU/lmtt/m/n/10 include <libr
 ary.scad> \TU/AtkinsonHyperlegibleNext(0)/m/n/10 do dif-fer-ently from \TU/lmtt
@@ -3913,7 +3493,7 @@ d-ule. Pa-ram-e-ters: \TU/lmtt/m/n/10 teeth\TU/AtkinsonHyperlegibleNext(0)/m/n/
 10 ,
  []
 
-[340]
+[342]
 Underfull \hbox (badness 3482) in paragraph at lines 24558--24560
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 ing bor-dered frame; pa-ram-e-ters: \TU/
 lmtt/m/n/10 text_str\TU/AtkinsonHyperlegibleNext(0)/m/n/10 , \TU/lmtt/m/n/10 fon
@@ -3921,7 +3501,7 @@ t_size\TU/AtkinsonHyperlegibleNext(0)/m/n/10 , \TU/lmtt/m/n/10 padding\TU/Atkin
 sonHyperlegibleNext(0)/m/n/10 ,
  []
 
-[341] [342] [343]
+[343] [344] [345]
 Missing character: There is no ✓ (U+2713) in font [lmmono8-regular]:!
 Missing character: There is no ✗ (U+2717) in font [lmmono8-regular]:!
 Missing character: There is no ✓ (U+2713) in font [lmmono8-regular]:!
@@ -3938,7 +3518,7 @@ Missing character: There is no ✓ (U+2713) in font [lmmono8-regular]:!
 Missing character: There is no ✗ (U+2717) in font [lmmono8-regular]:!
 Missing character: There is no ✓ (U+2713) in font [lmmono8-regular]:!
 Missing character: There is no ✗ (U+2717) in font [lmmono8-regular]:!
-[344
+[346
 Missing character: There is no ✓ (U+2713) in font [lmmono8-regular]:!
 Missing character: There is no ✗ (U+2717) in font [lmmono8-regular]:!
 Missing character: There is no ✓ (U+2713) in font [lmmono8-regular]:!
@@ -3960,37 +3540,27 @@ Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-[345
+[347
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-] [346] [347]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 113 on input line 25021.
-
-[348]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 115 on input line 25113.
-
-[349] [350]
-ignored error Infinite glue shrinkage found in box being split [351] [352]
-[353] [354] [355]
+] [348] [349] [350] [351] [352]
+ignored error Infinite glue shrinkage found in box being split [353] [354]
+[355] [356] [357]
 Underfull \hbox (badness 1320) in paragraph at lines 25496--25497
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 Com-plete this check-list be-fore each pr
 int-ing ses-sion to main-tain a safe
  []
 
-[356] [357] [358]
+[358] [359] [360]
 Overfull \hbox (1.98033pt too wide) in paragraph at lines 25846--25847
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Date  
  []
 
-[359]
+[361]
 Overfull \hbox (1.69424pt too wide) in paragraph at lines 25927--25928
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Brand  
  []
@@ -4000,12 +3570,12 @@ Overfull \hbox (1.32423pt too wide) in paragraph at lines 25937--25938
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Notes  
  []
 
-ignored error Infinite glue shrinkage found in box being split [360]
+ignored error Infinite glue shrinkage found in box being split [362]
 Overfull \hbox (1.16719pt too wide) in paragraph at lines 26016--26017
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Month  
  []
 
-[361]
+[363]
 Underfull \hbox (badness 2012) in paragraph at lines 26065--26067
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Em-boss and en-grave text us-ing OpenSC
 AD's \TU/lmtt/m/n/10 text() \TU/AtkinsonHyperlegibleNext(0)/m/n/10 func-tion wit
@@ -4016,16 +3586,11 @@ Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-[362
+[364
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-] [363] [364] [365]
-ignored error Infinite glue shrinkage found in box being split [366]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 126 on input line 26455.
-
-[367]
+] [365] [366] [367]
+ignored error Infinite glue shrinkage found in box being split [368] [369]
 Underfull \hbox (badness 3872) in paragraph at lines 26556--26558
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Cre-ate \TU/lmtt/m/n/10 keychain.scad 
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 with top-level pa-ram-e-ters: \TU/lmtt/m
@@ -4033,18 +3598,13 @@ Underfull \hbox (badness 3872) in paragraph at lines 26556--26558
 tkinsonHyperlegibleNext(0)/m/n/10 ,
  []
 
-[368] [369] [370]
+[370] [371] [372]
 Underfull \hbox (badness 2846) in paragraph at lines 26795--26795
 [][]\TU/AtkinsonHyperlegibleNext(0)/b/n/10 Para-met-ric Key-chain - Stu-dent Doc
 -u-men-ta-tion Tem-plate (Ex-ten-sion
  []
 
-[371] [372]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 130 on input line 26915.
-
-
+[373] [374]
 Underfull \hbox (badness 2452) in paragraph at lines 26922--26923
 []\TU/AtkinsonHyperlegibleNext(0)/b/n/10 Brief-ing \TU/AtkinsonHyperlegibleNext
 (0)/m/n/10 Stu-dents de-sign a per-son-al-ized key-chain us-ing fully para-met-
@@ -4056,128 +3616,48 @@ Underfull \hbox (badness 1721) in paragraph at lines 26922--26923
 izes parameter-driven de-sign,
  []
 
-[373] [374] [375] [376]
+[375] [376] [377] [378]
 Underfull \hbox (badness 10000) in paragraph at lines 27229--27231
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 True or False: \TU/lmtt/m/n/10 translat
 e([10,0,0]) rotate([0,0,45]) cube(5)
  []
 
-[377] [378] [379]
+[379] [380] [381]
 Underfull \vbox (badness 3189) has occurred while \output is active []
 
- [380]
-[381] [382] [383] [384] [385]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 131 on input line 27781.
-
-[386]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 132 on input line 27882.
-
-[387] [388] [389] [390]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 133 on input line 28160.
-
-
+ [382]
+[383] [384] [385] [386] [387] [388] [389] [390] [391] [392]
 Underfull \hbox (badness 10000) in paragraph at lines 28178--28180
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 What does \TU/lmtt/m/n/10 find src/ -na
 me "*.scad" -newer build/main.stl
  []
 
-[391] [392] [393] [394] [395] [396]
+[393] [394] [395] [396] [397] [398]
 Underfull \hbox (badness 1082) in paragraph at lines 28545--28546
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Write a com-pre-hen-sive trou-bleshoot-
 ing guide cov-er-ing the 10 most
  []
 
-[397] [398] [399] [400] [401]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 135 on input line 28978.
-
-[402] [403] [404] [405]
-ignored error Infinite glue shrinkage found in box being split [406] [407]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 139 on input line 29507.
-
-[408] [409] [410] [411] [412] [413] [414] [415] [416] [417]
+[399] [400] [401] [402] [403] [404] [405] [406] [407]
+ignored error Infinite glue shrinkage found in box being split [408] [409]
+[410] [411] [412] [413] [414] [415] [416] [417] [418] [419]
 Overfull \hbox (1.206pt too wide) in paragraph at lines 30557--30557
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Medium|  
  []
 
-[418]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 151 on input line 30621.
-
-[419] [420] [421] [422] [423] [424]
+[420] [421] [422] [423] [424] [425] [426]
 Underfull \hbox (badness 1082) in paragraph at lines 31002--31003
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Write a com-pre-hen-sive trou-bleshoot-
 ing guide cov-er-ing the 10 most
  []
 
-[425] [426] [427] [428] [429] [430] [431] [432]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 152 on input line 31701.
-
-[433]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 154 on input line 31771.
-
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 156 on input line 31820.
-
-[434] [435]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 157 on input line 31944.
-
-[436] [437] [438]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 160 on input line 32246.
-
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 162 on input line 32308.
-
-[439] [440]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 163 on input line 32459.
-
-[441] [442]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 165 on input line 32600.
-
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 166 on input line 32640.
-
-[443]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 167 on input line 32740.
-
-[444] [445]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 169 on input line 32877.
-
-
+[427] [428] [429] [430] [431] [432] [433] [434] [435] [436] [437] [438]
+[439] [440] [441] [442] [443] [444] [445] [446] [447]
 Overfull \hbox (11.57224pt too wide) in paragraph at lines 32942--32943
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Score  
  []
 
-[446]
+[448]
 Overfull \hbox (15.93188pt too wide) in paragraph at lines 32969--32970
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Score  
  []
@@ -4187,48 +3667,27 @@ Overfull \hbox (13.89941pt too wide) in paragraph at lines 32996--32997
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Score  
  []
 
-[447] [448] [449] [450]
+[449] [450] [451] [452]
 Underfull \hbox (badness 2538) in paragraph at lines 33268--33270
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 with single-parameter changes; doc-u-ment
  aes-thetic and func-tional
  []
 
-[451] [452] [453] [454]
+[453] [454] [455] [456]
 Underfull \hbox (badness 7777) in paragraph at lines 33517--33518
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 Ques-tion: Ex-plain the dif-fer-ence be-t
 ween \TU/lmtt/m/n/10 sphere(r=10, $fn=8) \TU/AtkinsonHyperlegibleNext(0)/m/n/10
  and
  []
 
-[455]
+[457]
 Underfull \hbox (badness 2818) in paragraph at lines 33573--33574
 \TU/AtkinsonHyperlegibleNext(0)/m/n/10 Ques-tion: If you ap-ply \TU/lmtt/m/n/10
  scale([2, 1, 0.5]) \TU/AtkinsonHyperlegibleNext(0)/m/n/10 to a \TU/lmtt/m/n/10
  cube([10, 10, 10],
  []
 
-[456] [457] [458]
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__3d
-make_quick_reference.md__3dmake_foundation-3dmake_quick_reference' on page 459 
-undefined on input line 33782.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__le
-ssons_3dmake_2__openscad-cheat-sheet.md__3dmake_foundation_lessons_3dmake_2-ope
-nscad-cheat-sheet' on page 459 undefined on input line 33784.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__ap
-pendix_a_comprehensive_slicing_guide.md__3dmake_foundation-appendix_a_comprehen
-sive_slicing_guide' on page 459 undefined on input line 33786.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__ap
-pendix_c_tolerance_qa.md__3dmake_foundation-appendix_c_tolerance_qa' on page 45
-9 undefined on input line 33788.
-
-[459]
+[458] [459] [460] [461]
 Overfull \hbox (49.12753pt too wide) in paragraph at lines 33858--33858
 \TU/lmtt/m/n/10 describe/preview/orient/slice\TU/AtkinsonHyperlegibleNext(0)/m/
 n/10 , 
@@ -4260,11 +3719,6 @@ Overfull \hbox (4.22037pt too wide) in paragraph at lines 33868--33868
  []
 
 
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__ap
-pendix_a_comprehensive_slicing_guide.md__3dmake_foundation-appendix_a_comprehen
-sive_slicing_guide' on page 460 undefined on input line 33898.
-
-
 Overfull \hbox (9.58492pt too wide) in paragraph at lines 33899--33899
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 PrusaSlicer, 
  []
@@ -4275,19 +3729,9 @@ Overfull \hbox (6.9058pt too wide) in paragraph at lines 33900--33900
  []
 
 
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__ap
-pendix_b_material_properties.md__3dmake_foundation-appendix_b_material_properti
-es' on page 460 undefined on input line 33901.
-
-
 Overfull \hbox (6.5058pt too wide) in paragraph at lines 33902--33902
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 1,200+ 
  []
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__ap
-pendix_c_tolerance_qa.md__3dmake_foundation-appendix_c_tolerance_qa' on page 46
-0 undefined on input line 33904.
 
 
 Overfull \hbox (6.5058pt too wide) in paragraph at lines 33905--33905
@@ -4299,157 +3743,31 @@ Overfull \hbox (4.7958pt too wide) in paragraph at lines 33909--33909
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 1,100+ 
  []
 
-[460] [461] [462] [463]
+[462] [463] [464] [465] [466] [467] [468] [469] [470] [471
 
-Package longtable Warning: Column widths have changed
-(longtable)                in none 178 on input line 34088.
-
-[464] [465] [466] [467] [468]
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__command_line_interfac
-e_selection__appendix_a_commandline_integration.md__3dmake_foundation-appendix_
-f_cmd_integration' on page 469 undefined on input line 34487.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__command_line_interfac
-e_selection__appendix_b_powershell_integration.md__3dmake_foundation-appendix_d
-_powershell_integration' on page 469 undefined on input line 34489.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__command_line_interfac
-e_selection__appendix_c_gitbash_integration.md__3dmake_foundation-appendix_g_gi
-tbash_integration' on page 469 undefined on input line 34491.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__ap
-pendix_a_comprehensive_slicing_guide.md__3dmake_foundation-appendix_a_comprehen
-sive_slicing_guide' on page 469 undefined on input line 34499.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__ap
-pendix_b_material_properties.md__3dmake_foundation-appendix_b_material_properti
-es' on page 469 undefined on input line 34501.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__ap
-pendix_c_tolerance_qa.md__3dmake_foundation-appendix_c_tolerance_qa' on page 46
-9 undefined on input line 34503.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__ap
-pendix_d_advanced_openscad_concepts.md__appendix-d-advanced-openscad-concepts' 
-on page 469 undefined on input line 34505.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__backmatter__glossary.
-md__student--glossary' on page 469 undefined on input line 34513.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__backmatter__teacher-g
-lossary.md__teacher-glossary' on page 469 undefined on input line 34521.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__backmatter__further_r
-eading.md__references' on page 469 undefined on input line 34529.
-
-[469
-
-]
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__contributors.md__cont
-ributors' on page 470 undefined on input line 34562.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__ap
-pendix_a_comprehensive_slicing_guide.md__3dmake_foundation-appendix_a_comprehen
-sive_slicing_guide' on page 470 undefined on input line 34573.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__ap
-pendix_b_material_properties.md__3dmake_foundation-appendix_b_material_properti
-es' on page 470 undefined on input line 34575.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__ap
-pendix_c_tolerance_qa.md__3dmake_foundation-appendix_c_tolerance_qa' on page 47
-0 undefined on input line 34577.
-
-[470] [471] [472]
+] [472] [473]
+[474]
 Underfull \hbox (badness 6268) in paragraph at lines 34725--34727
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Keep batch scripts small; del-e-gate co
 m-plex text pro-cess-ing to
  []
 
-[473] [474] [475] [476]
+[475] [476] [477] [478]
 Underfull \vbox (badness 2762) has occurred while \output is active []
 
- [477]
-[478] [479] [480] [481] [482]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 182 on input line 35543.
-
-[483] [484] [485]
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__ap
-pendix_a_comprehensive_slicing_guide.md__3dmake_foundation-appendix_a_comprehen
-sive_slicing_guide' on page 486 undefined on input line 35754.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__ap
-pendix_b_material_properties.md__3dmake_foundation-appendix_b_material_properti
-es' on page 486 undefined on input line 35756.
-
-
-LaTeX Warning: Hyper reference `docs__pandoc__latex__src__3dmake_foundation__ap
-pendix_c_tolerance_qa.md__3dmake_foundation-appendix_c_tolerance_qa' on page 48
-6 undefined on input line 35758.
-
-[486]
+ [479]
+[480] [481] [482] [483] [484] [485] [486] [487] [488]
 Overfull \hbox (12.73083pt too wide) in paragraph at lines 35837--35837
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Brim/Raft/Skirt|  
  []
 
-ignored error Infinite glue shrinkage found in box being split [487] [488]
-[489] [490] [491] [492] [493]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 190 on input line 36422.
-
-[494]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 191 on input line 36552.
-
-[495] [496]
-ignored error Infinite glue shrinkage found in box being split [497] [498]
-[499]
-ignored error Infinite glue shrinkage found in box being split [500]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 195 on input line 37083.
-
-[501] [502]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 198 on input line 37250.
-
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 199 on input line 37271.
-
-[503]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 201 on input line 37376.
-
-[504]
-ignored error Infinite glue shrinkage found in box being split [505]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 204 on input line 37563.
-
-[506]
+ignored error Infinite glue shrinkage found in box being split [489] [490]
+[491] [492] [493] [494] [495] [496] [497] [498]
+ignored error Infinite glue shrinkage found in box being split [499] [500]
+[501]
+ignored error Infinite glue shrinkage found in box being split [502] [503]
+[504] [505] [506]
+ignored error Infinite glue shrinkage found in box being split [507] [508]
 Overfull \hbox (9.53333pt too wide) in paragraph at lines 37662--37663
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Strength  
  []
@@ -4599,13 +3917,13 @@ Overfull \hbox (0.97787pt too wide) in paragraph at lines 37689--37689
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 $$$|  
  []
 
-ignored error Infinite glue shrinkage found in box being split [507] [508]
-[509]
+ignored error Infinite glue shrinkage found in box being split [509] [510]
+[511]
 Overfull \hbox (2.2069pt too wide) in paragraph at lines 37889--37890
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Rank  
  []
 
-[510] [511] [512]
+[512] [513] [514]
 Overfull \hbox (9.42546pt too wide) in paragraph at lines 38185--38185
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 127mm|  
  []
@@ -4635,35 +3953,26 @@ Overfull \hbox (3.0197pt too wide) in paragraph at lines 38193--38193
 []|\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Pass/fail|  
  []
 
-[513] [514] [515]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 210 on input line 38406.
-
-[516] [517] [518] [519]
+[515] [516] [517] [518] [519] [520] [521]
 Overfull \hbox (116.3985pt too wide) in paragraph at lines 38715--38716
 [][][][][] 
  []
 
-
-Package longtable Warning: Column widths have changed
-(longtable)                in none 212 on input line 38763.
-
-[520] [521] [522] [523]
+[522] [523] [524] [525]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [524]
-[525] [526] [527] [528] [529] [530]
+ [526]
+[527] [528] [529] [530] [531] [532]
 Underfull \vbox (badness 3954) has occurred while \output is active []
 
- [531]
-[532] [533]
+ [533]
+[534] [535]
 Overfull \hbox (12.86113pt too wide) in paragraph at lines 39734--39734
 [][]\TU/AtkinsonHyperlegibleNext(0)/b/n/14.4 PART IV --- WIN-DOWS COM-MAND PROMP
 T (CMD.EXE)
  []
 
-[534] [535] [536] [537] [538] [539] [540]
+[536] [537] [538] [539] [540] [541] [542]
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
@@ -4684,7 +3993,7 @@ Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-[541
+[543
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
@@ -4695,7 +4004,7 @@ Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
-] [542] [543] [544] [545] [546] [547] [548] [549] [550] [551] [552]
+] [544] [545] [546] [547] [548] [549] [550] [551] [552] [553] [554]
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
@@ -4717,7 +4026,7 @@ Underfull \hbox (badness 1242) in paragraph at lines 41018--41019
 \TU/AtkinsonHyperlegibleNext(0)/m/it/10 and Com-pu-ta-tional En-gi-neer-ing, 67\TU/AtkinsonHyperlegibleNext(0)/m/n/10 , 1--12. https://doi.org/10.54254/2755-
  []
 
-[553
+[555
 Missing character: There is no → (U+2192) in font [AtkinsonHyperlegibleNext-Re
 gular.otf]:mode=node;script=latn;language=dflt;+tlig;+pnum;!
 ]
@@ -4747,7 +4056,7 @@ Overfull \hbox (33.8982pt too wide) in paragraph at lines 41064--41065
 nHyperlegibleNext(0)/m/n/10 https://www.ul.com/news/ul-
  []
 
-[554]
+[556]
 Overfull \hbox (65.52933pt too wide) in paragraph at lines 41068--41069
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 ZenML. (n.d.). \TU/AtkinsonHyperlegibl
 eNext(0)/m/it/10 LLM-powered 3D model gen-er-a-tion for 3D print-ing. \TU/Atkin
@@ -4800,14 +4109,14 @@ Overfull \hbox (48.7401pt too wide) in paragraph at lines 41104--41105
 kinsonHyperlegibleNext(0)/m/n/10 https://tldp.org/LDP/Bash-
  []
 
-[555]
+[557]
 Underfull \hbox (badness 3128) in paragraph at lines 41116--41117
 []\TU/AtkinsonHyperlegibleNext(0)/m/n/10 Salt Lake County Li-brary. (n.d.). \TU
 /AtkinsonHyperlegibleNext(0)/m/it/10 Cre-ate spaces. \TU/AtkinsonHyperlegibleNe
 xt(0)/m/n/10 https://www.slcol-i-
  []
 
-[556]
+[558]
 
 LaTeX Warning: File `docs/pandoc/latex/src/assets/images/bio-photo.jpg' not fou
 nd on input line 41155.
@@ -4825,13 +4134,10 @@ l.41155 ...latex/src/assets/images/bio-photo.jpg}}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[557] [558] [559] [560
+[559] [560] [561] [562
 
 ]
 No file OpenSCAD_Curriculum.ind.
-
-Package longtable Warning: Table widths have changed. Rerun LaTeX.
-
 (./OpenSCAD_Curriculum.aux)
  ***********
 LaTeX2e <2025-11-01>
@@ -4839,25 +4145,22 @@ L3 programming layer <2025-12-29>
  ***********
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 )
 
 Here is how much of LuaTeX's memory you used:
- 42476 strings out of 476081
- 1456368,1977958 words of node,token memory allocated
- 144076 words of node memory still in use:
+ 42478 strings out of 476081
+ 1456344,1977958 words of node,token memory allocated
+ 144930 words of node memory still in use:
    10 hlist, 3 vlist, 6 rule, 1 disc, 1 local_par, 106 glue, 4 kern, 1 penalty, 
-53 glyph, 53043 attribute, 64 glue_spec, 17684 attribute_list, 3 write, 1 user_d
-efined, 1 pdf_dest, 147 pdf_action, 2 pdf_colorstack nodes
-   avail lists: 1:20,2:77310,3:716,4:20090,5:14117,6:319,7:62664,8:111,9:35466,1
+53 glyph, 53325 attribute, 64 glue_spec, 17778 attribute_list, 3 write, 1 user_d
+efined, 1 pdf_dest, 164 pdf_action, 2 pdf_colorstack nodes
+   avail lists: 1:22,2:77307,3:715,4:20090,5:14120,6:316,7:62664,8:111,9:35466,1
 0:45,11:1671
  53518 multiletter control sequences out of 65536+600000
- 89 fonts using 20503803 bytes
- 74i,11n,114p,1463b,2162s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89 fonts using 20504031 bytes
+ 74i,11n,114p,1462b,1169s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 warning  (pdf backend): unreferenced destination with name 'section*.2298'
 </var/home/ryhunsaker/.local/texlive/2025/texmf-dist/fonts/opentype/public/lm-ma
@@ -4871,10 +4174,10 @@ ntype/public/lm/lmmono8-regular.otf></var/home/ryhunsaker/.fonts/Atkinson Hyperl
 egible Next/AtkinsonHyperlegibleNext-Regular.otf></var/home/ryhunsaker/.fonts/At
 kinson Hyperlegible Next/AtkinsonHyperlegibleNext-Bold.otf></var/home/ryhunsaker
 /.local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on OpenSCAD_Curriculum.pdf (560 pages, 1951583 bytes).
+Output written on OpenSCAD_Curriculum.pdf (562 pages, 1967285 bytes).
 
-PDF statistics: 14474 PDF objects out of 15390 (max. 8388607)
- 13749 compressed objects within 138 object streams
- 10947 named destinations out of 12825 (max. 131072)
+PDF statistics: 14715 PDF objects out of 15390 (max. 8388607)
+ 13986 compressed objects within 140 object streams
+ 10949 named destinations out of 12825 (max. 131072)
  625 words of extra memory for PDF output out of 10000 (max. 100000000)
 

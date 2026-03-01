@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - "v*"
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -47,28 +48,16 @@ jobs:
             lmodern \
             fonts-atkinson-hyperlegible
 
-      - name: Print tool versions
-        run: |
-          mdbook --version
-          mdbook-pandoc --version
-          pandoc --version
-          lualatex --version
-
-      # mdbook build handles all backends from book.toml in one call.
-      # Never invoke mdbook-pandoc directly — it reads JSON from mdbook's stdin.
-      - name: Build book (HTML + EPUB + LaTeX source)
+      # IDENTICAL to deploy.yml
+      - name: Build book (all backends)
         run: |
           cd my-book
           mdbook build
 
-      # Pandoc writes the .tex file but does NOT copy images alongside it.
-      # lualatex resolves \includegraphics relative to the .tex file's directory,
-      # so we mirror the repo's src/ tree into the latex output dir first.
       - name: Copy source assets into latex output directory
         run: |
           cp -r my-book/src my-book/docs/pandoc/latex/src
 
-      # cd into the latex output dir so relative image paths resolve.
       - name: Compile LaTeX → PDF
         run: |
           OUT_DIR="my-book/docs/pandoc/latex"
@@ -76,23 +65,27 @@ jobs:
 
           cd "$OUT_DIR"
 
+          # Pass 1
           lualatex --interaction=nonstopmode "$TEX"
+
+          # Build index
           makeindex "OpenSCAD_Curriculum.idx" || true
+
+          # Pass 2
           lualatex --interaction=nonstopmode "$TEX"
 
-      - name: Collect release artefacts
+      - name: Verify release artifacts exist
         run: |
-          mkdir -p release
-          cp my-book/docs/pandoc/epub/OpenSCAD_Curriculum.epub  release/
-          cp my-book/docs/pandoc/latex/OpenSCAD_Curriculum.tex  release/
-          cp my-book/docs/pandoc/latex/OpenSCAD_Curriculum.pdf  release/
+          test -f my-book/docs/pandoc/epub/OpenSCAD_Curriculum.epub
+          test -f my-book/docs/pandoc/latex/OpenSCAD_Curriculum.tex
+          test -f my-book/docs/pandoc/latex/OpenSCAD_Curriculum.pdf
 
-      - name: Create Release and upload assets
+      - name: Upload release assets
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            release/OpenSCAD_Curriculum.epub
-            release/OpenSCAD_Curriculum.tex
-            release/OpenSCAD_Curriculum.pdf
+            my-book/docs/pandoc/epub/OpenSCAD_Curriculum.epub
+            my-book/docs/pandoc/latex/OpenSCAD_Curriculum.tex
+            my-book/docs/pandoc/latex/OpenSCAD_Curriculum.pdf
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
