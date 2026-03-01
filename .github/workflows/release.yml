@@ -61,6 +61,13 @@ jobs:
           cd my-book
           mdbook build
 
+      # Pandoc writes the .tex file but does NOT copy images alongside it.
+      # lualatex resolves \includegraphics relative to the .tex file's directory,
+      # so we mirror the repo's src/ tree into the latex output dir first.
+      - name: Copy source assets into latex output directory
+        run: |
+          cp -r my-book/src my-book/docs/pandoc/latex/src
+
       # cd into the latex output dir so relative image paths resolve.
       - name: Compile LaTeX → PDF
         run: |
